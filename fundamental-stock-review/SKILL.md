@@ -18,7 +18,7 @@ description: Analyze a listed company's fundamentals with a fixed structure cove
 
 Collect the latest available data from public filings, exchange announcements, financial data providers, and credible news sources:
 
-- Market and valuation: total market cap, free-float market cap, PE, PB, PS, dividend yield if relevant.
+- Current valuation snapshot: latest price date, closing price, total market cap, free-float market cap, PE, PB, PS, dividend yield if relevant. Treat these as latest point-in-time market data, not historical financial-statement metrics.
 - Growth: revenue, net profit, deducted non-recurring net profit, YoY growth, EPS, 3-year trend, and whether growth comes from core-business volume, price, market-share gains, acquisitions, or non-recurring items.
 - Profitability: gross margin, deducted net margin, net margin, ROE, ROIC if available, margin drivers, and peer comparison.
 - Cash-flow quality: operating cash flow, operating cash flow / net profit, cash received from sales / revenue, free cash flow, and whether cash flow keeps up with profit.
@@ -34,7 +34,7 @@ Collect the latest available data from public filings, exchange announcements, f
 
 Use this priority order:
 
-1. Put key data first: start the output with multi-period core financial metrics and a concise change interpretation before long narrative analysis.
+1. Put key data first: start the output with the latest valuation snapshot, then separate current-year interim financial metrics from recent annual financial metrics, with concise change interpretation before long narrative analysis.
 2. Business first: decide whether the company has a durable business, industry tailwind, and defensible product position.
 3. Profit second: judge whether revenue, net profit, deducted net profit, EPS, margin, ROE, and segment profitability form a coherent trend.
 4. Cash flow third: verify whether profit converts into cash. Strong profit with weak operating cash flow is a major warning.
@@ -70,12 +70,58 @@ Always use the following structure. Put the data tables before the narrative con
 
 ### 1. 核心财务指标
 
-Use a 3-period table whenever data is available. Prefer the latest annual report plus the prior two annual periods; if only interim data is available, clearly label the periods, for example `2023A / 2024A / 2025Q1` or `2024H1 / 2025H1`. Use `亿元` for money amounts, `元/股` for EPS, and `%` for ratios unless otherwise stated. Use `未披露` or `不适用` when data cannot be confirmed.
+Do not mix interim reports and annual reports in one core financial table. Use three blocks in this order: latest valuation snapshot, disclosed current-year interim reports, and recent three-year annual reports. Use `亿元` for money amounts, `元/股` for EPS, and `%` for ratios unless otherwise stated. Use `未披露` or `不适用` when data cannot be confirmed.
 
-| 指标 | 前两年 | 前一年 | 最新期/年度 | 变化解读 |
+#### 1.1 当前估值快照
+
+Show only the latest available market and valuation data above the financial-statement tables. Do not put latest market cap, free-float market cap, PE, PB, or PS inside the multi-period financial tables, because these are latest point-in-time market data and historical same-date values are often unavailable.
+
+| 项目 | 最新数据 | 数据日期/口径 | 解读 |
+|---|---:|---|---|
+| 收盘价 |  |  | 当前估值计算基础 |
+| 总市值 |  |  | 当前整体市值水平 |
+| 流通市值 |  |  | 当前可流通股份对应市值 |
+| PE |  |  | 与利润增速、行业周期、同行估值匹配度 |
+| PB |  |  | 与 ROE、资产质量和行业属性匹配度 |
+| PS |  |  | 适用于利润波动或成长阶段公司，需结合毛利率和现金流 |
+| 股息率 |  |  | 如适用，结合分红稳定性和现金流质量 |
+
+#### 1.2 已披露当年期间财报
+
+Use this block for the current year's already disclosed interim reports only, plus the latest interim report's same period last year. This block is for comparable interim-period analysis, not annual-trend analysis.
+
+Column rules:
+
+- If the latest disclosed report is Q1, use `去年Q1 / 当年Q1`.
+- If the latest disclosed report is H1, use `去年H1 / 当年Q1 / 当年H1`.
+- If the latest disclosed report is Q3, use `去年Q3 / 当年Q1 / 当年H1 / 当年Q3`.
+- If one current-year interim period has not been disclosed or cannot be confirmed, mark it `未披露` or omit that column.
+- Do not combine annual periods such as `2024A / 2025A` with interim periods such as `2026Q1` in this table.
+
+| 指标 | 去年同期 | 当年Q1 | 当年H1 | 当年Q3 | 变化解读 |
+|---|---:|---:|---:|---:|---|
+| 营业收入 |  |  |  |  | 是否来自主业放量、价格提升、市占率提升、并表或一次性因素 |
+| 归母净利润 |  |  |  |  | 增速是否与收入、毛利率、费用率匹配 |
+| 扣非归母净利润 |  |  |  |  | 是否代表核心经营质量，是否明显弱于归母净利润 |
+| 经营现金流净额 |  |  |  |  | 能否跟上净利润，是否存在利润现金含量变弱 |
+| 经营现金流/净利润 |  |  |  |  | 利润兑现质量，低于 1 或连续走弱需解释 |
+| 自由现金流 |  |  |  |  | 资本开支后是否仍能产生现金，扩产期需说明原因 |
+| EPS |  |  |  |  | 每股盈利趋势，结合股本变化看 |
+| ROE |  |  |  |  | 盈利能力与资本效率是否维持 |
+| 毛利率 |  |  |  |  | 产品结构、价格、成本、竞争格局导致的变化 |
+| 扣非净利率 |  |  |  |  | 核心盈利能力是否改善或恶化 |
+| 资本开支 |  |  |  |  | 扩产、设备投入、在建工程转固与回报效率 |
+| 存货 |  |  |  |  | 是否快于收入增长，结合跌价准备、周转和订单验证 |
+| 应收账款/合同资产 |  |  |  |  | 是否快于收入增长，回款压力与客户质量 |
+| 总资产 |  |  |  |  | 资产扩张是否有效支撑盈利 |
+| 归母净资产 |  |  |  |  | 净资产增长与 ROE 的匹配情况 |
+
+#### 1.3 最近三年年度财报
+
+Use this block for the latest three annual reports, for example `2023A / 2024A / 2025A`. This block should focus on annual trend quality and avoid mixing in quarterly or half-year data.
+
+| 指标 | 前两年 | 前一年 | 最新年度 | 变化解读 |
 |---|---:|---:|---:|---|
-| 流通市值 |  |  |  | 当前估值参照；市值数据只填最新可得值即可 |
-| PE |  |  |  | 与利润增速、行业周期、同行估值匹配度 |
 | 营业收入 |  |  |  | 是否来自主业放量、价格提升、市占率提升、并表或一次性因素 |
 | 归母净利润 |  |  |  | 增速是否与收入、毛利率、费用率匹配 |
 | 扣非归母净利润 |  |  |  | 是否代表核心经营质量，是否明显弱于归母净利润 |
