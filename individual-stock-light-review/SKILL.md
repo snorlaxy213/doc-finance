@@ -1,105 +1,126 @@
 ---
 name: individual-stock-light-review
-description: Guide individual-stock light reviews for equities. Use when the user asks for 个股轻复盘, 持仓股每日复盘, 观察股快速复盘, 个股今日表现复盘, or wants to judge whether a stock's daily price/action/news changes its fundamentals, valuation logic, or investment thesis.
+description: 指导个股轻复盘。适用于用户要求“个股轻复盘”“持仓股每日复盘”“观察股快速复盘”“个股今日表现复盘”，或需要判断某只股票当日价格、成交、新闻、公告是否改变其基本面、估值逻辑或投资逻辑的场景。
 ---
 
-# Individual Stock Light Review
+# 个股轻复盘
 
-## Objective
+## 目标
 
-Use this skill to produce a concise daily light review for one or more stocks. Focus on whether today's information changes the company's fundamentals, valuation logic, or investment thesis.
+使用本 skill 对一只或多只股票进行简洁的日度轻复盘。重点判断：今日新增信息是否改变公司的基本面、估值逻辑或投资逻辑。
 
-Do not present the review as personal investment advice, trading instructions, or guaranteed return guidance. Frame conclusions as analytical judgments with assumptions and risks.
+不要把复盘写成个人投资建议、交易指令或收益保证。所有结论都应表述为基于假设、证据和风险边界的分析判断。
 
-## Data Discipline
+## 数据纪律
 
-For current market prices, announcements, financial results, regulatory actions, analyst updates, or news, verify with current sources before making factual claims. Prefer primary or authoritative sources:
+涉及最新市场价格、公告、财报、监管动作、分析师观点或新闻时，必须先核验当前来源，再陈述事实。优先使用一手或权威来源：
 
-- Exchange announcements and company investor relations pages
-- Official filings, earnings releases, transcripts, and regulatory notices
-- Market data pages for index, sector, price, turnover amount, and turnover rate checks
-- Central bank, statistics bureau, and policy authority releases for macro drivers
+- 交易所公告与公司投资者关系页面
+- 官方财报、业绩公告、电话会纪要、监管披露与问询函
+- 市场数据页面，用于核验指数、行业、股价、成交额和换手率
+- 央行、统计局、监管机构和政策部门发布的宏观数据或政策文件
 
-If current data is unavailable, state the information boundary clearly and separate facts from inference.
+如果无法获取当前数据，必须明确说明信息边界，并区分事实、推断和待核验内容。
 
-## Workflow
+## 工作流程
 
-### 1. Start With A One-Sentence Conclusion
+### 1. 先给一句话结论
 
-Classify the stock into one of four states:
+将个股归入以下四类之一：
 
-- `逻辑不变`: price movement is mainly market/sector noise; fundamentals are not materially changed.
-- `需要观察`: signal is not enough to change the thesis, but follow-up data is needed.
-- `触发深度复盘`: abnormal move, material disclosure, or conflicting signal requires deeper analysis.
-- `逻辑受损`: new information weakens revenue, margin, cash flow, balance sheet, governance, or valuation assumptions.
+- `逻辑不变`：股价波动主要来自市场或行业噪音，基本面没有实质变化。
+- `需要观察`：信号不足以改变原有判断，但需要跟踪后续数据或事件。
+- `触发深度复盘`：异常波动、重大披露或矛盾信号出现，需要进一步分析。
+- `逻辑受损`：新增信息削弱收入、利润率、现金流、资产负债表、治理或估值假设。
 
-Include confidence level or key premise when appropriate.
+必要时补充置信度或关键前提。
 
-### 2. Check Performance And Relative Strength
+### 2. 检查表现与相对强弱
 
-Compare the stock against:
+将个股表现与以下对象比较：
 
-- Broad market benchmark relevant to listing venue, such as 沪深300, 创业板指, 恒生指数, 恒生科技, S&P 500, or Nasdaq.
-- Sector or industry index when available.
-- Key peers or leaders in the same business model.
+- 与上市地相关的大盘基准，例如沪深300、创业板指、恒生指数、恒生科技、S&P 500 或 Nasdaq。
+- 可获得的行业指数或板块指数。
+- 同商业模式下的核心可比公司或龙头公司。
 
-Focus on:
+重点观察：
 
-- Daily price change
-- Turnover amount and turnover rate change
-- Whether the move is consistent with market and sector behavior
-- Whether the stock materially underperformed or outperformed peers
+- 当日涨跌幅
+- 成交额和换手率变化
+- 股价表现是否与大盘、行业走势一致
+- 个股是否显著跑赢或跑输同业
 
-### 3. Attribute The Move
+### 3. 拆解波动原因
 
-Separate likely drivers into three buckets:
+将可能驱动因素拆成三类：
 
-- `市场因素`: rates, FX, liquidity, risk appetite, broad index moves.
-- `行业因素`: policy, product prices, demand/supply, regulation, competition, sector rotation.
-- `公司因素`: earnings, guidance, orders, buyback, dividend, share reduction, litigation, inquiry letter, governance, management change, public opinion.
+- `市场因素`：利率、汇率、流动性、风险偏好、大盘指数波动。
+- `行业因素`：政策、产品价格、供需变化、监管、竞争格局、板块轮动。
+- `公司因素`：财报、业绩指引、订单、回购、分红、股东减持、诉讼、问询函、治理、管理层变化、舆情。
 
-Avoid over-explaining ordinary price movement. If no clear driver is found, say so.
+不要过度解释普通价格波动。如果没有找到明确原因，应直接说明。
 
-### 4. Test Fundamental Impact
+### 4. 检验基本面影响
 
-Ask whether today's information changes:
+判断今日信息是否改变以下假设：
 
-- Revenue growth assumptions
-- Gross margin, expense ratio, or profit margin assumptions
-- Cash flow quality, leverage, or balance sheet risk
-- Competitive position or industry structure
-- Governance and disclosure credibility
-- Valuation assumptions, such as growth durability, discount rate, or risk premium
+- 收入增长假设
+- 毛利率、费用率或利润率假设
+- 现金流质量、杠杆水平或资产负债表风险
+- 竞争地位或行业结构
+- 公司治理和信息披露可信度
+- 估值假设，例如增长持续性、折现率或风险溢价
 
-If the answer is no, mark the movement as short-term market behavior unless other evidence contradicts it.
+如果答案是否定的，除非有其他证据相互矛盾，否则将当日波动标记为短期市场行为。
 
-### 5. Check Capital And Shareholder Signals
+### 5. 检查资金与股东信号
 
-Only highlight abnormal or material changes:
+只突出异常或重要变化：
 
-- Unusual turnover amount or turnover rate
-- Block trades, insider or major shareholder reduction/increase
-- Buyback or dividend change
-- Margin financing or short interest changes where relevant
-- Options activity for US/HK stocks when it materially supports the interpretation
+- 成交额或换手率异常
+- 大宗交易、内部人或大股东增减持
+- 回购或分红变化
+- 融资融券或空头数据变化，若相关市场可获得
+- 美股或港股期权异动，且该信号能实质支持判断
 
-Do not treat a single capital-flow signal as decisive without fundamental evidence.
+不要在缺少基本面证据的情况下，把单一资金流信号视为决定性证据。
 
-### 6. Decide Whether To Escalate
+### 6. 检查突破或趋势行情后的技术走势健康度
 
-Escalate from light review to deep review when any condition appears:
+当个股处于突破、趋势延续，或需要验证此前看多逻辑时，使用价格与成交量行为作为辅助验证工具。不要把这些信号当成独立买卖建议。
 
-- Single-day price move materially deviates from the sector or benchmark.
-- Turnover amount or turnover rate expands sharply with price weakness or failed breakout.
-- Earnings, guidance, profit warning, major contract, M&A, buyback, dividend, or financing is released.
-- Regulatory inquiry, penalty, litigation, audit issue, or governance event appears.
-- Major shareholder reduction, management turnover, or pledge/liquidity risk appears.
-- Industry pricing, policy, demand, or competitive structure changes.
-- Price action persistently contradicts the prior fundamental thesis.
+观察走势是否仍然健康：
 
-## Output Template
+- 突破后出现持续追盘，而不是单日放量后迅速转弱。
+- 突破后的第一周至第二周，上涨天数多于下跌天数。
+- 以周线观察时，上涨周数多于下跌周数。
+- 股价收在当日振幅上半区的次数，多于收在下半区的次数。
+- 回调呈现“网球行为”：下跌后能够有弹性地反弹，而不是持续阴跌。
+- 上涨日或上涨周的成交量，明显强于下跌日或下跌周的成交量。
 
-Use this structure for a concise response:
+使用简洁判断标签：
+
+- `走势健康`：多数信号显示需求持续，价量结构较为建设性。
+- `需要观察`：信号混合，或观察窗口仍然太短。
+- `走势转弱`：追盘失败、频繁弱收盘、回调后反弹乏力，或下跌时成交量更大。
+
+如果技术走势与基本面逻辑相互矛盾，应把它标记为后续风险，而不是强行得出基本面结论。
+
+### 7. 判断是否升级为深度复盘
+
+出现以下情况时，应从轻复盘升级为深度复盘：
+
+- 单日股价表现显著偏离行业或大盘基准。
+- 成交额或换手率大幅放大，同时股价走弱或突破失败。
+- 公司发布财报、业绩指引、盈利预警、重大合同、并购、回购、分红或融资事项。
+- 出现监管问询、处罚、诉讼、审计问题或治理事件。
+- 大股东减持、管理层变动、质押风险或流动性风险出现。
+- 行业价格、政策、需求或竞争结构发生变化。
+- 股价走势持续背离此前基本面判断。
+
+## 输出模板
+
+单只股票使用以下结构，保持简洁：
 
 ```text
 结论摘要：
@@ -123,6 +144,9 @@ Use this structure for a concise response:
 资金与筹码：
 是否有异常放量、股东行为、回购、减持、做空或期权异动。
 
+技术走势健康度：
+突破后是否有追盘；近1-2周上涨日/周是否多于下跌日/周；强收盘次数是否多于弱收盘次数；回调后是否有弹性；上涨成交量是否强于下跌成交量。标签：走势健康 / 需要观察 / 走势转弱。
+
 后续关注：
 列出 1-3 个最关键的下一步数据、公告或事件。
 
@@ -130,23 +154,24 @@ Use this structure for a concise response:
 说明可能导致判断失效的因素，以及哪些数据仍需核验。
 ```
 
-For multiple stocks, use a compact table first, then expand only the names requiring observation or deep review.
+如果复盘多只股票，先用紧凑表格概览，再只展开需要观察或触发深度复盘的公司。
 
-Always append a note-friendly version at the end of every single-stock light review. Do not wait for the user to request it. If a data point is unavailable, keep the field and write `待核验` instead of omitting the block.
+每次输出单只股票轻复盘时，末尾都必须附加便于记录的版本，不要等待用户额外要求。如果某项数据不可得，保留字段并写 `待核验`，不要省略。
 
 ```text
 个股涨跌幅：
 成交额/换手率：
 相对大盘和行业：跑赢 / 跑输 / 基本同步
 资金/成交是否异常：
+技术走势健康度：走势健康 / 需要观察 / 走势转弱 / 待核验
 结论标签：
 后续关注：
 ```
 
-## Style
+## 风格
 
-- Use simplified Chinese unless the user requests otherwise.
-- Lead with the conclusion, then show the reasoning.
-- Keep the review concise: light review should usually fit within 300-600 Chinese characters per stock.
-- Use professional, cautious investment-analysis language.
-- Do not recommend buy/sell/hold as personalized advice.
+- 默认使用简体中文，除非用户明确要求其他语言。
+- 先给结论，再说明推理过程。
+- 保持轻复盘简洁，单只股票通常控制在 300-600 个中文字符。
+- 使用专业、谨慎的投资分析语言。
+- 不提供个性化买入、卖出或持有建议。
