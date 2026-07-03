@@ -1,4 +1,4 @@
 interface:
   display_name: "基本面分析"
-  short_description: "先列核心指标和趋势，再分析基本面、估值与财务风险。"
-  default_prompt: "使用 $fundamental-stock-review 分析这只股票的基本面，并先输出核心财务指标和趋势对比。"
+  short_description: "先列核心指标和趋势，再分析订单、基本面、估值与财务风险。"
+  default_prompt: "使用 $fundamental-stock-review 分析这只股票的基本面，并先输出核心财务指标、订单需求验证和趋势对比。"

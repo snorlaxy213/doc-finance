@@ -1,6 +1,6 @@
 ---
 name: fundamental-stock-review
-description: Analyze a listed company's fundamentals with a fixed structure covering business quality, industry position, growth, profitability, cash-flow quality, balance-sheet quality, valuation, ownership, institutional participation, market share, losses, negative news, and financial-fraud risk flags. Use when the user asks for 基本面分析, 财报分析, 财务质量分析, 股票深度复盘, 是否财务造假, or wants to evaluate a stock using indicators such as 流通市值, 市盈率, 净利润, 同比增长, 每股收益, ROE, 毛利率, 十大股东占比, 机构家数, 市场占有率, 亏损, or 负面新闻.
+description: Analyze a listed company's fundamentals with a fixed structure covering business quality, industry position, orders/backlog, contract wins, growth, profitability, cash-flow quality, balance-sheet quality, valuation, ownership, institutional participation, market share, losses, negative news, and financial-fraud risk flags. Use when the user asks for 基本面分析, 财报分析, 财务质量分析, 股票深度复盘, 订单跟踪, 中标分析, 重大合同, 订单消息整理, backlog, 合同负债, 客户采购, 招投标信息, 是否财务造假, or wants to evaluate a stock using indicators such as 流通市值, 市盈率, 净利润, 同比增长, 每股收益, ROE, 毛利率, 十大股东占比, 机构家数, 市场占有率, 亏损, or 负面新闻.
 ---
 
 # Fundamental Stock Review
@@ -11,6 +11,7 @@ description: Analyze a listed company's fundamentals with a fixed structure cove
 - Use a professional investment-research tone. Do not provide personalized buy/sell instructions or guaranteed-return language.
 - Verify current, time-sensitive facts before concluding: ticker/name mapping, latest filings, latest price/market-cap data, major announcements, regulatory actions, and recent negative news.
 - Separate confirmed disclosure from market rumor or narrative. Label uncertain items as 信息边界.
+- For orders, contracts, and bidding information, distinguish 招标, 中标候选人, 中标公告, 合同签署, 框架协议, delivered revenue, and unverified market rumor.
 - Treat negative governance, audit, regulatory, or cash-flow issues as possible conclusion downgrades even when growth and valuation look attractive.
 - Do not infer financial fraud from a single indicator. Present it as fraud-risk screening unless there is confirmed regulatory, audit, or legal evidence.
 
@@ -28,6 +29,7 @@ Collect the latest available data from public filings, exchange announcements, f
 - Institutional participation: number and type of institutions, public funds, social security funds, QFII, insurance funds, northbound capital where applicable.
 - Business position: main products, segment revenue and gross margin for the past two years, market share, customer structure, supplier structure, competitive advantages, industry cycle.
 - Research and communication information: investor-relations records, earnings-call notes, exchange interactive Q&A, management discussion, disclosed order/backlog information, capacity expansion progress, and customer or product updates.
+- Order and demand evidence: exchange announcements for major contracts and daily operating contracts; public procurement, public-resource trading, industry tender platforms, and customer-side procurement announcements; company IR news, investor records, earnings calls, and interactive Q&A; financial-statement signals such as contract liabilities, inventory, accounts receivable, operating cash flow, capacity utilization, and remaining performance obligations; customs, bill-of-lading, or supply-chain data for export-oriented companies when available.
 - Risk events: losses, ST/delisting risk, audit opinion, audit firm change, annual-report inquiry letters, regulatory penalties, litigation, negative news, customer/supplier authenticity disputes.
 
 ## Analysis Logic
@@ -40,8 +42,26 @@ Use this priority order:
 4. Cash flow third: verify whether profit converts into cash. Strong profit with weak operating cash flow is a major warning.
 5. Balance sheet fourth: identify whether profit is being stored in receivables, inventory, prepayments, other receivables, goodwill, or construction in progress.
 6. Cross-check trend quality with peers and company communications: compare multiple periods, peer metrics, management discussion, investor communication, orders, capacity, and customer progress.
-7. Valuation fifth: compare valuation with growth quality, industry cycle, and peers. Low PE is not automatically cheap; high PE needs durable growth and certainty.
-8. Governance and negative news last: apply risk downgrades for audit, regulatory, pledge, reduction, related-party, litigation, or authenticity issues.
+7. Treat orders as demand evidence, not profit evidence by default: verify order status, amount attribution, fulfillment period, revenue recognition timing, margin profile, customer credit quality, and payment terms before upgrading the conclusion.
+8. Valuation fifth: compare valuation with growth quality, industry cycle, and peers. Low PE is not automatically cheap; high PE needs durable growth and certainty.
+9. Governance and negative news last: apply risk downgrades for audit, regulatory, pledge, reduction, related-party, litigation, or authenticity issues.
+
+## Order and Demand Verification
+
+When order, contract, bidding, backlog, or demand-tracking information is relevant, structure evidence before interpretation:
+
+| 日期 | 来源与链接 | 项目/订单名称 | 客户/采购方 | 产品/服务 | 金额 | 状态 | 履约周期 | 是否公司正式公告 | 对收入影响 | 可信度 |
+|---|---|---|---|---|---:|---|---|---|---|---|
+
+Use these rules:
+
+- Do not treat a tender opportunity or 中标候选人公示 as a confirmed signed order.
+- Treat framework agreements, strategic cooperation, letters of intent, and memoranda as low-certainty unless concrete purchase quantities, prices, or binding purchase obligations are disclosed.
+- For consortium wins, identify the company's attributable scope and amount; if not disclosed, label it as 未披露 instead of using the full project amount.
+- Compare order amount with latest annual revenue and segment revenue; state whether it is financially material.
+- Map fulfillment period to likely revenue recognition windows instead of assuming one-time revenue.
+- Cross-check order growth with contract liabilities, inventory, capacity utilization, accounts receivable, and operating cash flow.
+- Downgrade confidence when order growth is accompanied by faster receivable/contract-asset growth, weak cash collection, abnormal inventory buildup, or vague customer disclosure.
 
 ## Fraud-Risk Red Flags
 
@@ -191,7 +211,24 @@ After the table, add `业务结构判断` covering which segments are the real g
 - 核心竞争力：
 - 主要依赖：单一产品 / 单一客户 / 单一政策 / 无明显集中依赖
 
-### 5. 财务质量验证
+### 5. 订单与需求验证
+
+Use this section when the company discloses orders/backlog, the user asks about order tracking, or the business model depends heavily on project awards, government procurement, customer capex cycles, export shipments, or enterprise contracts. If no reliable order data is available, state `未发现可核验订单数据` and explain the information boundary.
+
+| 日期 | 来源与链接 | 项目/订单名称 | 客户/采购方 | 产品/服务 | 金额 | 状态 | 履约周期 | 是否公司正式公告 | 对收入影响 | 可信度 |
+|---|---|---|---|---|---:|---|---|---|---|---|
+|  |  |  |  |  |  | 招标/中标候选人/中标/已签合同/框架协议 |  | 是/否 |  | 高/中/低 |
+
+- 已披露订单/合同：
+- 招投标与客户侧线索：
+- 订单状态区分：
+- 订单金额与最近年度营收比例：
+- 履约周期与收入确认节奏：
+- 合同负债/存货/应收/现金流验证：
+- 订单趋势判断：改善 / 稳定 / 走弱 / 无法判断
+- 信息可信度：高 / 中 / 低
+
+### 6. 财务质量验证
 
 - 利润与现金流匹配：
 - 应收账款与营收匹配：
@@ -201,7 +238,7 @@ After the table, add `业务结构判断` covering which segments are the real g
 - 资产负债率与有息负债：
 - 综合判断：
 
-### 6. 股东与机构
+### 7. 股东与机构
 
 - 十大股东持股占比：
 - 实控人/大股东持股与质押：
@@ -210,14 +247,14 @@ After the table, add `业务结构判断` covering which segments are the real g
 - 机构类型：
 - 治理风险判断：
 
-### 7. 估值与同行对比
+### 8. 估值与同行对比
 
 - 当前估值：
 - 同行业估值对比：
 - 同行业收入增速/毛利率/扣非净利率/ROE/现金流质量对比：
 - 估值是否匹配成长与财务质量：
 
-### 8. 负面信息与风险排查
+### 9. 负面信息与风险排查
 
 - 是否亏损：
 - 是否 ST 或退市风险：
@@ -227,21 +264,24 @@ After the table, add `业务结构判断` covering which segments are the real g
 - 负面新闻：
 - 关联交易/客户供应商真实性争议：
 
-### 9. 财务造假风险初筛
+### 10. 财务造假风险初筛
 
 - 红旗数量：
 - 主要红旗：
 - 风险等级：低 / 中 / 高
 - 解释：说明这是风险初筛，不是事实定性；只有监管、审计、司法或公司公告确认后才能定性。
 
-### 10. 后续跟踪清单
+### 11. 后续跟踪清单
 
-- 跟踪指标 1：
-- 跟踪指标 2：
-- 跟踪指标 3：
+- 新增订单金额：
+- 年初至今累计订单金额：
+- 订单金额/上年营收：
+- 重点客户复购与新增客户：
+- 中标候选人转正式中标/签约情况：
+- 合同负债、存货、应收账款和经营现金流变化：
 - 触发深度复盘条件：
 
-### 11. 信息边界
+### 12. 信息边界
 
 - 数据日期：
 - 主要数据来源：
@@ -264,5 +304,6 @@ Append a concise copyable block unless the user explicitly asks not to:
 1.
 2.
 财务造假风险初筛：低/中/高。理由：
+订单/需求验证：改善/稳定/走弱/无法判断。依据：
 后续跟踪：
 ```
