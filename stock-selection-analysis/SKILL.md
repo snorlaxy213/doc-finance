@@ -15,6 +15,8 @@ Always state the analysis date and data period. If current data is unavailable, 
 
 Every output must keep the fixed template below. Do not omit sections. If evidence is missing, write `未披露/待核验` and explain what would verify it.
 
+When analyzing a listed stock, include a trend-template check for whether the stock is in stage 2 uptrend. The trend check is a technical filter, not a buy signal, and it must not replace the fundamental, prosperity, valuation, and risk gates. Mark any unavailable market, moving-average, 52-week, or relative-strength field as `待核验`; do not infer it.
+
 ## Analysis Logic
 
 Analyze a performance-growth company through five gates:
@@ -30,6 +32,12 @@ Use this formula as the decision lens:
 `能买 = 业绩真实 + 景气可持续 + 公司有优势 + 估值没透支 + 风险可控`
 
 The formula is not an automatic buy signal. It is a disciplined way to decide the research tier.
+
+Use this trend formula as an additional technical lens:
+
+`趋势合格 = 价格站上150日/200日均线 + 150日均线高于200日均线 + 200日均线至少上行1个月 + 50日均线高于150日/200日均线 + 股价较52周低点至少上涨25% + 股价处于52周高点25%以内 + RS排名不低于70且RS线至少上涨6周 + 股价站上50日均线`
+
+Only when all eight trend conditions pass can the output say `符合上涨趋势第二阶段`. If fundamental evidence is strong but the trend template fails or is incomplete, classify the stock as fundamental follow-up or observation rather than treating it as technically confirmed.
 
 ## Prosperity Clue Translation
 
@@ -64,6 +72,7 @@ Use this structure exactly, with all headings preserved.
 ## 1. 一句话结论
 
 - 研究档位：[回避 / 观察 / 小仓试错 / 重点买入候选]
+- 趋势模板状态：[符合上涨趋势第二阶段 / 部分符合，仍需观察 / 不符合 / 待核验]
 - 核心判断：[用 2-3 句话说明为什么]
 - 最强证据：[列出 1-3 条]
 - 最大不确定性：[列出 1-3 条]
@@ -148,6 +157,25 @@ Use this structure exactly, with all headings preserved.
 
 估值小结：[好公司也可能买贵；说明当前价格是否已经反映大部分好消息。]
 
+
+## 6.5 趋势模板检查：是否处于上涨趋势第二阶段
+
+> 说明：该部分仅用于技术面趋势过滤，不构成买卖建议。若 RS 排名无法取得，应标记为“待核验”，或说明采用的替代口径。
+
+| 标准 | 判定 | 当前数据 | 说明 |
+|---|---|---|---|
+| 股价高于150日和200日均线 | [通过/不通过/待核验] | [当前价、MA150、MA200] | [说明] |
+| 150日均线高于200日均线 | [通过/不通过/待核验] | [MA150、MA200] | [说明] |
+| 200日均线上涨至少1个月 | [通过/不通过/待核验] | [近1个月MA200变化] | [最好观察4-5个月以上] |
+| 50日均线高于150日和200日均线 | [通过/不通过/待核验] | [MA50、MA150、MA200] | [说明] |
+| 股价较52周低点至少高25% | [通过/不通过/待核验] | [当前价、52周低点、涨幅] | [说明] |
+| 股价处于52周高点25%以内 | [通过/不通过/待核验] | [当前价、52周高点、回撤幅度] | [越接近新高越强] |
+| RS排名不低于70，且RS线至少上涨6周 | [通过/不通过/待核验] | [RS排名/RS线趋势/替代RS口径] | [更优状态通常接近90，RS线最好上涨13周以上] |
+| 当前股价在50日均线之上 | [通过/不通过/待核验] | [当前价、MA50] | [说明] |
+
+趋势结论：[符合上涨趋势第二阶段 / 部分符合，仍需观察 / 不符合 / 数据不足无法判断]  
+关键短板：[列出未通过或待核验项目]  
+与研究档位的关系：[若趋势不符合，即使基本面较强，也应说明是否仅作基本面跟踪；若趋势符合但基本面证据不足，不能单独上调档位。]
 ## 7. 第五道门：硬伤与风险
 
 | 风险项 | 是否存在 | 证据 | 处理 |
@@ -176,6 +204,7 @@ Use this structure exactly, with all headings preserved.
 验证计划：
 - 未来 1 个季度必须验证：[指标]
 - 未来 2-4 个季度必须验证：[指标]
+- 趋势跟踪项：[50日/150日/200日均线、52周高低点、RS排名或替代RS线、股价是否持续在50日均线上方]
 - 失效条件：[哪些情况出现后应下调档位]
 - 加分条件：[哪些情况出现后可上调档位]
 
