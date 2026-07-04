@@ -1,6 +1,6 @@
 ---
 name: fundamental-stock-review
-description: Analyze a listed company's fundamentals with a fixed structure covering business quality, industry position, orders/backlog, contract wins, growth, profitability, cash-flow quality, balance-sheet quality, valuation, ownership, institutional participation, market share, losses, negative news, and financial-fraud risk flags. Use when the user asks for 基本面分析, 财报分析, 财务质量分析, 股票深度复盘, 订单跟踪, 中标分析, 重大合同, 订单消息整理, backlog, 合同负债, 客户采购, 招投标信息, 是否财务造假, or wants to evaluate a stock using indicators such as 流通市值, 市盈率, 净利润, 同比增长, 每股收益, ROE, 毛利率, 十大股东占比, 机构家数, 市场占有率, 亏损, or 负面新闻.
+description: Analyze a listed company's fundamentals and generate both a Markdown report and a standalone HTML report with a fixed structure covering business quality, industry position, orders/backlog, contract wins, growth, profitability, cash-flow quality, balance-sheet quality, valuation, ownership, institutional participation, market share, losses, negative news, and financial-fraud risk flags. Use when the user asks for 基本面分析, 财报分析, 财务质量分析, 股票深度复盘, 订单跟踪, 中标分析, 重大合同, 订单消息整理, backlog, 合同负债, 客户采购, 招投标信息, 是否财务造假, or wants to evaluate a stock using indicators such as 流通市值, 市盈率, 净利润, 同比增长, 每股收益, ROE, 毛利率, 十大股东占比, 机构家数, 市场占有率, 亏损, or 负面新闻.
 ---
 
 # Fundamental Stock Review
@@ -14,6 +14,43 @@ description: Analyze a listed company's fundamentals with a fixed structure cove
 - For orders, contracts, and bidding information, distinguish 招标, 中标候选人, 中标公告, 合同签署, 框架协议, delivered revenue, and unverified market rumor.
 - Treat negative governance, audit, regulatory, or cash-flow issues as possible conclusion downgrades even when growth and valuation look attractive.
 - Do not infer financial fraud from a single indicator. Present it as fraud-risk screening unless there is confirmed regulatory, audit, or legal evidence.
+
+## Output Artifacts
+
+By default, produce both a Markdown report and a standalone HTML report unless the user explicitly asks for chat-only output.
+
+Use this file layout when working inside the user's `doc-finance` workspace:
+
+```text
+/Users/superman/Documents/doc-finance/reports/<股票代码>/基本面分析/
+```
+
+Use these filename patterns:
+
+```text
+<公司简称>_<股票代码>_基本面分析_<YYYYMMDD>.md
+<公司简称>_<股票代码>_基本面分析_<YYYYMMDD>.html
+```
+
+Rules:
+
+- Use the current date as `YYYYMMDD`; when a same-date file already exists, append a time suffix such as `_HHMMSS` rather than overwriting.
+- If the user provides a different report root, use that root. Otherwise, use `/Users/superman/Documents/doc-finance/reports` when available; in other workspaces, use `reports/`.
+- Save the Markdown report first, using the fixed output structure below and valid GitHub-Flavored Markdown tables.
+- Generate the HTML from the same Markdown using `scripts/render_fundamental_html.py`; do not hand-maintain a separate HTML narrative that can drift from the Markdown.
+- Keep the HTML self-contained: inline CSS/JS, no external assets, no network font or CDN dependency.
+- Do not fabricate visualizations. If chart data is not explicitly present in the report tables, let the HTML render tables and summary cards only.
+- Final response must include the absolute paths of both the Markdown and HTML files.
+
+Example command after writing the Markdown file:
+
+```bash
+python3 /Users/superman/Mine/space/ai/codex-skills/fundamental-stock-review/scripts/render_fundamental_html.py \
+  /absolute/path/to/<公司简称>_<股票代码>_基本面分析_<YYYYMMDD>.md \
+  --output-html /absolute/path/to/<公司简称>_<股票代码>_基本面分析_<YYYYMMDD>.html
+```
+
+If the Markdown is created in a temporary location, use `--reports-root /Users/superman/Documents/doc-finance/reports --copy-md` so the renderer copies the Markdown into the standard report folder.
 
 ## Data Collection Checklist
 
@@ -87,6 +124,14 @@ Classify fraud-risk screening as:
 ## Fixed Output Structure
 
 Always use the following structure. Put the data tables before the narrative conclusion so the reader can first see the financial evidence.
+
+The Markdown must remain renderer-friendly:
+
+- Use `###` for main numbered sections and `####` for subsections.
+- Keep tables as normal Markdown pipe tables.
+- Keep conclusion labels exactly as `基本面判断`, `财务质量`, `估值状态`, and `财务造假风险初筛` so the HTML renderer can extract summary badges.
+- Keep the final copyable block in a fenced `text` or `plain` code block so the HTML renderer can show it as `基本面速记`.
+- Do not mix latest market valuation data with historical financial-statement tables; the HTML header and KPI cards rely on clean valuation and financial blocks.
 
 ### 1. 核心财务指标
 
