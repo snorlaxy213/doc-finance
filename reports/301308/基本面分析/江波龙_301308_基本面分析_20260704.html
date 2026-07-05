@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>江波龙(301308.SZ)基本面分析</title>
+<style>
+:root{
+  --ink:#1a2433;
+  --ink-soft:#46546a;
+  --line:#d8dee7;
+  --line-soft:#eef1f5;
+  --bg:#ffffff;
+  --brand:#1f3a5f;
+  --brand-2:#3b5b85;
+  --brand-light:#eaf0f8;
+  --accent:#8a6d3b;
+  --up:#b73333;
+  --down:#2f7a52;
+  --warn:#a06a1f;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Microsoft YaHei","Source Han Sans SC",system-ui,-apple-system,sans-serif;
+  color:var(--ink);
+  background:#fff;
+  line-height:1.7;
+  font-size:14.5px;
+  font-variant-numeric:tabular-nums;
+  -webkit-font-smoothing:antialiased;
+}
+.page{max-width:1600px;margin:0 auto;padding:0 32px;}
+.masthead{
+  display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px;
+  border-bottom:2px solid var(--brand);padding:24px 0 18px;
+}
+.masthead .m-left{min-width:280px;}
+.masthead .kode{font-size:12px;letter-spacing:.12em;color:var(--ink-soft);}
+.masthead h1{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC","Times New Roman",serif;
+  font-size:30px;font-weight:700;margin:6px 0 4px;color:var(--brand);letter-spacing:.5px;
+}
+.masthead .sub{font-size:13px;color:var(--ink-soft);}
+.masthead .meta{font-size:12.5px;color:var(--ink-soft);margin-top:12px;}
+.masthead .meta b{color:var(--ink);font-weight:600;}
+.masthead .m-stats{display:flex;gap:34px;flex-wrap:wrap;}
+.masthead .m-stats .ms-v{font-size:25px;font-weight:700;color:var(--brand);line-height:1;font-variant-numeric:tabular-nums;}
+.masthead .m-stats .ms-v span{font-size:13px;font-weight:500;color:var(--ink-soft);margin-left:2px;}
+.masthead .m-stats .ms-l{font-size:11.5px;color:var(--ink-soft);margin-top:5px;letter-spacing:.02em;}
+.verdict{
+  margin:16px 0 4px;border:1px solid var(--line);border-left:4px solid var(--brand);
+  background:#fbfcfe;border-radius:4px;padding:16px 20px;
+}
+.verdict-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-bottom:14px;}
+.verdict-head h2{margin:0;font-size:14px;letter-spacing:.1em;color:var(--brand);font-weight:700;}
+.badges{display:flex;flex-direction:row;flex-wrap:wrap;gap:8px;margin:0;}
+.badge{
+  display:inline-flex;align-items:center;gap:6px;font-size:12.5px;
+  padding:5px 11px;border-radius:999px;font-weight:600;line-height:1.4;
+}
+.badge .k{font-weight:500;opacity:.85;}
+.badge.fund{background:#fdecec;color:#9a2c2c;}
+.badge.qual{background:#eef3f8;color:#1f3a5f;}
+.badge.valu{background:#fdf3e3;color:#8a5a16;}
+.badge.fraud{background:#eef7f1;color:#2f6a48;}
+.verdict-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 40px;}
+.verdict-grid .v-title{font-size:12.5px;font-weight:700;letter-spacing:.04em;margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid var(--line);}
+.verdict-grid .v-title::before{content:"";display:inline-block;width:3px;height:12px;margin-right:7px;vertical-align:-1px;border-radius:2px;}
+.verdict-grid .v-up .v-title{color:var(--brand);}
+.verdict-grid .v-up .v-title::before{background:var(--brand);}
+.verdict-grid .v-risk .v-title{color:var(--warn);}
+.verdict-grid .v-risk .v-title::before{background:var(--warn);}
+.verdict-grid ul{margin:0;padding-left:18px;}
+.verdict-grid li{font-size:13.5px;margin:6px 0;line-height:1.65;}
+.note{
+  font-size:12px;color:var(--ink-soft);background:var(--line-soft);
+  padding:3px 8px;border-radius:3px;display:inline-block;
+}
+.verdict .note{display:block;margin-top:14px;}
+.kpis{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:1px;margin:16px 0 4px;
+  background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden;
+}
+.kpi{background:#fff;padding:13px 15px;min-width:0;}
+.kpi .kl{font-size:11.5px;color:var(--ink-soft);line-height:1.3;min-height:30px;}
+.kpi .kv{font-size:20px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;margin-top:5px;word-break:break-word;}
+.kpi .kv.up{color:var(--up);}
+.kpi .kv.down{color:var(--down);}
+.kpi .ks{font-size:11px;color:var(--ink-soft);margin-top:3px;font-variant-numeric:tabular-nums;}
+.layout{
+  display:grid;grid-template-columns:208px minmax(0,1fr);gap:36px;align-items:start;
+  padding:14px 0 0;
+}
+.sidebar{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow-y:auto;padding:0 8px 0 0;}
+.sidebar::-webkit-scrollbar{width:6px;}
+.sidebar::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px;}
+.toc{position:static;background:transparent;border:none;margin:12px 0 16px;padding:0;}
+.toc .scroll{overflow:visible;white-space:normal;display:flex;flex-direction:column;gap:2px;}
+.toc a{
+  display:flex;align-items:center;gap:9px;
+  font-size:14px;line-height:1.25;color:var(--ink-soft);text-decoration:none;
+  padding:6px 8px;border-radius:5px;margin:0;border:1px solid transparent;
+}
+.toc a .toc-num{
+  flex:0 0 auto;font-family:"Times New Roman",serif;font-size:12px;font-weight:600;
+  color:var(--ink-soft);background:var(--line-soft);
+  width:22px;height:22px;border-radius:4px;font-variant-numeric:tabular-nums;
+  display:inline-flex;align-items:center;justify-content:center;
+}
+.toc a:hover{background:var(--brand-light);color:var(--brand);}
+.toc a:hover .toc-num{background:#fff;color:var(--brand);}
+.toc a.active{background:var(--brand);color:#fff;font-weight:600;}
+.toc a.active .toc-num{background:rgba(255,255,255,.22);color:#fff;}
+.main{min-width:0;}
+section{padding:16px 0 8px;border-top:1px solid var(--line-soft);scroll-margin-top:64px;}
+section:first-of-type{border-top:none;padding-top:6px;}
+h2.sec{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",serif;
+  font-size:19px;color:var(--brand);margin:6px 0 12px;font-weight:700;
+  display:flex;align-items:baseline;gap:10px;
+}
+h2.sec .num{
+  font-family:"Times New Roman",serif;font-size:14px;color:#fff;background:var(--brand);
+  padding:2px 9px;border-radius:3px;letter-spacing:.05em;font-weight:600;flex:0 0 auto;
+}
+h3.sub{font-size:14.5px;color:var(--ink);margin:16px 0 6px;font-weight:700;}
+p{margin:8px 0;}
+ul,ol{margin:8px 0;padding-left:22px;}
+li{margin:4px 0;}
+strong{color:var(--ink);}
+.tbl-scroll{overflow-x:auto;margin:10px 0;border:1px solid var(--line);border-radius:4px;}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums;}
+thead th{
+  background:#f3f6fa;color:var(--brand);font-weight:700;text-align:right;
+  padding:10px 12px;border-bottom:1.5px solid var(--brand);white-space:nowrap;
+  font-size:12.5px;letter-spacing:.02em;
+}
+thead th[scope=col]:first-child{text-align:left;}
+tbody td{padding:9px 12px;border-bottom:1px solid var(--line-soft);text-align:right;white-space:normal;word-break:break-word;}
+tbody th[scope=row]{
+  text-align:left;color:var(--ink);font-weight:600;
+  padding:9px 12px;border-bottom:1px solid var(--line-soft);white-space:nowrap;font-size:13px;background:#fafbfd;
+}
+tbody tr:nth-child(even) td{background:#fafbfd;}
+tbody tr:hover td{background:var(--brand-light);}
+.up{color:var(--up);}
+.down{color:var(--down);}
+.muted{color:var(--ink-soft);}
+a{color:var(--brand-2);text-decoration:underline;text-underline-offset:2px;word-break:break-all;}
+a:hover{color:var(--brand);}
+.note-copy{
+  margin:20px 0;border:1px solid var(--line);border-left:4px solid var(--accent);
+  background:#fbfcfe;border-radius:4px;padding:14px 16px;
+}
+.note-copy h2{margin:0 0 10px;font-size:13px;letter-spacing:.1em;color:var(--brand);font-weight:700;}
+pre{
+  margin:10px 0;padding:12px 14px;background:#f7f9fc;border:1px solid var(--line-soft);
+  border-radius:4px;overflow:auto;color:var(--ink);font-size:12.5px;line-height:1.6;
+}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;}
+footer{
+  margin-top:22px;border-top:2px solid var(--brand);padding:14px 0 30px;
+  font-size:11.5px;color:var(--ink-soft);line-height:1.7;font-variant-numeric:tabular-nums;
+}
+footer .disclaimer{background:var(--line-soft);padding:8px 12px;border-radius:3px;margin-bottom:8px;}
+@media (max-width:1100px){
+  .layout{grid-template-columns:1fr;gap:0;}
+  .sidebar{position:static;max-height:none;overflow:visible;padding:0;}
+  .toc{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);
+    border-bottom:1px solid var(--line);margin:0 -32px 16px;padding:10px 32px;}
+  .toc .scroll{overflow-x:auto;white-space:nowrap;flex-direction:row;}
+  .toc a{display:inline-flex;white-space:nowrap;border-left:none;border:1px solid transparent;padding:3px 9px;margin:2px;}
+  .toc a.active{border-left:none;background:var(--brand);color:#fff;}
+}
+@media (max-width:760px){
+  .verdict-grid{grid-template-columns:1fr;}
+  .kpis{grid-template-columns:repeat(3,1fr);}
+  .page{padding:0 18px;}
+  .masthead .m-stats{gap:22px;}
+}
+@media (max-width:460px){.kpis{grid-template-columns:repeat(2,1fr);}}
+@media print{
+  body{background:#fff;font-size:10.5px;}
+  .page{max-width:none;padding:0;}
+  .layout{grid-template-columns:1fr;}
+  .sidebar{position:static;max-height:none;overflow:visible;}
+  .toc{position:static;border:none;padding:0;margin:0 0 8px;}
+  .toc .scroll{overflow:visible;display:block;}
+  .toc a{font-size:10px;padding:1px 5px;display:inline-flex;}
+  .toc a.active{background:transparent;color:var(--ink);}
+  section{break-inside:avoid;padding-top:10px;}
+  table{font-size:9.5px;}
+  thead{display:table-header-group;}
+  tbody tr{break-inside:avoid;}
+  .badge{border:1px solid #ccc;}
+  .note-copy,.tbl-scroll,.kpis,.verdict{break-inside:avoid;}
+  footer{break-inside:avoid;}
+  a{color:var(--ink);text-decoration:none;}
+  .kpi{border:1px solid #ccc;}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="masthead">
+    <div class="m-left">
+      <div class="kode">301308.SZ · 深圳证券交易所 · 基本面分析</div>
+      <h1>江波龙 · 基本面分析</h1>
+      <div class="sub">基本面、财务质量、估值与风险初筛</div>
+      <div class="meta">数据口径 <b>行情截至 2026-07-03 收盘；财务正式报告截至 2026Q1；2026H1 仅为 2026-07-03 业绩预告。</b> · 生成时间 <b>2026-07-04 17:15</b></div>
+    </div>
+    <div class="m-stats">
+      <div><div class="ms-v">618.02 元</div><div class="ms-l">收盘价 · 2026-07-03，东方财富行情</div></div>
+<div><div class="ms-v">2,614.60 亿元</div><div class="ms-l">总市值 · 2026-07-03，按总股本 4.2306 亿股估算</div></div>
+<div><div class="ms-v">TTM 约 48.09；动态约 16.92；静态约 183.70</div><div class="ms-l">PE · TTM 为本报告按 2025A-2025Q1+2026Q1 归母净利润测算；动态 PE 为行情口径按 2026Q1 年化</div></div>
+<div><div class="ms-v">21.96</div><div class="ms-l">PB · 2026-07-03，东方财富行情</div></div>
+    </div>
+  </header>
+
+  <section class="verdict" aria-label="结论速览">
+    <div class="verdict-head">
+      <h2>结论速览</h2>
+      <div class="badges">
+        <span class="badge fund"><span class="k">基本面</span> 中性</span>
+<span class="badge qual"><span class="k">财务质量</span> 一般</span>
+<span class="badge valu"><span class="k">估值</span> 偏高</span>
+<span class="badge fraud"><span class="k">造假风险初筛</span> 中</span>
+      </div>
+    </div>
+    <div class="verdict-grid">
+      <div class="v-col v-up">
+        <div class="v-title">核心理由</div>
+        <ul>
+<li>业务处于存储上行周期，2026Q1 和 2026H1 预告显示利润弹性极强，行业景气与公司产品迭代形成共振。</li>
+<li>公司已具备较完整的存储产品线、品牌和自研主控/固件/封测能力，市场地位较强，全球份额约 1.2%，为中国最大独立存储器厂商。</li>
+<li>财务质量的主要短板是利润现金含量：2023-2025 年经营现金流连续为负，2026Q1 经营现金流为 -28.75 亿元。</li>
+<li>存货 179.61 亿元、预付款 35.51 亿元、长期借款 94.31 亿元、担保额度 246 亿元，使周期反转风险被放大。</li>
+<li>估值需要 2026H1 预告兑现并继续维持高利润才能消化；若存储价格回落或库存跌价，估值和利润都会承压。</li>
+</ul>
+      </div>
+      <div class="v-col v-risk">
+        <div class="v-title">主要风险 / 关注</div>
+        <ul>
+<li>经营现金流连续为负，2026Q1 利润高增但经营现金流 -28.75 亿元。</li>
+<li>存货、预付款、有息债务和担保额度快速扩张，周期反转时风险放大。</li>
+</ul>
+      </div>
+    </div>
+    <p class="note">口径:市场估值为时点数据,财务指标需区分年度、半年度、季度和单季口径;所有结论以公司正式披露和已核验来源为准。</p>
+  </section>
+
+  <div class="kpis" aria-label="关键指标速览">
+    <div class="kpi"><div class="kl">当年Q1归母净利</div><div class="kv">38.62 亿元</div><div class="ks">归母净利润</div></div>
+<div class="kpi"><div class="kl">当年Q1扣非净利</div><div class="kv">39.43 亿元</div><div class="ks">扣非归母净利润</div></div>
+<div class="kpi"><div class="kl">当年Q1毛利率</div><div class="kv">55.53%</div><div class="ks">毛利率</div></div>
+<div class="kpi"><div class="kl">当年Q1经营现金流</div><div class="kv down">-28.75 亿元</div><div class="ks">经营现金流净额</div></div>
+<div class="kpi"><div class="kl">当年Q1应收/合同资产</div><div class="kv">28.22 亿元</div><div class="ks">应收账款/合同资产</div></div>
+<div class="kpi"><div class="kl">当年Q1存货</div><div class="kv">179.61 亿元</div><div class="ks">存货</div></div>
+  </div>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="toc" aria-label="目录">
+        <div class="scroll" id="toc-scroll">
+          <a href="#s1"><span class="toc-num">01</span>核心财务指标</a>
+<a href="#s2"><span class="toc-num">02</span>近两年财报趋势与业务结构</a>
+<a href="#s3"><span class="toc-num">03</span>结论摘要</a>
+<a href="#s4"><span class="toc-num">04</span>公司与行业</a>
+<a href="#s5"><span class="toc-num">05</span>订单与需求验证</a>
+<a href="#s6"><span class="toc-num">06</span>财务质量验证</a>
+<a href="#s7"><span class="toc-num">07</span>股东与机构</a>
+<a href="#s8"><span class="toc-num">08</span>估值与同行对比</a>
+<a href="#s9"><span class="toc-num">09</span>负面信息与风险排查</a>
+<a href="#s10"><span class="toc-num">10</span>财务造假风险初筛</a>
+<a href="#s11"><span class="toc-num">11</span>后续跟踪清单</a>
+<a href="#s12"><span class="toc-num">12</span>信息边界</a>
+        </div>
+      </nav>
+    </aside>
+    <main class="main">
+      <p>数据日期：2026-07-04 最新行情基准：2026-07-03 收盘 结论口径：已披露正式财报截至 2026 年一季报；2026 年半年度仅披露业绩预告，尚未经审计。</p>
+<section id="s1">
+<h2 class="sec"><span class="num">01</span>核心财务指标</h2>
+<h3 class="sub">1.1 当前估值快照</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">项目</th>
+<th scope="col">最新数据</th>
+<th scope="col">数据日期/口径</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">收盘价</th>
+<td>618.02 元</td>
+<td>2026-07-03，东方财富行情</td>
+<td>当前估值计算基础；近阶段受存储景气和业绩预告驱动，波动明显放大</td>
+</tr>
+<tr>
+<th scope="row">总市值</th>
+<td>2,614.60 亿元</td>
+<td>2026-07-03，按总股本 4.2306 亿股估算</td>
+<td>已进入 A 股存储模组龙头中的高市值区间</td>
+</tr>
+<tr>
+<th scope="row">流通市值</th>
+<td>1,741.90 亿元</td>
+<td>2026-07-03，东方财富行情</td>
+<td>流通盘不小，但高换手时对情绪和资金面较敏感</td>
+</tr>
+<tr>
+<th scope="row">PE</th>
+<td>TTM 约 48.09；动态约 16.92；静态约 183.70</td>
+<td>TTM 为本报告按 2025A-2025Q1+2026Q1 归母净利润测算；动态 PE 为行情口径按 2026Q1 年化</td>
+<td>TTM PE 不低；若 2026H1 预告最终兑现，短期利润可显著消化估值，但需验证周期持续性</td>
+</tr>
+<tr>
+<th scope="row">PB</th>
+<td>21.96</td>
+<td>2026-07-03，东方财富行情</td>
+<td class="up">PB 很高，隐含市场对 ROE 持续高位有强预期；资产端存货和预付款质量需重点跟踪</td>
+</tr>
+<tr>
+<th scope="row">PS</th>
+<td>TTM 约 9.20；静态约 11.48</td>
+<td>TTM 为本报告按 2025A-2025Q1+2026Q1 营收测算</td>
+<td class="down">对存储模组/产品公司而言偏高，需高毛利和高周转共同支撑</td>
+</tr>
+<tr>
+<th scope="row">股息率</th>
+<td>约 0.16%</td>
+<td>按已实施 2025 年度+2026 年第一次中期合计每 10 股派 9.907442 元、618.02 元股价估算</td>
+<td>股息收益不是主要定价逻辑，当前市场主要交易利润弹性和行业景气</td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">1.2 已披露当年期间财报</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">去年同期</th>
+<th scope="col">当年Q1</th>
+<th scope="col">当年H1</th>
+<th scope="col">当年Q3</th>
+<th scope="col">变化解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>42.56 亿元</td>
+<td>99.09 亿元</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="up">Q1 同比 +132.79%，受存储需求、价格和产品结构改善带动；2026H1 仅有预告收入 220-250 亿元，未纳入正式财报表</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td class="down">-1.52 亿元</td>
+<td>38.62 亿元</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="up">Q1 扭亏且单季利润超过 2025 全年，利润弹性强</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td class="down">-2.02 亿元</td>
+<td>39.43 亿元</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="up">扣非利润高于归母净利润，核心经营利润改善明显</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td>1.53 亿元</td>
+<td class="down">-28.75 亿元</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="down">利润大增但经营现金流转负，主要受采购和备货现金流出影响</td>
+</tr>
+<tr>
+<th scope="row">经营现金流/净利润</th>
+<td class="muted">不适用</td>
+<td class="down">-0.74</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="down">利润现金含量弱，是本轮业绩验证的核心风险点</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td class="down">-0.84 亿元</td>
+<td class="down">-30.54 亿元</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td>资本开支不大，负自由现金流主要来自营运资金占用</td>
+</tr>
+<tr>
+<th scope="row">EPS</th>
+<td class="down">-0.37 元/股</td>
+<td>9.21 元/股</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td>每股盈利快速释放；需结合股权激励归属后的股本变化</td>
+</tr>
+<tr>
+<th scope="row">ROE</th>
+<td class="down">-2.35%</td>
+<td>39.40%</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td>单季 ROE 非常高，但受周期价格和短期利润影响较大</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>10.35%</td>
+<td>55.53%</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td>存储价格、产品结构和供需紧张共同推升毛利率，需观察可持续性</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td class="down">-4.75%</td>
+<td>39.79%</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="up">Q1 盈利质量在利润表层面极强，但现金流尚未同步</td>
+</tr>
+<tr>
+<th scope="row">资本开支</th>
+<td>2.37 亿元</td>
+<td>1.79 亿元</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="down">资本开支不是 Q1 现金流压力主因</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>78.14 亿元</td>
+<td>179.61 亿元</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="up">同比和环比均大幅增长，是最重要的资产质量观察项</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td>18.49 亿元</td>
+<td>28.22 亿元</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="up">随销售增长抬升，增速低于收入但仍需看回款</td>
+</tr>
+<tr>
+<th scope="row">总资产</th>
+<td>171.87 亿元</td>
+<td>359.46 亿元</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td>资产规模快速扩张，主要由存货、预付款和融资驱动</td>
+</tr>
+<tr>
+<th scope="row">归母净资产</th>
+<td>64.42 亿元</td>
+<td>121.84 亿元</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="up">利润大增带动净资产上升，但杠杆同步提高</td>
+</tr>
+</tbody></table></div>
+<p>2026 年 7 月 3 日，公司披露 2026 年半年度业绩预告：预计 2026H1 营业收入 220-250 亿元，归母净利润 92-110 亿元，扣非归母净利润 90-105 亿元。该数据为财务部门初步核算，未经审计，不能替代半年度报告。</p>
+<h3 class="sub">1.3 最近三年年度财报</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">前两年</th>
+<th scope="col">前一年</th>
+<th scope="col">最新年度</th>
+<th scope="col">变化解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>101.25 亿元</td>
+<td>174.64 亿元</td>
+<td>227.66 亿元</td>
+<td class="up">2024 年修复，2025 年继续增长 30.36%，主因行业回暖、企业级与海外品牌业务增长</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td class="down">-8.28 亿元</td>
+<td>4.99 亿元</td>
+<td>14.23 亿元</td>
+<td class="down">2023 年亏损后 2024 年扭亏，2025 年利润弹性进一步释放</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td class="down">-8.82 亿元</td>
+<td>1.67 亿元</td>
+<td>12.89 亿元</td>
+<td class="up">2025 年扣非改善更明显，利润结构好于 2024 年</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td class="down">-27.98 亿元</td>
+<td class="down">-11.90 亿元</td>
+<td class="down">-12.01 亿元</td>
+<td class="down">连续三年为负，说明增长消耗营运资金</td>
+</tr>
+<tr>
+<th scope="row">经营现金流/净利润</th>
+<td class="muted">不适用</td>
+<td class="down">-2.39</td>
+<td class="down">-0.84</td>
+<td class="up">利润转正后现金流仍未跟上，是财务质量主要扣分项</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td class="down">-32.97 亿元</td>
+<td class="down">-21.34 亿元</td>
+<td class="down">-20.46 亿元</td>
+<td class="down">连续为负，扩张和备货阶段对融资依赖较强</td>
+</tr>
+<tr>
+<th scope="row">EPS</th>
+<td class="down">-2.01 元/股</td>
+<td>1.20 元/股</td>
+<td>3.41 元/股</td>
+<td class="up">每股盈利自 2024 年起恢复，2025 年继续提升</td>
+</tr>
+<tr>
+<th scope="row">ROE</th>
+<td class="down">-13.01%</td>
+<td>7.92%</td>
+<td>19.41%</td>
+<td class="up">ROE 修复明显，但 2026Q1 的异常高 ROE 仍需跨周期验证</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>8.19%</td>
+<td>19.05%</td>
+<td>19.40%</td>
+<td class="up">年度毛利率较 2024 年小幅提升，2026Q1 才出现大幅跃升</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td class="down">-8.71%</td>
+<td>0.95%</td>
+<td>5.66%</td>
+<td class="up">核心利润率改善，但年度口径仍低于 2026Q1 的短期高点</td>
+</tr>
+<tr>
+<th scope="row">资本开支</th>
+<td>4.99 亿元</td>
+<td>9.44 亿元</td>
+<td>8.45 亿元</td>
+<td class="down">自有封测和产品能力投入持续，但现金流压力更多来自存货</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>58.93 亿元</td>
+<td>78.33 亿元</td>
+<td>116.78 亿元</td>
+<td>存货连续扩张，2025 年末已明显高于 2023 年</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td>13.45 亿元</td>
+<td>16.01 亿元</td>
+<td>20.29 亿元</td>
+<td class="up">应收增长低于收入增长，暂未见明显失控，但后续需看账龄和回款</td>
+</tr>
+<tr>
+<th scope="row">总资产</th>
+<td>136.80 亿元</td>
+<td>168.97 亿元</td>
+<td>227.51 亿元</td>
+<td>资产扩张较快，与存货、现金、借款和并购整合相关</td>
+</tr>
+<tr>
+<th scope="row">归母净资产</th>
+<td>60.21 亿元</td>
+<td>64.67 亿元</td>
+<td>78.54 亿元</td>
+<td class="up">净资产增长主要来自盈利修复</td>
+</tr>
+</tbody></table></div>
+<p>核心指标综合判断：江波龙的业务处在存储上行周期，2025 年已经完成从亏损到盈利修复，2026Q1 又进入利润爆发期。利润表质量很强，毛利率、扣非净利率和 ROE 均显著改善；但现金流和资产负债表没有同步改善，连续多年经营现金流为负，2026Q1 存货、预付款、长期借款和担保额度均快速放大。与佰维存储、德明利等同行相比，江波龙的利润弹性处在第一梯队，但现金流为负也是行业共同特征。当前核心问题不是“有没有增长”，而是“高毛利、高库存、高杠杆能否在存储周期反转前顺利变成现金”。</p>
+</section>
+<section id="s2">
+<h2 class="sec"><span class="num">02</span>近两年财报趋势与业务结构</h2>
+<h3 class="sub">2.1 近两年财报趋势</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">项目</th>
+<th scope="col">前一年</th>
+<th scope="col">最新年度/期间</th>
+<th scope="col">变化</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>174.64 亿元</td>
+<td>227.66 亿元</td>
+<td class="up">+30.36%</td>
+<td class="up">存储行业修复、企业级存储、海外品牌和产品结构改善共同贡献</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td>4.99 亿元</td>
+<td>14.23 亿元</td>
+<td class="up">+185.41%</td>
+<td class="up">利润弹性明显高于收入增速，体现毛利率和费用吸收改善</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td>1.67 亿元</td>
+<td>12.89 亿元</td>
+<td class="up">+674.08%</td>
+<td class="up">2025 年核心经营利润修复质量较 2024 年更强</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>19.05%</td>
+<td>19.40%</td>
+<td class="up">+0.35pct</td>
+<td class="up">年度毛利率温和改善；2026Q1 的 55.53%需单独观察</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td>0.95%</td>
+<td>5.66%</td>
+<td class="up">+4.71pct</td>
+<td class="up">规模效应和产品结构改善明显，但仍有较强周期性</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td class="down">-11.90 亿元</td>
+<td class="down">-12.01 亿元</td>
+<td>小幅走弱</td>
+<td>利润增加未转化为经营现金流，采购和备货占用较多资金</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td class="down">-21.34 亿元</td>
+<td class="down">-20.46 亿元</td>
+<td class="down">仍为负</td>
+<td>资本开支后现金缺口仍明显</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>78.33 亿元</td>
+<td>116.78 亿元</td>
+<td class="up">+49.09%</td>
+<td class="down">存货扩张快于收入增长，需看价格周期和跌价准备</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td>16.01 亿元</td>
+<td>20.29 亿元</td>
+<td class="up">+26.73%</td>
+<td class="down">应收增长略低于收入增长，暂不是最大风险</td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">2.2 分业务情况</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">业务</th>
+<th scope="col">前一年收入</th>
+<th scope="col">前一年毛利率</th>
+<th scope="col">最新年度/期间收入</th>
+<th scope="col">最新年度/期间毛利率</th>
+<th scope="col">变化</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">嵌入式存储</th>
+<td>84.25 亿元</td>
+<td>17.45%</td>
+<td>100.12 亿元</td>
+<td class="muted">未披露</td>
+<td>仍为最大产品线，2025 年收入占比 44.0%，收入同比约 +18.8%</td>
+</tr>
+<tr>
+<th scope="row">固态硬盘</th>
+<td>41.47 亿元</td>
+<td>15.93%</td>
+<td>55.70 亿元</td>
+<td class="muted">未披露</td>
+<td>2025 年收入占比 24.5%，企业级和高端 SSD 是重点增量方向</td>
+</tr>
+<tr>
+<th scope="row">移动存储</th>
+<td>32.08 亿元</td>
+<td>29.51%</td>
+<td>48.94 亿元</td>
+<td class="muted">未披露</td>
+<td class="up">2025 年收入占比 21.5%，增长较快，品牌和渠道贡献较多</td>
+</tr>
+<tr>
+<th scope="row">内存条</th>
+<td>15.27 亿元</td>
+<td>6.25%</td>
+<td>22.16 亿元</td>
+<td class="muted">未披露</td>
+<td class="up">2025 年收入占比升至 9.7%，基数较小但增长较快</td>
+</tr>
+<tr>
+<th scope="row">其他</th>
+<td>1.56 亿元</td>
+<td>98.42%</td>
+<td>0.74 亿元</td>
+<td class="muted">未披露</td>
+<td>规模很小，对整体结论影响有限</td>
+</tr>
+</tbody></table></div>
+<p>业务结构判断：嵌入式存储仍是基本盘，固态硬盘和内存条受 AI PC、服务器、企业级存储拉动，是利润弹性更大的方向。2025 年招股书口径显示四条产品线收入均增长，其中移动存储、内存条和 SSD 增速高于嵌入式存储。公司披露企业级存储 2025 年收入 17.83 亿元、同比增长 93.30%，并称 UFS4.1、mSSD、车规存储、ePOP 等进入放量或导入阶段；但多数客户进展没有披露可核验订单金额，因此只能作为需求和产品验证证据，不能直接等同于未来利润。</p>
+</section>
+<section id="s3">
+<h2 class="sec"><span class="num">03</span>结论摘要</h2>
+<ul>
+<li>基本面判断：中性</li>
+<li>财务质量：一般</li>
+<li>估值状态：偏高</li>
+<li>财务造假风险初筛：中</li>
+<li>核心理由：</li>
+<ol>
+<li>业务处于存储上行周期，2026Q1 和 2026H1 预告显示利润弹性极强，行业景气与公司产品迭代形成共振。</li>
+<li>公司已具备较完整的存储产品线、品牌和自研主控/固件/封测能力，市场地位较强，全球份额约 1.2%，为中国最大独立存储器厂商。</li>
+<li>财务质量的主要短板是利润现金含量：2023-2025 年经营现金流连续为负，2026Q1 经营现金流为 -28.75 亿元。</li>
+<li>存货 179.61 亿元、预付款 35.51 亿元、长期借款 94.31 亿元、担保额度 246 亿元，使周期反转风险被放大。</li>
+<li>估值需要 2026H1 预告兑现并继续维持高利润才能消化；若存储价格回落或库存跌价，估值和利润都会承压。</li>
+</ol>
+</ul>
+</section>
+<section id="s4">
+<h2 class="sec"><span class="num">04</span>公司与行业</h2>
+<ul>
+<li>主营业务：存储器和主控芯片的研发设计、封装测试、技术支持与销售。</li>
+<li>主要产品：自研芯片、嵌入式存储、固态硬盘、移动存储、内存条；品牌包括 FORESEE、Zilia、Lexar（雷克沙）。</li>
+<li>市场占有率：根据公司 H 股申请版本引用的灼识咨询数据，按 2025 年存储产品收入计，公司为全球第二大独立半导体存储器厂商、中国最大独立存储器厂商，全球存储产品市场份额约 1.2%。</li>
+<li>行业景气度：2026 年上半年处在高景气阶段，AI 服务器、端侧 AI、AI PC、智能汽车和穿戴设备带动存储需求，同时全球存储晶圆产能扩张受限。</li>
+<li>核心竞争力：全栈式存储能力、自研主控和固件、品牌与全球渠道、巴西 Zilia 和 Lexar 海外业务、自有高端封测能力、与晶圆原厂的 LTA/MOU 合作。</li>
+<li>主要依赖：不是单一产品依赖，但高度依赖存储晶圆供应、行业价格周期、海外经营、核心客户导入和库存管理能力。</li>
+</ul>
+</section>
+<section id="s5">
+<h2 class="sec"><span class="num">05</span>订单与需求验证</h2>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">日期</th>
+<th scope="col">来源与链接</th>
+<th scope="col">项目/订单名称</th>
+<th scope="col">客户/采购方</th>
+<th scope="col">产品/服务</th>
+<th scope="col">金额</th>
+<th scope="col">状态</th>
+<th scope="col">履约周期</th>
+<th scope="col">是否公司正式公告</th>
+<th scope="col">对收入影响</th>
+<th scope="col">可信度</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">2026-07-03</th>
+<td><a href="https://static.cninfo.com.cn/finalpage/2026-07-03/1225409631.PDF" target="_blank" rel="noopener">2026 年半年度业绩预告</a></td>
+<td>多家全球主要存储晶圆原厂 LTA 或 MOU 续签</td>
+<td>存储晶圆原厂</td>
+<td>存储晶圆供应保障</td>
+<td class="muted">未披露</td>
+<td>框架协议/MOU</td>
+<td class="muted">未披露</td>
+<td>是</td>
+<td>保障供应和备货，不等同于销售订单</td>
+<td>高</td>
+</tr>
+<tr>
+<th scope="row">2026-04-28</th>
+<td><a href="https://static.cninfo.com.cn/finalpage/2026-04-28/1225214140.PDF" target="_blank" rel="noopener">2026 年第一季度报告</a></td>
+<td>UFS4.1、车规存储、ePOP、mSSD 客户导入/出货进展</td>
+<td>头部手机、汽车、智能穿戴、PC 厂商等</td>
+<td>嵌入式存储、车规存储、mSSD 等</td>
+<td class="muted">未披露</td>
+<td>导入/供货/测试</td>
+<td class="muted">未披露</td>
+<td>是</td>
+<td class="up">支持需求改善，但金额和毛利未披露</td>
+<td>中高</td>
+</tr>
+<tr>
+<th scope="row">2025-11-27</th>
+<td><a href="https://pdf.dfcfw.com/pdf/H2_AN202511271789419120_1.pdf" target="_blank" rel="noopener">投资者关系活动记录表</a></td>
+<td>企业级存储导入头部客户</td>
+<td>运营商、互联网企业、服务器厂商等</td>
+<td>企业级 SSD、RDIMM 等</td>
+<td class="muted">未披露</td>
+<td>客户导入/批量出货</td>
+<td class="muted">未披露</td>
+<td>是</td>
+<td class="up">企业级业务验证增强，但无订单金额</td>
+<td>中</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>已披露订单/合同：未发现公司披露具体金额、具体客户、具体履约周期的重大销售订单或重大合同。</li>
+<li>招投标与客户侧线索：公司并非典型项目招投标驱动企业，需求验证更多来自客户导入、LTA/MOU、合同负债、库存、收入和现金流。</li>
+<li>订单状态区分：LTA/MOU 是供应链保障，不是销售订单；客户导入和测试不是已确认收入。</li>
+<li>订单金额与最近年度营收比例：未披露具体订单金额，无法计算。</li>
+<li>履约周期与收入确认节奏：存储产品通常随订单和交付确认收入，框架协议不能直接推算收入。</li>
+<li>合同负债/存货/应收/现金流验证：2026Q1 合同负债增至 22.17 亿元，是需求或预收改善信号；但存货 179.61 亿元、经营现金流 -28.75 亿元，说明备货强度和资金占用更高。</li>
+<li>订单趋势判断：改善</li>
+<li>信息可信度：中。需求景气和客户进展可信度较高，但订单金额、毛利、回款条件未披露。</li>
+</ul>
+</section>
+<section id="s6">
+<h2 class="sec"><span class="num">06</span>财务质量验证</h2>
+<ul>
+<li>利润与现金流匹配：不匹配。2025 年归母净利润 14.23 亿元，但经营现金流 -12.01 亿元；2026Q1 归母净利润 38.62 亿元，但经营现金流 -28.75 亿元。</li>
+<li>应收账款与营收匹配：尚可但需跟踪。2026Q1 应收账款/合同资产 28.22 亿元，较 2025 年末 20.29 亿元增长 39.09%，低于 Q1 收入增速，但后续账龄和回款必须验证。</li>
+<li>存货与营收匹配：压力较大。2026Q1 存货 179.61 亿元，较 2025 年末增长 53.81%，远高于单季收入规模。若存储价格继续上涨，存货可放大利润；若价格回落，则跌价准备风险上升。</li>
+<li>资本开支效率与自由现金流：资本开支本身不算激进，2025 年 8.45 亿元、2026Q1 1.79 亿元；但自由现金流连续为负，说明营运资金才是主要消耗。</li>
+<li>预付款/其他应收款/在建工程/商誉异常：2026Q1 预付款 35.51 亿元，较 2025 年末增长 439.97%，需要验证是否与晶圆采购锁货匹配；其他应收款 5.03 亿元，商誉 9.06 亿元，在建工程 0.69 亿元，暂未见在建工程或商誉异常扩张。</li>
+<li>资产负债率与有息负债：2026Q1 资产负债率 65.55%；短期借款 62.12 亿元、一年内到期非流动负债 11.01 亿元、长期借款 94.31 亿元、租赁负债 0.45 亿元，合计有息债务约 167.89 亿元，对比货币资金 41.49 亿元，杠杆压力明显。</li>
+<li>综合判断：财务质量为“一般”。利润表强，但现金流、存货、预付款、债务和担保共同放大周期风险。</li>
+</ul>
+</section>
+<section id="s7">
+<h2 class="sec"><span class="num">07</span>股东与机构</h2>
+<ul>
+<li>十大股东持股占比：2026Q1 前十大股东合计约 64.77%。其中蔡华波 38.67%、李志雄 4.51%、国家集成电路产业投资基金 3.57%、蔡丽江 3.51%。</li>
+<li>实控人/大股东持股与质押：蔡华波与蔡丽江为姐弟关系并签署一致行动协议；2026Q1 蔡华波质押 260 万股。东方财富行情显示截至 2026-07-03 质押总比例约 1.04%，整体不高。</li>
+<li>大股东减持或增持：董事李志雄 2026 年 5 月 12 日至 6 月 25 日减持约 239.99 万股，占当前总股本 0.5673%，计划已实施完毕；另有高管减持计划需要跟踪。实控人曾承诺限售期届满后 12 个月内不主动减持其直接持股。</li>
+<li>入驻机构家数：公开披露不能直接核验完整机构家数；从 2026Q1 前十名股东看，国家大基金、香港中央结算有限公司、永赢先锋半导体智选混合型基金在列。</li>
+<li>机构类型：产业基金、北向/陆股通通道、公募基金。</li>
+<li>治理风险判断：控制权稳定性较强，但减持、再融资、较高担保额度和高杠杆扩张需要持续跟踪。</li>
+</ul>
+</section>
+<section id="s8">
+<h2 class="sec"><span class="num">08</span>估值与同行对比</h2>
+<ul>
+<li>当前估值：截至 2026-07-03，总市值 2,614.60 亿元，TTM PE 约 48.09，PB 21.96，TTM PS 约 9.20。若 2026H1 归母净利润 92-110 亿元最终兑现，并简单年化为 184-220 亿元，隐含年化 PE 约 11.9-14.2；但该算法高度依赖存储景气持续，不能作为稳定盈利估值。</li>
+<li>同行业估值对比：</li>
+</ul>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">公司</th>
+<th scope="col">最新总市值</th>
+<th scope="col">TTM PE</th>
+<th scope="col">PB</th>
+<th scope="col">TTM PS</th>
+<th scope="col">2026Q1收入增速</th>
+<th scope="col">2026Q1毛利率</th>
+<th scope="col">2026Q1 ROE</th>
+<th scope="col">2026Q1经营现金流/净利润</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">江波龙</th>
+<td>2,614.60 亿元</td>
+<td>48.09</td>
+<td>21.96</td>
+<td>9.20</td>
+<td>132.79%</td>
+<td>55.53%</td>
+<td>39.40%</td>
+<td class="down">-0.74</td>
+</tr>
+<tr>
+<th scope="row">佰维存储</th>
+<td>2,017.88 亿元</td>
+<td>51.10</td>
+<td>23.92</td>
+<td>12.18</td>
+<td>341.53%</td>
+<td>53.30%</td>
+<td>41.98%</td>
+<td class="down">-0.93</td>
+</tr>
+<tr>
+<th scope="row">德明利</th>
+<td>2,000.57 亿元</td>
+<td>48.76</td>
+<td>30.20</td>
+<td>11.72</td>
+<td>502.08%</td>
+<td>57.42%</td>
+<td>67.45%</td>
+<td class="down">-0.07</td>
+</tr>
+<tr>
+<th scope="row">普冉股份</th>
+<td>1,213.24 亿元</td>
+<td>275.11</td>
+<td>45.02</td>
+<td>36.10</td>
+<td>256.08%</td>
+<td>44.68%</td>
+<td>9.88%</td>
+<td>0.97</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>同行业收入增速/毛利率/扣非净利率/ROE/现金流质量对比：江波龙的 2026Q1 收入增速低于佰维存储和德明利，但利润规模和毛利率处于高位；现金流质量弱于德明利和普冉，接近佰维存储。行业共同特征是利润表大幅改善，现金流和库存验证滞后。</li>
+<li>估值是否匹配成长与财务质量：估值对 2026 年高利润有较强预期。如果半年度预告兑现且 Q3/Q4 现金流改善，估值压力会下降；若存储价格回落、库存跌价或经营现金流继续大额为负，则当前 PB/PS 对资产质量容错率偏低。</li>
+</ul>
+</section>
+<section id="s9">
+<h2 class="sec"><span class="num">09</span>负面信息与风险排查</h2>
+<ul>
+<li>是否亏损：2023 年亏损，2024 年和 2025 年已盈利；2026Q1 大幅盈利。</li>
+<li>是否 ST 或退市风险：未发现 ST 或退市风险。</li>
+<li>审计意见：2025 年度财务报告审计意见为标准无保留意见；2026Q1 未经审计。</li>
+<li>监管问询/处罚：2026 年存在向特定对象发行股票审核问询及回复更新，属于再融资审核流程；募集说明书披露过海关申报项目不实类小额行政处罚，未见重大财务真实性处罚或立案调查证据。</li>
+<li>诉讼仲裁：公开定期报告披露存在未达重大诉讼标准事项，未发现对持续经营构成重大影响的诉讼仲裁。</li>
+<li>负面新闻：主要集中在现金流连续为负、存货高企、短债压力、H 股上市前后高管减持等问题；其中现金流、存货、债务和减持为公告/财报可验证事实，媒体观点需单独识别。</li>
+<li>关联交易/客户供应商真实性争议：未发现客户供应商真实性的公开重大争议；但上游晶圆供应商集中、境外采购和外汇风险仍是核心经营风险。</li>
+</ul>
+</section>
+<section id="s10">
+<h2 class="sec"><span class="num">10</span>财务造假风险初筛</h2>
+<ul>
+<li>红旗数量：3 个主要红旗。</li>
+<li>主要红旗：</li>
+<ol>
+<li>利润大幅增长但经营现金流连续为负，2026Q1 尤其突出。</li>
+<li>存货、预付款和债务同步大幅扩张，资产负债表对存储价格周期高度敏感。</li>
+<li>高担保额度、再融资和董监高减持叠加，治理和资本运作信号需要跟踪。</li>
+</ol>
+<li>风险等级：中</li>
+<li>解释：这是财务造假风险初筛，不是事实定性。公司 2025 年审计意见为标准无保留，未发现财务造假、立案调查、非标审计意见或重大财务真实性处罚。当前风险更准确地说是“盈利质量和周期资产风险”：若后续回款、库存周转和现金流改善，则风险下降；若利润继续高增长但现金流和存货继续恶化，则风险上升。</li>
+</ul>
+</section>
+<section id="s11">
+<h2 class="sec"><span class="num">11</span>后续跟踪清单</h2>
+<ul>
+<li>新增订单金额：公司未披露具体销售订单金额，后续重点看是否披露重大合同、客户定点或量产订单。</li>
+<li>年初至今累计订单金额：未披露，无法计算。</li>
+<li>订单金额/上年营收：未披露订单金额，无法计算。</li>
+<li>重点客户复购与新增客户：跟踪 UFS4.1、mSSD、企业级 SSD/RDIMM、车规级存储在头部手机、PC、互联网、服务器和车企客户中的量产节奏。</li>
+<li>中标候选人转正式中标/签约情况：公司不是典型招投标驱动企业，本项不适用。</li>
+<li>合同负债、存货、应收账款和经营现金流变化：2026H1 和 2026Q3 必须重点检查。理想状态是合同负债维持、存货周转加快、经营现金流转正。</li>
+<li>触发深度复盘条件：存储价格明显反转；2026H1 正式报告低于预告下限；Q2/Q3 经营现金流继续大额为负；存货继续高增且跌价准备上升；高管/员工平台继续密集减持；新增担保或债务明显扩张；核心客户导入进展不及预期。</li>
+</ul>
+</section>
+<section id="s12">
+<h2 class="sec"><span class="num">12</span>信息边界</h2>
+<ul>
+<li>数据日期：行情截至 2026-07-03 收盘；财务正式报告截至 2026Q1；2026H1 仅为 2026-07-03 业绩预告。</li>
+<li>主要数据来源：<a href="https://quote.eastmoney.com/sz301308.html" target="_blank" rel="noopener">东方财富行情页</a>、东方财富 F10 财务数据接口、<a href="https://static.cninfo.com.cn/finalpage/2026-04-28/1225214140.PDF" target="_blank" rel="noopener">巨潮资讯 2026 年第一季度报告</a>、<a href="https://static.cninfo.com.cn/finalpage/2026-07-03/1225409631.PDF" target="_blank" rel="noopener">巨潮资讯 2026 年半年度业绩预告</a>、<a href="https://static.cninfo.com.cn/finalpage/2026-04-28/1225214127.PDF" target="_blank" rel="noopener">巨潮资讯 2025 年年度报告摘要</a>、<a href="https://static.cninfo.com.cn/finalpage/2026-05-26/1225331662.PDF" target="_blank" rel="noopener">2025 年度、2026 年第一次中期权益分派实施公告</a>、<a href="https://www1.hkexnews.hk/app/sehk/2026/108594/documents/sehk26052902006_c.pdf?wm=2284_1116%3Fpt" target="_blank" rel="noopener">港交所 H 股申请版本</a>、<a href="https://static.cninfo.com.cn/finalpage/2026-04-28/1225214145.PDF" target="_blank" rel="noopener">2026 年度担保额度预计公告</a>、<a href="https://static.cninfo.com.cn/finalpage/2026-06-26/1225392391.PDF" target="_blank" rel="noopener">董事股份减持计划实施完毕公告</a>、<a href="https://pdf.dfcfw.com/pdf/H2_AN202511271789419120_1.pdf" target="_blank" rel="noopener">投资者关系活动记录表</a>。</li>
+<li>尚未核验的信息：具体客户名称、订单金额、LTA/MOU 条款、单产品毛利率、2026H1 现金流和存货周转、机构完整持仓家数。</li>
+<li>可能影响结论的新公告或市场事件：2026 年半年度报告、存储晶圆价格变化、主要原厂扩产或控货策略变化、H 股上市进展、定增实施、董监高减持、重大合同或核心客户量产公告。</li>
+</ul>
+</section>
+
+      <section id="note-friendly">
+        <h2 class="sec"><span class="num">◎</span>基本面速记</h2>
+        <div class="note-copy">
+          <h2>可复制摘要</h2>
+          <pre><code>【基本面速记】
+公司：江波龙（301308.SZ）
+结论：基本面（中性），财务质量（一般），估值（偏高）。
+核心看点：
+1. 存储上行周期中利润弹性极强，2026Q1 归母净利润 38.62 亿元，2026H1 预告 92-110 亿元。
+2. 嵌入式存储、SSD、移动存储、内存条四条线齐全，自研主控、固件、封测和品牌能力构成护城河。
+3. 全球第二大独立半导体存储器厂商、中国最大独立存储器厂商，2025 年全球份额约 1.2%。
+主要风险：
+1. 经营现金流连续为负，2026Q1 利润高增但经营现金流 -28.75 亿元。
+2. 存货、预付款、有息债务和担保额度快速扩张，周期反转时风险放大。
+财务造假风险初筛：中。理由：未见非标审计或监管定性证据，但利润现金流错配、库存和预付款快速增长需持续验证。
+订单/需求验证：改善。依据：H1 预告、合同负债增加、LTA/MOU、UFS4.1/企业级/车规客户导入，但缺少具体金额订单。
+后续跟踪：2026H1 正式报告、经营现金流、存货周转、跌价准备、客户导入量产、董监高减持和再融资进展。</code></pre>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="disclaimer">
+      免责声明:本报告为基于公开财报、公告、行情与新闻资料的整理和财务质量初筛,不构成任何投资建议,不保证未来收益。投资有风险,决策需谨慎。所有数据以公司正式披露为准。
+    </div>
+    <div>报告主体:江波龙(301308.SZ) | 数据口径:行情截至 2026-07-03 收盘；财务正式报告截至 2026Q1；2026H1 仅为 2026-07-03 业绩预告。</div>
+    <div>主要数据来源:东方财富行情页、东方财富 F10 财务数据接口、巨潮资讯 2026 年第一季度报告、巨潮资讯 2026 年半年度业绩预告、巨潮资讯 2025 年年度报告摘要、2025 年度、2026 年第一次中期权益分派实施公告、港交所 H 股申请版本、2026 年度担保额度预计公告、董事股份减持计划实施完毕公告、投资者关系活动记录表。</div>
+    <div>自包含离线 HTML · 内联 CSS / 极简内联 JS · 可直接在浏览器打开</div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var links = document.querySelectorAll('nav.toc a');
+  var map = {};
+  for (var i=0;i<links.length;i++){
+    var href = links[i].getAttribute('href') || '';
+    if (href.charAt(0) === '#') map[href.slice(1)] = links[i];
+  }
+  var sections = document.querySelectorAll('main section[id]');
+  function onScroll(){
+    var pos = (window.scrollY || document.documentElement.scrollTop) + 90;
+    var cur = null;
+    for (var j=0;j<sections.length;j++){
+      if (sections[j].offsetTop <= pos) cur = sections[j].id;
+    }
+    for (var k=0;k<links.length;k++) links[k].classList.remove('active');
+    if (cur && map[cur]) {
+      map[cur].classList.add('active');
+      var act = map[cur];
+      var sc = document.getElementById('toc-scroll');
+      if (sc && act.offsetLeft < sc.scrollLeft) sc.scrollLeft = act.offsetLeft - 8;
+      if (sc && act.offsetLeft + act.offsetWidth > sc.scrollLeft + sc.clientWidth) {
+        sc.scrollLeft = act.offsetLeft + act.offsetWidth - sc.clientWidth + 8;
+      }
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
+</body>
+</html>
