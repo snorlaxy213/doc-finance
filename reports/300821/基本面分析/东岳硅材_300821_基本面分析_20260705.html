@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>东岳硅材(300821.SZ)基本面分析</title>
+<style>
+:root{
+  --ink:#1a2433;
+  --ink-soft:#46546a;
+  --line:#d8dee7;
+  --line-soft:#eef1f5;
+  --bg:#ffffff;
+  --brand:#1f3a5f;
+  --brand-2:#3b5b85;
+  --brand-light:#eaf0f8;
+  --accent:#8a6d3b;
+  --up:#b73333;
+  --down:#2f7a52;
+  --warn:#a06a1f;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Microsoft YaHei","Source Han Sans SC",system-ui,-apple-system,sans-serif;
+  color:var(--ink);
+  background:#fff;
+  line-height:1.7;
+  font-size:14.5px;
+  font-variant-numeric:tabular-nums;
+  -webkit-font-smoothing:antialiased;
+}
+.page{max-width:1600px;margin:0 auto;padding:0 32px;}
+.masthead{
+  display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px;
+  border-bottom:2px solid var(--brand);padding:24px 0 18px;
+}
+.masthead .m-left{min-width:280px;}
+.masthead .kode{font-size:12px;letter-spacing:.12em;color:var(--ink-soft);}
+.masthead h1{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC","Times New Roman",serif;
+  font-size:30px;font-weight:700;margin:6px 0 4px;color:var(--brand);letter-spacing:.5px;
+}
+.masthead .sub{font-size:13px;color:var(--ink-soft);}
+.masthead .meta{font-size:12.5px;color:var(--ink-soft);margin-top:12px;}
+.masthead .meta b{color:var(--ink);font-weight:600;}
+.masthead .m-stats{display:flex;gap:34px;flex-wrap:wrap;}
+.masthead .m-stats .ms-v{font-size:25px;font-weight:700;color:var(--brand);line-height:1;font-variant-numeric:tabular-nums;}
+.masthead .m-stats .ms-v span{font-size:13px;font-weight:500;color:var(--ink-soft);margin-left:2px;}
+.masthead .m-stats .ms-l{font-size:11.5px;color:var(--ink-soft);margin-top:5px;letter-spacing:.02em;}
+.verdict{
+  margin:16px 0 4px;border:1px solid var(--line);border-left:4px solid var(--brand);
+  background:#fbfcfe;border-radius:4px;padding:16px 20px;
+}
+.verdict-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-bottom:14px;}
+.verdict-head h2{margin:0;font-size:14px;letter-spacing:.1em;color:var(--brand);font-weight:700;}
+.badges{display:flex;flex-direction:row;flex-wrap:wrap;gap:8px;margin:0;}
+.badge{
+  display:inline-flex;align-items:center;gap:6px;font-size:12.5px;
+  padding:5px 11px;border-radius:999px;font-weight:600;line-height:1.4;
+}
+.badge .k{font-weight:500;opacity:.85;}
+.badge.fund{background:#fdecec;color:#9a2c2c;}
+.badge.qual{background:#eef3f8;color:#1f3a5f;}
+.badge.valu{background:#fdf3e3;color:#8a5a16;}
+.badge.fraud{background:#eef7f1;color:#2f6a48;}
+.verdict-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 40px;}
+.verdict-grid .v-title{font-size:12.5px;font-weight:700;letter-spacing:.04em;margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid var(--line);}
+.verdict-grid .v-title::before{content:"";display:inline-block;width:3px;height:12px;margin-right:7px;vertical-align:-1px;border-radius:2px;}
+.verdict-grid .v-up .v-title{color:var(--brand);}
+.verdict-grid .v-up .v-title::before{background:var(--brand);}
+.verdict-grid .v-risk .v-title{color:var(--warn);}
+.verdict-grid .v-risk .v-title::before{background:var(--warn);}
+.verdict-grid ul{margin:0;padding-left:18px;}
+.verdict-grid li{font-size:13.5px;margin:6px 0;line-height:1.65;}
+.note{
+  font-size:12px;color:var(--ink-soft);background:var(--line-soft);
+  padding:3px 8px;border-radius:3px;display:inline-block;
+}
+.verdict .note{display:block;margin-top:14px;}
+.kpis{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:1px;margin:16px 0 4px;
+  background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden;
+}
+.kpi{background:#fff;padding:13px 15px;min-width:0;}
+.kpi .kl{font-size:11.5px;color:var(--ink-soft);line-height:1.3;min-height:30px;}
+.kpi .kv{font-size:20px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;margin-top:5px;word-break:break-word;}
+.kpi .kv.up{color:var(--up);}
+.kpi .kv.down{color:var(--down);}
+.kpi .ks{font-size:11px;color:var(--ink-soft);margin-top:3px;font-variant-numeric:tabular-nums;}
+.layout{
+  display:grid;grid-template-columns:208px minmax(0,1fr);gap:36px;align-items:start;
+  padding:14px 0 0;
+}
+.sidebar{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow-y:auto;padding:0 8px 0 0;}
+.sidebar::-webkit-scrollbar{width:6px;}
+.sidebar::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px;}
+.toc{position:static;background:transparent;border:none;margin:12px 0 16px;padding:0;}
+.toc .scroll{overflow:visible;white-space:normal;display:flex;flex-direction:column;gap:2px;}
+.toc a{
+  display:flex;align-items:center;gap:9px;
+  font-size:14px;line-height:1.25;color:var(--ink-soft);text-decoration:none;
+  padding:6px 8px;border-radius:5px;margin:0;border:1px solid transparent;
+}
+.toc a .toc-num{
+  flex:0 0 auto;font-family:"Times New Roman",serif;font-size:12px;font-weight:600;
+  color:var(--ink-soft);background:var(--line-soft);
+  width:22px;height:22px;border-radius:4px;font-variant-numeric:tabular-nums;
+  display:inline-flex;align-items:center;justify-content:center;
+}
+.toc a:hover{background:var(--brand-light);color:var(--brand);}
+.toc a:hover .toc-num{background:#fff;color:var(--brand);}
+.toc a.active{background:var(--brand);color:#fff;font-weight:600;}
+.toc a.active .toc-num{background:rgba(255,255,255,.22);color:#fff;}
+.main{min-width:0;}
+section{padding:16px 0 8px;border-top:1px solid var(--line-soft);scroll-margin-top:64px;}
+section:first-of-type{border-top:none;padding-top:6px;}
+h2.sec{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",serif;
+  font-size:19px;color:var(--brand);margin:6px 0 12px;font-weight:700;
+  display:flex;align-items:baseline;gap:10px;
+}
+h2.sec .num{
+  font-family:"Times New Roman",serif;font-size:14px;color:#fff;background:var(--brand);
+  padding:2px 9px;border-radius:3px;letter-spacing:.05em;font-weight:600;flex:0 0 auto;
+}
+h3.sub{font-size:14.5px;color:var(--ink);margin:16px 0 6px;font-weight:700;}
+p{margin:8px 0;}
+ul,ol{margin:8px 0;padding-left:22px;}
+li{margin:4px 0;}
+strong{color:var(--ink);}
+.tbl-scroll{overflow-x:auto;margin:10px 0;border:1px solid var(--line);border-radius:4px;}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums;}
+thead th{
+  background:#f3f6fa;color:var(--brand);font-weight:700;text-align:right;
+  padding:10px 12px;border-bottom:1.5px solid var(--brand);white-space:nowrap;
+  font-size:12.5px;letter-spacing:.02em;
+}
+thead th[scope=col]:first-child{text-align:left;}
+tbody td{padding:9px 12px;border-bottom:1px solid var(--line-soft);text-align:right;white-space:normal;word-break:break-word;}
+tbody th[scope=row]{
+  text-align:left;color:var(--ink);font-weight:600;
+  padding:9px 12px;border-bottom:1px solid var(--line-soft);white-space:nowrap;font-size:13px;background:#fafbfd;
+}
+tbody tr:nth-child(even) td{background:#fafbfd;}
+tbody tr:hover td{background:var(--brand-light);}
+.up{color:var(--up);}
+.down{color:var(--down);}
+.muted{color:var(--ink-soft);}
+a{color:var(--brand-2);text-decoration:underline;text-underline-offset:2px;word-break:break-all;}
+a:hover{color:var(--brand);}
+.note-copy{
+  margin:20px 0;border:1px solid var(--line);border-left:4px solid var(--accent);
+  background:#fbfcfe;border-radius:4px;padding:14px 16px;
+}
+.note-copy h2{margin:0 0 10px;font-size:13px;letter-spacing:.1em;color:var(--brand);font-weight:700;}
+pre{
+  margin:10px 0;padding:12px 14px;background:#f7f9fc;border:1px solid var(--line-soft);
+  border-radius:4px;overflow:auto;color:var(--ink);font-size:12.5px;line-height:1.6;
+}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;}
+footer{
+  margin-top:22px;border-top:2px solid var(--brand);padding:14px 0 30px;
+  font-size:11.5px;color:var(--ink-soft);line-height:1.7;font-variant-numeric:tabular-nums;
+}
+footer .disclaimer{background:var(--line-soft);padding:8px 12px;border-radius:3px;margin-bottom:8px;}
+@media (max-width:1100px){
+  .layout{grid-template-columns:1fr;gap:0;}
+  .sidebar{position:static;max-height:none;overflow:visible;padding:0;}
+  .toc{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);
+    border-bottom:1px solid var(--line);margin:0 -32px 16px;padding:10px 32px;}
+  .toc .scroll{overflow-x:auto;white-space:nowrap;flex-direction:row;}
+  .toc a{display:inline-flex;white-space:nowrap;border-left:none;border:1px solid transparent;padding:3px 9px;margin:2px;}
+  .toc a.active{border-left:none;background:var(--brand);color:#fff;}
+}
+@media (max-width:760px){
+  .verdict-grid{grid-template-columns:1fr;}
+  .kpis{grid-template-columns:repeat(3,1fr);}
+  .page{padding:0 18px;}
+  .masthead .m-stats{gap:22px;}
+}
+@media (max-width:460px){.kpis{grid-template-columns:repeat(2,1fr);}}
+@media print{
+  body{background:#fff;font-size:10.5px;}
+  .page{max-width:none;padding:0;}
+  .layout{grid-template-columns:1fr;}
+  .sidebar{position:static;max-height:none;overflow:visible;}
+  .toc{position:static;border:none;padding:0;margin:0 0 8px;}
+  .toc .scroll{overflow:visible;display:block;}
+  .toc a{font-size:10px;padding:1px 5px;display:inline-flex;}
+  .toc a.active{background:transparent;color:var(--ink);}
+  section{break-inside:avoid;padding-top:10px;}
+  table{font-size:9.5px;}
+  thead{display:table-header-group;}
+  tbody tr{break-inside:avoid;}
+  .badge{border:1px solid #ccc;}
+  .note-copy,.tbl-scroll,.kpis,.verdict{break-inside:avoid;}
+  footer{break-inside:avoid;}
+  a{color:var(--ink);text-decoration:none;}
+  .kpi{border:1px solid #ccc;}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="masthead">
+    <div class="m-left">
+      <div class="kode">300821.SZ · 深圳证券交易所 · 基本面分析</div>
+      <h1>东岳硅材 · 基本面分析</h1>
+      <div class="sub">基本面、财务质量、估值与风险初筛</div>
+      <div class="meta">数据口径 <b>市场行情截至 2026-07-03 收盘；财务数据截至 2026 年一季报；2026 年半年度仅为业绩预告。</b> · 生成时间 <b>2026-07-05 12:55</b></div>
+    </div>
+    <div class="m-stats">
+      <div><div class="ms-v">19.50 元</div><div class="ms-l">收盘价 · 2026-07-03 收盘，腾讯行情/新浪行情</div></div>
+<div><div class="ms-v">234.00 亿元</div><div class="ms-l">总市值 · 2026-07-03，腾讯行情</div></div>
+<div><div class="ms-v">169.68 倍</div><div class="ms-l">PE · 2026-07-03，TTM 口径；动态 PE 约 30.15 倍</div></div>
+<div><div class="ms-v">4.59 倍</div><div class="ms-l">PB · 2026-07-03，腾讯行情</div></div>
+    </div>
+  </header>
+
+  <section class="verdict" aria-label="结论速览">
+    <div class="verdict-head">
+      <h2>结论速览</h2>
+      <div class="badges">
+        <span class="badge fund"><span class="k">基本面</span> 中性</span>
+<span class="badge qual"><span class="k">财务质量</span> 良好</span>
+<span class="badge valu"><span class="k">估值</span> 偏高</span>
+<span class="badge fraud"><span class="k">造假风险初筛</span> 低</span>
+      </div>
+    </div>
+    <div class="verdict-grid">
+      <div class="v-col v-up">
+        <div class="v-title">核心理由</div>
+        <ul>
+<li>2026Q1 和 2026H1 预告显示盈利明显修复，但核心驱动是有机硅价格上涨和原材料下降，周期属性强。</li>
+<li>2025 年仍小幅亏损，且 107 胶等主力产品毛利承压，说明低景气下盈利韧性一般。</li>
+<li>现金流、应收、存货和负债结构相对干净，2024-2025 年自由现金流为正，无明显有息债务压力。</li>
+<li>当前市值约 234 亿元，TTM PE 约 170 倍、PB 约 4.6 倍，已较充分交易复苏预期。</li>
+<li>关键风险在于有机硅价格回落、行业自律减产失效、2025 火灾后续影响和出口退税政策调整。</li>
+</ul>
+      </div>
+      <div class="v-col v-risk">
+        <div class="v-title">主要风险 / 关注</div>
+        <ul>
+<li>盈利修复主要来自有机硅价格与原料成本变化，周期波动大，2025 年仍小幅亏损。</li>
+<li>当前 TTM PE 约 170 倍、PB 约 4.6 倍，估值已较充分交易复苏预期。</li>
+</ul>
+      </div>
+    </div>
+    <p class="note">口径:市场估值为时点数据,财务指标需区分年度、半年度、季度和单季口径;所有结论以公司正式披露和已核验来源为准。</p>
+  </section>
+
+  <div class="kpis" aria-label="关键指标速览">
+    <div class="kpi"><div class="kl">当年Q1归母净利</div><div class="kv">1.94 亿元</div><div class="ks">归母净利润</div></div>
+<div class="kpi"><div class="kl">当年Q1扣非净利</div><div class="kv">2.16 亿元</div><div class="ks">扣非归母净利润</div></div>
+<div class="kpi"><div class="kl">当年Q1毛利率</div><div class="kv">21.06%</div><div class="ks">毛利率</div></div>
+<div class="kpi"><div class="kl">当年Q1经营现金流</div><div class="kv">1.43 亿元</div><div class="ks">经营现金流净额</div></div>
+<div class="kpi"><div class="kl">当年Q1应收/合同资产</div><div class="kv">1.06 亿元</div><div class="ks">应收账款/合同资产</div></div>
+<div class="kpi"><div class="kl">当年Q1存货</div><div class="kv">4.26 亿元</div><div class="ks">存货</div></div>
+  </div>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="toc" aria-label="目录">
+        <div class="scroll" id="toc-scroll">
+          <a href="#s1"><span class="toc-num">01</span>核心财务指标</a>
+<a href="#s2"><span class="toc-num">02</span>近两年财报趋势与业务结构</a>
+<a href="#s3"><span class="toc-num">03</span>结论摘要</a>
+<a href="#s4"><span class="toc-num">04</span>公司与行业</a>
+<a href="#s5"><span class="toc-num">05</span>订单与需求验证</a>
+<a href="#s6"><span class="toc-num">06</span>财务质量验证</a>
+<a href="#s7"><span class="toc-num">07</span>股东与机构</a>
+<a href="#s8"><span class="toc-num">08</span>估值与同行对比</a>
+<a href="#s9"><span class="toc-num">09</span>负面信息与风险排查</a>
+<a href="#s10"><span class="toc-num">10</span>财务造假风险初筛</a>
+<a href="#s11"><span class="toc-num">11</span>后续跟踪清单</a>
+<a href="#s12"><span class="toc-num">12</span>信息边界</a>
+        </div>
+      </nav>
+    </aside>
+    <main class="main">
+      <p>报告日期：2026-07-05 公司简称：东岳硅材 证券代码：300821.SZ 分析口径：截至 2026-07-05，最新正式财报为 2026 年一季报；2026 年半年度仅披露业绩预告，尚未披露半年报正文。</p>
+<section id="s1">
+<h2 class="sec"><span class="num">01</span>核心财务指标</h2>
+<h3 class="sub">1.1 当前估值快照</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">项目</th>
+<th scope="col">最新数据</th>
+<th scope="col">数据日期/口径</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">收盘价</th>
+<td>19.50 元</td>
+<td>2026-07-03 收盘，腾讯行情/新浪行情</td>
+<td>当前估值计算基础；当日下跌 9.01%，成交明显放大</td>
+</tr>
+<tr>
+<th scope="row">总市值</th>
+<td>234.00 亿元</td>
+<td>2026-07-03，腾讯行情</td>
+<td class="up">已反映市场对 2026 年行业修复的较高预期</td>
+</tr>
+<tr>
+<th scope="row">流通市值</th>
+<td>233.96 亿元</td>
+<td>2026-07-03，腾讯行情</td>
+<td>流通盘接近总股本，流动性较高</td>
+</tr>
+<tr>
+<th scope="row">PE</th>
+<td>169.68 倍</td>
+<td>2026-07-03，TTM 口径；动态 PE 约 30.15 倍</td>
+<td class="down">TTM 受 2025 年亏损拖累较高；动态 PE 隐含 2026Q1 高盈利可持续，需谨慎</td>
+</tr>
+<tr>
+<th scope="row">PB</th>
+<td>4.59 倍</td>
+<td>2026-07-03，腾讯行情</td>
+<td class="down">相对 2025 年 ROE 为负、2026Q1 ROE 3.86% 的资产回报，估值不低</td>
+</tr>
+<tr>
+<th scope="row">PS</th>
+<td>约 6.12 倍</td>
+<td>按 2026-07-03 市值 / TTM 收入约 38.24 亿元估算</td>
+<td class="up">利润波动较大时更有参考意义；需结合毛利率修复持续性</td>
+</tr>
+<tr>
+<th scope="row">股息率</th>
+<td>约 0.10%</td>
+<td>2025 年度分红 10 派 0.20 元，2026-05-21 除权除息</td>
+<td>股息贡献较低，核心仍看行业景气和盈利弹性</td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">1.2 已披露当年期间财报</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">去年同期</th>
+<th scope="col">当年Q1</th>
+<th scope="col">当年H1</th>
+<th scope="col">当年Q3</th>
+<th scope="col">变化解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>12.02 亿元</td>
+<td>12.56 亿元</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="up">同比 +4.49%，收入增长不大，利润弹性主要来自价格和成本改善</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td>0.37 亿元</td>
+<td>1.94 亿元</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="up">同比 +426.99%，高弹性来自有机硅产品价格回升、毛利率提升</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td>0.39 亿元</td>
+<td>2.16 亿元</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="down">同比 +452.47%，扣非利润强于归母，说明非经常损益对 Q1 为负贡献</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td>0.63 亿元</td>
+<td>1.43 亿元</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="up">同比 +126.68%，现金流改善，但低于当期净利润</td>
+</tr>
+<tr>
+<th scope="row">经营现金流/净利润</th>
+<td>1.71</td>
+<td>0.73</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td>Q1 利润现金含量低于 1，需继续看 H1 回款</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td>0.62 亿元</td>
+<td>1.35 亿元</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td>资本开支较小，Q1 仍有正自由现金流</td>
+</tr>
+<tr>
+<th scope="row">EPS</th>
+<td>0.03 元/股</td>
+<td>0.16 元/股</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="up">单季 EPS 大幅提升，但全年需看产品价格持续性</td>
+</tr>
+<tr>
+<th scope="row">ROE</th>
+<td>0.75%</td>
+<td>3.86%</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="up">单季 ROE 改善明显，全年化前需验证周期持续性</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>6.65%</td>
+<td>21.06%</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="up">毛利率大幅修复，是 Q1 最核心变化</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td>3.25%</td>
+<td>17.21%</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="up">核心盈利能力显著改善，但仍受有机硅价格周期影响</td>
+</tr>
+<tr>
+<th scope="row">资本开支</th>
+<td>0.01 亿元</td>
+<td>0.08 亿元</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="down">Q1 资本开支不重，现金流压力较小</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>4.02 亿元</td>
+<td>4.26 亿元</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="up">存货同比小幅增长，未明显脱离收入规模</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td>1.32 亿元</td>
+<td>1.06 亿元</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="down">应收和合同资产合计同比下降，账期压力暂不突出</td>
+</tr>
+<tr>
+<th scope="row">总资产</th>
+<td>61.25 亿元</td>
+<td>62.67 亿元</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td>资产规模平稳</td>
+</tr>
+<tr>
+<th scope="row">归母净资产</th>
+<td>49.49 亿元</td>
+<td>51.26 亿元</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="up">净资产随盈利改善小幅增加</td>
+</tr>
+</tbody></table></div>
+<p>补充：公司于 2026-07-03 披露 2026 年半年度业绩预告，预计 2026H1 归母净利润 4.24-4.44 亿元，同比增长 904.88%-952.28%；预计非经常性损益影响约 0.41 亿元。该数据未经审计，不能替代正式半年报。</p>
+<h3 class="sub">1.3 最近三年年度财报</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">前两年</th>
+<th scope="col">前一年</th>
+<th scope="col">最新年度</th>
+<th scope="col">变化解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>48.01 亿元</td>
+<td>51.51 亿元</td>
+<td>37.70 亿元</td>
+<td>2025 年同比 -26.80%，受有机硅价格下行和火灾停产影响</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td class="down">-2.71 亿元</td>
+<td>0.57 亿元</td>
+<td class="down">-0.19 亿元</td>
+<td class="down">2025 年再度亏损，显示周期底部盈利韧性不足</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td class="down">-2.73 亿元</td>
+<td>0.74 亿元</td>
+<td class="down">-0.03 亿元</td>
+<td>2025 年扣非接近盈亏平衡，全年核心盈利仍弱</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td class="down">-1.35 亿元</td>
+<td>2.16 亿元</td>
+<td>2.15 亿元</td>
+<td class="up">2024-2025 年现金流转正且稳定，优于利润表现</td>
+</tr>
+<tr>
+<th scope="row">经营现金流/净利润</th>
+<td>0.50</td>
+<td>3.81</td>
+<td class="down">-11.14</td>
+<td class="down">2025 因净利润为负，该比率失真；更应看 OCF 绝对值仍为正</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td class="down">-3.68 亿元</td>
+<td>2.00 亿元</td>
+<td>1.94 亿元</td>
+<td class="down">近两年资本开支下降，现金生成改善</td>
+</tr>
+<tr>
+<th scope="row">EPS</th>
+<td class="down">-0.23 元/股</td>
+<td>0.05 元/股</td>
+<td class="down">-0.02 元/股</td>
+<td class="up">每股盈利波动大，周期属性强</td>
+</tr>
+<tr>
+<th scope="row">ROE</th>
+<td class="down">-5.38%</td>
+<td>1.16%</td>
+<td class="down">-0.39%</td>
+<td class="up">资产回报仍偏低，2026 修复需持续验证</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>0.79%</td>
+<td>6.27%</td>
+<td>4.84%</td>
+<td class="up">2025 毛利率较 2024 回落，直到年末才明显改善</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td class="down">-5.68%</td>
+<td>1.44%</td>
+<td class="down">-0.07%</td>
+<td>2025 年核心净利率接近 0，低景气下抗压能力一般</td>
+</tr>
+<tr>
+<th scope="row">资本开支</th>
+<td>2.34 亿元</td>
+<td>0.17 亿元</td>
+<td>0.21 亿元</td>
+<td class="down">2024-2025 年资本开支显著下降，缓解自由现金流压力</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>4.70 亿元</td>
+<td>4.19 亿元</td>
+<td>4.14 亿元</td>
+<td class="down">存货未随收入下滑明显积压，风险可控</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td>0.32 亿元</td>
+<td>0.54 亿元</td>
+<td>0.55 亿元</td>
+<td>应收规模较收入低，账款质量暂未出现突出异常</td>
+</tr>
+<tr>
+<th scope="row">总资产</th>
+<td>63.26 亿元</td>
+<td>63.71 亿元</td>
+<td>58.85 亿元</td>
+<td class="down">2025 年资产规模收缩，资产负债率下降</td>
+</tr>
+<tr>
+<th scope="row">归母净资产</th>
+<td>48.81 亿元</td>
+<td>49.03 亿元</td>
+<td>49.29 亿元</td>
+<td class="down">净资产稳定，未因亏损明显侵蚀</td>
+</tr>
+</tbody></table></div>
+<p>核心指标综合判断：东岳硅材过去三年呈现典型周期品特征，2023 年深亏、2024 年微利、2025 年因行业深度调整和火灾停产再度小亏。2026Q1 的收入仅小幅增长，但毛利率从去年同期 6.65% 升至 21.06%，说明利润修复主要来自有机硅价格上涨、工业硅等原材料成本下降和生产恢复，而不是长期订单放量。现金流和资产负债表质量相对好于利润表，2024-2025 年经营现金流持续为正、应收和存货未异常扩张、无明显有息债务；但估值已提前反映景气修复，后续必须用 H1/H2 正式财报验证盈利能否从单季改善变成全年持续改善。</p>
+</section>
+<section id="s2">
+<h2 class="sec"><span class="num">02</span>近两年财报趋势与业务结构</h2>
+<h3 class="sub">2.1 近两年财报趋势</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">项目</th>
+<th scope="col">前一年</th>
+<th scope="col">最新年度/期间</th>
+<th scope="col">变化</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>51.51 亿元</td>
+<td>37.70 亿元</td>
+<td class="down">-26.80%</td>
+<td>2025 年有机硅价格下行，叠加 7 月火灾造成部分装置停产</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td>0.57 亿元</td>
+<td class="down">-0.19 亿元</td>
+<td class="down">-134.02%</td>
+<td>周期底部利润弹性向下，全年再度转亏</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td>0.74 亿元</td>
+<td class="down">-0.03 亿元</td>
+<td class="down">-103.58%</td>
+<td>扣非接近盈亏平衡，主业低谷期盈利能力弱</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>6.27%</td>
+<td>4.84%</td>
+<td class="down">-1.43 pct</td>
+<td class="up">价格下行压制毛利率，年末才出现修复</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td>1.44%</td>
+<td class="down">-0.07%</td>
+<td class="down">-1.51 pct</td>
+<td>费用、事故和低价竞争共同压制净利率</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td>2.16 亿元</td>
+<td>2.15 亿元</td>
+<td class="down">-0.55%</td>
+<td>现金流韧性明显好于利润</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td>2.00 亿元</td>
+<td>1.94 亿元</td>
+<td class="down">-2.94%</td>
+<td>低资本开支背景下仍保持正自由现金流</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>4.19 亿元</td>
+<td>4.14 亿元</td>
+<td class="down">-1.14%</td>
+<td>未出现明显库存堆积</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td>0.54 亿元</td>
+<td>0.55 亿元</td>
+<td class="up">+3.17%</td>
+<td class="down">应收规模小，收入质量暂未恶化</td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">2.2 分业务情况</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">业务</th>
+<th scope="col">前一年收入</th>
+<th scope="col">前一年毛利率</th>
+<th scope="col">最新年度/期间收入</th>
+<th scope="col">最新年度/期间毛利率</th>
+<th scope="col">变化</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">107胶</th>
+<td>27.98 亿元</td>
+<td>2.73%</td>
+<td>17.00 亿元</td>
+<td class="down">-0.47%</td>
+<td class="down">第一大产品收入占比下降且毛利转负，是 2025 年业绩拖累项</td>
+</tr>
+<tr>
+<th scope="row">硅油</th>
+<td>7.17 亿元</td>
+<td>11.01%</td>
+<td>5.71 亿元</td>
+<td>8.43%</td>
+<td class="down">收入和毛利率均下降，但仍是相对有利润贡献的产品</td>
+</tr>
+<tr>
+<th scope="row">110生胶</th>
+<td>3.66 亿元</td>
+<td>4.59%</td>
+<td>4.76 亿元</td>
+<td class="down">-0.11%</td>
+<td class="up">收入增长但毛利率趋近于 0，放量质量一般</td>
+</tr>
+<tr>
+<th scope="row">硅酮胶</th>
+<td>1.92 亿元</td>
+<td>9.01%</td>
+<td>2.07 亿元</td>
+<td>10.46%</td>
+<td class="up">收入和毛利率均小幅改善，体量仍偏小</td>
+</tr>
+<tr>
+<th scope="row">气相白炭黑</th>
+<td>2.40 亿元</td>
+<td>34.84%</td>
+<td>1.94 亿元</td>
+<td>29.87%</td>
+<td class="down">高毛利业务，但 2025 年收入下降</td>
+</tr>
+<tr>
+<th scope="row">混炼胶</th>
+<td>2.53 亿元</td>
+<td>1.46%</td>
+<td>1.94 亿元</td>
+<td>2.46%</td>
+<td class="down">毛利率低，收入下降</td>
+</tr>
+<tr>
+<th scope="row">液体胶</th>
+<td>0.74 亿元</td>
+<td>13.00%</td>
+<td>0.93 亿元</td>
+<td>13.80%</td>
+<td class="up">收入增长、毛利率稳定，但规模尚小</td>
+</tr>
+<tr>
+<th scope="row">中间体</th>
+<td>1.30 亿元</td>
+<td>5.63%</td>
+<td>0.42 亿元</td>
+<td>3.83%</td>
+<td class="down">收入大幅下降，对整体贡献有限</td>
+</tr>
+<tr>
+<th scope="row">其他及补充</th>
+<td>3.79 亿元</td>
+<td class="muted">不适用</td>
+<td>2.93 亿元</td>
+<td class="muted">不适用</td>
+<td class="up">多项小品类合计，结构改善需要继续跟踪</td>
+</tr>
+</tbody></table></div>
+<p>业务结构判断：公司核心仍是有机硅基础材料和下游加工品，107 胶、硅油、110 生胶占比较高。2025 年最大收入来源 107 胶毛利率转负，说明传统大宗品仍强周期、价格竞争激烈；气相白炭黑、液体胶、硅酮胶等毛利率更高或更稳定，但体量不足以完全对冲大宗品下行。公司披露 2025 年开发新产品牌号 80 余个、下游产品牌号 560 多个，但财务上仍需观察高附加值产品收入占比是否持续提升。</p>
+</section>
+<section id="s3">
+<h2 class="sec"><span class="num">03</span>结论摘要</h2>
+<ul>
+<li>基本面判断：中性</li>
+<li>财务质量：良好</li>
+<li>估值状态：偏高</li>
+<li>财务造假风险初筛：低</li>
+<li>核心理由：</li>
+<ol>
+<li>2026Q1 和 2026H1 预告显示盈利明显修复，但核心驱动是有机硅价格上涨和原材料下降，周期属性强。</li>
+<li>2025 年仍小幅亏损，且 107 胶等主力产品毛利承压，说明低景气下盈利韧性一般。</li>
+<li>现金流、应收、存货和负债结构相对干净，2024-2025 年自由现金流为正，无明显有息债务压力。</li>
+<li>当前市值约 234 亿元，TTM PE 约 170 倍、PB 约 4.6 倍，已较充分交易复苏预期。</li>
+<li>关键风险在于有机硅价格回落、行业自律减产失效、2025 火灾后续影响和出口退税政策调整。</li>
+</ol>
+</ul>
+</section>
+<section id="s4">
+<h2 class="sec"><span class="num">04</span>公司与行业</h2>
+<ul>
+<li>主营业务：有机硅材料的研发、生产和销售。</li>
+<li>主要产品：硅橡胶、硅油、硅树脂、气相白炭黑、有机硅中间体，以及 107 胶、110 生胶、硅酮胶、液体胶等。</li>
+<li>市场占有率：公司具备年产 60 万吨有机硅单体能力，是国内有机硅行业生产规模最大的企业之一；公司披露国内市场知名度较高，产品出口至 30 多个国家和地区，但未披露精确市占率。</li>
+<li>行业景气度：2025 年行业深度调整，DMC 年均价同比下跌约 10.95%；2025 年末以来行业自律调控、产品价格回归合理区间，2026Q1 和 H1 预告显示景气度明显修复。</li>
+<li>核心竞争力：单体-中间体-下游深加工一体化产业链、规模化生产、产品牌号丰富、成本控制和副产物综合利用能力。</li>
+<li>主要依赖：单一行业周期依赖较明显，核心利润对有机硅产品价格和工业硅等原料价格敏感；客户集中依赖未见突出披露。</li>
+</ul>
+</section>
+<section id="s5">
+<h2 class="sec"><span class="num">05</span>订单与需求验证</h2>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">日期</th>
+<th scope="col">来源与链接</th>
+<th scope="col">项目/订单名称</th>
+<th scope="col">客户/采购方</th>
+<th scope="col">产品/服务</th>
+<th scope="col">金额</th>
+<th scope="col">状态</th>
+<th scope="col">履约周期</th>
+<th scope="col">是否公司正式公告</th>
+<th scope="col">对收入影响</th>
+<th scope="col">可信度</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">2026-07-03</th>
+<td><a href="https://static.cninfo.com.cn/finalpage/2026-07-03/1225409173.PDF" target="_blank" rel="noopener">2026 年半年度业绩预告</a></td>
+<td>半年度业绩预告</td>
+<td class="muted">不适用</td>
+<td>有机硅产品</td>
+<td>未披露订单金额</td>
+<td>业绩预告</td>
+<td>2026H1</td>
+<td>是</td>
+<td class="up">预计 H1 归母净利润 4.24-4.44 亿元，验证价格和成本改善</td>
+<td>高</td>
+</tr>
+<tr>
+<th scope="row">2026-04-23</th>
+<td><a href="https://static.cninfo.com.cn/finalpage/2026-04-23/1225144864.PDF" target="_blank" rel="noopener">2026 年一季度报告</a></td>
+<td class="up">经营修复披露</td>
+<td class="muted">不适用</td>
+<td>有机硅产品</td>
+<td>未披露订单金额</td>
+<td>定期报告</td>
+<td>2026Q1</td>
+<td>是</td>
+<td>Q1 收入 12.56 亿元、扣非净利润 2.16 亿元</td>
+<td>高</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>已披露订单/合同：未发现可核验的重大订单、框架协议或中标公告。公司业务更偏大宗化工材料，订单信息通常不如工程项目型公司集中披露。</li>
+<li>招投标与客户侧线索：未发现对公司收入具有重大影响的公开招投标线索。</li>
+<li>订单状态区分：当前可用需求证据主要来自定期报告、业绩预告、合同负债、存货和产品价格，而非具体订单。</li>
+<li>订单金额与最近年度营收比例：无可核验订单金额，无法计算。</li>
+<li>履约周期与收入确认节奏：有机硅产品通常随销售交付确认，需结合产品价格、产能利用和回款节奏观察。</li>
+<li>合同负债/存货/应收/现金流验证：2026Q1 合同负债 0.99 亿元，较 2025 年末 0.37 亿元明显上升；存货 4.26 亿元，较 2025 年末 4.14 亿元小幅上升；经营现金流 1.43 亿元为正，但低于净利润。</li>
+<li>订单趋势判断：改善</li>
+<li>信息可信度：中。财报和业绩预告可信度高，但缺少具体订单、客户和价格拆分。</li>
+</ul>
+</section>
+<section id="s6">
+<h2 class="sec"><span class="num">06</span>财务质量验证</h2>
+<ul>
+<li>利润与现金流匹配：2024-2025 年经营现金流均约 2.16 亿元，优于利润表；2026Q1 经营现金流 1.43 亿元，低于归母净利润 1.94 亿元，需跟踪 H1 回款。</li>
+<li>应收账款与营收匹配：2025 年末应收账款/合同资产约 0.55 亿元，占收入比例低；2026Q1 约 1.06 亿元，仍未异常。</li>
+<li>存货与营收匹配：2023-2026Q1 存货约 3.79-4.70 亿元区间，未随 2025 年收入下降显著堆积。</li>
+<li>资本开支效率与自由现金流：2024-2025 年资本开支降至约 0.17-0.21 亿元，自由现金流约 2 亿元，现金流压力较低；但低开支也意味着产能扩张不是短期核心增长来源。</li>
+<li>预付款/其他应收款/在建工程/商誉异常：2026Q1 预付款 0.07 亿元、在建工程 0.32 亿元、无商誉，未见重大异常；其他非流动资产因预付设备款增加至 0.20 亿元，金额不大。</li>
+<li>资产负债率与有息负债：2026Q1 资产负债率约 18.23%，货币资金 11.13 亿元，未见短期/长期借款，偿债压力低。</li>
+<li>综合判断：财务质量良好，资产负债表较稳健；主要风险不在杠杆或应收，而在产品价格周期和盈利持续性。</li>
+</ul>
+</section>
+<section id="s7">
+<h2 class="sec"><span class="num">07</span>股东与机构</h2>
+<ul>
+<li>十大股东持股占比：2026Q1 前十大股东合计约 59.75%，第一大股东东岳氟硅科技集团有限公司持股 44.40%。</li>
+<li>实控人/大股东持股与质押：2026Q1 披露前十名股东质押、标记或冻结情况为不适用/0；2025 年报同样未见控股股东质押。</li>
+<li>大股东减持或增持：未发现 2026 年以来控股股东重大减持公告；新华联破产处置账户持股比例持续下降，属于历史股东结构变化。</li>
+<li>入驻机构家数：按 2026Q1 前十大股东口径，出现全国社保基金一零四组合、广发聚丰混合、广发优势成长、香港中央结算有限公司等机构/资金席位。</li>
+<li>机构类型：社保基金、公募基金、北向资金、资产管理公司等。</li>
+<li>治理风险判断：控股股东集中度高但未见质押风险；需关注关联方、新华联破产处置账户后续减持、以及参股公司未来材料 IPO 撤回后的资本运作安排。</li>
+</ul>
+</section>
+<section id="s8">
+<h2 class="sec"><span class="num">08</span>估值与同行对比</h2>
+<ul>
+<li>当前估值：截至 2026-07-03，东岳硅材总市值约 234 亿元、PE(TTM) 约 169.68 倍、PB 约 4.59 倍。若按 2026Q1 年化利润粗略看动态 PE 约 30 倍，但这是基于单季高景气年化，不能直接视为长期估值。</li>
+<li>同行业估值对比：</li>
+</ul>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">公司</th>
+<th scope="col">价格</th>
+<th scope="col">PE(TTM)</th>
+<th scope="col">PB</th>
+<th scope="col">市值</th>
+<th scope="col">2026Q1收入增速</th>
+<th scope="col">2026Q1毛利率</th>
+<th scope="col">2026Q1扣非净利率</th>
+<th scope="col">2025收入增速</th>
+<th scope="col">2025毛利率</th>
+<th scope="col">2025ROE</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">东岳硅材</th>
+<td>19.50 元</td>
+<td>169.68</td>
+<td>4.59</td>
+<td>234.00 亿元</td>
+<td>4.49%</td>
+<td>21.06%</td>
+<td>17.21%</td>
+<td class="down">-26.80%</td>
+<td>4.84%</td>
+<td class="down">-0.39%</td>
+</tr>
+<tr>
+<th scope="row">合盛硅业</th>
+<td>45.57 元</td>
+<td class="down">-16.98</td>
+<td>1.83</td>
+<td>538.73 亿元</td>
+<td class="down">-4.25%</td>
+<td>19.08%</td>
+<td class="down">-0.98%</td>
+<td class="down">-23.20%</td>
+<td>7.29%</td>
+<td class="down">-9.63%</td>
+</tr>
+<tr>
+<th scope="row">新安股份</th>
+<td>13.30 元</td>
+<td>85.47</td>
+<td>1.45</td>
+<td>179.50 亿元</td>
+<td>12.69%</td>
+<td>13.27%</td>
+<td>1.95%</td>
+<td class="down">-0.28%</td>
+<td>11.70%</td>
+<td>1.18%</td>
+</tr>
+<tr>
+<th scope="row">硅宝科技</th>
+<td>18.30 元</td>
+<td>28.37</td>
+<td>2.73</td>
+<td>71.94 亿元</td>
+<td>8.27%</td>
+<td>17.82%</td>
+<td>4.83%</td>
+<td>18.75%</td>
+<td>21.04%</td>
+<td>10.59%</td>
+</tr>
+<tr>
+<th scope="row">三友化工</th>
+<td>6.30 元</td>
+<td>763.93</td>
+<td>0.95</td>
+<td>130.05 亿元</td>
+<td class="down">-5.40%</td>
+<td>9.45%</td>
+<td class="down">-2.17%</td>
+<td class="down">-11.84%</td>
+<td>12.72%</td>
+<td>0.65%</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>同行业收入增速/毛利率/扣非净利率/ROE/现金流质量对比：东岳硅材 2026Q1 毛利率和扣非净利率修复幅度领先，但 2025 年 ROE 为负、毛利率低于硅宝科技、新安股份和三友化工。与合盛硅业相比，东岳硅材杠杆和资产负债表压力更低，但业务弹性也更集中在有机硅价格。</li>
+<li>估值是否匹配成长与财务质量：当前估值更像在交易 2026 年行业修复，而不是 2025 年基本面。若 H2 价格回落或行业自律减产失效，估值安全边际不足；若 H1 预告最终落地且 Q3/Q4 继续高盈利，估值压力会下降。</li>
+</ul>
+</section>
+<section id="s9">
+<h2 class="sec"><span class="num">09</span>负面信息与风险排查</h2>
+<ul>
+<li>是否亏损：2023 年亏损 2.71 亿元，2025 年亏损 0.19 亿元；2026Q1 已扭亏且 H1 预告大幅增长。</li>
+<li>是否 ST 或退市风险：未见 ST 或退市风险提示。</li>
+<li>审计意见：2025 年年报审计意见为标准无保留意见。</li>
+<li>监管问询/处罚：未发现 2026 年针对公司 2025 年报的重大监管问询；需持续跟踪交易所公告。公司续聘会计师公告披露容诚近三年存在监管/纪律处分记录，但这属于会计师事务所层面诚信记录，不等同于公司财务问题。</li>
+<li>诉讼仲裁：未发现对公司经营构成重大影响的新增诉讼仲裁。</li>
+<li>负面新闻：2025-07-20 公司合成三期 B 床发生火灾事故，未造成人员伤亡，但造成厂房、设备及存货不同程度受损，并影响 2025 年经营；公司称三期合成装置于 2025 年 11 月底陆续恢复生产，下游装置于 12 月中旬满负荷运行。</li>
+<li>关联交易/客户供应商真实性争议：未发现客户或供应商真实性重大争议；需关注关联方及东岳集团体系内业务协同边界。</li>
+</ul>
+</section>
+<section id="s10">
+<h2 class="sec"><span class="num">10</span>财务造假风险初筛</h2>
+<ul>
+<li>红旗数量：1 个中等红旗。</li>
+<li>主要红旗：2026Q1 利润大幅增长但经营现金流/净利润为 0.73，低于 1；但该情况仅单季出现，且应收、存货、负债未同步异常扩张。</li>
+<li>风险等级：低</li>
+<li>解释：这是财务造假风险初筛，不是事实定性。公司 2025 年审计意见为标准无保留，资产负债表较干净，2024-2025 年经营现金流为正，应收和存货未明显异常。当前更主要是周期景气和盈利持续性风险，而不是财务真实性风险；只有监管、审计、司法或公司公告确认后才能定性为财务造假。</li>
+</ul>
+</section>
+<section id="s11">
+<h2 class="sec"><span class="num">11</span>后续跟踪清单</h2>
+<ul>
+<li>新增订单金额：公司非典型订单驱动，重点跟踪产品价格、合同负债和产销率。</li>
+<li>年初至今累计订单金额：未披露，无法量化。</li>
+<li>订单金额/上年营收：无可核验订单金额，无法计算。</li>
+<li>重点客户复购与新增客户：关注高端硅橡胶、硅油、硅树脂、气相白炭黑客户拓展，以及新兴领域客户验证。</li>
+<li>中标候选人转正式中标/签约情况：当前不适用。</li>
+<li>合同负债、存货、应收账款和经营现金流变化：重点看 2026H1/H3 是否延续合同负债上升、应收不扩张、经营现金流跟上利润。</li>
+<li>触发深度复盘条件：DMC/107 胶/生胶价格连续回落；2026H1 正式净利润低于预告区间；经营现金流明显低于利润；应收或存货连续两季快于收入增长；火灾相关损失或停产影响超预期；主要股东出现集中减持。</li>
+</ul>
+</section>
+<section id="s12">
+<h2 class="sec"><span class="num">12</span>信息边界</h2>
+<ul>
+<li>数据日期：市场行情截至 2026-07-03 收盘；财务数据截至 2026 年一季报；2026 年半年度仅为业绩预告。</li>
+<li>主要数据来源：<a href="https://static.cninfo.com.cn/finalpage/2026-04-23/1225144864.PDF" target="_blank" rel="noopener">2026 年一季度报告</a>、<a href="https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-03-26/47ea1e53-b562-4eed-a057-8c7ecc48e25a.PDF" target="_blank" rel="noopener">2025 年年度报告摘要</a>、<a href="https://static.cninfo.com.cn/finalpage/2025-04-18/1223127261.PDF" target="_blank" rel="noopener">2024 年年度报告摘要</a>、<a href="https://static.cninfo.com.cn/finalpage/2026-07-03/1225409173.PDF" target="_blank" rel="noopener">2026 年半年度业绩预告</a>、东方财富 F10 财务数据、腾讯行情、新浪公告与行情。</li>
+<li>尚未核验的信息：2026H1 正式收入、毛利率、扣非净利润、经营现金流、产品分项毛利率尚未披露；具体客户订单、单价、产能利用率未完整披露。</li>
+<li>可能影响结论的新公告或市场事件：2026H1 正式半年报、有机硅产品价格变化、出口退税政策执行影响、行业自律减产变化、控股股东或重要股东减持、火灾事故后续损失认定。</li>
+</ul>
+</section>
+
+      <section id="note-friendly">
+        <h2 class="sec"><span class="num">◎</span>基本面速记</h2>
+        <div class="note-copy">
+          <h2>可复制摘要</h2>
+          <pre><code>【基本面速记】
+公司：东岳硅材（300821.SZ）
+结论：基本面中性，财务质量良好，估值偏高。
+核心看点：
+1. 2026Q1 收入 12.56 亿元、归母净利润 1.94 亿元、扣非净利润 2.16 亿元，毛利率升至 21.06%，行业修复明显。
+2. 2026H1 预告归母净利润 4.24-4.44 亿元，同比大增，但尚未披露正式半年报。
+3. 资产负债表稳健，2026Q1 资产负债率约 18.23%，货币资金 11.13 亿元，未见明显有息债务压力。
+主要风险：
+1. 盈利修复主要来自有机硅价格与原料成本变化，周期波动大，2025 年仍小幅亏损。
+2. 当前 TTM PE 约 170 倍、PB 约 4.6 倍，估值已较充分交易复苏预期。
+财务造假风险初筛：低。理由：现金流、应收、存货、负债结构整体匹配，2025 年审计意见为标准无保留；需跟踪 2026Q1 利润现金含量低于 1 的持续性。
+订单/需求验证：改善。依据：Q1 业绩和 H1 预告改善、合同负债环比上升，但缺少具体订单披露。
+后续跟踪：2026H1 正式财报、经营现金流、产品价格、合同负债、应收和存货变化。</code></pre>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="disclaimer">
+      免责声明:本报告为基于公开财报、公告、行情与新闻资料的整理和财务质量初筛,不构成任何投资建议,不保证未来收益。投资有风险,决策需谨慎。所有数据以公司正式披露为准。
+    </div>
+    <div>报告主体:东岳硅材(300821.SZ) | 数据口径:市场行情截至 2026-07-03 收盘；财务数据截至 2026 年一季报；2026 年半年度仅为业绩预告。</div>
+    <div>主要数据来源:2026 年一季度报告、2025 年年度报告摘要、2024 年年度报告摘要、2026 年半年度业绩预告、东方财富 F10 财务数据、腾讯行情、新浪公告与行情。</div>
+    <div>自包含离线 HTML · 内联 CSS / 极简内联 JS · 可直接在浏览器打开</div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var links = document.querySelectorAll('nav.toc a');
+  var map = {};
+  for (var i=0;i<links.length;i++){
+    var href = links[i].getAttribute('href') || '';
+    if (href.charAt(0) === '#') map[href.slice(1)] = links[i];
+  }
+  var sections = document.querySelectorAll('main section[id]');
+  function onScroll(){
+    var pos = (window.scrollY || document.documentElement.scrollTop) + 90;
+    var cur = null;
+    for (var j=0;j<sections.length;j++){
+      if (sections[j].offsetTop <= pos) cur = sections[j].id;
+    }
+    for (var k=0;k<links.length;k++) links[k].classList.remove('active');
+    if (cur && map[cur]) {
+      map[cur].classList.add('active');
+      var act = map[cur];
+      var sc = document.getElementById('toc-scroll');
+      if (sc && act.offsetLeft < sc.scrollLeft) sc.scrollLeft = act.offsetLeft - 8;
+      if (sc && act.offsetLeft + act.offsetWidth > sc.scrollLeft + sc.clientWidth) {
+        sc.scrollLeft = act.offsetLeft + act.offsetWidth - sc.clientWidth + 8;
+      }
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
+</body>
+</html>

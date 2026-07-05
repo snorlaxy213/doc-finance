@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>杭电股份(603618.SH)基本面分析</title>
+<style>
+:root{
+  --ink:#1a2433;
+  --ink-soft:#46546a;
+  --line:#d8dee7;
+  --line-soft:#eef1f5;
+  --bg:#ffffff;
+  --brand:#1f3a5f;
+  --brand-2:#3b5b85;
+  --brand-light:#eaf0f8;
+  --accent:#8a6d3b;
+  --up:#b73333;
+  --down:#2f7a52;
+  --warn:#a06a1f;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Microsoft YaHei","Source Han Sans SC",system-ui,-apple-system,sans-serif;
+  color:var(--ink);
+  background:#fff;
+  line-height:1.7;
+  font-size:14.5px;
+  font-variant-numeric:tabular-nums;
+  -webkit-font-smoothing:antialiased;
+}
+.page{max-width:1600px;margin:0 auto;padding:0 32px;}
+.masthead{
+  display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px;
+  border-bottom:2px solid var(--brand);padding:24px 0 18px;
+}
+.masthead .m-left{min-width:280px;}
+.masthead .kode{font-size:12px;letter-spacing:.12em;color:var(--ink-soft);}
+.masthead h1{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC","Times New Roman",serif;
+  font-size:30px;font-weight:700;margin:6px 0 4px;color:var(--brand);letter-spacing:.5px;
+}
+.masthead .sub{font-size:13px;color:var(--ink-soft);}
+.masthead .meta{font-size:12.5px;color:var(--ink-soft);margin-top:12px;}
+.masthead .meta b{color:var(--ink);font-weight:600;}
+.masthead .m-stats{display:flex;gap:34px;flex-wrap:wrap;}
+.masthead .m-stats .ms-v{font-size:25px;font-weight:700;color:var(--brand);line-height:1;font-variant-numeric:tabular-nums;}
+.masthead .m-stats .ms-v span{font-size:13px;font-weight:500;color:var(--ink-soft);margin-left:2px;}
+.masthead .m-stats .ms-l{font-size:11.5px;color:var(--ink-soft);margin-top:5px;letter-spacing:.02em;}
+.verdict{
+  margin:16px 0 4px;border:1px solid var(--line);border-left:4px solid var(--brand);
+  background:#fbfcfe;border-radius:4px;padding:16px 20px;
+}
+.verdict-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-bottom:14px;}
+.verdict-head h2{margin:0;font-size:14px;letter-spacing:.1em;color:var(--brand);font-weight:700;}
+.badges{display:flex;flex-direction:row;flex-wrap:wrap;gap:8px;margin:0;}
+.badge{
+  display:inline-flex;align-items:center;gap:6px;font-size:12.5px;
+  padding:5px 11px;border-radius:999px;font-weight:600;line-height:1.4;
+}
+.badge .k{font-weight:500;opacity:.85;}
+.badge.fund{background:#fdecec;color:#9a2c2c;}
+.badge.qual{background:#eef3f8;color:#1f3a5f;}
+.badge.valu{background:#fdf3e3;color:#8a5a16;}
+.badge.fraud{background:#eef7f1;color:#2f6a48;}
+.verdict-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 40px;}
+.verdict-grid .v-title{font-size:12.5px;font-weight:700;letter-spacing:.04em;margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid var(--line);}
+.verdict-grid .v-title::before{content:"";display:inline-block;width:3px;height:12px;margin-right:7px;vertical-align:-1px;border-radius:2px;}
+.verdict-grid .v-up .v-title{color:var(--brand);}
+.verdict-grid .v-up .v-title::before{background:var(--brand);}
+.verdict-grid .v-risk .v-title{color:var(--warn);}
+.verdict-grid .v-risk .v-title::before{background:var(--warn);}
+.verdict-grid ul{margin:0;padding-left:18px;}
+.verdict-grid li{font-size:13.5px;margin:6px 0;line-height:1.65;}
+.note{
+  font-size:12px;color:var(--ink-soft);background:var(--line-soft);
+  padding:3px 8px;border-radius:3px;display:inline-block;
+}
+.verdict .note{display:block;margin-top:14px;}
+.kpis{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:1px;margin:16px 0 4px;
+  background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden;
+}
+.kpi{background:#fff;padding:13px 15px;min-width:0;}
+.kpi .kl{font-size:11.5px;color:var(--ink-soft);line-height:1.3;min-height:30px;}
+.kpi .kv{font-size:20px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;margin-top:5px;word-break:break-word;}
+.kpi .kv.up{color:var(--up);}
+.kpi .kv.down{color:var(--down);}
+.kpi .ks{font-size:11px;color:var(--ink-soft);margin-top:3px;font-variant-numeric:tabular-nums;}
+.layout{
+  display:grid;grid-template-columns:208px minmax(0,1fr);gap:36px;align-items:start;
+  padding:14px 0 0;
+}
+.sidebar{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow-y:auto;padding:0 8px 0 0;}
+.sidebar::-webkit-scrollbar{width:6px;}
+.sidebar::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px;}
+.toc{position:static;background:transparent;border:none;margin:12px 0 16px;padding:0;}
+.toc .scroll{overflow:visible;white-space:normal;display:flex;flex-direction:column;gap:2px;}
+.toc a{
+  display:flex;align-items:center;gap:9px;
+  font-size:14px;line-height:1.25;color:var(--ink-soft);text-decoration:none;
+  padding:6px 8px;border-radius:5px;margin:0;border:1px solid transparent;
+}
+.toc a .toc-num{
+  flex:0 0 auto;font-family:"Times New Roman",serif;font-size:12px;font-weight:600;
+  color:var(--ink-soft);background:var(--line-soft);
+  width:22px;height:22px;border-radius:4px;font-variant-numeric:tabular-nums;
+  display:inline-flex;align-items:center;justify-content:center;
+}
+.toc a:hover{background:var(--brand-light);color:var(--brand);}
+.toc a:hover .toc-num{background:#fff;color:var(--brand);}
+.toc a.active{background:var(--brand);color:#fff;font-weight:600;}
+.toc a.active .toc-num{background:rgba(255,255,255,.22);color:#fff;}
+.main{min-width:0;}
+section{padding:16px 0 8px;border-top:1px solid var(--line-soft);scroll-margin-top:64px;}
+section:first-of-type{border-top:none;padding-top:6px;}
+h2.sec{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",serif;
+  font-size:19px;color:var(--brand);margin:6px 0 12px;font-weight:700;
+  display:flex;align-items:baseline;gap:10px;
+}
+h2.sec .num{
+  font-family:"Times New Roman",serif;font-size:14px;color:#fff;background:var(--brand);
+  padding:2px 9px;border-radius:3px;letter-spacing:.05em;font-weight:600;flex:0 0 auto;
+}
+h3.sub{font-size:14.5px;color:var(--ink);margin:16px 0 6px;font-weight:700;}
+p{margin:8px 0;}
+ul,ol{margin:8px 0;padding-left:22px;}
+li{margin:4px 0;}
+strong{color:var(--ink);}
+.tbl-scroll{overflow-x:auto;margin:10px 0;border:1px solid var(--line);border-radius:4px;}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums;}
+thead th{
+  background:#f3f6fa;color:var(--brand);font-weight:700;text-align:right;
+  padding:10px 12px;border-bottom:1.5px solid var(--brand);white-space:nowrap;
+  font-size:12.5px;letter-spacing:.02em;
+}
+thead th[scope=col]:first-child{text-align:left;}
+tbody td{padding:9px 12px;border-bottom:1px solid var(--line-soft);text-align:right;white-space:normal;word-break:break-word;}
+tbody th[scope=row]{
+  text-align:left;color:var(--ink);font-weight:600;
+  padding:9px 12px;border-bottom:1px solid var(--line-soft);white-space:nowrap;font-size:13px;background:#fafbfd;
+}
+tbody tr:nth-child(even) td{background:#fafbfd;}
+tbody tr:hover td{background:var(--brand-light);}
+.up{color:var(--up);}
+.down{color:var(--down);}
+.muted{color:var(--ink-soft);}
+a{color:var(--brand-2);text-decoration:underline;text-underline-offset:2px;word-break:break-all;}
+a:hover{color:var(--brand);}
+.note-copy{
+  margin:20px 0;border:1px solid var(--line);border-left:4px solid var(--accent);
+  background:#fbfcfe;border-radius:4px;padding:14px 16px;
+}
+.note-copy h2{margin:0 0 10px;font-size:13px;letter-spacing:.1em;color:var(--brand);font-weight:700;}
+pre{
+  margin:10px 0;padding:12px 14px;background:#f7f9fc;border:1px solid var(--line-soft);
+  border-radius:4px;overflow:auto;color:var(--ink);font-size:12.5px;line-height:1.6;
+}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;}
+footer{
+  margin-top:22px;border-top:2px solid var(--brand);padding:14px 0 30px;
+  font-size:11.5px;color:var(--ink-soft);line-height:1.7;font-variant-numeric:tabular-nums;
+}
+footer .disclaimer{background:var(--line-soft);padding:8px 12px;border-radius:3px;margin-bottom:8px;}
+@media (max-width:1100px){
+  .layout{grid-template-columns:1fr;gap:0;}
+  .sidebar{position:static;max-height:none;overflow:visible;padding:0;}
+  .toc{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);
+    border-bottom:1px solid var(--line);margin:0 -32px 16px;padding:10px 32px;}
+  .toc .scroll{overflow-x:auto;white-space:nowrap;flex-direction:row;}
+  .toc a{display:inline-flex;white-space:nowrap;border-left:none;border:1px solid transparent;padding:3px 9px;margin:2px;}
+  .toc a.active{border-left:none;background:var(--brand);color:#fff;}
+}
+@media (max-width:760px){
+  .verdict-grid{grid-template-columns:1fr;}
+  .kpis{grid-template-columns:repeat(3,1fr);}
+  .page{padding:0 18px;}
+  .masthead .m-stats{gap:22px;}
+}
+@media (max-width:460px){.kpis{grid-template-columns:repeat(2,1fr);}}
+@media print{
+  body{background:#fff;font-size:10.5px;}
+  .page{max-width:none;padding:0;}
+  .layout{grid-template-columns:1fr;}
+  .sidebar{position:static;max-height:none;overflow:visible;}
+  .toc{position:static;border:none;padding:0;margin:0 0 8px;}
+  .toc .scroll{overflow:visible;display:block;}
+  .toc a{font-size:10px;padding:1px 5px;display:inline-flex;}
+  .toc a.active{background:transparent;color:var(--ink);}
+  section{break-inside:avoid;padding-top:10px;}
+  table{font-size:9.5px;}
+  thead{display:table-header-group;}
+  tbody tr{break-inside:avoid;}
+  .badge{border:1px solid #ccc;}
+  .note-copy,.tbl-scroll,.kpis,.verdict{break-inside:avoid;}
+  footer{break-inside:avoid;}
+  a{color:var(--ink);text-decoration:none;}
+  .kpi{border:1px solid #ccc;}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="masthead">
+    <div class="m-left">
+      <div class="kode">603618.SH · 上海证券交易所 · 基本面分析</div>
+      <h1>杭电股份 · 基本面分析</h1>
+      <div class="sub">基本面、财务质量、估值与风险初筛</div>
+      <div class="meta">数据口径 <b>行情截至 2026-07-03 收盘；财务数据截至 2026Q1 已披露报告；2026H1 为 2026-07-04 披露的未经审计业绩预告。</b> · 生成时间 <b>2026-07-05 12:00</b></div>
+    </div>
+    <div class="m-stats">
+      <div><div class="ms-v">49.00 元</div><div class="ms-l">收盘价 · 2026-07-03 收盘</div></div>
+<div><div class="ms-v">338.77 亿元</div><div class="ms-l">总市值 · 2026-07-03，691,375,616 股</div></div>
+<div><div class="ms-v">TTM 为负约 -142 倍；动态 PE 约 104.8 倍</div><div class="ms-l">PE · TTM 按 2025A、2025Q1、2026Q1 计算；动态口径按 2026Q1 年化</div></div>
+<div><div class="ms-v">约 12.52 倍</div><div class="ms-l">PB · 市值 / 2026Q1 归母净资产</div></div>
+    </div>
+  </header>
+
+  <section class="verdict" aria-label="结论速览">
+    <div class="verdict-head">
+      <h2>结论速览</h2>
+      <div class="badges">
+        <span class="badge fund"><span class="k">基本面</span> 中性</span>
+<span class="badge qual"><span class="k">财务质量</span> 一般</span>
+<span class="badge valu"><span class="k">估值</span> 偏高</span>
+<span class="badge fraud"><span class="k">造假风险初筛</span> 中</span>
+      </div>
+    </div>
+    <div class="verdict-grid">
+      <div class="v-col v-up">
+        <div class="v-title">核心理由</div>
+        <ul>
+<li>2026Q1 利润恢复、2026H1 业绩预告大幅预增，光纤光缆市场回暖是明确的基本面改善线索。</li>
+<li>2025 年收入增长但归母亏损 2.99 亿元、扣非亏损 3.14 亿元，说明上一轮扩张质量不高。</li>
+<li>应收账款/合同资产规模高，2026Q1 经营现金流仍为 -2.78 亿元，利润兑现成现金仍需验证。</li>
+<li>当前市值约 339 亿元、PB 约 12.5 倍，估值已经从传统线缆资产重估到光通信反转资产。</li>
+<li>无近期重大处罚或非标审计证据，但资产减值、担保、减持和股价异动风险需要跟踪。</li>
+</ul>
+      </div>
+      <div class="v-col v-risk">
+        <div class="v-title">主要风险 / 关注</div>
+        <ul>
+<li>2025 年亏损 2.99 亿元、资产减值 3.62 亿元，说明上一轮扩张质量一般。</li>
+<li>2026Q1 经营现金流 -2.78 亿元，应收账款/合同资产约 39.45 亿元，现金流未验证利润反转。</li>
+</ul>
+      </div>
+    </div>
+    <p class="note">口径:市场估值为时点数据,财务指标需区分年度、半年度、季度和单季口径;所有结论以公司正式披露和已核验来源为准。</p>
+  </section>
+
+  <div class="kpis" aria-label="关键指标速览">
+    <div class="kpi"><div class="kl">当年Q1归母净利</div><div class="kv">0.81 亿元</div><div class="ks">归母净利润</div></div>
+<div class="kpi"><div class="kl">当年Q1扣非净利</div><div class="kv">0.77 亿元</div><div class="ks">扣非归母净利润</div></div>
+<div class="kpi"><div class="kl">当年Q1毛利率</div><div class="kv">12.29%</div><div class="ks">毛利率</div></div>
+<div class="kpi"><div class="kl">当年Q1经营现金流</div><div class="kv down">-2.78 亿元</div><div class="ks">经营现金流净额</div></div>
+<div class="kpi"><div class="kl">当年Q1应收/合同资产</div><div class="kv">39.45 亿元</div><div class="ks">应收账款/合同资产</div></div>
+<div class="kpi"><div class="kl">当年Q1存货</div><div class="kv">20.15 亿元</div><div class="ks">存货</div></div>
+  </div>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="toc" aria-label="目录">
+        <div class="scroll" id="toc-scroll">
+          <a href="#s1"><span class="toc-num">01</span>核心财务指标</a>
+<a href="#s2"><span class="toc-num">02</span>近两年财报趋势与业务结构</a>
+<a href="#s3"><span class="toc-num">03</span>结论摘要</a>
+<a href="#s4"><span class="toc-num">04</span>公司与行业</a>
+<a href="#s5"><span class="toc-num">05</span>订单与需求验证</a>
+<a href="#s6"><span class="toc-num">06</span>财务质量验证</a>
+<a href="#s7"><span class="toc-num">07</span>股东与机构</a>
+<a href="#s8"><span class="toc-num">08</span>估值与同行对比</a>
+<a href="#s9"><span class="toc-num">09</span>负面信息与风险排查</a>
+<a href="#s10"><span class="toc-num">10</span>财务造假风险初筛</a>
+<a href="#s11"><span class="toc-num">11</span>后续跟踪清单</a>
+<a href="#s12"><span class="toc-num">12</span>信息边界</a>
+        </div>
+      </nav>
+    </aside>
+    <main class="main">
+      <p>数据日期：2026-07-05；最新行情口径取 2026-07-03 收盘。 公司简称：杭电股份；公司全称：杭州电缆股份有限公司。</p>
+<section id="s1">
+<h2 class="sec"><span class="num">01</span>核心财务指标</h2>
+<h3 class="sub">1.1 当前估值快照</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">项目</th>
+<th scope="col">最新数据</th>
+<th scope="col">数据日期/口径</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">收盘价</th>
+<td>49.00 元</td>
+<td>2026-07-03 收盘</td>
+<td>当前估值计算基础；近期股价已充分反映光通信复苏预期</td>
+</tr>
+<tr>
+<th scope="row">总市值</th>
+<td>338.77 亿元</td>
+<td>2026-07-03，691,375,616 股</td>
+<td>已从传统线缆公司的低估值区间大幅重估</td>
+</tr>
+<tr>
+<th scope="row">流通市值</th>
+<td>338.77 亿元</td>
+<td>2026-07-03，流通股本同总股本</td>
+<td>全流通，交易弹性和股东减持对价格影响更直接</td>
+</tr>
+<tr>
+<th scope="row">PE</th>
+<td class="down">TTM 为负约 -142 倍；动态 PE 约 104.8 倍</td>
+<td>TTM 按 2025A、2025Q1、2026Q1 计算；动态口径按 2026Q1 年化</td>
+<td class="down">2025 年亏损导致 TTM PE 失真；动态 PE 已较高，依赖 2026H1 预增兑现</td>
+</tr>
+<tr>
+<th scope="row">PB</th>
+<td>约 12.52 倍</td>
+<td>市值 / 2026Q1 归母净资产</td>
+<td>PB 明显高于传统电缆资产属性，市场按光通信反转定价</td>
+</tr>
+<tr>
+<th scope="row">PS</th>
+<td>约 3.50 倍</td>
+<td>市值 / TTM 收入约 96.72 亿元</td>
+<td>收入体量大但毛利率低，PS 需结合光纤利润弹性看</td>
+</tr>
+<tr>
+<th scope="row">股息率</th>
+<td>0%</td>
+<td>2025 年度拟不派现</td>
+<td class="down">2025 年亏损，分红吸引力暂弱</td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">1.2 已披露当年期间财报</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">去年同期</th>
+<th scope="col">当年Q1</th>
+<th scope="col">当年H1</th>
+<th scope="col">当年Q3</th>
+<th scope="col">变化解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>19.82 亿元</td>
+<td>22.02 亿元</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td>Q1 同比 +11.12%，收入恢复温和</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td>0.21 亿元</td>
+<td>0.81 亿元</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="up">Q1 同比 +279.96%，利润弹性明显强于收入</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td>0.18 亿元</td>
+<td>0.77 亿元</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td>Q1 同比 +329.85%，核心利润恢复较好</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td class="down">-1.98 亿元</td>
+<td class="down">-2.78 亿元</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="down">利润恢复但现金流继续为负，回款和营运资金压力仍在</td>
+</tr>
+<tr>
+<th scope="row">经营现金流/净利润</th>
+<td class="down">-9.31</td>
+<td class="down">-3.44</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td>季节性因素可能存在，但现金含量仍需跟踪</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td class="down">-2.42 亿元</td>
+<td class="down">-3.23 亿元</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td>Q1 资本开支后现金消耗扩大</td>
+</tr>
+<tr>
+<th scope="row">EPS</th>
+<td>0.03 元/股</td>
+<td>0.12 元/股</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="up">每股盈利改善</td>
+</tr>
+<tr>
+<th scope="row">ROE</th>
+<td>0.73%</td>
+<td>2.94%</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td>Q1 盈利能力回升，但需看全年持续性</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>12.55%</td>
+<td>12.29%</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="up">收入增长未带来毛利率同步提升</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td>0.90%</td>
+<td>3.48%</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="up">扣非利润率显著改善，主要看光纤价格与销量能否延续</td>
+</tr>
+<tr>
+<th scope="row">资本开支</th>
+<td>0.44 亿元</td>
+<td>0.45 亿元</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="down">扩产压力较 2025 年铜箔转固期缓和</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>18.28 亿元</td>
+<td>20.15 亿元</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td>存货同比 +10.20%，略低于收入增速，仍需结合订单消化</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td>38.23 亿元</td>
+<td>39.45 亿元</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="down">绝对额高，占收入比例高，是现金流质量核心压力</td>
+</tr>
+<tr>
+<th scope="row">总资产</th>
+<td>103.62 亿元</td>
+<td>108.47 亿元</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td>资产规模继续扩张</td>
+</tr>
+<tr>
+<th scope="row">归母净资产</th>
+<td>30.66 亿元</td>
+<td>27.05 亿元</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="down">受 2025 年亏损与分红影响，净资产同比下降</td>
+</tr>
+</tbody></table></div>
+<p>说明：公司于 2026-07-04 披露 2026 年半年度业绩预增公告，预计 2026H1 归母净利润 3.60-4.00 亿元、扣非归母净利润 3.55-3.95 亿元；该数据为未经审计业绩预告，不作为已披露期间财报列入上表。</p>
+<h3 class="sub">1.3 最近三年年度财报</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">前两年</th>
+<th scope="col">前一年</th>
+<th scope="col">最新年度</th>
+<th scope="col">变化解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>73.66 亿元</td>
+<td>88.51 亿元</td>
+<td>94.51 亿元</td>
+<td class="up">收入连续增长，2025 年主要来自铜箔试生产放量和部分业务扩张</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td>1.36 亿元</td>
+<td>1.38 亿元</td>
+<td class="down">-2.99 亿元</td>
+<td>2025 年由盈转亏，利润与收入明显背离</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td>1.12 亿元</td>
+<td>1.01 亿元</td>
+<td class="down">-3.14 亿元</td>
+<td class="down">扣非亏损更大，说明亏损主要来自经营与资产质量压力</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td>2.72 亿元</td>
+<td>0.91 亿元</td>
+<td>0.43 亿元</td>
+<td class="down">连续走弱，利润现金含量下降</td>
+</tr>
+<tr>
+<th scope="row">经营现金流/净利润</th>
+<td>2.01</td>
+<td>0.66</td>
+<td class="muted">不适用</td>
+<td class="down">2025 年亏损但 OCF 小幅为正，不能单独证明经营质量恢复</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td class="down">-1.59 亿元</td>
+<td class="down">-1.88 亿元</td>
+<td class="down">-1.52 亿元</td>
+<td class="down">三年均为负，扩产和营运资金持续消耗现金</td>
+</tr>
+<tr>
+<th scope="row">EPS</th>
+<td>0.20 元/股</td>
+<td>0.20 元/股</td>
+<td class="down">-0.43 元/股</td>
+<td class="down">2025 年每股亏损</td>
+</tr>
+<tr>
+<th scope="row">ROE</th>
+<td>4.76%</td>
+<td>4.67%</td>
+<td class="down">-10.46%</td>
+<td class="down">2025 年净资产收益率转负</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>15.13%</td>
+<td>12.03%</td>
+<td>10.70%</td>
+<td class="down">毛利率连续下降，铜价、竞争和铜箔低毛利拖累明显</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td>1.52%</td>
+<td>1.14%</td>
+<td class="down">-3.32%</td>
+<td class="down">核心盈利能力明显恶化</td>
+</tr>
+<tr>
+<th scope="row">资本开支</th>
+<td>4.31 亿元</td>
+<td>2.79 亿元</td>
+<td>1.95 亿元</td>
+<td class="down">资本开支下降，但历史投入回报尚未充分体现</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>17.31 亿元</td>
+<td>18.86 亿元</td>
+<td>15.20 亿元</td>
+<td class="down">2025 年末存货下降，但 2026Q1 又回升至 20.15 亿元</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td>32.48 亿元</td>
+<td>35.50 亿元</td>
+<td>39.22 亿元</td>
+<td>应收及合同资产持续增加，快于 2025 年收入增速</td>
+</tr>
+<tr>
+<th scope="row">总资产</th>
+<td>98.93 亿元</td>
+<td>100.40 亿元</td>
+<td>99.92 亿元</td>
+<td>资产规模基本稳定</td>
+</tr>
+<tr>
+<th scope="row">归母净资产</th>
+<td>28.97 亿元</td>
+<td>30.05 亿元</td>
+<td>27.14 亿元</td>
+<td class="down">2025 年亏损侵蚀净资产</td>
+</tr>
+</tbody></table></div>
+<p>核心指标综合判断：杭电股份的收入规模并不差，2023-2025 年持续扩大，但利润质量在 2025 年出现断点，表现为毛利率继续下行、扣非亏损、资产减值增加、应收账款/合同资产继续上升。2026Q1 和 2026H1 预告显示光纤光缆需求与价格回暖带来利润弹性，这是基本面改善的核心证据；但现金流尚未跟上，且当前估值已先行反映较强预期，因此不能只按“业绩反转”给出强结论。</p>
+</section>
+<section id="s2">
+<h2 class="sec"><span class="num">02</span>近两年财报趋势与业务结构</h2>
+<h3 class="sub">2.1 近两年财报趋势</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">项目</th>
+<th scope="col">前一年</th>
+<th scope="col">最新年度/期间</th>
+<th scope="col">变化</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>88.51 亿元</td>
+<td>94.51 亿元</td>
+<td class="up">+6.78%</td>
+<td class="up">收入仍增长，但增量质量一般</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td>1.38 亿元</td>
+<td class="down">-2.99 亿元</td>
+<td class="down">-316.64%</td>
+<td class="down">2025 年亏损，利润大幅落后收入</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td>1.01 亿元</td>
+<td class="down">-3.14 亿元</td>
+<td class="down">-410.61%</td>
+<td>核心经营承压更明显</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>12.03%</td>
+<td>10.70%</td>
+<td class="down">-1.33pct</td>
+<td class="down">电缆竞争、铜箔低毛利、成本压力共同拖累</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td>1.14%</td>
+<td class="down">-3.32%</td>
+<td class="down">-4.46pct</td>
+<td>低毛利资产扩张未转化为利润</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td>0.91 亿元</td>
+<td>0.43 亿元</td>
+<td class="down">-52.92%</td>
+<td>现金流继续走弱</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td class="down">-1.88 亿元</td>
+<td class="down">-1.52 亿元</td>
+<td class="down">仍为负</td>
+<td class="down">资本开支下降但仍消耗现金</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>18.86 亿元</td>
+<td>15.20 亿元</td>
+<td class="down">-19.43%</td>
+<td class="down">年末存货下降，需看 2026 年订单与交付节奏</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td>35.50 亿元</td>
+<td>39.22 亿元</td>
+<td class="up">+10.48%</td>
+<td class="down">快于收入增速，回款压力上升</td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">2.2 分业务情况</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">业务</th>
+<th scope="col">前一年收入</th>
+<th scope="col">前一年毛利率</th>
+<th scope="col">最新年度/期间收入</th>
+<th scope="col">最新年度/期间毛利率</th>
+<th scope="col">变化</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">输配电气</th>
+<td>约 82.85 亿元</td>
+<td>约 12.57%</td>
+<td>83.09 亿元</td>
+<td>11.41%</td>
+<td class="down">主业收入稳定但毛利率下滑，是收入基本盘不是利润弹性来源</td>
+</tr>
+<tr>
+<th scope="row">光通信</th>
+<td>约 3.30 亿元</td>
+<td>约 7.05%</td>
+<td>4.34 亿元</td>
+<td>11.24%</td>
+<td class="up">2025 年收入 +31.42%，毛利率改善；2026H1 预告显示光纤量价齐升</td>
+</tr>
+<tr>
+<th scope="row">电子信息材料/铜箔</th>
+<td>约 2.27 亿元</td>
+<td>约 -3.15%</td>
+<td>7.04 亿元</td>
+<td>1.95%</td>
+<td>收入放量明显，但毛利率极低，尚未证明高质量盈利</td>
+</tr>
+</tbody></table></div>
+<p>业务结构判断：公司真正的盈利弹性来自光通信，尤其是子公司杭州永特信息技术有限公司光纤销量随行业复苏增长；电力电缆是收入和客户基础，但行业“料重工轻”、招投标竞争强，毛利率改善难度较大；铜箔在 2025 年贡献收入增量，但毛利率只有 1.95%，更像拖累利润率和现金流的资产。2026H1 预增若落地，基本面判断可从“修复”上调为“反转观察”，但仍需半年报现金流、应收和光纤毛利率验证。</p>
+</section>
+<section id="s3">
+<h2 class="sec"><span class="num">03</span>结论摘要</h2>
+<ul>
+<li>基本面判断：中性</li>
+<li>财务质量：一般</li>
+<li>估值状态：偏高</li>
+<li>财务造假风险初筛：中</li>
+<li>核心理由：</li>
+<ol>
+<li>2026Q1 利润恢复、2026H1 业绩预告大幅预增，光纤光缆市场回暖是明确的基本面改善线索。</li>
+<li>2025 年收入增长但归母亏损 2.99 亿元、扣非亏损 3.14 亿元，说明上一轮扩张质量不高。</li>
+<li>应收账款/合同资产规模高，2026Q1 经营现金流仍为 -2.78 亿元，利润兑现成现金仍需验证。</li>
+<li>当前市值约 339 亿元、PB 约 12.5 倍，估值已经从传统线缆资产重估到光通信反转资产。</li>
+<li>无近期重大处罚或非标审计证据，但资产减值、担保、减持和股价异动风险需要跟踪。</li>
+</ol>
+</ul>
+</section>
+<section id="s4">
+<h2 class="sec"><span class="num">04</span>公司与行业</h2>
+<ul>
+<li>主营业务：电线电缆、光通信、铜箔三大业务。</li>
+<li>主要产品：500kV/220kV/110kV/66kV 高压及超高压电力电缆，35kV 及以下中低压电缆，轨道交通、风电、光伏、防火等特种电缆，特高压导线，光棒、光纤、光缆，锂电/电子电路铜箔。</li>
+<li>市场占有率：公司年报未披露具体市占率；公司自称为国家电网、南方电网高压/超高压电力电缆和特高压导线主要供应商，并披露 2025 年电网两次集采中标成绩位于线缆行业前列。</li>
+<li>行业景气度：电网投资、新能源外送、配网改造支撑电缆需求；AI 算力和数据中心建设带动光纤光缆需求复苏；铜箔仍受新能源和 PCB 周期影响，盈利修复不确定。</li>
+<li>核心竞争力：电缆客户准入与招投标经验、光棒-光纤-光缆一体化产业链、多个生产基地、国家级绿色工厂和工业互联网能力。</li>
+<li>主要依赖：对电网招投标、铜/铝原材料价格、光通信行业周期依赖较高；无单一客户超过 50%，前五大客户销售额占 12.46%。</li>
+</ul>
+</section>
+<section id="s5">
+<h2 class="sec"><span class="num">05</span>订单与需求验证</h2>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">日期</th>
+<th scope="col">来源与链接</th>
+<th scope="col">项目/订单名称</th>
+<th scope="col">客户/采购方</th>
+<th scope="col">产品/服务</th>
+<th scope="col">金额</th>
+<th scope="col">状态</th>
+<th scope="col">履约周期</th>
+<th scope="col">是否公司正式公告</th>
+<th scope="col">对收入影响</th>
+<th scope="col">可信度</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">2025-12-31</th>
+<td>2025 年年度报告：https://pdf.dfcfw.com/pdf/H2_AN202604211821394339_1.pdf</td>
+<td>电网两次集采中标表现</td>
+<td>国家电网、南方电网、内蒙古独立电网等</td>
+<td>电力电缆/导线</td>
+<td class="muted">未披露</td>
+<td>中标/经营描述</td>
+<td class="muted">未披露</td>
+<td>是</td>
+<td>支撑 2026 年电缆基本盘，但金额不可量化</td>
+<td>中</td>
+</tr>
+<tr>
+<th scope="row">2026-07-04</th>
+<td>2026H1 业绩预增公告：https://pdf.dfcfw.com/pdf/H2_AN202607031826696469_1.pdf</td>
+<td>光纤光缆需求回暖</td>
+<td>下游光通信客户</td>
+<td>光纤/光缆</td>
+<td class="muted">未披露</td>
+<td>业绩预告/需求线索</td>
+<td>2026H1</td>
+<td>是</td>
+<td>预计 2026H1 归母净利润 3.60-4.00 亿元，弹性较大</td>
+<td>中高</td>
+</tr>
+<tr>
+<th scope="row">2025-12-31</th>
+<td>2025 年年度报告</td>
+<td>重大销售合同</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td>未发现重大销售合同披露</td>
+<td class="muted">不适用</td>
+<td>是</td>
+<td>无法以单个合同验证订单质量</td>
+<td>高</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>已披露订单/合同：未发现公司披露单个重大销售合同金额；年报披露 2025 年电网两次集采中标成绩位于线缆行业前列，但未披露金额。</li>
+<li>招投标与客户侧线索：电缆业务主要通过国家电网、南方电网等大型客户招投标实现销售；光缆产品也通过电信运营商招投标实现销售。</li>
+<li>订单状态区分：电网集采为中标/经营描述，不等同于已签具体合同金额；2026H1 预增为业绩预告，不是订单公告。</li>
+<li>订单金额与最近年度营收比例：由于金额未披露，无法计算。</li>
+<li>履约周期与收入确认节奏：电缆和光缆通常随交付确认收入，需以半年报收入、合同负债、存货、应收和现金流共同验证。</li>
+<li>合同负债/存货/应收/现金流验证：2025 年末合同负债 1.67 亿元，低于 2024 年末 3.08 亿元；2026Q1 合同负债 1.63 亿元，未显示明显预收扩张。2026Q1 存货升至 20.15 亿元、经营现金流 -2.78 亿元，说明需求改善尚未充分转化为现金。</li>
+<li>订单趋势判断：改善</li>
+<li>信息可信度：中</li>
+</ul>
+</section>
+<section id="s6">
+<h2 class="sec"><span class="num">06</span>财务质量验证</h2>
+<ul>
+<li>利润与现金流匹配：2026Q1 归母净利润 0.81 亿元，但经营现金流 -2.78 亿元；2025 年经营现金流仅 0.43 亿元。利润恢复还需要现金流验证。</li>
+<li>应收账款与营收匹配：应收账款/合同资产从 2023 年末 32.48 亿元升至 2025 年末 39.22 亿元，2026Q1 为 39.45 亿元，规模高且快于 2025 年收入增速。</li>
+<li>存货与营收匹配：2025 年末存货降至 15.20 亿元，2026Q1 升至 20.15 亿元；若光通信订单兑现，存货可解释为备货，否则需要关注跌价风险。</li>
+<li>资本开支效率与自由现金流：2023-2025 年自由现金流分别约 -1.59 亿元、-1.88 亿元、-1.52 亿元，铜箔等投入尚未形成稳定回报。</li>
+<li>预付款/其他应收款/在建工程/商誉异常：2026Q1 其他应收 0.55 亿元、预付款 0.21 亿元，绝对额不大；在建工程 2.73 亿元，较 2024 年末下降，主要因铜箔项目转固；未见商誉压力。</li>
+<li>资产负债率与有息负债：2026Q1 资产负债率 74.30%，短期借款 40.50 亿元、一年内到期非流动负债 10.11 亿元、长期借款 7.04 亿元，财务杠杆偏高。</li>
+<li>综合判断：财务质量一般。利润反转线索成立，但现金流、应收和高杠杆是主要扣分项。</li>
+</ul>
+</section>
+<section id="s7">
+<h2 class="sec"><span class="num">07</span>股东与机构</h2>
+<ul>
+<li>十大股东持股占比：2025 年末前十大股东约 55.35%；2026Q1 前十大流通股东约 61.28%，机构参与度提升。</li>
+<li>实控人/大股东持股与质押：控股股东永通控股集团有限公司持股 29.94%；浙江富春江通信集团有限公司为第二大股东。2025 年末前两大股东股份状态均为“无”质押/冻结。实际控制人为孙庆炎。</li>
+<li>大股东减持或增持：富春江通信集团 2026 年 5 月披露减持计划，拟减持不超过总股本 3%；截至 2026-06-17，富春江通信集团及一致行动人合计持股比例由 50.34%降至 50.00%，期间合计减持 234.22 万股。</li>
+<li>入驻机构家数：2026Q1 前十大流通股东出现广发远见智选、华夏中证电网设备 ETF、易方达环保主题、广发科技创新等基金，以及高盛、J.P.Morgan 等 QFII/外资机构。</li>
+<li>机构类型：公募基金、ETF、QFII/外资、北向资金。</li>
+<li>治理风险判断：控制权仍稳定，但第二大股东持续减持、股价大幅上涨后的筹码压力需要跟踪。年报未发现控股股东资金占用和违规担保。</li>
+</ul>
+</section>
+<section id="s8">
+<h2 class="sec"><span class="num">08</span>估值与同行对比</h2>
+<ul>
+<li>当前估值：按 2026-07-03 收盘价 49.00 元、市值 338.77 亿元，TTM PE 为负，动态 PE 约 104.8 倍，PB 约 12.52 倍，PS 约 3.50 倍。</li>
+<li>同行业估值对比：公司 2026 年多次股价异动公告提示，滚动市盈率显著偏离电气机械和器材制造业均值；6 月异动公告提到行业滚动市盈率约 26.87 倍、行业市净率约 3.42 倍。杭电当前 PB 约 12.5 倍，显著高于行业资产定价。</li>
+<li>同行业收入增速/毛利率/扣非净利率/ROE/现金流质量对比：与中天科技、亨通光电、汉缆股份等相比，杭电收入规模较小、毛利率较低，2025 年扣非净利率和 ROE 明显落后；但 2026H1 光纤光缆反转弹性更强。</li>
+<li>估值是否匹配成长与财务质量：偏高。若 2026H1 归母净利润 3.6-4.0 亿元兑现，短期利润增速可以解释部分重估；但以当前市值看，市场已提前计入光通信高景气延续，后续若现金流、毛利率或订单低于预期，估值回撤风险较大。</li>
+</ul>
+</section>
+<section id="s9">
+<h2 class="sec"><span class="num">09</span>负面信息与风险排查</h2>
+<ul>
+<li>是否亏损：2025 年归母净利润 -2.99 亿元、扣非归母净利润 -3.14 亿元；2026Q1 已恢复盈利，2026H1 预告继续大幅盈利。</li>
+<li>是否 ST 或退市风险：未发现 ST 或退市风险警示；2025 年亏损为单年亏损，且 2026 年已预告盈利。</li>
+<li>审计意见：2025 年年度报告审计意见为标准无保留意见，内部控制审计报告亦已披露。</li>
+<li>监管问询/处罚：未发现 2025-2026 年与财务真实性相关的重大处罚；历史上存在 2019 年出售股权事项问询记录，不构成当前定性证据。</li>
+<li>诉讼仲裁：年报重大事项部分未显示对当前经营构成重大影响的诉讼仲裁。</li>
+<li>负面新闻：主要为股价异常波动、估值偏离、第二大股东减持、对子公司担保比例较高、2025 年资产减值和亏损。</li>
+<li>关联交易/客户供应商真实性争议：未发现公开披露的客户/供应商真实性重大争议；前五大客户销售额占 12.46%，客户集中度不高；前五大供应商采购额占 37.51%，需关注铜/铝等原材料供应和价格波动。</li>
+</ul>
+</section>
+<section id="s10">
+<h2 class="sec"><span class="num">10</span>财务造假风险初筛</h2>
+<ul>
+<li>红旗数量：3 个主要红旗。</li>
+<li>主要红旗：</li>
+<ol>
+<li>2026Q1 利润恢复但经营现金流仍明显为负。</li>
+<li>应收账款/合同资产规模高，2025 年收入增长同时利润亏损。</li>
+<li>2025 年计提资产减值准备合计 3.62 亿元，叠加高负债和高担保。</li>
+</ol>
+<li>风险等级：中</li>
+<li>解释：这是财务造假风险初筛，不是事实定性。公司 2025 年审计意见为标准无保留意见，未发现监管、审计或司法层面对财务造假的确认。当前更准确的表述是“财务质量和会计估计风险需要跟踪”，尤其是应收回款、存货跌价、铜箔资产减值和光通信利润持续性。</li>
+</ul>
+</section>
+<section id="s11">
+<h2 class="sec"><span class="num">11</span>后续跟踪清单</h2>
+<ul>
+<li>新增订单金额：重点看国家电网、南方电网、运营商、算力/数据中心客户的正式中标和合同金额。</li>
+<li>年初至今累计订单金额：公司未披露累计金额时，不以市场传闻替代公告。</li>
+<li>订单金额/上年营收：若单项或累计订单超过 2025 年营收 10%，需要重新评估收入确定性。</li>
+<li>重点客户复购与新增客户：光纤光缆客户、运营商集采、数据中心链条客户是否持续放量。</li>
+<li>中标候选人转正式中标/签约情况：区分候选人、公示、中标、合同签署、交付验收。</li>
+<li>合同负债、存货、应收账款和经营现金流变化：2026H1 半年报是关键验证点；利润预告兑现后，若现金流仍弱且应收继续升高，需要下调财务质量。</li>
+<li>触发深度复盘条件：2026H1 毛利率明显高于 2025 年、经营现金流转正、应收周转改善、光通信收入和利润贡献单独披露；或相反，出现业绩预告修正、应收减值、存货跌价、股东继续大额减持、担保风险暴露。</li>
+</ul>
+</section>
+<section id="s12">
+<h2 class="sec"><span class="num">12</span>信息边界</h2>
+<ul>
+<li>数据日期：行情截至 2026-07-03 收盘；财务数据截至 2026Q1 已披露报告；2026H1 为 2026-07-04 披露的未经审计业绩预告。</li>
+<li>主要数据来源：</li>
+<ul>
+<li>2025 年年度报告：https://pdf.dfcfw.com/pdf/H2_AN202604211821394339_1.pdf</li>
+<li>2026 年第一季度报告：https://pdf.dfcfw.com/pdf/H2_AN202604211821394299_1.pdf</li>
+<li>2026 半年度业绩预增公告：https://pdf.dfcfw.com/pdf/H2_AN202607031826696469_1.pdf</li>
+<li>2025 年度计提资产减值准备公告：https://pdf.dfcfw.com/pdf/H2_AN202604211821394322_1.pdf</li>
+<li>2026 年 6 月权益变动提示公告：https://pdf.dfcfw.com/pdf/H2_AN202606171823637693_1.pdf</li>
+<li>东方财富行情与财务数据接口、证券时报/上海证券报公开报道。</li>
+</ul>
+<li>尚未核验的信息：未取得 2026H1 正式半年报分业务收入、毛利率、经营现金流、应收账款、存货和订单明细；未发现可量化的单个重大合同公告。</li>
+<li>可能影响结论的新公告或市场事件：2026H1 正式半年报、国家电网/南方电网中标公告、运营商光缆集采、富春江通信集团后续减持进度、对高负债子公司担保或减值变化。</li>
+</ul>
+</section>
+
+      <section id="note-friendly">
+        <h2 class="sec"><span class="num">◎</span>基本面速记</h2>
+        <div class="note-copy">
+          <h2>可复制摘要</h2>
+          <pre><code>【基本面速记】
+公司：杭电股份（603618.SH）
+结论：基本面中性，财务质量一般，估值偏高。
+核心看点：
+1. 2026Q1 归母净利润 0.81 亿元，同比 +279.96%；2026H1 预告归母净利润 3.60-4.00 亿元。
+2. 光纤光缆市场回暖是当前最强主线，子公司杭州永特信息技术有限公司贡献利润弹性。
+3. 电缆业务是收入基本盘，铜箔收入放量但毛利率低，仍拖累财务质量。
+主要风险：
+1. 2025 年亏损 2.99 亿元、资产减值 3.62 亿元，说明上一轮扩张质量一般。
+2. 2026Q1 经营现金流 -2.78 亿元，应收账款/合同资产约 39.45 亿元，现金流未验证利润反转。
+财务造假风险初筛：中。理由：现金流与利润不同步、应收规模高、资产减值和高杠杆并存；但无非标审计或监管定性证据。
+订单/需求验证：改善。依据：2026H1 预告明确光纤量价齐升，但未披露可量化订单金额。
+后续跟踪：2026H1 正式半年报的毛利率、光通信收入、经营现金流、应收账款、存货和股东减持进度。</code></pre>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="disclaimer">
+      免责声明:本报告为基于公开财报、公告、行情与新闻资料的整理和财务质量初筛,不构成任何投资建议,不保证未来收益。投资有风险,决策需谨慎。所有数据以公司正式披露为准。
+    </div>
+    <div>报告主体:杭电股份(603618.SH) | 数据口径:行情截至 2026-07-03 收盘；财务数据截至 2026Q1 已披露报告；2026H1 为 2026-07-04 披露的未经审计业绩预告。</div>
+    <div>主要数据来源:详见信息边界章节</div>
+    <div>自包含离线 HTML · 内联 CSS / 极简内联 JS · 可直接在浏览器打开</div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var links = document.querySelectorAll('nav.toc a');
+  var map = {};
+  for (var i=0;i<links.length;i++){
+    var href = links[i].getAttribute('href') || '';
+    if (href.charAt(0) === '#') map[href.slice(1)] = links[i];
+  }
+  var sections = document.querySelectorAll('main section[id]');
+  function onScroll(){
+    var pos = (window.scrollY || document.documentElement.scrollTop) + 90;
+    var cur = null;
+    for (var j=0;j<sections.length;j++){
+      if (sections[j].offsetTop <= pos) cur = sections[j].id;
+    }
+    for (var k=0;k<links.length;k++) links[k].classList.remove('active');
+    if (cur && map[cur]) {
+      map[cur].classList.add('active');
+      var act = map[cur];
+      var sc = document.getElementById('toc-scroll');
+      if (sc && act.offsetLeft < sc.scrollLeft) sc.scrollLeft = act.offsetLeft - 8;
+      if (sc && act.offsetLeft + act.offsetWidth > sc.scrollLeft + sc.clientWidth) {
+        sc.scrollLeft = act.offsetLeft + act.offsetWidth - sc.clientWidth + 8;
+      }
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
+</body>
+</html>

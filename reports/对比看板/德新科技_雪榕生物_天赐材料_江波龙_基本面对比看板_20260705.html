@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>四股基本面对比看板(20260705)基本面分析</title>
+<style>
+:root{
+  --ink:#1a2433;
+  --ink-soft:#46546a;
+  --line:#d8dee7;
+  --line-soft:#eef1f5;
+  --bg:#ffffff;
+  --brand:#1f3a5f;
+  --brand-2:#3b5b85;
+  --brand-light:#eaf0f8;
+  --accent:#8a6d3b;
+  --up:#b73333;
+  --down:#2f7a52;
+  --warn:#a06a1f;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Microsoft YaHei","Source Han Sans SC",system-ui,-apple-system,sans-serif;
+  color:var(--ink);
+  background:#fff;
+  line-height:1.7;
+  font-size:14.5px;
+  font-variant-numeric:tabular-nums;
+  -webkit-font-smoothing:antialiased;
+}
+.page{max-width:1600px;margin:0 auto;padding:0 32px;}
+.masthead{
+  display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px;
+  border-bottom:2px solid var(--brand);padding:24px 0 18px;
+}
+.masthead .m-left{min-width:280px;}
+.masthead .kode{font-size:12px;letter-spacing:.12em;color:var(--ink-soft);}
+.masthead h1{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC","Times New Roman",serif;
+  font-size:30px;font-weight:700;margin:6px 0 4px;color:var(--brand);letter-spacing:.5px;
+}
+.masthead .sub{font-size:13px;color:var(--ink-soft);}
+.masthead .meta{font-size:12.5px;color:var(--ink-soft);margin-top:12px;}
+.masthead .meta b{color:var(--ink);font-weight:600;}
+.masthead .m-stats{display:flex;gap:34px;flex-wrap:wrap;}
+.masthead .m-stats .ms-v{font-size:25px;font-weight:700;color:var(--brand);line-height:1;font-variant-numeric:tabular-nums;}
+.masthead .m-stats .ms-v span{font-size:13px;font-weight:500;color:var(--ink-soft);margin-left:2px;}
+.masthead .m-stats .ms-l{font-size:11.5px;color:var(--ink-soft);margin-top:5px;letter-spacing:.02em;}
+.verdict{
+  margin:16px 0 4px;border:1px solid var(--line);border-left:4px solid var(--brand);
+  background:#fbfcfe;border-radius:4px;padding:16px 20px;
+}
+.verdict-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-bottom:14px;}
+.verdict-head h2{margin:0;font-size:14px;letter-spacing:.1em;color:var(--brand);font-weight:700;}
+.badges{display:flex;flex-direction:row;flex-wrap:wrap;gap:8px;margin:0;}
+.badge{
+  display:inline-flex;align-items:center;gap:6px;font-size:12.5px;
+  padding:5px 11px;border-radius:999px;font-weight:600;line-height:1.4;
+}
+.badge .k{font-weight:500;opacity:.85;}
+.badge.fund{background:#fdecec;color:#9a2c2c;}
+.badge.qual{background:#eef3f8;color:#1f3a5f;}
+.badge.valu{background:#fdf3e3;color:#8a5a16;}
+.badge.fraud{background:#eef7f1;color:#2f6a48;}
+.verdict-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 40px;}
+.verdict-grid .v-title{font-size:12.5px;font-weight:700;letter-spacing:.04em;margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid var(--line);}
+.verdict-grid .v-title::before{content:"";display:inline-block;width:3px;height:12px;margin-right:7px;vertical-align:-1px;border-radius:2px;}
+.verdict-grid .v-up .v-title{color:var(--brand);}
+.verdict-grid .v-up .v-title::before{background:var(--brand);}
+.verdict-grid .v-risk .v-title{color:var(--warn);}
+.verdict-grid .v-risk .v-title::before{background:var(--warn);}
+.verdict-grid ul{margin:0;padding-left:18px;}
+.verdict-grid li{font-size:13.5px;margin:6px 0;line-height:1.65;}
+.note{
+  font-size:12px;color:var(--ink-soft);background:var(--line-soft);
+  padding:3px 8px;border-radius:3px;display:inline-block;
+}
+.verdict .note{display:block;margin-top:14px;}
+.kpis{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:1px;margin:16px 0 4px;
+  background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden;
+}
+.kpi{background:#fff;padding:13px 15px;min-width:0;}
+.kpi .kl{font-size:11.5px;color:var(--ink-soft);line-height:1.3;min-height:30px;}
+.kpi .kv{font-size:20px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;margin-top:5px;word-break:break-word;}
+.kpi .kv.up{color:var(--up);}
+.kpi .kv.down{color:var(--down);}
+.kpi .ks{font-size:11px;color:var(--ink-soft);margin-top:3px;font-variant-numeric:tabular-nums;}
+.layout{
+  display:grid;grid-template-columns:208px minmax(0,1fr);gap:36px;align-items:start;
+  padding:14px 0 0;
+}
+.sidebar{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow-y:auto;padding:0 8px 0 0;}
+.sidebar::-webkit-scrollbar{width:6px;}
+.sidebar::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px;}
+.toc{position:static;background:transparent;border:none;margin:12px 0 16px;padding:0;}
+.toc .scroll{overflow:visible;white-space:normal;display:flex;flex-direction:column;gap:2px;}
+.toc a{
+  display:flex;align-items:center;gap:9px;
+  font-size:14px;line-height:1.25;color:var(--ink-soft);text-decoration:none;
+  padding:6px 8px;border-radius:5px;margin:0;border:1px solid transparent;
+}
+.toc a .toc-num{
+  flex:0 0 auto;font-family:"Times New Roman",serif;font-size:12px;font-weight:600;
+  color:var(--ink-soft);background:var(--line-soft);
+  width:22px;height:22px;border-radius:4px;font-variant-numeric:tabular-nums;
+  display:inline-flex;align-items:center;justify-content:center;
+}
+.toc a:hover{background:var(--brand-light);color:var(--brand);}
+.toc a:hover .toc-num{background:#fff;color:var(--brand);}
+.toc a.active{background:var(--brand);color:#fff;font-weight:600;}
+.toc a.active .toc-num{background:rgba(255,255,255,.22);color:#fff;}
+.main{min-width:0;}
+section{padding:16px 0 8px;border-top:1px solid var(--line-soft);scroll-margin-top:64px;}
+section:first-of-type{border-top:none;padding-top:6px;}
+h2.sec{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",serif;
+  font-size:19px;color:var(--brand);margin:6px 0 12px;font-weight:700;
+  display:flex;align-items:baseline;gap:10px;
+}
+h2.sec .num{
+  font-family:"Times New Roman",serif;font-size:14px;color:#fff;background:var(--brand);
+  padding:2px 9px;border-radius:3px;letter-spacing:.05em;font-weight:600;flex:0 0 auto;
+}
+h3.sub{font-size:14.5px;color:var(--ink);margin:16px 0 6px;font-weight:700;}
+p{margin:8px 0;}
+ul,ol{margin:8px 0;padding-left:22px;}
+li{margin:4px 0;}
+strong{color:var(--ink);}
+.tbl-scroll{overflow-x:auto;margin:10px 0;border:1px solid var(--line);border-radius:4px;}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums;}
+thead th{
+  background:#f3f6fa;color:var(--brand);font-weight:700;text-align:right;
+  padding:10px 12px;border-bottom:1.5px solid var(--brand);white-space:nowrap;
+  font-size:12.5px;letter-spacing:.02em;
+}
+thead th[scope=col]:first-child{text-align:left;}
+tbody td{padding:9px 12px;border-bottom:1px solid var(--line-soft);text-align:right;white-space:normal;word-break:break-word;}
+tbody th[scope=row]{
+  text-align:left;color:var(--ink);font-weight:600;
+  padding:9px 12px;border-bottom:1px solid var(--line-soft);white-space:nowrap;font-size:13px;background:#fafbfd;
+}
+tbody tr:nth-child(even) td{background:#fafbfd;}
+tbody tr:hover td{background:var(--brand-light);}
+.up{color:var(--up);}
+.down{color:var(--down);}
+.muted{color:var(--ink-soft);}
+a{color:var(--brand-2);text-decoration:underline;text-underline-offset:2px;word-break:break-all;}
+a:hover{color:var(--brand);}
+.note-copy{
+  margin:20px 0;border:1px solid var(--line);border-left:4px solid var(--accent);
+  background:#fbfcfe;border-radius:4px;padding:14px 16px;
+}
+.note-copy h2{margin:0 0 10px;font-size:13px;letter-spacing:.1em;color:var(--brand);font-weight:700;}
+pre{
+  margin:10px 0;padding:12px 14px;background:#f7f9fc;border:1px solid var(--line-soft);
+  border-radius:4px;overflow:auto;color:var(--ink);font-size:12.5px;line-height:1.6;
+}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;}
+footer{
+  margin-top:22px;border-top:2px solid var(--brand);padding:14px 0 30px;
+  font-size:11.5px;color:var(--ink-soft);line-height:1.7;font-variant-numeric:tabular-nums;
+}
+footer .disclaimer{background:var(--line-soft);padding:8px 12px;border-radius:3px;margin-bottom:8px;}
+@media (max-width:1100px){
+  .layout{grid-template-columns:1fr;gap:0;}
+  .sidebar{position:static;max-height:none;overflow:visible;padding:0;}
+  .toc{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);
+    border-bottom:1px solid var(--line);margin:0 -32px 16px;padding:10px 32px;}
+  .toc .scroll{overflow-x:auto;white-space:nowrap;flex-direction:row;}
+  .toc a{display:inline-flex;white-space:nowrap;border-left:none;border:1px solid transparent;padding:3px 9px;margin:2px;}
+  .toc a.active{border-left:none;background:var(--brand);color:#fff;}
+}
+@media (max-width:760px){
+  .verdict-grid{grid-template-columns:1fr;}
+  .kpis{grid-template-columns:repeat(3,1fr);}
+  .page{padding:0 18px;}
+  .masthead .m-stats{gap:22px;}
+}
+@media (max-width:460px){.kpis{grid-template-columns:repeat(2,1fr);}}
+@media print{
+  body{background:#fff;font-size:10.5px;}
+  .page{max-width:none;padding:0;}
+  .layout{grid-template-columns:1fr;}
+  .sidebar{position:static;max-height:none;overflow:visible;}
+  .toc{position:static;border:none;padding:0;margin:0 0 8px;}
+  .toc .scroll{overflow:visible;display:block;}
+  .toc a{font-size:10px;padding:1px 5px;display:inline-flex;}
+  .toc a.active{background:transparent;color:var(--ink);}
+  section{break-inside:avoid;padding-top:10px;}
+  table{font-size:9.5px;}
+  thead{display:table-header-group;}
+  tbody tr{break-inside:avoid;}
+  .badge{border:1px solid #ccc;}
+  .note-copy,.tbl-scroll,.kpis,.verdict{break-inside:avoid;}
+  footer{break-inside:avoid;}
+  a{color:var(--ink);text-decoration:none;}
+  .kpi{border:1px solid #ccc;}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="masthead">
+    <div class="m-left">
+      <div class="kode">20260705 · A股组合 · 基本面分析</div>
+      <h1>四股基本面对比看板 · 基本面分析</h1>
+      <div class="sub">静水2008框架下的景气度、业绩弹性、现金流、估值与风险对比</div>
+      <div class="meta">数据口径 <b>生成日期 2026-07-05；源报告日期 2026-07-04；行情估值主要截至 2026-07-03 收盘；财务正式报告主要截至 2026Q1，江波龙含 2026H1 业绩预告。</b> · 生成时间 <b>2026-07-05 10:42</b></div>
+    </div>
+    <div class="m-stats">
+      <div><div class="ms-v">见四股源报告</div><div class="ms-l">收盘价 · 2026-07-03 收盘</div></div>
+<div><div class="ms-v">36.08-2,614.60 亿元</div><div class="ms-l">总市值 · 雪榕生物至江波龙区间</div></div>
+<div><div class="ms-v">TTM 约 18.43-93.64 倍</div><div class="ms-l">PE · 四份源报告口径</div></div>
+<div><div class="ms-v">2.02-21.96 倍</div><div class="ms-l">PB · 四份源报告口径</div></div>
+    </div>
+  </header>
+
+  <section class="verdict" aria-label="结论速览">
+    <div class="verdict-head">
+      <h2>结论速览</h2>
+      <div class="badges">
+        <span class="badge fund"><span class="k">基本面</span> 分层跟踪。江波龙和天赐材料景气度、业绩弹性领先；雪榕生物是现金流较好的周期反转；德新科技修复确定性和估值匹配度最弱。</span>
+<span class="badge qual"><span class="k">财务质量</span> 整体不能给“优秀”。雪榕生物现金流最好；天赐材料和江波龙利润表强但现金流背离；德新科技现金流为正但应收、商誉和客户集中压制质量。</span>
+<span class="badge valu"><span class="k">估值</span> 整体偏高或需要业绩继续兑现。天赐材料相对更可解释，江波龙弹性最大但 PB/PS 容错最低，雪榕生物需 H1 验证，德新科技估值匹配度最弱。</span>
+<span class="badge fraud"><span class="k">造假风险初筛</span> 四家公司源报告均为“中”。这不是事实定性，核心是利润现金流匹配、应收/存货、治理和周期资产风险需要继续验证。</span>
+      </div>
+    </div>
+    <div class="verdict-grid">
+      <div class="v-col v-up">
+        <div class="v-title">核心理由</div>
+        <ul>
+<li>按静水框架，第一优先级不是低估值，而是景气上行、业绩硬增速和核心受益程度；这一点江波龙、天赐材料明显强于雪榕生物和德新科技。</li>
+<li>江波龙最接近“高景气行业核心受益+市场认可”的形态，但连续负经营现金流、高库存、高预付款和高杠杆使其不能被无条件确认。</li>
+<li>天赐材料景气修复和业绩弹性明确，且估值比江波龙更容易被全年利润消化；短板是 2026Q1 现金流、应收和存货没有同步验证。</li>
+<li>雪榕生物的优势是现金流和应收质量，短板是 2025 全年盈利基础薄、食用菌价格周期和治理折价。</li>
+<li>德新科技的利润修复有低基数和减值不再重复因素，且缺少可核验销售订单，当前估值对后续增长要求过高。</li>
+</ul>
+      </div>
+      <div class="v-col v-risk">
+        <div class="v-title">主要风险 / 关注</div>
+        <ul>
+<li>利润表先行而现金流滞后，尤其是江波龙和天赐材料。</li>
+<li>周期价格回落、库存跌价、应收回款、治理和订单不可验证。</li>
+</ul>
+      </div>
+    </div>
+    <p class="note">口径:市场估值为时点数据,财务指标需区分年度、半年度、季度和单季口径;所有结论以公司正式披露和已核验来源为准。</p>
+  </section>
+
+  <div class="kpis" aria-label="关键指标速览">
+    <div class="kpi"><div class="kl">总市值</div><div class="kv">36.08-2,614.60 亿元</div><div class="ks">雪榕生物至江波龙区间</div></div>
+<div class="kpi"><div class="kl">PE</div><div class="kv">TTM 约 18.43-93.64 倍</div><div class="ks">四份源报告口径</div></div>
+<div class="kpi"><div class="kl">PB</div><div class="kv">2.02-21.96 倍</div><div class="ks">四份源报告口径</div></div>
+<div class="kpi"><div class="kl">PS</div><div class="kv">约 1.62-10.57 倍</div><div class="ks">四份源报告口径</div></div>
+  </div>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="toc" aria-label="目录">
+        <div class="scroll" id="toc-scroll">
+          <a href="#s1"><span class="toc-num">01</span>静水2008框架映射</a>
+<a href="#s2"><span class="toc-num">02</span>一页对比总览</a>
+<a href="#s3"><span class="toc-num">03</span>结论摘要</a>
+<a href="#s4"><span class="toc-num">04</span>五维横向打分</a>
+<a href="#s5"><span class="toc-num">05</span>统一口径结论</a>
+<a href="#s6"><span class="toc-num">06</span>后续跟踪清单</a>
+<a href="#s7"><span class="toc-num">07</span>信息边界与源文件</a>
+        </div>
+      </nav>
+    </aside>
+    <main class="main">
+      <p>生成日期：2026-07-05。源报告日期：2026-07-04。行情口径：四份源报告均主要采用 2026-07-03 收盘数据。 方法口径：按“静水2008”总结里的成长股框架，把重点压缩为景气度、业绩弹性、现金流质量、估值匹配度和主要风险。本看板不构成投资建议。</p>
+<section id="s1">
+<h2 class="sec"><span class="num">01</span>静水2008框架映射</h2>
+<h3 class="sub">1.1 看板估值快照</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">项目</th>
+<th scope="col">最新数据</th>
+<th scope="col">数据日期/口径</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">收盘价</th>
+<td>见四股源报告</td>
+<td>2026-07-03 收盘</td>
+<td>组合看板不合并展示单一股价，重点看相对景气和估值匹配</td>
+</tr>
+<tr>
+<th scope="row">总市值</th>
+<td>36.08-2,614.60 亿元</td>
+<td>雪榕生物至江波龙区间</td>
+<td>市值跨度极大，江波龙和天赐材料已是资金认可度更高的大市值弹性标的</td>
+</tr>
+<tr>
+<th scope="row">流通市值</th>
+<td>30.74-1,741.90 亿元</td>
+<td>雪榕生物至江波龙区间</td>
+<td>流通盘差异决定二级市场弹性和资金容量不可直接类比</td>
+</tr>
+<tr>
+<th scope="row">PE</th>
+<td>TTM 约 18.43-93.64 倍</td>
+<td>四份源报告口径</td>
+<td class="up">低 PE 不是充分理由，高 PE 必须用景气延续和现金流改善解释</td>
+</tr>
+<tr>
+<th scope="row">PB</th>
+<td>2.02-21.96 倍</td>
+<td>四份源报告口径</td>
+<td class="down">PB 高低必须结合 ROE、资产质量、库存和应收风险</td>
+</tr>
+<tr>
+<th scope="row">PS</th>
+<td>约 1.62-10.57 倍</td>
+<td>四份源报告口径</td>
+<td class="up">江波龙、德新科技 PS 较高，对增长兑现要求更高</td>
+</tr>
+<tr>
+<th scope="row">股息率</th>
+<td>0%-约 0.56%</td>
+<td>四份源报告口径</td>
+<td>四家公司定价核心均不是股息收益</td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">1.2 框架映射</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">框架要点</th>
+<th scope="col">本看板采用的可比口径</th>
+<th scope="col">判定含义</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">高景气行业</th>
+<td>行业是否处在需求上行、价格上行、供需偏紧或周期反转阶段</td>
+<td>没有景气度，低估值不单独构成理由</td>
+</tr>
+<tr>
+<th scope="row">硬业绩增速</th>
+<td>2026Q1 收入、归母净利润、扣非净利润增速及 H1 预告</td>
+<td>重点看主业利润能否持续，而不是低基数扭亏</td>
+</tr>
+<tr>
+<th scope="row">新动能或供需矛盾</th>
+<td>新产品、新客户、长协、客户导入、价格中枢、产能利用率</td>
+<td>用财报、公告和现金流交叉验证需求</td>
+</tr>
+<tr>
+<th scope="row">市场认可和估值</th>
+<td>市值、PE、PB、PS 与利润持续性、资产质量的匹配</td>
+<td class="up">高估值必须有持续高增长和现金流验证</td>
+</tr>
+<tr>
+<th scope="row">逻辑证伪点</th>
+<td class="down">景气转弱、业绩不及预期、现金流背离、库存或应收恶化</td>
+<td>逻辑证伪优先于“跌多了便宜”</td>
+</tr>
+</tbody></table></div>
+</section>
+<section id="s2">
+<h2 class="sec"><span class="num">02</span>一页对比总览</h2>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">公司</th>
+<th scope="col">景气度</th>
+<th scope="col">业绩弹性</th>
+<th scope="col">现金流质量</th>
+<th scope="col">估值匹配度</th>
+<th scope="col">主要风险</th>
+<th scope="col">看板结论</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">江波龙</th>
+<td class="up">最强。存储处在 AI 服务器、端侧 AI、AI PC、智能汽车拉动的上行周期，2026H1 预告进一步强化景气</td>
+<td class="up">最强。2026Q1 归母净利润 38.62 亿元，H1 预告 92-110 亿元，利润表弹性第一</td>
+<td>偏弱。2025 经营现金流 -12.01 亿元，2026Q1 -28.75 亿元，利润未转化为现金</td>
+<td>有条件匹配。TTM PE 约 48.09，若 H1 预告兑现可快速消化，但 PB 21.96、PS 9.20 容错低</td>
+<td class="down">存货 179.61 亿元、预付款 35.51 亿元、有息债务约 167.89 亿元，周期反转会放大风险</td>
+<td>高景气核心候选，但必须等现金流和库存验证，不能仅按利润表确认“超级成长”</td>
+</tr>
+<tr>
+<th scope="row">天赐材料</th>
+<td class="up">强。电解液、六氟磷酸锂、LiFSI 等锂电材料 2025Q4-2026Q1 景气明显修复</td>
+<td class="up">很强。2026Q1 收入 +91.29%，归母净利润 +1005.75%，扣非净利润 +1062.23%</td>
+<td class="up">偏弱待验证。2026Q1 经营现金流 -0.21 亿元，自由现金流 -3.23 亿元，应收和存货同步上升</td>
+<td>相对更均衡。TTM PE 约 38.43，PB 约 5.77；若 Q2-Q4 利润延续可消化，但已反映较多复苏预期</td>
+<td>价格周期、应收账款 95.81 亿元、存货 22.82 亿元、长协金额和单价未披露</td>
+<td class="up">景气修复和业绩弹性清晰，优先级高于普通周期反弹股，但结论取决于后续回款与价格</td>
+</tr>
+<tr>
+<th scope="row">雪榕生物</th>
+<td class="up">中等偏强。食用菌行业从供给扩张后的低迷期修复，金针菇价格改善</td>
+<td class="up">强但需验证。2026Q1 归母净利润 1.73 亿元，同比 +2291.06%，但 2025 扣非净利润仅 0.05 亿元</td>
+<td>最好。2025 经营现金流 4.16 亿元，2026Q1 2.04 亿元，均高于当期利润，应收规模低</td>
+<td>一般。TTM PE 约 18.43、PB 2.02，但 2025 静态利润很薄，且同行 2025 盈利质量更稳</td>
+<td>食用菌价格回落、Q1 不能年化、控制权变更、原实控人股份冻结、历史会计监管整改</td>
+<td>周期反转观察股。现金流比利润表扎实，但还不是已验证的高质量成长股</td>
+</tr>
+<tr>
+<th scope="row">德新科技</th>
+<td class="up">中等偏弱。锂电和光伏设备链局部修复，但客户扩产节奏和技术路线仍有不确定性</td>
+<td>中等。2026Q1 扭亏、收入 +52.24%，但低基数因素明显，利润规模小</td>
+<td class="down">尚可但不够强。2026Q1 经营现金流/净利润 1.12，2025 经营现金流为正但同比下降</td>
+<td>最弱。TTM PE 93.64、PB 5.55、PS 约 10.57，与 2025 ROE 3.80% 不匹配</td>
+<td>未披露可核验客户销售大单，商誉 3.66 亿元，票据+应收较高，客户集中和股东质押</td>
+<td class="up">修复型小市值观察，不符合静水框架里“核心 alpha”的优先条件</td>
+</tr>
+</tbody></table></div>
+</section>
+<section id="s3">
+<h2 class="sec"><span class="num">03</span>结论摘要</h2>
+<ul>
+<li>基本面判断：分层跟踪。江波龙和天赐材料景气度、业绩弹性领先；雪榕生物是现金流较好的周期反转；德新科技修复确定性和估值匹配度最弱。</li>
+<li>财务质量：整体不能给“优秀”。雪榕生物现金流最好；天赐材料和江波龙利润表强但现金流背离；德新科技现金流为正但应收、商誉和客户集中压制质量。</li>
+<li>估值状态：整体偏高或需要业绩继续兑现。天赐材料相对更可解释，江波龙弹性最大但 PB/PS 容错最低，雪榕生物需 H1 验证，德新科技估值匹配度最弱。</li>
+<li>财务造假风险初筛：四家公司源报告均为“中”。这不是事实定性，核心是利润现金流匹配、应收/存货、治理和周期资产风险需要继续验证。</li>
+<li>核心理由：</li>
+<ol>
+<li>按静水框架，第一优先级不是低估值，而是景气上行、业绩硬增速和核心受益程度；这一点江波龙、天赐材料明显强于雪榕生物和德新科技。</li>
+<li>江波龙最接近“高景气行业核心受益+市场认可”的形态，但连续负经营现金流、高库存、高预付款和高杠杆使其不能被无条件确认。</li>
+<li>天赐材料景气修复和业绩弹性明确，且估值比江波龙更容易被全年利润消化；短板是 2026Q1 现金流、应收和存货没有同步验证。</li>
+<li>雪榕生物的优势是现金流和应收质量，短板是 2025 全年盈利基础薄、食用菌价格周期和治理折价。</li>
+<li>德新科技的利润修复有低基数和减值不再重复因素，且缺少可核验销售订单，当前估值对后续增长要求过高。</li>
+</ol>
+</ul>
+</section>
+<section id="s4">
+<h2 class="sec"><span class="num">04</span>五维横向打分</h2>
+<p>分值为同组相对比较，5 分最好，1 分最弱；用于复盘排序，不代表投资评级。</p>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">公司</th>
+<th scope="col">景气度</th>
+<th scope="col">业绩弹性</th>
+<th scope="col">现金流质量</th>
+<th scope="col">估值匹配度</th>
+<th scope="col">风险可控度</th>
+<th scope="col">综合定位</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">江波龙</th>
+<td>5.0</td>
+<td>5.0</td>
+<td>1.5</td>
+<td>2.5</td>
+<td>2.0</td>
+<td>高景气高弹性，但财务验证滞后</td>
+</tr>
+<tr>
+<th scope="row">天赐材料</th>
+<td>4.0</td>
+<td>4.5</td>
+<td>2.0</td>
+<td>3.0</td>
+<td>3.0</td>
+<td class="up">景气修复龙头，等待回款验证</td>
+</tr>
+<tr>
+<th scope="row">雪榕生物</th>
+<td>3.0</td>
+<td>3.5</td>
+<td>4.0</td>
+<td>2.5</td>
+<td>2.5</td>
+<td>周期反转，现金流优先但治理折价</td>
+</tr>
+<tr>
+<th scope="row">德新科技</th>
+<td>2.5</td>
+<td>2.5</td>
+<td>3.0</td>
+<td>1.5</td>
+<td>2.5</td>
+<td class="up">小市值修复，估值与订单验证不足</td>
+</tr>
+</tbody></table></div>
+</section>
+<section id="s5">
+<h2 class="sec"><span class="num">05</span>统一口径结论</h2>
+<p>按“景气度不变才值得持有、逻辑证伪就退出”的框架，这四家公司里没有一只可以直接归入“无瑕疵超级成长股”。更合适的统一结论是：</p>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">层级</th>
+<th scope="col">公司</th>
+<th scope="col">统一判断</th>
+<th scope="col">关键验证</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">第一层：高景气核心候选</th>
+<td>江波龙</td>
+<td class="up">景气和利润弹性最强，市场认可度最高，但财务质量短板最突出</td>
+<td class="up">2026H1 正式报告是否兑现预告；经营现金流、存货周转、预付款和债务是否改善</td>
+</tr>
+<tr>
+<th scope="row">第二层：景气修复龙头</th>
+<td>天赐材料</td>
+<td class="up">业绩弹性强，估值消化路径比江波龙更清楚，但仍是价格周期驱动</td>
+<td class="up">Q2/Q3 毛利率、经营现金流能否转正，应收和存货是否继续快增，楚能协议是否转订单</td>
+</tr>
+<tr>
+<th scope="row">第三层：反转验证观察</th>
+<td>雪榕生物</td>
+<td>现金流最好，行业反转有迹象，但全年盈利质量和治理折价需要验证</td>
+<td>H1/Q3 金针菇价格、扣非净利率、经营现金流/净利润、股份冻结和控制权安排</td>
+</tr>
+<tr>
+<th scope="row">第四层：低优先级观察</th>
+<td>德新科技</td>
+<td class="down">修复存在但不够硬，估值对小规模利润和订单验证要求偏高</td>
+<td>客户销售订单、毛利率、票据+应收、商誉、控股股东质押</td>
+</tr>
+</tbody></table></div>
+<p>一句话结论：如果只按静水框架寻找“当下高景气核心 alpha”，江波龙和天赐材料更值得进入重点跟踪池；如果加入现金流质量约束，天赐材料优于江波龙，雪榕生物优于德新科技；若要求“景气、业绩、现金流、估值”四项同时匹配，目前四家公司都还需要 2026H1 或 Q2/Q3 进一步确认。</p>
+</section>
+<section id="s6">
+<h2 class="sec"><span class="num">06</span>后续跟踪清单</h2>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">公司</th>
+<th scope="col">必看指标</th>
+<th scope="col">触发上调的信号</th>
+<th scope="col">触发下调的信号</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">江波龙</th>
+<td>2026H1 正式利润、经营现金流、存货周转、预付款、跌价准备、有息债务</td>
+<td class="up">H1 达预告中高位，经营现金流转正或明显收窄，存货周转加快</td>
+<td class="down">H1 低于预告下限，Q2/Q3 经营现金流继续大额为负，存货和预付款继续扩张</td>
+</tr>
+<tr>
+<th scope="row">天赐材料</th>
+<td>Q2/Q3 毛利率、经营现金流、应收账款、存货、产品价格、楚能协议执行</td>
+<td class="up">CFO 转正并覆盖利润，应收和存货增速低于收入，长协转化为明确订单</td>
+<td class="up">产品价格回落，现金流继续背离利润，应收和存货继续大幅增长</td>
+</tr>
+<tr>
+<th scope="row">雪榕生物</th>
+<td>金针菇价格、产能利用率、扣非净利率、经营现金流/净利润、存货、治理事项</td>
+<td class="down">H1/Q3 保持较高毛利率和现金流，扣非利润延续，治理风险缓和</td>
+<td class="down">菇价回落导致毛利率低于 20%，现金流低于利润，股份冻结或控制权安排恶化</td>
+</tr>
+<tr>
+<th scope="row">德新科技</th>
+<td>精密制造订单、毛利率、票据+应收、存货、商誉、股东质押</td>
+<td class="up">披露可核验销售订单，毛利率维持高位，现金流和应收同步改善</td>
+<td class="down">毛利率回落，经营现金流转弱，应收/票据继续扩张，商誉或质押风险上升</td>
+</tr>
+</tbody></table></div>
+</section>
+<section id="s7">
+<h2 class="sec"><span class="num">07</span>信息边界与源文件</h2>
+<ul>
+<li>数据日期：生成日期 2026-07-05；源报告日期 2026-07-04；行情估值主要截至 2026-07-03 收盘；财务正式报告主要截至 2026Q1，江波龙含 2026H1 业绩预告。</li>
+<li>主要数据来源：本地四份 2026-07-04 基本面分析报告、静水2008投资体系总结，以及源报告中已列示的公告、财报和行情来源。</li>
+<li>本看板只基于本地四份 2026-07-04 基本面分析和“静水2008”的投资体系总结做二次归纳，没有重新联网核验最新公告或行情。</li>
+<li>天赐材料同日存在两版报告，本看板采用内容更完整、日期口径更新至 2026-07-04 公告的带时间戳版本。</li>
+<li>源报告：</li>
+<ul>
+<li>德新科技：[德新科技_603032_基本面分析_20260704.md](/Users/superman/Documents/doc-finance/reports/603032/基本面分析/德新科技_603032_基本面分析_20260704.md)</li>
+<li>雪榕生物：[雪榕生物_300511_基本面分析_20260704.md](/Users/superman/Documents/doc-finance/reports/300511/基本面分析/雪榕生物_300511_基本面分析_20260704.md)</li>
+<li>天赐材料：[天赐材料_002709_基本面分析_20260704_161919.md](/Users/superman/Documents/doc-finance/reports/002709/基本面分析/天赐材料_002709_基本面分析_20260704_161919.md)</li>
+<li>江波龙：[江波龙_301308_基本面分析_20260704.md](/Users/superman/Documents/doc-finance/reports/301308/基本面分析/江波龙_301308_基本面分析_20260704.md)</li>
+<li>静水2008框架：[summary.md](/Users/superman/Documents/doc-finance/book/jingshui2008-investment-system-summary/summary.md)</li>
+</ul>
+</ul>
+</section>
+
+      <section id="note-friendly">
+        <h2 class="sec"><span class="num">◎</span>基本面速记</h2>
+        <div class="note-copy">
+          <h2>可复制摘要</h2>
+          <pre><code>【基本面速记】
+公司：德新科技、雪榕生物、天赐材料、江波龙四股对比
+结论：基本面分层跟踪，财务质量整体需验证，估值整体偏高或需要 2026H1/Q2-Q3 继续兑现。
+核心看点：
+1. 江波龙景气和业绩弹性最强，但现金流、库存、预付款和杠杆是最大约束。
+2. 天赐材料景气修复和利润弹性清晰，估值相对更可解释，但回款和存货需要验证。
+3. 雪榕生物现金流质量最好，但全年盈利基础、价格周期和治理折价仍需观察。
+主要风险：
+1. 利润表先行而现金流滞后，尤其是江波龙和天赐材料。
+2. 周期价格回落、库存跌价、应收回款、治理和订单不可验证。
+财务造假风险初筛：整体中。理由：未做事实定性，主要是财务质量、营运资金和治理风险筛查。
+订单/需求验证：江波龙和天赐材料显示改善但缺少完整金额订单；雪榕生物不适合用订单验证；德新科技订单验证不足。
+后续跟踪：2026H1 正式财报、Q2/Q3 经营现金流、存货周转、应收回款、价格中枢和治理事件。</code></pre>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="disclaimer">
+      免责声明:本报告为基于公开财报、公告、行情与新闻资料的整理和财务质量初筛,不构成任何投资建议,不保证未来收益。投资有风险,决策需谨慎。所有数据以公司正式披露为准。
+    </div>
+    <div>报告主体:四股基本面对比看板(20260705) | 数据口径:生成日期 2026-07-05；源报告日期 2026-07-04；行情估值主要截至 2026-07-03 收盘；财务正式报告主要截至 2026Q1，江波龙含 2026H1 业绩预告。</div>
+    <div>主要数据来源:本地四份 2026-07-04 基本面分析报告、静水2008投资体系总结，以及源报告中已列示的公告、财报和行情来源。</div>
+    <div>自包含离线 HTML · 内联 CSS / 极简内联 JS · 可直接在浏览器打开</div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var links = document.querySelectorAll('nav.toc a');
+  var map = {};
+  for (var i=0;i<links.length;i++){
+    var href = links[i].getAttribute('href') || '';
+    if (href.charAt(0) === '#') map[href.slice(1)] = links[i];
+  }
+  var sections = document.querySelectorAll('main section[id]');
+  function onScroll(){
+    var pos = (window.scrollY || document.documentElement.scrollTop) + 90;
+    var cur = null;
+    for (var j=0;j<sections.length;j++){
+      if (sections[j].offsetTop <= pos) cur = sections[j].id;
+    }
+    for (var k=0;k<links.length;k++) links[k].classList.remove('active');
+    if (cur && map[cur]) {
+      map[cur].classList.add('active');
+      var act = map[cur];
+      var sc = document.getElementById('toc-scroll');
+      if (sc && act.offsetLeft < sc.scrollLeft) sc.scrollLeft = act.offsetLeft - 8;
+      if (sc && act.offsetLeft + act.offsetWidth > sc.scrollLeft + sc.clientWidth) {
+        sc.scrollLeft = act.offsetLeft + act.offsetWidth - sc.clientWidth + 8;
+      }
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
+</body>
+</html>
