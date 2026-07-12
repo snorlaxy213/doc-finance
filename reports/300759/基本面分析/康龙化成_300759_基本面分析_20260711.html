@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>康龙化成(300759.SZ)基本面分析</title>
+<style>
+:root{
+  --ink:#1a2433;
+  --ink-soft:#46546a;
+  --line:#d8dee7;
+  --line-soft:#eef1f5;
+  --bg:#ffffff;
+  --brand:#1f3a5f;
+  --brand-2:#3b5b85;
+  --brand-light:#eaf0f8;
+  --accent:#8a6d3b;
+  --up:#b73333;
+  --down:#2f7a52;
+  --warn:#a06a1f;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Microsoft YaHei","Source Han Sans SC",system-ui,-apple-system,sans-serif;
+  color:var(--ink);
+  background:#fff;
+  line-height:1.7;
+  font-size:14.5px;
+  font-variant-numeric:tabular-nums;
+  -webkit-font-smoothing:antialiased;
+}
+.page{max-width:1600px;margin:0 auto;padding:0 32px;}
+.masthead{
+  display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px;
+  border-bottom:2px solid var(--brand);padding:24px 0 18px;
+}
+.masthead .m-left{min-width:280px;}
+.masthead .kode{font-size:12px;letter-spacing:.12em;color:var(--ink-soft);}
+.masthead h1{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC","Times New Roman",serif;
+  font-size:30px;font-weight:700;margin:6px 0 4px;color:var(--brand);letter-spacing:.5px;
+}
+.masthead .sub{font-size:13px;color:var(--ink-soft);}
+.masthead .meta{font-size:12.5px;color:var(--ink-soft);margin-top:12px;}
+.masthead .meta b{color:var(--ink);font-weight:600;}
+.masthead .m-stats{display:flex;gap:34px;flex-wrap:wrap;}
+.masthead .m-stats .ms-v{font-size:25px;font-weight:700;color:var(--brand);line-height:1;font-variant-numeric:tabular-nums;}
+.masthead .m-stats .ms-v span{font-size:13px;font-weight:500;color:var(--ink-soft);margin-left:2px;}
+.masthead .m-stats .ms-l{font-size:11.5px;color:var(--ink-soft);margin-top:5px;letter-spacing:.02em;}
+.verdict{
+  margin:16px 0 4px;border:1px solid var(--line);border-left:4px solid var(--brand);
+  background:#fbfcfe;border-radius:4px;padding:16px 20px;
+}
+.verdict-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-bottom:14px;}
+.verdict-head h2{margin:0;font-size:14px;letter-spacing:.1em;color:var(--brand);font-weight:700;}
+.badges{display:flex;flex-direction:row;flex-wrap:wrap;gap:8px;margin:0;}
+.badge{
+  display:inline-flex;align-items:center;gap:6px;font-size:12.5px;
+  padding:5px 11px;border-radius:999px;font-weight:600;line-height:1.4;
+}
+.badge .k{font-weight:500;opacity:.85;}
+.badge.fund{background:#fdecec;color:#9a2c2c;}
+.badge.qual{background:#eef3f8;color:#1f3a5f;}
+.badge.valu{background:#fdf3e3;color:#8a5a16;}
+.badge.fraud{background:#eef7f1;color:#2f6a48;}
+.verdict-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 40px;}
+.verdict-grid .v-title{font-size:12.5px;font-weight:700;letter-spacing:.04em;margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid var(--line);}
+.verdict-grid .v-title::before{content:"";display:inline-block;width:3px;height:12px;margin-right:7px;vertical-align:-1px;border-radius:2px;}
+.verdict-grid .v-up .v-title{color:var(--brand);}
+.verdict-grid .v-up .v-title::before{background:var(--brand);}
+.verdict-grid .v-risk .v-title{color:var(--warn);}
+.verdict-grid .v-risk .v-title::before{background:var(--warn);}
+.verdict-grid ul{margin:0;padding-left:18px;}
+.verdict-grid li{font-size:13.5px;margin:6px 0;line-height:1.65;}
+.note{
+  font-size:12px;color:var(--ink-soft);background:var(--line-soft);
+  padding:3px 8px;border-radius:3px;display:inline-block;
+}
+.verdict .note{display:block;margin-top:14px;}
+.kpis{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:1px;margin:16px 0 4px;
+  background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden;
+}
+.kpi{background:#fff;padding:13px 15px;min-width:0;}
+.kpi .kl{font-size:11.5px;color:var(--ink-soft);line-height:1.3;min-height:30px;}
+.kpi .kv{font-size:20px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;margin-top:5px;word-break:break-word;}
+.kpi .kv.up{color:var(--up);}
+.kpi .kv.down{color:var(--down);}
+.kpi .ks{font-size:11px;color:var(--ink-soft);margin-top:3px;font-variant-numeric:tabular-nums;}
+.layout{
+  display:grid;grid-template-columns:208px minmax(0,1fr);gap:36px;align-items:start;
+  padding:14px 0 0;
+}
+.sidebar{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow-y:auto;padding:0 8px 0 0;}
+.sidebar::-webkit-scrollbar{width:6px;}
+.sidebar::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px;}
+.toc{position:static;background:transparent;border:none;margin:12px 0 16px;padding:0;}
+.toc .scroll{overflow:visible;white-space:normal;display:flex;flex-direction:column;gap:2px;}
+.toc a{
+  display:flex;align-items:center;gap:9px;
+  font-size:14px;line-height:1.25;color:var(--ink-soft);text-decoration:none;
+  padding:6px 8px;border-radius:5px;margin:0;border:1px solid transparent;
+}
+.toc a .toc-num{
+  flex:0 0 auto;font-family:"Times New Roman",serif;font-size:12px;font-weight:600;
+  color:var(--ink-soft);background:var(--line-soft);
+  width:22px;height:22px;border-radius:4px;font-variant-numeric:tabular-nums;
+  display:inline-flex;align-items:center;justify-content:center;
+}
+.toc a:hover{background:var(--brand-light);color:var(--brand);}
+.toc a:hover .toc-num{background:#fff;color:var(--brand);}
+.toc a.active{background:var(--brand);color:#fff;font-weight:600;}
+.toc a.active .toc-num{background:rgba(255,255,255,.22);color:#fff;}
+.main{min-width:0;}
+section{padding:16px 0 8px;border-top:1px solid var(--line-soft);scroll-margin-top:64px;}
+section:first-of-type{border-top:none;padding-top:6px;}
+h2.sec{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",serif;
+  font-size:19px;color:var(--brand);margin:6px 0 12px;font-weight:700;
+  display:flex;align-items:baseline;gap:10px;
+}
+h2.sec .num{
+  font-family:"Times New Roman",serif;font-size:14px;color:#fff;background:var(--brand);
+  padding:2px 9px;border-radius:3px;letter-spacing:.05em;font-weight:600;flex:0 0 auto;
+}
+h3.sub{font-size:14.5px;color:var(--ink);margin:16px 0 6px;font-weight:700;}
+p{margin:8px 0;}
+ul,ol{margin:8px 0;padding-left:22px;}
+li{margin:4px 0;}
+strong{color:var(--ink);}
+.tbl-scroll{overflow-x:auto;margin:10px 0;border:1px solid var(--line);border-radius:4px;}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums;}
+thead th{
+  background:#f3f6fa;color:var(--brand);font-weight:700;text-align:right;
+  padding:10px 12px;border-bottom:1.5px solid var(--brand);white-space:nowrap;
+  font-size:12.5px;letter-spacing:.02em;
+}
+thead th[scope=col]:first-child{text-align:left;}
+tbody td{padding:9px 12px;border-bottom:1px solid var(--line-soft);text-align:right;white-space:normal;word-break:break-word;}
+tbody th[scope=row]{
+  text-align:left;color:var(--ink);font-weight:600;
+  padding:9px 12px;border-bottom:1px solid var(--line-soft);white-space:nowrap;font-size:13px;background:#fafbfd;
+}
+tbody tr:nth-child(even) td{background:#fafbfd;}
+tbody tr:hover td{background:var(--brand-light);}
+.up{color:var(--up);}
+.down{color:var(--down);}
+.muted{color:var(--ink-soft);}
+a{color:var(--brand-2);text-decoration:underline;text-underline-offset:2px;word-break:break-all;}
+a:hover{color:var(--brand);}
+.note-copy{
+  margin:20px 0;border:1px solid var(--line);border-left:4px solid var(--accent);
+  background:#fbfcfe;border-radius:4px;padding:14px 16px;
+}
+.note-copy h2{margin:0 0 10px;font-size:13px;letter-spacing:.1em;color:var(--brand);font-weight:700;}
+pre{
+  margin:10px 0;padding:12px 14px;background:#f7f9fc;border:1px solid var(--line-soft);
+  border-radius:4px;overflow:auto;color:var(--ink);font-size:12.5px;line-height:1.6;
+}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;}
+footer{
+  margin-top:22px;border-top:2px solid var(--brand);padding:14px 0 30px;
+  font-size:11.5px;color:var(--ink-soft);line-height:1.7;font-variant-numeric:tabular-nums;
+}
+footer .disclaimer{background:var(--line-soft);padding:8px 12px;border-radius:3px;margin-bottom:8px;}
+@media (max-width:1100px){
+  .layout{grid-template-columns:1fr;gap:0;}
+  .sidebar{position:static;max-height:none;overflow:visible;padding:0;}
+  .toc{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);
+    border-bottom:1px solid var(--line);margin:0 -32px 16px;padding:10px 32px;}
+  .toc .scroll{overflow-x:auto;white-space:nowrap;flex-direction:row;}
+  .toc a{display:inline-flex;white-space:nowrap;border-left:none;border:1px solid transparent;padding:3px 9px;margin:2px;}
+  .toc a.active{border-left:none;background:var(--brand);color:#fff;}
+}
+@media (max-width:760px){
+  .verdict-grid{grid-template-columns:1fr;}
+  .kpis{grid-template-columns:repeat(3,1fr);}
+  .page{padding:0 18px;}
+  .masthead .m-stats{gap:22px;}
+}
+@media (max-width:460px){.kpis{grid-template-columns:repeat(2,1fr);}}
+@media print{
+  body{background:#fff;font-size:10.5px;}
+  .page{max-width:none;padding:0;}
+  .layout{grid-template-columns:1fr;}
+  .sidebar{position:static;max-height:none;overflow:visible;}
+  .toc{position:static;border:none;padding:0;margin:0 0 8px;}
+  .toc .scroll{overflow:visible;display:block;}
+  .toc a{font-size:10px;padding:1px 5px;display:inline-flex;}
+  .toc a.active{background:transparent;color:var(--ink);}
+  section{break-inside:avoid;padding-top:10px;}
+  table{font-size:9.5px;}
+  thead{display:table-header-group;}
+  tbody tr{break-inside:avoid;}
+  .badge{border:1px solid #ccc;}
+  .note-copy,.tbl-scroll,.kpis,.verdict{break-inside:avoid;}
+  footer{break-inside:avoid;}
+  a{color:var(--ink);text-decoration:none;}
+  .kpi{border:1px solid #ccc;}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="masthead">
+    <div class="m-left">
+      <div class="kode">300759.SZ · 深圳证券交易所 · 基本面分析</div>
+      <h1>康龙化成 · 基本面分析</h1>
+      <div class="sub">基本面、订单、估值与财务风险深度复盘</div>
+      <div class="meta">数据口径 <b>估值及行情截至 2026-07-10；最新定期财务数据截至 2026-03-31；公告和新闻核验截至 2026-07-11。</b> · 生成时间 <b>2026-07-11 02:53</b></div>
+    </div>
+    <div class="m-stats">
+      <div><div class="ms-v">33.94 元</div><div class="ms-l">收盘价 · 2026-07-10，东方财富行情</div></div>
+<div><div class="ms-v">623.57 亿元</div><div class="ms-l">总市值 · A 股价×总股本，东方财富行情</div></div>
+<div><div class="ms-v">36.82 倍</div><div class="ms-l">PE · TTM 归母净利润，东方财富行情</div></div>
+<div><div class="ms-v">3.87 倍</div><div class="ms-l">PB · 最新归母净资产，东方财富行情</div></div>
+    </div>
+  </header>
+
+  <section class="verdict" aria-label="结论速览">
+    <div class="verdict-head">
+      <h2>结论速览</h2>
+      <div class="badges">
+        <span class="badge fund"><span class="k">基本面</span> 中性</span>
+<span class="badge qual"><span class="k">财务质量</span> 良好</span>
+<span class="badge valu"><span class="k">估值</span> 合理</span>
+<span class="badge fraud"><span class="k">造假风险初筛</span> 中</span>
+      </div>
+    </div>
+    <div class="verdict-grid">
+      <div class="v-col v-up">
+        <div class="v-title">核心理由</div>
+        <ul>
+<li>2025 年扣非净利润增长 38.85%，2026Q1 扣非净利润增长 17.45%，核心经营已经修复。2025年报</li>
+<li>2026Q1 新签订单增长超过 30%，其中 CMC 超过 50%，商业化生产订单是最强增量线索。2026Q1</li>
+<li>经营现金流长期高于净利润，应收与合同资产增速未超过收入，利润现金含量较好。2025年报</li>
+<li>2026Q1 毛利率下降、自由现金流接近归零，临床和大分子/CGT 业务仍拖累回报。2026Q1</li>
+<li>当前 TTM PE 36.82 倍，估值已反映一部分订单加速预期；约 50 亿元扩产能否形成 ROIC 是下一阶段的核心验证点。杭州项目 绍兴项目</li>
+</ul>
+      </div>
+      <div class="v-col v-risk">
+        <div class="v-title">主要风险 / 关注</div>
+        <ul>
+<li>临床研究和大分子/CGT毛利率承压，2026Q1综合毛利率下降1.16个百分点。</li>
+<li>存货快速增长、商誉较高及约50亿元扩产计划可能继续压低自由现金流和ROIC。</li>
+</ul>
+      </div>
+    </div>
+    <p class="note">口径:市场估值为时点数据,财务指标需区分年度、半年度、季度和单季口径;所有结论以公司正式披露和已核验来源为准。</p>
+  </section>
+
+  <div class="kpis" aria-label="关键指标速览">
+    <div class="kpi"><div class="kl">2026Q1 报告归母净利</div><div class="kv">3.35 亿元</div><div class="ks">归母净利润</div></div>
+<div class="kpi"><div class="kl">2026Q1 报告扣非净利</div><div class="kv">3.43 亿元</div><div class="ks">扣非归母净利润</div></div>
+<div class="kpi"><div class="kl">2026Q1 报告毛利率</div><div class="kv">32.50%</div><div class="ks">毛利率</div></div>
+<div class="kpi"><div class="kl">2026Q1 报告经营现金流</div><div class="kv">6.04 亿元</div><div class="ks">经营现金流净额</div></div>
+<div class="kpi"><div class="kl">2026Q1 报告应收/合同资产</div><div class="kv">31.58 亿元</div><div class="ks">应收账款/合同资产</div></div>
+<div class="kpi"><div class="kl">2026Q1 报告存货</div><div class="kv">16.94 亿元</div><div class="ks">存货</div></div>
+  </div>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="toc" aria-label="目录">
+        <div class="scroll" id="toc-scroll">
+          <a href="#s1"><span class="toc-num">01</span>核心财务指标</a>
+<a href="#s2"><span class="toc-num">02</span>近两年财报趋势与业务结构</a>
+<a href="#s3"><span class="toc-num">03</span>结论摘要</a>
+<a href="#s4"><span class="toc-num">04</span>公司与行业</a>
+<a href="#s5"><span class="toc-num">05</span>订单与需求验证</a>
+<a href="#s6"><span class="toc-num">06</span>财务质量验证</a>
+<a href="#s7"><span class="toc-num">07</span>股东与机构</a>
+<a href="#s8"><span class="toc-num">08</span>估值与同行对比</a>
+<a href="#s9"><span class="toc-num">09</span>负面信息与风险排查</a>
+<a href="#s10"><span class="toc-num">10</span>财务造假风险初筛</a>
+<a href="#s11"><span class="toc-num">11</span>后续跟踪清单</a>
+<a href="#s12"><span class="toc-num">12</span>信息边界</a>
+        </div>
+      </nav>
+    </aside>
+    <main class="main">
+      <p><strong>一句话结论：</strong> 康龙化成已经走出 2024 年核心利润低谷，2025 年扣非净利润增长 38.85%、2026 年一季度新签订单增长超过 30%，小分子 CDMO 商业化是最清晰的第二增长曲线；但整体毛利率仍受临床业务和大分子/细胞与基因治疗业务拖累，叠加合计约 50 亿元的新扩产计划，当前 36.82 倍 TTM PE 更接近“合理区间上沿”，真正要验证的是订单能否在不继续牺牲自由现金流的前提下转化为利润。</p>
+<p><strong>背景与时间范围：</strong> 财务分析覆盖 2023—2025 年年报及截至 2026 年 3 月 31 日的一季报；估值采用 2026 年 7 月 10 日最近收盘；重大公告、股东变化和订单线索更新至 2026 年 7 月 11 日。分析主体以 A 股康龙化成（300759.SZ）为主，H 股（03759.HK）用于补充公司披露；币种统一为人民币，A 股行情按常用的“A 股价×总股本”口径计算总市值。</p>
+<section id="s1">
+<h2 class="sec"><span class="num">01</span>核心财务指标</h2>
+<h3 class="sub">1.1 当前估值快照</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">项目</th>
+<th scope="col">最新数据</th>
+<th scope="col">数据日期/口径</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">收盘价</th>
+<td>33.94 元</td>
+<td>2026-07-10，<a href="https://quote.eastmoney.com/sz300759.html" target="_blank" rel="noopener">东方财富行情</a></td>
+<td>当日上涨 9.55%，短线估值明显抬升</td>
+</tr>
+<tr>
+<th scope="row">总市值</th>
+<td>623.57 亿元</td>
+<td>A 股价×总股本，<a href="https://quote.eastmoney.com/sz300759.html" target="_blank" rel="noopener">东方财富行情</a></td>
+<td>公司同时有 H 股上市，该口径不是 A/H 两地按各自股价加总的“经济市值”</td>
+</tr>
+<tr>
+<th scope="row">流通市值</th>
+<td>481.96 亿元</td>
+<td>A 股流通股×A 股价，<a href="https://quote.eastmoney.com/sz300759.html" target="_blank" rel="noopener">东方财富行情</a></td>
+<td>A 股可流通股份对应市值</td>
+</tr>
+<tr>
+<th scope="row">PE</th>
+<td>36.82 倍</td>
+<td>TTM 归母净利润，<a href="https://quote.eastmoney.com/sz300759.html" target="_blank" rel="noopener">东方财富行情</a></td>
+<td>对应约 15% 的收入增速并不便宜，需由 CDMO 商业化利润兑现支撑</td>
+</tr>
+<tr>
+<th scope="row">PB</th>
+<td>3.87 倍</td>
+<td>最新归母净资产，<a href="https://quote.eastmoney.com/sz300759.html" target="_blank" rel="noopener">东方财富行情</a></td>
+<td class="up">2025 年扣非 ROE 10.72%，PB 已隐含盈利效率继续提升</td>
+</tr>
+<tr>
+<th scope="row">PS</th>
+<td>4.28 倍</td>
+<td>总市值/近四季收入，按财报计算，<a href="https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-29/f8875297-90e2-49ab-b624-6d58f4ec8865.PDF" target="_blank" rel="noopener">2026Q1</a></td>
+<td>低于所选 CXO 同行，但康龙毛利率也低于药明康德、凯莱英</td>
+</tr>
+<tr>
+<th scope="row">股息率</th>
+<td>0.59%</td>
+<td>每股 0.20 元年度现金分红/股价，<a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12421580&amp;stockid=300759" target="_blank" rel="noopener">权益分派公告</a></td>
+<td>股息贡献较低，估值核心仍是成长而非分红</td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">1.2 已披露当年期间财报</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">2025Q1 <a href="https://disc.static.szse.cn/disc/disk03/finalpage/2025-04-28/cb3ca465-e904-4fba-a702-26bc86da0bf8.PDF" target="_blank" rel="noopener">报告</a></th>
+<th scope="col">2026Q1 <a href="https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-29/f8875297-90e2-49ab-b624-6d58f4ec8865.PDF" target="_blank" rel="noopener">报告</a></th>
+<th scope="col">变化解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>30.99 亿元</td>
+<td>35.78 亿元</td>
+<td>同比 +15.48%；CMC +25.01% 是最快板块，实验室服务 +14.27%</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td>3.06 亿元</td>
+<td>3.35 亿元</td>
+<td>同比 +9.75%，慢于收入，反映综合毛利率下行</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td>2.92 亿元</td>
+<td>3.43 亿元</td>
+<td>同比 +17.45%，核心利润增速快于归母净利润</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td>8.53 亿元</td>
+<td>6.04 亿元</td>
+<td>同比 -29.13%，但绝对额仍明显高于归母净利润</td>
+</tr>
+<tr>
+<th scope="row">经营现金流/净利润</th>
+<td>2.79 倍</td>
+<td>1.80 倍</td>
+<td>现金含量仍好，但同比显著回落</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td>2.97 亿元</td>
+<td>0.25 亿元</td>
+<td>按经营现金流减购建长期资产现金计算，资本开支几乎吃掉全部经营现金流</td>
+</tr>
+<tr>
+<th scope="row">EPS</th>
+<td>0.1736 元/股</td>
+<td>0.1860 元/股</td>
+<td>同比 +7.14%，低于归母净利增速，受 2026 年初 H 股配售摊薄影响</td>
+</tr>
+<tr>
+<th scope="row">ROE</th>
+<td>2.21%</td>
+<td>2.10%</td>
+<td>单季度、未年化；净资产扩张快于利润</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>33.66%</td>
+<td>32.50%</td>
+<td>同比 -1.16 个百分点，实验室、临床及大分子板块拖累</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td>9.44%</td>
+<td>9.60%</td>
+<td class="down">同比 +0.16 个百分点，费用和非经常因素抵消部分毛利压力</td>
+</tr>
+<tr>
+<th scope="row">资本开支</th>
+<td>5.56 亿元</td>
+<td>5.79 亿元</td>
+<td class="up">同比 +4.21%，管理层预计 2026 年资本开支继续增长</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>11.67 亿元</td>
+<td>16.94 亿元</td>
+<td class="down">同比 +45.18%，显著快于收入，是最需跟踪的资产质量指标</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td>27.84 亿元</td>
+<td>31.58 亿元</td>
+<td class="up">同比 +13.42%，低于收入增速，暂未显示明显放宽账期换增长</td>
+</tr>
+<tr>
+<th scope="row">总资产</th>
+<td>243.33 亿元</td>
+<td>285.62 亿元</td>
+<td>同比 +17.38%，配售融资、收购和扩产共同推动</td>
+</tr>
+<tr>
+<th scope="row">归母净资产</th>
+<td>140.42 亿元</td>
+<td>164.58 亿元</td>
+<td>同比 +17.20%，H 股配售是重要增量</td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">1.3 最近三年年度财报</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">2023A <a href="https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042900764_c.pdf" target="_blank" rel="noopener">2024年报</a></th>
+<th scope="col">2024A <a href="https://www.hkexnews.hk/listedco/listconews/sehk/2026/0428/2026042801704_c.pdf" target="_blank" rel="noopener">2025年报</a></th>
+<th scope="col">2025A <a href="https://www.hkexnews.hk/listedco/listconews/sehk/2026/0428/2026042801704_c.pdf" target="_blank" rel="noopener">2025年报</a></th>
+<th scope="col">变化解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>115.38 亿元</td>
+<td>122.76 亿元</td>
+<td>140.95 亿元</td>
+<td class="up">增速 12.39%→6.39%→14.82%，2025 年恢复双位数增长</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td>16.01 亿元</td>
+<td>17.93 亿元</td>
+<td>16.64 亿元</td>
+<td>2025 年 -7.22%，主因 2024 年处置 Proteologix 股权形成高基数</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td>15.14 亿元</td>
+<td>11.08 亿元</td>
+<td>15.38 亿元</td>
+<td>2024 年 -26.82%，2025 年 +38.85%，核心利润已超过 2023 年</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td>27.54 亿元</td>
+<td>25.77 亿元</td>
+<td>32.21 亿元</td>
+<td>2025 年 +25.01%，回款质量好于利润表表现</td>
+</tr>
+<tr>
+<th scope="row">经营现金流/净利润</th>
+<td>1.72 倍</td>
+<td>1.44 倍</td>
+<td>1.94 倍</td>
+<td class="up">连续高于 1，利润现金含量较强</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td class="down">-1.12 亿元</td>
+<td>5.36 亿元</td>
+<td>5.52 亿元</td>
+<td class="up">2024 年转正，但仅约为经营现金流的 17%，资本开支仍重</td>
+</tr>
+<tr>
+<th scope="row">EPS</th>
+<td>0.9033 元/股</td>
+<td>1.0133 元/股</td>
+<td>0.9443 元/股</td>
+<td>与归母净利润方向一致</td>
+</tr>
+<tr>
+<th scope="row">ROE</th>
+<td>13.91%</td>
+<td>13.70%</td>
+<td>11.60%</td>
+<td class="down">净资产扩张及利润回落导致资本回报下降</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>35.75%</td>
+<td>34.24%</td>
+<td>34.83%</td>
+<td>2025 年回升 0.59 个百分点，但尚未恢复至 2023 年</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td>13.12%</td>
+<td>9.02%</td>
+<td>10.91%</td>
+<td class="up">2025 年修复 1.89 个百分点，仍低于 2023 年</td>
+</tr>
+<tr>
+<th scope="row">资本开支</th>
+<td>28.65 亿元</td>
+<td>20.41 亿元</td>
+<td>26.69 亿元</td>
+<td>2025 年 +30.80%，扩产重新提速</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>10.13 亿元</td>
+<td>11.17 亿元</td>
+<td>14.72 亿元</td>
+<td class="down">2025 年 +31.85%，快于收入增长</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td>26.36 亿元</td>
+<td>28.67 亿元</td>
+<td>31.73 亿元</td>
+<td class="up">2025 年 +10.68%，慢于收入增长</td>
+</tr>
+<tr>
+<th scope="row">总资产</th>
+<td>264.77 亿元</td>
+<td>239.27 亿元</td>
+<td>270.94 亿元</td>
+<td>2025 年 +13.23%，商誉、固定资产和在建工程占比较高</td>
+</tr>
+<tr>
+<th scope="row">归母净资产</th>
+<td>125.57 亿元</td>
+<td>136.19 亿元</td>
+<td>150.64 亿元</td>
+<td>2025 年 +10.61%，高于归母净利润增速</td>
+</tr>
+</tbody></table></div>
+<p><strong>核心指标综合判断：</strong> 2025 年的改善来自原有客户和主业放量，而不是依靠新客户并表“堆收入”：原有客户收入增长 16.30%、占收入 95.88%，全球前 20 大药企客户收入增长 29.37%，公司全年新签订单增长超过 14%；管理层基于订单和业务趋势给出 2026 年收入增长 12%—18% 的前瞻指引，但明确不构成承诺。<a href="https://www.hkexnews.hk/listedco/listconews/sehk/2026/0428/2026042801704_c.pdf" target="_blank" rel="noopener">2025年报</a></p>
+<p>利润质量的积极面是扣非利润与经营现金流同时修复：2025 年经营现金流 32.21 亿元、为归母净利润的 1.94 倍，销售商品及提供劳务收到现金约 140.42 亿元、相当于营业收入的 99.62%；应收账款与合同资产增速低于收入，暂不支持“放宽账期换增长”的担忧。<a href="https://www.hkexnews.hk/listedco/listconews/sehk/2026/0428/2026042801704_c.pdf" target="_blank" rel="noopener">2025年报</a></p>
+<p>需要降温的地方有两个：一是 2026Q1 综合毛利率降至 32.50%，临床研究服务毛利率由 11.76%降至 7.10%，大分子和细胞与基因治疗服务毛利率进一步降至 -92.80%；二是 2026Q1 自由现金流仅 0.25 亿元，而存货同比增长 45.18%。这说明订单在增长，但订单变成高回报现金流之前仍要经过备货、生产、交付和回款。<a href="https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-29/f8875297-90e2-49ab-b624-6d58f4ec8865.PDF" target="_blank" rel="noopener">2026Q1</a></p>
+</section>
+<section id="s2">
+<h2 class="sec"><span class="num">02</span>近两年财报趋势与业务结构</h2>
+<h3 class="sub">2.1 近两年财报趋势</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">项目</th>
+<th scope="col">2024A <a href="https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042900764_c.pdf" target="_blank" rel="noopener">年报</a></th>
+<th scope="col">2025A <a href="https://www.hkexnews.hk/listedco/listconews/sehk/2026/0428/2026042801704_c.pdf" target="_blank" rel="noopener">年报</a></th>
+<th scope="col">变化</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>122.76 亿元</td>
+<td>140.95 亿元</td>
+<td class="up">+14.82%</td>
+<td class="up">实验室与 CMC 双位数增长，原有客户贡献主要增量</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td>17.93 亿元</td>
+<td>16.64 亿元</td>
+<td class="down">-7.22%</td>
+<td class="down">2024 年股权处置收益造成高基数，不代表主业恶化</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td>11.08 亿元</td>
+<td>15.38 亿元</td>
+<td class="up">+38.85%</td>
+<td class="up">主营毛利改善、规模效应和费用率优化共同推动</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>34.24%</td>
+<td>34.83%</td>
+<td class="up">+0.59 个百分点</td>
+<td class="up">实验室和 CMC 改善，临床板块回落</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td>9.02%</td>
+<td>10.91%</td>
+<td class="up">+1.89 个百分点</td>
+<td class="up">核心盈利能力明显修复</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td>25.77 亿元</td>
+<td>32.21 亿元</td>
+<td class="up">+25.01%</td>
+<td>现金流增速高于收入与扣非利润绝对增量</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td>5.36 亿元</td>
+<td>5.52 亿元</td>
+<td class="up">+2.98%</td>
+<td class="up">资本开支增长抵消大部分经营现金流增量</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>11.17 亿元</td>
+<td>14.72 亿元</td>
+<td class="up">+31.85%</td>
+<td class="up">需由 CMC 订单交付及合同负债增长继续验证</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td>28.67 亿元</td>
+<td>31.73 亿元</td>
+<td class="up">+10.68%</td>
+<td class="down">低于收入增速，回款风险尚可控</td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">2.2 分业务情况</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">业务</th>
+<th scope="col">2024A 收入</th>
+<th scope="col">2024A 毛利率</th>
+<th scope="col">2025A 收入</th>
+<th scope="col">2025A 毛利率</th>
+<th scope="col">变化</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">实验室服务</th>
+<td>70.47 亿元</td>
+<td>44.92%</td>
+<td>81.59 亿元</td>
+<td>45.10%</td>
+<td>收入 +15.78%，毛利率 +0.18 个百分点；生物科学收入占板块超过 56%</td>
+</tr>
+<tr>
+<th scope="row">CMC（小分子 CDMO）服务</th>
+<td>29.89 亿元</td>
+<td>33.62%</td>
+<td>34.83 亿元</td>
+<td>34.31%</td>
+<td>收入 +16.53%，毛利率 +0.69 个百分点；中后期和商业化项目增加</td>
+</tr>
+<tr>
+<th scope="row">临床研究服务</th>
+<td>18.26 亿元</td>
+<td>12.82%</td>
+<td>19.57 亿元</td>
+<td>11.41%</td>
+<td>收入 +7.14%，毛利率 -1.41 个百分点；国内价格竞争仍激烈</td>
+</tr>
+<tr>
+<th scope="row">大分子和细胞与基因治疗服务</th>
+<td>4.08 亿元</td>
+<td class="down">-50.07%</td>
+<td>4.75 亿元</td>
+<td class="down">-40.31%</td>
+<td class="down">收入 +16.48%、亏损率收窄，但仍吞噬毛利</td>
+</tr>
+<tr>
+<th scope="row">其他业务</th>
+<td>0.06 亿元</td>
+<td>40.78%</td>
+<td>0.22 亿元</td>
+<td>15.77%</td>
+<td>规模很小，对整体判断不重要</td>
+</tr>
+</tbody></table></div>
+<p>表内分业务数据来自公司 <a href="https://www.hkexnews.hk/listedco/listconews/sehk/2026/0428/2026042801704_c.pdf" target="_blank" rel="noopener">2025年报</a>。</p>
+<p><strong>业务结构判断：</strong> 实验室服务和小分子 CDMO 合计贡献 2025 年收入的 82.60%，并贡献几乎全部分部毛利，是基本面真正的“发动机”；实验室服务提供稳定项目入口，CMC 通过 Follow-the-Molecule 模式承接项目向临床后期及商业化放大。2025 年 CMC 收入中超过 84%来自药物发现服务的现有客户，说明平台协同已经形成真实收入，而不只是战略叙事。<a href="https://www.hkexnews.hk/listedco/listconews/sehk/2026/0428/2026042801704_c.pdf" target="_blank" rel="noopener">2025年报</a></p>
+<p>弱项也非常集中：临床研究服务收入增长但毛利率连续承压；大分子和细胞与基因治疗服务 2025 年毛亏约 1.91 亿元，2026Q1 毛亏进一步约 0.82 亿元，已经超过同期临床研究服务约 0.36 亿元的毛利贡献。<a href="https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-29/f8875297-90e2-49ab-b624-6d58f4ec8865.PDF" target="_blank" rel="noopener">2026Q1</a></p>
+</section>
+<section id="s3">
+<h2 class="sec"><span class="num">03</span>结论摘要</h2>
+<ul>
+<li>基本面判断：中性</li>
+<li>财务质量：良好</li>
+<li>估值状态：合理</li>
+<li>财务造假风险初筛：中</li>
+<li>核心理由：</li>
+<ol>
+<li>2025 年扣非净利润增长 38.85%，2026Q1 扣非净利润增长 17.45%，核心经营已经修复。<a href="https://www.hkexnews.hk/listedco/listconews/sehk/2026/0428/2026042801704_c.pdf" target="_blank" rel="noopener">2025年报</a></li>
+<li>2026Q1 新签订单增长超过 30%，其中 CMC 超过 50%，商业化生产订单是最强增量线索。<a href="https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-29/f8875297-90e2-49ab-b624-6d58f4ec8865.PDF" target="_blank" rel="noopener">2026Q1</a></li>
+<li>经营现金流长期高于净利润，应收与合同资产增速未超过收入，利润现金含量较好。<a href="https://www.hkexnews.hk/listedco/listconews/sehk/2026/0428/2026042801704_c.pdf" target="_blank" rel="noopener">2025年报</a></li>
+<li>2026Q1 毛利率下降、自由现金流接近归零，临床和大分子/CGT 业务仍拖累回报。<a href="https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-29/f8875297-90e2-49ab-b624-6d58f4ec8865.PDF" target="_blank" rel="noopener">2026Q1</a></li>
+<li>当前 TTM PE 36.82 倍，估值已反映一部分订单加速预期；约 50 亿元扩产能否形成 ROIC 是下一阶段的核心验证点。<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0527/2026052701333_c.pdf" target="_blank" rel="noopener">杭州项目</a> <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0527/2026052701351_c.pdf" target="_blank" rel="noopener">绍兴项目</a></li>
+</ol>
+</ul>
+</section>
+<section id="s4">
+<h2 class="sec"><span class="num">04</span>公司与行业</h2>
+<ul>
+<li>主营业务：为全球药企和生物科技公司提供从药物发现、临床前开发、CMC 工艺开发与生产、临床研究到大分子及细胞与基因治疗研发生产的一体化服务。<a href="https://www.hkexnews.hk/listedco/listconews/sehk/2026/0428/2026042801704_c.pdf" target="_blank" rel="noopener">2025年报</a></li>
+<li>主要产品：实验室服务、CMC（小分子 CDMO）、临床研究服务、大分子和细胞与基因治疗服务；服务分子类型覆盖小分子、多肽、寡核苷酸、抗体、ADC、细胞与基因治疗等。<a href="https://www.hkexnews.hk/listedco/listconews/sehk/2026/0428/2026042801704_c.pdf" target="_blank" rel="noopener">2025年报</a></li>
+<li>市场占有率：公司未披露可核验的精确全球份额。规模侧可确认的是，2025 年服务全球客户超过 3,300 家、员工 25,088 人、实验室化学研究员超过 7,100 人，实验室团队参与 887 个药物发现项目，属于全球化头部一体化 CXO 平台，但不能据此推导具体市占率。<a href="https://www.hkexnews.hk/listedco/listconews/sehk/2026/0428/2026042801704_c.pdf" target="_blank" rel="noopener">2025年报</a></li>
+<li>行业景气度：2025 年公司新签订单增长超过 14%，2026Q1 加速至超过 30%，全球前 20 大药企客户收入在 2026Q1 增长 47.98%，中国客户收入增长 43.41%，显示 MNC 研发外包和中国创新药需求均在改善；这是公司层面的景气证据，不等同于整个行业已经全面复苏。<a href="https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-29/f8875297-90e2-49ab-b624-6d58f4ec8865.PDF" target="_blank" rel="noopener">2026Q1</a></li>
+<li>核心竞争力：一体化平台带来的项目导流、中英美三地交付、覆盖从早研到商业化的项目漏斗、全球大药企客户基础，以及新分子类型技术能力。</li>
+<li>主要依赖：没有单一客户依赖，2025 年前五大客户收入占比 16.05%、最大客户占比 7.18%；但海外客户收入占比 84.84%、北美客户占比 61.82%，对全球生物医药融资、跨境监管、地缘政策及汇率存在较高依赖。<a href="https://www.hkexnews.hk/listedco/listconews/sehk/2026/0428/2026042801704_c.pdf" target="_blank" rel="noopener">2025年报</a></li>
+</ul>
+</section>
+<section id="s5">
+<h2 class="sec"><span class="num">05</span>订单与需求验证</h2>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">日期</th>
+<th scope="col">来源与链接</th>
+<th scope="col">项目/订单名称</th>
+<th scope="col">客户/采购方</th>
+<th scope="col">产品/服务</th>
+<th scope="col">金额</th>
+<th scope="col">状态</th>
+<th scope="col">履约周期</th>
+<th scope="col">是否公司正式公告</th>
+<th scope="col">对收入影响</th>
+<th scope="col">可信度</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">2025-12-31</th>
+<td><a href="https://www.hkexnews.hk/listedco/listconews/sehk/2026/0428/2026042801704_c.pdf" target="_blank" rel="noopener">2025年报</a></td>
+<td>全年新签订单汇总</td>
+<td>3,300+全球客户</td>
+<td>全业务；实验室 +约12%，CMC +约13%</td>
+<td class="muted">未披露</td>
+<td>已签经营订单汇总</td>
+<td>多项目、多周期</td>
+<td>是</td>
+<td>总订单 +14%以上，支持 2026 年收入指引，但无法计算订单/收入比</td>
+<td>高</td>
+</tr>
+<tr>
+<th scope="row">2026-03-11</th>
+<td><a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12054802&amp;stockid=300759" target="_blank" rel="noopener">公司演示文稿</a> <a href="https://business.china.com.cn/2026-03/13/content_43372144.shtml" target="_blank" rel="noopener">公开发布</a></td>
+<td>口服小分子 GLP-1 制剂商业化生产合作</td>
+<td>礼来/国际大型药企</td>
+<td>Orforglipron 制剂商业化生产</td>
+<td class="muted">未披露</td>
+<td>已签商业化生产合作</td>
+<td>随产品获批与商业化放量推进</td>
+<td>是</td>
+<td>体现制剂商业化能力突破；未披露采购量，不能直接计作确定收入</td>
+<td>高</td>
+</tr>
+<tr>
+<th scope="row">2026-03-31</th>
+<td><a href="https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-29/f8875297-90e2-49ab-b624-6d58f4ec8865.PDF" target="_blank" rel="noopener">2026Q1</a></td>
+<td>一季度新签订单汇总</td>
+<td>全球药企及生物科技客户</td>
+<td>全业务 +30%以上；实验室 +20%以上；CMC +50%以上</td>
+<td class="muted">未披露</td>
+<td>已签经营订单汇总</td>
+<td>多项目、多周期</td>
+<td>是</td>
+<td>CMC 订单加速主要由大规模生产订单驱动</td>
+<td>高</td>
+</tr>
+<tr>
+<th scope="row">2026-06-17</th>
+<td><a href="https://www.jacobiopharma.com/cn/news/JAB-23E73_clinical_trials_CMC" target="_blank" rel="noopener">客户侧公告</a></td>
+<td>JAB-23E73 注册临床用药生产及潜在商业化品种 CMC</td>
+<td>加科思药业</td>
+<td>Pan-KRAS 抑制剂临床用药生产、工艺开发及验证</td>
+<td class="muted">未披露</td>
+<td>已签合作、启动生产</td>
+<td>注册临床及后续潜在商业化阶段</td>
+<td>否，公司客户侧正式披露</td>
+<td>金额未披露，当前只能作为项目漏斗后移的需求证据</td>
+<td>高</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>已披露订单/合同：订单增速和重点项目状态披露较充分，但绝大多数订单金额、客户采购量、付款条件和取消条款未披露。</li>
+<li>招投标与客户侧线索：CXO 业务以商业合同和长期客户合作为主，不依赖政府招投标；加科思客户侧公告为可交叉验证的新线索。<a href="https://www.jacobiopharma.com/cn/news/JAB-23E73_clinical_trials_CMC" target="_blank" rel="noopener">客户侧公告</a></li>
+<li>订单状态区分：表内均为公司定期报告、投资者材料或客户正式发布的信息；GLP-1 合作是商业化生产合作，但未披露强制采购量，不应按“确定收入合同额”处理。</li>
+<li>订单金额与最近年度营收比例：无法判断，因为公司没有披露订单金额或未完成订单余额。</li>
+<li>履约周期与收入确认节奏：实验室服务周期较短，CMC 后期及商业化订单通常跨季度或跨年确认；GLP-1 项目取决于产品审批、上市节奏和实际生产批次。</li>
+<li>合同负债/存货/应收/现金流验证：2026Q1 合同负债 10.04 亿元、同比 +16.83%，应收与合同资产 +13.42%，而存货 +45.18%、自由现金流降至 0.25 亿元；订单增长得到合同负债支持，但备货和产能投入已先于现金回报。<a href="https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-29/f8875297-90e2-49ab-b624-6d58f4ec8865.PDF" target="_blank" rel="noopener">2026Q1</a></li>
+<li>订单趋势判断：改善。</li>
+<li>信息可信度：高；但订单金额和盈利贡献的可验证度仅为中等。</li>
+</ul>
+</section>
+<section id="s6">
+<h2 class="sec"><span class="num">06</span>财务质量验证</h2>
+<ul>
+<li>利润与现金流匹配：2025 年经营现金流/归母净利润为 1.94 倍，销售收现/收入约 99.62%，利润兑现良好；2026Q1 该比率仍为 1.80 倍，但经营现金流同比下降 29.13%。<a href="https://www.hkexnews.hk/listedco/listconews/sehk/2026/0428/2026042801704_c.pdf" target="_blank" rel="noopener">2025年报</a> <a href="https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-29/f8875297-90e2-49ab-b624-6d58f4ec8865.PDF" target="_blank" rel="noopener">2026Q1</a></li>
+<li>应收账款与营收匹配：2025 年应收账款与合同资产合计增长 10.68%，低于收入增速 14.82%；2026Q1 同比增长 13.42%，仍低于收入增速 15.48%，暂未出现应收显著跑赢收入的红旗。</li>
+<li>存货与营收匹配：2025 年存货增长 31.85%，2026Q1 同比增长 45.18%，明显快于收入；这可以由 CMC 大规模生产订单、备料和项目后移部分解释，但必须用未来两个季度收入、存货周转、减值和现金回款验证。</li>
+<li>资本开支效率与自由现金流：2025 年资本开支 26.69 亿元、占收入 18.94%，自由现金流仅 5.52 亿元；2026Q1 资本开支 5.79 亿元后自由现金流仅 0.25 亿元。公司又于 2026 年 5 月披露杭州约 20 亿元、绍兴约 30 亿元项目，合计投资额相当于 2025 年资本开支的 1.87 倍和营收的 35.47%，虽为分期建设且存在审批、拿地等前置条件，仍显著提高资本回报压力。<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0527/2026052701333_c.pdf" target="_blank" rel="noopener">杭州项目</a> <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0527/2026052701351_c.pdf" target="_blank" rel="noopener">绍兴项目</a></li>
+<li>预付款/其他应收款/在建工程/商誉异常：2026Q1 预付款 1.02 亿元、其他应收款 0.97 亿元，规模不大；在建工程 23.09 亿元、占总资产 8.08%；商誉 35.35 亿元、占总资产 12.38%。2025 年末商誉 35.86 亿元、占总资产 13.24%，被安永列为关键审计事项，核心敏感参数包括收入增长率、毛利率和折现率。<a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12042868&amp;stockid=300759" target="_blank" rel="noopener">2025年度审计报告</a></li>
+<li>资产负债率与有息负债：2025 年末资产负债率 41.91%，2026Q1 降至 40.08%；按短期借款、长期借款及一年内到期非流动负债粗略合计，2026Q1 有息债务约 67.05 亿元，货币资金 23.79 亿元。公司 2026 年 1 月配售 58,440,762 股 H 股、净募资约 13.19 亿港元，缓解融资压力但带来股本摊薄。<a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0122/2026012200516.pdf" target="_blank" rel="noopener">H股配售完成公告</a></li>
+<li>综合判断：财务质量良好但不轻资产。现金流和应收质量是加分项，存货、商誉、在建工程和未来 50 亿元扩产是减分项；接下来不能只看利润增速，更要看 ROIC 和自由现金流能否同步改善。</li>
+</ul>
+</section>
+<section id="s7">
+<h2 class="sec"><span class="num">07</span>股东与机构</h2>
+<ul>
+<li>十大股东持股占比：截至 2026Q1，前十名股东合计持股约 56.46%；其中 HKSCC Nominees 持股约 19.59%、信中康成 11.68%、Pharmaron Holdings 9.82%。<a href="https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-29/f8875297-90e2-49ab-b624-6d58f4ec8865.PDF" target="_blank" rel="noopener">2026Q1</a></li>
+<li>实控人/大股东持股与质押：2026 年 6 月 10 日，公司实际控制人及一致行动人合计持股约 3.232 亿股、占总股本 17.59%；累计质押 5,829.4 万股，占该实控人集团持股 18.04%、占总股本 3.17%。其中楼小强个人质押比例较高，但集团整体质押比例仍属可管理区间。<a href="https://asia.tools.euroland.com/tools/Pressreleases/GetPressRelease/?ID=8071433&amp;companycode=cn-300759&amp;lang=zh-CN&amp;v=HKSE" target="_blank" rel="noopener">质押公告</a></li>
+<li>大股东减持或增持：信中康成及一致行动人于 2026 年 5 月 27 日至 7 月 7 日合计减持 2,755.92 万股、占总股本 1.50%，减持均价 26.23 元/股，计划已实施完成；该股东并非实际控制人，但持续减持会形成阶段性供给压力。<a href="https://www.chnfund.com/article/761c2b29-cc90-3afd-788f-3a225417498f" target="_blank" rel="noopener">减持完成公告摘要</a></li>
+<li>入驻机构家数：截至 2026Q1，公开持仓口径显示 84 家机构，其中公募基金 77 家；口径可能因基金合并、资管计划穿透和 H 股名义持有人而变化。<a href="https://emweb.securities.eastmoney.com/PC_HSF10/ShareholderResearch/Index?code=SZ300759&amp;type=soft" target="_blank" rel="noopener">东方财富股东研究</a></li>
+<li>机构类型：前十股东包含中欧医疗健康、华宝中证医疗 ETF、银华中证创新药 ETF；香港中央结算有限公司持有约 3,978 万股 A 股，代表深股通名义持仓。前十中未见社保或保险资金直接列名。<a href="https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-29/f8875297-90e2-49ab-b624-6d58f4ec8865.PDF" target="_blank" rel="noopener">2026Q1</a></li>
+<li>治理风险判断：中等偏低。控制权稳定、机构覆盖较广；主要治理观察点是实控人质押、5%以上财务股东持续退出，以及 H 股配售和后续资本开支可能带来的摊薄。</li>
+</ul>
+</section>
+<section id="s8">
+<h2 class="sec"><span class="num">08</span>估值与同行对比</h2>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">公司</th>
+<th scope="col">收盘价</th>
+<th scope="col">总市值</th>
+<th scope="col">PE（TTM）</th>
+<th scope="col">PB</th>
+<th scope="col">PS（TTM）</th>
+<th scope="col">市值/2025扣非净利</th>
+<th scope="col">2025收入增速</th>
+<th scope="col">2025毛利率</th>
+<th scope="col">2025扣非净利率</th>
+<th scope="col">2025扣非ROE</th>
+<th scope="col">经营现金流/扣非净利</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row"><a href="https://emweb.securities.eastmoney.com/PC_HSF10/OperationsRequired/Index?code=SZ300759&amp;type=soft" target="_blank" rel="noopener">康龙化成</a></th>
+<td>33.94 元</td>
+<td>623.57 亿元</td>
+<td>36.82 倍</td>
+<td>3.87 倍</td>
+<td>4.28 倍</td>
+<td>40.54 倍</td>
+<td>14.82%</td>
+<td>34.83%</td>
+<td>10.91%</td>
+<td>10.72%</td>
+<td>2.09 倍</td>
+</tr>
+<tr>
+<th scope="row"><a href="https://emweb.securities.eastmoney.com/PC_HSF10/OperationsRequired/Index?code=SH603259&amp;type=soft" target="_blank" rel="noopener">药明康德</a></th>
+<td>123.30 元</td>
+<td>3,678.97 亿元</td>
+<td>18.28 倍</td>
+<td>4.63 倍</td>
+<td>7.63 倍</td>
+<td>27.79 倍</td>
+<td>15.84%</td>
+<td>47.64%</td>
+<td>29.13%</td>
+<td>19.74%</td>
+<td>1.30 倍</td>
+</tr>
+<tr>
+<th scope="row"><a href="https://emweb.securities.eastmoney.com/PC_HSF10/OperationsRequired/Index?code=SZ002821&amp;type=soft" target="_blank" rel="noopener">凯莱英</a></th>
+<td>165.41 元</td>
+<td>596.77 亿元</td>
+<td>53.75 倍</td>
+<td>3.41 倍</td>
+<td>8.61 倍</td>
+<td>57.57 倍</td>
+<td>14.91%</td>
+<td>41.99%</td>
+<td>15.54%</td>
+<td>6.02%</td>
+<td>1.36 倍</td>
+</tr>
+<tr>
+<th scope="row"><a href="https://emweb.securities.eastmoney.com/PC_HSF10/OperationsRequired/Index?code=SZ300347&amp;type=soft" target="_blank" rel="noopener">泰格医药</a></th>
+<td>47.27 元</td>
+<td>407.01 亿元</td>
+<td>52.76 倍</td>
+<td>1.95 倍</td>
+<td>5.76 倍</td>
+<td>114.62 倍</td>
+<td>3.48%</td>
+<td>27.41%</td>
+<td>5.20%</td>
+<td>1.71%</td>
+<td>3.15 倍</td>
+</tr>
+</tbody></table></div>
+<p>注：行情截至 2026-07-10；PS 按当前市值/近四季收入计算，“市值/2025扣非净利”用于降低非经常损益对 PE 的扭曲。四家公司业务结构不同：药明康德更综合、凯莱英更偏 CDMO、泰格医药更偏临床 CRO，因此表格用于估值和财务质量的方向性比较，不是完全同质比较。</p>
+<ul>
+<li>当前估值：康龙化成 36.82 倍 TTM PE、40.54 倍“市值/2025 扣非净利”、3.87 倍 PB、4.28 倍 PS。</li>
+<li>同行业估值对比：康龙的 PS 为所选同行最低，核心利润估值低于凯莱英和泰格医药，但高于药明康德；PB 高于凯莱英和泰格医药，仅低于药明康德。</li>
+<li>同行业收入增速/毛利率/扣非净利率/ROE/现金流质量对比：康龙收入增速接近药明康德和凯莱英，现金含量突出；但毛利率、扣非净利率及扣非 ROE 明显落后于药明康德，也低于凯莱英的毛利率和扣非净利率，主要因为临床和大分子/CGT 低利润业务拖累。</li>
+<li>估值是否匹配成长与财务质量：基本匹配但处在合理区间上沿。市场已经给 CMC 商业化和订单加速一定溢价，若 2026 年收入只能落在 12%—18%指引下沿、综合毛利率不修复或扩产继续压低自由现金流，则 36.82 倍 PE 缺乏安全垫；若 CMC 后期项目放量、临床毛利率止跌且大分子/CGT 减亏，估值才有持续消化空间。</li>
+</ul>
+</section>
+<section id="s9">
+<h2 class="sec"><span class="num">09</span>负面信息与风险排查</h2>
+<ul>
+<li>是否亏损：公司整体盈利；但大分子和细胞与基因治疗服务 2025 年毛利率 -40.31%、2026Q1 降至 -92.80%，属于持续经营性亏损板块。<a href="https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-29/f8875297-90e2-49ab-b624-6d58f4ec8865.PDF" target="_blank" rel="noopener">2026Q1</a></li>
+<li>是否 ST 或退市风险：截至 2026-07-11 未发现 ST 或退市风险信号；公司持续盈利、2025 年财务报告为标准无保留意见。<a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12042868&amp;stockid=300759" target="_blank" rel="noopener">2025年度审计报告</a></li>
+<li>审计意见：安永华明出具标准无保留意见；关键审计事项包括应收账款/合同资产减值、收入确认、商誉减值测试。<a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12042868&amp;stockid=300759" target="_blank" rel="noopener">2025年度审计报告</a></li>
+<li>监管问询/处罚：2025 年年报披露报告期内不存在处罚及整改事项，未找到截至 2026-07-11 对财务真实性构成结论性影响的新增监管处罚。<a href="https://www.hkexnews.hk/listedco/listconews/sehk/2026/0428/2026042801704_c.pdf" target="_blank" rel="noopener">2025年报</a></li>
+<li>诉讼仲裁：2025 年未达到重大诉讼披露标准的案件汇总中，公司作为原告涉案 6,355.52 万元、作为被告涉案 918.76 万元，均未形成预计负债，公司判断无重大影响。<a href="https://www.hkexnews.hk/listedco/listconews/sehk/2026/0428/2026042801704_c.pdf" target="_blank" rel="noopener">2025年报</a></li>
+<li>负面新闻：近期媒体集中关注商誉、毛利率分化、实控人质押和 50 亿元扩产对现金流的压力；这些是合理的风险问题，但目前属于财务风险讨论，并非监管对财务造假的认定。<a href="https://www.eeo.com.cn/2026/0701/938013.shtml" target="_blank" rel="noopener">经济观察网</a></li>
+<li>关联交易/客户供应商真实性争议：2025 年前五大客户与供应商均无关联方交易占比，客户集中度不高；未发现公司公告或监管文件确认的客户/供应商真实性重大争议。<a href="https://www.hkexnews.hk/listedco/listconews/sehk/2026/0428/2026042801704_c.pdf" target="_blank" rel="noopener">2025年报</a></li>
+<li>其他核心风险：北美收入占比超过 60%，地缘政策、跨境数据、贸易和生物医药供应链限制可能影响订单；汇率波动已经在 2026Q1 对实验室和 CMC 毛利率造成负面影响，公司虽开展套期保值，但不能完全消除风险。<a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12042859&amp;stockid=300759" target="_blank" rel="noopener">套保公告</a></li>
+</ul>
+</section>
+<section id="s10">
+<h2 class="sec"><span class="num">10</span>财务造假风险初筛</h2>
+<ul>
+<li>红旗数量：2 项主要跟踪红旗，另有 2 项治理/资本开支观察项。</li>
+<li>主要红旗：第一，2026Q1 存货同比增长 45.18%，显著快于收入 15.48%；第二，2025 年末商誉 35.86 亿元、占总资产 13.24%，商誉减值测试依赖收入增长率、毛利率及折现率等管理层假设，并被审计师列为关键审计事项。<a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12042868&amp;stockid=300759" target="_blank" rel="noopener">2025年度审计报告</a></li>
+<li>观察项：实控人集团质押比例 18.04%；新增约 50 亿元扩产计划可能增加债务、资本化支出及转固后的折旧压力。<a href="https://asia.tools.euroland.com/tools/Pressreleases/GetPressRelease/?ID=8071433&amp;companycode=cn-300759&amp;lang=zh-CN&amp;v=HKSE" target="_blank" rel="noopener">质押公告</a> <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0527/2026052701351_c.pdf" target="_blank" rel="noopener">扩产公告</a></li>
+<li>反向证据：经营现金流连续高于净利润；应收与合同资产增速低于收入；前五大客户占比仅 16.05%；审计意见和内控审计均为标准意见；未发现财务真实性相关处罚。<a href="https://www.hkexnews.hk/listedco/listconews/sehk/2026/0428/2026042801704_c.pdf" target="_blank" rel="noopener">2025年报</a></li>
+<li>风险等级：中</li>
+<li>解释：这是财务造假风险初筛，不是事实定性。当前证据更像“重资产扩张与资产减值敏感性上升”，而不是收入或现金流真实性已经失配；只有监管、审计、司法或公司公告确认后才能对财务造假作事实判断。</li>
+</ul>
+</section>
+<section id="s11">
+<h2 class="sec"><span class="num">11</span>后续跟踪清单</h2>
+<ul>
+<li>新增订单金额：公司未披露金额；重点要求管理层补充商业化订单采购量、锁定期、最低采购义务和取消条款。</li>
+<li>年初至今累计订单金额：未披露；当前仅知 2026Q1 新签订单同比增长超过 30%。<a href="https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-29/f8875297-90e2-49ab-b624-6d58f4ec8865.PDF" target="_blank" rel="noopener">2026Q1</a></li>
+<li>订单金额/上年营收：无法计算；避免把订单增速直接等同于 2026 年收入增速。</li>
+<li>重点客户复购与新增客户：跟踪全球前 20 大药企客户收入能否继续高增长、中国客户复苏能否延续，以及原有客户收入占比是否维持 95%以上。</li>
+<li>中标候选人转正式中标/签约情况：不适用传统招投标逻辑；重点跟踪 GLP-1 商业化生产的验证批、注册批、商业批放量，以及加科思 JAB-23E73 注册临床用药交付。</li>
+<li>合同负债、存货、应收账款和经营现金流变化：若存货继续增长超过 30%、合同负债增速掉到个位数、经营现金流/净利润跌破 1，需下调订单质量判断。</li>
+<li>资本开支与项目回报：跟踪杭州/绍兴项目拿地、审批、建设进度、融资结构、客户绑定程度及预计产能利用率；若资本开支持续超过收入 20%且自由现金流转负，需重估扩张质量。</li>
+<li>触发深度复盘条件：2026 年半年报披露；GLP-1 商业化生产进入实质收入确认；临床毛利率跌破 5%；大分子/CGT 单季毛亏继续扩大；商誉或在建工程出现大额减值；实控人质押比例明显上升。</li>
+</ul>
+</section>
+<section id="s12">
+<h2 class="sec"><span class="num">12</span>信息边界</h2>
+<ul>
+<li>数据日期：估值及行情截至 2026-07-10；最新定期财务数据截至 2026-03-31；公告和新闻核验截至 2026-07-11。</li>
+<li>主要数据来源：<a href="https://www.hkexnews.hk/listedco/listconews/sehk/2026/0428/2026042801704_c.pdf" target="_blank" rel="noopener">康龙化成2025年报</a>、<a href="https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-29/f8875297-90e2-49ab-b624-6d58f4ec8865.PDF" target="_blank" rel="noopener">2026年一季报</a>、<a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12292535&amp;stockid=300759" target="_blank" rel="noopener">投资者关系记录</a>、深交所/港交所公告、客户侧正式发布及东方财富行情与财务数据。</li>
+<li>尚未核验的信息：公司未披露在手订单金额、GLP-1 合作的最低采购量与收入确认节奏、JAB-23E73 项目金额、精确市场占有率；2026 年半年报尚未披露。</li>
+<li>口径限制：A 股“总市值”按 A 股价格乘总股本计算，由于公司有 H 股，不能等同于按 A/H 两地实际股价加总的经济市值；同行估值受业务结构、会计准则和非经常损益影响，比较仅用于判断区间。</li>
+<li>可能影响结论的新公告或市场事件：2026 年半年报、杭州/绍兴项目融资与建设安排、GLP-1 商业化生产放量、海外生物医药政策、人民币兑美元/英镑波动及股东后续减持。</li>
+</ul>
+</section>
+
+      <section id="note-friendly">
+        <h2 class="sec"><span class="num">◎</span>基本面速记</h2>
+        <div class="note-copy">
+          <h2>可复制摘要</h2>
+          <pre><code>【基本面速记】
+公司：康龙化成（300759.SZ / 03759.HK）
+结论：基本面中性，财务质量良好，估值合理（区间上沿）。
+核心看点：
+1. 2025年扣非净利润增长38.85%，2026Q1新签订单增长30%以上，核心经营继续修复。
+2. 小分子CDMO商业化突破，Q1板块收入增长25%、新签订单增长50%以上。
+3. 经营现金流长期高于净利润，应收增速未超过收入，利润现金含量较好。
+主要风险：
+1. 临床研究和大分子/CGT毛利率承压，2026Q1综合毛利率下降1.16个百分点。
+2. 存货快速增长、商誉较高及约50亿元扩产计划可能继续压低自由现金流和ROIC。
+财务造假风险初筛：中。理由：存货和商誉是两项主要跟踪红旗，但现金流、应收、客户集中度、审计意见和监管记录提供较强反向证据；这不是造假事实定性。
+订单/需求验证：改善。依据：2026Q1新签订单增长30%以上，实验室增长20%以上，CMC增长50%以上；但订单金额和最低采购义务未披露。
+后续跟踪：2026H1毛利率与自由现金流、GLP-1商业批放量、存货/合同负债匹配、临床和大分子板块减亏、杭州/绍兴项目资本回报。</code></pre>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="disclaimer">
+      免责声明:本报告为基于公开财报、公告、行情与新闻资料的整理和财务质量初筛,不构成任何投资建议,不保证未来收益。投资有风险,决策需谨慎。所有数据以公司正式披露为准。
+    </div>
+    <div>报告主体:康龙化成(300759.SZ) | 数据口径:估值及行情截至 2026-07-10；最新定期财务数据截至 2026-03-31；公告和新闻核验截至 2026-07-11。</div>
+    <div>主要数据来源:康龙化成2025年报、2026年一季报、投资者关系记录、深交所/港交所公告、客户侧正式发布及东方财富行情与财务数据。</div>
+    <div>自包含离线 HTML · 内联 CSS / 极简内联 JS · 可直接在浏览器打开</div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var links = document.querySelectorAll('nav.toc a');
+  var map = {};
+  for (var i=0;i<links.length;i++){
+    var href = links[i].getAttribute('href') || '';
+    if (href.charAt(0) === '#') map[href.slice(1)] = links[i];
+  }
+  var sections = document.querySelectorAll('main section[id]');
+  function onScroll(){
+    var pos = (window.scrollY || document.documentElement.scrollTop) + 90;
+    var cur = null;
+    for (var j=0;j<sections.length;j++){
+      if (sections[j].offsetTop <= pos) cur = sections[j].id;
+    }
+    for (var k=0;k<links.length;k++) links[k].classList.remove('active');
+    if (cur && map[cur]) {
+      map[cur].classList.add('active');
+      var act = map[cur];
+      var sc = document.getElementById('toc-scroll');
+      if (sc && act.offsetLeft < sc.scrollLeft) sc.scrollLeft = act.offsetLeft - 8;
+      if (sc && act.offsetLeft + act.offsetWidth > sc.scrollLeft + sc.clientWidth) {
+        sc.scrollLeft = act.offsetLeft + act.offsetWidth - sc.clientWidth + 8;
+      }
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
+</body>
+</html>
