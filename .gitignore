@@ -4,6 +4,7 @@ __pycache__/
 *.py[cod]
 node_modules/
 **/node_modules/
+outputs/electrolyte_weekly_prices_20260708/node_modules
 .cache/
 tmp/
 outputs/**/*.inspect.ndjson
