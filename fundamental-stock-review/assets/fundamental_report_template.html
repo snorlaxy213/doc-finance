@@ -89,6 +89,24 @@ body{
 .kpi .kv.up{color:var(--up);}
 .kpi .kv.down{color:var(--down);}
 .kpi .ks{font-size:11px;color:var(--ink-soft);margin-top:3px;font-variant-numeric:tabular-nums;}
+.forecast-panel{
+  margin:16px 0 6px;padding:18px 20px;border:1px solid #d8e2ef;border-left:4px solid var(--brand);
+  border-radius:4px;background:linear-gradient(135deg,#f7faff 0%,#fff 68%);
+}
+.forecast-panel.forecast-empty{padding:14px 18px;background:#fbfcfe;border-left-color:#a8b5c4;}
+.forecast-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;flex-wrap:wrap;}
+.forecast-kicker{display:block;font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--brand);margin-bottom:5px;}
+.forecast-head h2{margin:0;font-size:18px;line-height:1.35;color:var(--ink);}
+.forecast-tags{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end;}
+.forecast-tag{display:inline-flex;padding:4px 9px;border-radius:999px;background:#eaf1f8;color:#294d73;font-size:11px;font-weight:600;}
+.forecast-tag.warn{background:#fff0dc;color:#8a5615;}
+.forecast-tag.neutral{background:#edf0f3;color:#5e6873;}
+.forecast-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px;}
+.forecast-card{background:#fff;border:1px solid #e0e7ef;border-radius:4px;padding:12px 14px;min-width:0;}
+.forecast-label{font-size:11px;color:var(--ink-soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.forecast-value{font-size:20px;font-weight:700;color:var(--brand);line-height:1.3;margin-top:4px;font-variant-numeric:tabular-nums;}
+.forecast-change{font-size:11.5px;color:var(--ink-soft);margin-top:4px;}
+.forecast-note{margin:11px 0 0!important;font-size:11px!important;color:var(--ink-soft)!important;}
 .layout{
   display:grid;grid-template-columns:208px minmax(0,1fr);gap:36px;align-items:start;
   padding:14px 0 0;
@@ -177,6 +195,7 @@ footer .disclaimer{background:var(--line-soft);padding:8px 12px;border-radius:3p
 @media (max-width:760px){
   .verdict-grid{grid-template-columns:1fr;}
   .kpis{grid-template-columns:repeat(3,1fr);}
+  .forecast-grid{grid-template-columns:1fr;}
   .page{padding:0 18px;}
   .masthead .m-stats{gap:22px;}
 }
@@ -195,7 +214,7 @@ footer .disclaimer{background:var(--line-soft);padding:8px 12px;border-radius:3p
   thead{display:table-header-group;}
   tbody tr{break-inside:avoid;}
   .badge{border:1px solid #ccc;}
-  .note-copy,.tbl-scroll,.kpis,.verdict{break-inside:avoid;}
+  .note-copy,.tbl-scroll,.kpis,.verdict,.forecast-panel{break-inside:avoid;}
   footer{break-inside:avoid;}
   a{color:var(--ink);text-decoration:none;}
   .kpi{border:1px solid #ccc;}
@@ -239,6 +258,8 @@ footer .disclaimer{background:var(--line-soft);padding:8px 12px;border-radius:3p
   <div class="kpis" aria-label="关键指标速览">
     {{kpi_cards}}
   </div>
+
+  {{forecast_panel}}
 
   <div class="layout">
     <aside class="sidebar">

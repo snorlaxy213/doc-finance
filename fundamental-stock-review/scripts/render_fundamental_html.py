@@ -13,6 +13,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_TEMPLATE = ROOT / "assets" / "fundamental_report_template.html"
+FORECAST_HEADING_TERMS = ("财务预报", "业绩预报", "盈利预告", "业绩预告", "盈喜", "盈警")
 
 
 @dataclass
@@ -272,6 +273,11 @@ def collect_tables(markdown: str) -> list[TableBlock]:
     return tables
 
 
+def is_forecast_table(table: TableBlock) -> bool:
+    heading = normalize_space(table.heading)
+    return any(term in heading for term in FORECAST_HEADING_TERMS) or "隐含最新单季度" in heading
+
+
 def extract_title(markdown: str) -> str:
     for line in markdown.splitlines():
         if line.startswith("# "):
@@ -315,6 +321,18 @@ def find_section(markdown: str, section_keyword: str) -> str:
     start = match.end()
     next_match = re.search(r"^###\s+\d+[.、\s]+", markdown[start:], re.M)
     end = start + next_match.start() if next_match else len(markdown)
+    return markdown[start:end]
+
+
+def find_subsection(markdown: str, subsection_keyword: str) -> str:
+    pattern = re.compile(rf"^(#{{4,6}})\s+.*{re.escape(subsection_keyword)}.*$", re.M)
+    match = pattern.search(markdown)
+    if not match:
+        return ""
+    level = len(match.group(1))
+    start = match.end()
+    next_heading = re.search(rf"^#{{2,{level}}}\s+", markdown[start:], re.M)
+    end = start + next_heading.start() if next_heading else len(markdown)
     return markdown[start:end]
 
 
@@ -390,7 +408,7 @@ def latest_value_from_row(table: TableBlock, row_name: str) -> tuple[str, str]:
     for idx in range(min(len(values), len(headers)) - 1, -1, -1):
         header = normalize_space(headers[idx])
         value = normalize_space(values[idx])
-        if value and value not in missing_values and header not in {"变化解读", "解读"}:
+        if value and value not in missing_values and "解读" not in header:
             return value, header
     return "", ""
 
@@ -484,6 +502,98 @@ def build_badges(summary: dict[str, object]) -> str:
     )
 
 
+def table_cell(table: TableBlock | None, row_name: str, header_terms: tuple[str, ...]) -> str:
+    if table is None:
+        return ""
+    headers = [normalize_space(header) for header in table.headers[1:]]
+    rows = row_map(table)
+    values = rows.get(row_name)
+    if not values:
+        return ""
+    for idx, header in enumerate(headers):
+        if any(term in header for term in header_terms) and idx < len(values):
+            return normalize_space(values[idx])
+    return ""
+
+
+def first_forecast_table(tables: list[TableBlock], term: str) -> TableBlock | None:
+    for table in tables:
+        if term in normalize_space(table.heading):
+            return table
+    return None
+
+
+def build_forecast_panel(markdown: str, tables: list[TableBlock]) -> str:
+    subsection = find_subsection(markdown, "财务预报")
+    if not subsection:
+        return ""
+    if "近30日未披露新的正式财务预报" in normalize_space(subsection):
+        return (
+            '<section class="forecast-panel forecast-empty" aria-label="最新财务预报">'
+            '<div class="forecast-head"><div><span class="forecast-kicker">最新财务预报</span>'
+            '<h2>近30日未披露新的正式财务预报</h2></div>'
+            '<span class="forecast-tag neutral">无新增预报</span></div></section>'
+        )
+
+    cumulative = first_forecast_table(tables, "累计业绩预报")
+    implied = first_forecast_table(tables, "隐含最新单季度")
+    if cumulative is None:
+        return ""
+
+    period = table_cell(cumulative, "预报期间", ("本期预报区间", "预报数据", "本期")) or "最新报告期"
+    info_quality = find_key_value(subsection, "信息可信度") or "待判断"
+    earnings_quality = find_key_value(subsection, "盈利质量判断") or "待判断"
+    info_quality = re.split(r"[，,；;。]", info_quality, maxsplit=1)[0].strip()
+    earnings_quality = re.split(r"[，,；;。]", earnings_quality, maxsplit=1)[0].strip()
+
+    cards: list[tuple[str, str, str]] = []
+    cumulative_rows = (
+        ("预报归母净利润", "累计归母净利润"),
+        ("预报扣非归母净利润", "累计扣非净利润"),
+        ("预报营业收入", "累计营业收入"),
+    )
+    for row_name, label in cumulative_rows:
+        value = table_cell(cumulative, row_name, ("本期预报区间", "预报数据", "本期"))
+        yoy = table_cell(cumulative, row_name, ("同比变化", "同比"))
+        if value and value not in {"未披露", "不适用", "-", "--"}:
+            cards.append((label, value, f"累计同比 {yoy}" if yoy else "累计同比未披露"))
+        if len(cards) >= 2:
+            break
+
+    implied_value = table_cell(implied, "隐含单季归母净利润", ("隐含本季度区间", "本季度"))
+    implied_yoy = table_cell(implied, "隐含单季归母净利润", ("单季同比",))
+    implied_qoq = table_cell(implied, "隐含单季归母净利润", ("单季环比",))
+    if implied_value and implied_value not in {"未披露", "不适用", "-", "--"}:
+        comparison = " · ".join(part for part in (
+            f"同比 {implied_yoy}" if implied_yoy else "",
+            f"环比 {implied_qoq}" if implied_qoq else "",
+        ) if part)
+        cards.append(("隐含最新单季归母净利润", implied_value, comparison or "单季同比/环比未披露"))
+
+    if not cards:
+        return ""
+
+    cards_html = "\n".join(
+        '<div class="forecast-card">'
+        f'<div class="forecast-label">{html.escape(label)}</div>'
+        f'<div class="forecast-value">{html.escape(value)}</div>'
+        f'<div class="forecast-change">{html.escape(change)}</div></div>'
+        for label, value, change in cards[:3]
+    )
+    return (
+        '<section class="forecast-panel" aria-label="最新财务预报">'
+        '<div class="forecast-head"><div><span class="forecast-kicker">最新财务预报</span>'
+        f'<h2>{html.escape(period)}</h2></div><div class="forecast-tags">'
+        '<span class="forecast-tag warn">未经审计</span>'
+        f'<span class="forecast-tag">信息可信度 {html.escape(info_quality)}</span>'
+        f'<span class="forecast-tag">盈利质量 {html.escape(earnings_quality)}</span>'
+        '</div></div>'
+        f'<div class="forecast-grid">{cards_html}</div>'
+        '<p class="forecast-note">隐含单季数据根据累计预报和已披露财报推算，并非公司直接披露；正式结果以定期报告为准。</p>'
+        '</section>'
+    )
+
+
 def list_html(items: list[str], fallback: str) -> str:
     if not items:
         items = [fallback]
@@ -499,9 +609,10 @@ def build_kpis(tables: list[TableBlock], valuation: dict[str, tuple[str, str]]) 
         ("应收账款/合同资产", "应收/合同资产"),
         ("存货", "存货"),
     ]
+    actual_tables = [table for table in tables if not is_forecast_table(table)]
     cards: list[str] = []
     for key, label in metrics:
-        value, period = extract_metric_from_tables(tables, key)
+        value, period = extract_metric_from_tables(actual_tables, key)
         if value:
             cls = value_class(value)
             class_attr = f" {cls}" if cls else ""
@@ -590,6 +701,7 @@ def render_report(markdown: str, template: str, args: argparse.Namespace) -> tup
         "verdict_points": list_html(summary["reasons"], "结论理由详见正文。"),
         "risk_points": list_html(summary["risks"], "主要风险详见负面信息与风险排查、财务质量验证章节。"),
         "kpi_cards": build_kpis(tables, valuation),
+        "forecast_panel": build_forecast_panel(markdown, tables),
         "toc": build_toc(rendered.toc),
         "content_html": rendered.html,
         "note_block": html.escape(str(summary.get("note_block") or "未提取到基本面速记块。")),
