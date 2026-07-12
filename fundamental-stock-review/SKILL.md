@@ -10,6 +10,7 @@ description: Analyze a listed company's fundamentals and generate both a Markdow
 - Answer in Simplified Chinese unless the user asks otherwise.
 - Use a professional investment-research tone. Do not provide personalized buy/sell instructions or guaranteed-return language.
 - Verify current, time-sensitive facts before concluding: ticker/name mapping, latest filings, latest price/market-cap data, major announcements, regulatory actions, and recent negative news.
+- Check whether the company issued an official earnings forecast, profit alert, profit warning, forecast revision, 盈喜, or 盈警 during the 30 calendar days ending on the report execution date. Treat forecast figures as unaudited and keep them separate from reported financial statements.
 - Separate confirmed disclosure from market rumor or narrative. Label uncertain items as 信息边界.
 - For orders, contracts, and bidding information, distinguish 招标, 中标候选人, 中标公告, 合同签署, 框架协议, delivered revenue, and unverified market rumor.
 - Treat negative governance, audit, regulatory, or cash-flow issues as possible conclusion downgrades even when growth and valuation look attractive.
@@ -57,6 +58,7 @@ If the Markdown is created in a temporary location, use `--reports-root /Users/s
 Collect the latest available data from public filings, exchange announcements, financial data providers, and credible news sources:
 
 - Current valuation snapshot: latest price date, closing price, total market cap, free-float market cap, PE, PB, PS, dividend yield if relevant. Treat these as latest point-in-time market data, not historical financial-statement metrics.
+- Recent financial forecast: official announcement date, forecast period, forecast range or midpoint, prior-year comparable amount, cumulative YoY, forecast revision, revenue if disclosed, attributable net profit, deducted non-recurring net profit, EPS if disclosed, non-recurring contribution, stated drivers, and whether the same-period formal report has subsequently been released.
 - Growth: revenue, net profit, deducted non-recurring net profit, YoY growth, EPS, 3-year trend, and whether growth comes from core-business volume, price, market-share gains, acquisitions, or non-recurring items.
 - Profitability: gross margin, deducted net margin, net margin, ROE, ROIC if available, margin drivers, and peer comparison.
 - Cash-flow quality: operating cash flow, operating cash flow / net profit, cash received from sales / revenue, free cash flow, and whether cash flow keeps up with profit.
@@ -73,7 +75,7 @@ Collect the latest available data from public filings, exchange announcements, f
 
 Use this priority order:
 
-1. Put key data first: start the output with the latest valuation snapshot, then separate current-year interim financial metrics from recent annual financial metrics, with concise change interpretation before long narrative analysis.
+1. Put key data first: start with the latest valuation snapshot; then show an official financial forecast issued within the latest 30 calendar days, including cumulative YoY and implied latest-quarter YoY/QoQ when calculable; then separate reported current-year interim metrics from recent annual metrics. Never mix forecast figures with reported results.
 2. Business first: decide whether the company has a durable business, industry tailwind, and defensible product position.
 3. Profit second: judge whether revenue, net profit, deducted net profit, EPS, margin, ROE, and segment profitability form a coherent trend.
 4. Cash flow third: verify whether profit converts into cash. Strong profit with weak operating cash flow is a major warning.
@@ -135,7 +137,7 @@ The Markdown must remain renderer-friendly:
 
 ### 1. 核心财务指标
 
-Do not mix interim reports and annual reports in one core financial table. Use three blocks in this order: latest valuation snapshot, disclosed current-year interim reports, and recent three-year annual reports. Use `亿元` for money amounts, `元/股` for EPS, and `%` for ratios unless otherwise stated. Use `未披露` or `不适用` when data cannot be confirmed.
+Do not mix forecast, interim-report, and annual-report figures in one table. Use four blocks in this order: latest valuation snapshot, latest financial forecast, disclosed current-year interim reports, and recent three-year annual reports. Use `亿元` for money amounts, `元/股` for EPS, and `%` for ratios unless otherwise stated. Use `未披露` or `不适用` when data cannot be confirmed.
 
 #### 1.1 当前估值快照
 
@@ -151,7 +153,63 @@ Show only the latest available market and valuation data above the financial-sta
 | PS |  |  | 适用于利润波动或成长阶段公司，需结合毛利率和现金流 |
 | 股息率 |  |  | 如适用，结合分红稳定性和现金流质量 |
 
-#### 1.2 已披露当年期间财报
+#### 1.2 最新财务预报与质量解读
+
+Always reserve this subsection so the output structure remains stable.
+
+Trigger and source rules:
+
+- Use the report execution date as the endpoint and look back 30 calendar days, inclusive.
+- Include only company or exchange filings: earnings forecasts, profit alerts/warnings, forecast revisions, 盈喜, or 盈警. Do not use broker estimates, media estimates, or market rumor as the core forecast.
+- When multiple forecasts or revisions exist for the same period, use the latest revision and explain whether it raised, lowered, narrowed, or widened the previous range.
+- When the formal report for the same period has already been released, present a brief `预报兑现检查` comparing forecast and actual instead of presenting the forecast as current guidance.
+- When no qualifying official forecast exists, write `近30日未披露新的正式财务预报` and do not create empty forecast tables.
+- Mark every forecast as `未经审计`. Do not infer undisclosed revenue, gross margin, operating cash flow, ROE, balance-sheet data, or free cash flow.
+
+##### 1.2.1 累计业绩预报
+
+| 指标 | 本期预报区间 | 上年同期 | 同比变化 | 预报中枢 | 质量解读 |
+|---|---:|---:|---:|---:|---|
+| 预报期间 |  | 不适用 | 不适用 | 不适用 | 明确 Q1/H1/Q3/全年及公告日期，注明未经审计 |
+| 预报营业收入 |  |  |  |  | 未披露时写未披露，不以利润增速倒推收入 |
+| 预报归母净利润 |  |  |  |  | 增长、下滑、扭亏、减亏、转亏或增亏 |
+| 预报扣非归母净利润 |  |  |  |  | 是否与归母净利润方向和幅度一致 |
+| 预报 EPS |  |  |  |  | 仅在正式公告披露或股本口径可可靠确认时使用 |
+| 预计非经常性损益 |  |  |  |  | 资产处置、补贴、投资收益、减值转回等影响 |
+
+Use the company's disclosed YoY where available and cross-check it against the stated prior-year base. Calculate the midpoint only when both lower and upper bounds are disclosed. If the comparison base is zero, negative, or too small for a meaningful percentage, use `扭亏 / 减亏 / 转亏 / 增亏` instead of a mechanical percentage.
+
+##### 1.2.2 隐含最新单季度同比与环比
+
+| 指标 | 隐含本季度区间 | 去年同季度 | 单季同比 | 上一季度 | 单季环比 | 解读 |
+|---|---:|---:|---:|---:|---:|---|
+| 隐含单季营业收入 |  |  |  |  |  | 仅在累计预报披露收入且前序累计收入已正式披露时计算 |
+| 隐含单季归母净利润 |  |  |  |  |  | 判断盈利动能是加速、稳定还是回落 |
+| 隐含单季扣非归母净利润 |  |  |  |  |  | 判断主业盈利趋势是否延续 |
+| 隐含单季 EPS |  |  |  |  |  | 仅在股本口径可比时计算 |
+
+Calculation rules:
+
+- H1 forecast: implied Q2 = H1 forecast range minus reported Q1; prior-year Q2 = prior-year H1 minus prior-year Q1.
+- Q3 cumulative forecast: implied Q3 = Q1-Q3 forecast range minus reported H1; prior-year Q3 = prior-year Q1-Q3 minus prior-year H1.
+- Annual forecast: implied Q4 = annual forecast range minus reported Q1-Q3; prior-year Q4 = prior-year annual minus prior-year Q1-Q3.
+- Q1 forecast: use the Q1 range directly; compare QoQ with the prior-year Q4 derived from the latest annual and Q3 figures when those figures are comparable.
+- For a range forecast `[L, U]` and preceding cumulative actual `A`, calculate the implied quarter as `[L-A, U-A]`. Calculate YoY and QoQ as ranges using both endpoints when the comparison base is positive and meaningful.
+- If a comparison base is zero or negative, describe `扭亏 / 减亏 / 转亏 / 增亏` instead of showing a misleading percentage.
+- Label all derived quarterly figures as `根据累计预报和已披露财报推算，非公司直接披露`.
+- Do not calculate revenue YoY/QoQ when forecast revenue is undisclosed.
+
+After the tables, add `财务预报质量判断` covering:
+
+- Whether attributable and deducted net profit move in the same direction and whether non-recurring items dominate the forecast.
+- Whether cumulative YoY and implied latest-quarter YoY/QoQ indicate accelerating, stable, or weakening earnings momentum.
+- Whether the forecast range is narrow enough to indicate useful visibility; optionally calculate range width as `(upper bound - lower bound) / midpoint`.
+- Whether stated drivers are supported by price, volume, market share, orders, capacity utilization, industry data, or already reported segment results.
+- Which important quality indicators remain unavailable, especially revenue, cash flow, receivables, inventory, gross margin, and capital expenditure.
+- `信息可信度：高 / 中 / 低`, based on source authority, revision status, range width, and disclosure completeness.
+- `盈利质量判断：强 / 中性 / 偏弱 / 无法判断`, based on core-business contribution, deducted-profit consistency, latest-quarter momentum, and non-recurring dependence.
+
+#### 1.3 已披露当年期间财报
 
 Use this block for the current year's already disclosed interim reports only, plus the latest interim report's same period last year. This block is for comparable interim-period analysis, not annual-trend analysis.
 
@@ -181,7 +239,7 @@ Column rules:
 | 总资产 |  |  |  |  | 资产扩张是否有效支撑盈利 |
 | 归母净资产 |  |  |  |  | 净资产增长与 ROE 的匹配情况 |
 
-#### 1.3 最近三年年度财报
+#### 1.4 最近三年年度财报
 
 Use this block for the latest three annual reports, for example `2023A / 2024A / 2025A`. This block should focus on annual trend quality and avoid mixing in quarterly or half-year data.
 
@@ -348,6 +406,7 @@ Append a concise copyable block unless the user explicitly asks not to:
 主要风险：
 1.
 2.
+最新财务预报：近30日预报要点；累计同比；隐含单季同比/环比；信息可信度；盈利质量判断。若无则写近30日未披露。
 财务造假风险初筛：低/中/高。理由：
 订单/需求验证：改善/稳定/走弱/无法判断。依据：
 后续跟踪：
