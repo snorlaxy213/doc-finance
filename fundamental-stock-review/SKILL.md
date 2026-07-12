@@ -39,8 +39,10 @@ Rules:
 - If the user provides a different report root, use that root. Otherwise, use `/Users/superman/Documents/doc-finance/reports` when available; in other workspaces, use `reports/`.
 - Save the Markdown report first, using the fixed output structure below and valid GitHub-Flavored Markdown tables.
 - Generate the HTML from the same Markdown using `scripts/render_fundamental_html.py`; do not hand-maintain a separate HTML narrative that can drift from the Markdown.
+- Start the Markdown body with `### 1. 核心财务指标` immediately after the H1 title. Do not place a free-standing conclusion, executive summary, background, or time-range paragraph between the title and section 1.
 - Keep the HTML self-contained: inline CSS/JS, no external assets, no network font or CDN dependency.
 - Do not fabricate visualizations. If chart data is not explicitly present in the report tables, let the HTML render tables and summary cards only.
+- After rendering, verify that the exact `一句话结论` appears once in the HTML: in the top `结论速览`, not again in the main body.
 - Final response must include the absolute paths of both the Markdown and HTML files.
 
 Example command after writing the Markdown file:
@@ -132,6 +134,8 @@ The Markdown must remain renderer-friendly:
 - Use `###` for main numbered sections and `####` for subsections.
 - Keep tables as normal Markdown pipe tables.
 - Keep conclusion labels exactly as `基本面判断`, `财务质量`, `估值状态`, and `财务造假风险初筛` so the HTML renderer can extract summary badges.
+- Keep `一句话结论` exactly as a single-line item in section 3. The HTML renderer extracts it into the top `结论速览` and suppresses the duplicate line in the main body.
+- Put the report execution date, market-data date, covered financial periods, and historical-data caveats under section 12 `信息边界` as `分析范围`; do not repeat them before section 1.
 - Keep the final copyable block in a fenced `text` or `plain` code block so the HTML renderer can show it as `基本面速记`.
 - Do not mix latest market valuation data with historical financial-statement tables; the HTML header and KPI cards rely on clean valuation and financial blocks.
 
@@ -165,6 +169,7 @@ Trigger and source rules:
 - When the formal report for the same period has already been released, present a brief `预报兑现检查` comparing forecast and actual instead of presenting the forecast as current guidance.
 - When no qualifying official forecast exists, write `近30日未披露新的正式财务预报` and do not create empty forecast tables.
 - Mark every forecast as `未经审计`. Do not infer undisclosed revenue, gross margin, operating cash flow, ROE, balance-sheet data, or free cash flow.
+- Keep the financial-forecast subsection and the HTML forecast panel limited to forecast facts, derived-quarter calculations, information confidence, and earnings-quality assessment. Do not put the overall valuation, governance, fraud-risk, or comprehensive fundamental conclusion in this panel.
 
 ##### 1.2.1 累计业绩预报
 
@@ -299,6 +304,7 @@ After the table, add `业务结构判断` covering which segments are the real g
 
 ### 3. 结论摘要
 
+- 一句话结论：用一行综合盈利趋势、财务质量、估值与关键治理风险；不要只复述最新财务预报
 - 基本面判断：强 / 中性 / 偏弱 / 高风险
 - 财务质量：优秀 / 良好 / 一般 / 存疑
 - 估值状态：偏低 / 合理 / 偏高 / 无法判断
@@ -386,6 +392,7 @@ Use this section when the company discloses orders/backlog, the user asks about 
 
 ### 12. 信息边界
 
+- 分析范围：报告执行日、行情日期、覆盖的财务期间，以及可能削弱历史可比性的会计更正或口径提示
 - 数据日期：
 - 主要数据来源：
 - 尚未核验的信息：

@@ -55,6 +55,11 @@ body{
 }
 .verdict-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-bottom:14px;}
 .verdict-head h2{margin:0;font-size:14px;letter-spacing:.1em;color:var(--brand);font-weight:700;}
+.verdict-headline{
+  margin:-2px 0 14px;padding:10px 12px;border:1px solid #dfe7f1;border-radius:4px;
+  background:#fff;color:var(--ink);font-size:15px;font-weight:600;line-height:1.7;
+}
+.verdict-headline .label{display:block;margin-bottom:2px;color:var(--brand);font-size:11px;font-weight:700;letter-spacing:.1em;}
 .badges{display:flex;flex-direction:row;flex-wrap:wrap;gap:8px;margin:0;}
 .badge{
   display:inline-flex;align-items:center;gap:6px;font-size:12.5px;
@@ -242,6 +247,7 @@ footer .disclaimer{background:var(--line-soft);padding:8px 12px;border-radius:3p
         {{verdict_badges}}
       </div>
     </div>
+    <div class="verdict-headline"><span class="label">核心判断</span>{{verdict_headline}}</div>
     <div class="verdict-grid">
       <div class="v-col v-up">
         <div class="v-title">核心理由</div>

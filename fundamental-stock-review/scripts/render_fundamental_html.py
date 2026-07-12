@@ -336,10 +336,29 @@ def find_subsection(markdown: str, subsection_keyword: str) -> str:
     return markdown[start:end]
 
 
+def strip_summary_headline_from_body(markdown: str) -> str:
+    """Keep the headline in Markdown source but render it only in the top verdict."""
+    lines = markdown.splitlines()
+    output: list[str] = []
+    in_summary = False
+    for line in lines:
+        if re.match(r"^###\s+\d+[.、\s]*.*结论摘要.*$", line):
+            in_summary = True
+            output.append(line)
+            continue
+        if in_summary and re.match(r"^###\s+\d+[.、\s]+", line):
+            in_summary = False
+        if in_summary and re.search(r"一句话结论[：:]", strip_md(line)):
+            continue
+        output.append(line)
+    return "\n".join(output)
+
+
 def extract_summary(markdown: str) -> dict[str, object]:
     summary = find_section(markdown, "结论摘要")
     note = extract_note_block(markdown)
     result: dict[str, object] = {
+        "headline": find_key_value(summary, "一句话结论") or "综合结论详见核心理由与主要风险。",
         "fundamental": find_key_value(summary, "基本面判断") or "未提取",
         "quality": find_key_value(summary, "财务质量") or "未提取",
         "valuation": find_key_value(summary, "估值状态") or "未提取",
@@ -543,8 +562,8 @@ def build_forecast_panel(markdown: str, tables: list[TableBlock]) -> str:
     period = table_cell(cumulative, "预报期间", ("本期预报区间", "预报数据", "本期")) or "最新报告期"
     info_quality = find_key_value(subsection, "信息可信度") or "待判断"
     earnings_quality = find_key_value(subsection, "盈利质量判断") or "待判断"
-    info_quality = re.split(r"[，,；;。]", info_quality, maxsplit=1)[0].strip()
-    earnings_quality = re.split(r"[，,；;。]", earnings_quality, maxsplit=1)[0].strip()
+    info_quality = re.split(r"[（(，,；;。]", info_quality, maxsplit=1)[0].strip()
+    earnings_quality = re.split(r"[（(，,；;。]", earnings_quality, maxsplit=1)[0].strip()
 
     cards: list[tuple[str, str, str]] = []
     cumulative_rows = (
@@ -683,7 +702,7 @@ def render_report(markdown: str, template: str, args: argparse.Namespace) -> tup
         if key not in valuation or valuation[key][0] in {"", "未披露", "不适用"}:
             valuation[key] = value
     summary = extract_summary(markdown)
-    rendered = render_markdown(markdown)
+    rendered = render_markdown(strip_summary_headline_from_body(markdown))
     data_date, sources = extract_data_meta(markdown)
 
     subtitle = args.subtitle or "基本面、财务质量、估值与风险初筛"
@@ -698,6 +717,7 @@ def render_report(markdown: str, template: str, args: argparse.Namespace) -> tup
         "generated_at": generated_at,
         "stat_cards": build_stat_cards(valuation),
         "verdict_badges": build_badges(summary),
+        "verdict_headline": inline_md(str(summary["headline"])),
         "verdict_points": list_html(summary["reasons"], "结论理由详见正文。"),
         "risk_points": list_html(summary["risks"], "主要风险详见负面信息与风险排查、财务质量验证章节。"),
         "kpi_cards": build_kpis(tables, valuation),
