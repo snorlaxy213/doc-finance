@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-15T01:15:31+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260327-2408a9cb",
+      "title": "2025 年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260327",
+      "official_url": "https://stockmc.xueqiu.com/202603/600026_20260327_BFNQ.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260327_2025A_年度报告_600026_20260327_BFNQ.pdf",
+      "sha256": "2408a9cb3d461e4e7c2400447a93c3fc17f9c99df878df25fee991e8f4446254",
+      "bytes": 1878469,
+      "pages": 237,
+      "retrieved_at": "2026-07-15T01:07:28+08:00",
+      "used_by": [
+        "中远海能_600026_基本面分析_20260712.md",
+        "中远海能_600026_基本面分析_20260712_144144.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260428-b8f372a0",
+      "title": "2026Q1 报告",
+      "document_type": "正式披露",
+      "period": "2026Q1",
+      "published_date": "20260428",
+      "official_url": "https://stockmc.xueqiu.com/202604/600026_20260428_Z6UL.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260428_2026Q1_正式披露_600026_20260428_Z6UL.pdf",
+      "sha256": "b8f372a025e33f3d7d4ecd4a152c596e40c1ad3c29afa3af643ccc497918f390",
+      "bytes": 249947,
+      "pages": 12,
+      "retrieved_at": "2026-07-15T01:07:29+08:00",
+      "used_by": [
+        "中远海能_600026_基本面分析_20260712.md",
+        "中远海能_600026_基本面分析_20260712_144144.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250430-9d5ee95b",
+      "title": "2025Q1 报告",
+      "document_type": "正式披露",
+      "period": "2025Q1",
+      "published_date": "20250430",
+      "official_url": "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-04-30/600026_20250430_2GXZ.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250430_2025Q1_正式披露_600026_20250430_2GXZ.pdf",
+      "sha256": "9d5ee95b6baf675127ead96d5c229d3cfa848e48581e8539726a6f1f1bdafa12",
+      "bytes": 231606,
+      "pages": 12,
+      "retrieved_at": "2026-07-15T01:07:29+08:00",
+      "used_by": [
+        "中远海能_600026_基本面分析_20260712.md",
+        "中远海能_600026_基本面分析_20260712_144144.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250327-c5871083",
+      "title": "2024 年年度报告",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250327",
+      "official_url": "https://dataclouds.cninfo.com.cn/shgonggao/2025/2025-03-27/182c636b0a3311f0bdc4fa163e957f7a.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250327_2024A_年度报告_182c636b0a3311f0bdc4fa163e957f7a.pdf",
+      "sha256": "c587108343fa8100b0886b72baf0c4554b356d11e02fe9771de988894d282dcd",
+      "bytes": 2153076,
+      "pages": 256,
+      "retrieved_at": "2026-07-15T01:07:30+08:00",
+      "used_by": [
+        "中远海能_600026_基本面分析_20260712.md",
+        "中远海能_600026_基本面分析_20260712_144144.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260526-a4f44a3d",
+      "title": "公司后续公告回溯",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260526",
+      "official_url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0526/2026052602382_c.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260526_期间待核验_正式披露_2026052602382_c.pdf",
+      "sha256": "a4f44a3d87434961d4fa764f5687ccc043b86fc4750666f7ffec4d1c16852cc6",
+      "bytes": 261713,
+      "pages": 4,
+      "retrieved_at": "2026-07-15T01:07:31+08:00",
+      "used_by": [
+        "中远海能_600026_基本面分析_20260712.md",
+        "中远海能_600026_基本面分析_20260712_144144.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250708-e66df39f",
+      "title": "上交所问询回复",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20250708",
+      "official_url": "https://static.sse.com.cn/stock/disclosure/announcement/c/202507/600026_20250708_FUUG.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250708_期间待核验_正式披露_600026_20250708_FUUG.pdf",
+      "sha256": "e66df39f07edee27428bca0de16aea114977cae10a5bb5ca9b5d0670f3bd3e59",
+      "bytes": 3223688,
+      "pages": 126,
+      "retrieved_at": "2026-07-15T01:07:32+08:00",
+      "used_by": [
+        "中远海能_600026_基本面分析_20260712.md",
+        "中远海能_600026_基本面分析_20260712_144144.md"
+      ],
+      "status": "已归档"
+    }
+  ]
+}

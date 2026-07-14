@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-15T01:15:30+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260428-410c52fa",
+      "title": "2026 年一季报，2026-04-28",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260428",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-28/1225220140.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260428_2026Q1_第一季度报告_1225220140.pdf",
+      "sha256": "410c52fa97fa58714cd295a1db10b12ca6f02fe701ab5f4aad0dc654130456af",
+      "bytes": 211190,
+      "pages": 11,
+      "retrieved_at": "2026-07-15T01:06:51+08:00",
+      "used_by": [
+        "新宙邦_300037_基本面分析_20260709.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260324-869370f7",
+      "title": "2025 年年度报告，2026-03-24",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260324",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-03-24/1225026296.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260324_2025A_年度报告_1225026296.pdf",
+      "sha256": "869370f748df99731c01040af0d0bebfc85e1dd82d2b42377f70888fe529b3ae",
+      "bytes": 5370502,
+      "pages": 219,
+      "retrieved_at": "2026-07-15T01:06:53+08:00",
+      "used_by": [
+        "新宙邦_300037_基本面分析_20260709.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20240401-2a7754ac",
+      "title": "2023 年年度报告",
+      "document_type": "年度报告",
+      "period": "2023A",
+      "published_date": "20240401",
+      "official_url": "https://stockn.xueqiu.com/SZ300037/20240401747398.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2024/20240401_2023A_年度报告_20240401747398.pdf",
+      "sha256": "2a7754ac59c06e0195994f013ec22e88830e75fe2b46f26b7c4afaf5c9a86d77",
+      "bytes": 3895614,
+      "pages": 236,
+      "retrieved_at": "2026-07-15T01:06:54+08:00",
+      "used_by": [
+        "新宙邦_300037_基本面分析_20260709.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260608-c104c053",
+      "title": "关于签订长期合作协议的公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260608",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-06-08/1225356381.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260608_期间待核验_正式披露_1225356381.pdf",
+      "sha256": "c104c053b98ce5568b5973ee4aed969be3777447dd192370f77d555dea50b99a",
+      "bytes": 173407,
+      "pages": 5,
+      "retrieved_at": "2026-07-15T01:06:54+08:00",
+      "used_by": [
+        "新宙邦_300037_基本面分析_20260709.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260430-4751c4e9",
+      "title": "2026Q1 投资者关系活动记录",
+      "document_type": "正式披露",
+      "period": "2026Q1",
+      "published_date": "20260430",
+      "official_url": "https://pdf.dfcfw.com/pdf/H2_AN202604301821834033_1.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260430_2026Q1_正式披露_H2_AN202604301821834033_1.pdf",
+      "sha256": "4751c4e96baaae162bfe29b3027822e60e0420c92970f76067831699da265bd8",
+      "bytes": 253959,
+      "pages": 7,
+      "retrieved_at": "2026-07-15T01:06:55+08:00",
+      "used_by": [
+        "新宙邦_300037_基本面分析_20260709.md"
+      ],
+      "status": "已归档"
+    }
+  ]
+}

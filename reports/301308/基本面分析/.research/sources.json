@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-15T01:15:31+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260703-6dc073bf",
+      "title": "2026 年半年度业绩预告",
+      "document_type": "业绩预告",
+      "period": "2026H1",
+      "published_date": "20260703",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-07-03/1225409631.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260703_2026H1_业绩预告_1225409631.pdf",
+      "sha256": "6dc073bfd5988101985cd221fb0aef879eaf502aabc94c41ff4860067e3f72ee",
+      "bytes": 104688,
+      "pages": 2,
+      "retrieved_at": "2026-07-15T01:07:23+08:00",
+      "used_by": [
+        "江波龙_301308_基本面分析_20260704.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260428-6f792b52",
+      "title": "2026 年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260428",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-28/1225214140.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260428_2026Q1_第一季度报告_1225214140.pdf",
+      "sha256": "6f792b523513ad1caf95ee784c024b764519a6e5de6ff53055217d629d6e240f",
+      "bytes": 596264,
+      "pages": 13,
+      "retrieved_at": "2026-07-15T01:07:23+08:00",
+      "used_by": [
+        "江波龙_301308_基本面分析_20260704.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20251127-b9aea908",
+      "title": "投资者关系活动记录表",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20251127",
+      "official_url": "https://pdf.dfcfw.com/pdf/H2_AN202511271789419120_1.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20251127_期间待核验_正式披露_H2_AN202511271789419120_1.pdf",
+      "sha256": "b9aea90826055910aefee19d6a8ddfbaa60cda1f6c49455c804c967e9e12bc66",
+      "bytes": 114712,
+      "pages": 3,
+      "retrieved_at": "2026-07-15T01:07:24+08:00",
+      "used_by": [
+        "江波龙_301308_基本面分析_20260704.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260428-d602789b",
+      "title": "巨潮资讯 2025 年年度报告摘要",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260428",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-28/1225214127.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260428_2025A_年度报告_1225214127.pdf",
+      "sha256": "d602789bcb242c821c33f5bad08f670e9d3fee0df48a563e69b32cd845a841d6",
+      "bytes": 561023,
+      "pages": 13,
+      "retrieved_at": "2026-07-15T01:07:24+08:00",
+      "used_by": [
+        "江波龙_301308_基本面分析_20260704.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260526-25ec59ea",
+      "title": "2025 年度、2026 年第一次中期权益分派实施公告",
+      "document_type": "正式披露",
+      "period": "2025",
+      "published_date": "20260526",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-05-26/1225331662.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260526_2025_正式披露_1225331662.pdf",
+      "sha256": "25ec59eab647f69b51f34936fef2a23f937f5d86c081f4b9d25e983a4f8c8a40",
+      "bytes": 131415,
+      "pages": 5,
+      "retrieved_at": "2026-07-15T01:07:25+08:00",
+      "used_by": [
+        "江波龙_301308_基本面分析_20260704.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260529-409d03cb",
+      "title": "港交所 H 股申请版本",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260529",
+      "official_url": "https://www1.hkexnews.hk/app/sehk/2026/108594/documents/sehk26052902006_c.pdf?wm=2284_1116%3Fpt",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260529_期间待核验_正式披露_sehk26052902006_c.pdf",
+      "sha256": "409d03cb5bdf08c86ce6216f11c7e9b4bb6cb133d4c85cb7a7e8d6ea6e87bc44",
+      "bytes": 5083288,
+      "pages": 482,
+      "retrieved_at": "2026-07-15T01:07:27+08:00",
+      "used_by": [
+        "江波龙_301308_基本面分析_20260704.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260428-5bc47c6f",
+      "title": "2026 年度担保额度预计公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260428",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-28/1225214145.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260428_2026_正式披露_1225214145.pdf",
+      "sha256": "5bc47c6fa867f5f7529a1e61d97a126d8783ed33000508c446d47811b338faf6",
+      "bytes": 255918,
+      "pages": 22,
+      "retrieved_at": "2026-07-15T01:07:27+08:00",
+      "used_by": [
+        "江波龙_301308_基本面分析_20260704.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260626-3c662a93",
+      "title": "董事股份减持计划实施完毕公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260626",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-06-26/1225392391.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260626_期间待核验_正式披露_1225392391.pdf",
+      "sha256": "3c662a9366c029e305b2e3e3cab00e44907ec767862583c2531b2ef8bb6153db",
+      "bytes": 127148,
+      "pages": 3,
+      "retrieved_at": "2026-07-15T01:07:27+08:00",
+      "used_by": [
+        "江波龙_301308_基本面分析_20260704.md"
+      ],
+      "status": "已归档"
+    }
+  ]
+}

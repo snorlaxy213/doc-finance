@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>招商轮船(601872.SH)基本面分析</title>
+<style>
+:root{
+  --ink:#1a2433;
+  --ink-soft:#46546a;
+  --line:#d8dee7;
+  --line-soft:#eef1f5;
+  --bg:#ffffff;
+  --brand:#1f3a5f;
+  --brand-2:#3b5b85;
+  --brand-light:#eaf0f8;
+  --accent:#8a6d3b;
+  --up:#b73333;
+  --down:#2f7a52;
+  --warn:#a06a1f;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Microsoft YaHei","Source Han Sans SC",system-ui,-apple-system,sans-serif;
+  color:var(--ink);
+  background:#fff;
+  line-height:1.7;
+  font-size:14.5px;
+  font-variant-numeric:tabular-nums;
+  -webkit-font-smoothing:antialiased;
+}
+.page{max-width:1600px;margin:0 auto;padding:0 32px;}
+.masthead{
+  display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px;
+  border-bottom:2px solid var(--brand);padding:24px 0 18px;
+}
+.masthead .m-left{min-width:280px;}
+.masthead .kode{font-size:12px;letter-spacing:.12em;color:var(--ink-soft);}
+.masthead h1{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC","Times New Roman",serif;
+  font-size:30px;font-weight:700;margin:6px 0 4px;color:var(--brand);letter-spacing:.5px;
+}
+.masthead .sub{font-size:13px;color:var(--ink-soft);}
+.masthead .meta{font-size:12.5px;color:var(--ink-soft);margin-top:12px;}
+.masthead .meta b{color:var(--ink);font-weight:600;}
+.masthead .m-stats{display:flex;gap:34px;flex-wrap:wrap;}
+.masthead .m-stats .ms-v{font-size:25px;font-weight:700;color:var(--brand);line-height:1;font-variant-numeric:tabular-nums;}
+.masthead .m-stats .ms-v span{font-size:13px;font-weight:500;color:var(--ink-soft);margin-left:2px;}
+.masthead .m-stats .ms-l{font-size:11.5px;color:var(--ink-soft);margin-top:5px;letter-spacing:.02em;}
+.verdict{
+  margin:16px 0 4px;border:1px solid var(--line);border-left:4px solid var(--brand);
+  background:#fbfcfe;border-radius:4px;padding:16px 20px;
+}
+.verdict-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-bottom:14px;}
+.verdict-head h2{margin:0;font-size:14px;letter-spacing:.1em;color:var(--brand);font-weight:700;}
+.verdict-headline{
+  margin:-2px 0 14px;padding:10px 12px;border:1px solid #dfe7f1;border-radius:4px;
+  background:#fff;color:var(--ink);font-size:15px;font-weight:600;line-height:1.7;
+}
+.verdict-headline .label{display:block;margin-bottom:2px;color:var(--brand);font-size:11px;font-weight:700;letter-spacing:.1em;}
+.badges{display:flex;flex-direction:row;flex-wrap:wrap;gap:8px;margin:0;}
+.badge{
+  display:inline-flex;align-items:center;gap:6px;font-size:12.5px;
+  padding:5px 11px;border-radius:999px;font-weight:600;line-height:1.4;
+}
+.badge .k{font-weight:500;opacity:.85;}
+.badge.fund{background:#fdecec;color:#9a2c2c;}
+.badge.qual{background:#eef3f8;color:#1f3a5f;}
+.badge.valu{background:#fdf3e3;color:#8a5a16;}
+.badge.fraud{background:#eef7f1;color:#2f6a48;}
+.verdict-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 40px;}
+.verdict-grid .v-title{font-size:12.5px;font-weight:700;letter-spacing:.04em;margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid var(--line);}
+.verdict-grid .v-title::before{content:"";display:inline-block;width:3px;height:12px;margin-right:7px;vertical-align:-1px;border-radius:2px;}
+.verdict-grid .v-up .v-title{color:var(--brand);}
+.verdict-grid .v-up .v-title::before{background:var(--brand);}
+.verdict-grid .v-risk .v-title{color:var(--warn);}
+.verdict-grid .v-risk .v-title::before{background:var(--warn);}
+.verdict-grid ul{margin:0;padding-left:18px;}
+.verdict-grid li{font-size:13.5px;margin:6px 0;line-height:1.65;}
+.note{
+  font-size:12px;color:var(--ink-soft);background:var(--line-soft);
+  padding:3px 8px;border-radius:3px;display:inline-block;
+}
+.verdict .note{display:block;margin-top:14px;}
+.kpis{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:1px;margin:16px 0 4px;
+  background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden;
+}
+.kpi{background:#fff;padding:13px 15px;min-width:0;}
+.kpi .kl{font-size:11.5px;color:var(--ink-soft);line-height:1.3;min-height:30px;}
+.kpi .kv{font-size:20px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;margin-top:5px;word-break:break-word;}
+.kpi .kv.up{color:var(--up);}
+.kpi .kv.down{color:var(--down);}
+.kpi .ks{font-size:11px;color:var(--ink-soft);margin-top:3px;font-variant-numeric:tabular-nums;}
+.forecast-panel{
+  margin:16px 0 6px;padding:18px 20px;border:1px solid #d8e2ef;border-left:4px solid var(--brand);
+  border-radius:4px;background:linear-gradient(135deg,#f7faff 0%,#fff 68%);
+}
+.forecast-panel.forecast-empty{padding:14px 18px;background:#fbfcfe;border-left-color:#a8b5c4;}
+.forecast-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;flex-wrap:wrap;}
+.forecast-kicker{display:block;font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--brand);margin-bottom:5px;}
+.forecast-head h2{margin:0;font-size:18px;line-height:1.35;color:var(--ink);}
+.forecast-tags{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end;}
+.forecast-tag{display:inline-flex;padding:4px 9px;border-radius:999px;background:#eaf1f8;color:#294d73;font-size:11px;font-weight:600;}
+.forecast-tag.warn{background:#fff0dc;color:#8a5615;}
+.forecast-tag.neutral{background:#edf0f3;color:#5e6873;}
+.forecast-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px;}
+.forecast-card{background:#fff;border:1px solid #e0e7ef;border-radius:4px;padding:12px 14px;min-width:0;}
+.forecast-label{font-size:11px;color:var(--ink-soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.forecast-value{font-size:20px;font-weight:700;color:var(--brand);line-height:1.3;margin-top:4px;font-variant-numeric:tabular-nums;}
+.forecast-change{font-size:11.5px;color:var(--ink-soft);margin-top:4px;}
+.forecast-note{margin:11px 0 0!important;font-size:11px!important;color:var(--ink-soft)!important;}
+.layout{
+  display:grid;grid-template-columns:208px minmax(0,1fr);gap:36px;align-items:start;
+  padding:14px 0 0;
+}
+.sidebar{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow-y:auto;padding:0 8px 0 0;}
+.sidebar::-webkit-scrollbar{width:6px;}
+.sidebar::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px;}
+.toc{position:static;background:transparent;border:none;margin:12px 0 16px;padding:0;}
+.toc .scroll{overflow:visible;white-space:normal;display:flex;flex-direction:column;gap:2px;}
+.toc a{
+  display:flex;align-items:center;gap:9px;
+  font-size:14px;line-height:1.25;color:var(--ink-soft);text-decoration:none;
+  padding:6px 8px;border-radius:5px;margin:0;border:1px solid transparent;
+}
+.toc a .toc-num{
+  flex:0 0 auto;font-family:"Times New Roman",serif;font-size:12px;font-weight:600;
+  color:var(--ink-soft);background:var(--line-soft);
+  width:22px;height:22px;border-radius:4px;font-variant-numeric:tabular-nums;
+  display:inline-flex;align-items:center;justify-content:center;
+}
+.toc a:hover{background:var(--brand-light);color:var(--brand);}
+.toc a:hover .toc-num{background:#fff;color:var(--brand);}
+.toc a.active{background:var(--brand);color:#fff;font-weight:600;}
+.toc a.active .toc-num{background:rgba(255,255,255,.22);color:#fff;}
+.main{min-width:0;}
+section{padding:16px 0 8px;border-top:1px solid var(--line-soft);scroll-margin-top:64px;}
+section:first-of-type{border-top:none;padding-top:6px;}
+h2.sec{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",serif;
+  font-size:19px;color:var(--brand);margin:6px 0 12px;font-weight:700;
+  display:flex;align-items:baseline;gap:10px;
+}
+h2.sec .num{
+  font-family:"Times New Roman",serif;font-size:14px;color:#fff;background:var(--brand);
+  padding:2px 9px;border-radius:3px;letter-spacing:.05em;font-weight:600;flex:0 0 auto;
+}
+h3.sub{font-size:14.5px;color:var(--ink);margin:16px 0 6px;font-weight:700;}
+p{margin:8px 0;}
+ul,ol{margin:8px 0;padding-left:22px;}
+li{margin:4px 0;}
+strong{color:var(--ink);}
+.tbl-scroll{overflow-x:auto;margin:10px 0;border:1px solid var(--line);border-radius:4px;}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums;}
+thead th{
+  background:#f3f6fa;color:var(--brand);font-weight:700;text-align:right;
+  padding:10px 12px;border-bottom:1.5px solid var(--brand);white-space:nowrap;
+  font-size:12.5px;letter-spacing:.02em;
+}
+thead th[scope=col]:first-child{text-align:left;}
+tbody td{padding:9px 12px;border-bottom:1px solid var(--line-soft);text-align:right;white-space:normal;word-break:break-word;}
+tbody th[scope=row]{
+  text-align:left;color:var(--ink);font-weight:600;
+  padding:9px 12px;border-bottom:1px solid var(--line-soft);white-space:nowrap;font-size:13px;background:#fafbfd;
+}
+tbody tr:nth-child(even) td{background:#fafbfd;}
+tbody tr:hover td{background:var(--brand-light);}
+.up{color:var(--up);}
+.down{color:var(--down);}
+.muted{color:var(--ink-soft);}
+a{color:var(--brand-2);text-decoration:underline;text-underline-offset:2px;word-break:break-all;}
+a:hover{color:var(--brand);}
+.note-copy{
+  margin:20px 0;border:1px solid var(--line);border-left:4px solid var(--accent);
+  background:#fbfcfe;border-radius:4px;padding:14px 16px;
+}
+.note-copy h2{margin:0 0 10px;font-size:13px;letter-spacing:.1em;color:var(--brand);font-weight:700;}
+pre{
+  margin:10px 0;padding:12px 14px;background:#f7f9fc;border:1px solid var(--line-soft);
+  border-radius:4px;overflow:auto;color:var(--ink);font-size:12.5px;line-height:1.6;
+}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;}
+footer{
+  margin-top:22px;border-top:2px solid var(--brand);padding:14px 0 30px;
+  font-size:11.5px;color:var(--ink-soft);line-height:1.7;font-variant-numeric:tabular-nums;
+}
+footer .disclaimer{background:var(--line-soft);padding:8px 12px;border-radius:3px;margin-bottom:8px;}
+@media (max-width:1100px){
+  .layout{grid-template-columns:1fr;gap:0;}
+  .sidebar{position:static;max-height:none;overflow:visible;padding:0;}
+  .toc{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);
+    border-bottom:1px solid var(--line);margin:0 -32px 16px;padding:10px 32px;}
+  .toc .scroll{overflow-x:auto;white-space:nowrap;flex-direction:row;}
+  .toc a{display:inline-flex;white-space:nowrap;border-left:none;border:1px solid transparent;padding:3px 9px;margin:2px;}
+  .toc a.active{border-left:none;background:var(--brand);color:#fff;}
+}
+@media (max-width:760px){
+  .verdict-grid{grid-template-columns:1fr;}
+  .kpis{grid-template-columns:repeat(3,1fr);}
+  .forecast-grid{grid-template-columns:1fr;}
+  .page{padding:0 18px;}
+  .masthead .m-stats{gap:22px;}
+}
+@media (max-width:460px){.kpis{grid-template-columns:repeat(2,1fr);}}
+@media print{
+  body{background:#fff;font-size:10.5px;}
+  .page{max-width:none;padding:0;}
+  .layout{grid-template-columns:1fr;}
+  .sidebar{position:static;max-height:none;overflow:visible;}
+  .toc{position:static;border:none;padding:0;margin:0 0 8px;}
+  .toc .scroll{overflow:visible;display:block;}
+  .toc a{font-size:10px;padding:1px 5px;display:inline-flex;}
+  .toc a.active{background:transparent;color:var(--ink);}
+  section{break-inside:avoid;padding-top:10px;}
+  table{font-size:9.5px;}
+  thead{display:table-header-group;}
+  tbody tr{break-inside:avoid;}
+  .badge{border:1px solid #ccc;}
+  .note-copy,.tbl-scroll,.kpis,.verdict,.forecast-panel{break-inside:avoid;}
+  footer{break-inside:avoid;}
+  a{color:var(--ink);text-decoration:none;}
+  .kpi{border:1px solid #ccc;}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="masthead">
+    <div class="m-left">
+      <div class="kode">601872.SH · 上海证券交易所 · 基本面分析</div>
+      <h1>招商轮船 · 基本面分析</h1>
+      <div class="sub">基本面、财务质量、估值与风险初筛</div>
+      <div class="meta">数据口径 <b>行情截至 2026-07-10；公告、监管和公司信息截至 2026-07-12；最新正式财报为 2026Q1，最新财务预报为 2026H1 业绩预增公告。</b> · 生成时间 <b>2026-07-12 15:18</b></div>
+    </div>
+    <div class="m-stats">
+      <div><div class="ms-v">15.47 元</div><div class="ms-l">收盘价 · 2026-07-10，前复权日线收盘</div></div>
+<div><div class="ms-v">1,249.13 亿元</div><div class="ms-l">总市值 · 收盘价×总股本</div></div>
+<div><div class="ms-v">15.79 倍（TTM）；11.30 倍（动态）</div><div class="ms-l">PE · 2026-07-10 行情口径</div></div>
+<div><div class="ms-v">2.90 倍</div><div class="ms-l">PB · 2026-07-10 行情口径</div></div>
+    </div>
+  </header>
+
+  <section class="verdict" aria-label="结论速览">
+    <div class="verdict-head">
+      <h2>结论速览</h2>
+      <div class="badges">
+        <span class="badge fund"><span class="k">基本面</span> 强</span>
+<span class="badge qual"><span class="k">财务质量</span> 良好</span>
+<span class="badge valu"><span class="k">估值</span> 合理</span>
+<span class="badge fraud"><span class="k">造假风险初筛</span> 中</span>
+      </div>
+    </div>
+    <div class="verdict-headline"><span class="label">核心判断</span>招商轮船正处在油轮景气上行带来的强盈利兑现期，2026 年上半年扣非净利润预告中枢已超过 2025 年全年扣非净利润，但当前估值已计入相当一部分景气预期；经营现金流健康、船队与客户壁垒突出，然而 2026 年 5 月监管确认的历史会计差错使治理与报表可信度必须打折。</div>
+    <div class="verdict-grid">
+      <div class="v-col v-up">
+        <div class="v-title">核心理由</div>
+        <ul>
+<li>2026H1 归母净利润预告 66—73 亿元、扣非净利润 65.4—72.4 亿元，半年核心利润已明显超过 2025 全年，油轮和干散货盈利同步加速。</li>
+<li>2026Q1 经营现金流/归母净利润为 1.20 倍，2023—2025 年均高于 1.5 倍附近，利润现金含量较好。</li>
+<li>VLCC、VLOC、LNG、滚装和区域集运形成多船型平台，客户、船队规模、全球调度和长期 COA 构成壁垒。</li>
+<li>15.79 倍 TTM PE、2.90 倍 PB 不便宜；若 H1 预告兑现，盈利口径将快速消化估值，但周期高点利润不可线性外推。</li>
+<li>监管已确认历史收入确认、总额法及租赁核算差错，治理与历史报表可信度必须下调；这也是风险评级不能给“低”的原因。</li>
+</ul>
+      </div>
+      <div class="v-col v-risk">
+        <div class="v-title">主要风险 / 关注</div>
+        <ul>
+<li>油轮运价与地缘风险高度周期化，当前2.90倍PB已计入较高景气预期。</li>
+<li>监管已确认2021—2023年子公司收入确认、总额法及租赁核算会计差错。</li>
+</ul>
+      </div>
+    </div>
+    <p class="note">口径:市场估值为时点数据,财务指标需区分年度、半年度、季度和单季口径;所有结论以公司正式披露和已核验来源为准。</p>
+  </section>
+
+  <div class="kpis" aria-label="关键指标速览">
+    <div class="kpi"><div class="kl">2026Q1归母净利</div><div class="kv">27.63 亿元</div><div class="ks">归母净利润</div></div>
+<div class="kpi"><div class="kl">2026Q1扣非净利</div><div class="kv">27.57 亿元</div><div class="ks">扣非归母净利润</div></div>
+<div class="kpi"><div class="kl">2026Q1毛利率</div><div class="kv">41.79%</div><div class="ks">毛利率</div></div>
+<div class="kpi"><div class="kl">2026Q1经营现金流</div><div class="kv">33.14 亿元</div><div class="ks">经营现金流净额</div></div>
+<div class="kpi"><div class="kl">2026Q1应收/合同资产</div><div class="kv">42.43 亿元</div><div class="ks">应收账款/合同资产</div></div>
+<div class="kpi"><div class="kl">2026Q1存货</div><div class="kv">13.90 亿元</div><div class="ks">存货</div></div>
+  </div>
+
+  <section class="forecast-panel" aria-label="最新财务预报"><div class="forecast-head"><div><span class="forecast-kicker">最新财务预报</span><h2>2026H1</h2></div><div class="forecast-tags"><span class="forecast-tag warn">未经审计</span><span class="forecast-tag">信息可信度 高</span><span class="forecast-tag">盈利质量 强</span></div></div><div class="forecast-grid"><div class="forecast-card"><div class="forecast-label">累计归母净利润</div><div class="forecast-value">66.00—73.00 亿元</div><div class="forecast-change">累计同比 +214%—+248%</div></div>
+<div class="forecast-card"><div class="forecast-label">累计扣非净利润</div><div class="forecast-value">65.40—72.40 亿元</div><div class="forecast-change">累计同比 +244%—+281%</div></div></div><p class="forecast-note">隐含单季数据根据累计预报和已披露财报推算，并非公司直接披露；正式结果以定期报告为准。</p></section>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="toc" aria-label="目录">
+        <div class="scroll" id="toc-scroll">
+          <a href="#s1"><span class="toc-num">01</span>核心财务指标</a>
+<a href="#s2"><span class="toc-num">02</span>近两年财报趋势与业务结构</a>
+<a href="#s3"><span class="toc-num">03</span>结论摘要</a>
+<a href="#s4"><span class="toc-num">04</span>公司与行业</a>
+<a href="#s5"><span class="toc-num">05</span>订单与需求验证</a>
+<a href="#s6"><span class="toc-num">06</span>财务质量验证</a>
+<a href="#s7"><span class="toc-num">07</span>股东与机构</a>
+<a href="#s8"><span class="toc-num">08</span>估值与同行对比</a>
+<a href="#s9"><span class="toc-num">09</span>负面信息与风险排查</a>
+<a href="#s10"><span class="toc-num">10</span>财务造假风险初筛</a>
+<a href="#s11"><span class="toc-num">11</span>后续跟踪清单</a>
+<a href="#s12"><span class="toc-num">12</span>信息边界</a>
+        </div>
+      </nav>
+    </aside>
+    <main class="main">
+      <section id="s1">
+<h2 class="sec"><span class="num">01</span>核心财务指标</h2>
+<h3 class="sub">1.1 当前估值快照</h3>
+<p>行情及估值采用最近交易日公开行情口径；总股本/流通 A 股约 80.75 亿股，总市值与流通市值按 15.47 元收盘价计算。行情可在<a href="https://quote.eastmoney.com/sh601872.html" target="_blank" rel="noopener">东方财富招商轮船行情页</a>及<a href="https://www.google.com/finance/quote/601872:SHA?hl=zh" target="_blank" rel="noopener">Google Finance 招商轮船页面</a>核验。</p>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">项目</th>
+<th scope="col">最新数据</th>
+<th scope="col">数据日期/口径</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">收盘价</th>
+<td>15.47 元</td>
+<td>2026-07-10，前复权日线收盘</td>
+<td>较 6 月 24 日异常波动公告所列高位已有明显回撤，短期情绪溢价有所消化</td>
+</tr>
+<tr>
+<th scope="row">总市值</th>
+<td>1,249.13 亿元</td>
+<td>收盘价×总股本</td>
+<td>大市值航运龙头</td>
+</tr>
+<tr>
+<th scope="row">流通市值</th>
+<td>1,249.13 亿元</td>
+<td>A 股无限售流通口径</td>
+<td>公司股份基本为流通 A 股；自由流通口径会因战略股东剔除而更低</td>
+</tr>
+<tr>
+<th scope="row">PE</th>
+<td>15.79 倍（TTM）；11.30 倍（动态）</td>
+<td>2026-07-10 行情口径</td>
+<td>TTM 尚未完整反映 2026H1 盈利跃升；动态口径更低，但高度依赖周期高景气能否延续</td>
+</tr>
+<tr>
+<th scope="row">PB</th>
+<td>2.90 倍</td>
+<td>2026-07-10 行情口径</td>
+<td class="up">显著高于中远海能、招商南油，市场已给予龙头与高增长溢价</td>
+</tr>
+<tr>
+<th scope="row">PS</th>
+<td>约 4.01 倍</td>
+<td>市值÷最近四季收入约 311.38 亿元</td>
+<td>对重资产周期股不低，需由高利润率和运价中枢支撑</td>
+</tr>
+<tr>
+<th scope="row">股息率</th>
+<td>约 2.07%</td>
+<td>2025 年度每股现金分红合计 0.32 元÷15.47 元</td>
+<td>2025 年现金分红率 42.98%，但股息率并非当前估值主驱动；分红数据见<a href="https://www.cmenergyshipping.com/uploads/report/20260327.pdf" target="_blank" rel="noopener">2025 年年度报告</a></td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">1.2 最新财务预报与质量解读</h3>
+<p>公司于 <strong>2026 年 7 月 6 日</strong>发布 2026 年半年度业绩预增公告，属于本报告执行日前 30 个自然日内的正式财务预报；全部预报数据均为<strong>未经审计</strong>，正式结果以半年报为准。<a href="https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-07-06/601872_20260706_BNEG.pdf" target="_blank" rel="noopener">公司业绩预增公告</a></p>
+<h3 class="sub">1.2.1 累计业绩预报</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">本期预报区间</th>
+<th scope="col">上年同期</th>
+<th scope="col">同比变化</th>
+<th scope="col">预报中枢</th>
+<th scope="col">质量解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">预报期间</th>
+<td>2026H1</td>
+<td class="muted">不适用</td>
+<td class="muted">不适用</td>
+<td class="muted">不适用</td>
+<td>公告日 2026-07-06，未经审计</td>
+</tr>
+<tr>
+<th scope="row">预报营业收入</th>
+<td>187.00—206.00 亿元</td>
+<td>125.85 亿元</td>
+<td class="up">+48%—+63%</td>
+<td>196.50 亿元</td>
+<td>量价与油轮、干散货景气共同驱动，区间宽度约 9.7%</td>
+</tr>
+<tr>
+<th scope="row">预报归母净利润</th>
+<td>66.00—73.00 亿元</td>
+<td>21.25 亿元</td>
+<td class="up">+214%—+248%</td>
+<td>69.50 亿元</td>
+<td class="up">半年利润中枢已高于 2025 全年 60.12 亿元，盈利弹性很强</td>
+</tr>
+<tr>
+<th scope="row">预报扣非归母净利润</th>
+<td>65.40—72.40 亿元</td>
+<td>19.06 亿元</td>
+<td class="up">+244%—+281%</td>
+<td>68.90 亿元</td>
+<td>与归母净利润几乎同步，核心经营贡献占主导</td>
+</tr>
+<tr>
+<th scope="row">预报 EPS</th>
+<td class="muted">未披露</td>
+<td>0.26 元/股</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td>不以当前股本机械倒推，避免忽略回购等股本口径变化</td>
+</tr>
+<tr>
+<th scope="row">预计非经常性损益</th>
+<td>约 0.60 亿元（中枢差额）</td>
+<td>约 2.18 亿元</td>
+<td>明显减少</td>
+<td>约 0.60 亿元</td>
+<td>非经常项目约占预报归母净利润中枢 0.9%，不构成主要盈利来源</td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">1.2.2 隐含最新单季度同比与环比</h3>
+<p>下表根据累计预报减去已披露 2026Q1 数据推算，<strong>非公司直接披露</strong>；去年同期比较数据来自公司<a href="https://www.cmenergyshipping.com/uploads/report/20260327.pdf" target="_blank" rel="noopener">2025 年年度报告</a>，2026Q1 数据来自<a href="https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-25/601872_20260425_75X5.pdf" target="_blank" rel="noopener">2026 年第一季度报告</a>。</p>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">隐含 2026Q2 区间</th>
+<th scope="col">2025Q2</th>
+<th scope="col">单季同比</th>
+<th scope="col">2026Q1</th>
+<th scope="col">单季环比</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">隐含单季营业收入</th>
+<td>101.44—120.44 亿元</td>
+<td>69.89 亿元</td>
+<td class="up">+45.1%—+72.3%</td>
+<td>85.56 亿元</td>
+<td class="up">+18.6%—+40.8%</td>
+<td class="up">收入动能较一季度继续增强</td>
+</tr>
+<tr>
+<th scope="row">隐含单季归母净利润</th>
+<td>38.37—45.37 亿元</td>
+<td>12.59 亿元</td>
+<td class="up">+204.7%—+260.3%</td>
+<td>27.63 亿元</td>
+<td class="up">+38.8%—+64.2%</td>
+<td class="up">二季度利润再加速，符合油轮、散运板块环比改善表述</td>
+</tr>
+<tr>
+<th scope="row">隐含单季扣非归母净利润</th>
+<td>37.83—44.83 亿元</td>
+<td>10.53 亿元</td>
+<td class="up">+259.3%—+325.8%</td>
+<td>27.57 亿元</td>
+<td class="up">+37.2%—+62.6%</td>
+<td class="up">主业盈利增速快于归母净利润，质量较强</td>
+</tr>
+<tr>
+<th scope="row">隐含单季 EPS</th>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="muted">不适用</td>
+<td>0.34 元/股</td>
+<td class="muted">不适用</td>
+<td>股本口径未由预告直接给出，未作推算</td>
+</tr>
+</tbody></table></div>
+<p><strong>财务预报质量判断：</strong> 归母与扣非利润方向、幅度高度一致，预报中枢差额仅约 0.60 亿元，说明此次增长主要来自主业而非资产处置。公司称油轮船队二季度利润贡献环比一季度约增长 50%，干散货板块约增长 170%；隐含 Q2 扣非利润环比增长 37%—63%，与板块表述大体相容。<a href="https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-07-06/601872_20260706_BNEG.pdf" target="_blank" rel="noopener">公司业绩预增公告</a> 不足之处是预告没有披露现金流、毛利率、应收款、合同资产及资本开支，约 10% 的区间宽度也不算特别窄。</p>
+<ul>
+<li><strong>信息可信度：高</strong>（正式公告、收入和利润均给区间、扣非同步，但仍未经审计）。</li>
+<li><strong>盈利质量判断：强</strong>（核心利润占比高，隐含单季同比和环比均加速）。</li>
+</ul>
+<h3 class="sub">1.3 已披露当年期间财报</h3>
+<p>以下为 2026Q1 与 2025Q1 同比；资产负债表项目没有在 2026Q1 报告中提供 2025Q1 期末比较数，因此不做不可靠的同比拼接。数据来源：<a href="https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-25/601872_20260425_75X5.pdf" target="_blank" rel="noopener">2026 年第一季度报告</a>。</p>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">2025Q1</th>
+<th scope="col">2026Q1</th>
+<th scope="col">变化解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>55.95 亿元</td>
+<td>85.56 亿元</td>
+<td class="up">同比 +52.92%，油轮运价中枢上升、BDI 同比改善</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td>8.65 亿元</td>
+<td>27.63 亿元</td>
+<td>同比 +219.31%，利润增速远高于收入</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td>8.53 亿元</td>
+<td>27.57 亿元</td>
+<td>同比 +223.10%，与归母利润高度一致</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td>13.80 亿元</td>
+<td>33.14 亿元</td>
+<td>同比 +140.13%，现金流同步放大</td>
+</tr>
+<tr>
+<th scope="row">经营现金流/归母净利润</th>
+<td>1.59 倍</td>
+<td>1.20 倍</td>
+<td>仍高于 1，但利润增速快于现金流增速</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td>6.23 亿元</td>
+<td class="down">-5.52 亿元</td>
+<td>造船及项目投资加速，资本开支显著放大</td>
+</tr>
+<tr>
+<th scope="row">EPS</th>
+<td>0.11 元/股</td>
+<td>0.34 元/股</td>
+<td>同比 +209.09%</td>
+</tr>
+<tr>
+<th scope="row">ROE</th>
+<td>2.14%</td>
+<td>6.28%</td>
+<td>同比增加 4.14 个百分点</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>24.60%</td>
+<td>41.79%</td>
+<td>油轮业务高利润弹性使毛利率跃升</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td>15.25%</td>
+<td>32.22%</td>
+<td>核心盈利效率翻倍以上</td>
+</tr>
+<tr>
+<th scope="row">资本开支</th>
+<td>7.57 亿元</td>
+<td>38.66 亿元</td>
+<td class="up">同比约 +411%，未来运力增长与短期自由现金流承压并存</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>未提供可比期末数</td>
+<td>13.90 亿元</td>
+<td class="up">较 2025 年末 13.11 亿元增长约 6.0%，温和</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td>未提供可比期末数</td>
+<td>42.43 亿元</td>
+<td class="up">较 2025 年末 32.87 亿元增长约 29.1%，需继续跟踪回款和收入确认</td>
+</tr>
+<tr>
+<th scope="row">总资产</th>
+<td>未提供可比期末数</td>
+<td>852.64 亿元</td>
+<td class="up">较 2025 年末增长 3.91%</td>
+</tr>
+<tr>
+<th scope="row">归母净资产</th>
+<td>未提供可比期末数</td>
+<td>450.61 亿元</td>
+<td class="up">较 2025 年末增长 4.78%</td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">1.4 最近三年年度财报</h3>
+<p>2023—2025 年财务数据来自公司最新<a href="https://www.cmenergyshipping.com/uploads/report/20260327.pdf" target="_blank" rel="noopener">2025 年年度报告</a>。自由现金流按“经营现金流－购建固定资产、无形资产和其他长期资产支付的现金”计算。<strong>特别提示：监管在 2026 年 5 月认定 2023 年报财务信息存在会计差错，尚需关注后续更正影响。</strong></p>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">2023A</th>
+<th scope="col">2024A</th>
+<th scope="col">2025A</th>
+<th scope="col">变化解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>258.81 亿元</td>
+<td>257.99 亿元</td>
+<td>281.77 亿元</td>
+<td>2024 基本持平，2025 油轮、散货轻资产运营和集运共同拉动 +9.22%</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td>48.37 亿元</td>
+<td>51.07 亿元</td>
+<td>60.12 亿元</td>
+<td class="up">三年持续增长，2025 同比 +17.71%</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td>46.40 亿元</td>
+<td>50.15 亿元</td>
+<td>50.24 亿元</td>
+<td>2025 仅增 0.18%，归母利润增量含较多非经常收益</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td>89.17 亿元</td>
+<td>84.76 亿元</td>
+<td>90.55 亿元</td>
+<td>始终显著高于归母净利润，现金含量好</td>
+</tr>
+<tr>
+<th scope="row">经营现金流/归母净利润</th>
+<td>1.84 倍</td>
+<td>1.66 倍</td>
+<td>1.51 倍</td>
+<td class="down">连续下降但仍强于 1，需观察高景气期是否重新回升</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td>44.29 亿元</td>
+<td>9.26 亿元</td>
+<td>12.58 亿元</td>
+<td>资本开支上台阶后显著收窄，仍保持正值</td>
+</tr>
+<tr>
+<th scope="row">EPS</th>
+<td>0.60 元/股</td>
+<td>0.63 元/股</td>
+<td>0.74 元/股</td>
+<td>与归母利润趋势一致</td>
+</tr>
+<tr>
+<th scope="row">ROE</th>
+<td>13.25%</td>
+<td>13.21%</td>
+<td>14.55%</td>
+<td class="up">资本回报改善，优于中远海能 2025 年的 10.42%</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>25.91%</td>
+<td>28.42%</td>
+<td>26.47%</td>
+<td class="down">2025 散运、集运和滚装毛利率下降抵消油运改善</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td>17.93%</td>
+<td>19.44%</td>
+<td>17.83%</td>
+<td class="up">2025 核心利润率回落，显示全年口径并未提前反映 2026 的油运强景气</td>
+</tr>
+<tr>
+<th scope="row">资本开支</th>
+<td>44.89 亿元</td>
+<td>75.50 亿元</td>
+<td>77.97 亿元</td>
+<td>连续高投入，船队更新和 LNG 项目是主因</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>13.13 亿元</td>
+<td>14.18 亿元</td>
+<td>13.11 亿元</td>
+<td>总体稳定，无异常囤积特征</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td>26.60 亿元</td>
+<td>23.86 亿元</td>
+<td>32.87 亿元</td>
+<td class="down">2025 同比 +37.8%，快于收入，需重点跟踪</td>
+</tr>
+<tr>
+<th scope="row">总资产</th>
+<td>623.95 亿元</td>
+<td>706.19 亿元</td>
+<td>820.55 亿元</td>
+<td class="up">船队扩张推动重资产规模快速增长</td>
+</tr>
+<tr>
+<th scope="row">归母净资产</th>
+<td>368.91 亿元</td>
+<td>400.44 亿元</td>
+<td>430.06 亿元</td>
+<td>与盈利、分红和回购共同作用相匹配</td>
+</tr>
+</tbody></table></div>
+<p><strong>核心指标综合判断：</strong> 2023—2025 年利润和现金流总体匹配，销售商品、提供劳务收到的现金/营业收入分别约 99.7%、99.4%、96.8%，没有典型“利润增长但不回款”的组合。2025 年的弱点是扣非利润基本不增、应收账款与合同资产合计增长 37.8%、自由现金流因高资本开支而较 2023 年明显下降；优点是经营现金流/净利润仍达 1.51 倍、商誉仅 0.43 亿元。真正的盈利跃迁出现在 2026Q1—H1，而非 2025 年报，因此后续要用半年报现金流和应收项目验证预告质量。</p>
+</section>
+<section id="s2">
+<h2 class="sec"><span class="num">02</span>近两年财报趋势与业务结构</h2>
+<h3 class="sub">2.1 近两年财报趋势</h3>
+<p>数据与分部口径来自公司<a href="https://www.cmenergyshipping.com/uploads/report/20260327.pdf" target="_blank" rel="noopener">2025 年年度报告</a>。</p>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">项目</th>
+<th scope="col">2024A</th>
+<th scope="col">2025A</th>
+<th scope="col">变化</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>257.99 亿元</td>
+<td>281.77 亿元</td>
+<td class="up">+9.22%</td>
+<td>油运、散货租入运力和集运航线扩张共同拉动</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td>51.07 亿元</td>
+<td>60.12 亿元</td>
+<td class="up">+17.71%</td>
+<td class="up">油轮利润同比增长 59.1%是主要贡献</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td>50.15 亿元</td>
+<td>50.24 亿元</td>
+<td class="up">+0.18%</td>
+<td>2025 归母利润增量并非全部来自持续经营，资产处置等贡献明显</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>28.42%</td>
+<td>26.47%</td>
+<td class="down">-1.95pct</td>
+<td class="down">油运改善未能完全抵消散货、集运、滚装毛利率下滑</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td>19.44%</td>
+<td>17.83%</td>
+<td class="down">-1.61pct</td>
+<td>2025 核心盈利率承压</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td>84.76 亿元</td>
+<td>90.55 亿元</td>
+<td class="up">+6.83%</td>
+<td class="up">回款仍强，低于收入增速但不构成明显背离</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td>9.26 亿元</td>
+<td>12.58 亿元</td>
+<td class="up">+35.9%</td>
+<td class="up">虽改善，但相对经营现金流仍受资本开支压制</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>14.18 亿元</td>
+<td>13.11 亿元</td>
+<td class="down">-7.54%</td>
+<td class="up">不存在库存随收入异常上升</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td>23.86 亿元</td>
+<td>32.87 亿元</td>
+<td class="up">+37.8%</td>
+<td>需结合 2026H1 收款、航次履约进度和监管整改继续核验</td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">2.2 分业务情况</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">业务</th>
+<th scope="col">2024A 收入</th>
+<th scope="col">2024A 毛利率</th>
+<th scope="col">2025A 收入</th>
+<th scope="col">2025A 毛利率</th>
+<th scope="col">变化</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">油轮运输</th>
+<td>92.06 亿元</td>
+<td>34.97%</td>
+<td>102.89 亿元</td>
+<td>39.91%</td>
+<td>收入 +11.77%，毛利率 +4.94pct；2025 净利润 41.91 亿元，同比 +59.06%</td>
+</tr>
+<tr>
+<th scope="row">干散货运输</th>
+<td>79.40 亿元</td>
+<td>23.50%</td>
+<td>87.69 亿元</td>
+<td>16.74%</td>
+<td class="up">收入 +10.44%，但租入船和成本上升使毛利率 -6.76pct</td>
+</tr>
+<tr>
+<th scope="row">集装箱运输</th>
+<td>54.34 亿元</td>
+<td>29.94%</td>
+<td>61.49 亿元</td>
+<td>22.42%</td>
+<td class="up">航线扩张带来收入，但成本增长更快，毛利率 -7.52pct</td>
+</tr>
+<tr>
+<th scope="row">滚装运输</th>
+<td>18.37 亿元</td>
+<td>30.10%</td>
+<td>16.90 亿元</td>
+<td>24.68%</td>
+<td>新船集中交付、市场运价回落，收入和利润承压</td>
+</tr>
+<tr>
+<th scope="row">LNG 运输（并表口径较小）</th>
+<td>0.30 亿元</td>
+<td>约 46.7%</td>
+<td>0.55 亿元</td>
+<td>28.87%</td>
+<td>大量收益通过合营/联营投资体现，单看并表收入会低估业务规模</td>
+</tr>
+</tbody></table></div>
+<p><strong>业务结构判断：</strong> 油轮是当前绝对利润发动机，2026Q1 油轮分部收入 40.66 亿元、净利润 24.86 亿元，同比分别增长 90.27%和 410.47%；干散货净利润同比增长 172.33%，成为第二增长源，而集装箱净利润同比下降 29.01%。<a href="https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-25/601872_20260425_75X5.pdf" target="_blank" rel="noopener">2026 年第一季度报告</a> LNG 的长期运输协议和在建船队提供中长期稳定增长，但短期 LNG 即期市场运力宽松。公司业务多元化降低单一船型风险，却不能改变现阶段利润高度依赖油轮运价的事实。</p>
+</section>
+<section id="s3">
+<h2 class="sec"><span class="num">03</span>结论摘要</h2>
+<ul>
+<li><strong>基本面判断：强</strong></li>
+<li><strong>财务质量：良好</strong></li>
+<li><strong>估值状态：合理</strong></li>
+<li><strong>财务造假风险初筛：中</strong></li>
+<li><strong>核心理由：</strong></li>
+<ol>
+<li>2026H1 归母净利润预告 66—73 亿元、扣非净利润 65.4—72.4 亿元，半年核心利润已明显超过 2025 全年，油轮和干散货盈利同步加速。</li>
+<li>2026Q1 经营现金流/归母净利润为 1.20 倍，2023—2025 年均高于 1.5 倍附近，利润现金含量较好。</li>
+<li>VLCC、VLOC、LNG、滚装和区域集运形成多船型平台，客户、船队规模、全球调度和长期 COA 构成壁垒。</li>
+<li>15.79 倍 TTM PE、2.90 倍 PB 不便宜；若 H1 预告兑现，盈利口径将快速消化估值，但周期高点利润不可线性外推。</li>
+<li>监管已确认历史收入确认、总额法及租赁核算差错，治理与历史报表可信度必须下调；这也是风险评级不能给“低”的原因。</li>
+</ol>
+</ul>
+</section>
+<section id="s4">
+<h2 class="sec"><span class="num">04</span>公司与行业</h2>
+<ul>
+<li><strong>主营业务：</strong> 油品运输、气体运输、干散货运输、滚装运输、集装箱运输，并延伸数智化、船员服务与国际营销；公司官网称运营管理船舶逾 360 艘、总运力超 5,000 万载重吨。<a href="https://www.cmenergyshipping.com/page.php?p=profile" target="_blank" rel="noopener">公司简介</a></li>
+<li><strong>主要产品：</strong> VLCC/Aframax 油轮，VLOC/好望角/巴拿马/灵便型散货船，LNG 船，汽车滚装船和亚洲区域集装箱班轮。<a href="https://www.cmenergyshipping.com/page.php?p=busoverview" target="_blank" rel="noopener">业务概览</a></li>
+<li><strong>市场占有率：</strong> 公司未披露统一口径的精确市场份额；官方表述为 VLCC、VLOC 船队规模全球领先，滚装国内领先，集装箱服务网络覆盖亚太主要港口。<a href="https://www.cmenergyshipping.com/page.php?p=profile" target="_blank" rel="noopener">公司简介</a></li>
+<li><strong>行业景气度：</strong> 2026Q1 油轮和干散货景气显著上行；滚装和集运仍受新船集中交付影响，LNG 即期运输供给偏宽松。公司称 Q1 BDI 均值 1,955 点，同比上升 75%，且油轮运价在地缘扰动下大幅波动。<a href="https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-25/601872_20260425_75X5.pdf" target="_blank" rel="noopener">2026 年第一季度报告</a></li>
+<li><strong>核心竞争力：</strong> 大型油轮与散货船队规模、全球运力调度、国际大石油公司资质与客户网络、VLOC 长期 COA、央企融资与船队更新能力。</li>
+<li><strong>主要依赖：</strong> <strong>油轮周期依赖较明显</strong>。2025 年油轮与干散货合计贡献约 67.6%主营分部收入，2026Q1 油轮单板块净利润已接近合并归母净利润九成，油轮运价回落会直接压缩利润弹性。</li>
+</ul>
+</section>
+<section id="s5">
+<h2 class="sec"><span class="num">05</span>订单与需求验证</h2>
+<p>招商轮船不是典型项目制公司，不能把“新造船投资”当作客户订单或未来收入。需求验证应以长期运输协议、已锁定营运天、货运量、TCE、船舶交付后的合同安排及经营现金流为主。</p>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">日期</th>
+<th scope="col">来源与链接</th>
+<th scope="col">项目/订单名称</th>
+<th scope="col">客户/采购方</th>
+<th scope="col">产品/服务</th>
+<th scope="col">金额</th>
+<th scope="col">状态</th>
+<th scope="col">履约周期</th>
+<th scope="col">是否公司正式公告</th>
+<th scope="col">对收入影响</th>
+<th scope="col">可信度</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">2026-07-11</th>
+<td><a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12441516&amp;stockid=601872" target="_blank" rel="noopener">新建船舶关联交易公告</a></td>
+<td>1 艘 21 万吨纽卡斯尔型散货船+4 艘 1,800TEU 集装箱船</td>
+<td>招商船舶下属船厂</td>
+<td>运力投资</td>
+<td>不超过 15.10 亿元</td>
+<td>董事会通过，待股东会及合同签署</td>
+<td>预计 2028 年交付</td>
+<td>是</td>
+<td>属资本开支，不是收入订单；交付后才形成运力</td>
+<td>高</td>
+</tr>
+<tr>
+<th scope="row">2026-07-02</th>
+<td><a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12425119&amp;stockid=601872" target="_blank" rel="noopener">重吊多用途船交付公告</a></td>
+<td>“明美”轮交付</td>
+<td class="muted">不适用</td>
+<td>6.2 万吨重吊多用途船</td>
+<td class="muted">未披露</td>
+<td>已交付</td>
+<td>已投入后续运营</td>
+<td>是</td>
+<td class="up">提升干散货细分承运能力，金额影响未披露</td>
+<td>高</td>
+</tr>
+<tr>
+<th scope="row">2026-07-01</th>
+<td><a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12421640&amp;stockid=601872" target="_blank" rel="noopener">LNG 新船交付公告</a></td>
+<td>17.5 万方 LNG 船“海创”轮</td>
+<td>中化石油航运（新加坡）</td>
+<td>LNG 长期运输</td>
+<td class="muted">未披露</td>
+<td>已交付并执行长期协议</td>
+<td>长期，具体年限未在本次公告重述</td>
+<td>是</td>
+<td>提供较稳定的长期租约收益</td>
+<td>高</td>
+</tr>
+<tr>
+<th scope="row">2026-03-31</th>
+<td><a href="https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-25/601872_20260425_75X5.pdf" target="_blank" rel="noopener">2026 年第一季度报告</a></td>
+<td>船队手持订单</td>
+<td class="muted">不适用</td>
+<td>油轮、LNG、散货、滚装等</td>
+<td class="muted">未披露</td>
+<td>在建/待交付</td>
+<td>分年度交付</td>
+<td>是</td>
+<td>Q1 末订单船舶 68 艘、约 1,043.25 万载重吨，是未来运力而非直接收入</td>
+<td>高</td>
+</tr>
+<tr>
+<th scope="row">长期存续</th>
+<td><a href="https://www.cmenergyshipping.com/uploads/report/20260327.pdf" target="_blank" rel="noopener">2025 年年度报告</a></td>
+<td>VLOC 长期 COA</td>
+<td>淡水河谷等</td>
+<td>铁矿石长期运输</td>
+<td class="muted">未披露</td>
+<td>已签、持续履约</td>
+<td>长周期</td>
+<td>是</td>
+<td>VLOC 船队“压舱石”，降低散运现货波动</td>
+<td>高</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li><strong>已披露订单/合同：</strong> 2025 年末手持订单 64 艘、788.02 万载重吨；2026Q1 末增至 68 艘、1,043.25 万载重吨。2026 年 7 月两艘新船交付后订单结构继续变化，7 月 11 日另有 5 艘拟订造船待股东会及合同生效。<a href="https://www.cmenergyshipping.com/uploads/report/20260327.pdf" target="_blank" rel="noopener">2025 年年度报告</a></li>
+<li><strong>招投标与客户侧线索：</strong> 未发现适合按公开招投标金额汇总的日常运输订单；公司主要通过现货航次、期租、COA 和 LNG 长期运输协议获取需求。</li>
+<li><strong>订单状态区分：</strong> 7 月 11 日项目是<strong>拟订造运力、尚未签署最终协议</strong>；7 月 1 日和 2 日为<strong>已交付船舶</strong>；长期 COA 才是客户需求锁定，不应互相混同。</li>
+<li><strong>订单金额与最近年度营收比例：</strong> 7 月 11 日拟造船投资上限约占 2025 年营收 5.36%，但这是资本开支比例，不是订单收入比例。</li>
+<li><strong>履约周期与收入确认节奏：</strong> 新造船在 2028 年交付前原则上不直接贡献航运收入；已交付 LNG 船按长期协议持续贡献运输收益。</li>
+<li><strong>合同负债/存货/应收/现金流验证：</strong> 2026Q1 合同负债 4.33 亿元，较 2025 年末增长约 21.6%；存货增长约 6.0%；应收账款与合同资产合计增长约 29.1%；经营现金流同比增长 140.1%。现金流支持需求真实性，但合同资产增速需要半年报继续验证。<a href="https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-25/601872_20260425_75X5.pdf" target="_blank" rel="noopener">2026 年第一季度报告</a></li>
+<li><strong>订单趋势判断：改善。</strong> 船队订单、长约履约和现货高运价共同支持需求，但新增运力也抬高资本开支和未来供给风险。</li>
+<li><strong>信息可信度：高。</strong> 核心依据均为公司定期报告或交易所公告；日常航次合同金额未公开是主要信息边界。</li>
+</ul>
+</section>
+<section id="s6">
+<h2 class="sec"><span class="num">06</span>财务质量验证</h2>
+<ul>
+<li><strong>利润与现金流匹配：</strong> 2023—2025 年经营现金流/归母净利润分别为 1.84、1.66、1.51 倍；2026Q1 为 1.20 倍，仍高于 1。Q1 销售收现/收入约 91.9%，低于上年同期约 100.6%，但尚未构成现金流背离。<a href="https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-25/601872_20260425_75X5.pdf" target="_blank" rel="noopener">2026 年第一季度报告</a></li>
+<li><strong>应收账款与营收匹配：</strong> 2025 年应收账款与合同资产合计增长 37.8%，快于收入增长 9.2%；2026Q1 又较年末增长 29.1%。高景气和航次履约进度可解释一部分，但鉴于历史收入确认差错，此项是最需要复核的资产端指标。</li>
+<li><strong>存货与营收匹配：</strong> 2025 年存货下降 7.5%，2026Q1 较年末仅增长 6.0%，未显示异常累积。</li>
+<li><strong>资本开支效率与自由现金流：</strong> 2025 年资本开支 77.97 亿元，自由现金流 12.58 亿元；2026Q1 资本开支 38.66 亿元，自由现金流转为 -5.52 亿元。投入对应 LNG、油轮、散货及滚装船队扩张，经济性最终取决于交付时的运价周期。</li>
+<li><strong>预付款/其他应收款/在建工程/商誉异常：</strong> 2026Q1 预付款 1.81 亿元、其他应收款 14.58 亿元，均较年末基本稳定；商誉仅 0.42 亿元。值得关注的是在建工程 101.87 亿元，虽较年末 114.09 亿元下降，但规模较大，反映重资产扩张。<a href="https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-25/601872_20260425_75X5.pdf" target="_blank" rel="noopener">2026 年第一季度报告</a></li>
+<li><strong>资产负债率与有息负债：</strong> 2025 年末资产负债率约 46.68%；2026Q1 约 46.26%。按短期借款、一年内到期非流动负债、长期借款和租赁负债粗算，Q1 有息负债约 285.86 亿元，扣除货币资金后净有息负债约 233.15 亿元，杠杆可控但绝对额不低。</li>
+<li><strong>综合判断：良好。</strong> 经营现金流、存货和低商誉支持利润质量；高资本开支、合同资产增长以及历史会计差错使其达不到“优秀”。</li>
+</ul>
+</section>
+<section id="s7">
+<h2 class="sec"><span class="num">07</span>股东与机构</h2>
+<ul>
+<li><strong>十大股东持股占比：</strong> 2026Q1 末前十大股东合计约 72.88%；招商局轮船持股 54.48%，中石化集团当时持股 13.57%，香港中央结算持股 2.34%。<a href="https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-25/601872_20260425_75X5.pdf" target="_blank" rel="noopener">2026 年第一季度报告</a></li>
+<li><strong>实控人/大股东持股与质押：</strong> 招商局轮船为控股股东，最终控制人为国务院国资委体系；2026Q1 披露控股股东股份无质押、标记或冻结。</li>
+<li><strong>大股东减持或增持：</strong> 中石化集团于 2026 年 5 月 12 日至 6 月 22 日减持约 8,074.43 万股、套现约 14.54 亿元，持股比例由 13.57%降至 12.57%，并提前终止剩余 1,074 股的减持安排。<a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12404479&amp;stockid=601872" target="_blank" rel="noopener">减持结果公告</a></li>
+<li><strong>入驻机构家数：</strong> 公司定期报告不披露全市场统一口径的“机构持仓家数”，不宜以第三方数据库瞬时统计冒充官方数字。2026Q1 前十大股东中可见社保基金两只组合、鹏华/大成基金、中国人寿及沪深 300 ETF；公司 2026 年 6 月 26 日至 7 月 2 日电话会有约 200 家机构参与，说明研究覆盖度较高，但参与调研不等于实际持仓。<a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12428890&amp;stockid=601872" target="_blank" rel="noopener">投资者关系活动记录</a></li>
+<li><strong>机构类型：</strong> 央企战略股东、北向资金、公募基金、社保基金、保险资金和指数基金。</li>
+<li><strong>治理风险判断：中等。</strong> 控股稳定、无高比例质押是优点；历史会计差错及持续较多关联造船/投资交易要求更严格的独立性和定价监督。</li>
+</ul>
+</section>
+<section id="s8">
+<h2 class="sec"><span class="num">08</span>估值与同行对比</h2>
+<p>同行选择中远海能（大型油气运输综合平台）和招商南油（成品油轮为主），业务结构并非完全同质。同行 2025 年财务数据分别来自<a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12024345&amp;stockid=600026" target="_blank" rel="noopener">中远海能 2025 年报</a>与<a href="https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12043298&amp;stockid=601975" target="_blank" rel="noopener">招商南油 2025 年报</a>；估值采用 2026-07-10 行情口径。</p>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">公司</th>
+<th scope="col">PE(TTM)</th>
+<th scope="col">PB</th>
+<th scope="col">2025 收入增速</th>
+<th scope="col">2025 毛利率</th>
+<th scope="col">2025 扣非净利率</th>
+<th scope="col">2025 ROE</th>
+<th scope="col">经营现金流/归母净利润</th>
+<th scope="col">2026Q1 归母净利润增速</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">招商轮船</th>
+<td>15.79 倍</td>
+<td>2.90 倍</td>
+<td class="up">+9.22%</td>
+<td>26.47%</td>
+<td>17.83%</td>
+<td>14.55%</td>
+<td>1.51 倍</td>
+<td class="up">+219.31%</td>
+</tr>
+<tr>
+<th scope="row">中远海能</th>
+<td>15.68 倍</td>
+<td>1.87 倍</td>
+<td class="up">+2.68%</td>
+<td>26.13%</td>
+<td>13.99%</td>
+<td>10.42%</td>
+<td>1.83 倍</td>
+<td class="up">+206.74%</td>
+</tr>
+<tr>
+<th scope="row">招商南油</th>
+<td>11.04 倍</td>
+<td>1.36 倍</td>
+<td class="down">-10.13%</td>
+<td>28.87%</td>
+<td>22.29%</td>
+<td>11.55%</td>
+<td>1.59 倍</td>
+<td class="up">+51.73%</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li><strong>当前估值：</strong> 招商轮船 PE 与中远海能接近，但 PB 显著更高；相对招商南油则同时享有 PE 和 PB 溢价。</li>
+<li><strong>同行业估值对比：</strong> 溢价来自更强的 2026Q1 增长、VLCC/VLOC 规模、LNG 长期增长储备和多船型平台，但也反映市场对油轮高景气延续已有较高信心。</li>
+<li><strong>同行业质量对比：</strong> 招商轮船 2025 ROE 和扣非净利率优于中远海能，现金转换弱于中远海能但仍健康；招商南油 2025 扣非净利率更高，但收入和利润下滑、规模与船型分散度更弱。</li>
+<li><strong>估值是否匹配成长与财务质量：</strong> <strong>合理，但没有明显安全边际。</strong> 若 2026H1 预告兑现，TTM/前瞻 PE 会快速下降；若油轮运价因地缘缓和、需求回落或运力回流而转弱，2.90 倍 PB 会放大估值回撤。</li>
+</ul>
+</section>
+<section id="s9">
+<h2 class="sec"><span class="num">09</span>负面信息与风险排查</h2>
+<ul>
+<li><strong>是否亏损：</strong> 否。2023—2025 年连续盈利，2026H1 预计利润显著增长。<a href="https://www.cmenergyshipping.com/uploads/report/20260327.pdf" target="_blank" rel="noopener">2025 年年度报告</a></li>
+<li><strong>是否 ST 或退市风险：</strong> 截至本报告日未发现触发 ST 或退市风险警示的公开依据；2025 年报为标准无保留审计意见。</li>
+<li><strong>审计意见：</strong> 毕马威华振对 2025 年财务报表出具标准无保留意见，关键审计事项为航运服务收入确认。<a href="https://www.cmenergyshipping.com/uploads/report/20260327.pdf" target="_blank" rel="noopener">2025 年年度报告</a></li>
+<li><strong>监管问询/处罚：</strong> 上海证监局于 2026 年 5 月对公司出具警示函，上交所同步予以监管警示。监管认定中外运集运 2021—2023 年存在将部分航次预估收入作为确认金额、跨期确认收入、舱位互换业务错用总额法、未正确确认税费和租赁资产负债等会计差错，导致多个定期报告财务信息不准确。<a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12334304&amp;stockid=601872" target="_blank" rel="noopener">上海证监局警示函公告</a> <a href="https://notice.10jqka.com.cn/api/pdf/3a15c780d1bbf8dd.pdf" target="_blank" rel="noopener">上交所监管警示决定</a></li>
+<li><strong>诉讼仲裁：</strong> 2025 年报披露不存在重大诉讼、仲裁；2025 年末预计负债约 0.33 亿元，含未决诉讼及亏损合同，金额相对净资产较小。<a href="https://www.cmenergyshipping.com/uploads/report/20260327.pdf" target="_blank" rel="noopener">2025 年年度报告</a></li>
+<li><strong>负面新闻：</strong> 2026 年 6 月 22—24 日股价连续三个交易日涨幅偏离值累计超过 20%，公司自查称除公开事项外不存在应披露未披露信息，并提示中东通航和运费率剧烈波动风险；当时 PB 达 3.93 倍、处于较高历史分位，当前已回落至约 2.90 倍。<a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12409138&amp;stockid=601872" target="_blank" rel="noopener">股票交易异常波动公告</a></li>
+<li><strong>关联交易/客户供应商真实性争议：</strong> 未发现客户或供应商真实性被监管定性的公开事项；但公司持续与招商局集团内船厂进行造船关联交易，2026 年 7 月 11 日拟议项目上限 15.10 亿元，需关注询价比选、最终合同价与付款安排。<a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12441516&amp;stockid=601872" target="_blank" rel="noopener">关联交易公告</a></li>
+</ul>
+</section>
+<section id="s10">
+<h2 class="sec"><span class="num">10</span>财务造假风险初筛</h2>
+<ul>
+<li><strong>红旗数量：</strong> 1 项重大红旗，2 项温和观察项。</li>
+<li><strong>主要红旗：</strong> 监管已确认历史收入确认、总额法和租赁核算会计差错，这是事实层面的内控与信息披露缺陷；温和观察项包括 2025 年至 2026Q1 应收账款/合同资产较快增长，以及资本开支、在建工程和有息负债处于高位。</li>
+<li><strong>风险等级：中。</strong></li>
+<li><strong>解释：</strong> 这是财务造假风险初筛，不是对“财务造假”的事实定性。监管文件使用的是“会计差错”和“财务报告不准确”，目前未发现监管、审计或司法机关将其定性为欺诈性造假。之所以不是高风险，是因为 2025 年审计意见标准无保留、近三年经营现金流持续高于净利润、商誉和存货风险较低、2026H1 预告扣非与归母高度一致；之所以不能给低风险，是因为会计差错跨多个期间且涉及收入确认这一关键审计领域，后续整改及历史数据更正影响仍未充分量化。</li>
+</ul>
+</section>
+<section id="s11">
+<h2 class="sec"><span class="num">11</span>后续跟踪清单</h2>
+<ul>
+<li><strong>新增订单金额：</strong> 区分客户运输合同与造船资本开支；重点跟踪 7 月 11 日拟造 5 艘船是否经股东会通过、最终签约价是否低于 15.10 亿元上限。</li>
+<li><strong>年初至今累计订单金额：</strong> 公司未披露可统一汇总的客户运输合同金额；不要以船舶投资额代替客户订单额。</li>
+<li><strong>订单金额/上年营收：</strong> 当前可核验的拟造船投资上限约占 2025 年营收 5.36%，不代表未来收入覆盖率。</li>
+<li><strong>重点客户复购与新增客户：</strong> 跟踪国际大石油公司现货/期租、淡水河谷 VLOC COA、中化石油 LNG 长约执行，以及新客户与大西洋长航线货盘。</li>
+<li><strong>中标候选人转正式中标/签约情况：</strong> 不适用于日常航运主业；对 7 月 11 日造船项目应跟踪“股东会批准→协议签署→开工→交付”。</li>
+<li><strong>合同负债、存货、应收账款和经营现金流变化：</strong> 2026H1 最关键验证点是经营现金流能否跟上约 66—73 亿元归母利润，以及合同资产增速是否回落。</li>
+<li><strong>触发深度复盘条件：</strong> 半年报实际归母净利润低于 66 亿元；经营现金流/净利润低于 0.8；应收账款及合同资产增速继续显著高于收入；监管要求追溯更正且影响重大；油轮已锁定运价和 TCE 连续两个季度下行；在建船舶延期或资本开支明显超预算。</li>
+</ul>
+</section>
+<section id="s12">
+<h2 class="sec"><span class="num">12</span>信息边界</h2>
+<ul>
+<li><strong>分析范围：</strong> 本报告执行日为 2026-07-12，行情采用最近交易日 2026-07-10 收盘数据；财务数据覆盖 2023—2025 年度、2026 年第一季度，以及公司于 2026-07-06 披露的 2026 年半年度业绩预告。2023 年数据虽来自最新年报列示口径，但上海证监局和上交所已于 2026 年 5 月确认公司子公司此前存在会计差错，相关历史数字须结合后续整改或更正公告审慎使用。</li>
+<li><strong>数据日期：</strong> 行情截至 2026-07-10；公告、监管和公司信息截至 2026-07-12；最新正式财报为 2026Q1，最新财务预报为 2026H1 业绩预增公告。</li>
+<li><strong>主要数据来源：</strong> 上海证券交易所/公司公告、招商轮船 2025 年年度报告及 2026 年第一季度报告、公司官网与投资者关系记录、同行年报、公开行情页面。</li>
+<li><strong>尚未核验的信息：</strong> 2026H1 正式现金流与资产负债表、历史会计差错的量化更正金额、全部机构持仓家数、统一口径全球市场份额、日常现货航次与期租合同金额、部分长期 COA 的期限和定价条款。</li>
+<li><strong>可能影响结论的新公告或市场事件：</strong> 2026 年半年报、监管整改报告或前期差错更正、霍尔木兹海峡通航变化、VLCC/BDI 运价中枢、老船拆解与新船交付、全球原油补库强度、造船关联交易最终条款。</li>
+</ul>
+</section>
+
+      <section id="note-friendly">
+        <h2 class="sec"><span class="num">◎</span>基本面速记</h2>
+        <div class="note-copy">
+          <h2>可复制摘要</h2>
+          <pre><code>【基本面速记】
+公司：招商轮船（601872.SH）
+结论：基本面强，财务质量良好，估值合理。
+核心看点：
+1. 2026H1归母净利润预告66—73亿元，扣非65.4—72.4亿元，主业盈利加速。
+2. VLCC/VLOC规模、全球调度、长期COA与LNG船队构成中长期壁垒。
+3. 经营现金流持续覆盖净利润，2026Q1经营现金流/归母净利润约1.20倍。
+主要风险：
+1. 油轮运价与地缘风险高度周期化，当前2.90倍PB已计入较高景气预期。
+2. 监管已确认2021—2023年子公司收入确认、总额法及租赁核算会计差错。
+最新财务预报：2026H1收入187—206亿元、归母净利润66—73亿元、扣非65.4—72.4亿元；隐含Q2归母净利润同比约+205%—+260%、环比约+39%—+64%；信息可信度高，盈利质量判断强。
+财务造假风险初筛：中。理由：存在监管确认的跨期会计差错，但现金流、低商誉、标准无保留审计及扣非利润一致性提供反证。
+订单/需求验证：改善。依据：2026Q1末手持订单船舶68艘，油轮已锁定运价、VLOC COA和LNG长约提供需求支撑；造船订单不等于客户收入订单。
+后续跟踪：2026H1现金流与合同资产、监管整改/更正金额、VLCC TCE、造船项目最终签约价和交付节奏。</code></pre>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="disclaimer">
+      免责声明:本报告为基于公开财报、公告、行情与新闻资料的整理和财务质量初筛,不构成任何投资建议,不保证未来收益。投资有风险,决策需谨慎。所有数据以公司正式披露为准。
+    </div>
+    <div>报告主体:招商轮船(601872.SH) | 数据口径:行情截至 2026-07-10；公告、监管和公司信息截至 2026-07-12；最新正式财报为 2026Q1，最新财务预报为 2026H1 业绩预增公告。</div>
+    <div>主要数据来源:上海证券交易所/公司公告、招商轮船 2025 年年度报告及 2026 年第一季度报告、公司官网与投资者关系记录、同行年报、公开行情页面。</div>
+    <div>自包含离线 HTML · 内联 CSS / 极简内联 JS · 可直接在浏览器打开</div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var links = document.querySelectorAll('nav.toc a');
+  var map = {};
+  for (var i=0;i<links.length;i++){
+    var href = links[i].getAttribute('href') || '';
+    if (href.charAt(0) === '#') map[href.slice(1)] = links[i];
+  }
+  var sections = document.querySelectorAll('main section[id]');
+  function onScroll(){
+    var pos = (window.scrollY || document.documentElement.scrollTop) + 90;
+    var cur = null;
+    for (var j=0;j<sections.length;j++){
+      if (sections[j].offsetTop <= pos) cur = sections[j].id;
+    }
+    for (var k=0;k<links.length;k++) links[k].classList.remove('active');
+    if (cur && map[cur]) {
+      map[cur].classList.add('active');
+      var act = map[cur];
+      var sc = document.getElementById('toc-scroll');
+      if (sc && act.offsetLeft < sc.scrollLeft) sc.scrollLeft = act.offsetLeft - 8;
+      if (sc && act.offsetLeft + act.offsetWidth > sc.scrollLeft + sc.clientWidth) {
+        sc.scrollLeft = act.offsetLeft + act.offsetWidth - sc.clientWidth + 8;
+      }
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
+</body>
+</html>

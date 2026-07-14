@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-15T01:15:31+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260327-3fe6f999",
+      "title": "2025 年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260327",
+      "official_url": "https://www.cmenergyshipping.com/uploads/report/20260327.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260327_2025A_年度报告_20260327.pdf",
+      "sha256": "3fe6f99980f9f0c2ac241e2f826660141d118af2fe53eafab49e146ef9464a18",
+      "bytes": 2074111,
+      "pages": 246,
+      "retrieved_at": "2026-07-15T01:07:34+08:00",
+      "used_by": [
+        "招商轮船_601872_基本面分析_20260712.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "FAILED-0cfa872cad63",
+      "title": "公司业绩预增公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260706",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-07-06/601872_20260706_BNEG.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-07-15T01:10:13+08:00",
+      "used_by": [
+        "招商轮船_601872_基本面分析_20260712.md"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "FAILED-27b073132847",
+      "title": "2026 年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260425",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-25/601872_20260425_75X5.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-07-15T01:10:13+08:00",
+      "used_by": [
+        "招商轮船_601872_基本面分析_20260712.md"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "SRC-20260712-2458a52e",
+      "title": "上交所监管警示决定",
+      "document_type": "监管公告",
+      "period": "期间待核验",
+      "published_date": "20260712",
+      "official_url": "https://notice.10jqka.com.cn/api/pdf/3a15c780d1bbf8dd.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260712_期间待核验_监管公告_3a15c780d1bbf8dd.pdf",
+      "sha256": "2458a52e622f150c94523bfaceb4bed0dcfc386e513a36a3fde75b12adc9be08",
+      "bytes": 183127,
+      "pages": 3,
+      "retrieved_at": "2026-07-15T01:07:36+08:00",
+      "used_by": [
+        "招商轮船_601872_基本面分析_20260712.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260706-0523c166",
+      "title": "招商轮船2026年半年度业绩预增公告（新浪镜像）",
+      "document_type": "正式披露",
+      "period": "2026H1",
+      "published_date": "20260706",
+      "official_url": "http://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESH_STOCK/2026/2026-7/2026-07-06/12431714.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260706_2026H1_正式披露_12431714.pdf",
+      "sha256": "0523c1668102c4b8c136cdc332fe673da1a2d9fd01122e9eeb0727791b2c8b38",
+      "bytes": 154151,
+      "pages": 3,
+      "retrieved_at": "2026-07-15T01:10:14+08:00",
+      "used_by": [
+        "招商轮船_601872_基本面分析_20260712.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260425-100c343d",
+      "title": "招商轮船2026年第一季度报告（新浪镜像）",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260425",
+      "official_url": "http://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESH_STOCK/2026/2026-4/2026-04-25/12199299.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260425_2026Q1_第一季度报告_12199299.pdf",
+      "sha256": "100c343d2b3bf63aded3e8199755c0ca8c45a6d82c61d5cc8fd1a7036aa25a57",
+      "bytes": 306441,
+      "pages": 16,
+      "retrieved_at": "2026-07-15T01:10:14+08:00",
+      "used_by": [
+        "招商轮船_601872_基本面分析_20260712.md"
+      ],
+      "status": "已归档"
+    }
+  ]
+}

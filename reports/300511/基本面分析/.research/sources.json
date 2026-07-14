@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-15T01:15:30+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260428-066d0a91",
+      "title": "2025 年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260428",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-28/1225201359.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260428_2025A_年度报告_1225201359.pdf",
+      "sha256": "066d0a9194264d1b67148ef37b2420acc94ca3d449b3c966acccc74fe33fb53f",
+      "bytes": 1519065,
+      "pages": 222,
+      "retrieved_at": "2026-07-15T01:06:55+08:00",
+      "used_by": [
+        "雪榕生物_300511_基本面分析_20260704.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260428-c72fcaeb",
+      "title": "2026 年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260428",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-28/1225201366.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260428_2026Q1_第一季度报告_1225201366.pdf",
+      "sha256": "c72fcaebcfce0af763b5210bd0a8f21441d016126040c0aa12a9032da53b775f",
+      "bytes": 191184,
+      "pages": 11,
+      "retrieved_at": "2026-07-15T01:06:55+08:00",
+      "used_by": [
+        "雪榕生物_300511_基本面分析_20260704.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260609-f01c670a",
+      "title": "巨潮资讯股份司法冻结公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260609",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-06-09/1225360740.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260609_期间待核验_正式披露_1225360740.pdf",
+      "sha256": "f01c670aecccdd7a22619fd5c0be32c7c64da3a1e60deedb32807aaca97a7f59",
+      "bytes": 94345,
+      "pages": 2,
+      "retrieved_at": "2026-07-15T01:06:55+08:00",
+      "used_by": [
+        "雪榕生物_300511_基本面分析_20260704.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260630-8b4de5cf",
+      "title": "巨潮资讯担保进展公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260630",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-06-30/1225400761.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260630_期间待核验_正式披露_1225400761.pdf",
+      "sha256": "8b4de5cfee7a0086bbd7e76321addc068f7baf5fdb8e124359f94a1785c65488",
+      "bytes": 128067,
+      "pages": 4,
+      "retrieved_at": "2026-07-15T01:06:56+08:00",
+      "used_by": [
+        "雪榕生物_300511_基本面分析_20260704.md"
+      ],
+      "status": "已归档"
+    }
+  ]
+}

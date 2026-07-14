@@ -1,0 +1,253 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-15T01:15:30+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260310-656099b5",
+      "title": "深交所年报摘要",
+      "document_type": "年度报告",
+      "period": "期间待核验",
+      "published_date": "20260310",
+      "official_url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-03-10/f1fb58e7-7390-4f57-8c4d-ad91f60ed643.PDF",
+      "alternate_urls": [
+        "https://static.cninfo.com.cn/finalpage/2026-03-10/1225002089.PDF"
+      ],
+      "local_path": "原始资料/2026/20260310_期间待核验_年度报告_f1fb58e7-7390-4f57-8c4d-ad91f60ed643.pdf",
+      "sha256": "656099b5584aa5836eed3361de3f173120cf0ed839e9c8d7e725858b48eaf19c",
+      "bytes": 170785,
+      "pages": 4,
+      "retrieved_at": "2026-07-15T01:06:43+08:00",
+      "used_by": [
+        "天赐材料_002709_基本面分析_20260704.md",
+        "天赐材料_002709_基本面分析_20260704_161919.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260328-2fee8e5b",
+      "title": "H 股申请公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260328",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-03-28/1225041894.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260328_期间待核验_正式披露_1225041894.pdf",
+      "sha256": "2fee8e5b42dc3fe532149b5be4c48f47fb8134f6c2bd3bfe8b3a9359b25fe49d",
+      "bytes": 137329,
+      "pages": 2,
+      "retrieved_at": "2026-07-15T01:06:43+08:00",
+      "used_by": [
+        "天赐材料_002709_基本面分析_20260704.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260704-c74d6413",
+      "title": "关于部分募投项目变更并将剩余募集资金投入新项目的公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260704",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-07-04/1225409770.PDF",
+      "alternate_urls": [
+        "https://pdf.dfcfw.com/pdf/H2_AN202607031826705053_1.pdf"
+      ],
+      "local_path": "原始资料/2026/20260704_期间待核验_正式披露_1225409770.pdf",
+      "sha256": "c74d6413fcd05026c6b68637860e2461e33f88c3a63ca1507d0fb3a7b2f95411",
+      "bytes": 315506,
+      "pages": 10,
+      "retrieved_at": "2026-07-15T01:06:43+08:00",
+      "used_by": [
+        "天赐材料_002709_基本面分析_20260704_161919.md",
+        "天赐材料_002709_基本面分析_20260708.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260704-12fff08f",
+      "title": "关于子公司南通天赐终止年产24.3万吨项目的公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260704",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-07-04/1225409769.PDF",
+      "alternate_urls": [
+        "https://pdf.dfcfw.com/pdf/H2_AN202607031826704950_1.pdf"
+      ],
+      "local_path": "原始资料/2026/20260704_期间待核验_正式披露_1225409769.pdf",
+      "sha256": "12fff08f17afc78a33cc9679eb1607750fa79b66d3c588fb5a484658e04d3f37",
+      "bytes": 139986,
+      "pages": 3,
+      "retrieved_at": "2026-07-15T01:06:43+08:00",
+      "used_by": [
+        "天赐材料_002709_基本面分析_20260704_161919.md",
+        "天赐材料_002709_基本面分析_20260708.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260309-81877607",
+      "title": "2025 年年度报告全文",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260309",
+      "official_url": "https://pdf.dfcfw.com/pdf/H2_AN202603091820421633_1.pdf",
+      "alternate_urls": [
+        "https://static.cninfo.com.cn/finalpage/2026-03-10/1225002090.PDF"
+      ],
+      "local_path": "原始资料/2026/20260309_2025A_年度报告_H2_AN202603091820421633_1.pdf",
+      "sha256": "81877607987489f2454c2128180e0427ad871e44f8cbc9fe3d3e931776b8e4a3",
+      "bytes": 5156718,
+      "pages": 199,
+      "retrieved_at": "2026-07-15T01:06:45+08:00",
+      "used_by": [
+        "天赐材料_002709_基本面分析_20260704_161919.md",
+        "天赐材料_002709_基本面分析_20260708.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260428-4e8b1594",
+      "title": "2026 年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260428",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-28/1225208714.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260428_2026Q1_第一季度报告_1225208714.pdf",
+      "sha256": "4e8b1594beae6607a41afa985393d10c0c5814b98b8ee6eda97a2d49fd70c200",
+      "bytes": 917752,
+      "pages": 10,
+      "retrieved_at": "2026-07-15T01:06:46+08:00",
+      "used_by": [
+        "天赐材料_002709_基本面分析_20260704_161919.md",
+        "天赐材料_002709_基本面分析_20260708.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250415-2d59bf6c",
+      "title": "2024 年年度报告摘要",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250415",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-04-15/1223095055.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250415_2024A_年度报告_1223095055.pdf",
+      "sha256": "2d59bf6c9ced7acf09949624e8747760ea3933c30171a6aff07a18eb9aa543c9",
+      "bytes": 321774,
+      "pages": 5,
+      "retrieved_at": "2026-07-15T01:06:47+08:00",
+      "used_by": [
+        "天赐材料_002709_基本面分析_20260704_161919.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250716-92dadb69",
+      "title": "公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20250716",
+      "official_url": "https://pdf.dfcfw.com/pdf/H2_AN202507161710085996_1.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250716_期间待核验_正式披露_H2_AN202507161710085996_1.pdf",
+      "sha256": "92dadb69b5bb9143f284d4df69b7048bcc8f221b1d5d6efd40aabe47969a7f3a",
+      "bytes": 404691,
+      "pages": 6,
+      "retrieved_at": "2026-07-15T01:06:47+08:00",
+      "used_by": [
+        "天赐材料_002709_基本面分析_20260708.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260601-031a2e92",
+      "title": "公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260601",
+      "official_url": "https://pdf.dfcfw.com/pdf/H2_AN202606011823126159_1.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260601_期间待核验_正式披露_H2_AN202606011823126159_1.pdf",
+      "sha256": "031a2e926014b4eb1577391ca8e4714547f4da1709e91660a433e24d766a8620",
+      "bytes": 148117,
+      "pages": 8,
+      "retrieved_at": "2026-07-15T01:06:47+08:00",
+      "used_by": [
+        "天赐材料_002709_基本面分析_20260708.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250922-213f1a63",
+      "title": "公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20250922",
+      "official_url": "https://pdf.dfcfw.com/pdf/H2_AN202509221748587219_1.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250922_期间待核验_正式披露_H2_AN202509221748587219_1.pdf",
+      "sha256": "213f1a630cb49fe3834df624091799e1261679ee78b93d82700a6278454be18c",
+      "bytes": 123728,
+      "pages": 4,
+      "retrieved_at": "2026-07-15T01:06:48+08:00",
+      "used_by": [
+        "天赐材料_002709_基本面分析_20260708.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20251106-16bdee5c",
+      "title": "公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20251106",
+      "official_url": "https://pdf.dfcfw.com/pdf/H2_AN202511061776305081_1.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20251106_期间待核验_正式披露_H2_AN202511061776305081_1.pdf",
+      "sha256": "16bdee5c600f6cf213e5e7f050e41b4f0eb33466e54493fda777ac3cf39964ae",
+      "bytes": 115589,
+      "pages": 4,
+      "retrieved_at": "2026-07-15T01:06:48+08:00",
+      "used_by": [
+        "天赐材料_002709_基本面分析_20260708.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20251106-5adeea11",
+      "title": "公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20251106",
+      "official_url": "https://pdf.dfcfw.com/pdf/H2_AN202511061776305080_1.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20251106_期间待核验_正式披露_H2_AN202511061776305080_1.pdf",
+      "sha256": "5adeea11d827ea508eaf7d65d207ad5209791c65a4b1cbe68a827acd91fa5615",
+      "bytes": 116154,
+      "pages": 4,
+      "retrieved_at": "2026-07-15T01:06:48+08:00",
+      "used_by": [
+        "天赐材料_002709_基本面分析_20260708.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260331-03a0bfd5",
+      "title": "2026-03-30 投资者关系记录",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260331",
+      "official_url": "https://pdf.dfcfw.com/pdf/H2_AN202603311820917459_1.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260331_2026_正式披露_H2_AN202603311820917459_1.pdf",
+      "sha256": "03a0bfd5757ad3e6f76db9a788f3c5af4d63d2d890f20beacf1ef4fecdb0adba",
+      "bytes": 70281,
+      "pages": 1,
+      "retrieved_at": "2026-07-15T01:06:50+08:00",
+      "used_by": [
+        "天赐材料_002709_基本面分析_20260708.md"
+      ],
+      "status": "已归档"
+    }
+  ]
+}

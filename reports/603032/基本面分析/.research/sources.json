@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-15T01:17:06+08:00",
+  "sources": [
+    {
+      "source_id": "FAILED-7ead245f44a6",
+      "title": "上交所公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260107",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-01-07/603032_20260107_RSPD.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-07-15T01:11:06+08:00",
+      "used_by": [
+        "德新科技_603032_基本面分析_20260704.md"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "FAILED-e29372193c6c",
+      "title": "2025 年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260414",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-14/603032_20260414_TP3F.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-07-15T01:11:06+08:00",
+      "used_by": [
+        "德新科技_603032_基本面分析_20260704.md"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "FAILED-3dc158314a5a",
+      "title": "2026 年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260428",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-28/603032_20260428_GFGV.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-07-15T01:11:06+08:00",
+      "used_by": [
+        "德新科技_603032_基本面分析_20260704.md"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "FAILED-4f7b710f5094",
+      "title": "2025 年商誉减值测试报告",
+      "document_type": "正式披露",
+      "period": "2025",
+      "published_date": "20260414",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-14/603032_20260414_Y5RT.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-07-15T01:11:06+08:00",
+      "used_by": [
+        "德新科技_603032_基本面分析_20260704.md"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "SRC-20260414-e139c56e",
+      "title": "德新科技2025年年度报告（新浪镜像）",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260414",
+      "official_url": "http://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESH_STOCK/2026/2026-4/2026-04-14/12083807.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260414_2025A_年度报告_12083807.pdf",
+      "sha256": "e139c56ef469501041db4f868de1be19adf857459d9d72d5c62a53aa60a4ee78",
+      "bytes": 2739600,
+      "pages": 236,
+      "retrieved_at": "2026-07-15T01:10:15+08:00",
+      "used_by": [
+        "德新科技_603032_基本面分析_20260704.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260428-5c7b4592",
+      "title": "德新科技2026年第一季度报告（新浪镜像）",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260428",
+      "official_url": "http://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESH_STOCK/2026/2026-4/2026-04-28/12211626.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260428_2026Q1_第一季度报告_12211626.pdf",
+      "sha256": "5c7b45926f5b5e0a2353f68647986fc996359c421e41edc626d3c0d8c989037d",
+      "bytes": 170321,
+      "pages": 13,
+      "retrieved_at": "2026-07-15T01:10:15+08:00",
+      "used_by": [
+        "德新科技_603032_基本面分析_20260704.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260414-b827b28b",
+      "title": "德新科技2025年商誉减值测试报告（巨潮镜像）",
+      "document_type": "正式披露",
+      "period": "2025",
+      "published_date": "20260414",
+      "official_url": "https://dataclouds.cninfo.com.cn/shgonggao/hsomarket/2026/20260413/e489dbccdfa04c67be214911c3dc1f98.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260414_2025_正式披露_e489dbccdfa04c67be214911c3dc1f98.pdf",
+      "sha256": "b827b28b2a857d179cc639dd6684f83ca0985fb15877501ffda3146e1380abb1",
+      "bytes": 163507,
+      "pages": 7,
+      "retrieved_at": "2026-07-15T01:11:07+08:00",
+      "used_by": [
+        "德新科技_603032_基本面分析_20260704.md"
+      ],
+      "status": "已归档",
+      "date_override": "20260414"
+    },
+    {
+      "source_id": "SRC-20260107-050cf921",
+      "title": "德新科技2026年采购合同暨关联交易公告（巨潮镜像）",
+      "document_type": "合同订单",
+      "period": "2026",
+      "published_date": "20260107",
+      "official_url": "https://dataclouds.cninfo.com.cn/shgonggao/hsomarket/2026/20260106/eb2f131d2ff94975b62a39a9bb430f84.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260107_2026_合同订单_eb2f131d2ff94975b62a39a9bb430f84.pdf",
+      "sha256": "050cf921e02167ec818f70d77c52a44216db4c3230b912b49a2f0b4d349c378a",
+      "bytes": 222272,
+      "pages": 8,
+      "retrieved_at": "2026-07-15T01:11:07+08:00",
+      "used_by": [
+        "德新科技_603032_基本面分析_20260704.md"
+      ],
+      "status": "已归档",
+      "date_override": "20260107"
+    }
+  ]
+}

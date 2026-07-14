@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-15T01:15:30+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260429-65f0d086",
+      "title": "2026Q1",
+      "document_type": "正式披露",
+      "period": "2026Q1",
+      "published_date": "20260429",
+      "official_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-29/f8875297-90e2-49ab-b624-6d58f4ec8865.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260429_2026Q1_正式披露_f8875297-90e2-49ab-b624-6d58f4ec8865.pdf",
+      "sha256": "65f0d086f8891d3d5aeacb83274b7a46f9169261457bec9adc35facd680f18dc",
+      "bytes": 321224,
+      "pages": 12,
+      "retrieved_at": "2026-07-15T01:06:56+08:00",
+      "used_by": [
+        "康龙化成_300759_基本面分析_20260711.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250428-43845911",
+      "title": "报告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20250428",
+      "official_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2025-04-28/cb3ca465-e904-4fba-a702-26bc86da0bf8.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250428_期间待核验_正式披露_cb3ca465-e904-4fba-a702-26bc86da0bf8.pdf",
+      "sha256": "438459111f4e899738496686281c06591f1974cd36d1547783cc5ee26beb21eb",
+      "bytes": 685898,
+      "pages": 13,
+      "retrieved_at": "2026-07-15T01:06:56+08:00",
+      "used_by": [
+        "康龙化成_300759_基本面分析_20260711.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250429-80f7e4e4",
+      "title": "2024年报",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250429",
+      "official_url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042900764_c.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250429_2024A_年度报告_2025042900764_c.pdf",
+      "sha256": "80f7e4e4dfb47eeae3b0d4cd8e4a8d23a0e80bcc6bfc5cb057b6447f96fc4667",
+      "bytes": 23166292,
+      "pages": 235,
+      "retrieved_at": "2026-07-15T01:07:11+08:00",
+      "used_by": [
+        "康龙化成_300759_基本面分析_20260711.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260428-5d53c72b",
+      "title": "2025年报",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260428",
+      "official_url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0428/2026042801704_c.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260428_2025A_年度报告_2026042801704_c.pdf",
+      "sha256": "5d53c72b1db7230fedb3f642e52cf2fed0a152719b9d20e980813e62ad848a80",
+      "bytes": 22290427,
+      "pages": 247,
+      "retrieved_at": "2026-07-15T01:07:19+08:00",
+      "used_by": [
+        "康龙化成_300759_基本面分析_20260711.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260527-dede0d99",
+      "title": "杭州项目",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260527",
+      "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0527/2026052701333_c.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260527_期间待核验_正式披露_2026052701333_c.pdf",
+      "sha256": "dede0d9944a16f4b6a31163303de54933f273b5e047bb5e2c7f44daa8777e9b9",
+      "bytes": 222379,
+      "pages": 4,
+      "retrieved_at": "2026-07-15T01:07:20+08:00",
+      "used_by": [
+        "康龙化成_300759_基本面分析_20260711.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260527-f30c0f26",
+      "title": "绍兴项目",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260527",
+      "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0527/2026052701351_c.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260527_期间待核验_正式披露_2026052701351_c.pdf",
+      "sha256": "f30c0f268f3ee0c6c067f6b98afb33e5d8031add5c8475c83756b8f77095d4c8",
+      "bytes": 213870,
+      "pages": 4,
+      "retrieved_at": "2026-07-15T01:07:21+08:00",
+      "used_by": [
+        "康龙化成_300759_基本面分析_20260711.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260122-fc95116e",
+      "title": "H股配售完成公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260122",
+      "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0122/2026012200516.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260122_期间待核验_正式披露_2026012200516.pdf",
+      "sha256": "fc95116ed0a6bca956bad071897ca9d2f1f0cef759d92d0d1e3f1d573b86faf6",
+      "bytes": 124841,
+      "pages": 3,
+      "retrieved_at": "2026-07-15T01:07:22+08:00",
+      "used_by": [
+        "康龙化成_300759_基本面分析_20260711.md"
+      ],
+      "status": "已归档"
+    }
+  ]
+}

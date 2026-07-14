@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-15T01:15:31+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260703-ea5fb8ec",
+      "title": "2026 年半年度业绩预告",
+      "document_type": "业绩预告",
+      "period": "2026H1",
+      "published_date": "20260703",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-07-03/1225409173.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260703_2026H1_业绩预告_1225409173.pdf",
+      "sha256": "ea5fb8ec8bc2b1ebecaaddbaabb0368a863c8829a75e2050ec12b059cae2e186",
+      "bytes": 64449,
+      "pages": 2,
+      "retrieved_at": "2026-07-15T01:07:22+08:00",
+      "used_by": [
+        "东岳硅材_300821_基本面分析_20260705.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260423-c9ec51b0",
+      "title": "2026 年一季度报告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260423",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-23/1225144864.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260423_2026_正式披露_1225144864.pdf",
+      "sha256": "c9ec51b008d10475f13b7493860780416307bbe77a95ce16c419862349047015",
+      "bytes": 806778,
+      "pages": 10,
+      "retrieved_at": "2026-07-15T01:07:22+08:00",
+      "used_by": [
+        "东岳硅材_300821_基本面分析_20260705.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260326-185d5fd0",
+      "title": "2025 年年度报告摘要",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260326",
+      "official_url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-03-26/47ea1e53-b562-4eed-a057-8c7ecc48e25a.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260326_2025A_年度报告_47ea1e53-b562-4eed-a057-8c7ecc48e25a.pdf",
+      "sha256": "185d5fd0be4201f9b1d224825abc2bef5e7677315296e1951d579935b18683c2",
+      "bytes": 241386,
+      "pages": 7,
+      "retrieved_at": "2026-07-15T01:07:23+08:00",
+      "used_by": [
+        "东岳硅材_300821_基本面分析_20260705.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250418-1c8eb41f",
+      "title": "2024 年年度报告摘要",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250418",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-04-18/1223127261.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250418_2024A_年度报告_1223127261.pdf",
+      "sha256": "1c8eb41f11054c3524efa0e1ece262233170fd63ac64e7660c42a55e5f62f088",
+      "bytes": 508944,
+      "pages": 8,
+      "retrieved_at": "2026-07-15T01:07:23+08:00",
+      "used_by": [
+        "东岳硅材_300821_基本面分析_20260705.md"
+      ],
+      "status": "已归档"
+    }
+  ]
+}

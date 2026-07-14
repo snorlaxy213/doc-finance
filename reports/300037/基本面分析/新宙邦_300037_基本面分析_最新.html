@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>新宙邦(300037.SZ)基本面分析</title>
+<style>
+:root{
+  --ink:#1a2433;
+  --ink-soft:#46546a;
+  --line:#d8dee7;
+  --line-soft:#eef1f5;
+  --bg:#ffffff;
+  --brand:#1f3a5f;
+  --brand-2:#3b5b85;
+  --brand-light:#eaf0f8;
+  --accent:#8a6d3b;
+  --up:#b73333;
+  --down:#2f7a52;
+  --warn:#a06a1f;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Microsoft YaHei","Source Han Sans SC",system-ui,-apple-system,sans-serif;
+  color:var(--ink);
+  background:#fff;
+  line-height:1.7;
+  font-size:14.5px;
+  font-variant-numeric:tabular-nums;
+  -webkit-font-smoothing:antialiased;
+}
+.page{max-width:1600px;margin:0 auto;padding:0 32px;}
+.masthead{
+  display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px;
+  border-bottom:2px solid var(--brand);padding:24px 0 18px;
+}
+.masthead .m-left{min-width:280px;}
+.masthead .kode{font-size:12px;letter-spacing:.12em;color:var(--ink-soft);}
+.masthead h1{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC","Times New Roman",serif;
+  font-size:30px;font-weight:700;margin:6px 0 4px;color:var(--brand);letter-spacing:.5px;
+}
+.masthead .sub{font-size:13px;color:var(--ink-soft);}
+.masthead .meta{font-size:12.5px;color:var(--ink-soft);margin-top:12px;}
+.masthead .meta b{color:var(--ink);font-weight:600;}
+.masthead .m-stats{display:flex;gap:34px;flex-wrap:wrap;}
+.masthead .m-stats .ms-v{font-size:25px;font-weight:700;color:var(--brand);line-height:1;font-variant-numeric:tabular-nums;}
+.masthead .m-stats .ms-v span{font-size:13px;font-weight:500;color:var(--ink-soft);margin-left:2px;}
+.masthead .m-stats .ms-l{font-size:11.5px;color:var(--ink-soft);margin-top:5px;letter-spacing:.02em;}
+.verdict{
+  margin:16px 0 4px;border:1px solid var(--line);border-left:4px solid var(--brand);
+  background:#fbfcfe;border-radius:4px;padding:16px 20px;
+}
+.verdict-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-bottom:14px;}
+.verdict-head h2{margin:0;font-size:14px;letter-spacing:.1em;color:var(--brand);font-weight:700;}
+.badges{display:flex;flex-direction:row;flex-wrap:wrap;gap:8px;margin:0;}
+.badge{
+  display:inline-flex;align-items:center;gap:6px;font-size:12.5px;
+  padding:5px 11px;border-radius:999px;font-weight:600;line-height:1.4;
+}
+.badge .k{font-weight:500;opacity:.85;}
+.badge.fund{background:#fdecec;color:#9a2c2c;}
+.badge.qual{background:#eef3f8;color:#1f3a5f;}
+.badge.valu{background:#fdf3e3;color:#8a5a16;}
+.badge.fraud{background:#eef7f1;color:#2f6a48;}
+.verdict-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 40px;}
+.verdict-grid .v-title{font-size:12.5px;font-weight:700;letter-spacing:.04em;margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid var(--line);}
+.verdict-grid .v-title::before{content:"";display:inline-block;width:3px;height:12px;margin-right:7px;vertical-align:-1px;border-radius:2px;}
+.verdict-grid .v-up .v-title{color:var(--brand);}
+.verdict-grid .v-up .v-title::before{background:var(--brand);}
+.verdict-grid .v-risk .v-title{color:var(--warn);}
+.verdict-grid .v-risk .v-title::before{background:var(--warn);}
+.verdict-grid ul{margin:0;padding-left:18px;}
+.verdict-grid li{font-size:13.5px;margin:6px 0;line-height:1.65;}
+.note{
+  font-size:12px;color:var(--ink-soft);background:var(--line-soft);
+  padding:3px 8px;border-radius:3px;display:inline-block;
+}
+.verdict .note{display:block;margin-top:14px;}
+.kpis{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:1px;margin:16px 0 4px;
+  background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden;
+}
+.kpi{background:#fff;padding:13px 15px;min-width:0;}
+.kpi .kl{font-size:11.5px;color:var(--ink-soft);line-height:1.3;min-height:30px;}
+.kpi .kv{font-size:20px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;margin-top:5px;word-break:break-word;}
+.kpi .kv.up{color:var(--up);}
+.kpi .kv.down{color:var(--down);}
+.kpi .ks{font-size:11px;color:var(--ink-soft);margin-top:3px;font-variant-numeric:tabular-nums;}
+.layout{
+  display:grid;grid-template-columns:208px minmax(0,1fr);gap:36px;align-items:start;
+  padding:14px 0 0;
+}
+.sidebar{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow-y:auto;padding:0 8px 0 0;}
+.sidebar::-webkit-scrollbar{width:6px;}
+.sidebar::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px;}
+.toc{position:static;background:transparent;border:none;margin:12px 0 16px;padding:0;}
+.toc .scroll{overflow:visible;white-space:normal;display:flex;flex-direction:column;gap:2px;}
+.toc a{
+  display:flex;align-items:center;gap:9px;
+  font-size:14px;line-height:1.25;color:var(--ink-soft);text-decoration:none;
+  padding:6px 8px;border-radius:5px;margin:0;border:1px solid transparent;
+}
+.toc a .toc-num{
+  flex:0 0 auto;font-family:"Times New Roman",serif;font-size:12px;font-weight:600;
+  color:var(--ink-soft);background:var(--line-soft);
+  width:22px;height:22px;border-radius:4px;font-variant-numeric:tabular-nums;
+  display:inline-flex;align-items:center;justify-content:center;
+}
+.toc a:hover{background:var(--brand-light);color:var(--brand);}
+.toc a:hover .toc-num{background:#fff;color:var(--brand);}
+.toc a.active{background:var(--brand);color:#fff;font-weight:600;}
+.toc a.active .toc-num{background:rgba(255,255,255,.22);color:#fff;}
+.main{min-width:0;}
+section{padding:16px 0 8px;border-top:1px solid var(--line-soft);scroll-margin-top:64px;}
+section:first-of-type{border-top:none;padding-top:6px;}
+h2.sec{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",serif;
+  font-size:19px;color:var(--brand);margin:6px 0 12px;font-weight:700;
+  display:flex;align-items:baseline;gap:10px;
+}
+h2.sec .num{
+  font-family:"Times New Roman",serif;font-size:14px;color:#fff;background:var(--brand);
+  padding:2px 9px;border-radius:3px;letter-spacing:.05em;font-weight:600;flex:0 0 auto;
+}
+h3.sub{font-size:14.5px;color:var(--ink);margin:16px 0 6px;font-weight:700;}
+p{margin:8px 0;}
+ul,ol{margin:8px 0;padding-left:22px;}
+li{margin:4px 0;}
+strong{color:var(--ink);}
+.tbl-scroll{overflow-x:auto;margin:10px 0;border:1px solid var(--line);border-radius:4px;}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums;}
+thead th{
+  background:#f3f6fa;color:var(--brand);font-weight:700;text-align:right;
+  padding:10px 12px;border-bottom:1.5px solid var(--brand);white-space:nowrap;
+  font-size:12.5px;letter-spacing:.02em;
+}
+thead th[scope=col]:first-child{text-align:left;}
+tbody td{padding:9px 12px;border-bottom:1px solid var(--line-soft);text-align:right;white-space:normal;word-break:break-word;}
+tbody th[scope=row]{
+  text-align:left;color:var(--ink);font-weight:600;
+  padding:9px 12px;border-bottom:1px solid var(--line-soft);white-space:nowrap;font-size:13px;background:#fafbfd;
+}
+tbody tr:nth-child(even) td{background:#fafbfd;}
+tbody tr:hover td{background:var(--brand-light);}
+.up{color:var(--up);}
+.down{color:var(--down);}
+.muted{color:var(--ink-soft);}
+a{color:var(--brand-2);text-decoration:underline;text-underline-offset:2px;word-break:break-all;}
+a:hover{color:var(--brand);}
+.note-copy{
+  margin:20px 0;border:1px solid var(--line);border-left:4px solid var(--accent);
+  background:#fbfcfe;border-radius:4px;padding:14px 16px;
+}
+.note-copy h2{margin:0 0 10px;font-size:13px;letter-spacing:.1em;color:var(--brand);font-weight:700;}
+pre{
+  margin:10px 0;padding:12px 14px;background:#f7f9fc;border:1px solid var(--line-soft);
+  border-radius:4px;overflow:auto;color:var(--ink);font-size:12.5px;line-height:1.6;
+}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;}
+footer{
+  margin-top:22px;border-top:2px solid var(--brand);padding:14px 0 30px;
+  font-size:11.5px;color:var(--ink-soft);line-height:1.7;font-variant-numeric:tabular-nums;
+}
+footer .disclaimer{background:var(--line-soft);padding:8px 12px;border-radius:3px;margin-bottom:8px;}
+@media (max-width:1100px){
+  .layout{grid-template-columns:1fr;gap:0;}
+  .sidebar{position:static;max-height:none;overflow:visible;padding:0;}
+  .toc{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);
+    border-bottom:1px solid var(--line);margin:0 -32px 16px;padding:10px 32px;}
+  .toc .scroll{overflow-x:auto;white-space:nowrap;flex-direction:row;}
+  .toc a{display:inline-flex;white-space:nowrap;border-left:none;border:1px solid transparent;padding:3px 9px;margin:2px;}
+  .toc a.active{border-left:none;background:var(--brand);color:#fff;}
+}
+@media (max-width:760px){
+  .verdict-grid{grid-template-columns:1fr;}
+  .kpis{grid-template-columns:repeat(3,1fr);}
+  .page{padding:0 18px;}
+  .masthead .m-stats{gap:22px;}
+}
+@media (max-width:460px){.kpis{grid-template-columns:repeat(2,1fr);}}
+@media print{
+  body{background:#fff;font-size:10.5px;}
+  .page{max-width:none;padding:0;}
+  .layout{grid-template-columns:1fr;}
+  .sidebar{position:static;max-height:none;overflow:visible;}
+  .toc{position:static;border:none;padding:0;margin:0 0 8px;}
+  .toc .scroll{overflow:visible;display:block;}
+  .toc a{font-size:10px;padding:1px 5px;display:inline-flex;}
+  .toc a.active{background:transparent;color:var(--ink);}
+  section{break-inside:avoid;padding-top:10px;}
+  table{font-size:9.5px;}
+  thead{display:table-header-group;}
+  tbody tr{break-inside:avoid;}
+  .badge{border:1px solid #ccc;}
+  .note-copy,.tbl-scroll,.kpis,.verdict{break-inside:avoid;}
+  footer{break-inside:avoid;}
+  a{color:var(--ink);text-decoration:none;}
+  .kpi{border:1px solid #ccc;}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="masthead">
+    <div class="m-left">
+      <div class="kode">300037.SZ · 深圳证券交易所 · 基本面分析</div>
+      <h1>新宙邦 · 基本面分析</h1>
+      <div class="sub">基本面、财务质量、估值与风险初筛</div>
+      <div class="meta">数据口径 <b>财务数据截至 2026 年一季报和 2025 年年报；行情估值截至 2026-07-08 收盘；SMM 价格截至 2026-07-08。</b> · 生成时间 <b>2026-07-09 01:33</b></div>
+    </div>
+    <div class="m-stats">
+      <div><div class="ms-v">77.43 元</div><div class="ms-l">收盘价 · 2026-07-08，东方财富行情</div></div>
+<div><div class="ms-v">583.73 亿元</div><div class="ms-l">总市值 · 2026-07-08，东方财富行情</div></div>
+<div><div class="ms-v">动态 PE 30.37x；静态 PE 53.20x；TTM PE 约 43.31x</div><div class="ms-l">PE · 东方财富动态 PE；TTM 按 2025A+2026Q1-2025Q1 归母净利估算</div></div>
+<div><div class="ms-v">5.49x</div><div class="ms-l">PB · 2026-07-08，东方财富行情</div></div>
+    </div>
+  </header>
+
+  <section class="verdict" aria-label="结论速览">
+    <div class="verdict-head">
+      <h2>结论速览</h2>
+      <div class="badges">
+        <span class="badge fund"><span class="k">基本面</span> 中性偏强</span>
+<span class="badge qual"><span class="k">财务质量</span> 良好</span>
+<span class="badge valu"><span class="k">估值</span> 偏高</span>
+<span class="badge fraud"><span class="k">造假风险初筛</span> 中</span>
+      </div>
+    </div>
+    <div class="verdict-grid">
+      <div class="v-col v-up">
+        <div class="v-title">核心理由</div>
+        <ul>
+<li>2026Q1 收入 +67.85%、归母净利 +109.02%、扣非净利 +111.69%，盈利进入修复阶段。</li>
+<li>宁德时代 2026-2028 年电解液框架采购合计基准量 30 万吨，强化电池化学品需求能见度，但价格和实际订单仍以具体订单为准。</li>
+<li>公司具备锂盐、添加剂、溶剂、电解液的一体化能力，并有高毛利有机氟和电子信息化学品分散单一周期风险。</li>
+<li>主要问题是电池化学品毛利率仍低、应收账款增速快于收入、2026Q1 经营现金流/净利润仅 0.29x。</li>
+<li>估值按 2026-07-08 收盘已达到约 584 亿元市值、PB 5.49x、TTM PE 约 43x，需要业绩持续兑现。</li>
+</ul>
+      </div>
+      <div class="v-col v-risk">
+        <div class="v-title">主要风险 / 关注</div>
+        <ul>
+<li>电池化学品 2025 毛利率仅 10.93%，行业仍是筑底修复，不是全面高景气。</li>
+<li>2025 应收账款 +51.34%，快于收入；2026Q1 经营现金流/净利润仅 0.29x。</li>
+</ul>
+      </div>
+    </div>
+    <p class="note">口径:市场估值为时点数据,财务指标需区分年度、半年度、季度和单季口径;所有结论以公司正式披露和已核验来源为准。</p>
+  </section>
+
+  <div class="kpis" aria-label="关键指标速览">
+    <div class="kpi"><div class="kl">2026Q1归母净利</div><div class="kv">4.80 亿元</div><div class="ks">归母净利润</div></div>
+<div class="kpi"><div class="kl">2026Q1扣非净利</div><div class="kv">4.70 亿元</div><div class="ks">扣非归母净利润</div></div>
+<div class="kpi"><div class="kl">2026Q1毛利率</div><div class="kv">24.28%</div><div class="ks">毛利率</div></div>
+<div class="kpi"><div class="kl">2026Q1经营现金流</div><div class="kv">1.38 亿元</div><div class="ks">经营现金流净额</div></div>
+<div class="kpi"><div class="kl">2026Q1应收/合同资产</div><div class="kv">应收账款 45.23 亿元</div><div class="ks">应收账款/合同资产</div></div>
+<div class="kpi"><div class="kl">2026Q1存货</div><div class="kv">15.44 亿元</div><div class="ks">存货</div></div>
+  </div>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="toc" aria-label="目录">
+        <div class="scroll" id="toc-scroll">
+          <a href="#s1"><span class="toc-num">01</span>核心财务指标</a>
+<a href="#s2"><span class="toc-num">02</span>近两年财报趋势与业务结构</a>
+<a href="#s3"><span class="toc-num">03</span>结论摘要</a>
+<a href="#s4"><span class="toc-num">04</span>公司与行业</a>
+<a href="#s5"><span class="toc-num">05</span>订单与需求验证</a>
+<a href="#s6"><span class="toc-num">06</span>财务质量验证</a>
+<a href="#s7"><span class="toc-num">07</span>股东与机构</a>
+<a href="#s8"><span class="toc-num">08</span>估值与同行对比</a>
+<a href="#s9"><span class="toc-num">09</span>负面信息与风险排查</a>
+<a href="#s10"><span class="toc-num">10</span>财务造假风险初筛</a>
+<a href="#s11"><span class="toc-num">11</span>后续跟踪清单</a>
+<a href="#s12"><span class="toc-num">12</span>信息边界</a>
+        </div>
+      </nav>
+    </aside>
+    <main class="main">
+      <p>数据截至：2026-07-09 市场价格口径：2026-07-08 收盘 主要结论：公司处在锂电电解液链条“筑底修复”与电子化学品结构成长的交叉位置。2026Q1 业绩明显修复，宁德时代 2026-2028 年电解液框架采购强化需求能见度；但电池化学品毛利率仍低、应收账款扩张较快、估值已反映较强修复预期。</p>
+<section id="s1">
+<h2 class="sec"><span class="num">01</span>核心财务指标</h2>
+<h3 class="sub">1.1 当前估值快照</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">项目</th>
+<th scope="col">最新数据</th>
+<th scope="col">数据日期/口径</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">收盘价</th>
+<td>77.43 元</td>
+<td>2026-07-08，东方财富行情</td>
+<td>当前估值计算基础</td>
+</tr>
+<tr>
+<th scope="row">总市值</th>
+<td>583.73 亿元</td>
+<td>2026-07-08，东方财富行情</td>
+<td>已是电解液材料头部公司的大市值水平</td>
+</tr>
+<tr>
+<th scope="row">流通市值</th>
+<td>423.37 亿元</td>
+<td>2026-07-08，东方财富行情</td>
+<td class="up">流通盘较大，机构资金定价影响较强</td>
+</tr>
+<tr>
+<th scope="row">PE</th>
+<td>动态 PE 30.37x；静态 PE 53.20x；TTM PE 约 43.31x</td>
+<td>东方财富动态 PE；TTM 按 2025A+2026Q1-2025Q1 归母净利估算</td>
+<td class="up">市场已定价 2026 年盈利继续修复，估值不低</td>
+</tr>
+<tr>
+<th scope="row">PB</th>
+<td>5.49x</td>
+<td>2026-07-08，东方财富行情</td>
+<td class="up">对应 2025A ROE 10.74%、2026Q1 ROE 4.37%，需要较强盈利持续性支撑</td>
+</tr>
+<tr>
+<th scope="row">PS</th>
+<td>TTM PS 约 5.31x</td>
+<td>总市值/TTM 营收估算</td>
+<td class="down">对化工材料公司偏高，关键看高毛利电子化学品与氟化品占比提升</td>
+</tr>
+<tr>
+<th scope="row">股息率</th>
+<td>约 0.65%</td>
+<td>2025 年度拟每 10 股派 5 元，按 77.43 元估算</td>
+<td>股息收益不是主要定价因素</td>
+</tr>
+</tbody></table></div>
+<p>数据来源：<a href="https://quote.eastmoney.com/sz300037.html" target="_blank" rel="noopener">东方财富新宙邦行情</a>、<a href="https://static.cninfo.com.cn/finalpage/2026-04-28/1225220140.PDF" target="_blank" rel="noopener">2026 年一季报，2026-04-28</a>、<a href="https://static.cninfo.com.cn/finalpage/2026-03-24/1225026296.PDF" target="_blank" rel="noopener">2025 年年度报告，2026-03-24</a>。</p>
+<h3 class="sub">1.2 已披露当年期间财报</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">2025Q1</th>
+<th scope="col">2026Q1</th>
+<th scope="col">变化解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>20.02 亿元</td>
+<td>33.61 亿元</td>
+<td class="up">同比 +67.85%，主要来自电池化学品销量与价格改善</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td>2.30 亿元</td>
+<td>4.80 亿元</td>
+<td class="up">同比 +109.02%，利润弹性明显强于收入</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td>2.22 亿元</td>
+<td>4.70 亿元</td>
+<td class="up">同比 +111.69%，核心经营修复，不依赖一次性收益</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td class="down">-2.86 亿元</td>
+<td>1.38 亿元</td>
+<td class="up">由负转正，但现金流/净利润仍偏低</td>
+</tr>
+<tr>
+<th scope="row">经营现金流/净利润</th>
+<td class="down">-1.25x</td>
+<td>0.29x</td>
+<td>Q1 回款仍未充分跟上利润</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td class="muted">未披露</td>
+<td class="down">-2.08 亿元</td>
+<td>Q1 资本开支约 3.47 亿元，扩产期自由现金流承压</td>
+</tr>
+<tr>
+<th scope="row">EPS</th>
+<td>0.31 元/股</td>
+<td>0.64 元/股</td>
+<td class="up">每股盈利同步改善</td>
+</tr>
+<tr>
+<th scope="row">ROE</th>
+<td class="muted">未披露</td>
+<td>4.37%</td>
+<td class="up">单季 ROE 已明显修复</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td class="muted">未披露</td>
+<td>24.28%</td>
+<td class="up">与 2025 全年持平，结构改善尚未体现为整体毛利率上行</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td>11.08%</td>
+<td>13.98%</td>
+<td class="up">核心净利率改善，费用摊薄与价格修复均有贡献</td>
+</tr>
+<tr>
+<th scope="row">资本开支</th>
+<td class="muted">未披露</td>
+<td>3.47 亿元</td>
+<td>LiFSI、添加剂、半导体化学品等项目仍处投入期</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td class="muted">未披露</td>
+<td>15.44 亿元</td>
+<td>较 2025 年末 12.15 亿元继续增加，需要结合订单交付与跌价准备跟踪</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td class="muted">未披露</td>
+<td>应收账款 45.23 亿元</td>
+<td>较 2025 年末 37.18 亿元进一步增加，是财务质量的主要观察点</td>
+</tr>
+<tr>
+<th scope="row">总资产</th>
+<td class="muted">未披露</td>
+<td>217.57 亿元</td>
+<td>扩产与营运资本推动资产继续扩张</td>
+</tr>
+<tr>
+<th scope="row">归母净资产</th>
+<td class="muted">未披露</td>
+<td>112.19 亿元</td>
+<td>盈利留存推动净资产增加</td>
+</tr>
+</tbody></table></div>
+<p>数据来源：<a href="https://static.cninfo.com.cn/finalpage/2026-04-28/1225220140.PDF" target="_blank" rel="noopener">2026 年一季报，2026-04-28</a>。</p>
+<h3 class="sub">1.3 最近三年年度财报</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">2023A</th>
+<th scope="col">2024A</th>
+<th scope="col">2025A</th>
+<th scope="col">变化解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>74.84 亿元</td>
+<td>78.47 亿元</td>
+<td>96.39 亿元</td>
+<td>2025 同比 +22.84%，电池化学品和电子信息化学品拉动</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td>10.11 亿元</td>
+<td>9.42 亿元</td>
+<td>10.97 亿元</td>
+<td>2025 同比 +16.48%，利润恢复但尚未明显超过 2023</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td>9.56 亿元</td>
+<td>9.50 亿元</td>
+<td>10.90 亿元</td>
+<td>2025 同比 +14.65%，核心利润回升</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td>34.48 亿元</td>
+<td>8.18 亿元</td>
+<td>11.69 亿元</td>
+<td class="up">2023 异常强，2025 较 2024 改善但不算宽裕</td>
+</tr>
+<tr>
+<th scope="row">经营现金流/净利润</th>
+<td>3.41x</td>
+<td>0.87x</td>
+<td>1.07x</td>
+<td>2025 利润现金含量回到 1 以上</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td>16.58 亿元</td>
+<td class="down">-3.63 亿元</td>
+<td>1.96 亿元</td>
+<td class="down">2025 扩产压力边际下降，自由现金流转正</td>
+</tr>
+<tr>
+<th scope="row">EPS</th>
+<td>1.36 元/股</td>
+<td>1.26 元/股</td>
+<td>1.46 元/股</td>
+<td class="up">2025 恢复增长</td>
+</tr>
+<tr>
+<th scope="row">ROE</th>
+<td>11.57%</td>
+<td>9.97%</td>
+<td>10.74%</td>
+<td class="up">ROE 修复有限，低于高景气阶段水平</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>28.94%</td>
+<td>26.49%</td>
+<td>24.28%</td>
+<td class="down">连续下行，说明电解液链条竞争与价格压力仍在</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td>12.77%</td>
+<td>12.11%</td>
+<td>11.30%</td>
+<td class="up">收入增长快于核心利润率改善</td>
+</tr>
+<tr>
+<th scope="row">资本开支</th>
+<td>17.90 亿元</td>
+<td>11.81 亿元</td>
+<td>9.72 亿元</td>
+<td class="down">扩产强度下降，但仍高于历史成熟期</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>9.08 亿元</td>
+<td>9.97 亿元</td>
+<td>12.15 亿元</td>
+<td>2025 同比 +21.86%，大体与收入增速匹配</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td>应收账款 21.14 亿元</td>
+<td>应收账款 24.57 亿元</td>
+<td>应收账款 37.18 亿元</td>
+<td class="down">2025 应收账款 +51.34%，显著快于收入增速</td>
+</tr>
+<tr>
+<th scope="row">总资产</th>
+<td>176.24 亿元</td>
+<td>176.23 亿元</td>
+<td>197.98 亿元</td>
+<td>2025 资产重新扩张</td>
+</tr>
+<tr>
+<th scope="row">归母净资产</th>
+<td>91.74 亿元</td>
+<td>97.51 亿元</td>
+<td>107.95 亿元</td>
+<td class="up">净资产稳步增长</td>
+</tr>
+</tbody></table></div>
+<p>数据来源：<a href="https://stockn.xueqiu.com/SZ300037/20240401747398.pdf" target="_blank" rel="noopener">2023 年年度报告</a>、<a href="https://static.cninfo.com.cn/finalpage/2026-03-24/1225026296.PDF" target="_blank" rel="noopener">2025 年年度报告，2026-03-24</a>。</p>
+<p>核心指标综合判断：收入端从 2025 年开始恢复，2026Q1 进入明显加速，核心驱动是锂电材料需求恢复、储能需求增长、价格修复和公司战略客户合作增强。利润端的质量中等偏好，扣非利润同步增长，2025 经营现金流/净利润回到 1 以上；但整体毛利率仍连续下行，电池化学品毛利率仅 10.93%，说明行业并未进入全面高景气。最大财务瑕疵是应收账款：2025 年应收账款增速显著高于营收，2026Q1 又继续增加，后续必须看回款和经营现金流能否持续改善。</p>
+</section>
+<section id="s2">
+<h2 class="sec"><span class="num">02</span>近两年财报趋势与业务结构</h2>
+<h3 class="sub">2.1 近两年财报趋势</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">项目</th>
+<th scope="col">2024A</th>
+<th scope="col">2025A</th>
+<th scope="col">变化</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>78.47 亿元</td>
+<td>96.39 亿元</td>
+<td class="up">+22.84%</td>
+<td>电池化学品和电子信息化学品放量</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td>9.42 亿元</td>
+<td>10.97 亿元</td>
+<td class="up">+16.48%</td>
+<td>利润恢复慢于收入，毛利率拖累</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td>9.50 亿元</td>
+<td>10.90 亿元</td>
+<td class="up">+14.65%</td>
+<td class="up">核心经营增长真实，但弹性不算强</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>26.49%</td>
+<td>24.28%</td>
+<td class="down">-2.21pct</td>
+<td class="down">电池化学品价格与竞争压力仍在</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td>12.11%</td>
+<td>11.30%</td>
+<td class="down">-0.81pct</td>
+<td class="up">规模增长未完全转化为利润率改善</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td>8.18 亿元</td>
+<td>11.69 亿元</td>
+<td class="up">+42.80%</td>
+<td class="up">现金流改善，覆盖净利润</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td class="down">-3.63 亿元</td>
+<td>1.96 亿元</td>
+<td class="up">转正</td>
+<td class="down">扩产投入下降，现金压力缓解</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>9.97 亿元</td>
+<td>12.15 亿元</td>
+<td class="up">+21.86%</td>
+<td class="up">与收入增长基本匹配</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td>应收账款 24.57 亿元</td>
+<td>应收账款 37.18 亿元</td>
+<td class="up">+51.34%</td>
+<td class="down">明显快于收入，是后续最重要财务质量指标</td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">2.2 分业务情况</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">业务</th>
+<th scope="col">2024A 收入</th>
+<th scope="col">2024A 毛利率</th>
+<th scope="col">2025A 收入</th>
+<th scope="col">2025A 毛利率</th>
+<th scope="col">变化</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">电池化学品</th>
+<td>51.16 亿元</td>
+<td>约 12.26%</td>
+<td>66.79 亿元</td>
+<td>10.93%</td>
+<td class="down">收入 +30.57%，但毛利率下降 1.33pct，是规模增长、利润率承压的主战场</td>
+</tr>
+<tr>
+<th scope="row">有机氟化学品</th>
+<td>15.29 亿元</td>
+<td>约 61.09%</td>
+<td>14.26 亿元</td>
+<td>61.74%</td>
+<td class="up">收入 -6.70%，但盈利能力很强，是利润稳定器</td>
+</tr>
+<tr>
+<th scope="row">电子信息化学品</th>
+<td>11.34 亿元</td>
+<td>约 43.10%</td>
+<td>14.65 亿元</td>
+<td>48.25%</td>
+<td class="up">收入 +29.14%，毛利率提升 5.15pct，是结构升级的主要亮点</td>
+</tr>
+<tr>
+<th scope="row">其他</th>
+<td>约 0.68 亿元</td>
+<td class="muted">未披露</td>
+<td>约 0.69 亿元</td>
+<td class="muted">未披露</td>
+<td>占比较小</td>
+</tr>
+</tbody></table></div>
+<p>注：2024A 分业务毛利率根据 2025 年报披露的 2025A 毛利率及同比变动幅度反推；收入和 2025A 毛利率来自公司 2025 年报。</p>
+<p>业务结构判断：新宙邦不是单一电解液公司，而是“电池化学品+有机氟化学品+电子信息化学品”的材料平台。2025 年电池化学品贡献约 69.29% 收入，是收入弹性的核心；但毛利率仅 10.93%，价格周期和竞争格局仍是最大变量。有机氟化学品收入占比约 14.80%，毛利率超过 60%，对利润质量很关键。电子信息化学品收入占比约 15.19%，毛利率提升到 48.25%，若半导体、AI 服务器、电容材料需求继续扩张，该业务有望提高公司整体利润稳定性。</p>
+</section>
+<section id="s3">
+<h2 class="sec"><span class="num">03</span>结论摘要</h2>
+<ul>
+<li>基本面判断：中性偏强</li>
+<li>财务质量：良好</li>
+<li>估值状态：偏高</li>
+<li>财务造假风险初筛：中</li>
+<li>核心理由：</li>
+<ol>
+<li>2026Q1 收入 +67.85%、归母净利 +109.02%、扣非净利 +111.69%，盈利进入修复阶段。</li>
+<li>宁德时代 2026-2028 年电解液框架采购合计基准量 30 万吨，强化电池化学品需求能见度，但价格和实际订单仍以具体订单为准。</li>
+<li>公司具备锂盐、添加剂、溶剂、电解液的一体化能力，并有高毛利有机氟和电子信息化学品分散单一周期风险。</li>
+<li>主要问题是电池化学品毛利率仍低、应收账款增速快于收入、2026Q1 经营现金流/净利润仅 0.29x。</li>
+<li>估值按 2026-07-08 收盘已达到约 584 亿元市值、PB 5.49x、TTM PE 约 43x，需要业绩持续兑现。</li>
+</ol>
+</ul>
+</section>
+<section id="s4">
+<h2 class="sec"><span class="num">04</span>公司与行业</h2>
+<ul>
+<li>主营业务：新型电子化学品及功能材料研发、生产、销售和服务，主要包括电池化学品、有机氟化学品、电子信息化学品三大系列。</li>
+<li>主要产品：锂离子电池电解液、添加剂、新型锂盐、碳酸酯溶剂、超级电容器化学品、钠离子电池化学品、含氟精细化学品、含氟聚合物、电容器化学品、半导体高纯化学品、蚀刻液、剥离液、PI 材料、清洗液、冷却液等。</li>
+<li>市场占有率：公司称电池化学品处于主要供应企业之列，电容器化学品为市场领先企业，电容化学品全球市占率在投资者交流中称接近 50%；具体电解液全球市占率未在本次报告中取得公司最新定量披露。</li>
+<li>行业景气度：锂电电解液链条处于低位筑底修复阶段，储能需求强于动力需求，价格边际企稳但行业仍有产能扩张压力；有机氟与电子信息化学品受半导体、AI 数据中心、国产替代、环保替代拉动，景气度更偏结构性向上。</li>
+<li>核心竞争力：客户结构、配方和质量控制、一体化产业链、全球化产能布局、氟化学技术积累、高毛利电子化学品平台。</li>
+<li>主要依赖：对新能源电池产业链需求、电解液和锂盐价格、头部电池客户采购节奏有明显依赖；但高毛利有机氟和电子信息化学品降低了单一电解液价格周期风险。</li>
+</ul>
+<h3 class="sub">4.1 关键产品价格与行业阶段</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">产品</th>
+<th scope="col">最新公开价格</th>
+<th scope="col">数据日期/来源</th>
+<th scope="col">行业含义</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">六氟磷酸锂</th>
+<td>均价 9.85 万元/吨，区间 9.50-10.20 万元/吨</td>
+<td>2026-07-08，SMM</td>
+<td class="up">较低位修复后趋稳，是电解液利润弹性的关键原料</td>
+</tr>
+<tr>
+<th scope="row">磷酸铁锂电解液</th>
+<td>均价 2.83 万元/吨，区间 2.35-3.30 万元/吨</td>
+<td>2026-07-08，SMM</td>
+<td>储能和 LFP 动力需求主导，价格稳定性取决于六氟与添加剂</td>
+</tr>
+<tr>
+<th scope="row">三元动力电解液</th>
+<td>均价 2.98 万元/吨，区间 2.60-3.35 万元/吨</td>
+<td>2026-07-08，SMM</td>
+<td class="up">三元需求弹性弱于 LFP/储能，价格修复幅度相对有限</td>
+</tr>
+<tr>
+<th scope="row">LiFSI</th>
+<td>均价 14.80 万元/吨，区间 14.60-15.00 万元/吨</td>
+<td>2026-07-08，SMM</td>
+<td class="up">高性能电池添加比例提升带来中长期增量，但当前仍受认证和成本约束</td>
+</tr>
+<tr>
+<th scope="row">VC</th>
+<td>均价 16.40 万元/吨，区间 14.80-18.00 万元/吨</td>
+<td>2026-07-08，SMM</td>
+<td>添加剂价格对电解液毛利影响较大，需周频跟踪</td>
+</tr>
+</tbody></table></div>
+<p>数据来源：<a href="https://newenergy.smm.cn/price/14042-15014" target="_blank" rel="noopener">SMM 新能源价格总览</a>、<a href="https://hq.smm.cn/new-energy/category/202110220001" target="_blank" rel="noopener">SMM 六氟磷酸锂价格</a>、<a href="https://hq.smm.cn/new-energy/category/202006100002" target="_blank" rel="noopener">SMM 磷酸铁锂电解液价格</a>、<a href="https://hq.smm.cn/new-energy/category/202006100001" target="_blank" rel="noopener">SMM 三元动力电解液价格</a>、<a href="https://hq.smm.cn/new-energy/category/202408270002" target="_blank" rel="noopener">SMM LiFSI 价格</a>、<a href="https://hq.smm.cn/new-energy/category/202005210014" target="_blank" rel="noopener">SMM VC 价格</a>。</p>
+<p>行业阶段判断：当前更接近“筑底修复”，不是全面上行。依据是：一方面，新能源汽车和储能电池需求仍增长，SMM 跟踪的电解液和核心原料价格近期稳定，公司 2026Q1 也披露电池化学品销量和价格改善；另一方面，公司 2025 年电池化学品毛利率仅 10.93%，且电池化学品设计产能 68.16 万吨、在建产能 53.60 万吨，行业供给压力仍未完全消化。</p>
+</section>
+<section id="s5">
+<h2 class="sec"><span class="num">05</span>订单与需求验证</h2>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">日期</th>
+<th scope="col">来源与链接</th>
+<th scope="col">项目/订单名称</th>
+<th scope="col">客户/采购方</th>
+<th scope="col">产品/服务</th>
+<th scope="col">金额</th>
+<th scope="col">状态</th>
+<th scope="col">履约周期</th>
+<th scope="col">是否公司正式公告</th>
+<th scope="col">对收入影响</th>
+<th scope="col">可信度</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">2026-06-08</th>
+<td><a href="https://static.cninfo.com.cn/finalpage/2026-06-08/1225356381.PDF" target="_blank" rel="noopener">关于签订长期合作协议的公告</a></td>
+<td>宁德时代长期合作协议</td>
+<td>宁德时代新能源科技股份有限公司</td>
+<td>锂离子电池电解液</td>
+<td class="muted">未披露</td>
+<td>已签长期合作协议/框架协议</td>
+<td>2026-01-01 至 2028-12-31</td>
+<td>是</td>
+<td>基准采购量 2026 年 5 万吨、2027 年 10 万吨、2028 年 15 万吨，合计 30 万吨；实际价格、数量以订单为准</td>
+<td>高</td>
+</tr>
+<tr>
+<th scope="row">2025-03-24</th>
+<td><a href="https://static.cninfo.com.cn/finalpage/2026-03-24/1225026296.PDF" target="_blank" rel="noopener">2025 年年度报告</a></td>
+<td>已签重大销售合同履行情况</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="muted">不适用</td>
+<td>公司披露“不适用”</td>
+<td>2025 年报期内</td>
+<td>是</td>
+<td>年报未披露其他重大销售合同</td>
+<td>高</td>
+</tr>
+<tr>
+<th scope="row">2026-04-29</th>
+<td><a href="https://pdf.dfcfw.com/pdf/H2_AN202604301821834033_1.pdf" target="_blank" rel="noopener">2026Q1 投资者关系活动记录</a></td>
+<td>LiFSI、VC 产能与客户进展</td>
+<td>多家头部电池客户</td>
+<td>LiFSI、VC 等添加剂</td>
+<td class="muted">未披露</td>
+<td>经营交流信息，不是订单</td>
+<td class="muted">未披露</td>
+<td>是</td>
+<td>LiFSI 名义产能接近 5000 吨并规划 1 万吨扩产；VC 产能约 1 万吨；未披露具体订单数量</td>
+<td>中</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>已披露订单/合同：最重要的可核验订单线索是宁德时代 2026-2028 年长期合作协议。协议披露了年度采购基准量和浮动区间，但未披露金额；公司公告明确产品价格、实际采购数量以双方后续具体订单为准。</li>
+<li>招投标与客户侧线索：本次未发现足以确认收入的公开招投标或客户侧采购公告。行业需求主要通过头部客户框架协议、公司销量、产能利用率、合同负债和应收账款间接验证。</li>
+<li>订单状态区分：宁德时代协议是已签长期合作协议，需求能见度高于一般战略合作，但低于固定金额、固定价格、无条件采购合同。</li>
+<li>订单金额与最近年度营收比例：金额未披露，无法计算订单金额/2025 营收比例。若仅看基准数量，30 万吨相当于公司 2025 年电池化学品销量 53.81 万吨的约 55.75%，分三年履约，财务影响取决于价格和实际提货节奏。</li>
+<li>履约周期与收入确认节奏：2026-2028 年分年履约，预计随客户订单交付确认收入，不应一次性确认。</li>
+<li>合同负债/存货/应收/现金流验证：2025 年末合同负债仅 0.64 亿元，2026Q1 末 0.52 亿元，不能作为强订单储备指标；2026Q1 存货和应收账款同步增加，说明需求和备货增强，但回款质量仍需跟踪。</li>
+<li>订单趋势判断：改善。</li>
+<li>信息可信度：高。宁德时代协议为公司正式公告；但具体订单金额和实际订单数量未公开披露，不能自行外推。</li>
+</ul>
+</section>
+<section id="s6">
+<h2 class="sec"><span class="num">06</span>财务质量验证</h2>
+<ul>
+<li>利润与现金流匹配：2025 年经营现金流 11.69 亿元，经营现金流/净利润 1.07x，年度利润现金含量尚可；2026Q1 经营现金流 1.38 亿元，经营现金流/净利润 0.29x，单季现金转化偏弱。</li>
+<li>应收账款与营收匹配：2025 年收入 +22.84%，应收账款 +51.34%；2026Q1 应收账款进一步升至 45.23 亿元。该指标是财务质量的最大红旗，后续需要看账龄、坏账准备、客户回款和经营现金流。</li>
+<li>存货与营收匹配：2025 年存货 +21.86%，大体匹配营收增速；2026Q1 存货升至 15.44 亿元，可能对应订单备货和原材料储备，但若价格下跌或订单不及预期，会形成跌价压力。</li>
+<li>资本开支效率与自由现金流：2023-2025 年资本开支分别为 17.90、11.81、9.72 亿元，2025 自由现金流转正至 1.96 亿元；2026Q1 自由现金流约 -2.08 亿元，说明扩产仍在消耗现金。</li>
+<li>预付款/其他应收款/在建工程/商誉异常：2026Q1 预付款较年初 +106.58%，公司解释主要为预付材料款；该变化与订单和价格预期有关，需要持续跟踪。未发现商誉或其他应收款单独构成主要风险的公开证据。</li>
+<li>资产负债率与有息负债：2025 年资产负债率 43.16%，2026Q1 升至 46.73%；短期借款 2026Q1 升至 7.01 亿元，另有可转债余额约 18.05 亿元。杠杆可控，但扩产和营运资本会继续占用资金。</li>
+<li>综合判断：财务质量“良好但需要跟踪”。年度现金流尚能验证利润，但应收账款与 Q1 现金转化偏弱，使结论不能上调为优秀。</li>
+</ul>
+</section>
+<section id="s7">
+<h2 class="sec"><span class="num">07</span>股东与机构</h2>
+<ul>
+<li>十大股东持股占比：按 2026Q1 披露，前十大股东合计约 41.93%。</li>
+<li>实控人/大股东持股与质押：覃九三持股 13.67%，周达文 7.56%，钟美红 5.96%，郑仲天 5.60%，张桂文 3.11%，邓永红 1.44%；覃九三与邓永红为夫妻关系，相关一致行动人合计约 37.34%。2026Q1 前十名股东表未显示质押或冻结。</li>
+<li>大股东减持或增持：本次未发现影响结论的最新集中减持公告；后续仍需跟踪董监高和实控人变动。</li>
+<li>入驻机构家数：2026Q1 前十大中包括香港中央结算有限公司、ETF、公募/保险资金产品等；更完整的机构家数需以定期报告股东名册或基金季报汇总为准。</li>
+<li>机构类型：北向资金、ETF、公募基金、保险资金均有参与。</li>
+<li>治理风险判断：治理结构相对稳定，控制权集中度适中；未发现当前质押压力。需要关注关联采购，公司 2025 年前五大供应商采购额中关联方采购占年度采购总额 16.08%，虽然已披露，但需要持续看定价公允性和采购必要性。</li>
+</ul>
+<p>数据来源：<a href="https://static.cninfo.com.cn/finalpage/2026-04-28/1225220140.PDF" target="_blank" rel="noopener">2026 年一季报，2026-04-28</a>、<a href="https://static.cninfo.com.cn/finalpage/2026-03-24/1225026296.PDF" target="_blank" rel="noopener">2025 年年度报告，2026-03-24</a>。</p>
+</section>
+<section id="s8">
+<h2 class="sec"><span class="num">08</span>估值与同行对比</h2>
+<ul>
+<li>当前估值：2026-07-08 收盘总市值约 583.73 亿元，动态 PE 30.37x，PB 5.49x，TTM PE 约 43.31x，TTM PS 约 5.31x。</li>
+<li>同行业估值对比：</li>
+</ul>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">公司</th>
+<th scope="col">总市值</th>
+<th scope="col">动态 PE</th>
+<th scope="col">PB</th>
+<th scope="col">2026Q1 营收</th>
+<th scope="col">2026Q1 归母净利</th>
+<th scope="col">2026Q1 毛利率</th>
+<th scope="col">2026Q1 资产负债率</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">新宙邦</th>
+<td>583.73 亿元</td>
+<td>30.37x</td>
+<td>5.49x</td>
+<td>33.61 亿元</td>
+<td>4.80 亿元</td>
+<td>24.28%</td>
+<td>46.73%</td>
+<td class="down">增长质量较好，但估值偏高</td>
+</tr>
+<tr>
+<th scope="row">天赐材料</th>
+<td>908.99 亿元</td>
+<td>13.74x</td>
+<td>4.92x</td>
+<td>66.73 亿元</td>
+<td>16.54 亿元</td>
+<td>38.65%</td>
+<td>35.56%</td>
+<td class="up">对电解液/六氟价格修复弹性更强，估值更低</td>
+</tr>
+<tr>
+<th scope="row">瑞泰新材</th>
+<td>137.13 亿元</td>
+<td>27.14x</td>
+<td>1.89x</td>
+<td>6.77 亿元</td>
+<td>1.26 亿元</td>
+<td>9.15%</td>
+<td>21.70%</td>
+<td>杠杆低，但扣非盈利和规模弱于新宙邦</td>
+</tr>
+<tr>
+<th scope="row">多氟多</th>
+<td>501.41 亿元</td>
+<td>33.38x</td>
+<td>5.87x</td>
+<td>32.16 亿元</td>
+<td>3.76 亿元</td>
+<td>27.61%</td>
+<td>59.83%</td>
+<td class="up">氟化工/锂盐弹性强，但杠杆更高</td>
+</tr>
+</tbody></table></div>
+<p>数据来源：东方财富行情及 F10 财务数据，行情日期 2026-07-08，财务数据截至 2026Q1。</p>
+<ul>
+<li>同行业收入增速/毛利率/扣非净利率/ROE/现金流质量对比：新宙邦的优势在于业务多元化和高毛利有机氟、电子信息化学品支撑，毛利率高于瑞泰新材但低于天赐材料 2026Q1；资产负债率低于多氟多但高于天赐材料和瑞泰新材。与天赐材料相比，新宙邦的直接价格弹性弱一些，但利润稳定性和电子化学品结构成长属性更强。</li>
+<li>估值是否匹配成长与财务质量：当前估值更像市场在提前定价 2026-2028 年电解液需求修复、宁德时代框架采购落地、高毛利业务扩张。如果 2026H1/H2 应收账款回落、经营现金流提升、电子信息化学品继续高增，则估值有支撑；如果仅收入增长但现金流弱、毛利率不升，估值压力会较明显。</li>
+</ul>
+</section>
+<section id="s9">
+<h2 class="sec"><span class="num">09</span>负面信息与风险排查</h2>
+<ul>
+<li>是否亏损：近三年和 2026Q1 均盈利，未出现亏损。</li>
+<li>是否 ST 或退市风险：未发现当前 ST 或退市风险提示。</li>
+<li>审计意见：2025 年年报为标准无保留意见，审计机构为安永华明会计师事务所，审计报告日期为 2026-03-20。</li>
+<li>监管问询/处罚：本次未发现近期对 2025 年报或 2026Q1 构成重大影响的监管处罚；历史上曾有并购事项相关监管问询，不构成当前财务真实性结论。</li>
+<li>诉讼仲裁：本次未发现足以改变基本面判断的重大诉讼仲裁信息；仍需后续跟踪公告。</li>
+<li>负面新闻：主要风险集中在化工安全环保、PFAS 等含氟材料监管、海外贸易摩擦、价格下跌和扩产消化。</li>
+<li>关联交易/客户供应商真实性争议：前五大客户集中度 34.61%，第一大客户占 13.84%，集中度可接受；前五大供应商采购占 35.02%，其中关联方采购占年度采购总额 16.08%，需持续关注价格公允性。</li>
+</ul>
+</section>
+<section id="s10">
+<h2 class="sec"><span class="num">10</span>财务造假风险初筛</h2>
+<ul>
+<li>红旗数量：2 个主要观察项。</li>
+<li>主要红旗：</li>
+<ol>
+<li>2025 年应收账款增速 51.34%，显著快于收入增速 22.84%；2026Q1 应收账款继续上升。</li>
+<li>2026Q1 经营现金流/净利润仅 0.29x，单季利润现金含量偏弱。</li>
+</ol>
+<li>风险等级：中。</li>
+<li>解释：这是财务造假风险初筛，不是事实定性。公司 2025 年审计意见为标准无保留意见，年度经营现金流覆盖净利润，扣非利润与归母利润基本一致，未发现审计或监管确认的财务造假证据。但应收账款和现金转化需要重点跟踪，若后续连续多个季度利润增长而经营现金流偏弱，应下调财务质量判断。</li>
+</ul>
+</section>
+<section id="s11">
+<h2 class="sec"><span class="num">11</span>后续跟踪清单</h2>
+<ul>
+<li>新增订单金额：重点看宁德时代协议是否披露具体年度订单、价格、执行量；其他头部电池客户是否有新长协。</li>
+<li>年初至今累计订单金额：公司当前未公开披露累计订单金额，不能自行估算。</li>
+<li>订单金额/上年营收：宁德时代协议金额未披露，无法计算；可用吨数与公司电池化学品销量作间接比较。</li>
+<li>重点客户复购与新增客户：宁德时代、全球头部动力/储能电池客户、半导体和数据中心液冷客户。</li>
+<li>中标候选人转正式中标/签约情况：本次未发现明确招投标链条，后续关注公告和客户采购平台。</li>
+<li>合同负债、存货、应收账款和经营现金流变化：重点看 2026H1 的应收账款是否继续快于收入、经营现金流/净利润能否回到 1 附近。</li>
+<li>触发深度复盘条件：</li>
+<ol>
+<li>六氟磷酸锂、LiFSI、VC 或电解液价格连续 4 周大幅上涨或下跌。</li>
+<li>宁德时代协议实际执行量、价格或交付节奏出现重大变化。</li>
+<li>2026H1/H2 应收账款继续显著快于收入，且经营现金流低于净利润。</li>
+<li>电池化学品毛利率恢复到 15% 以上，或继续低于 10%。</li>
+<li>电子信息化学品收入增速和毛利率是否继续提升。</li>
+<li>H 股发行、海外产能、LiFSI 和 VC 扩产进度出现关键节点。</li>
+</ol>
+</ul>
+</section>
+<section id="s12">
+<h2 class="sec"><span class="num">12</span>信息边界</h2>
+<ul>
+<li>数据日期：财务数据截至 2026 年一季报和 2025 年年报；行情估值截至 2026-07-08 收盘；SMM 价格截至 2026-07-08。</li>
+<li>主要数据来源：</li>
+<ul>
+<li><a href="https://static.cninfo.com.cn/finalpage/2026-03-24/1225026296.PDF" target="_blank" rel="noopener">新宙邦 2025 年年度报告，2026-03-24</a></li>
+<li><a href="https://static.cninfo.com.cn/finalpage/2026-04-28/1225220140.PDF" target="_blank" rel="noopener">新宙邦 2026 年一季报，2026-04-28</a></li>
+<li><a href="https://static.cninfo.com.cn/finalpage/2026-06-08/1225356381.PDF" target="_blank" rel="noopener">关于签订长期合作协议的公告，2026-06-08</a></li>
+<li><a href="https://pdf.dfcfw.com/pdf/H2_AN202604301821834033_1.pdf" target="_blank" rel="noopener">2026Q1 投资者关系活动记录，2026-04-29</a></li>
+<li><a href="https://quote.eastmoney.com/sz300037.html" target="_blank" rel="noopener">东方财富新宙邦行情</a></li>
+<li><a href="https://newenergy.smm.cn/price/14042-15014" target="_blank" rel="noopener">SMM 新能源价格总览</a></li>
+</ul>
+<li>尚未核验的信息：公司各客户具体订单价格、具体订单金额、未公告客户名单、未公告中标信息、2026H1 财报数据。</li>
+<li>可能影响结论的新公告或市场事件：2026H1 业绩预告/半年报、宁德时代协议执行公告、LiFSI/VC 扩产投产进度、SMM 周频价格趋势、H 股上市进展、环保安全事件、海外贸易政策变化。</li>
+</ul>
+</section>
+
+      <section id="note-friendly">
+        <h2 class="sec"><span class="num">◎</span>基本面速记</h2>
+        <div class="note-copy">
+          <h2>可复制摘要</h2>
+          <pre><code>【基本面速记】
+公司：新宙邦（300037.SZ）
+结论：基本面（中性偏强），财务质量（良好），估值（偏高）。
+核心看点：
+1. 2026Q1 收入 33.61 亿元，同比 +67.85%；归母净利 4.80 亿元，同比 +109.02%；扣非净利 4.70 亿元，同比 +111.69%。
+2. 宁德时代 2026-2028 年电解液长期合作协议披露基准采购量 5/10/15 万吨，合计 30 万吨，但金额和实际订单价格未披露。
+3. 电池化学品贡献约 69% 收入，是需求弹性来源；有机氟和电子信息化学品毛利率高，是利润质量支撑。
+主要风险：
+1. 电池化学品 2025 毛利率仅 10.93%，行业仍是筑底修复，不是全面高景气。
+2. 2025 应收账款 +51.34%，快于收入；2026Q1 经营现金流/净利润仅 0.29x。
+财务造假风险初筛：中。理由：年度审计与扣非利润正常，但应收账款增速和单季现金转化偏弱需要跟踪。
+订单/需求验证：改善。依据：宁德时代长期合作协议、2026Q1 电池化学品量价改善、储能需求增长；但具体订单金额未披露。
+后续跟踪：六氟、电解液、LiFSI、VC 周频价格；宁德时代实际执行量；2026H1 应收账款、经营现金流、毛利率和电子信息化学品增长。</code></pre>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="disclaimer">
+      免责声明:本报告为基于公开财报、公告、行情与新闻资料的整理和财务质量初筛,不构成任何投资建议,不保证未来收益。投资有风险,决策需谨慎。所有数据以公司正式披露为准。
+    </div>
+    <div>报告主体:新宙邦(300037.SZ) | 数据口径:财务数据截至 2026 年一季报和 2025 年年报；行情估值截至 2026-07-08 收盘；SMM 价格截至 2026-07-08。</div>
+    <div>主要数据来源:详见信息边界章节</div>
+    <div>自包含离线 HTML · 内联 CSS / 极简内联 JS · 可直接在浏览器打开</div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var links = document.querySelectorAll('nav.toc a');
+  var map = {};
+  for (var i=0;i<links.length;i++){
+    var href = links[i].getAttribute('href') || '';
+    if (href.charAt(0) === '#') map[href.slice(1)] = links[i];
+  }
+  var sections = document.querySelectorAll('main section[id]');
+  function onScroll(){
+    var pos = (window.scrollY || document.documentElement.scrollTop) + 90;
+    var cur = null;
+    for (var j=0;j<sections.length;j++){
+      if (sections[j].offsetTop <= pos) cur = sections[j].id;
+    }
+    for (var k=0;k<links.length;k++) links[k].classList.remove('active');
+    if (cur && map[cur]) {
+      map[cur].classList.add('active');
+      var act = map[cur];
+      var sc = document.getElementById('toc-scroll');
+      if (sc && act.offsetLeft < sc.scrollLeft) sc.scrollLeft = act.offsetLeft - 8;
+      if (sc && act.offsetLeft + act.offsetWidth > sc.scrollLeft + sc.clientWidth) {
+        sc.scrollLeft = act.offsetLeft + act.offsetWidth - sc.clientWidth + 8;
+      }
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
+</body>
+</html>
