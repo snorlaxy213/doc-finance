@@ -1,6 +1,6 @@
 ---
 name: fundamental-stock-review
-description: Analyze a listed company's fundamentals and generate both a Markdown report and a standalone HTML report with a fixed structure covering business quality, industry position, orders/backlog, contract wins, growth, profitability, cash-flow quality, balance-sheet quality, valuation, ownership, institutional participation, market share, losses, negative news, and financial-fraud risk flags. Use when the user asks for 基本面分析, 财报分析, 财务质量分析, 股票深度复盘, 订单跟踪, 中标分析, 重大合同, 订单消息整理, backlog, 合同负债, 客户采购, 招投标信息, 是否财务造假, or wants to evaluate a stock using indicators such as 流通市值, 市盈率, 净利润, 同比增长, 每股收益, ROE, 毛利率, 十大股东占比, 机构家数, 市场占有率, 亏损, or 负面新闻.
+description: Analyze and continuously update a listed company's fundamentals, preserve immutable Markdown/HTML snapshots and conclusion history, and archive cited official PDF filings. Covers business quality, industry position, orders/backlog, contract wins, growth, profitability, cash-flow quality, balance-sheet quality, valuation, ownership, institutional participation, market share, losses, negative news, and financial-fraud risk flags. Use when the user asks for 基本面分析, 财报分析, 财务质量分析, 股票深度复盘, 后续更新, 业绩预告跟踪, 订单跟踪, 中标分析, 重大合同, 订单消息整理, backlog, 合同负债, 客户采购, 招投标信息, 是否财务造假, or wants to evaluate a stock using indicators such as 流通市值, 市盈率, 净利润, 同比增长, 每股收益, ROE, 毛利率, 十大股东占比, 机构家数, 市场占有率, 亏损, or 负面新闻.
 ---
 
 # Fundamental Stock Review
@@ -15,6 +15,11 @@ description: Analyze a listed company's fundamentals and generate both a Markdow
 - For orders, contracts, and bidding information, distinguish 招标, 中标候选人, 中标公告, 合同签署, 框架协议, delivered revenue, and unverified market rumor.
 - Treat negative governance, audit, regulatory, or cash-flow issues as possible conclusion downgrades even when growth and valuation look attractive.
 - Do not infer financial fraud from a single indicator. Present it as fraud-risk screening unless there is confirmed regulatory, audit, or legal evidence.
+- Treat a company review as a continuous research record, not an isolated rewrite. Before updating an existing company, read the stable latest report, the research timeline, and unresolved tracking items.
+- Preserve every dated Markdown/HTML pair as an immutable snapshot. Never overwrite, edit, or delete a dated historical report during a later update.
+- When a previous report exists, explicitly distinguish newly confirmed facts, invalidated assumptions, unchanged views, and conclusion changes. Do not silently change conclusion wording or reset the tracking list.
+- Archive every official PDF filing materially cited by the report, prefer company/exchange/statutory-disclosure originals, verify the file, deduplicate by SHA-256, and cite the verified local relative path. Keep the official URL in the source index.
+- Read [references/versioning-and-sources.md](references/versioning-and-sources.md) before updating an existing company, publishing report artifacts, migrating historical reports, or archiving source PDFs.
 
 ## Output Artifacts
 
@@ -29,16 +34,32 @@ Use this file layout when working inside the user's `doc-finance` workspace:
 Use these filename patterns:
 
 ```text
-<公司简称>_<股票代码>_基本面分析_<YYYYMMDD>.md
-<公司简称>_<股票代码>_基本面分析_<YYYYMMDD>.html
+<公司简称>_<股票代码>_基本面分析_<YYYYMMDD_HHMMSS>.md
+<公司简称>_<股票代码>_基本面分析_<YYYYMMDD_HHMMSS>.html
+```
+
+Also maintain these stable artifacts for each company:
+
+```text
+<公司简称>_<股票代码>_基本面分析_最新.md
+<公司简称>_<股票代码>_基本面分析_最新.html
+<公司简称>_<股票代码>_研究轨迹.md
+<公司简称>_<股票代码>_研究轨迹.html
+原始资料/<YYYY>/<公告日期>_<报告期>_<文档类型>_<公告标识>.pdf
+原始资料/资料索引.md
+.research/state.yaml
 ```
 
 Rules:
 
-- Use the current date as `YYYYMMDD`; when a same-date file already exists, append a time suffix such as `_HHMMSS` rather than overwriting.
+- Use the current date and time as `YYYYMMDD_HHMMSS` for new snapshots. Existing date-only files remain valid historical snapshots and must not be renamed merely for consistency.
 - If the user provides a different report root, use that root. Otherwise, use `/Users/superman/Documents/doc-finance/reports` when available; in other workspaces, use `reports/`.
+- Use baseline mode when no prior report exists. Use incremental-update mode when a prior report exists. Use full-rebuild mode for an annual report, accounting restatement, major business transformation, or an explicit user request; even a full rebuild must compare with the prior conclusion.
+- In incremental-update mode, carry forward still-valid confirmed facts, re-check time-sensitive facts, update affected sections, and retain unresolved tracking items. Do not rewrite unchanged analysis merely for stylistic variation.
 - Save the Markdown report first, using the fixed output structure below and valid GitHub-Flavored Markdown tables.
 - Generate the HTML from the same Markdown using `scripts/render_fundamental_html.py`; do not hand-maintain a separate HTML narrative that can drift from the Markdown.
+- Archive official PDF evidence with `scripts/archive_disclosures.py` before final publication, then use local links such as `原始资料/2026/<file>.pdf` in the Markdown. Do not rewrite old reports solely to replace their remote links.
+- Publish new reports with `scripts/publish_fundamental_review.py`; it creates the immutable timestamped snapshot, atomically refreshes the stable latest pair, and rebuilds the research timeline and state index.
 - Start the Markdown body with `### 1. 核心财务指标` immediately after the H1 title. Do not place a free-standing conclusion, executive summary, background, or time-range paragraph between the title and section 1.
 - Keep the HTML self-contained: inline CSS/JS, no external assets, no network font or CDN dependency.
 - Do not fabricate visualizations. If chart data is not explicitly present in the report tables, let the HTML render tables and summary cards only.
@@ -49,11 +70,19 @@ Example command after writing the Markdown file:
 
 ```bash
 python3 /Users/superman/Mine/space/ai/codex-skills/fundamental-stock-review/scripts/render_fundamental_html.py \
-  /absolute/path/to/<公司简称>_<股票代码>_基本面分析_<YYYYMMDD>.md \
-  --output-html /absolute/path/to/<公司简称>_<股票代码>_基本面分析_<YYYYMMDD>.html
+  /absolute/path/to/<公司简称>_<股票代码>_基本面分析_<YYYYMMDD_HHMMSS>.md \
+  --output-html /absolute/path/to/<公司简称>_<股票代码>_基本面分析_<YYYYMMDD_HHMMSS>.html
 ```
 
-If the Markdown is created in a temporary location, use `--reports-root /Users/superman/Documents/doc-finance/reports --copy-md` so the renderer copies the Markdown into the standard report folder.
+Preferred publication command for a completed report:
+
+```bash
+python3 /Users/superman/Mine/space/ai/codex-skills/fundamental-stock-review/scripts/publish_fundamental_review.py \
+  /absolute/path/to/completed-report.md \
+  --reports-root /Users/superman/Documents/doc-finance/reports
+```
+
+The renderer's `--copy-md` flow remains available for legacy one-off rendering. For continuous reports, always use `publish_fundamental_review.py` so the latest pair, timeline, and state stay synchronized.
 
 ## Data Collection Checklist
 
@@ -304,12 +333,29 @@ After the table, add `业务结构判断` covering which segments are the real g
 
 ### 3. 结论摘要
 
+#### 3.1 当前结论
+
 - 一句话结论：用一行综合盈利趋势、财务质量、估值与关键治理风险；不要只复述最新财务预报
 - 基本面判断：强 / 中性 / 偏弱 / 高风险
 - 财务质量：优秀 / 良好 / 一般 / 存疑
 - 估值状态：偏低 / 合理 / 偏高 / 无法判断
 - 财务造假风险初筛：低 / 中 / 高
 - 核心理由：用 3-5 条说明，不超过一屏
+
+Keep these labels exactly once in this subsection so the renderer can extract them.
+
+#### 3.2 与上次报告相比
+
+When no prior report exists, write `首次建立研究基线，无上次报告可比` and identify the baseline date. Otherwise include:
+
+| 判断维度 | 上次结论 | 本次结论 | 变化级别 | 变化原因与证据 |
+|---|---|---|---|---|
+| 基本面 |  |  | 不变/微调/上调/下调 |  |
+| 财务质量 |  |  | 不变/微调/上调/下调 |  |
+| 估值 |  |  | 不变/微调/上调/下调 |  |
+| 财务造假风险初筛 |  |  | 不变/微调/上调/下调 |  |
+
+After the table, state `本次触发事件`, `新增确认事实`, `被证伪或弱化的旧假设`, `仍然有效的旧观点`, and `仍待验证事项`. A conclusion may remain unchanged; record that explicitly rather than inventing a change.
 
 ### 4. 公司与行业
 
@@ -382,8 +428,13 @@ Use this section when the company discloses orders/backlog, the user asks about 
 
 ### 11. 后续跟踪清单
 
-- 新增订单金额：
-- 年初至今累计订单金额：
+Carry forward every unresolved item from the prior report. An item can disappear only after it is explicitly marked `已验证`, `已证伪`, or `已关闭`.
+
+| 跟踪事项 | 首次提出 | 上次状态 | 本次证据 | 当前状态 | 下次验证时间/触发条件 |
+|---|---|---|---|---|---|
+|  |  | 待验证/部分验证/已验证/已证伪/已关闭 |  |  |  |
+
+- 新增订单金额与年初至今累计订单金额：
 - 订单金额/上年营收：
 - 重点客户复购与新增客户：
 - 中标候选人转正式中标/签约情况：
@@ -392,9 +443,10 @@ Use this section when the company discloses orders/backlog, the user asks about 
 
 ### 12. 信息边界
 
-- 分析范围：报告执行日、行情日期、覆盖的财务期间，以及可能削弱历史可比性的会计更正或口径提示
+- 分析范围：报告执行日、行情日期、覆盖的财务期间、使用的上次报告版本，以及可能削弱历史可比性的会计更正或口径提示
 - 数据日期：
 - 主要数据来源：
+- 本地原始资料：列出本次实际引用的已归档 PDF 相对路径；未成功归档的文件需注明
 - 尚未核验的信息：
 - 可能影响结论的新公告或市场事件：
 

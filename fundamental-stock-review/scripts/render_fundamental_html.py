@@ -7,6 +7,7 @@ import html
 import re
 import shutil
 import sys
+import urllib.parse
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -41,18 +42,31 @@ def normalize_space(text: str) -> str:
 
 
 def inline_md(text: str) -> str:
-    escaped = html.escape(text.strip())
-    escaped = re.sub(
-        r"\[([^\]]+)\]\((https?://[^)]+)\)",
-        lambda m: (
-            f'<a href="{m.group(2)}" target="_blank" rel="noopener">'
-            f"{m.group(1)}</a>"
-        ),
-        escaped,
-    )
+    placeholders: list[tuple[str, str]] = []
+
+    def replace_link(match: re.Match[str]) -> str:
+        label = match.group(1)
+        url = match.group(2).strip()
+        parsed = urllib.parse.urlparse(url)
+        is_web = parsed.scheme in {"http", "https"}
+        is_relative = not parsed.scheme and not url.startswith(("//", "/", "\\"))
+        if not (is_web or is_relative):
+            return match.group(0)
+        href = urllib.parse.quote(url, safe="/:?&=%#@+;,._~-()")
+        target = ' target="_blank" rel="noopener"' if is_web else ""
+        token = f"@@CODEXLINK{len(placeholders)}@@"
+        placeholders.append(
+            (token, f'<a href="{html.escape(href, quote=True)}"{target}>{html.escape(label)}</a>')
+        )
+        return token
+
+    protected = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", replace_link, text.strip())
+    escaped = html.escape(protected)
     escaped = re.sub(r"`([^`]+)`", r"<code>\1</code>", escaped)
     escaped = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", escaped)
     escaped = re.sub(r"\*([^*]+)\*", r"<em>\1</em>", escaped)
+    for token, link_html in placeholders:
+        escaped = escaped.replace(token, link_html)
     return escaped
 
 
@@ -613,6 +627,19 @@ def build_forecast_panel(markdown: str, tables: list[TableBlock]) -> str:
     )
 
 
+def build_update_panel(markdown: str) -> str:
+    update = find_subsection(markdown, "与上次报告相比")
+    if not update.strip():
+        return ""
+    rendered = render_markdown(update).html
+    return (
+        '<section class="update-panel" aria-label="本次更新">'
+        '<div class="update-head"><span>RESEARCH CONTINUITY</span><h2>本次更新 · 与上次报告相比</h2></div>'
+        f'<div class="update-body">{rendered}</div>'
+        '</section>'
+    )
+
+
 def list_html(items: list[str], fallback: str) -> str:
     if not items:
         items = [fallback]
@@ -722,6 +749,7 @@ def render_report(markdown: str, template: str, args: argparse.Namespace) -> tup
         "risk_points": list_html(summary["risks"], "主要风险详见负面信息与风险排查、财务质量验证章节。"),
         "kpi_cards": build_kpis(tables, valuation),
         "forecast_panel": build_forecast_panel(markdown, tables),
+        "update_panel": build_update_panel(markdown),
         "toc": build_toc(rendered.toc),
         "content_html": rendered.html,
         "note_block": html.escape(str(summary.get("note_block") or "未提取到基本面速记块。")),

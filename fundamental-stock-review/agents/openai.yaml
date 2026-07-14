@@ -1,4 +1,4 @@
 interface:
   display_name: "基本面分析"
-  short_description: "生成基本面 Markdown 报告，并同步保存可浏览的 HTML 报告。"
-  default_prompt: "使用 $fundamental-stock-review 分析这只股票的基本面，输出核心财务指标、订单需求验证、趋势对比、估值与财务风险，并保存 Markdown 和 HTML 到 reports/<股票代码>/基本面分析/。"
+  short_description: "连续跟踪基本面结论，归档证据，并生成 Markdown 与 HTML。"
+  default_prompt: "使用 $fundamental-stock-review 连续分析这只股票的基本面；如已有报告，先承接上一版结论与待验证事项，说明本次变化，归档引用的正式财报和业绩预告 PDF，并保存不可变快照、最新 Markdown/HTML 与研究轨迹。"
