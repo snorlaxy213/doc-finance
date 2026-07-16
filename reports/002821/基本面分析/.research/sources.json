@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-15T12:17:44+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260331-1cc23f41",
+      "title": "2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260331",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-03-31/1225053960.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260331_2025A_年度报告_1225053960.pdf",
+      "sha256": "1cc23f41b10caa5d07ae101091faf1b9f8dd978003d2226f42399ab75ff87fc0",
+      "bytes": 5151880,
+      "pages": null,
+      "retrieved_at": "2026-07-15T12:04:13+08:00",
+      "used_by": [
+        "2026-07-15首次基线报告"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250329-aa1366c5",
+      "title": "2024年年度报告",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250329",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-03-29/1222941173.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250329_2024A_年度报告_1222941173.pdf",
+      "sha256": "aa1366c5203a52327a1964037c2f7588026c1f772a19910c99624e502c27d702",
+      "bytes": 5298604,
+      "pages": null,
+      "retrieved_at": "2026-07-15T12:04:14+08:00",
+      "used_by": [
+        "2026-07-15首次基线报告"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260428-053341be",
+      "title": "2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260428",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-28/1225203215.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260428_2026Q1_第一季度报告_1225203215.pdf",
+      "sha256": "053341beff270b3c8689014e66b858006eefbbb736a0cdcb4856b62b5902c20b",
+      "bytes": 710037,
+      "pages": null,
+      "retrieved_at": "2026-07-15T12:04:14+08:00",
+      "used_by": [
+        "2026-07-15首次基线报告"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260403-39684782",
+      "title": "2025年度业绩说明会记录",
+      "document_type": "正式披露",
+      "period": "2025",
+      "published_date": "20260403",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-03/1225080534.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260403_2025_正式披露_1225080534.pdf",
+      "sha256": "39684782841694d97e6b37a8991fd302c343a632e842d23976d8975da12d4904",
+      "bytes": 137888,
+      "pages": null,
+      "retrieved_at": "2026-07-15T12:04:15+08:00",
+      "used_by": [
+        "2026-07-15首次基线报告"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260331-ad3338e3",
+      "title": "2025年度内部控制审计报告",
+      "document_type": "审计报告",
+      "period": "2025",
+      "published_date": "20260331",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-03-31/1225053982.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260331_2025_审计报告_1225053982.pdf",
+      "sha256": "ad3338e39561f9738e0487cbc86a0ba5c000db7e121d14e31f70096097062b16",
+      "bytes": 78841,
+      "pages": null,
+      "retrieved_at": "2026-07-15T12:04:15+08:00",
+      "used_by": [
+        "2026-07-15首次基线报告"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260618-bdbd8a27",
+      "title": "2025年度权益分派实施公告",
+      "document_type": "正式披露",
+      "period": "2025",
+      "published_date": "20260618",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-06-18/1225376346.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260618_2025_正式披露_1225376346.pdf",
+      "sha256": "bdbd8a278b4266ca6fa2e18e1bc313cefabf8d0b13cb826c6e28c0158cd2a7ff",
+      "bytes": 147523,
+      "pages": null,
+      "retrieved_at": "2026-07-15T12:04:15+08:00",
+      "used_by": [
+        "2026-07-15首次基线报告"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260709-99fbda18",
+      "title": "2026年A股限制性股票激励计划草案",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260709",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-07-09/1225415698.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260709_2026_正式披露_1225415698.pdf",
+      "sha256": "99fbda1857b12d2127badd44a7a9bd8471439cd25471d7710d3d6f8d95b60826",
+      "bytes": 232363,
+      "pages": null,
+      "retrieved_at": "2026-07-15T12:04:15+08:00",
+      "used_by": [
+        "2026-07-15首次基线报告"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260626-37996217",
+      "title": "股票交易异常波动公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260626",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-06-26/1225387349.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260626_期间待核验_正式披露_1225387349.pdf",
+      "sha256": "3799621792fc388d73d21294ea7c0a91b9dec0f5e06ce858b238cd8e8b881869",
+      "bytes": 124311,
+      "pages": null,
+      "retrieved_at": "2026-07-15T12:04:16+08:00",
+      "used_by": [
+        "2026-07-15首次基线报告"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250424-b1c9b475",
+      "title": "2025年一季度报告",
+      "document_type": "正式披露",
+      "period": "2025",
+      "published_date": "20250424",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-04-24/1223237584.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250424_2025_正式披露_1223237584.pdf",
+      "sha256": "b1c9b475c86f4b3bde0e9367e39ae384ed9c3e3b1f25760fc432026dc3f30faf",
+      "bytes": 783792,
+      "pages": null,
+      "retrieved_at": "2026-07-15T12:13:30+08:00",
+      "used_by": [
+        "2026-07-15首次基线报告"
+      ],
+      "status": "已归档"
+    }
+  ]
+}

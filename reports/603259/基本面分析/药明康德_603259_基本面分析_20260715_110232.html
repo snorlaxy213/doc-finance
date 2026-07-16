@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>药明康德(603259)基本面分析</title>
+<style>
+:root{
+  --ink:#1a2433;
+  --ink-soft:#46546a;
+  --line:#d8dee7;
+  --line-soft:#eef1f5;
+  --bg:#ffffff;
+  --brand:#1f3a5f;
+  --brand-2:#3b5b85;
+  --brand-light:#eaf0f8;
+  --accent:#8a6d3b;
+  --up:#b73333;
+  --down:#2f7a52;
+  --warn:#a06a1f;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Microsoft YaHei","Source Han Sans SC",system-ui,-apple-system,sans-serif;
+  color:var(--ink);
+  background:#fff;
+  line-height:1.7;
+  font-size:14.5px;
+  font-variant-numeric:tabular-nums;
+  -webkit-font-smoothing:antialiased;
+}
+.page{max-width:1600px;margin:0 auto;padding:0 32px;}
+.masthead{
+  display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px;
+  border-bottom:2px solid var(--brand);padding:24px 0 18px;
+}
+.masthead .m-left{min-width:280px;}
+.masthead .kode{font-size:12px;letter-spacing:.12em;color:var(--ink-soft);}
+.masthead h1{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC","Times New Roman",serif;
+  font-size:30px;font-weight:700;margin:6px 0 4px;color:var(--brand);letter-spacing:.5px;
+}
+.masthead .sub{font-size:13px;color:var(--ink-soft);}
+.masthead .meta{font-size:12.5px;color:var(--ink-soft);margin-top:12px;}
+.masthead .meta b{color:var(--ink);font-weight:600;}
+.masthead .m-stats{display:flex;gap:34px;flex-wrap:wrap;}
+.masthead .m-stats .ms-v{font-size:25px;font-weight:700;color:var(--brand);line-height:1;font-variant-numeric:tabular-nums;}
+.masthead .m-stats .ms-v span{font-size:13px;font-weight:500;color:var(--ink-soft);margin-left:2px;}
+.masthead .m-stats .ms-l{font-size:11.5px;color:var(--ink-soft);margin-top:5px;letter-spacing:.02em;}
+.verdict{
+  margin:16px 0 4px;border:1px solid var(--line);border-left:4px solid var(--brand);
+  background:#fbfcfe;border-radius:4px;padding:16px 20px;
+}
+.verdict-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-bottom:14px;}
+.verdict-head h2{margin:0;font-size:14px;letter-spacing:.1em;color:var(--brand);font-weight:700;}
+.verdict-headline{
+  margin:-2px 0 14px;padding:10px 12px;border:1px solid #dfe7f1;border-radius:4px;
+  background:#fff;color:var(--ink);font-size:15px;font-weight:600;line-height:1.7;
+}
+.verdict-headline .label{display:block;margin-bottom:2px;color:var(--brand);font-size:11px;font-weight:700;letter-spacing:.1em;}
+.badges{display:flex;flex-direction:row;flex-wrap:wrap;gap:8px;margin:0;}
+.badge{
+  display:inline-flex;align-items:center;gap:6px;font-size:12.5px;
+  padding:5px 11px;border-radius:999px;font-weight:600;line-height:1.4;
+}
+.badge .k{font-weight:500;opacity:.85;}
+.badge.fund{background:#fdecec;color:#9a2c2c;}
+.badge.qual{background:#eef3f8;color:#1f3a5f;}
+.badge.valu{background:#fdf3e3;color:#8a5a16;}
+.badge.fraud{background:#eef7f1;color:#2f6a48;}
+.verdict-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 40px;}
+.verdict-grid .v-title{font-size:12.5px;font-weight:700;letter-spacing:.04em;margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid var(--line);}
+.verdict-grid .v-title::before{content:"";display:inline-block;width:3px;height:12px;margin-right:7px;vertical-align:-1px;border-radius:2px;}
+.verdict-grid .v-up .v-title{color:var(--brand);}
+.verdict-grid .v-up .v-title::before{background:var(--brand);}
+.verdict-grid .v-risk .v-title{color:var(--warn);}
+.verdict-grid .v-risk .v-title::before{background:var(--warn);}
+.verdict-grid ul{margin:0;padding-left:18px;}
+.verdict-grid li{font-size:13.5px;margin:6px 0;line-height:1.65;}
+.note{
+  font-size:12px;color:var(--ink-soft);background:var(--line-soft);
+  padding:3px 8px;border-radius:3px;display:inline-block;
+}
+.verdict .note{display:block;margin-top:14px;}
+.kpis{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:1px;margin:16px 0 4px;
+  background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden;
+}
+.kpi{background:#fff;padding:13px 15px;min-width:0;}
+.kpi .kl{font-size:11.5px;color:var(--ink-soft);line-height:1.3;min-height:30px;}
+.kpi .kv{font-size:20px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;margin-top:5px;word-break:break-word;}
+.kpi .kv.up{color:var(--up);}
+.kpi .kv.down{color:var(--down);}
+.kpi .ks{font-size:11px;color:var(--ink-soft);margin-top:3px;font-variant-numeric:tabular-nums;}
+.forecast-panel{
+  margin:16px 0 6px;padding:18px 20px;border:1px solid #d8e2ef;border-left:4px solid var(--brand);
+  border-radius:4px;background:linear-gradient(135deg,#f7faff 0%,#fff 68%);
+}
+.forecast-panel.forecast-empty{padding:14px 18px;background:#fbfcfe;border-left-color:#a8b5c4;}
+.forecast-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;flex-wrap:wrap;}
+.forecast-kicker{display:block;font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--brand);margin-bottom:5px;}
+.forecast-head h2{margin:0;font-size:18px;line-height:1.35;color:var(--ink);}
+.forecast-tags{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end;}
+.forecast-tag{display:inline-flex;padding:4px 9px;border-radius:999px;background:#eaf1f8;color:#294d73;font-size:11px;font-weight:600;}
+.forecast-tag.warn{background:#fff0dc;color:#8a5615;}
+.forecast-tag.neutral{background:#edf0f3;color:#5e6873;}
+.forecast-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px;}
+.forecast-card{background:#fff;border:1px solid #e0e7ef;border-radius:4px;padding:12px 14px;min-width:0;}
+.forecast-label{font-size:11px;color:var(--ink-soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.forecast-value{font-size:20px;font-weight:700;color:var(--brand);line-height:1.3;margin-top:4px;font-variant-numeric:tabular-nums;}
+.forecast-change{font-size:11.5px;color:var(--ink-soft);margin-top:4px;}
+.forecast-note{margin:11px 0 0!important;font-size:11px!important;color:var(--ink-soft)!important;}
+.update-panel{
+  margin:16px 0 6px;padding:18px 20px;border:1px solid #ded7c9;border-left:4px solid var(--accent);
+  border-radius:4px;background:linear-gradient(135deg,#fffcf6 0%,#fff 72%);
+}
+.update-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:10px;}
+.update-head span{font-size:10.5px;font-weight:700;letter-spacing:.12em;color:var(--accent);}
+.update-head h2{font-size:18px;margin:0;color:var(--ink);}
+.update-body section{border:0;padding:0;}.update-body h3.sub{margin-top:8px;}
+.update-body .tbl-scroll{background:#fff;}
+.layout{
+  display:grid;grid-template-columns:208px minmax(0,1fr);gap:36px;align-items:start;
+  padding:14px 0 0;
+}
+.sidebar{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow-y:auto;padding:0 8px 0 0;}
+.sidebar::-webkit-scrollbar{width:6px;}
+.sidebar::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px;}
+.toc{position:static;background:transparent;border:none;margin:12px 0 16px;padding:0;}
+.toc .scroll{overflow:visible;white-space:normal;display:flex;flex-direction:column;gap:2px;}
+.toc a{
+  display:flex;align-items:center;gap:9px;
+  font-size:14px;line-height:1.25;color:var(--ink-soft);text-decoration:none;
+  padding:6px 8px;border-radius:5px;margin:0;border:1px solid transparent;
+}
+.toc a .toc-num{
+  flex:0 0 auto;font-family:"Times New Roman",serif;font-size:12px;font-weight:600;
+  color:var(--ink-soft);background:var(--line-soft);
+  width:22px;height:22px;border-radius:4px;font-variant-numeric:tabular-nums;
+  display:inline-flex;align-items:center;justify-content:center;
+}
+.toc a:hover{background:var(--brand-light);color:var(--brand);}
+.toc a:hover .toc-num{background:#fff;color:var(--brand);}
+.toc a.active{background:var(--brand);color:#fff;font-weight:600;}
+.toc a.active .toc-num{background:rgba(255,255,255,.22);color:#fff;}
+.main{min-width:0;}
+section{padding:16px 0 8px;border-top:1px solid var(--line-soft);scroll-margin-top:64px;}
+section:first-of-type{border-top:none;padding-top:6px;}
+h2.sec{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",serif;
+  font-size:19px;color:var(--brand);margin:6px 0 12px;font-weight:700;
+  display:flex;align-items:baseline;gap:10px;
+}
+h2.sec .num{
+  font-family:"Times New Roman",serif;font-size:14px;color:#fff;background:var(--brand);
+  padding:2px 9px;border-radius:3px;letter-spacing:.05em;font-weight:600;flex:0 0 auto;
+}
+h3.sub{font-size:14.5px;color:var(--ink);margin:16px 0 6px;font-weight:700;}
+p{margin:8px 0;}
+ul,ol{margin:8px 0;padding-left:22px;}
+li{margin:4px 0;}
+strong{color:var(--ink);}
+.tbl-scroll{overflow-x:auto;margin:10px 0;border:1px solid var(--line);border-radius:4px;}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums;}
+thead th{
+  background:#f3f6fa;color:var(--brand);font-weight:700;text-align:right;
+  padding:10px 12px;border-bottom:1.5px solid var(--brand);white-space:nowrap;
+  font-size:12.5px;letter-spacing:.02em;
+}
+thead th[scope=col]:first-child{text-align:left;}
+tbody td{padding:9px 12px;border-bottom:1px solid var(--line-soft);text-align:right;white-space:normal;word-break:break-word;}
+tbody th[scope=row]{
+  text-align:left;color:var(--ink);font-weight:600;
+  padding:9px 12px;border-bottom:1px solid var(--line-soft);white-space:nowrap;font-size:13px;background:#fafbfd;
+}
+tbody tr:nth-child(even) td{background:#fafbfd;}
+tbody tr:hover td{background:var(--brand-light);}
+.up{color:var(--up);}
+.down{color:var(--down);}
+.muted{color:var(--ink-soft);}
+a{color:var(--brand-2);text-decoration:underline;text-underline-offset:2px;word-break:break-all;}
+a:hover{color:var(--brand);}
+.note-copy{
+  margin:20px 0;border:1px solid var(--line);border-left:4px solid var(--accent);
+  background:#fbfcfe;border-radius:4px;padding:14px 16px;
+}
+.note-copy h2{margin:0 0 10px;font-size:13px;letter-spacing:.1em;color:var(--brand);font-weight:700;}
+pre{
+  margin:10px 0;padding:12px 14px;background:#f7f9fc;border:1px solid var(--line-soft);
+  border-radius:4px;overflow:auto;color:var(--ink);font-size:12.5px;line-height:1.6;
+}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;}
+footer{
+  margin-top:22px;border-top:2px solid var(--brand);padding:14px 0 30px;
+  font-size:11.5px;color:var(--ink-soft);line-height:1.7;font-variant-numeric:tabular-nums;
+}
+footer .disclaimer{background:var(--line-soft);padding:8px 12px;border-radius:3px;margin-bottom:8px;}
+@media (max-width:1100px){
+  .layout{grid-template-columns:1fr;gap:0;}
+  .sidebar{position:static;max-height:none;overflow:visible;padding:0;}
+  .toc{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);
+    border-bottom:1px solid var(--line);margin:0 -32px 16px;padding:10px 32px;}
+  .toc .scroll{overflow-x:auto;white-space:nowrap;flex-direction:row;}
+  .toc a{display:inline-flex;white-space:nowrap;border-left:none;border:1px solid transparent;padding:3px 9px;margin:2px;}
+  .toc a.active{border-left:none;background:var(--brand);color:#fff;}
+}
+@media (max-width:760px){
+  .verdict-grid{grid-template-columns:1fr;}
+  .kpis{grid-template-columns:repeat(3,1fr);}
+  .forecast-grid{grid-template-columns:1fr;}
+  .page{padding:0 18px;}
+  .masthead .m-stats{gap:22px;}
+}
+@media (max-width:460px){.kpis{grid-template-columns:repeat(2,1fr);}}
+@media print{
+  body{background:#fff;font-size:10.5px;}
+  .page{max-width:none;padding:0;}
+  .layout{grid-template-columns:1fr;}
+  .sidebar{position:static;max-height:none;overflow:visible;}
+  .toc{position:static;border:none;padding:0;margin:0 0 8px;}
+  .toc .scroll{overflow:visible;display:block;}
+  .toc a{font-size:10px;padding:1px 5px;display:inline-flex;}
+  .toc a.active{background:transparent;color:var(--ink);}
+  section{break-inside:avoid;padding-top:10px;}
+  table{font-size:9.5px;}
+  thead{display:table-header-group;}
+  tbody tr{break-inside:avoid;}
+  .badge{border:1px solid #ccc;}
+  .note-copy,.tbl-scroll,.kpis,.verdict,.forecast-panel{break-inside:avoid;}
+  .update-panel{break-inside:avoid;}
+  footer{break-inside:avoid;}
+  a{color:var(--ink);text-decoration:none;}
+  .kpi{border:1px solid #ccc;}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="masthead">
+    <div class="m-left">
+      <div class="kode">603259 · 交易所未识别 · 基本面分析</div>
+      <h1>药明康德 · 基本面分析</h1>
+      <div class="sub">基本面、财务质量、估值与风险初筛</div>
+      <div class="meta">数据口径 <b>财务与股东数据最晚至 2026-06-09/2026Q1，行情至 2026-07-14，公告检索至 2026-07-15。</b> · 生成时间 <b>2026-07-15 11:02</b></div>
+    </div>
+    <div class="m-stats">
+      <div><div class="ms-v">127.51 元</div><div class="ms-l">收盘价 · 2026-07-14，前复权日线，东方财富行情接口</div></div>
+<div><div class="ms-v">3,804.6 亿元</div><div class="ms-l">总市值 · 收盘价×总股本 29.8376 亿股</div></div>
+<div><div class="ms-v">19.87 倍；扣非口径 28.73 倍</div><div class="ms-l">PE · 总市值/2025A 归母净利润；总市值/2025A 扣非归母净利润</div></div>
+<div><div class="ms-v">4.77 倍</div><div class="ms-l">PB · 总市值/2025 年末归母净资产</div></div>
+    </div>
+  </header>
+
+  <section class="verdict" aria-label="结论速览">
+    <div class="verdict-head">
+      <h2>结论速览</h2>
+      <div class="badges">
+        <span class="badge fund"><span class="k">基本面</span> 强</span>
+<span class="badge qual"><span class="k">财务质量</span> 良好</span>
+<span class="badge valu"><span class="k">估值</span> 合理</span>
+<span class="badge fraud"><span class="k">造假风险初筛</span> 低</span>
+      </div>
+    </div>
+    <div class="verdict-headline"><span class="label">一句话结论</span>药明康德的订单、扣非利润和自由现金流共同显示核心 CRDMO 进入强增长阶段，财务质量良好且估值以扣非口径看基本合理，但高存货、扩产回报及美国 1260H 清单诉讼构成主要折价因素。</div>
+    <div class="verdict-grid">
+      <div class="v-col v-up">
+        <div class="v-title">核心理由</div>
+        <ul>
+<li>2026Q1 持续经营收入 +39.44%、扣非归母净利润 +83.56%，在手订单 597.7 亿元、同比 +23.6%，增长有订单与利润双重支撑。</li>
+<li>2025 年经营现金流 172.03 亿元、自由现金流 116.65 亿元，应收及合同资产下降，利润现金含量总体可靠。</li>
+<li>化学业务和 TIDES 是清晰增长引擎，后期及商业化项目推动产能利用率和毛利率改善。</li>
+<li>19.87 倍静态 PE 受处置收益影响；28.73 倍扣非口径、市销率 8.37 倍并不低，已经反映部分高增长预期。</li>
+<li>存货快速增加、2026 年资本开支上行，以及美国国防部 1260H 清单相关诉讼，是判断失效的主要风险。</li>
+</ul>
+      </div>
+      <div class="v-col v-risk">
+        <div class="v-title">主要风险 / 关注</div>
+        <ul>
+<li>存货增长显著快于收入，扩产回报仍待验证。</li>
+<li>美国1260H清单诉讼及客户合规风险无法量化。</li>
+</ul>
+      </div>
+    </div>
+    <p class="note">口径:市场估值为时点数据,财务指标需区分年度、半年度、季度和单季口径;所有结论以公司正式披露和已核验来源为准。</p>
+  </section>
+
+  <div class="kpis" aria-label="关键指标速览">
+    <div class="kpi"><div class="kl">2026Q1归母净利</div><div class="kv">46.52 亿元</div><div class="ks">归母净利润</div></div>
+<div class="kpi"><div class="kl">2026Q1扣非净利</div><div class="kv">42.76 亿元</div><div class="ks">扣非归母净利润</div></div>
+<div class="kpi"><div class="kl">2026Q1毛利率</div><div class="kv">50.40%</div><div class="ks">毛利率</div></div>
+<div class="kpi"><div class="kl">2026Q1经营现金流</div><div class="kv">35.96 亿元</div><div class="ks">经营现金流净额</div></div>
+<div class="kpi"><div class="kl">2026Q1应收/合同资产</div><div class="kv">82.29 亿元</div><div class="ks">应收账款/合同资产</div></div>
+<div class="kpi"><div class="kl">2026Q1存货</div><div class="kv">99.66 亿元</div><div class="ks">存货</div></div>
+  </div>
+
+  
+
+  <section class="update-panel" aria-label="本次更新"><div class="update-head"><span>RESEARCH CONTINUITY</span><h2>本次更新 · 与上次报告相比</h2></div><div class="update-body"><p>首次建立研究基线，无上次报告可比。基线日期为 2026-07-15。</p>
+<ul>
+<li>本次触发事件：首次覆盖 603259，结合 2025 年报、2026Q1、近期回购和 1260H 诉讼公告建立基线。</li>
+<li>新增确认事实：2026Q1 持续经营收入和扣非利润强劲增长；在手订单增至 597.7 亿元；A 股 10 亿元回购已完成；公司已就 1260H 清单认定起诉美国国防部。</li>
+<li>被证伪或弱化的旧假设：不适用，首次覆盖。</li>
+<li>仍然有效的旧观点：不适用，首次覆盖。</li>
+<li>仍待验证事项：TIDES 后续季度加速、存货转化、常州新基地资本回报、美国诉讼结果及客户行为变化。</li>
+</ul></div></section>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="toc" aria-label="目录">
+        <div class="scroll" id="toc-scroll">
+          <a href="#s1"><span class="toc-num">01</span>核心财务指标</a>
+<a href="#s2"><span class="toc-num">02</span>近两年财报趋势与业务结构</a>
+<a href="#s3"><span class="toc-num">03</span>结论摘要</a>
+<a href="#s4"><span class="toc-num">04</span>公司与行业</a>
+<a href="#s5"><span class="toc-num">05</span>订单与需求验证</a>
+<a href="#s6"><span class="toc-num">06</span>财务质量验证</a>
+<a href="#s7"><span class="toc-num">07</span>股东与机构</a>
+<a href="#s8"><span class="toc-num">08</span>估值与同行对比</a>
+<a href="#s9"><span class="toc-num">09</span>负面信息与风险排查</a>
+<a href="#s10"><span class="toc-num">10</span>财务造假风险初筛</a>
+<a href="#s11"><span class="toc-num">11</span>后续跟踪清单</a>
+<a href="#s12"><span class="toc-num">12</span>信息边界</a>
+        </div>
+      </nav>
+    </aside>
+    <main class="main">
+      <section id="s1">
+<h2 class="sec"><span class="num">01</span>核心财务指标</h2>
+<h3 class="sub">1.1 当前估值快照</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">项目</th>
+<th scope="col">最新数据</th>
+<th scope="col">数据日期/口径</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">收盘价</th>
+<td>127.51 元</td>
+<td>2026-07-14，前复权日线，<a href="https://quote.eastmoney.com/sh603259.html" target="_blank" rel="noopener">东方财富行情接口</a></td>
+<td>最近完整交易日收盘价</td>
+</tr>
+<tr>
+<th scope="row">总市值</th>
+<td>3,804.6 亿元</td>
+<td>收盘价×总股本 29.8376 亿股</td>
+<td>A+H 总股本对应市值，未拆分 H 股折价</td>
+</tr>
+<tr>
+<th scope="row">流通市值</th>
+<td>约 3,153 亿元</td>
+<td>A 股流通股约 24.73 亿股×收盘价</td>
+<td>A 股可流通股份对应市值</td>
+</tr>
+<tr>
+<th scope="row">PE</th>
+<td>19.87 倍；扣非口径 28.73 倍</td>
+<td>总市值/2025A 归母净利润；总市值/2025A 扣非归母净利润</td>
+<td>静态 PE 被 59.10 亿元非经常损益显著压低，扣非口径更能代表核心估值</td>
+</tr>
+<tr>
+<th scope="row">PB</th>
+<td>4.77 倍</td>
+<td>总市值/2025 年末归母净资产</td>
+<td>对应 2025A 扣非 ROE 19.74%，估值含明显质量溢价</td>
+</tr>
+<tr>
+<th scope="row">PS</th>
+<td>8.37 倍</td>
+<td>总市值/2025A 营业收入</td>
+<td>高于多数国内 CXO 同行，要求订单与利润率持续兑现</td>
+</tr>
+<tr>
+<th scope="row">股息率</th>
+<td>约 1.50%</td>
+<td>2025 年度拟分红总额约 57 亿元/总市值</td>
+<td class="up">分红能力较强，但不是高股息资产</td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">1.2 最新财务预报与质量解读</h3>
+<p>近 30 日未披露新的正式财务预报。2026 年 6 月 16 日至 7 月 15 日公司公告主要涉及股份回购、H 股奖励信托计划、公司秘书变更及月报表，不属于业绩预告。2025 年报中的 2026 年收入 513—530 亿元、持续经营业务增长 18%—22%、资本开支 65—75 亿元及调整后自由现金流 105—115 亿元属于经营指引，不等同于正式财务预报或盈利承诺。</p>
+<h3 class="sub">1.3 已披露当年期间财报</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">2025Q1</th>
+<th scope="col">2026Q1</th>
+<th scope="col">变化解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>96.55 亿元</td>
+<td>124.36 亿元</td>
+<td class="up">+28.81%；持续经营业务收入 +39.44%，终止经营业务使总收入增速低于持续经营口径</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td>36.72 亿元</td>
+<td>46.52 亿元</td>
+<td class="up">+26.68%，与收入大体匹配</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td>23.29 亿元</td>
+<td>42.76 亿元</td>
+<td class="up">+83.56%；上年同期投资收益较高，扣非增速更能反映核心经营修复</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td>31.95 亿元</td>
+<td>35.96 亿元</td>
+<td class="up">+12.53%，增速低于收入与扣非利润</td>
+</tr>
+<tr>
+<th scope="row">经营现金流/归母净利润</th>
+<td>0.87 倍</td>
+<td>0.77 倍</td>
+<td class="down">单季现金含量下降，仍需结合回款季节性和半年报观察</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td>24.61 亿元</td>
+<td>24.01 亿元</td>
+<td>经营现金流减资本开支；基本持平，资本开支同比增加 62.66%</td>
+</tr>
+<tr>
+<th scope="row">EPS</th>
+<td>1.29 元/股</td>
+<td>1.59 元/股</td>
+<td class="up">+23.26%</td>
+</tr>
+<tr>
+<th scope="row">ROE</th>
+<td>6.08%</td>
+<td>5.68%</td>
+<td class="down">-0.40 个百分点；净资产扩张快于单季净利润</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>42.26%</td>
+<td>50.40%</td>
+<td>按中国会计准则营业收入与营业成本计算，+8.14 个百分点</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td>24.13%</td>
+<td>34.38%</td>
+<td class="up">+10.25 个百分点，核心盈利弹性显著</td>
+</tr>
+<tr>
+<th scope="row">资本开支</th>
+<td>7.35 亿元</td>
+<td>11.95 亿元</td>
+<td>提前启动常州新基地并增加全球产能布局</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>未单独确认 Q1 同期末口径</td>
+<td>99.66 亿元</td>
+<td>较 2025 年末 +10.82%，快于单季收入环比变化，需与后续订单交付核验</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td>未单独确认 Q1 同期末口径</td>
+<td>82.29 亿元</td>
+<td>较 2025 年末 +6.42%，低于同期资产与业务扩张幅度</td>
+</tr>
+<tr>
+<th scope="row">总资产</th>
+<td>未单独确认 Q1 同期末口径</td>
+<td>1,074.14 亿元</td>
+<td>较 2025 年末 +4.16%</td>
+</tr>
+<tr>
+<th scope="row">归母净资产</th>
+<td>未单独确认 Q1 同期末口径</td>
+<td>842.22 亿元</td>
+<td>较 2025 年末 +5.66%</td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">1.4 最近三年年度财报</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">2023A</th>
+<th scope="col">2024A</th>
+<th scope="col">2025A</th>
+<th scope="col">变化解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>403.41 亿元</td>
+<td>392.41 亿元</td>
+<td>454.56 亿元</td>
+<td>2024 年承压，2025 年 +15.84%；持续经营业务 +21.40%</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td>96.07 亿元</td>
+<td>94.50 亿元</td>
+<td>191.51 亿元</td>
+<td>2025 年 +102.65%，包含处置联营企业及剥离业务收益</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td>97.48 亿元</td>
+<td>99.88 亿元</td>
+<td>132.41 亿元</td>
+<td class="up">2025 年 +32.56%，核心经营增长仍强但显著低于归母增速</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td>133.87 亿元</td>
+<td>124.07 亿元</td>
+<td>172.03 亿元</td>
+<td class="up">2025 年 +38.66%，现金流同步改善</td>
+</tr>
+<tr>
+<th scope="row">经营现金流/归母净利润</th>
+<td>1.39 倍</td>
+<td>1.31 倍</td>
+<td>0.90 倍</td>
+<td>因归母利润受处置收益放大而跌破 1；对扣非利润为 1.30 倍</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td>78.70 亿元</td>
+<td>84.03 亿元</td>
+<td>116.65 亿元</td>
+<td>连续为正并扩大，支持分红和扩产</td>
+</tr>
+<tr>
+<th scope="row">EPS</th>
+<td>3.27 元/股</td>
+<td>3.28 元/股</td>
+<td>6.70 元/股</td>
+<td class="up">2025 年受经营增长与非经常收益共同推动</td>
+</tr>
+<tr>
+<th scope="row">ROE</th>
+<td>18.99%</td>
+<td>16.78%</td>
+<td>28.56%</td>
+<td>2025 年扣非 ROE 19.74%，更接近可持续回报水平</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>41.18%</td>
+<td>41.48%</td>
+<td>47.64%</td>
+<td class="up">后期及商业化项目占比提高、产能利用率与运营效率改善</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td>24.16%</td>
+<td>25.45%</td>
+<td>29.13%</td>
+<td>规模效应与化学业务结构升级推动</td>
+</tr>
+<tr>
+<th scope="row">资本开支</th>
+<td>55.17 亿元</td>
+<td>40.03 亿元</td>
+<td>55.38 亿元</td>
+<td>2025 年重新提速，2026 年指引进一步升至 65—75 亿元</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>47.36 亿元</td>
+<td>54.00 亿元</td>
+<td>89.93 亿元</td>
+<td class="down">2025 年 +66.55%，显著快于收入，是最重要的资产负债表跟踪项</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td>91.36 亿元</td>
+<td>89.41 亿元</td>
+<td>77.32 亿元</td>
+<td class="down">2025 年下降，未出现依靠放宽账期推动收入的迹象</td>
+</tr>
+<tr>
+<th scope="row">总资产</th>
+<td>736.69 亿元</td>
+<td>803.26 亿元</td>
+<td>1,031.21 亿元</td>
+<td>现金、存货及产能资产共同扩张</td>
+</tr>
+<tr>
+<th scope="row">归母净资产</th>
+<td>551.22 亿元</td>
+<td>586.33 亿元</td>
+<td>797.12 亿元</td>
+<td class="up">H 股配售、留存收益与利润增长共同推动</td>
+</tr>
+</tbody></table></div>
+<p><strong>核心指标综合判断：</strong> 2025 年及 2026Q1 的增长主要来自持续经营 CRDMO 业务、后期与商业化项目放量和产能效率提升，而非单纯并表。2025 年归母利润被 59.10 亿元非经常损益显著放大，故扣非利润、经营现金流和在手订单更具判断价值。现金流总体支持利润真实性，应收及合同资产下降是积极信号；但 2025 年存货增幅远高于收入、2026Q1 仍继续上升，需通过订单交付、存货周转和现金回款验证。公司 2026Q1 销售商品及提供劳务收到现金 125.64 亿元，相当于收入的 101.03%，暂未出现收入与收现明显背离。</p>
+</section>
+<section id="s2">
+<h2 class="sec"><span class="num">02</span>近两年财报趋势与业务结构</h2>
+<h3 class="sub">2.1 近两年财报趋势</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">项目</th>
+<th scope="col">2024A</th>
+<th scope="col">2025A</th>
+<th scope="col">变化</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>392.41 亿元</td>
+<td>454.56 亿元</td>
+<td class="up">+15.84%</td>
+<td>持续经营业务 +21.40%，终止经营业务拖低总口径增速</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td>94.50 亿元</td>
+<td>191.51 亿元</td>
+<td class="up">+102.65%</td>
+<td>含大额股权及业务处置收益</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td>99.88 亿元</td>
+<td>132.41 亿元</td>
+<td class="up">+32.56%</td>
+<td>主业利润增速明显高于收入</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>41.48%</td>
+<td>47.64%</td>
+<td class="up">+6.16pct</td>
+<td class="up">后期及商业化项目增多、产能利用率提升</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td>25.45%</td>
+<td>29.13%</td>
+<td class="up">+3.68pct</td>
+<td class="up">费用效率与产品结构改善</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td>124.07 亿元</td>
+<td>172.03 亿元</td>
+<td class="up">+38.66%</td>
+<td class="up">经营利润和营运资金管理改善</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td>84.03 亿元</td>
+<td>116.65 亿元</td>
+<td class="up">+38.82%</td>
+<td class="up">扩产后仍有较强现金剩余</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>54.00 亿元</td>
+<td>89.93 亿元</td>
+<td class="up">+66.55%</td>
+<td class="up">与在手订单增长及备产相关，但增速偏快</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td>89.41 亿元</td>
+<td>77.32 亿元</td>
+<td class="down">-13.52%</td>
+<td>回款和收入质量较好</td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">2.2 分业务情况</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">业务</th>
+<th scope="col">2024A 收入</th>
+<th scope="col">2024A 毛利率</th>
+<th scope="col">2025A 收入</th>
+<th scope="col">2025A 毛利率</th>
+<th scope="col">变化</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">化学业务</th>
+<td>290.52 亿元</td>
+<td>46.39%</td>
+<td>364.66 亿元</td>
+<td>51.89%</td>
+<td>收入 +25.52%，毛利率 +5.50pct；绝对主引擎</td>
+</tr>
+<tr>
+<th scope="row">测试业务</th>
+<td>38.61 亿元</td>
+<td>35.58%</td>
+<td>40.42 亿元</td>
+<td>29.26%</td>
+<td>收入 +4.69%，毛利率 -6.32pct；价格竞争拖累</td>
+</tr>
+<tr>
+<th scope="row">生物学业务</th>
+<td>25.44 亿元</td>
+<td>37.70%</td>
+<td>26.77 亿元</td>
+<td>34.66%</td>
+<td>收入 +5.24%，毛利率 -3.04pct</td>
+</tr>
+<tr>
+<th scope="row">其他业务</th>
+<td>3.10 亿元</td>
+<td>48.30%</td>
+<td>2.36 亿元</td>
+<td>85.68%</td>
+<td>规模小，对整体影响有限</td>
+</tr>
+<tr>
+<th scope="row">持续经营业务合计</th>
+<td>357.67 亿元</td>
+<td>44.63%</td>
+<td>434.21 亿元</td>
+<td>48.91%</td>
+<td>收入 +21.40%，毛利率 +4.28pct</td>
+</tr>
+</tbody></table></div>
+<p><strong>业务结构判断：</strong> 化学业务贡献约 84% 的持续经营收入，是增长和利润率提升的核心。2025 年小分子 D&amp;M 收入 199.2 亿元、同比 +11.4%；TIDES 收入 113.7 亿元、同比 +96.0%，成为最强增量。2026Q1 化学业务收入进一步 +43.69%，其中小分子 D&amp;M +80.1%；但 TIDES Q1 仅 +6.1%，公司预计全年约 +40%，意味着后续季度必须明显加速。测试和生物学业务收入恢复，但 2025 年毛利率承压；2026Q1 经调整毛利率分别回升至 35.5%和 36.7%，修复能否持续仍需半年报验证。</p>
+</section>
+<section id="s3">
+<h2 class="sec"><span class="num">03</span>结论摘要</h2>
+<h3 class="sub">3.1 当前结论</h3>
+<ul>
+<li>基本面判断：强</li>
+<li>财务质量：良好</li>
+<li>估值状态：合理</li>
+<li>财务造假风险初筛：低</li>
+<li>核心理由：</li>
+<ol>
+<li>2026Q1 持续经营收入 +39.44%、扣非归母净利润 +83.56%，在手订单 597.7 亿元、同比 +23.6%，增长有订单与利润双重支撑。</li>
+<li>2025 年经营现金流 172.03 亿元、自由现金流 116.65 亿元，应收及合同资产下降，利润现金含量总体可靠。</li>
+<li>化学业务和 TIDES 是清晰增长引擎，后期及商业化项目推动产能利用率和毛利率改善。</li>
+<li>19.87 倍静态 PE 受处置收益影响；28.73 倍扣非口径、市销率 8.37 倍并不低，已经反映部分高增长预期。</li>
+<li>存货快速增加、2026 年资本开支上行，以及美国国防部 1260H 清单相关诉讼，是判断失效的主要风险。</li>
+</ol>
+</ul>
+<h3 class="sub">3.2 与上次报告相比</h3>
+<p>首次建立研究基线，无上次报告可比。基线日期为 2026-07-15。</p>
+<ul>
+<li>本次触发事件：首次覆盖 603259，结合 2025 年报、2026Q1、近期回购和 1260H 诉讼公告建立基线。</li>
+<li>新增确认事实：2026Q1 持续经营收入和扣非利润强劲增长；在手订单增至 597.7 亿元；A 股 10 亿元回购已完成；公司已就 1260H 清单认定起诉美国国防部。</li>
+<li>被证伪或弱化的旧假设：不适用，首次覆盖。</li>
+<li>仍然有效的旧观点：不适用，首次覆盖。</li>
+<li>仍待验证事项：TIDES 后续季度加速、存货转化、常州新基地资本回报、美国诉讼结果及客户行为变化。</li>
+</ul>
+</section>
+<section id="s4">
+<h2 class="sec"><span class="num">04</span>公司与行业</h2>
+<ul>
+<li>主营业务：为全球医药及生命科学行业提供一体化、端到端的新药研发和生产服务，覆盖化学药研发生产、生物学研究、临床前测试与临床研发。</li>
+<li>主要产品：小分子药物发现与 CDMO、TIDES（寡核苷酸和多肽）、药物安全性评价、药代动力学、生物学发现服务等。</li>
+<li>市场占有率：公司未披露统一、可审计的全球 CRDMO 市占率；药物安全性评价业务披露为亚太行业领先，但缺少可核验百分比。以 2025 年 434.2 亿元持续经营收入、近 6,000 家客户及 580.0 亿元在手订单看，规模处于全球领先梯队。</li>
+<li>行业景气度：全球创新药研发外包需求总体回暖，新分子类型、GLP-1 相关多肽及小分子后期项目拉动 CDMO；同时行业仍受生物科技融资周期、价格竞争、监管与地缘政策影响。公司订单增速高于收入增速，显示自身景气度优于国内临床 CRO 板块。</li>
+<li>核心竞争力：一体化 CRDMO 平台、“跟随客户/分子”引流机制、全球客户与质量体系、从发现到商业化的产能和技术覆盖、后期项目转换能力。</li>
+<li>主要依赖：无单一产品依赖；但 2025 年前五大客户收入占 48.11%，客户集中度不低；持续经营业务中美国客户收入 312.5 亿元、约占 72%，地缘政策与美元汇率是重要共同风险。</li>
+</ul>
+</section>
+<section id="s5">
+<h2 class="sec"><span class="num">05</span>订单与需求验证</h2>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">日期</th>
+<th scope="col">来源与链接</th>
+<th scope="col">项目/订单名称</th>
+<th scope="col">客户/采购方</th>
+<th scope="col">产品/服务</th>
+<th scope="col">金额</th>
+<th scope="col">状态</th>
+<th scope="col">履约周期</th>
+<th scope="col">是否公司正式公告</th>
+<th scope="col">对收入影响</th>
+<th scope="col">可信度</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">2025-12-31</th>
+<td><a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260324_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1225025225.pdf">2025年报</a></td>
+<td>持续经营业务在手订单</td>
+<td>多客户汇总</td>
+<td>CRDMO</td>
+<td>580.0 亿元</td>
+<td>在手订单</td>
+<td>多期履约</td>
+<td>是</td>
+<td>相当于 2025 持续经营收入的 1.34 倍</td>
+<td>高</td>
+</tr>
+<tr>
+<th scope="row">2026-03-31</th>
+<td><a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260428_2026Q1_%E7%AC%AC%E4%B8%80%E5%AD%A3%E5%BA%A6%E6%8A%A5%E5%91%8A_12210262.pdf">2026Q1</a></td>
+<td>持续经营业务在手订单</td>
+<td>多客户汇总</td>
+<td>CRDMO</td>
+<td>597.7 亿元</td>
+<td>在手订单</td>
+<td>多期履约</td>
+<td>是</td>
+<td class="up">同比 +23.6%，提升收入可见度</td>
+<td>高</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>已披露订单/合同：公司以汇总在手订单披露为主，未披露可逐项核验的客户、金额和毛利率明细。</li>
+<li>招投标与客户侧线索：未发现适合按单个项目核验的公开招投标数据；CRDMO 商业模式通常受客户保密条款限制。</li>
+<li>订单状态区分：597.7 亿元为在手订单，不等同于已确认收入或无条件合同负债，仍受项目阶段、取消和进度变化影响。</li>
+<li>订单金额与最近年度营收比例：2026Q1 末在手订单约为 2025 年持续经营收入的 1.38 倍。</li>
+<li>履约周期与收入确认节奏：包含发现、开发、临床及商业化多阶段项目，不能假设一次性确认；商业化和临床 III 期项目增加有利于缩短部分收入兑现周期。</li>
+<li>合同负债/存货/应收/现金流验证：2026Q1 合同负债 27.64 亿元、较年末 +2.03%；存货 +10.82%；应收及合同资产 +6.42%；经营现金流同比 +12.53%。需求信号积极，但存货增速仍需后续交付验证。</li>
+<li>订单趋势判断：改善</li>
+<li>信息可信度：高（总额为公司正式披露），中（缺乏单项订单与取消率明细）</li>
+</ul>
+</section>
+<section id="s6">
+<h2 class="sec"><span class="num">06</span>财务质量验证</h2>
+<ul>
+<li>利润与现金流匹配：2023—2025 年经营现金流连续高于扣非利润或接近，2025 年经营现金流/扣非利润 1.30 倍；2026Q1 经营现金流/归母净利润降至 0.77 倍，属于需跟踪而非立即否定。</li>
+<li>应收账款与营收匹配：2025 年应收账款及合同资产合计下降 13.52%，而收入增长 15.84%，回款质量较好；2026Q1 较年末增加 6.42%，低于收入同比增幅。</li>
+<li>存货与营收匹配：2025 年存货增长 66.55%，显著快于收入和订单，是最突出红旗；公司解释为业务发展、在手订单增长及在产品/产成品增加，需用后续周转、减值和交付验证。</li>
+<li>资本开支效率与自由现金流：2025 年资本开支 55.38 亿元，自由现金流 116.65 亿元；2026Q1 资本开支同比 +62.66%，自由现金流略降。2026 年计划资本开支 65—75 亿元，扩产回报仍是核心变量。</li>
+<li>预付款/其他应收款/在建工程/商誉异常：2026Q1 预付款 3.18 亿元、其他应收款 3.46 亿元、商誉 8.63 亿元，绝对规模不大；在建工程 67.09 亿元、占总资产 6.25%，需关注转固后的折旧与利用率。2025 年其他应收款增加主要来自剥离业务形成的股权转让款。</li>
+<li>资产负债率与有息负债：2026Q1 资产负债率约 21.08%，有息负债约 79.61 亿元，货币资金 359.05 亿元，净现金充足，偿债压力低。</li>
+<li>综合判断：财务质量良好。核心利润、收现和自由现金流互相支持；评级未给“优秀”，主要因一次性收益扭曲归母利润、存货增长偏快及扩产周期仍在上行。</li>
+</ul>
+</section>
+<section id="s7">
+<h2 class="sec"><span class="num">07</span>股东与机构</h2>
+<ul>
+<li>十大股东持股占比：截至 2026-06-09 约 41.87%；其中 HKSCC NOMINEES 17.11%、香港中央结算有限公司 8.04%。两者均为名义持有人，不能视为单一实益股东。</li>
+<li>实控人/大股东持股与质押：公司无控股股东；Ge Li（李革）、张朝晖、刘晓钟为实际控制人，2025 年末共同控制 16.6972%表决权。2026Q1 前十大股东所列股份均无质押/冻结，未发现高比例质押风险。</li>
+<li>大股东减持或增持：近期核心资本动作是公司回购而非实控人增减持。2026 年 A 股回购 970.12 万股、金额 10.00 亿元，均价 103.08 元/股，用于员工持股计划；并以 25 亿港元购买 2,014.89 万股 H 股用于奖励信托计划，不会直接注销增厚 EPS。</li>
+<li>入驻机构家数：完整机构家数未从官方披露可靠核验，不以第三方季度汇总作精确结论。</li>
+<li>机构类型：前十大股东可确认北向资金名义账户及两只医药 ETF；HKSCC NOMINEES 代表多个 H 股客户。</li>
+<li>治理风险判断：总体可控。无控股股东结构有利于制衡，但一致行动人共同控制比例不高；大额员工激励回购有助于人才绑定，也需关注授予条件、费用和库存股处置。</li>
+</ul>
+</section>
+<section id="s8">
+<h2 class="sec"><span class="num">08</span>估值与同行对比</h2>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">公司</th>
+<th scope="col">行情日期</th>
+<th scope="col">总市值</th>
+<th scope="col">PE</th>
+<th scope="col">PB</th>
+<th scope="col">PS</th>
+<th scope="col">市值/2025扣非净利</th>
+<th scope="col">2025收入增速</th>
+<th scope="col">2025毛利率</th>
+<th scope="col">2025扣非净利率</th>
+<th scope="col">2025扣非ROE</th>
+<th scope="col">经营现金流/扣非净利</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">药明康德</th>
+<td>2026-07-14</td>
+<td>3,804.6 亿元</td>
+<td>19.87 倍（静态）</td>
+<td>4.77 倍</td>
+<td>8.37 倍</td>
+<td>28.73 倍</td>
+<td>15.84%</td>
+<td>47.64%</td>
+<td>29.13%</td>
+<td>19.74%</td>
+<td>1.30 倍</td>
+</tr>
+<tr>
+<th scope="row">康龙化成</th>
+<td>2026-07-10</td>
+<td>623.57 亿元</td>
+<td>36.82 倍（TTM）</td>
+<td>3.87 倍</td>
+<td>4.28 倍</td>
+<td>40.54 倍</td>
+<td>14.82%</td>
+<td>34.83%</td>
+<td>10.91%</td>
+<td>10.72%</td>
+<td>2.09 倍</td>
+</tr>
+<tr>
+<th scope="row">凯莱英</th>
+<td>2026-07-10</td>
+<td>596.77 亿元</td>
+<td>53.75 倍（TTM）</td>
+<td>3.41 倍</td>
+<td>8.61 倍</td>
+<td>57.57 倍</td>
+<td>14.91%</td>
+<td>41.99%</td>
+<td>15.54%</td>
+<td>6.02%</td>
+<td>1.36 倍</td>
+</tr>
+<tr>
+<th scope="row">泰格医药</th>
+<td>2026-07-10</td>
+<td>407.01 亿元</td>
+<td>52.76 倍（TTM）</td>
+<td>1.95 倍</td>
+<td>5.76 倍</td>
+<td>114.62 倍</td>
+<td>3.48%</td>
+<td>27.41%</td>
+<td>5.20%</td>
+<td>1.71%</td>
+<td>3.15 倍</td>
+</tr>
+</tbody></table></div>
+<p>注：同行行情与财务比较沿用 2026-07-14 已核验的<a href="../../300759/%E5%9F%BA%E6%9C%AC%E9%9D%A2%E5%88%86%E6%9E%90/%E5%BA%B7%E9%BE%99%E5%8C%96%E6%88%90_300759_%E5%9F%BA%E6%9C%AC%E9%9D%A2%E5%88%86%E6%9E%90_%E6%9C%80%E6%96%B0.md">康龙化成基本面报告</a>，药明康德更新至 2026-07-14。公司业务结构不同：药明康德更综合、凯莱英偏 CDMO、泰格医药偏临床 CRO，表格只用于方向性比较。PE 口径不同，故同时列示“市值/2025 扣非净利”。</p>
+<ul>
+<li>当前估值：静态 PE 看似较低，但扣非口径 28.73 倍、PS 8.37 倍；核心业务估值并不便宜。</li>
+<li>同行业估值对比：药明康德扣非口径仍低于三家所选同行，同时 PB 和 PS 较高，反映市场给予平台规模、利润率和确定性溢价。</li>
+<li>同行业收入增速/毛利率/扣非净利率/ROE/现金流质量对比：药明康德在收入增速、毛利率、扣非净利率和扣非 ROE 上领先，现金流质量也较强；其估值溢价有基本面支撑。</li>
+<li>估值是否匹配成长与财务质量：基本匹配。若 2026 年持续经营收入增长达到 18%—22%、订单持续兑现且利润率稳定，当前估值可被消化；若地缘政策冲击客户、TIDES 增速未加速或扩产拉低自由现金流，PS 与 PB 均缺乏安全垫。</li>
+</ul>
+</section>
+<section id="s9">
+<h2 class="sec"><span class="num">09</span>负面信息与风险排查</h2>
+<ul>
+<li>是否亏损：公司整体持续盈利；2025 年终止经营业务已处置或剥离，不能将处置收益视作持续经营利润。</li>
+<li>是否 ST 或退市风险：截至 2025 年报无退市风险警示或终止上市情形。</li>
+<li>审计意见：德勤华永对 2025 年财务报表出具标准无保留意见，审计期间未改聘会计师事务所。</li>
+<li>监管问询/处罚：2025 年报披露公司及董事、高管、控股股东、实际控制人无涉嫌违法违规、受到处罚及整改事项。尚未发现截至报告执行日改变该判断的新境内监管处罚。</li>
+<li>诉讼仲裁：2025 年度无重大诉讼仲裁；但 2026-06-11 公司已在美国哥伦比亚特区联邦地区法院起诉美国国防部，挑战其将公司列入 1260H“中国军工企业”名单的认定。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260715_%E6%9C%9F%E9%97%B4%E5%BE%85%E6%A0%B8%E9%AA%8C_%E6%AD%A3%E5%BC%8F%E6%8A%AB%E9%9C%B2_3810044f43.pdf">公司公告</a></li>
+<li>负面新闻：核心负面因素不是财务真实性，而是美国政策与客户合规风险。1260H 诉讼结果、潜在政府采购/供应链限制和客户风险偏好可能影响订单、估值与全球扩产安排；当前财务影响尚无法量化。</li>
+<li>关联交易/客户供应商真实性争议：2025 年前五大客户销售占 48.11%、关联方销售为 0；前五大供应商采购占 11.25%、关联方采购为 0。未发现监管或审计确认的客户供应商真实性问题，但客户集中度值得跟踪。</li>
+</ul>
+</section>
+<section id="s10">
+<h2 class="sec"><span class="num">10</span>财务造假风险初筛</h2>
+<ul>
+<li>红旗数量：2 项主要跟踪红旗，另有 1 项利润口径提示。</li>
+<li>主要红旗：第一，2025 年存货增长 66.55%，显著快于收入与订单，需验证周转和减值；第二，2025 年信用减值损失增加至 5.28 亿元，需关注股权转让款和应收回收。利润口径方面，2025 年归母净利润含 59.10 亿元非经常损益，不能机械使用静态 PE。</li>
+<li>风险等级：低</li>
+<li>解释：这是风险初筛，不是事实定性。支持低风险判断的证据包括标准无保留审计意见、经营现金流与扣非利润匹配、应收及合同资产下降、净现金充足、无境内监管对财务造假的确认。存货和非经常损益要求提高分析谨慎度，但尚未与现金流失真、应收异常、审计保留或监管处罚形成多重共振；只有监管、审计、司法或公司公告确认后才能对造假事实定性。</li>
+</ul>
+</section>
+<section id="s11">
+<h2 class="sec"><span class="num">11</span>后续跟踪清单</h2>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">跟踪事项</th>
+<th scope="col">首次提出</th>
+<th scope="col">上次状态</th>
+<th scope="col">本次证据</th>
+<th scope="col">当前状态</th>
+<th scope="col">下次验证时间/触发条件</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">2026 年收入指引与订单兑现</th>
+<td>2026-07-15</td>
+<td class="muted">不适用</td>
+<td>Q1 持续经营收入 +39.44%，在手订单 597.7 亿元</td>
+<td>部分验证</td>
+<td>2026H1/2026Q3；持续经营增速低于 18%触发复盘</td>
+</tr>
+<tr>
+<th scope="row">TIDES 全年约 40%增长能否实现</th>
+<td>2026-07-15</td>
+<td class="muted">不适用</td>
+<td>Q1 仅 +6.1%，需后续季度加速</td>
+<td>待验证</td>
+<td>2026H1；累计增速仍低于 25%触发复盘</td>
+</tr>
+<tr>
+<th scope="row">存货能否转化为收入与现金</th>
+<td>2026-07-15</td>
+<td class="muted">不适用</td>
+<td>2025 年 +66.55%，2026Q1 较年末 +10.82%</td>
+<td>待验证</td>
+<td class="up">2026H1；存货增速继续显著高于收入或减值上升</td>
+</tr>
+<tr>
+<th scope="row">扩产与自由现金流</th>
+<td>2026-07-15</td>
+<td class="muted">不适用</td>
+<td>2026 年资本开支指引 65—75 亿元，Q1 自由现金流 24.01 亿元</td>
+<td>部分验证</td>
+<td class="down">2026H1/全年；自由现金流转负或产能利用率下降</td>
+</tr>
+<tr>
+<th scope="row">1260H 诉讼及客户影响</th>
+<td>2026-07-15</td>
+<td class="muted">不适用</td>
+<td>公司已起诉美国国防部，财务影响未量化</td>
+<td>待验证</td>
+<td>法院裁决、名单调整、重大客户流失或美国收入明显转弱</td>
+</tr>
+<tr>
+<th scope="row">测试与生物学毛利率修复</th>
+<td>2026-07-15</td>
+<td class="muted">不适用</td>
+<td>2026Q1 经调整毛利率分别升至 35.5%和 36.7%</td>
+<td>部分验证</td>
+<td class="down">2026H1；同比再度明显下滑</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>新增订单金额与年初至今累计订单金额：公司仅披露汇总在手订单，未披露新增订单金额。</li>
+<li>订单金额/上年营收：2026Q1 末在手订单/2025 持续经营收入约 1.38 倍。</li>
+<li>重点客户复购与新增客户：关注小分子 D&amp;M、TIDES 服务客户数及近 6,000 家客户规模变化。</li>
+<li>中标候选人转正式中标/签约情况：不适用，商业模式不以公开招投标为主要披露方式。</li>
+<li>合同负债、存货、应收账款和经营现金流变化：半年报重点核验订单是否形成合同负债、收入和现金，而非持续堆积存货。</li>
+<li>触发深度复盘条件：2026H1 发布；1260H 诉讼实质进展；收入指引调整；重大客户流失；存货/减值异常；自由现金流转负；审计或监管意见变化。</li>
+</ul>
+</section>
+<section id="s12">
+<h2 class="sec"><span class="num">12</span>信息边界</h2>
+<ul>
+<li>分析范围：报告执行日 2026-07-15；行情日期 2026-07-14；财务覆盖 2023A—2025A 与 2026Q1；首次基线，无上次版本。2025 年剥离 WuXi ATU、临床研究等业务并将相关业务列为终止经营，持续经营口径与总口径不可直接混用；2025 年归母利润含大额处置收益。</li>
+<li>数据日期：财务与股东数据最晚至 2026-06-09/2026Q1，行情至 2026-07-14，公告检索至 2026-07-15。</li>
+<li>主要数据来源：<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260324_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1225025225.pdf">2025年报</a>、<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260428_2026Q1_%E7%AC%AC%E4%B8%80%E5%AD%A3%E5%BA%A6%E6%8A%A5%E5%91%8A_12210262.pdf">2026Q1</a>、<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260715_2026Q1_%E6%AD%A3%E5%BC%8F%E6%8A%AB%E9%9C%B2__FIRST_QUARTERLY_RESULTS_PRESENTATION_a5a7717323.pdf">公司Q1业绩演示</a>、<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260612_%E6%9C%9F%E9%97%B4%E5%BE%85%E6%A0%B8%E9%AA%8C_%E6%AD%A3%E5%BC%8F%E6%8A%AB%E9%9C%B2_603259_20260612_X79Q.pdf">前十大股东公告</a>、<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260715_2026_%E6%AD%A3%E5%BC%8F%E6%8A%AB%E9%9C%B2_2026_287f5f4572.pdf">A股回购结果</a>、公司官网及东方财富行情。</li>
+<li>本地原始资料：<code>原始资料/2026/20260324_2025A_年度报告_1225025225.pdf</code>；<code>原始资料/2026/20260428_2026Q1_第一季度报告_12210262.pdf</code>；<code>原始资料/2026/20260715_2026Q1_正式披露__FIRST_QUARTERLY_RESULTS_PRESENTATION_a5a7717323.pdf</code>；<code>原始资料/2026/20260612_期间待核验_正式披露_603259_20260612_X79Q.pdf</code>；<code>原始资料/2026/20260715_2026_正式披露_2026_287f5f4572.pdf</code>；<code>原始资料/2026/20260715_期间待核验_正式披露_3810044f43.pdf</code>；<code>原始资料/2024/20240319_2023A_年度报告_1219331349.pdf</code>。</li>
+<li>尚未核验的信息：完整机构持仓家数、单个客户订单金额与取消率、统一权威的全球 CRDMO 市占率、2026H1 业绩及存货周转、1260H 诉讼对客户决策的量化影响。2026Q1 正式报告的交易所直链未成功检索，本地归档为公开镜像，并由公司官网 Q1 演示材料及公司新闻稿交叉验证核心数据。</li>
+<li>可能影响结论的新公告或市场事件：2026H1 定期报告或业绩预告、全年指引调整、美国法院裁决或名单变化、重大客户/项目变动、全球医药融资与汇率变化。</li>
+</ul>
+</section>
+
+      <section id="note-friendly">
+        <h2 class="sec"><span class="num">◎</span>基本面速记</h2>
+        <div class="note-copy">
+          <h2>可复制摘要</h2>
+          <pre><code>【基本面速记】
+公司：药明康德（603259）
+结论：基本面（强），财务质量（良好），估值（合理）。
+核心看点：
+1. 2026Q1持续经营收入+39.44%、扣非净利+83.56%，在手订单597.7亿元。
+2. 2025年自由现金流116.65亿元，应收下降，利润现金含量可靠。
+3. 化学业务、小分子D&amp;M和TIDES构成增长主引擎。
+主要风险：
+1. 存货增长显著快于收入，扩产回报仍待验证。
+2. 美国1260H清单诉讼及客户合规风险无法量化。
+最新财务预报：近30日未披露新的正式财务预报；2025年报中的2026年收入513—530亿元等为经营指引，不属于正式业绩预告。
+财务造假风险初筛：低。理由：标准无保留审计、经营现金流与扣非利润匹配、应收下降、净现金充足；存货与非经常损益需持续跟踪。
+订单/需求验证：改善。依据：2026Q1末在手订单597.7亿元、同比+23.6%，约为2025持续经营收入1.38倍。
+后续跟踪：2026H1、TIDES加速、存货转化、扩产自由现金流、1260H诉讼、测试与生物学毛利率。</code></pre>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="disclaimer">
+      免责声明:本报告为基于公开财报、公告、行情与新闻资料的整理和财务质量初筛,不构成任何投资建议,不保证未来收益。投资有风险,决策需谨慎。所有数据以公司正式披露为准。
+    </div>
+    <div>报告主体:药明康德(603259) | 数据口径:财务与股东数据最晚至 2026-06-09/2026Q1，行情至 2026-07-14，公告检索至 2026-07-15。</div>
+    <div>主要数据来源:2025年报、2026Q1、公司Q1业绩演示、前十大股东公告、A股回购结果、公司官网及东方财富行情。</div>
+    <div>自包含离线 HTML · 内联 CSS / 极简内联 JS · 可直接在浏览器打开</div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var links = document.querySelectorAll('nav.toc a');
+  var map = {};
+  for (var i=0;i<links.length;i++){
+    var href = links[i].getAttribute('href') || '';
+    if (href.charAt(0) === '#') map[href.slice(1)] = links[i];
+  }
+  var sections = document.querySelectorAll('main section[id]');
+  function onScroll(){
+    var pos = (window.scrollY || document.documentElement.scrollTop) + 90;
+    var cur = null;
+    for (var j=0;j<sections.length;j++){
+      if (sections[j].offsetTop <= pos) cur = sections[j].id;
+    }
+    for (var k=0;k<links.length;k++) links[k].classList.remove('active');
+    if (cur && map[cur]) {
+      map[cur].classList.add('active');
+      var act = map[cur];
+      var sc = document.getElementById('toc-scroll');
+      if (sc && act.offsetLeft < sc.scrollLeft) sc.scrollLeft = act.offsetLeft - 8;
+      if (sc && act.offsetLeft + act.offsetWidth > sc.scrollLeft + sc.clientWidth) {
+        sc.scrollLeft = act.offsetLeft + act.offsetWidth - sc.clientWidth + 8;
+      }
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
+</body>
+</html>

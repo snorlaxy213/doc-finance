@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-15T10:58:33+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260324-7f1431d6",
+      "title": "2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260324",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-03-24/1225025225.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260324_2025A_年度报告_1225025225.pdf",
+      "sha256": "7f1431d66eae399d4b35639bb650e23287c7f52dacbb47b4b4a197fb5026d6a2",
+      "bytes": 1608226,
+      "pages": null,
+      "retrieved_at": "2026-07-15T10:56:31+08:00",
+      "used_by": [
+        "药明康德_603259_基本面分析_20260715"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260428-379796e6",
+      "title": "2026年第一季度报告_后备镜像",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260428",
+      "official_url": "http://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESH_STOCK/2026/2026-4/2026-04-28/12210262.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260428_2026Q1_第一季度报告_12210262.pdf",
+      "sha256": "379796e63b15a126aecb33509824a76197114ca3a43e0db368dd27e3508560a6",
+      "bytes": 297174,
+      "pages": null,
+      "retrieved_at": "2026-07-15T10:56:31+08:00",
+      "used_by": [
+        "药明康德_603259_基本面分析_20260715"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260715-0e18c2bd",
+      "title": "2026年第一季度业绩演示",
+      "document_type": "正式披露",
+      "period": "2026Q1",
+      "published_date": "20260715",
+      "official_url": "https://officialsite-static.wuxiapptec.com/upload/2026_FIRST_QUARTERLY_RESULTS_PRESENTATION_a5a7717323.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260715_2026Q1_正式披露__FIRST_QUARTERLY_RESULTS_PRESENTATION_a5a7717323.pdf",
+      "sha256": "0e18c2bdc19bc7f4901e3ec6060403c08c2e18bfed3539742c4b956319afa210",
+      "bytes": 1611888,
+      "pages": null,
+      "retrieved_at": "2026-07-15T10:56:32+08:00",
+      "used_by": [
+        "药明康德_603259_基本面分析_20260715"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260715-4ea23028",
+      "title": "1260H诉讼自愿性公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260715",
+      "official_url": "https://officialsite-static.wuxiapptec.com/upload/_3810044f43.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260715_期间待核验_正式披露_3810044f43.pdf",
+      "sha256": "4ea23028ea4ff0e8e17c4489faa76ca166b88fd21d4e6b4b2a2863eed70954ec",
+      "bytes": 80537,
+      "pages": null,
+      "retrieved_at": "2026-07-15T10:56:32+08:00",
+      "used_by": [
+        "药明康德_603259_基本面分析_20260715"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260715-01cd3ca1",
+      "title": "2026年A股回购实施结果",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260715",
+      "official_url": "https://officialsite-static.wuxiapptec.com/upload/2026_287f5f4572.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260715_2026_正式披露_2026_287f5f4572.pdf",
+      "sha256": "01cd3ca15c107d4107bbd73f5b602f4e6a0dd30529ecf5970848cd53350a7294",
+      "bytes": 108886,
+      "pages": null,
+      "retrieved_at": "2026-07-15T10:56:33+08:00",
+      "used_by": [
+        "药明康德_603259_基本面分析_20260715"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260612-6fb0a481",
+      "title": "回购事项前十大股东",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260612",
+      "official_url": "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-06-12/603259_20260612_X79Q.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260612_期间待核验_正式披露_603259_20260612_X79Q.pdf",
+      "sha256": "6fb0a481a498eba9051d1bff2b05a3ae87ce6c73e0d7ef8298b307d870fa46e2",
+      "bytes": 101220,
+      "pages": null,
+      "retrieved_at": "2026-07-15T10:56:33+08:00",
+      "used_by": [
+        "药明康德_603259_基本面分析_20260715"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20240319-ed750b30",
+      "title": "2023年年度报告",
+      "document_type": "年度报告",
+      "period": "2023A",
+      "published_date": "20240319",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2024-03-19/1219331349.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2024/20240319_2023A_年度报告_1219331349.pdf",
+      "sha256": "ed750b30a9d3f58ffbb4649fd2f04d50d7010adb3103cd3206692098162441e3",
+      "bytes": 4992527,
+      "pages": null,
+      "retrieved_at": "2026-07-15T10:58:33+08:00",
+      "used_by": [
+        "药明康德_603259_基本面分析_20260715"
+      ],
+      "status": "已归档"
+    }
+  ]
+}
