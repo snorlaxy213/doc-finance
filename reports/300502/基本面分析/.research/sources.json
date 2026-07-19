@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-19T23:03:15+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20240423-ce36d96e",
+      "title": "2023年年度报告",
+      "document_type": "年度报告",
+      "period": "2023A",
+      "published_date": "20240423",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219746778.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2024/20240423_2023A_年度报告_1219746778_ce36d96e.pdf",
+      "sha256": "ce36d96ed95c6cabc7acfe077c8e316eb88a01b267e78ab731b5c660c73e9e32",
+      "bytes": 8115195,
+      "pages": 177,
+      "retrieved_at": "2026-07-19T22:53:58+08:00",
+      "used_by": [
+        "新易盛_300502_基本面分析_20260719"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260424-3432905a",
+      "title": "2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260424",
+      "official_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-24/e20c68b8-9ce5-4751-acfd-9fb5f4e44645.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260424_2025A_年度报告_e20c68b8-9ce5-4751-acfd-9fb5f4e44645.pdf",
+      "sha256": "3432905a431a8254c2274c2188269e94cfc5a69e92c7d34332a5a3a7da8b15b6",
+      "bytes": 2902416,
+      "pages": 170,
+      "retrieved_at": "2026-07-19T22:55:06+08:00",
+      "used_by": [
+        "新易盛_300502_基本面分析_20260719"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260424-816e9ca4",
+      "title": "2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260424",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-24/1225172606.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260424_2026Q1_第一季度报告_1225172606.pdf",
+      "sha256": "816e9ca46844cf4262e34c7c2dbf02ba8ea74b5ba90203ff877cc94b9253cbb9",
+      "bytes": 498193,
+      "pages": 11,
+      "retrieved_at": "2026-07-19T22:55:09+08:00",
+      "used_by": [
+        "新易盛_300502_基本面分析_20260719"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250423-148155f6",
+      "title": "2024年年度报告",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250423",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-04-23/1223219348.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250423_2024A_年度报告_1223219348.pdf",
+      "sha256": "148155f6d95c86f8f77c6aa5ec7e486e97cea2e9f73c9aaa235079df94140aec",
+      "bytes": 8849287,
+      "pages": 184,
+      "retrieved_at": "2026-07-19T22:55:22+08:00",
+      "used_by": [
+        "新易盛_300502_基本面分析_20260719"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260720-14589ca8",
+      "title": "2026年半年度业绩预告",
+      "document_type": "业绩预告",
+      "period": "2026H1",
+      "published_date": "20260720",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-07-20/1225431444.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260720_2026H1_业绩预告_1225431444.pdf",
+      "sha256": "14589ca89bb7db36c0667bb8f36fd6ca88f46b407fb0f3a62a5dce141e0a1479",
+      "bytes": 79141,
+      "pages": 2,
+      "retrieved_at": "2026-07-19T22:59:15+08:00",
+      "used_by": [
+        "新易盛_300502_基本面分析_20260719"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260601-b917ed1f",
+      "title": "2026年6月投资者关系活动记录",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260601",
+      "official_url": "https://pdf.dfcfw.com/pdf/H2_AN202606021823165693_1.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260601_2026_正式披露_H2_AN202606021823165693_1.pdf",
+      "sha256": "b917ed1f442af42a4a0c80f184f0f4135a8524b441c130d6c3697fade8cad336",
+      "bytes": 166488,
+      "pages": 2,
+      "retrieved_at": "2026-07-19T23:01:22+08:00",
+      "used_by": [
+        "新易盛_300502_基本面分析_20260719"
+      ],
+      "status": "已归档",
+      "date_override": "20260601"
+    },
+    {
+      "source_id": "SRC-20260611-4a8b5f41",
+      "title": "筹划发行H股并在香港联交所上市提示性公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260611",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-06-11/1225363963.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260611_期间待核验_正式披露_1225363963.pdf",
+      "sha256": "4a8b5f4105e5c74ec8bf9303b22f859d26c48aa83dd8feee5d4580396f8f5338",
+      "bytes": 108503,
+      "pages": 1,
+      "retrieved_at": "2026-07-19T23:01:49+08:00",
+      "used_by": [
+        "新易盛_300502_基本面分析_20260719"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260626-01adab13",
+      "title": "2026年第二次临时股东会决议公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260626",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-06-26/1225391489.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260626_2026_正式披露_1225391489.pdf",
+      "sha256": "01adab1391e4ed68d5adc06892e74bb7473c38ae1a5bab5fc60be44bd9e32557",
+      "bytes": 154161,
+      "pages": 13,
+      "retrieved_at": "2026-07-19T23:02:41+08:00",
+      "used_by": [
+        "新易盛_300502_基本面分析_20260719"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250423-ecd41b67",
+      "title": "2025年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2025Q1",
+      "published_date": "20250423",
+      "official_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2025-04-23/a6f7fa81-6f55-4346-858e-46523b6d8999.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250423_2025Q1_第一季度报告_a6f7fa81-6f55-4346-858e-46523b6d8999.pdf",
+      "sha256": "ecd41b67660e0580471ded9c04a0fe74dfc58b5623e1360525c84a088a23feb4",
+      "bytes": 866136,
+      "pages": 11,
+      "retrieved_at": "2026-07-19T23:03:15+08:00",
+      "used_by": [
+        "新易盛_300502_基本面分析_20260719"
+      ],
+      "status": "已归档"
+    }
+  ]
+}
