@@ -1,0 +1,4 @@
+interface:
+  display_name: "Yuque Stock Report Publish"
+  short_description: "Publish Codex stock reports into Yuque"
+  default_prompt: "Use $yuque-stock-report-publish to publish this stock report into Yuque."
