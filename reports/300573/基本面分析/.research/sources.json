@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-21T00:25:57+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260422-b1d84e9c",
+      "title": "兴齐眼药2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260422",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-22/1225135989.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260422_2025A_年度报告_1225135989.pdf",
+      "sha256": "b1d84e9c474afd3806354dfa99a09baf6ca7b41c71aebbc842f779f04876e030",
+      "bytes": 3599256,
+      "pages": 215,
+      "retrieved_at": "2026-07-21T00:19:07+08:00",
+      "used_by": [
+        "兴齐眼药_300573_基本面分析_20260721"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260428-db14a89d",
+      "title": "兴齐眼药2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260428",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-28/1225198376.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260428_2026Q1_第一季度报告_1225198376.pdf",
+      "sha256": "db14a89d4a3f01694f013c49937faa7bb64ef24e9faa3ced06af89777ac4c5e5",
+      "bytes": 403388,
+      "pages": 10,
+      "retrieved_at": "2026-07-21T00:19:07+08:00",
+      "used_by": [
+        "兴齐眼药_300573_基本面分析_20260721"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260701-80934dfc",
+      "title": "兴齐眼药回购股份注销公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260701",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-07-01/1225401735.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260701_期间待核验_正式披露_1225401735.pdf",
+      "sha256": "80934dfc98960d13fa7277954a9edc298cbc337a69f2f636107bcd09013d6523",
+      "bytes": 126956,
+      "pages": 8,
+      "retrieved_at": "2026-07-21T00:19:07+08:00",
+      "used_by": [
+        "兴齐眼药_300573_基本面分析_20260721"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260720-8f84c807",
+      "title": "兴齐眼药2026年第一次临时股东会决议",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260720",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-07-20/1225431916.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260720_2026_正式披露_1225431916.pdf",
+      "sha256": "8f84c807cc9b17315ce387a7c5575198f19b15e00f3f9967e127b024a39bb77f",
+      "bytes": 87983,
+      "pages": 5,
+      "retrieved_at": "2026-07-21T00:19:07+08:00",
+      "used_by": [
+        "兴齐眼药_300573_基本面分析_20260721"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260709-03261e78",
+      "title": "兴齐眼药产品入选2026版国家基本药物目录公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260709",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-07-09/1225416394.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260709_2026_正式披露_1225416394.pdf",
+      "sha256": "03261e78de250a7334c00ad283ef00ad7f6229eeefd6d988b7f481d3bfa5541f",
+      "bytes": 78211,
+      "pages": 1,
+      "retrieved_at": "2026-07-21T00:19:07+08:00",
+      "used_by": [
+        "兴齐眼药_300573_基本面分析_20260721"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250422-d1a6730d",
+      "title": "兴齐眼药2024年年度报告",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250422",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-04-22/1223184117.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250422_2024A_年度报告_1223184117.pdf",
+      "sha256": "d1a6730da6568f166999ffc978ae4056f1f1f9e523c6e756fadf76b047ee9652",
+      "bytes": 4002968,
+      "pages": 231,
+      "retrieved_at": "2026-07-21T00:20:09+08:00",
+      "used_by": [
+        "兴齐眼药_300573_基本面分析_20260721"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20240419-8fc01dc3",
+      "title": "兴齐眼药2023年年度报告",
+      "document_type": "年度报告",
+      "period": "2023A",
+      "published_date": "20240419",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2024-04-19/1219662325.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2024/20240419_2023A_年度报告_1219662325.pdf",
+      "sha256": "8fc01dc31608c19ce4466628accaef4a0e2f9f98604d4d531659e438c95e52ee",
+      "bytes": 3963381,
+      "pages": 220,
+      "retrieved_at": "2026-07-21T00:20:15+08:00",
+      "used_by": [
+        "兴齐眼药_300573_基本面分析_20260721"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260717-f8d478e1",
+      "title": "兴齐眼药回购事项股权登记日前十名股东情况",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260717",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-07-17/1225429814.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260717_期间待核验_正式披露_1225429814.pdf",
+      "sha256": "f8d478e1fe5ba449fcf77ed4353580006b5fabbfd94aaa844da35289801c3d30",
+      "bytes": 77732,
+      "pages": 2,
+      "retrieved_at": "2026-07-21T00:21:23+08:00",
+      "used_by": [
+        "兴齐眼药_300573_基本面分析_20260721"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260525-188d69dd",
+      "title": "兴齐眼药终止定增并撤回申请公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260525",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-05-25/1225329116.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260525_期间待核验_正式披露_1225329116.pdf",
+      "sha256": "188d69dde3811fe011e544ee76a07c23b6f4b781c3008f2da6d21a7984a5ead2",
+      "bytes": 81623,
+      "pages": 2,
+      "retrieved_at": "2026-07-21T00:23:30+08:00",
+      "used_by": [
+        "兴齐眼药_300573_基本面分析_20260721"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260528-9362602e",
+      "title": "深交所终止定增审核决定公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260528",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-05-28/1225335265.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260528_期间待核验_正式披露_1225335265.pdf",
+      "sha256": "9362602e6e62a2926e33a3512f643b7b71b083823764f31e6933d4048e0a0053",
+      "bytes": 64989,
+      "pages": 1,
+      "retrieved_at": "2026-07-21T00:23:30+08:00",
+      "used_by": [
+        "兴齐眼药_300573_基本面分析_20260721"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250429-216eeeba",
+      "title": "兴齐眼药2025年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2025Q1",
+      "published_date": "20250429",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-04-29/1224369032.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250429_2025Q1_第一季度报告_1224369032.pdf",
+      "sha256": "216eeeba52b917d0969155e9f1c22d0b32dad09e7f7b0db5b41ba17497783dc0",
+      "bytes": 417229,
+      "pages": 11,
+      "retrieved_at": "2026-07-21T00:25:57+08:00",
+      "used_by": [
+        "兴齐眼药_300573_基本面分析_20260721"
+      ],
+      "status": "已归档"
+    }
+  ]
+}

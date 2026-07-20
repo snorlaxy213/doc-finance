@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-20T23:09:15+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20250424-5048a19c",
+      "title": "2024年年度报告",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250424",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-04-24/1223242323.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250424_2024A_年度报告_1223242323.pdf",
+      "sha256": "5048a19c68bcef408f5fea9bcb968e3cfc80acae9d78d6f3916f07355fbe5d12",
+      "bytes": 2140135,
+      "pages": 261,
+      "retrieved_at": "2026-07-20T23:08:23+08:00",
+      "used_by": [
+        "华勤技术603296基本面分析20260720"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260324-d30d1f62",
+      "title": "2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260324",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-03-24/1225025934.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260324_2025A_年度报告_1225025934.pdf",
+      "sha256": "d30d1f625f9f0dd5e6e59aed7fc7b4e6304296a2f380bd0a351fdce1f7dfe66d",
+      "bytes": 1753109,
+      "pages": 262,
+      "retrieved_at": "2026-07-20T23:08:25+08:00",
+      "used_by": [
+        "华勤技术603296基本面分析20260720"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260430-ad0fc54f",
+      "title": "2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260430",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-30/1225259177.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260430_2026Q1_第一季度报告_1225259177.pdf",
+      "sha256": "ad0fc54fdcb090936095fc41d7ec6010af5724150898aec71d0fd7c5c70d86a0",
+      "bytes": 206749,
+      "pages": 17,
+      "retrieved_at": "2026-07-20T23:08:26+08:00",
+      "used_by": [
+        "华勤技术603296基本面分析20260720"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "FAILED-50fe61515492",
+      "title": "2026年半年度业绩预增公告",
+      "document_type": "正式披露",
+      "period": "2026H1",
+      "published_date": "20260714",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-07-14/603296_20260714_LX6Y.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-07-20T23:08:27+08:00",
+      "used_by": [
+        "华勤技术603296基本面分析20260720"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "SRC-20260508-003cc53d",
+      "title": "2026年第一季度业绩说明会",
+      "document_type": "正式披露",
+      "period": "2026Q1",
+      "published_date": "20260508",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-05-08/1225282207.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260508_2026Q1_正式披露_1225282207.pdf",
+      "sha256": "003cc53dd88b6f6f0b7485a314c69cbc32bf45abbfda6e726dcbbea618c1e90a",
+      "bytes": 190307,
+      "pages": 6,
+      "retrieved_at": "2026-07-20T23:08:27+08:00",
+      "used_by": [
+        "华勤技术603296基本面分析20260720"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "FAILED-2c1d992ca756",
+      "title": "2026年股东减持计划",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260623",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-06-23/603296_20260623_YIA2.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-07-20T23:08:27+08:00",
+      "used_by": [
+        "华勤技术603296基本面分析20260720"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "FAILED-619d26941604",
+      "title": "董事高管增持计划完成",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260701",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-07-01/603296_20260701_CK9N.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-07-20T23:08:27+08:00",
+      "used_by": [
+        "华勤技术603296基本面分析20260720"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "SRC-20260714-c78b718a",
+      "title": "2026年半年度业绩预增公告备份",
+      "document_type": "正式披露",
+      "period": "2026H1",
+      "published_date": "20260714",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESH_STOCK/2026/2026-7/2026-07-14/12443262.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260714_2026H1_正式披露_12443262_c78b718a.pdf",
+      "sha256": "c78b718a2ba5e201b2466273c4f27a98372fef72735c336fae48d37178bb73e9",
+      "bytes": 103047,
+      "pages": 2,
+      "retrieved_at": "2026-07-20T23:09:02+08:00",
+      "used_by": [
+        "华勤技术603296基本面分析20260720"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260623-6e9dcefd",
+      "title": "2026年股东减持计划备份",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260623",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESH_STOCK/2026/2026-6/2026-06-23/12405064.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260623_2026_正式披露_12405064_6e9dcefd.pdf",
+      "sha256": "6e9dcefd11f41f29ffd9e1bbd9a3270085daa01e1aa1485eb6165db1b846b1a1",
+      "bytes": 108243,
+      "pages": 6,
+      "retrieved_at": "2026-07-20T23:09:03+08:00",
+      "used_by": [
+        "华勤技术603296基本面分析20260720"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260701-573996de",
+      "title": "董事高管增持计划完成备份",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260701",
+      "official_url": "https://epaper.stcn.com/pic/202607/01/10951bc807ec093f4fb8ab52869603b3.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260701_期间待核验_正式披露_10951bc807ec093f4fb8ab52869603b3_573996de.pdf",
+      "sha256": "573996de616cf0d0ce93908608829ab5c6828d8bf4280e9fafa41d6c17f5a985",
+      "bytes": 117548,
+      "pages": 10,
+      "retrieved_at": "2026-07-20T23:09:03+08:00",
+      "used_by": [
+        "华勤技术603296基本面分析20260720"
+      ],
+      "status": "已归档",
+      "date_override": "20260701"
+    }
+  ]
+}
