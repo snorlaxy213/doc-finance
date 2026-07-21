@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-22T02:06:19+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260410-7868cfcd",
+      "title": "招金黄金2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260410",
+      "official_url": "https://www.zjhj-gold.com/upload/file/20260413/1776075067993014922.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260410_2025A_年度报告_1776075067993014922.pdf",
+      "sha256": "7868cfcdb2af532f43a4e4cc71ba8d67d47cda42f742f161e2cc3cf1371fa3b4",
+      "bytes": 1332352,
+      "pages": 160,
+      "retrieved_at": "2026-07-22T02:04:58+08:00",
+      "used_by": [
+        "招金黄金_000506_基本面分析_20260722_020444.md"
+      ],
+      "status": "已归档",
+      "date_override": "20260410"
+    },
+    {
+      "source_id": "SRC-20260416-fe8d30b3",
+      "title": "招金黄金2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260416",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-16/1225105927.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260416_2026Q1_第一季度报告_1225105927.pdf",
+      "sha256": "fe8d30b39f5c1b799c74e1c69432c47da7c4dde4d8ee226f58ba08bcbb5c8bf2",
+      "bytes": 150636,
+      "pages": 10,
+      "retrieved_at": "2026-07-22T02:04:59+08:00",
+      "used_by": [
+        "招金黄金_000506_基本面分析_20260722_020444.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260715-912aeb64",
+      "title": "招金黄金2026年半年度业绩预告",
+      "document_type": "业绩预告",
+      "period": "2026H1",
+      "published_date": "20260715",
+      "official_url": "https://www.zjhj-gold.com/upload/file/20260715/1784101660231050792.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260715_2026H1_业绩预告_1784101660231050792.pdf",
+      "sha256": "912aeb64b3f6c476955b9e5c35ecc3c9b9b4016e70a546ae4665bafd0200afcd",
+      "bytes": 109413,
+      "pages": 2,
+      "retrieved_at": "2026-07-22T02:05:01+08:00",
+      "used_by": [
+        "招金黄金_000506_基本面分析_20260722_020444.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260706-b3e1efdb",
+      "title": "招金黄金2026年7月股票交易异常波动公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260706",
+      "official_url": "https://www.zjhj-gold.com/upload/file/20260706/1783319862658020382.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260706_2026_正式披露_1783319862658020382.pdf",
+      "sha256": "b3e1efdb92f7c0538696ff764db04d7bb6c6c11f12fd0cd1b1d31d3073f98737",
+      "bytes": 163105,
+      "pages": 3,
+      "retrieved_at": "2026-07-22T02:05:04+08:00",
+      "used_by": [
+        "招金黄金_000506_基本面分析_20260722_020444.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250429-84380a46",
+      "title": "中润资源2024年年度报告",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250429",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-04-29/1223379415.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250429_2024A_年度报告_1223379415.pdf",
+      "sha256": "84380a463a72a73e83fcf991ba77f50c81f9cd8bc76e4a8e004c944a9d7de34b",
+      "bytes": 2745748,
+      "pages": 174,
+      "retrieved_at": "2026-07-22T02:05:07+08:00",
+      "used_by": [
+        "招金黄金_000506_基本面分析_20260722_020444.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260429-311acbb0",
+      "title": "中金黄金2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260429",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-29/1225232985.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260429_2026Q1_第一季度报告_1225232985.pdf",
+      "sha256": "311acbb081c37e34a42f18d6e888dd2a71c7a72b9b4ff33597a0500d6d5965f3",
+      "bytes": 185470,
+      "pages": 14,
+      "retrieved_at": "2026-07-22T02:05:07+08:00",
+      "used_by": [
+        "招金黄金_000506_基本面分析_20260722_020444.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260427-62df89fc",
+      "title": "湖南黄金2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260427",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-27/1225190411.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260427_2026Q1_第一季度报告_1225190411.pdf",
+      "sha256": "62df89fc54a099f5570942404f74d64ba97175e3acba4c2460571e57a81f6bf4",
+      "bytes": 224028,
+      "pages": 10,
+      "retrieved_at": "2026-07-22T02:05:07+08:00",
+      "used_by": [
+        "招金黄金_000506_基本面分析_20260722_020444.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260507-63d5796e",
+      "title": "招金黄金2025年度网上业绩说明会投资者关系活动记录表",
+      "document_type": "正式披露",
+      "period": "2025",
+      "published_date": "20260507",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-05-07/1225282601.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260507_2025_正式披露_1225282601.pdf",
+      "sha256": "63d5796e21b49aad8aa9be19d0e65b4a99c1bb383f300aac94ec8057999a3636",
+      "bytes": 170837,
+      "pages": 6,
+      "retrieved_at": "2026-07-22T02:06:19+08:00",
+      "used_by": [
+        "招金黄金_000506_基本面分析_20260722_020444.md"
+      ],
+      "status": "已归档"
+    }
+  ]
+}

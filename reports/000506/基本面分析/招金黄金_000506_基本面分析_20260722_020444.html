@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>招金黄金(000506.SZ)基本面分析</title>
+<style>
+:root{
+  --ink:#1a2433;
+  --ink-soft:#46546a;
+  --line:#d8dee7;
+  --line-soft:#eef1f5;
+  --bg:#ffffff;
+  --brand:#1f3a5f;
+  --brand-2:#3b5b85;
+  --brand-light:#eaf0f8;
+  --accent:#8a6d3b;
+  --up:#b73333;
+  --down:#2f7a52;
+  --warn:#a06a1f;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Microsoft YaHei","Source Han Sans SC",system-ui,-apple-system,sans-serif;
+  color:var(--ink);
+  background:#fff;
+  line-height:1.7;
+  font-size:14.5px;
+  font-variant-numeric:tabular-nums;
+  -webkit-font-smoothing:antialiased;
+}
+.page{max-width:1600px;margin:0 auto;padding:0 32px;}
+.masthead{
+  display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px;
+  border-bottom:2px solid var(--brand);padding:24px 0 18px;
+}
+.masthead .m-left{min-width:280px;}
+.masthead .kode{font-size:12px;letter-spacing:.12em;color:var(--ink-soft);}
+.masthead h1{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC","Times New Roman",serif;
+  font-size:30px;font-weight:700;margin:6px 0 4px;color:var(--brand);letter-spacing:.5px;
+}
+.masthead .sub{font-size:13px;color:var(--ink-soft);}
+.masthead .meta{font-size:12.5px;color:var(--ink-soft);margin-top:12px;}
+.masthead .meta b{color:var(--ink);font-weight:600;}
+.masthead .m-stats{display:flex;gap:34px;flex-wrap:wrap;}
+.masthead .m-stats .ms-v{font-size:25px;font-weight:700;color:var(--brand);line-height:1;font-variant-numeric:tabular-nums;}
+.masthead .m-stats .ms-v span{font-size:13px;font-weight:500;color:var(--ink-soft);margin-left:2px;}
+.masthead .m-stats .ms-l{font-size:11.5px;color:var(--ink-soft);margin-top:5px;letter-spacing:.02em;}
+.verdict{
+  margin:16px 0 4px;border:1px solid var(--line);border-left:4px solid var(--brand);
+  background:#fbfcfe;border-radius:4px;padding:16px 20px;
+}
+.verdict-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-bottom:14px;}
+.verdict-head h2{margin:0;font-size:14px;letter-spacing:.1em;color:var(--brand);font-weight:700;}
+.verdict-headline{
+  margin:-2px 0 14px;padding:10px 12px;border:1px solid #dfe7f1;border-radius:4px;
+  background:#fff;color:var(--ink);font-size:15px;font-weight:600;line-height:1.7;
+}
+.verdict-headline .label{display:block;margin-bottom:2px;color:var(--brand);font-size:11px;font-weight:700;letter-spacing:.1em;}
+.badges{display:flex;flex-direction:row;flex-wrap:wrap;gap:8px;margin:0;}
+.badge{
+  display:inline-flex;align-items:center;gap:6px;font-size:12.5px;
+  padding:5px 11px;border-radius:999px;font-weight:600;line-height:1.4;
+}
+.badge .k{font-weight:500;opacity:.85;}
+.badge.fund{background:#fdecec;color:#9a2c2c;}
+.badge.qual{background:#eef3f8;color:#1f3a5f;}
+.badge.valu{background:#fdf3e3;color:#8a5a16;}
+.badge.fraud{background:#eef7f1;color:#2f6a48;}
+.verdict-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 40px;}
+.verdict-grid .v-title{font-size:12.5px;font-weight:700;letter-spacing:.04em;margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid var(--line);}
+.verdict-grid .v-title::before{content:"";display:inline-block;width:3px;height:12px;margin-right:7px;vertical-align:-1px;border-radius:2px;}
+.verdict-grid .v-up .v-title{color:var(--brand);}
+.verdict-grid .v-up .v-title::before{background:var(--brand);}
+.verdict-grid .v-risk .v-title{color:var(--warn);}
+.verdict-grid .v-risk .v-title::before{background:var(--warn);}
+.verdict-grid ul{margin:0;padding-left:18px;}
+.verdict-grid li{font-size:13.5px;margin:6px 0;line-height:1.65;}
+.note{
+  font-size:12px;color:var(--ink-soft);background:var(--line-soft);
+  padding:3px 8px;border-radius:3px;display:inline-block;
+}
+.verdict .note{display:block;margin-top:14px;}
+.kpis{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:1px;margin:16px 0 4px;
+  background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden;
+}
+.kpi{background:#fff;padding:13px 15px;min-width:0;}
+.kpi .kl{font-size:11.5px;color:var(--ink-soft);line-height:1.3;min-height:30px;}
+.kpi .kv{font-size:20px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;margin-top:5px;word-break:break-word;}
+.kpi .kv.up{color:var(--up);}
+.kpi .kv.down{color:var(--down);}
+.kpi .ks{font-size:11px;color:var(--ink-soft);margin-top:3px;font-variant-numeric:tabular-nums;}
+.forecast-panel{
+  margin:16px 0 6px;padding:18px 20px;border:1px solid #d8e2ef;border-left:4px solid var(--brand);
+  border-radius:4px;background:linear-gradient(135deg,#f7faff 0%,#fff 68%);
+}
+.forecast-panel.forecast-empty{padding:14px 18px;background:#fbfcfe;border-left-color:#a8b5c4;}
+.forecast-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;flex-wrap:wrap;}
+.forecast-kicker{display:block;font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--brand);margin-bottom:5px;}
+.forecast-head h2{margin:0;font-size:18px;line-height:1.35;color:var(--ink);}
+.forecast-tags{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end;}
+.forecast-tag{display:inline-flex;padding:4px 9px;border-radius:999px;background:#eaf1f8;color:#294d73;font-size:11px;font-weight:600;}
+.forecast-tag.warn{background:#fff0dc;color:#8a5615;}
+.forecast-tag.neutral{background:#edf0f3;color:#5e6873;}
+.forecast-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px;}
+.forecast-card{background:#fff;border:1px solid #e0e7ef;border-radius:4px;padding:12px 14px;min-width:0;}
+.forecast-label{font-size:11px;color:var(--ink-soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.forecast-value{font-size:20px;font-weight:700;color:var(--brand);line-height:1.3;margin-top:4px;font-variant-numeric:tabular-nums;}
+.forecast-change{font-size:11.5px;color:var(--ink-soft);margin-top:4px;}
+.forecast-note{margin:11px 0 0!important;font-size:11px!important;color:var(--ink-soft)!important;}
+.update-panel{
+  margin:16px 0 6px;padding:18px 20px;border:1px solid #ded7c9;border-left:4px solid var(--accent);
+  border-radius:4px;background:linear-gradient(135deg,#fffcf6 0%,#fff 72%);
+}
+.update-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:10px;}
+.update-head span{font-size:10.5px;font-weight:700;letter-spacing:.12em;color:var(--accent);}
+.update-head h2{font-size:18px;margin:0;color:var(--ink);}
+.update-body section{border:0;padding:0;}.update-body h3.sub{margin-top:8px;}
+.update-body .tbl-scroll{background:#fff;}
+.layout{
+  display:grid;grid-template-columns:208px minmax(0,1fr);gap:36px;align-items:start;
+  padding:14px 0 0;
+}
+.sidebar{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow-y:auto;padding:0 8px 0 0;}
+.sidebar::-webkit-scrollbar{width:6px;}
+.sidebar::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px;}
+.toc{position:static;background:transparent;border:none;margin:12px 0 16px;padding:0;}
+.toc .scroll{overflow:visible;white-space:normal;display:flex;flex-direction:column;gap:2px;}
+.toc a{
+  display:flex;align-items:center;gap:9px;
+  font-size:14px;line-height:1.25;color:var(--ink-soft);text-decoration:none;
+  padding:6px 8px;border-radius:5px;margin:0;border:1px solid transparent;
+}
+.toc a .toc-num{
+  flex:0 0 auto;font-family:"Times New Roman",serif;font-size:12px;font-weight:600;
+  color:var(--ink-soft);background:var(--line-soft);
+  width:22px;height:22px;border-radius:4px;font-variant-numeric:tabular-nums;
+  display:inline-flex;align-items:center;justify-content:center;
+}
+.toc a:hover{background:var(--brand-light);color:var(--brand);}
+.toc a:hover .toc-num{background:#fff;color:var(--brand);}
+.toc a.active{background:var(--brand);color:#fff;font-weight:600;}
+.toc a.active .toc-num{background:rgba(255,255,255,.22);color:#fff;}
+.main{min-width:0;}
+section{padding:16px 0 8px;border-top:1px solid var(--line-soft);scroll-margin-top:64px;}
+section:first-of-type{border-top:none;padding-top:6px;}
+h2.sec{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",serif;
+  font-size:19px;color:var(--brand);margin:6px 0 12px;font-weight:700;
+  display:flex;align-items:baseline;gap:10px;
+}
+h2.sec .num{
+  font-family:"Times New Roman",serif;font-size:14px;color:#fff;background:var(--brand);
+  padding:2px 9px;border-radius:3px;letter-spacing:.05em;font-weight:600;flex:0 0 auto;
+}
+h3.sub{font-size:14.5px;color:var(--ink);margin:16px 0 6px;font-weight:700;}
+p{margin:8px 0;}
+ul,ol{margin:8px 0;padding-left:22px;}
+li{margin:4px 0;}
+strong{color:var(--ink);}
+.tbl-scroll{overflow-x:auto;margin:10px 0;border:1px solid var(--line);border-radius:4px;}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums;}
+thead th{
+  background:#f3f6fa;color:var(--brand);font-weight:700;text-align:right;
+  padding:10px 12px;border-bottom:1.5px solid var(--brand);white-space:nowrap;
+  font-size:12.5px;letter-spacing:.02em;
+}
+thead th[scope=col]:first-child{text-align:left;}
+tbody td{padding:9px 12px;border-bottom:1px solid var(--line-soft);text-align:right;white-space:normal;word-break:break-word;}
+tbody th[scope=row]{
+  text-align:left;color:var(--ink);font-weight:600;
+  padding:9px 12px;border-bottom:1px solid var(--line-soft);white-space:nowrap;font-size:13px;background:#fafbfd;
+}
+tbody tr:nth-child(even) td{background:#fafbfd;}
+tbody tr:hover td{background:var(--brand-light);}
+.up{color:var(--up);}
+.down{color:var(--down);}
+.muted{color:var(--ink-soft);}
+a{color:var(--brand-2);text-decoration:underline;text-underline-offset:2px;word-break:break-all;}
+a:hover{color:var(--brand);}
+.note-copy{
+  margin:20px 0;border:1px solid var(--line);border-left:4px solid var(--accent);
+  background:#fbfcfe;border-radius:4px;padding:14px 16px;
+}
+.note-copy h2{margin:0 0 10px;font-size:13px;letter-spacing:.1em;color:var(--brand);font-weight:700;}
+pre{
+  margin:10px 0;padding:12px 14px;background:#f7f9fc;border:1px solid var(--line-soft);
+  border-radius:4px;overflow:auto;color:var(--ink);font-size:12.5px;line-height:1.6;
+}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;}
+footer{
+  margin-top:22px;border-top:2px solid var(--brand);padding:14px 0 30px;
+  font-size:11.5px;color:var(--ink-soft);line-height:1.7;font-variant-numeric:tabular-nums;
+}
+footer .disclaimer{background:var(--line-soft);padding:8px 12px;border-radius:3px;margin-bottom:8px;}
+@media (max-width:1100px){
+  .layout{grid-template-columns:1fr;gap:0;}
+  .sidebar{position:static;max-height:none;overflow:visible;padding:0;}
+  .toc{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);
+    border-bottom:1px solid var(--line);margin:0 -32px 16px;padding:10px 32px;}
+  .toc .scroll{overflow-x:auto;white-space:nowrap;flex-direction:row;}
+  .toc a{display:inline-flex;white-space:nowrap;border-left:none;border:1px solid transparent;padding:3px 9px;margin:2px;}
+  .toc a.active{border-left:none;background:var(--brand);color:#fff;}
+}
+@media (max-width:760px){
+  .verdict-grid{grid-template-columns:1fr;}
+  .kpis{grid-template-columns:repeat(3,1fr);}
+  .forecast-grid{grid-template-columns:1fr;}
+  .page{padding:0 18px;}
+  .masthead .m-stats{gap:22px;}
+}
+@media (max-width:460px){.kpis{grid-template-columns:repeat(2,1fr);}}
+@media print{
+  body{background:#fff;font-size:10.5px;}
+  .page{max-width:none;padding:0;}
+  .layout{grid-template-columns:1fr;}
+  .sidebar{position:static;max-height:none;overflow:visible;}
+  .toc{position:static;border:none;padding:0;margin:0 0 8px;}
+  .toc .scroll{overflow:visible;display:block;}
+  .toc a{font-size:10px;padding:1px 5px;display:inline-flex;}
+  .toc a.active{background:transparent;color:var(--ink);}
+  section{break-inside:avoid;padding-top:10px;}
+  table{font-size:9.5px;}
+  thead{display:table-header-group;}
+  tbody tr{break-inside:avoid;}
+  .badge{border:1px solid #ccc;}
+  .note-copy,.tbl-scroll,.kpis,.verdict,.forecast-panel{break-inside:avoid;}
+  .update-panel{break-inside:avoid;}
+  footer{break-inside:avoid;}
+  a{color:var(--ink);text-decoration:none;}
+  .kpi{border:1px solid #ccc;}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="masthead">
+    <div class="m-left">
+      <div class="kode">000506.SZ · 深圳证券交易所 · 基本面分析</div>
+      <h1>招金黄金 · 基本面分析</h1>
+      <div class="sub">基本面、财务质量、估值与风险初筛</div>
+      <div class="meta">数据口径 <b>财务数据截至 2026-03-31；最新预报公告日 2026-07-15；市场数据截至 2026-07-21。</b> · 生成时间 <b>2026-07-22 02:11</b></div>
+    </div>
+    <div class="m-stats">
+      <div><div class="ms-v">11.84 元</div><div class="ms-l">收盘价 · 2026-07-21 收盘；东方财富行情</div></div>
+<div><div class="ms-v">110.00 亿元</div><div class="ms-l">总市值 · 11.84 元 × 9.2902 亿股；东方财富行情</div></div>
+<div><div class="ms-v">动态 14.67 倍；TTM 31.48 倍</div><div class="ms-l">PE · 2026-07-21；东方财富行情</div></div>
+<div><div class="ms-v">12.37 倍</div><div class="ms-l">PB · 以 2026Q1 归母净资产 8.89 亿元计；2026Q1 报告 P2、P6</div></div>
+    </div>
+  </header>
+
+  <section class="verdict" aria-label="结论速览">
+    <div class="verdict-head">
+      <h2>结论速览</h2>
+      <div class="badges">
+        <span class="badge fund"><span class="k">基本面</span> 偏弱</span>
+<span class="badge qual"><span class="k">财务质量</span> 存疑</span>
+<span class="badge valu"><span class="k">估值</span> 偏高</span>
+<span class="badge fraud"><span class="k">造假风险初筛</span> 高</span>
+      </div>
+    </div>
+    <div class="verdict-headline"><span class="label">核心判断</span>招金黄金的矿山经营已从亏损转向改善，但 2026H1 表观利润主要受一次性债务收益放大，现金流、单一矿山依赖和历史审计治理问题尚未完成验证，而当前估值明显高于可比公司。</div>
+    <div class="verdict-grid">
+      <div class="v-col v-up">
+        <div class="v-title">核心理由</div>
+        <ul>
+<li>2025 年黄金产量 +68.64%、矿业毛利率升至 40.28%，2026Q1 扣非净利润转正，主业确有修复。</li>
+<li>2026H1 预告归母净利润 2.0—2.4 亿元，但约 1.35 亿元债务收益占过半；隐含 Q2 归母利润中枢明显低于 Q1。</li>
+<li>2025 年经营现金流/归母净利润仅 0.21 倍，自由现金流 -2.11 亿元；2026Q1 该比率进一步降至 0.07 倍。</li>
+<li>99% 以上收入来自斐济单一矿山，前五大客户占收入 99.66%，其中关联方客户占 51.16%。</li>
+<li>31.48 倍 TTM PE、12.37 倍 PB 显著高于中金黄金和湖南黄金，估值已经提前计入较强的产量与利润兑现。</li>
+</ul>
+      </div>
+      <div class="v-col v-risk">
+        <div class="v-title">主要风险 / 关注</div>
+        <ul>
+<li>H1 表观利润过半来自一次性债务收益，现金流验证不足。</li>
+<li>单一斐济矿山、关联客户集中、历史审计治理问题与高估值叠加。</li>
+</ul>
+      </div>
+    </div>
+    <p class="note">口径:市场估值为时点数据,财务指标需区分年度、半年度、季度和单季口径;所有结论以公司正式披露和已核验来源为准。</p>
+  </section>
+
+  <div class="kpis" aria-label="关键指标速览">
+    <div class="kpi"><div class="kl">2026Q1归母净利</div><div class="kv">1.8741 亿元</div><div class="ks">归母净利润</div></div>
+<div class="kpi"><div class="kl">2026Q1扣非净利</div><div class="kv">0.5852 亿元</div><div class="ks">扣非归母净利润</div></div>
+<div class="kpi"><div class="kl">2026Q1毛利率</div><div class="kv">56.05%</div><div class="ks">毛利率</div></div>
+<div class="kpi"><div class="kl">2026Q1经营现金流</div><div class="kv">0.1232 亿元</div><div class="ks">经营现金流净额</div></div>
+<div class="kpi"><div class="kl">2026Q1应收/合同资产</div><div class="kv">0.1065 亿元</div><div class="ks">应收账款/合同资产</div></div>
+<div class="kpi"><div class="kl">2026Q1存货</div><div class="kv">1.5038 亿元</div><div class="ks">存货</div></div>
+  </div>
+
+  <section class="forecast-panel" aria-label="最新财务预报"><div class="forecast-head"><div><span class="forecast-kicker">最新财务预报</span><h2>2026H1</h2></div><div class="forecast-tags"><span class="forecast-tag warn">未经审计</span><span class="forecast-tag">信息可信度 高</span><span class="forecast-tag">盈利质量 中性</span></div></div><div class="forecast-grid"><div class="forecast-card"><div class="forecast-label">累计归母净利润</div><div class="forecast-value">2.00—2.40 亿元</div><div class="forecast-change">累计同比 +347.48%—+436.98%</div></div>
+<div class="forecast-card"><div class="forecast-label">累计扣非净利润</div><div class="forecast-value">0.80—1.16 亿元</div><div class="forecast-change">累计同比 +490.44%—+756.14%</div></div></div><p class="forecast-note">隐含单季数据根据累计预报和已披露财报推算，并非公司直接披露；正式结果以定期报告为准。</p></section>
+
+  <section class="update-panel" aria-label="本次更新"><div class="update-head"><span>RESEARCH CONTINUITY</span><h2>本次更新 · 与上次报告相比</h2></div><div class="update-body"><p>首次建立研究基线，无上次报告可比。基线日期为 2026-07-22。</p>
+<ul>
+<li>本次触发事件：2026 年半年度业绩预告披露后建立首次完整基线。</li>
+<li>新增确认事实：2025 年经审计扭亏；2026Q1 主业扣非转正；2026H1 预告继续增长；崔炜案相关债务已结清并确认约 1.35 亿元收益。</li>
+<li>被证伪或弱化的旧假设：不适用，首次建档。</li>
+<li>仍然有效的旧观点：不适用，首次建档。</li>
+<li>仍待验证事项：H1 正式财报的现金流与资产负债表、2026 年产量与单位成本、技改完成度、存货消化、关联销售回款和历史治理风险是否持续收敛。</li>
+</ul></div></section>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="toc" aria-label="目录">
+        <div class="scroll" id="toc-scroll">
+          <a href="#s1"><span class="toc-num">01</span>核心财务指标</a>
+<a href="#s2"><span class="toc-num">02</span>近两年财报趋势与业务结构</a>
+<a href="#s3"><span class="toc-num">03</span>结论摘要</a>
+<a href="#s4"><span class="toc-num">04</span>公司与行业</a>
+<a href="#s5"><span class="toc-num">05</span>订单与需求验证</a>
+<a href="#s6"><span class="toc-num">06</span>财务质量验证</a>
+<a href="#s7"><span class="toc-num">07</span>股东与机构</a>
+<a href="#s8"><span class="toc-num">08</span>估值与同行对比</a>
+<a href="#s9"><span class="toc-num">09</span>负面信息与风险排查</a>
+<a href="#s10"><span class="toc-num">10</span>财务造假风险初筛</a>
+<a href="#s11"><span class="toc-num">11</span>后续跟踪清单</a>
+<a href="#s12"><span class="toc-num">12</span>信息边界</a>
+        </div>
+      </nav>
+    </aside>
+    <main class="main">
+      <section id="s1">
+<h2 class="sec"><span class="num">01</span>核心财务指标</h2>
+<h3 class="sub">1.1 当前估值快照</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">项目</th>
+<th scope="col">最新数据</th>
+<th scope="col">数据日期/口径</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">收盘价</th>
+<td>11.84 元</td>
+<td>2026-07-21 收盘；<a href="https://quote.eastmoney.com/sz000506.html" target="_blank" rel="noopener">东方财富行情</a></td>
+<td>7月初异常波动后仍处高波动阶段</td>
+</tr>
+<tr>
+<th scope="row">总市值</th>
+<td>110.00 亿元</td>
+<td>11.84 元 × 9.2902 亿股；<a href="https://quote.eastmoney.com/sz000506.html" target="_blank" rel="noopener">东方财富行情</a></td>
+<td class="up">对单一在产矿山、2025 年营收仅 5.27 亿元的公司而言，市值已包含较强增长预期</td>
+</tr>
+<tr>
+<th scope="row">流通市值</th>
+<td>109.96 亿元</td>
+<td>流通股 9.2871 亿股；<a href="https://quote.eastmoney.com/sz000506.html" target="_blank" rel="noopener">东方财富行情</a></td>
+<td>基本全流通</td>
+</tr>
+<tr>
+<th scope="row">PE</th>
+<td>动态 14.67 倍；TTM 31.48 倍</td>
+<td>2026-07-21；<a href="https://quote.eastmoney.com/sz000506.html" target="_blank" rel="noopener">东方财富行情</a></td>
+<td>动态 PE 被 2026Q1 一次性债务收益压低，TTM 更有参考性，但仍需剔除非经常损益</td>
+</tr>
+<tr>
+<th scope="row">PB</th>
+<td>12.37 倍</td>
+<td>以 2026Q1 归母净资产 8.89 亿元计；<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260416_2026Q1_%E7%AC%AC%E4%B8%80%E5%AD%A3%E5%BA%A6%E6%8A%A5%E5%91%8A_1225105927.pdf">2026Q1 报告 P2、P6</a></td>
+<td>显著高于黄金矿业可比公司，容错率低</td>
+</tr>
+<tr>
+<th scope="row">PS</th>
+<td>18.09 倍</td>
+<td>TTM 营收约 6.08 亿元（2025A + 2026Q1 - 2025Q1）</td>
+<td class="down">对矿业公司偏高，需要产量、金价和单位成本同时兑现</td>
+</tr>
+<tr>
+<th scope="row">股息率</th>
+<td>0%</td>
+<td>2025 年度不分红；<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260410_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1776075067993014922.pdf">2025 年报 P2、P37</a></td>
+<td class="down">累计未分配利润仍为负，当前不是股息型标的</td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">1.2 最新财务预报与质量解读</h3>
+<h3 class="sub">1.2.1 累计业绩预报</h3>
+<p>2026 年 7 月 15 日，公司披露 2026 年半年度业绩预告，属于报告执行日前 30 日内的正式预报，数据未经审计。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260715_2026H1_%E4%B8%9A%E7%BB%A9%E9%A2%84%E5%91%8A_1784101660231050792.pdf">2026H1 业绩预告 P1-P2</a></p>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">本期预报区间</th>
+<th scope="col">上年同期</th>
+<th scope="col">同比变化</th>
+<th scope="col">预报中枢</th>
+<th scope="col">质量解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">预报期间</th>
+<td>2026H1</td>
+<td class="muted">不适用</td>
+<td class="muted">不适用</td>
+<td class="muted">不适用</td>
+<td>公告日 2026-07-15，未经审计</td>
+</tr>
+<tr>
+<th scope="row">预报营业收入</th>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td>不计算</td>
+<td class="muted">不适用</td>
+<td>不以利润增速倒推收入</td>
+</tr>
+<tr>
+<th scope="row">预报归母净利润</th>
+<td>2.00—2.40 亿元</td>
+<td>0.4469 亿元</td>
+<td class="up">+347.48%—+436.98%</td>
+<td>2.20 亿元</td>
+<td>同比高增，但一次性债务收益显著放大表观利润</td>
+</tr>
+<tr>
+<th scope="row">预报扣非归母净利润</th>
+<td>0.80—1.16 亿元</td>
+<td>0.1355 亿元</td>
+<td class="up">+490.44%—+756.14%</td>
+<td>0.98 亿元</td>
+<td class="up">核心经营已明显改善，但区间宽度约 36.7%，可见度一般</td>
+</tr>
+<tr>
+<th scope="row">预报 EPS</th>
+<td>0.22—0.26 元/股</td>
+<td>0.05 元/股</td>
+<td class="up">+340%—+420%</td>
+<td>0.24 元/股</td>
+<td>与归母净利润区间基本匹配</td>
+</tr>
+<tr>
+<th scope="row">预计非经常性损益</th>
+<td>未披露完整区间；明确包含约 1.35 亿元债务收益</td>
+<td class="muted">未披露</td>
+<td class="muted">不适用</td>
+<td class="muted">不适用</td>
+<td>已确认的一次性收益约占预报归母净利润的 56.3%—67.5%</td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">1.2.2 隐含最新单季度同比与环比</h3>
+<p>以下数值根据累计预报和已披露财报推算，非公司直接披露；2025Q2 数据由 2025H1 减 2025Q1 得出。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260715_2026H1_%E4%B8%9A%E7%BB%A9%E9%A2%84%E5%91%8A_1784101660231050792.pdf">2026H1 业绩预告 P1</a> <a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260416_2026Q1_%E7%AC%AC%E4%B8%80%E5%AD%A3%E5%BA%A6%E6%8A%A5%E5%91%8A_1225105927.pdf">2026Q1 报告 P2</a> <a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260410_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1776075067993014922.pdf">2025 年报 P8</a></p>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">隐含 2026Q2 区间</th>
+<th scope="col">2025Q2</th>
+<th scope="col">单季同比</th>
+<th scope="col">2026Q1</th>
+<th scope="col">单季环比</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">隐含单季营业收入</th>
+<td>不计算</td>
+<td>未披露预报收入</td>
+<td>不计算</td>
+<td>1.7888 亿元</td>
+<td>不计算</td>
+<td>半年度预报未披露收入</td>
+</tr>
+<tr>
+<th scope="row">隐含单季归母净利润</th>
+<td>0.1259—0.5259 亿元</td>
+<td>0.4780 亿元</td>
+<td class="down">-73.65%—+10.03%</td>
+<td>1.8741 亿元</td>
+<td class="down">-93.28%—-71.94%</td>
+<td class="down">Q1 含 1.35 亿元债务收益，环比大降并不等同主业恶化</td>
+</tr>
+<tr>
+<th scope="row">隐含单季扣非归母净利润</th>
+<td>0.2148—0.5748 亿元</td>
+<td>0.1626 亿元</td>
+<td class="up">+32.13%—+253.58%</td>
+<td>0.5852 亿元</td>
+<td class="down">-63.30%—-1.78%</td>
+<td class="up">核心利润同比仍改善，但较 Q1 至少不再加速</td>
+</tr>
+<tr>
+<th scope="row">隐含单季 EPS</th>
+<td>0.02—0.06 元/股</td>
+<td>约 0.0533 元/股</td>
+<td class="down">-62.48%—+12.57%</td>
+<td>0.20 元/股</td>
+<td class="down">-90.00%—-70.00%</td>
+<td>与归母利润动能一致</td>
+</tr>
+</tbody></table></div>
+<p><strong>财务预报质量判断：</strong>归母与扣非利润均同比改善，说明主业并非纯靠一次性项目扭转；但约 1.35 亿元债务收益占预报归母净利润过半，且隐含 Q2 归母利润中枢仅约 0.33 亿元。预告未披露收入、毛利率、现金流、应收、存货和资本开支，尚不能验证利润现金含量。归母利润区间宽度约 18.2%，扣非利润区间宽度约 36.7%。<strong>信息可信度：高</strong>（正式公告、未修正，但未经审计）；<strong>盈利质量判断：中性</strong>（核心盈利改善，一次性收益主导表观增幅）。</p>
+<h3 class="sub">1.3 已披露当年期间财报</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">2025Q1</th>
+<th scope="col">2026Q1</th>
+<th scope="col">变化解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>0.9786 亿元</td>
+<td>1.7888 亿元</td>
+<td class="up">+82.79%，黄金销量与售价同比上升</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td class="down">-0.0310 亿元</td>
+<td>1.8741 亿元</td>
+<td>扭亏，但含 1.2888 亿元归母口径非经常损益</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td class="down">-0.0271 亿元</td>
+<td>0.5852 亿元</td>
+<td class="up">主业由亏转盈，改善具有经营含量</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td>0.2441 亿元</td>
+<td>0.1232 亿元</td>
+<td class="down">-49.52%，明显落后于利润</td>
+</tr>
+<tr>
+<th scope="row">经营现金流/归母净利润</th>
+<td class="down">亏损期不适用</td>
+<td>0.07 倍</td>
+<td>现金含量偏低</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td class="down">-0.7888 亿元</td>
+<td class="down">-0.2842 亿元</td>
+<td class="down">资本开支后仍为负，但同比缺口收窄</td>
+</tr>
+<tr>
+<th scope="row">EPS</th>
+<td class="down">-0.0033 元/股</td>
+<td>0.20 元/股</td>
+<td>扭亏</td>
+</tr>
+<tr>
+<th scope="row">ROE</th>
+<td class="down">-0.59%</td>
+<td>23.60%</td>
+<td>被一次性收益显著抬高</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>22.29%</td>
+<td>56.05%</td>
+<td class="up">量价提升、产品结构与成本共同改善</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td class="down">-2.77%</td>
+<td>32.72%</td>
+<td class="up">主业盈利能力明显修复</td>
+</tr>
+<tr>
+<th scope="row">资本开支</th>
+<td>1.0329 亿元</td>
+<td>0.4074 亿元</td>
+<td class="down">技改仍在推进，投入强度下降</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>同期值未在本期比较表披露</td>
+<td>1.5038 亿元</td>
+<td>较 2025 年末增加 8.98%，需与产量和销售节奏核对</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td>同期值未在本期比较表披露</td>
+<td>0.1065 亿元</td>
+<td class="up">应收账款较 2025 年末增长约 134.8%，但绝对额仍小</td>
+</tr>
+<tr>
+<th scope="row">总资产</th>
+<td>同期值未在本期比较表披露</td>
+<td>14.6986 亿元</td>
+<td>较 2025 年末 +1.36%</td>
+</tr>
+<tr>
+<th scope="row">归母净资产</th>
+<td>同期值未在本期比较表披露</td>
+<td>8.8909 亿元</td>
+<td>较 2025 年末 +27.22%，主要由当期利润推动</td>
+</tr>
+</tbody></table></div>
+<p>上述期间数据来自公司 2026 年第一季度报告；自由现金流按“经营现金流净额－购建长期资产现金支出”计算。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260416_2026Q1_%E7%AC%AC%E4%B8%80%E5%AD%A3%E5%BA%A6%E6%8A%A5%E5%91%8A_1225105927.pdf">2026Q1 报告 P2、P5-P9</a></p>
+<h3 class="sub">1.4 最近三年年度财报</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">2023A（重述后）</th>
+<th scope="col">2024A</th>
+<th scope="col">2025A</th>
+<th scope="col">变化解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>2.8438 亿元</td>
+<td>3.3321 亿元</td>
+<td>5.2690 亿元</td>
+<td>两年复合增速约 36.1%，2025 年主要由黄金产销量和金价驱动</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td>0.0667 亿元</td>
+<td class="down">-1.2743 亿元</td>
+<td>1.5886 亿元</td>
+<td>波动大，2025 年扭亏但含资产处置及税务影响</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td class="down">-1.2728 亿元</td>
+<td class="down">-0.9692 亿元</td>
+<td>0.8794 亿元</td>
+<td>2025 年首次形成较明确的核心盈利</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td class="down">-0.1606 亿元</td>
+<td>0.3791 亿元</td>
+<td>0.3333 亿元</td>
+<td class="up">2025 年未随利润增长，现金兑现偏弱</td>
+</tr>
+<tr>
+<th scope="row">经营现金流/归母净利润</th>
+<td class="down">-2.41 倍</td>
+<td class="down">亏损期不具经济意义</td>
+<td>0.21 倍</td>
+<td>2025 年利润现金含量偏低</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td class="down">-0.3180 亿元</td>
+<td class="down">-0.4711 亿元</td>
+<td class="down">-2.1134 亿元</td>
+<td>技改、矿权与设备投入造成持续现金消耗</td>
+</tr>
+<tr>
+<th scope="row">EPS</th>
+<td>0.01 元/股</td>
+<td class="down">-0.14 元/股</td>
+<td>0.17 元/股</td>
+<td>与归母利润一致</td>
+</tr>
+<tr>
+<th scope="row">ROE</th>
+<td>1.01%</td>
+<td class="down">-21.19%</td>
+<td>25.87%</td>
+<td>低基数与利润反转放大 2025 年 ROE</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td class="down">-3.08%</td>
+<td>25.84%</td>
+<td>40.18%</td>
+<td class="up">连续改善，经营修复最扎实的指标之一</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td class="down">-44.76%</td>
+<td class="down">-29.09%</td>
+<td>16.69%</td>
+<td class="up">2025 年由负转正</td>
+</tr>
+<tr>
+<th scope="row">资本开支</th>
+<td>0.1574 亿元</td>
+<td>0.8502 亿元</td>
+<td>2.4467 亿元</td>
+<td>2025 年资本开支/收入约 46.4%，进入重投入期</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>0.8329 亿元</td>
+<td>0.6924 亿元</td>
+<td>1.3799 亿元</td>
+<td class="down">2025 年 +99.29%，快于收入增速</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td>0.0130 亿元合同资产</td>
+<td>0.7767 亿元应收账款</td>
+<td>0.0454 亿元应收账款</td>
+<td>2025 年应收显著回落，但客户集中与关联销售仍需穿透</td>
+</tr>
+<tr>
+<th scope="row">总资产</th>
+<td>22.9659 亿元</td>
+<td>25.2276 亿元</td>
+<td>14.5008 亿元</td>
+<td class="down">2025 年处置新金国际导致资产规模下降，跨期可比性受影响</td>
+</tr>
+<tr>
+<th scope="row">归母净资产</th>
+<td>6.7345 亿元</td>
+<td>5.2941 亿元</td>
+<td>6.9885 亿元</td>
+<td class="up">2025 年修复至高于 2023 年水平</td>
+</tr>
+</tbody></table></div>
+<p>2023—2024 年比较数据及 2023 年重述来自 2024 年报，2025 年数据来自经审计年报；自由现金流为本报告计算值。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2025/20250429_2024A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1223379415.pdf">2024 年报 P8、P13、P63-P72</a> <a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260410_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1776075067993014922.pdf">2025 年报 P8、P14-P18、P63-P72</a></p>
+<p><strong>核心指标综合判断：</strong>2025 年的真正亮点不是归母净利润扭亏，而是黄金产量增长 68.64%、矿业毛利率提升 14.38 个百分点至 40.28%，扣非净利润转正；这说明经营修复具备真实业务基础。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260410_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1776075067993014922.pdf">2025 年报 P13-P15</a> 但经营现金流仅 0.33 亿元、自由现金流为 -2.11 亿元、存货接近翻倍，说明公司仍处“利润先修复、现金后验证”的阶段。2026Q1 扣非净利率继续提升，但经营现金流/归母净利润仅 0.07 倍，尚不足以把财务质量评级上调。</p>
+</section>
+<section id="s2">
+<h2 class="sec"><span class="num">02</span>近两年财报趋势与业务结构</h2>
+<h3 class="sub">2.1 近两年财报趋势</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">项目</th>
+<th scope="col">2024A</th>
+<th scope="col">2025A</th>
+<th scope="col">变化</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>3.3321 亿元</td>
+<td>5.2690 亿元</td>
+<td class="up">+58.13%</td>
+<td>黄金产量、销量及金价共同拉动</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td class="down">-1.2743 亿元</td>
+<td>1.5886 亿元</td>
+<td>扭亏</td>
+<td>包含 0.7092 亿元非经常损益，不能只看表观扭亏</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td class="down">-0.9692 亿元</td>
+<td>0.8794 亿元</td>
+<td>扭亏</td>
+<td class="up">主业盈利修复得到确认</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>25.84%</td>
+<td>40.18%</td>
+<td class="up">+14.34pct</td>
+<td class="up">产量增长、技改与金价上行共同作用</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td class="down">-29.09%</td>
+<td>16.69%</td>
+<td class="up">+45.78pct</td>
+<td class="down">规模效应与财务费用下降明显</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td>0.3791 亿元</td>
+<td>0.3333 亿元</td>
+<td class="down">-12.08%</td>
+<td class="up">利润增长未转化为经营现金增长</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td class="down">-0.4711 亿元</td>
+<td class="down">-2.1134 亿元</td>
+<td>缺口扩大</td>
+<td>2025 年资本开支 2.45 亿元，技改消耗现金</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>0.6924 亿元</td>
+<td>1.3799 亿元</td>
+<td class="up">+99.29%</td>
+<td class="up">期末黄金库存 931.61 盎司，亦有备件及在产品增长</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td>0.7767 亿元</td>
+<td>0.0454 亿元</td>
+<td class="down">-94.16%</td>
+<td class="up">回款表面改善，但客户集中度和关联交易上升</td>
+</tr>
+</tbody></table></div>
+<p>2025 年销售商品收到现金 5.3863 亿元，相当于营业收入的 102.2%，收现率尚可；经营现金流偏低更多来自存货增加及经营性应付项目减少，而非单纯应收恶化。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260410_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1776075067993014922.pdf">2025 年报 P17、P71-P72</a></p>
+<h3 class="sub">2.2 分业务情况</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">业务</th>
+<th scope="col">2024 年收入</th>
+<th scope="col">2024 年毛利率</th>
+<th scope="col">2025 年收入</th>
+<th scope="col">2025 年毛利率</th>
+<th scope="col">变化</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">黄金产品销售</th>
+<td>3.2835 亿元</td>
+<td>25.90%</td>
+<td>5.2172 亿元</td>
+<td>40.28%</td>
+<td class="up">收入 +58.89%，毛利率 +14.38pct，是唯一实质增长引擎</td>
+</tr>
+<tr>
+<th scope="row">其他业务</th>
+<td>0.0487 亿元</td>
+<td>21.67%</td>
+<td>0.0518 亿元</td>
+<td>30.30%</td>
+<td>规模很小，对整体结论影响有限</td>
+</tr>
+</tbody></table></div>
+<p>分业务数据来自 2025 年年报。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260410_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1776075067993014922.pdf">2025 年报 P14-P15</a></p>
+<p><strong>业务结构判断：</strong>公司已高度纯化为单一黄金矿业资产：2025 年矿业收入占 99.02%，斐济地区收入占 99.32%，瓦图科拉金矿既是增长引擎，也是单点风险。2025 年黄金产量 24,619.64 盎司、销量 21,483.91 盎司，同比分别增长 68.64%和 47.16%；公司预计技改于 2026 年底完成，但尚未给出可审计的年度产量目标。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260410_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1776075067993014922.pdf">2025 年报 P13-P15</a> 管理层在业绩说明会上仅表示 2026 年产量预计同比提升，实际增幅仍取决于回收率、入选品位和技改进度。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260507_2025_%E6%AD%A3%E5%BC%8F%E6%8A%AB%E9%9C%B2_1225282601.pdf">2025 年度业绩说明会记录 P1-P2</a></p>
+</section>
+<section id="s3">
+<h2 class="sec"><span class="num">03</span>结论摘要</h2>
+<h3 class="sub">3.1 当前结论</h3>
+<ul>
+<li>基本面判断：偏弱</li>
+<li>财务质量：存疑</li>
+<li>估值状态：偏高</li>
+<li>财务造假风险初筛：高</li>
+<li>核心理由：</li>
+<ol>
+<li>2025 年黄金产量 +68.64%、矿业毛利率升至 40.28%，2026Q1 扣非净利润转正，主业确有修复。</li>
+<li>2026H1 预告归母净利润 2.0—2.4 亿元，但约 1.35 亿元债务收益占过半；隐含 Q2 归母利润中枢明显低于 Q1。</li>
+<li>2025 年经营现金流/归母净利润仅 0.21 倍，自由现金流 -2.11 亿元；2026Q1 该比率进一步降至 0.07 倍。</li>
+<li>99% 以上收入来自斐济单一矿山，前五大客户占收入 99.66%，其中关联方客户占 51.16%。</li>
+<li>31.48 倍 TTM PE、12.37 倍 PB 显著高于中金黄金和湖南黄金，估值已经提前计入较强的产量与利润兑现。</li>
+</ol>
+</ul>
+<h3 class="sub">3.2 与上次报告相比</h3>
+<p>首次建立研究基线，无上次报告可比。基线日期为 2026-07-22。</p>
+<ul>
+<li>本次触发事件：2026 年半年度业绩预告披露后建立首次完整基线。</li>
+<li>新增确认事实：2025 年经审计扭亏；2026Q1 主业扣非转正；2026H1 预告继续增长；崔炜案相关债务已结清并确认约 1.35 亿元收益。</li>
+<li>被证伪或弱化的旧假设：不适用，首次建档。</li>
+<li>仍然有效的旧观点：不适用，首次建档。</li>
+<li>仍待验证事项：H1 正式财报的现金流与资产负债表、2026 年产量与单位成本、技改完成度、存货消化、关联销售回款和历史治理风险是否持续收敛。</li>
+</ul>
+</section>
+<section id="s4">
+<h2 class="sec"><span class="num">04</span>公司与行业</h2>
+<ul>
+<li>主营业务：黄金资源勘探、地下开采、选矿、冶炼及矿产品销售；核心资产为斐济瓦图科拉金矿。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260410_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1776075067993014922.pdf">2025 年报 P10-P11</a></li>
+<li>主要产品：金精矿与合质金，均以国际金价为主要定价基础并以美元结算。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260410_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1776075067993014922.pdf">2025 年报 P10</a></li>
+<li>市场占有率：公司未披露可核验的全球或国内市场份额；2025 年产金 24,619.64 盎司，绝对规模远小于大型黄金矿企，不宜使用“行业龙头”叙事。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260410_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1776075067993014922.pdf">2025 年报 P13-P15</a></li>
+<li>行业景气度：2025 年黄金价格与投资需求显著上行，公司披露伦敦现货黄金全年涨幅 64.56%；景气度有利，但高金价同样使市场预期与估值更脆弱。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260410_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1776075067993014922.pdf">2025 年报 P11-P12</a></li>
+<li>核心竞争力：瓦图科拉金矿运营历史长，拥有采选冶一体化体系；截至 2025 年末披露金金属资源量 161.70 吨，技改和新增探矿权提供增产与增储选项。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260410_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1776075067993014922.pdf">2025 年报 P11-P13</a></li>
+<li>主要依赖：单一矿山、单一金属价格、斐济政策与运营环境、关键技改、关联销售渠道均构成集中依赖。</li>
+</ul>
+<p>宏观上，公司利润对黄金美元价格、美元兑人民币/斐济币汇率、全球实际利率与避险需求高度敏感。与大型多矿山公司相比，招金黄金缺乏资产组合分散，金价上涨时利润弹性较大，金价、品位或产量任何一项低于预期时也更容易出现“单点失速”。</p>
+</section>
+<section id="s5">
+<h2 class="sec"><span class="num">05</span>订单与需求验证</h2>
+<p>矿业公司不以项目订单为主要需求验证方式。2025 年年报明确披露不存在需要报告的重大销售或采购合同，因此未发现可核验订单数据；应以黄金产销量、库存、品位、回收率和销售回款作为主要验证指标。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260410_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1776075067993014922.pdf">2025 年报 P15</a></p>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">日期</th>
+<th scope="col">来源与链接</th>
+<th scope="col">项目/订单名称</th>
+<th scope="col">客户/采购方</th>
+<th scope="col">产品/服务</th>
+<th scope="col">金额</th>
+<th scope="col">状态</th>
+<th scope="col">履约周期</th>
+<th scope="col">是否公司正式公告</th>
+<th scope="col">对收入影响</th>
+<th scope="col">可信度</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">2026-07-22</th>
+<td><a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260410_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1776075067993014922.pdf">2025 年报 P15</a></td>
+<td>未披露重大销售合同</td>
+<td class="muted">不适用</td>
+<td>黄金产品</td>
+<td class="muted">未披露</td>
+<td>无可核验重大订单</td>
+<td class="muted">不适用</td>
+<td>是</td>
+<td class="muted">不适用</td>
+<td>高</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>已披露订单/合同：未发现可核验重大订单。</li>
+<li>招投标与客户侧线索：不适用；黄金产品按国际市场价格销售，需求验证应看销量与库存。</li>
+<li>订单状态区分：无招标、中标候选、正式中标或重大合同可供追踪。</li>
+<li>订单金额与最近年度营收比例：不适用。</li>
+<li>履约周期与收入确认节奏：合质金按发货当日市场价、金精矿按发货后一个月国际均价及化验折纯结算。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260410_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1776075067993014922.pdf">2025 年报 P10</a></li>
+<li>合同负债/存货/应收/现金流验证：2025 年合同负债从 0.8947 亿元降至 0.0916 亿元，存货增至 1.3799 亿元，经营现金流仅 0.3333 亿元；需求证据并非单向增强。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260410_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1776075067993014922.pdf">2025 年报 P18、P63-P72</a></li>
+<li>订单趋势判断：无法判断</li>
+<li>信息可信度：中</li>
+</ul>
+</section>
+<section id="s6">
+<h2 class="sec"><span class="num">06</span>财务质量验证</h2>
+<ul>
+<li>利润与现金流匹配：2025 年归母净利润 1.59 亿元、经营现金流仅 0.33 亿元；2026Q1 归母净利润 1.87 亿元、经营现金流 0.12 亿元。虽有非现金收益解释，但现金兑现仍弱。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260410_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1776075067993014922.pdf">2025 年报 P8、P17</a> <a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260416_2026Q1_%E7%AC%AC%E4%B8%80%E5%AD%A3%E5%BA%A6%E6%8A%A5%E5%91%8A_1225105927.pdf">2026Q1 报告 P2、P8-P9</a></li>
+<li>应收账款与营收匹配：2025 年应收账款下降 94.16%至 0.0454 亿元，收现率约 102.2%；2026Q1 应收升至 0.1065 亿元，绝对额仍低，但需结合关联客户结算周期继续观察。</li>
+<li>存货与营收匹配：2025 年存货增长 99.29%，快于收入 58.13%的增速；2026Q1 又增加 8.98%。这可部分由产量、库存金与技改备件解释，但仍是现金流压力来源。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260410_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1776075067993014922.pdf">2025 年报 P15、P18</a> <a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260416_2026Q1_%E7%AC%AC%E4%B8%80%E5%AD%A3%E5%BA%A6%E6%8A%A5%E5%91%8A_1225105927.pdf">2026Q1 报告 P5</a></li>
+<li>资本开支效率与自由现金流：2025 年资本开支 2.45 亿元，约占营收 46.4%，自由现金流 -2.11 亿元；产量确已提升，但仍需用 2026—2027 年持续产量和单位成本下降证明回报率。</li>
+<li>预付款/其他应收款/在建工程/商誉异常：2025 年预付款由 0.0551 亿元升至 0.3882 亿元，2026Q1 再升至 0.4893 亿元；其他应收款显著下降、无商誉，但预付款与技改采购需持续穿透。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260410_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1776075067993014922.pdf">2025 年报 P18</a> <a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260416_2026Q1_%E7%AC%AC%E4%B8%80%E5%AD%A3%E5%BA%A6%E6%8A%A5%E5%91%8A_1225105927.pdf">2026Q1 报告 P5</a></li>
+<li>资产负债率与有息负债：资产负债率由 2024 年末 54.76%降至 2025 年末 49.60%，2026Q1 进一步降至 37.09%；但 2026Q1 货币资金 1.09 亿元低于短期借款 2.80 亿元，仍存在短期流动性管理压力。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260416_2026Q1_%E7%AC%AC%E4%B8%80%E5%AD%A3%E5%BA%A6%E6%8A%A5%E5%91%8A_1225105927.pdf">2026Q1 报告 P5-P6</a></li>
+<li>综合判断：盈利能力已修复，资产负债表因债务清偿改善，但利润现金含量、负自由现金流、存货与预付款增长使财务质量仍为“存疑”。</li>
+</ul>
+</section>
+<section id="s7">
+<h2 class="sec"><span class="num">07</span>股东与机构</h2>
+<ul>
+<li>十大股东持股占比：2026Q1 末前十大股东合计约 45.51%。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260416_2026Q1_%E7%AC%AC%E4%B8%80%E5%AD%A3%E5%BA%A6%E6%8A%A5%E5%91%8A_1225105927.pdf">2026Q1 报告 P3-P4</a></li>
+<li>实控人/大股东持股与质押：控股股东招金瑞宁持股 20.00%，实际控制人为招远市人民政府，未披露其股份质押；第二大股东冉盛盛远持股 10.08%，所持 9364.73 万股全部质押且全部冻结。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260416_2026Q1_%E7%AC%AC%E4%B8%80%E5%AD%A3%E5%BA%A6%E6%8A%A5%E5%91%8A_1225105927.pdf">2026Q1 报告 P3</a></li>
+<li>大股东减持或增持：2025 年控股权完成向招金瑞宁转移；冉盛盛远及一致行动人持股显著下降，历史股权结构风险尚未完全消失。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260410_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1776075067993014922.pdf">2025 年报 P7、P54-P55</a></li>
+<li>入驻机构家数：前十大股东中可识别 6 个公募基金/社保产品，另有香港中央结算有限公司；这不是全市场机构总数，仅代表前十大口径。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260416_2026Q1_%E7%AC%AC%E4%B8%80%E5%AD%A3%E5%BA%A6%E6%8A%A5%E5%91%8A_1225105927.pdf">2026Q1 报告 P3-P4</a></li>
+<li>机构类型：黄金主题主动基金、黄金产业 ETF、社保基金和北向名义持有人为主。</li>
+<li>治理风险判断：国资控股改善了控制权稳定性，但 2025 年关联方招远华唐贡献 51.16%收入，前五大客户集中度 99.66%；关联定价、最终客户、回款及利润留存在何处必须持续核验。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260410_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1776075067993014922.pdf">2025 年报 P16</a></li>
+</ul>
+</section>
+<section id="s8">
+<h2 class="sec"><span class="num">08</span>估值与同行对比</h2>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">公司</th>
+<th scope="col">总市值</th>
+<th scope="col">TTM PE</th>
+<th scope="col">PB</th>
+<th scope="col">2026Q1 营收增速</th>
+<th scope="col">2026Q1 毛利率</th>
+<th scope="col">2026Q1 扣非净利率</th>
+<th scope="col">2026Q1 ROE</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">招金黄金</th>
+<td>110.00 亿元</td>
+<td>31.48 倍</td>
+<td>12.37 倍</td>
+<td>82.79%</td>
+<td>56.05%</td>
+<td>32.72%</td>
+<td>23.60%</td>
+</tr>
+<tr>
+<th scope="row">中金黄金</th>
+<td>1,007.27 亿元</td>
+<td>16.05 倍</td>
+<td>3.07 倍</td>
+<td>52.01%</td>
+<td>20.47%</td>
+<td>10.58%</td>
+<td>7.54%</td>
+</tr>
+<tr>
+<th scope="row">湖南黄金</th>
+<td>347.38 亿元</td>
+<td>19.84 倍</td>
+<td>4.21 倍</td>
+<td>43.51%</td>
+<td>5.24%</td>
+<td>3.15%</td>
+<td>7.08%</td>
+</tr>
+</tbody></table></div>
+<p>行情估值取 2026-07-21 收盘数据；可比公司财务指标来自各自 2026 年一季报。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260429_2026Q1_%E7%AC%AC%E4%B8%80%E5%AD%A3%E5%BA%A6%E6%8A%A5%E5%91%8A_1225232985.pdf">中金黄金 2026Q1 P1、P9-P10</a> <a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260427_2026Q1_%E7%AC%AC%E4%B8%80%E5%AD%A3%E5%BA%A6%E6%8A%A5%E5%91%8A_1225190411.pdf">湖南黄金 2026Q1 P2、P7-P8</a></p>
+<ul>
+<li>当前估值：招金黄金 TTM PE 31.48 倍、PB 12.37 倍、PS 18.09 倍；若剔除债务收益，估值并不便宜。</li>
+<li>同行业估值对比：TTM PE 较中金黄金溢价约 96%、较湖南黄金溢价约 59%；PB 分别约为两者的 4.0 倍和 2.9 倍。</li>
+<li>同行业收入增速/毛利率/扣非净利率/ROE/现金流质量对比：招金黄金增长和矿山毛利率更高，但规模仅为同业零头，且 Q1 ROE 被一次性收益放大；湖南黄金含大量冶炼贸易收入，毛利率口径不能机械横比。</li>
+<li>估值是否匹配成长与财务质量：只有在 2026—2027 年产量持续提升、单位成本下降、自由现金流转正且治理风险继续收敛的情景下，当前溢价才有支撑；现阶段判断为偏高。</li>
+</ul>
+</section>
+<section id="s9">
+<h2 class="sec"><span class="num">09</span>负面信息与风险排查</h2>
+<ul>
+<li>是否亏损：2025 年及 2026Q1 已盈利；2024 年归母亏损 1.27 亿元。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260410_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1776075067993014922.pdf">2025 年报 P8</a></li>
+<li>是否 ST 或退市风险：公司 2024 年 5 月被实施退市及其他风险警示，2025 年 6 月 5 日撤销；截至本报告日证券简称为“招金黄金”，未实施 ST。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260410_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1776075067993014922.pdf">2025 年报 P52</a></li>
+<li>审计意见：2025 年财务报告与内控均为标准无保留意见；但 2023 年曾因持续经营、资产置换商业实质及关联交易内控等问题被出具无法表示意见，2024 年才确认相关影响消除。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260410_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1776075067993014922.pdf">2025 年报 P39、P61</a> <a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2025/20250429_2024A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1223379415.pdf">2024 年报 P42-P44</a></li>
+<li>监管问询/处罚：2024 年报对 2023Q3—2024Q3 部分数据作会计差错更正与追溯调整，2025 年年报披露当年无新增处罚整改事项；历史问题已整改不等于风险永久消失。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2025/20250429_2024A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1223379415.pdf">2024 年报 P43</a> <a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260410_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1776075067993014922.pdf">2025 年报 P47</a></li>
+<li>诉讼仲裁：2025 年报仍列示多项历史借款及证券纠纷；崔炜案相关债务已于 2026Q1 结清，并形成约 1.35 亿元收益，后续需关注其余执行事项是否继续产生现金支出。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260410_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1776075067993014922.pdf">2025 年报 P44-P47</a> <a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260416_2026Q1_%E7%AC%AC%E4%B8%80%E5%AD%A3%E5%BA%A6%E6%8A%A5%E5%91%8A_1225105927.pdf">2026Q1 报告 P2-P3</a></li>
+<li>负面新闻：2026 年 7 月 2—3 日股价连续两个交易日涨幅偏离值累计超过 20%，公司核查称基本面未发生重大变化，并明确提示金价、斐济境外运营和技改不确定性，且当时 PE 高于行业均值。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260706_2026_%E6%AD%A3%E5%BC%8F%E6%8A%AB%E9%9C%B2_1783319862658020382.pdf">异常波动公告 P1-P3</a> 7 月 3 日收盘 13.87 元至 7 月 21 日 11.84 元回落约 14.6%，显示情绪交易强、价格发现不稳定。<a href="https://quote.eastmoney.com/sz000506.html" target="_blank" rel="noopener">东方财富行情</a></li>
+<li>关联交易/客户供应商真实性争议：未找到监管或司法机关对客户真实性作出的负面定性；但关联客户收入占比过半、前五大客户集中度极高，属于必须持续核验的结构性风险，而不是造假事实。</li>
+</ul>
+</section>
+<section id="s10">
+<h2 class="sec"><span class="num">10</span>财务造假风险初筛</h2>
+<ul>
+<li>红旗数量：6 项主要红旗。</li>
+<li>主要红旗：① 2023 年财报及内控曾被出具无法表示意见；② 2024 年发生会计差错更正及审计机构临近年报期变更；③ 2025 年利润与经营现金流不匹配、自由现金流大幅为负；④ 存货和预付款增长较快；⑤ 前五大客户占比 99.66%，关联客户占收入 51.16%；⑥ 2026H1 表观利润由一次性债务收益显著放大，第二大股东股份全部质押冻结。</li>
+<li>风险等级：高</li>
+<li>解释：这是会计与治理风险筛查，不是对财务造假的事实定性。2024—2025 年标准无保留审计、风险警示撤销、应收下降和国资控股均是重要反证；但历史审计/内控问题、现金流错配、关联客户集中和一次性收益叠加，使验证负担显著高于普通黄金矿企。只有监管、审计、司法或公司公告确认后，才能对造假作事实定性。</li>
+</ul>
+</section>
+<section id="s11">
+<h2 class="sec"><span class="num">11</span>后续跟踪清单</h2>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">跟踪事项</th>
+<th scope="col">首次提出</th>
+<th scope="col">上次状态</th>
+<th scope="col">本次证据</th>
+<th scope="col">当前状态</th>
+<th scope="col">下次验证时间/触发条件</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">2026H1 预告兑现及现金流质量</th>
+<td>2026-07-22</td>
+<td>首次建立</td>
+<td>归母 2.0—2.4 亿元、扣非 0.8—1.16 亿元，未经审计</td>
+<td>待验证</td>
+<td>2026H1 正式报告披露时</td>
+</tr>
+<tr>
+<th scope="row">隐含 2026Q2 扣非利润能否达到 0.2148—0.5748 亿元</th>
+<td>2026-07-22</td>
+<td>首次建立</td>
+<td>由 H1 预告减 Q1 实际推算</td>
+<td>待验证</td>
+<td>2026H1 正式报告披露时</td>
+</tr>
+<tr>
+<th scope="row">瓦图科拉金矿 2026 年产量、品位、回收率与单位成本</th>
+<td>2026-07-22</td>
+<td>首次建立</td>
+<td class="up">管理层仅定性预计产量同比提升</td>
+<td>待验证</td>
+<td>H1、Q3、年报披露运营数据时</td>
+</tr>
+<tr>
+<th scope="row">技改能否于 2026 年底完成并形成自由现金流</th>
+<td>2026-07-22</td>
+<td>首次建立</td>
+<td>2025 年资本开支 2.45 亿元，2026Q1 0.41 亿元</td>
+<td>待验证</td>
+<td>2026 年末或公司公告延期时</td>
+</tr>
+<tr>
+<th scope="row">存货、预付款与经营现金流</th>
+<td>2026-07-22</td>
+<td>首次建立</td>
+<td>存货 1.50 亿元、预付款 0.49 亿元、Q1 OCF 0.12 亿元</td>
+<td>待验证</td>
+<td class="down">H1 存货增速持续高于收入或 OCF 转负时</td>
+</tr>
+<tr>
+<th scope="row">关联客户销售、回款与最终客户穿透</th>
+<td>2026-07-22</td>
+<td>首次建立</td>
+<td>2025 年关联客户收入占 51.16%</td>
+<td>待验证</td>
+<td>H1/年报关联交易与应收附注更新时</td>
+</tr>
+<tr>
+<th scope="row">冉盛盛远股份质押冻结处置</th>
+<td>2026-07-22</td>
+<td>首次建立</td>
+<td>10.08%股份全部质押、冻结</td>
+<td>待验证</td>
+<td>权益变动、司法处置或解除冻结公告时</td>
+</tr>
+<tr>
+<th scope="row">历史审计与监管问题是否持续收敛</th>
+<td>2026-07-22</td>
+<td>首次建立</td>
+<td>2025 年标准无保留，历史曾无法表示意见</td>
+<td>部分验证</td>
+<td>新审计意见、问询函、监管措施或会计更正出现时</td>
+</tr>
+<tr>
+<th scope="row">同业竞争承诺与资产整合进展</th>
+<td>2026-07-22</td>
+<td>首次建立</td>
+<td>招金集团承诺控制权取得后五年内稳妥推进解决同业竞争</td>
+<td>待验证</td>
+<td>资产重组、业务调整或承诺进展公告时</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>新增订单金额与年初至今累计订单金额：不适用，未披露重大订单。</li>
+<li>订单金额/上年营收：不适用。</li>
+<li>重点客户复购与新增客户：重点跟踪关联客户招远华唐、澳大利亚精炼厂和山金瑞鹏的销售占比及回款。</li>
+<li>中标候选人转正式中标/签约情况：不适用。</li>
+<li>合同负债、存货、应收账款和经营现金流变化：H1 正式报告是首要验证窗口。</li>
+<li>触发深度复盘条件：H1 正式数据超出预告区间；自由现金流继续明显为负；产量或技改延期；出现审计保留、监管问询、重大诉讼或关联交易异常；金价或股价发生重大波动。</li>
+</ul>
+</section>
+<section id="s12">
+<h2 class="sec"><span class="num">12</span>信息边界</h2>
+<ul>
+<li>分析范围：报告执行日 2026-07-22；行情截至 2026-07-21；覆盖经审计 2023A（重述后）—2025A、未经审计 2026Q1、未经审计 2026H1 业绩预告；首次建档，无上次报告版本。2023 年存在会计差错追溯调整，2025 年处置新金国际导致资产规模与业务口径变化，削弱历史可比性。</li>
+<li>数据日期：财务数据截至 2026-03-31；最新预报公告日 2026-07-15；市场数据截至 2026-07-21。</li>
+<li>主要数据来源：公司官网、巨潮资讯/交易所正式披露、公司投资者关系记录；行情估值使用东方财富公开行情数据，PS、毛利率、净利率、自由现金流和隐含单季数据为本报告按披露数据计算。</li>
+<li>本地原始资料：<code>原始资料/2025/20250429_2024A_年度报告_1223379415.pdf</code>；<code>原始资料/2026/20260410_2025A_年度报告_1776075067993014922.pdf</code>；<code>原始资料/2026/20260416_2026Q1_第一季度报告_1225105927.pdf</code>；<code>原始资料/2026/20260427_2026Q1_第一季度报告_1225190411.pdf</code>；<code>原始资料/2026/20260429_2026Q1_第一季度报告_1225232985.pdf</code>；<code>原始资料/2026/20260507_2025_正式披露_1225282601.pdf</code>；<code>原始资料/2026/20260706_2026_正式披露_1783319862658020382.pdf</code>；<code>原始资料/2026/20260715_2026H1_业绩预告_1784101660231050792.pdf</code>。全部已校验 PDF 文件头、页数并生成 SHA-256，详见 <code>原始资料/资料索引.md</code>。</li>
+<li>尚未核验的信息：2026H1 正式收入、毛利率、现金流、资产负债表、具体黄金产销量、品位、回收率、单位成本；2026 年完整机构持仓；公司全球市场份额；未达到法定披露门槛的日常合同与客户终端去向。</li>
+<li>可能影响结论的新公告或市场事件：H1 正式报告、技改进度与产量指引、黄金价格和汇率大幅波动、关联交易变化、股东股份司法处置、审计/监管/诉讼新进展。</li>
+</ul>
+</section>
+
+      <section id="note-friendly">
+        <h2 class="sec"><span class="num">◎</span>基本面速记</h2>
+        <div class="note-copy">
+          <h2>可复制摘要</h2>
+          <pre><code>【基本面速记】
+公司：招金黄金（000506.SZ）
+结论：基本面偏弱，财务质量存疑，估值偏高。
+核心看点：
+1. 2025 年产量与毛利率明显改善，2026Q1 扣非利润转正。
+2. 国资控股后债务与资产负债率下降，矿山技改提供增产选项。
+3. 资源量较大，但当前产量规模小，增长弹性与执行风险并存。
+主要风险：
+1. H1 表观利润过半来自一次性债务收益，现金流验证不足。
+2. 单一斐济矿山、关联客户集中、历史审计治理问题与高估值叠加。
+最新财务预报：2026H1 归母净利润 2.0—2.4 亿元，同比 +347.48%—+436.98%；扣非 0.8—1.16 亿元，同比 +490.44%—+756.14%；隐含 Q2 归母同比 -73.65%—+10.03%、扣非同比 +32.13%—+253.58%；信息可信度高，盈利质量中性。
+财务造假风险初筛：高。理由：历史无法表示意见与会计更正、利润现金流错配、客户及关联交易集中、存货与预付款增长；这是风险筛查，不是造假定性。
+订单/需求验证：无法判断。无重大订单口径，应跟踪产量、销量、库存与回款。
+后续跟踪：H1 正式财报、Q2 核心利润、2026 年产量与单位成本、技改完成度、自由现金流和关联销售回款。</code></pre>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="disclaimer">
+      免责声明:本报告为基于公开财报、公告、行情与新闻资料的整理和财务质量初筛,不构成任何投资建议,不保证未来收益。投资有风险,决策需谨慎。所有数据以公司正式披露为准。
+    </div>
+    <div>报告主体:招金黄金(000506.SZ) | 数据口径:财务数据截至 2026-03-31；最新预报公告日 2026-07-15；市场数据截至 2026-07-21。</div>
+    <div>主要数据来源:公司官网、巨潮资讯/交易所正式披露、公司投资者关系记录；行情估值使用东方财富公开行情数据，PS、毛利率、净利率、自由现金流和隐含单季数据为本报告按披露数据计算。</div>
+    <div>自包含离线 HTML · 内联 CSS / 极简内联 JS · 可直接在浏览器打开</div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var links = document.querySelectorAll('nav.toc a');
+  var map = {};
+  for (var i=0;i<links.length;i++){
+    var href = links[i].getAttribute('href') || '';
+    if (href.charAt(0) === '#') map[href.slice(1)] = links[i];
+  }
+  var sections = document.querySelectorAll('main section[id]');
+  function onScroll(){
+    var pos = (window.scrollY || document.documentElement.scrollTop) + 90;
+    var cur = null;
+    for (var j=0;j<sections.length;j++){
+      if (sections[j].offsetTop <= pos) cur = sections[j].id;
+    }
+    for (var k=0;k<links.length;k++) links[k].classList.remove('active');
+    if (cur && map[cur]) {
+      map[cur].classList.add('active');
+      var act = map[cur];
+      var sc = document.getElementById('toc-scroll');
+      if (sc && act.offsetLeft < sc.scrollLeft) sc.scrollLeft = act.offsetLeft - 8;
+      if (sc && act.offsetLeft + act.offsetWidth > sc.scrollLeft + sc.clientWidth) {
+        sc.scrollLeft = act.offsetLeft + act.offsetWidth - sc.clientWidth + 8;
+      }
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-21T22:19:21+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260331-0290f380",
+      "title": "2025年报",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260331",
+      "official_url": "https://www.zj-innolight.com/public/static/ajaxuplode/uploadfile/financial/1776659833994705.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260331_2025A_年度报告_1776659833994705.pdf",
+      "sha256": "0290f380253dde79613d43a1c6203674ae36cb89f849f063668ccde9a8789b5e",
+      "bytes": 6150814,
+      "pages": 229,
+      "retrieved_at": "2026-07-21T22:17:59+08:00",
+      "used_by": [
+        "中际旭创_300308_基本面分析_草稿.md"
+      ],
+      "status": "已归档",
+      "date_override": "20260331"
+    },
+    {
+      "source_id": "SRC-20260417-5e372206",
+      "title": "2026Q1",
+      "document_type": "正式披露",
+      "period": "2026Q1",
+      "published_date": "20260417",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-17/1225111941.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260417_2026Q1_正式披露_1225111941.pdf",
+      "sha256": "5e37220662c1fea7c9286a9410dbcef20ce83f70329ba3b44f2bf733459aa1af",
+      "bytes": 793963,
+      "pages": 13,
+      "retrieved_at": "2026-07-21T22:18:00+08:00",
+      "used_by": [
+        "中际旭创_300308_基本面分析_草稿.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260712-99c78e4a",
+      "title": "2026-07-12投资者关系活动记录表",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260712",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESZ_STOCK/2026/2026-7/2026-07-12/12441851.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260712_2026_正式披露_12441851.pdf",
+      "sha256": "99c78e4a9c856c5d8f6c9dd9ef37f6eb8d6cc5486e92161c8d230c9b2313508a",
+      "bytes": 243885,
+      "pages": 7,
+      "retrieved_at": "2026-07-21T22:18:00+08:00",
+      "used_by": [
+        "中际旭创_300308_基本面分析_草稿.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250421-261737c4",
+      "title": "2025Q1",
+      "document_type": "正式披露",
+      "period": "2025Q1",
+      "published_date": "20250421",
+      "official_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2025-04-21/28bbeb2a-7a27-4944-9a79-04321b547281.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250421_2025Q1_正式披露_28bbeb2a-7a27-4944-9a79-04321b547281.pdf",
+      "sha256": "261737c48b72a7450333544d4c65718ecbc8f60c05ac7225557bfeb080ee4e0d",
+      "bytes": 790283,
+      "pages": 13,
+      "retrieved_at": "2026-07-21T22:18:01+08:00",
+      "used_by": [
+        "中际旭创_300308_基本面分析_草稿.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20240422-2276f88c",
+      "title": "2023年报",
+      "document_type": "年度报告",
+      "period": "2023A",
+      "published_date": "20240422",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2024-04-22/1219703026.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2024/20240422_2023A_年度报告_1219703026.pdf",
+      "sha256": "2276f88c03aca66b37e4d7a03c88df1dfa7eb6bdf1487bf7d3a76d21b84948a9",
+      "bytes": 6702448,
+      "pages": 239,
+      "retrieved_at": "2026-07-21T22:18:08+08:00",
+      "used_by": [
+        "中际旭创_300308_基本面分析_草稿.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250421-1c13639a",
+      "title": "2024年报",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250421",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-04-21/1223155483.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250421_2024A_年度报告_1223155483.pdf",
+      "sha256": "1c13639ab218395ef3c81bfbcddb64ba48262d2afcc8ac9ed1588a9dbd4a513f",
+      "bytes": 6966927,
+      "pages": 236,
+      "retrieved_at": "2026-07-21T22:18:24+08:00",
+      "used_by": [
+        "中际旭创_300308_基本面分析_草稿.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260522-f48ad188",
+      "title": "特定股东质押公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260522",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESZ_STOCK/2026/2026-5/2026-05-22/12347538.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260522_期间待核验_正式披露_12347538.pdf",
+      "sha256": "f48ad188f1de61413b0efe590c7ccb59a8ababe289a4bea0dd5b9872ad0a5710",
+      "bytes": 139632,
+      "pages": 2,
+      "retrieved_at": "2026-07-21T22:18:24+08:00",
+      "used_by": [
+        "中际旭创_300308_基本面分析_草稿.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260424-816e9ca4",
+      "title": "新易盛2026Q1",
+      "document_type": "正式披露",
+      "period": "2026Q1",
+      "published_date": "20260424",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-24/1225172606.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260424_2026Q1_正式披露_1225172606.pdf",
+      "sha256": "816e9ca46844cf4262e34c7c2dbf02ba8ea74b5ba90203ff877cc94b9253cbb9",
+      "bytes": 498193,
+      "pages": 11,
+      "retrieved_at": "2026-07-21T22:18:26+08:00",
+      "used_by": [
+        "中际旭创_300308_基本面分析_草稿.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260421-aa54ebf3",
+      "title": "天孚通信2026Q1",
+      "document_type": "正式披露",
+      "period": "2026Q1",
+      "published_date": "20260421",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-21/1225128020.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260421_2026Q1_正式披露_1225128020.pdf",
+      "sha256": "aa54ebf3c8e86f64eb7782d7d049819b769a4d2f7daf4e0496cc7afe4c97c73e",
+      "bytes": 216368,
+      "pages": 11,
+      "retrieved_at": "2026-07-21T22:18:27+08:00",
+      "used_by": [
+        "中际旭创_300308_基本面分析_草稿.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260423-e8fb170a",
+      "title": "光迅科技2026Q1",
+      "document_type": "正式披露",
+      "period": "2026Q1",
+      "published_date": "20260423",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-23/1225148224.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260423_2026Q1_正式披露_1225148224.pdf",
+      "sha256": "e8fb170a45e4fcd5e11c825105d0528e1f07ad1da0c9e42e452f4b7f505494dd",
+      "bytes": 151640,
+      "pages": 11,
+      "retrieved_at": "2026-07-21T22:18:27+08:00",
+      "used_by": [
+        "中际旭创_300308_基本面分析_草稿.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260718-aba45b3a",
+      "title": "H股上市进展公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260718",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESZ_STOCK/2026/2026-7/2026-07-18/12452810.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260718_期间待核验_正式披露_12452810.pdf",
+      "sha256": "aba45b3a0f81a43b6586a93db98455346e74eb253553da14e38ea7d78f1a84bf",
+      "bytes": 152715,
+      "pages": 3,
+      "retrieved_at": "2026-07-21T22:18:28+08:00",
+      "used_by": [
+        "中际旭创_300308_基本面分析_草稿.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260601-5bc71c31",
+      "title": "网络传闻澄清公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260601",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESZ_STOCK/2026/2026-6/2026-06-01/12364904.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260601_期间待核验_正式披露_12364904.pdf",
+      "sha256": "5bc71c31fa3e7476d2061ecef4315b9bb74829d5386348617e9bd6cdb378312e",
+      "bytes": 146078,
+      "pages": 2,
+      "retrieved_at": "2026-07-21T22:19:21+08:00",
+      "used_by": [
+        "中际旭创_300308_基本面分析_草稿.md"
+      ],
+      "status": "已归档"
+    }
+  ]
+}
