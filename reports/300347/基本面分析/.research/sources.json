@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-21T19:49:56+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20240328-17ab35d5",
+      "title": "泰格医药2023年年度报告",
+      "document_type": "年度报告",
+      "period": "2023A",
+      "published_date": "20240328",
+      "official_url": "https://www.tigermedgrp.com/files/e35b0ea27464802545eee2f34e8e0c6f.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2024/20240328_2023A_年度报告_e35b0ea27464802545eee2f34e8e0c6f.pdf",
+      "sha256": "17ab35d5e31f96b397bdcadd35d7bd2e88501bf599b2ac1690da3473e8222a69",
+      "bytes": 4905553,
+      "pages": null,
+      "retrieved_at": "2026-07-21T19:40:23+08:00",
+      "used_by": [
+        "泰格医药_300347_基本面分析_20260721_193959.md"
+      ],
+      "status": "已归档",
+      "date_override": "20240328"
+    },
+    {
+      "source_id": "SRC-20250328-087f905e",
+      "title": "泰格医药2024年年度报告",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250328",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-03-28/1222923279.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250328_2024A_年度报告_1222923279.pdf",
+      "sha256": "087f905e3fab8e490fb45eed98125a678a56f16e7b29553520e6db479281434b",
+      "bytes": 5182298,
+      "pages": null,
+      "retrieved_at": "2026-07-21T19:40:24+08:00",
+      "used_by": [
+        "泰格医药_300347_基本面分析_20260721_193959.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260331-96d719eb",
+      "title": "泰格医药2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260331",
+      "official_url": "https://www.tigermedgrp.com/files/23a461008465697e3b38eaff54a1d9bb.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260331_2025A_年度报告_23a461008465697e3b38eaff54a1d9bb.pdf",
+      "sha256": "96d719eb53d6f1fb5e96d514c76c56e12ccf2669ff2c8b9940326a60319729dd",
+      "bytes": 5189559,
+      "pages": null,
+      "retrieved_at": "2026-07-21T19:40:28+08:00",
+      "used_by": [
+        "泰格医药_300347_基本面分析_20260721_193959.md"
+      ],
+      "status": "已归档",
+      "date_override": "20260331"
+    },
+    {
+      "source_id": "SRC-20260330-066d29d7",
+      "title": "泰格医药2025年度业绩演示材料",
+      "document_type": "正式披露",
+      "period": "2025",
+      "published_date": "20260330",
+      "official_url": "https://www.tigermedgrp.com/files/c71f4c32d1df30b434a23e43a7d3b080.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260330_2025_正式披露_c71f4c32d1df30b434a23e43a7d3b080.pdf",
+      "sha256": "066d29d71af0fbb2c7b8359f8ec9328365d7c230932ed7ecf1d45f9374acfa7e",
+      "bytes": 1942416,
+      "pages": null,
+      "retrieved_at": "2026-07-21T19:40:29+08:00",
+      "used_by": [
+        "泰格医药_300347_基本面分析_20260721_193959.md"
+      ],
+      "status": "已归档",
+      "date_override": "20260330"
+    },
+    {
+      "source_id": "SRC-20260429-5ce4ebae",
+      "title": "泰格医药2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260429",
+      "official_url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-04-29/856afba2-b539-4a8f-b5a4-0f014f3c57b8.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260429_2026Q1_第一季度报告_856afba2-b539-4a8f-b5a4-0f014f3c57b8.pdf",
+      "sha256": "5ce4ebaee2bac20dd1a6545c51338e4880da41cd33cc01b5ea5cfa84313fb962",
+      "bytes": 498116,
+      "pages": null,
+      "retrieved_at": "2026-07-21T19:40:30+08:00",
+      "used_by": [
+        "泰格医药_300347_基本面分析_20260721_193959.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260512-d7823f94",
+      "title": "泰格医药实控人被中国证监会立案公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260512",
+      "official_url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0512/2026051201318_c.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260512_期间待核验_正式披露_2026051201318_c.pdf",
+      "sha256": "d7823f947f79fb2b92ea9ae85b016277e14dc9a923566cb5012a368aa7aa1255",
+      "bytes": 218381,
+      "pages": null,
+      "retrieved_at": "2026-07-21T19:40:31+08:00",
+      "used_by": [
+        "泰格医药_300347_基本面分析_20260721_193959.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260603-89c64b93",
+      "title": "泰格医药董事会完成换届及聘任高管公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260603",
+      "official_url": "https://www.tigermedgrp.com/files/f00967cf399b1cd2fc4f6bb73a7700dc.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260603_期间待核验_正式披露_f00967cf399b1cd2fc4f6bb73a7700dc.pdf",
+      "sha256": "89c64b93a98ba20740ced377cf31a7016f654b49a3d2f179df2b68036f166b63",
+      "bytes": 179976,
+      "pages": null,
+      "retrieved_at": "2026-07-21T19:40:31+08:00",
+      "used_by": [
+        "泰格医药_300347_基本面分析_20260721_193959.md"
+      ],
+      "status": "已归档",
+      "date_override": "20260603"
+    },
+    {
+      "source_id": "SRC-20260702-07ff6079",
+      "title": "泰格医药2026年7月回购进展公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260702",
+      "official_url": "https://www.tigermedgrp.com/files/47b0147d292015a940b1ce4ec9de7118.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260702_2026_正式披露_47b0147d292015a940b1ce4ec9de7118.pdf",
+      "sha256": "07ff60790fbe3edc7ae974cded97deec26b606d020024271253cb9f0920a5a22",
+      "bytes": 105543,
+      "pages": null,
+      "retrieved_at": "2026-07-21T19:40:31+08:00",
+      "used_by": [
+        "泰格医药_300347_基本面分析_20260721_193959.md"
+      ],
+      "status": "已归档",
+      "date_override": "20260702"
+    },
+    {
+      "source_id": "SRC-20260616-9b9a0ca5",
+      "title": "泰格医药控股子公司提供担保公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260616",
+      "official_url": "https://www.tigermedgrp.com/files/f7597991b4dccf77e81e8d18258f2d1e.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260616_期间待核验_正式披露_f7597991b4dccf77e81e8d18258f2d1e.pdf",
+      "sha256": "9b9a0ca50ce564eca421ec63810183efc85c6ac8f13b3d61d507a53ff3bb1117",
+      "bytes": 127532,
+      "pages": null,
+      "retrieved_at": "2026-07-21T19:40:31+08:00",
+      "used_by": [
+        "泰格医药_300347_基本面分析_20260721_193959.md"
+      ],
+      "status": "已归档",
+      "date_override": "20260616"
+    },
+    {
+      "source_id": "SRC-20250429-7016f100",
+      "title": "2025Q1第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2025Q1",
+      "published_date": "20250429",
+      "official_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2025-04-29/beb8eae5-522b-4661-a5d6-617ebcd15626.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250429_2025Q1_第一季度报告_beb8eae5-522b-4661-a5d6-617ebcd15626_7016f100.pdf",
+      "sha256": "7016f1000267f702efc80af93400b836c0a5e39363bdc9e15a761330765477eb",
+      "bytes": 537499,
+      "pages": null,
+      "retrieved_at": "2026-07-21T19:49:56+08:00",
+      "used_by": [
+        "泰格医药_300347_基本面分析_20260721_193959.md"
+      ],
+      "status": "已归档"
+    }
+  ]
+}
