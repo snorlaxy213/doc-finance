@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-22T12:25:56+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20240430-b792615d",
+      "title": "紫光股份2023年年度报告",
+      "document_type": "年度报告",
+      "period": "2023A",
+      "published_date": "20240430",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2024-04-30/1219912267.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2024/20240430_2023A_年度报告_1219912267.pdf",
+      "sha256": "b792615deaf10a71a0606cdc822c7b7a768937e920942bf40cde96c2ebe31d5f",
+      "bytes": 5234457,
+      "pages": null,
+      "retrieved_at": "2026-07-22T12:19:20+08:00",
+      "used_by": [
+        "紫光股份_000938_基本面分析_20260722"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250429-800c4831",
+      "title": "紫光股份2024年年度报告",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250429",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-04-29/1223369453.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250429_2024A_年度报告_1223369453.pdf",
+      "sha256": "800c4831eea23ff93e392caab413d560c2344bb10d16e503c7ab024fdb100cd3",
+      "bytes": 5439385,
+      "pages": null,
+      "retrieved_at": "2026-07-22T12:19:21+08:00",
+      "used_by": [
+        "紫光股份_000938_基本面分析_20260722"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260415-2ffcd211",
+      "title": "紫光股份2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260415",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-15/1225101866.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260415_2025A_年度报告_1225101866.pdf",
+      "sha256": "2ffcd21150d98d8582b3cda68a368e70eaf17625e8ba2881a9ed30d7654aac5a",
+      "bytes": 7594651,
+      "pages": null,
+      "retrieved_at": "2026-07-22T12:19:22+08:00",
+      "used_by": [
+        "紫光股份_000938_基本面分析_20260722"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260429-9fc45e58",
+      "title": "紫光股份2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260429",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-29/1225231846.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260429_2026Q1_第一季度报告_1225231846.pdf",
+      "sha256": "9fc45e58c14ab020465b5fcfc70f6b86f0d3d7c3aef9fc6a2f18f457f1a696af",
+      "bytes": 525038,
+      "pages": null,
+      "retrieved_at": "2026-07-22T12:19:23+08:00",
+      "used_by": [
+        "紫光股份_000938_基本面分析_20260722"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260711-61173fd1",
+      "title": "紫光股份2026年半年度业绩预告",
+      "document_type": "业绩预告",
+      "period": "2026H1",
+      "published_date": "20260711",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-07-11/1225420242.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260711_2026H1_业绩预告_1225420242.pdf",
+      "sha256": "61173fd10fc6e386cdcc292dac136f62e02408474fcec2010f7a104b6e93e2d7",
+      "bytes": 109042,
+      "pages": null,
+      "retrieved_at": "2026-07-22T12:19:23+08:00",
+      "used_by": [
+        "紫光股份_000938_基本面分析_20260722"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260610-86878c56",
+      "title": "紫光股份关于受让新华三少数股东全部股权完成过户的公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260610",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-06-10/1225360923.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260610_期间待核验_正式披露_1225360923.pdf",
+      "sha256": "86878c56beb730602c86cf0286f3c62178100f6c7965d14967cd25a694af4ea9",
+      "bytes": 108194,
+      "pages": null,
+      "retrieved_at": "2026-07-22T12:19:23+08:00",
+      "used_by": [
+        "紫光股份_000938_基本面分析_20260722"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260716-85845650",
+      "title": "紫光股份关于控股子公司增资扩股引入投资者暨公司放弃权利的公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260716",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-07-16/1225425754.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260716_期间待核验_正式披露_1225425754.pdf",
+      "sha256": "858456504b44932ae018b9019a76ac729d4a743aa230e84ddf6806445fe4fa1e",
+      "bytes": 243415,
+      "pages": null,
+      "retrieved_at": "2026-07-22T12:19:23+08:00",
+      "used_by": [
+        "紫光股份_000938_基本面分析_20260722"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260722-f43f4582",
+      "title": "紫光股份关于调整控股子公司股权转让暨关联交易方案的公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260722",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-07-22/1225434833.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260722_期间待核验_正式披露_1225434833.pdf",
+      "sha256": "f43f4582ce537573ddc75fc68c0d83c3cd77449ca52c362d05a3db9655804aa0",
+      "bytes": 174076,
+      "pages": null,
+      "retrieved_at": "2026-07-22T12:19:24+08:00",
+      "used_by": [
+        "紫光股份_000938_基本面分析_20260722"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260722-5cff269b",
+      "title": "紫光股份关于向银行申请并购贷款的公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260722",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-07-22/1225434832.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260722_期间待核验_正式披露_1225434832.pdf",
+      "sha256": "5cff269b23645532fdfb7a719511623fbd32b02984b6d33b93b6a232e058e32e",
+      "bytes": 129628,
+      "pages": null,
+      "retrieved_at": "2026-07-22T12:19:24+08:00",
+      "used_by": [
+        "紫光股份_000938_基本面分析_20260722"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260429-149e1c69",
+      "title": "紫光股份2026年度向特定对象发行A股股票预案修订稿",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260429",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-29/1225231852.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260429_2026_正式披露_1225231852.pdf",
+      "sha256": "149e1c69a3790f4861c68ddf8318d3836cc430fbc11accd4402bbdf55ce4e140",
+      "bytes": 599670,
+      "pages": null,
+      "retrieved_at": "2026-07-22T12:24:29+08:00",
+      "used_by": [
+        "紫光股份_000938_基本面分析_20260722"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250429-69919a0c",
+      "title": "紫光股份2025年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2025Q1",
+      "published_date": "20250429",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-04-29/1223369461.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250429_2025Q1_第一季度报告_1223369461.pdf",
+      "sha256": "69919a0cd84f752c99a2f2b42070c39c59c79c4c38f09bf5b34bb51bc3349306",
+      "bytes": 787769,
+      "pages": null,
+      "retrieved_at": "2026-07-22T12:25:56+08:00",
+      "used_by": [
+        "紫光股份_000938_基本面分析_20260722"
+      ],
+      "status": "已归档"
+    }
+  ]
+}
