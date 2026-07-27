@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>孚日股份(002083.SZ)基本面分析</title>
+<style>
+:root{
+  --ink:#1a2433;
+  --ink-soft:#46546a;
+  --line:#d8dee7;
+  --line-soft:#eef1f5;
+  --bg:#ffffff;
+  --brand:#1f3a5f;
+  --brand-2:#3b5b85;
+  --brand-light:#eaf0f8;
+  --accent:#8a6d3b;
+  --up:#b73333;
+  --down:#2f7a52;
+  --warn:#a06a1f;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Microsoft YaHei","Source Han Sans SC",system-ui,-apple-system,sans-serif;
+  color:var(--ink);
+  background:#fff;
+  line-height:1.7;
+  font-size:14.5px;
+  font-variant-numeric:tabular-nums;
+  -webkit-font-smoothing:antialiased;
+}
+.page{max-width:1600px;margin:0 auto;padding:0 32px;}
+.masthead{
+  display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px;
+  border-bottom:2px solid var(--brand);padding:24px 0 18px;
+}
+.masthead .m-left{min-width:280px;}
+.masthead .kode{font-size:12px;letter-spacing:.12em;color:var(--ink-soft);}
+.masthead h1{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC","Times New Roman",serif;
+  font-size:30px;font-weight:700;margin:6px 0 4px;color:var(--brand);letter-spacing:.5px;
+}
+.masthead .sub{font-size:13px;color:var(--ink-soft);}
+.masthead .meta{font-size:12.5px;color:var(--ink-soft);margin-top:12px;}
+.masthead .meta b{color:var(--ink);font-weight:600;}
+.masthead .m-stats{display:flex;gap:34px;flex-wrap:wrap;}
+.masthead .m-stats .ms-v{font-size:25px;font-weight:700;color:var(--brand);line-height:1;font-variant-numeric:tabular-nums;}
+.masthead .m-stats .ms-v span{font-size:13px;font-weight:500;color:var(--ink-soft);margin-left:2px;}
+.masthead .m-stats .ms-l{font-size:11.5px;color:var(--ink-soft);margin-top:5px;letter-spacing:.02em;}
+.verdict{
+  margin:16px 0 4px;border:1px solid var(--line);border-left:4px solid var(--brand);
+  background:#fbfcfe;border-radius:4px;padding:16px 20px;
+}
+.verdict-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-bottom:14px;}
+.verdict-head h2{margin:0;font-size:14px;letter-spacing:.1em;color:var(--brand);font-weight:700;}
+.verdict-headline{
+  margin:-2px 0 14px;padding:10px 12px;border:1px solid #dfe7f1;border-radius:4px;
+  background:#fff;color:var(--ink);font-size:15px;font-weight:600;line-height:1.7;
+}
+.verdict-headline .label{display:block;margin-bottom:2px;color:var(--brand);font-size:11px;font-weight:700;letter-spacing:.1em;}
+.badges{display:flex;flex-direction:row;flex-wrap:wrap;gap:8px;margin:0;}
+.badge{
+  display:inline-flex;align-items:center;gap:6px;font-size:12.5px;
+  padding:5px 11px;border-radius:999px;font-weight:600;line-height:1.4;
+}
+.badge .k{font-weight:500;opacity:.85;}
+.badge.fund{background:#fdecec;color:#9a2c2c;}
+.badge.qual{background:#eef3f8;color:#1f3a5f;}
+.badge.valu{background:#fdf3e3;color:#8a5a16;}
+.badge.fraud{background:#eef7f1;color:#2f6a48;}
+.verdict-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 40px;}
+.verdict-grid .v-title{font-size:12.5px;font-weight:700;letter-spacing:.04em;margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid var(--line);}
+.verdict-grid .v-title::before{content:"";display:inline-block;width:3px;height:12px;margin-right:7px;vertical-align:-1px;border-radius:2px;}
+.verdict-grid .v-up .v-title{color:var(--brand);}
+.verdict-grid .v-up .v-title::before{background:var(--brand);}
+.verdict-grid .v-risk .v-title{color:var(--warn);}
+.verdict-grid .v-risk .v-title::before{background:var(--warn);}
+.verdict-grid ul{margin:0;padding-left:18px;}
+.verdict-grid li{font-size:13.5px;margin:6px 0;line-height:1.65;}
+.note{
+  font-size:12px;color:var(--ink-soft);background:var(--line-soft);
+  padding:3px 8px;border-radius:3px;display:inline-block;
+}
+.verdict .note{display:block;margin-top:14px;}
+.kpis{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:1px;margin:16px 0 4px;
+  background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden;
+}
+.kpi{background:#fff;padding:13px 15px;min-width:0;}
+.kpi .kl{font-size:11.5px;color:var(--ink-soft);line-height:1.3;min-height:30px;}
+.kpi .kv{font-size:20px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;margin-top:5px;word-break:break-word;}
+.kpi .kv.up{color:var(--up);}
+.kpi .kv.down{color:var(--down);}
+.kpi .ks{font-size:11px;color:var(--ink-soft);margin-top:3px;font-variant-numeric:tabular-nums;}
+.forecast-panel{
+  margin:16px 0 6px;padding:18px 20px;border:1px solid #d8e2ef;border-left:4px solid var(--brand);
+  border-radius:4px;background:linear-gradient(135deg,#f7faff 0%,#fff 68%);
+}
+.forecast-panel.forecast-empty{padding:14px 18px;background:#fbfcfe;border-left-color:#a8b5c4;}
+.forecast-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;flex-wrap:wrap;}
+.forecast-kicker{display:block;font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--brand);margin-bottom:5px;}
+.forecast-head h2{margin:0;font-size:18px;line-height:1.35;color:var(--ink);}
+.forecast-tags{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end;}
+.forecast-tag{display:inline-flex;padding:4px 9px;border-radius:999px;background:#eaf1f8;color:#294d73;font-size:11px;font-weight:600;}
+.forecast-tag.warn{background:#fff0dc;color:#8a5615;}
+.forecast-tag.neutral{background:#edf0f3;color:#5e6873;}
+.forecast-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px;}
+.forecast-card{background:#fff;border:1px solid #e0e7ef;border-radius:4px;padding:12px 14px;min-width:0;}
+.forecast-label{font-size:11px;color:var(--ink-soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.forecast-value{font-size:20px;font-weight:700;color:var(--brand);line-height:1.3;margin-top:4px;font-variant-numeric:tabular-nums;}
+.forecast-change{font-size:11.5px;color:var(--ink-soft);margin-top:4px;}
+.forecast-note{margin:11px 0 0!important;font-size:11px!important;color:var(--ink-soft)!important;}
+.update-panel{
+  margin:16px 0 6px;padding:18px 20px;border:1px solid #ded7c9;border-left:4px solid var(--accent);
+  border-radius:4px;background:linear-gradient(135deg,#fffcf6 0%,#fff 72%);
+}
+.update-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:10px;}
+.update-head span{font-size:10.5px;font-weight:700;letter-spacing:.12em;color:var(--accent);}
+.update-head h2{font-size:18px;margin:0;color:var(--ink);}
+.update-body section{border:0;padding:0;}.update-body h3.sub{margin-top:8px;}
+.update-body .tbl-scroll{background:#fff;}
+.layout{
+  display:grid;grid-template-columns:208px minmax(0,1fr);gap:36px;align-items:start;
+  padding:14px 0 0;
+}
+.sidebar{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow-y:auto;padding:0 8px 0 0;}
+.sidebar::-webkit-scrollbar{width:6px;}
+.sidebar::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px;}
+.toc{position:static;background:transparent;border:none;margin:12px 0 16px;padding:0;}
+.toc .scroll{overflow:visible;white-space:normal;display:flex;flex-direction:column;gap:2px;}
+.toc a{
+  display:flex;align-items:center;gap:9px;
+  font-size:14px;line-height:1.25;color:var(--ink-soft);text-decoration:none;
+  padding:6px 8px;border-radius:5px;margin:0;border:1px solid transparent;
+}
+.toc a .toc-num{
+  flex:0 0 auto;font-family:"Times New Roman",serif;font-size:12px;font-weight:600;
+  color:var(--ink-soft);background:var(--line-soft);
+  width:22px;height:22px;border-radius:4px;font-variant-numeric:tabular-nums;
+  display:inline-flex;align-items:center;justify-content:center;
+}
+.toc a:hover{background:var(--brand-light);color:var(--brand);}
+.toc a:hover .toc-num{background:#fff;color:var(--brand);}
+.toc a.active{background:var(--brand);color:#fff;font-weight:600;}
+.toc a.active .toc-num{background:rgba(255,255,255,.22);color:#fff;}
+.main{min-width:0;}
+section{padding:16px 0 8px;border-top:1px solid var(--line-soft);scroll-margin-top:64px;}
+section:first-of-type{border-top:none;padding-top:6px;}
+h2.sec{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",serif;
+  font-size:19px;color:var(--brand);margin:6px 0 12px;font-weight:700;
+  display:flex;align-items:baseline;gap:10px;
+}
+h2.sec .num{
+  font-family:"Times New Roman",serif;font-size:14px;color:#fff;background:var(--brand);
+  padding:2px 9px;border-radius:3px;letter-spacing:.05em;font-weight:600;flex:0 0 auto;
+}
+h3.sub{font-size:14.5px;color:var(--ink);margin:16px 0 6px;font-weight:700;}
+p{margin:8px 0;}
+ul,ol{margin:8px 0;padding-left:22px;}
+li{margin:4px 0;}
+strong{color:var(--ink);}
+.tbl-scroll{overflow-x:auto;margin:10px 0;border:1px solid var(--line);border-radius:4px;}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums;}
+thead th{
+  background:#f3f6fa;color:var(--brand);font-weight:700;text-align:right;
+  padding:10px 12px;border-bottom:1.5px solid var(--brand);white-space:nowrap;
+  font-size:12.5px;letter-spacing:.02em;
+}
+thead th[scope=col]:first-child{text-align:left;}
+tbody td{padding:9px 12px;border-bottom:1px solid var(--line-soft);text-align:right;white-space:normal;word-break:break-word;}
+tbody th[scope=row]{
+  text-align:left;color:var(--ink);font-weight:600;
+  padding:9px 12px;border-bottom:1px solid var(--line-soft);white-space:nowrap;font-size:13px;background:#fafbfd;
+}
+tbody tr:nth-child(even) td{background:#fafbfd;}
+tbody tr:hover td{background:var(--brand-light);}
+.up{color:var(--up);}
+.down{color:var(--down);}
+.muted{color:var(--ink-soft);}
+a{color:var(--brand-2);text-decoration:underline;text-underline-offset:2px;word-break:break-all;}
+a:hover{color:var(--brand);}
+.note-copy{
+  margin:20px 0;border:1px solid var(--line);border-left:4px solid var(--accent);
+  background:#fbfcfe;border-radius:4px;padding:14px 16px;
+}
+.note-copy h2{margin:0 0 10px;font-size:13px;letter-spacing:.1em;color:var(--brand);font-weight:700;}
+pre{
+  margin:10px 0;padding:12px 14px;background:#f7f9fc;border:1px solid var(--line-soft);
+  border-radius:4px;overflow:auto;color:var(--ink);font-size:12.5px;line-height:1.6;
+}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;}
+footer{
+  margin-top:22px;border-top:2px solid var(--brand);padding:14px 0 30px;
+  font-size:11.5px;color:var(--ink-soft);line-height:1.7;font-variant-numeric:tabular-nums;
+}
+footer .disclaimer{background:var(--line-soft);padding:8px 12px;border-radius:3px;margin-bottom:8px;}
+@media (max-width:1100px){
+  .layout{grid-template-columns:1fr;gap:0;}
+  .sidebar{position:static;max-height:none;overflow:visible;padding:0;}
+  .toc{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);
+    border-bottom:1px solid var(--line);margin:0 -32px 16px;padding:10px 32px;}
+  .toc .scroll{overflow-x:auto;white-space:nowrap;flex-direction:row;}
+  .toc a{display:inline-flex;white-space:nowrap;border-left:none;border:1px solid transparent;padding:3px 9px;margin:2px;}
+  .toc a.active{border-left:none;background:var(--brand);color:#fff;}
+}
+@media (max-width:760px){
+  .verdict-grid{grid-template-columns:1fr;}
+  .kpis{grid-template-columns:repeat(3,1fr);}
+  .forecast-grid{grid-template-columns:1fr;}
+  .page{padding:0 18px;}
+  .masthead .m-stats{gap:22px;}
+}
+@media (max-width:460px){.kpis{grid-template-columns:repeat(2,1fr);}}
+@media print{
+  body{background:#fff;font-size:10.5px;}
+  .page{max-width:none;padding:0;}
+  .layout{grid-template-columns:1fr;}
+  .sidebar{position:static;max-height:none;overflow:visible;}
+  .toc{position:static;border:none;padding:0;margin:0 0 8px;}
+  .toc .scroll{overflow:visible;display:block;}
+  .toc a{font-size:10px;padding:1px 5px;display:inline-flex;}
+  .toc a.active{background:transparent;color:var(--ink);}
+  section{break-inside:avoid;padding-top:10px;}
+  table{font-size:9.5px;}
+  thead{display:table-header-group;}
+  tbody tr{break-inside:avoid;}
+  .badge{border:1px solid #ccc;}
+  .note-copy,.tbl-scroll,.kpis,.verdict,.forecast-panel{break-inside:avoid;}
+  .update-panel{break-inside:avoid;}
+  footer{break-inside:avoid;}
+  a{color:var(--ink);text-decoration:none;}
+  .kpi{border:1px solid #ccc;}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="masthead">
+    <div class="m-left">
+      <div class="kode">002083.SZ · 深圳证券交易所 · 基本面分析</div>
+      <h1>孚日股份 · 基本面分析</h1>
+      <div class="sub">基本面、财务质量、估值与风险初筛</div>
+      <div class="meta">数据口径 <b>财务数据截至 2026-03-31；预告截至 2026-06-30；股东冻结状态截至 2026-06-16；增持持股数据截至 2026-07-14；行情截至 2026-07-24。</b> · 生成时间 <b>2026-07-27 17:20</b></div>
+    </div>
+    <div class="m-stats">
+      <div><div class="ms-v">11.52 元</div><div class="ms-l">收盘价 · 2026-07-24 收盘</div></div>
+<div><div class="ms-v">109.06 亿元</div><div class="ms-l">总市值 · 11.52 元 × 9.4664 亿股</div></div>
+<div><div class="ms-v">22.65 倍</div><div class="ms-l">PE · TTM；按 2025A+2026Q1-2025Q1 归母净利润测算</div></div>
+<div><div class="ms-v">2.23 倍</div><div class="ms-l">PB · 2026Q1 归母每股净资产 5.16 元</div></div>
+    </div>
+  </header>
+
+  <section class="verdict" aria-label="结论速览">
+    <div class="verdict-head">
+      <h2>结论速览</h2>
+      <div class="badges">
+        <span class="badge fund"><span class="k">基本面</span> 中性</span>
+<span class="badge qual"><span class="k">财务质量</span> 良好</span>
+<span class="badge valu"><span class="k">估值</span> 合理</span>
+<span class="badge fraud"><span class="k">造假风险初筛</span> 中</span>
+      </div>
+    </div>
+    <div class="verdict-headline"><span class="label">核心判断</span>2025 年利润与现金流匹配、2026H1 由 VC 价格推动业绩跃升，但增长周期性强，硅碳收购含客户集中与评估溢价，控股股东股份仍全部冻结，当前价格已计入较高的新材料预期。</div>
+    <div class="verdict-grid">
+      <div class="v-col v-up">
+        <div class="v-title">核心理由</div>
+        <ul>
+<li>结论理由详见正文。</li>
+</ul>
+      </div>
+      <div class="v-col v-risk">
+        <div class="v-title">主要风险 / 关注</div>
+        <ul>
+<li>VC 价格周期反转、应收账款增速快于收入。</li>
+<li>控股股东持股全部冻结，博赛利斯美国客户集中且 2028 年预测收入断层。</li>
+</ul>
+      </div>
+    </div>
+    <p class="note">口径:市场估值为时点数据,财务指标需区分年度、半年度、季度和单季口径;所有结论以公司正式披露和已核验来源为准。</p>
+  </section>
+
+  <div class="kpis" aria-label="关键指标速览">
+    <div class="kpi"><div class="kl">2026Q1归母净利</div><div class="kv">1.80 亿元</div><div class="ks">归母净利润</div></div>
+<div class="kpi"><div class="kl">2026Q1扣非净利</div><div class="kv">1.82 亿元</div><div class="ks">扣非归母净利润</div></div>
+<div class="kpi"><div class="kl">2026Q1毛利率</div><div class="kv">23.65%</div><div class="ks">毛利率</div></div>
+<div class="kpi"><div class="kl">2026Q1经营现金流</div><div class="kv">2.79 亿元</div><div class="ks">经营现金流净额</div></div>
+<div class="kpi"><div class="kl">2026Q1应收/合同资产</div><div class="kv">9.32 亿元 / 无</div><div class="ks">应收账款/合同资产</div></div>
+<div class="kpi"><div class="kl">2026Q1存货</div><div class="kv">11.44 亿元</div><div class="ks">存货</div></div>
+  </div>
+
+  <section class="forecast-panel" aria-label="最新财务预报"><div class="forecast-head"><div><span class="forecast-kicker">最新财务预报</span><h2>2026H1</h2></div><div class="forecast-tags"><span class="forecast-tag warn">未经审计</span><span class="forecast-tag">信息可信度 中高</span><span class="forecast-tag">盈利质量 强</span></div></div><div class="forecast-grid"><div class="forecast-card"><div class="forecast-label">累计归母净利润</div><div class="forecast-value">3.6862—4.1839 亿元</div><div class="forecast-change">累计同比 +50.02%—+70.27%</div></div>
+<div class="forecast-card"><div class="forecast-label">累计扣非净利润</div><div class="forecast-value">3.6169—4.0939 亿元</div><div class="forecast-change">累计同比 +44.49%—+63.54%</div></div></div><p class="forecast-note">隐含单季数据根据累计预报和已披露财报推算，并非公司直接披露；正式结果以定期报告为准。</p></section>
+
+  <section class="update-panel" aria-label="本次更新"><div class="update-head"><span>RESEARCH CONTINUITY</span><h2>本次更新 · 与上次报告相比</h2></div><div class="update-body"><p>首次建立研究基线，无上次报告可比；基线日期为 2026-07-27。</p>
+<ul>
+<li>本次触发事件：首次建档，同时纳入 2026H1 业绩预告、博赛利斯收购公告及股价异常波动公告。</li>
+<li>新增确认事实：VC 业务高毛利放量；H1 归母净利润预计增长 50.02%—70.27%；拟以 3.996 亿元收购博赛利斯 78.80%股权；控股股东股份仍全部冻结。</li>
+<li>被证伪或弱化的旧假设：不适用。</li>
+<li>仍然有效的旧观点：不适用。</li>
+<li>仍待验证事项：H1 现金流与应收变化、VC 价格持续性、收购交割及商誉、标的客户多元化、控股股东解冻。</li>
+</ul></div></section>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="toc" aria-label="目录">
+        <div class="scroll" id="toc-scroll">
+          <a href="#s1"><span class="toc-num">01</span>核心财务指标</a>
+<a href="#s2"><span class="toc-num">02</span>近两年财报趋势与业务结构</a>
+<a href="#s3"><span class="toc-num">03</span>结论摘要</a>
+<a href="#s4"><span class="toc-num">04</span>公司与行业</a>
+<a href="#s5"><span class="toc-num">05</span>订单与需求验证</a>
+<a href="#s6"><span class="toc-num">06</span>财务质量验证</a>
+<a href="#s7"><span class="toc-num">07</span>股东与机构</a>
+<a href="#s8"><span class="toc-num">08</span>估值与同行对比</a>
+<a href="#s9"><span class="toc-num">09</span>负面信息与风险排查</a>
+<a href="#s10"><span class="toc-num">10</span>财务造假风险初筛</a>
+<a href="#s11"><span class="toc-num">11</span>后续跟踪清单</a>
+<a href="#s12"><span class="toc-num">12</span>信息边界</a>
+        </div>
+      </nav>
+    </aside>
+    <main class="main">
+      <section id="s1">
+<h2 class="sec"><span class="num">01</span>核心财务指标</h2>
+<h3 class="sub">1.1 当前估值快照</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">项目</th>
+<th scope="col">最新数据</th>
+<th scope="col">数据日期/口径</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">收盘价</th>
+<td>11.52 元</td>
+<td>2026-07-24 收盘</td>
+<td>7 月 23—24 日连续上涨后形成的时点价格</td>
+</tr>
+<tr>
+<th scope="row">总市值</th>
+<td>109.06 亿元</td>
+<td>11.52 元 × 9.4664 亿股</td>
+<td>已明显高于传统家纺同业的利润估值中枢</td>
+</tr>
+<tr>
+<th scope="row">流通市值</th>
+<td>109.06 亿元</td>
+<td>流通股本约等于总股本</td>
+<td>基本为全流通</td>
+</tr>
+<tr>
+<th scope="row">PE</th>
+<td>22.65 倍</td>
+<td>TTM；按 2025A+2026Q1-2025Q1 归母净利润测算</td>
+<td class="down">静态 PE 约 25.45 倍；若 2026H1 预告兑现，前瞻估值会明显下降，但依赖 VC 价格持续性</td>
+</tr>
+<tr>
+<th scope="row">PB</th>
+<td>2.23 倍</td>
+<td>2026Q1 归母每股净资产 5.16 元</td>
+<td>高于多数传统家纺制造/品牌公司，反映新材料溢价</td>
+</tr>
+<tr>
+<th scope="row">PS</th>
+<td>2.08 倍</td>
+<td>TTM 营业收入测算</td>
+<td>对低毛利家纺主业并不低，需由新材料高毛利补偿</td>
+</tr>
+<tr>
+<th scope="row">股息率</th>
+<td>2.60%</td>
+<td>2025 年度每 10 股派 3 元、按 11.52 元测算，税前</td>
+<td class="down">分红提供一定缓冲，但不能覆盖新材料周期及收购风险</td>
+</tr>
+</tbody></table></div>
+<p>行情数据交叉核验：<a href="https://data.agoer.com/cms/Index/detail?id=002083" target="_blank" rel="noopener">2026-07-24 历史行情</a>、<a href="https://quote.cfi.cn/quote6780_002083.html" target="_blank" rel="noopener">中财网行情与估值</a>。市值、PE、PS 为本报告按公开股本及财务数据统一口径重算。</p>
+<h3 class="sub">1.2 最新财务预报与质量解读</h3>
+<p>报告执行日前 30 个日历日内，公司于 2026 年 7 月 2 日披露了 <a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260702_2026H1_%E4%B8%9A%E7%BB%A9%E9%A2%84%E5%91%8A_1225403167.pdf">2026 年半年度业绩预告</a>，以下数据均为公司初步测算、未经审计；截至本报告日，同期正式半年报尚未披露。</p>
+<h3 class="sub">1.2.1 累计业绩预报</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">本期预报区间</th>
+<th scope="col">上年同期</th>
+<th scope="col">同比变化</th>
+<th scope="col">预报中枢</th>
+<th scope="col">质量解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">预报期间</th>
+<td>2026H1</td>
+<td class="muted">不适用</td>
+<td class="muted">不适用</td>
+<td class="muted">不适用</td>
+<td>公告日 2026-07-02，未经审计</td>
+</tr>
+<tr>
+<th scope="row">预报营业收入</th>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td>不以利润增速倒推收入</td>
+</tr>
+<tr>
+<th scope="row">预报归母净利润</th>
+<td>3.6862—4.1839 亿元</td>
+<td>2.4572 亿元</td>
+<td class="up">+50.02%—+70.27%</td>
+<td>3.9351 亿元</td>
+<td class="up">增长主要来自 VC 售价随行业价格中枢上移</td>
+</tr>
+<tr>
+<th scope="row">预报扣非归母净利润</th>
+<td>3.6169—4.0939 亿元</td>
+<td>2.5032 亿元</td>
+<td class="up">+44.49%—+63.54%</td>
+<td>3.8554 亿元</td>
+<td>与归母利润同向，且扣非利润接近或高于归母利润</td>
+</tr>
+<tr>
+<th scope="row">预报 EPS</th>
+<td>0.39—0.44 元/股</td>
+<td>0.26 元/股</td>
+<td class="up">+50.00%—+69.23%</td>
+<td>0.415 元/股</td>
+<td>股本口径总体可比</td>
+</tr>
+<tr>
+<th scope="row">预计非经常性损益</th>
+<td>0.0693—0.0900 亿元</td>
+<td class="down">-0.0460 亿元</td>
+<td class="up">由负转正</td>
+<td>0.0797 亿元</td>
+<td class="up">约占预报归母利润中枢 2.0%，不是主要增长来源</td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">1.2.2 隐含最新单季度同比与环比</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">隐含 2026Q2 区间</th>
+<th scope="col">2025Q2</th>
+<th scope="col">单季同比</th>
+<th scope="col">2026Q1</th>
+<th scope="col">单季环比</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">隐含单季营业收入</th>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td>14.09 亿元</td>
+<td class="muted">未披露</td>
+<td>累计预告未披露收入，无法可靠计算</td>
+</tr>
+<tr>
+<th scope="row">隐含单季归母净利润</th>
+<td>1.8822—2.3800 亿元</td>
+<td>1.1825 亿元</td>
+<td class="up">+59.2%—+101.3%</td>
+<td>1.8040 亿元</td>
+<td class="up">+4.3%—+31.9%</td>
+<td>Q2 盈利动能较 Q1 延续并可能加速</td>
+</tr>
+<tr>
+<th scope="row">隐含单季扣非归母净利润</th>
+<td>1.7996—2.2766 亿元</td>
+<td>1.1412 亿元</td>
+<td class="up">+57.7%—+99.5%</td>
+<td>1.8173 亿元</td>
+<td class="down">-1.0%—+25.3%</td>
+<td>主业利润与归母利润方向一致</td>
+</tr>
+<tr>
+<th scope="row">隐含单季 EPS</th>
+<td>0.20—0.25 元/股</td>
+<td>约 0.13 元/股</td>
+<td>约 +53.8%—+92.3%</td>
+<td>0.19 元/股</td>
+<td class="up">+5.3%—+31.6%</td>
+<td>仅作股本口径近似推算</td>
+</tr>
+</tbody></table></div>
+<p>上述单季数字根据累计预告与已披露 Q1 财报推算，并非公司直接披露。归母利润预告区间宽度约为中枢的 12.6%，扣非利润区间宽度约 12.4%，可见度中等。</p>
+<p><strong>财务预报质量判断：</strong>归母与扣非利润同步增长，非经常性损益占比低，预报所述驱动与 2026Q1 已披露的 VC 销量、价格及 62.71% 毛利率相互印证，利润来源具有业务证据。局限在于预告未披露收入、经营现金流、应收账款、存货、毛利率及资本开支；VC 价格中枢上移属于显著周期性因素，不能线性外推全年。信息可信度：中高。盈利质量判断：强，但持续性判断为中等。</p>
+<h3 class="sub">1.3 已披露当年期间财报</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">2025Q1</th>
+<th scope="col">2026Q1</th>
+<th scope="col">变化解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>13.64 亿元</td>
+<td>14.09 亿元</td>
+<td class="up">+3.31%，收入增速不高，利润弹性主要来自产品结构和 VC 价格</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td>1.27 亿元</td>
+<td>1.80 亿元</td>
+<td class="up">+41.52%</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td>1.36 亿元</td>
+<td>1.82 亿元</td>
+<td class="up">+33.43%，核心经营改善</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td>1.21 亿元</td>
+<td>2.79 亿元</td>
+<td class="up">+130.65%，回款与利润匹配改善</td>
+</tr>
+<tr>
+<th scope="row">经营现金流/归母净利润</th>
+<td>0.95 倍</td>
+<td>1.54 倍</td>
+<td>利润现金含量较好</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td>0.84 亿元</td>
+<td>2.39 亿元</td>
+<td>经营现金流减购建长期资产现金支出</td>
+</tr>
+<tr>
+<th scope="row">EPS</th>
+<td>0.13 元</td>
+<td>0.19 元</td>
+<td class="up">+46.15%</td>
+</tr>
+<tr>
+<th scope="row">ROE</th>
+<td>2.83%</td>
+<td>3.76%</td>
+<td class="up">+0.93 个百分点</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>21.21%</td>
+<td>23.65%</td>
+<td class="up">+2.44 个百分点，VC 高毛利贡献明显</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td>9.99%</td>
+<td>12.90%</td>
+<td class="up">+2.91 个百分点</td>
+</tr>
+<tr>
+<th scope="row">资本开支</th>
+<td>0.37 亿元</td>
+<td>0.39 亿元</td>
+<td class="down">+6.29%，当期扩产现金压力可控</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>11.26 亿元</td>
+<td>11.44 亿元</td>
+<td class="up">+1.57%，低于收入增速</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td>8.73 亿元 / 无</td>
+<td>9.32 亿元 / 无</td>
+<td class="down">应收账款 +6.85%，快于收入，需结合 H1 回款跟踪</td>
+</tr>
+<tr>
+<th scope="row">总资产</th>
+<td>76.65 亿元</td>
+<td>78.19 亿元</td>
+<td class="up">+2.01%</td>
+</tr>
+<tr>
+<th scope="row">归母净资产</th>
+<td>45.39 亿元</td>
+<td>48.85 亿元</td>
+<td class="up">+7.60%，ROE 同步改善</td>
+</tr>
+</tbody></table></div>
+<p>2026Q1 的关键变化是新材料业务放量：涂层材料与电解液添加剂合计收入 2.00 亿元，同比增长 65.63%；其中 VC 销量 1,074 吨、收入 1.41 亿元、毛利率 62.71%、净利润 0.80 亿元。该业务收入只占一季度总收入约 10%，但已经成为利润增量的核心来源。</p>
+<h3 class="sub">1.4 最近三年年度财报</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">2023A</th>
+<th scope="col">2024A</th>
+<th scope="col">2025A</th>
+<th scope="col">变化解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>53.40 亿元</td>
+<td>53.46 亿元</td>
+<td>52.10 亿元</td>
+<td class="up">2025 年 -2.55%，未形成总收入增长</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td>2.87 亿元</td>
+<td>3.48 亿元</td>
+<td>4.28 亿元</td>
+<td class="down">两年复合增长约 22.3%，利润改善快于收入</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td>2.76 亿元</td>
+<td>3.36 亿元</td>
+<td>4.47 亿元</td>
+<td>2025 年 +33.07%，且高于归母利润</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td>6.69 亿元</td>
+<td>5.09 亿元</td>
+<td>8.33 亿元</td>
+<td class="up">2025 年显著修复</td>
+</tr>
+<tr>
+<th scope="row">经营现金流/归母净利润</th>
+<td>2.33 倍</td>
+<td>1.46 倍</td>
+<td>1.95 倍</td>
+<td>连续三年大于 1</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td>0.69 亿元</td>
+<td>1.33 亿元</td>
+<td>6.05 亿元</td>
+<td class="down">资本开支下降后现金释放明显</td>
+</tr>
+<tr>
+<th scope="row">EPS</th>
+<td>0.35 元</td>
+<td>0.42 元</td>
+<td>0.47 元</td>
+<td class="up">持续上升</td>
+</tr>
+<tr>
+<th scope="row">ROE</th>
+<td>7.43%</td>
+<td>9.01%</td>
+<td>9.42%</td>
+<td class="up">改善但仍低于优质品牌家纺同业</td>
+</tr>
+<tr>
+<th scope="row">ROIC</th>
+<td>4.82%</td>
+<td>5.57%</td>
+<td>7.04%</td>
+<td class="up">资本效率持续提升</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>16.52%</td>
+<td>18.33%</td>
+<td>20.91%</td>
+<td class="up">毛巾提质、新材料及成本改善共同推动</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td>5.16%</td>
+<td>6.28%</td>
+<td>8.57%</td>
+<td class="up">盈利结构明显改善</td>
+</tr>
+<tr>
+<th scope="row">资本开支</th>
+<td>5.99 亿元</td>
+<td>3.77 亿元</td>
+<td>2.28 亿元</td>
+<td>扩产高峰回落</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>10.76 亿元</td>
+<td>11.33 亿元</td>
+<td>11.57 亿元</td>
+<td class="down">2025 年 +2.11%，略快于收入</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td>6.47 亿元 / 无</td>
+<td>7.77 亿元 / 无</td>
+<td>8.60 亿元 / 无</td>
+<td class="down">连续增长；2025 年 +10.63%，快于收入</td>
+</tr>
+<tr>
+<th scope="row">总资产</th>
+<td>81.96 亿元</td>
+<td>77.04 亿元</td>
+<td>73.07 亿元</td>
+<td>主动降杠杆、压降在建工程与现金</td>
+</tr>
+<tr>
+<th scope="row">归母净资产</th>
+<td>38.94 亿元</td>
+<td>44.44 亿元</td>
+<td>47.03 亿元</td>
+<td>净资产持续增厚</td>
+</tr>
+</tbody></table></div>
+<p><strong>核心指标综合判断：</strong>2023—2025 年收入基本横盘，但毛利率、扣非净利率、ROE 和 ROIC 持续改善，增长来自盈利结构而非规模扩张。2025 年经营现金流 8.33 亿元、自由现金流 6.05 亿元，利润兑现质量较好；应收账款连续快于收入增长是主要财务跟踪点，但票据及应收账款合计增幅低于单一应收账款口径，且现金流暂未显示系统性回款恶化。</p>
+</section>
+<section id="s2">
+<h2 class="sec"><span class="num">02</span>近两年财报趋势与业务结构</h2>
+<h3 class="sub">2.1 近两年财报趋势</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">项目</th>
+<th scope="col">2024A</th>
+<th scope="col">2025A</th>
+<th scope="col">变化</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>53.46 亿元</td>
+<td>52.10 亿元</td>
+<td class="down">-2.55%</td>
+<td>家纺和外销收入收缩，新材料尚不足以完全对冲</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td>3.48 亿元</td>
+<td>4.28 亿元</td>
+<td class="up">+23.16%</td>
+<td class="up">毛利率提升与费用/资产效率改善</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td>3.36 亿元</td>
+<td>4.47 亿元</td>
+<td class="up">+33.07%</td>
+<td>非经常性项目并未美化利润</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>18.33%</td>
+<td>20.91%</td>
+<td class="up">+2.58pct</td>
+<td class="up">毛巾毛利率提升、新能源业务单列</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td>6.28%</td>
+<td>8.57%</td>
+<td class="up">+2.29pct</td>
+<td>利润率扩张是主要业绩来源</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td>5.09 亿元</td>
+<td>8.33 亿元</td>
+<td class="up">+63.61%</td>
+<td>现金回收优于利润</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td>1.33 亿元</td>
+<td>6.05 亿元</td>
+<td class="up">+355.9%</td>
+<td class="down">资本开支下降 39.36%</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>11.33 亿元</td>
+<td>11.57 亿元</td>
+<td class="up">+2.11%</td>
+<td class="up">温和增长</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td>7.77 亿元 / 无</td>
+<td>8.60 亿元 / 无</td>
+<td class="up">+10.63%</td>
+<td class="up">需防范新业务以账期换增长</td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">2.2 分业务情况</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">业务</th>
+<th scope="col">2024A 收入</th>
+<th scope="col">2024A 毛利率</th>
+<th scope="col">2025A 收入</th>
+<th scope="col">2025A 毛利率</th>
+<th scope="col">变化</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">家纺行业</th>
+<td>38.53 亿元</td>
+<td>23.31%</td>
+<td>36.15 亿元</td>
+<td>25.18%</td>
+<td>收入 -6.18%，毛利率 +1.87pct；仍贡献约 83.6% 毛利额</td>
+</tr>
+<tr>
+<th scope="row">新能源行业</th>
+<td>未单列</td>
+<td>未单列</td>
+<td>2.92 亿元</td>
+<td>11.98%</td>
+<td>2025 年规模尚小；2026Q1 VC 毛利率已升至 62.71%，周期变化很大</td>
+</tr>
+<tr>
+<th scope="row">涂层材料</th>
+<td>1.97 亿元</td>
+<td>11.39%</td>
+<td>2.04 亿元</td>
+<td>10.32%</td>
+<td class="down">收入略增但盈利偏弱，2026Q1 仍亏损 0.05 亿元</td>
+</tr>
+<tr>
+<th scope="row">化工行业</th>
+<td>2.05 亿元</td>
+<td>16.47%</td>
+<td>2.03 亿元</td>
+<td>20.24%</td>
+<td class="up">收入稳定、毛利改善</td>
+</tr>
+<tr>
+<th scope="row">其他行业</th>
+<td>10.91 亿元</td>
+<td>2.36%</td>
+<td>8.96 亿元</td>
+<td>9.13%</td>
+<td>受业务重分类影响，与新能源单列前后不完全可比</td>
+</tr>
+<tr>
+<th scope="row">其中：毛巾系列</th>
+<td>34.25 亿元</td>
+<td>24.37%</td>
+<td>32.30 亿元</td>
+<td>26.01%</td>
+<td class="up">核心产品收入收缩、盈利能力提升</td>
+</tr>
+<tr>
+<th scope="row">其中：外销</th>
+<td>33.32 亿元</td>
+<td>22.26%</td>
+<td>31.03 亿元</td>
+<td>23.74%</td>
+<td>2025 年占收入 59.57%，汇率、关税和海外需求敏感度高</td>
+</tr>
+</tbody></table></div>
+<p><strong>业务结构判断：</strong>家纺仍是收入与毛利主体，2025 年增长更多是“传统主业提质”而非“第二曲线放量”。2026 年起 VC 成为利润增长引擎，但其驱动是供需变化带来的售价提升，周期性强。涂层材料尚未形成稳定利润。拟收购博赛利斯后，硅碳负极材料可能成为新增长源，但客户集中、产能扩张和技术路线风险会显著增加。</p>
+</section>
+<section id="s3">
+<h2 class="sec"><span class="num">03</span>结论摘要</h2>
+<h3 class="sub">3.1 当前结论</h3>
+<ul>
+<li>基本面判断：中性</li>
+<li>财务质量：良好</li>
+<li>估值状态：合理</li>
+<li>财务造假风险初筛：中</li>
+<li>核心理由：</li>
+<ul>
+<li>2025 年扣非净利润增长 33.07%，经营现金流/归母净利润 1.95 倍，自由现金流 6.05 亿元，利润兑现质量较好。</li>
+<li>2026Q1 与 H1 预告均显示 VC 业务带来强利润弹性，但驱动主要是产品价格中枢上移，持续性低于销量和市场份额驱动。</li>
+<li>家纺主业收入收缩但毛利率改善，仍是稳定器；涂层业务尚未稳定盈利。</li>
+<li>3.996 亿元收购博赛利斯的隐含交易估值不高，但标的评估增值率 193.77%，且 2028 年美国单一客户业务退出导致预测收入断层。</li>
+<li>控股股东所持 17.96%股份截至 2026-06-16 仍 100%司法冻结，是必须持续折价的治理风险。</li>
+</ul>
+</ul>
+<h3 class="sub">3.2 与上次报告相比</h3>
+<p>首次建立研究基线，无上次报告可比；基线日期为 2026-07-27。</p>
+<ul>
+<li>本次触发事件：首次建档，同时纳入 2026H1 业绩预告、博赛利斯收购公告及股价异常波动公告。</li>
+<li>新增确认事实：VC 业务高毛利放量；H1 归母净利润预计增长 50.02%—70.27%；拟以 3.996 亿元收购博赛利斯 78.80%股权；控股股东股份仍全部冻结。</li>
+<li>被证伪或弱化的旧假设：不适用。</li>
+<li>仍然有效的旧观点：不适用。</li>
+<li>仍待验证事项：H1 现金流与应收变化、VC 价格持续性、收购交割及商誉、标的客户多元化、控股股东解冻。</li>
+</ul>
+</section>
+<section id="s4">
+<h2 class="sec"><span class="num">04</span>公司与行业</h2>
+<ul>
+<li>主营业务：家纺制造与出口为基础盘，叠加工业涂层材料、化工、电解液添加剂 VC，以及拟并购的硅基负极材料。</li>
+<li>主要产品：毛巾及床品、热电产品、工业防腐/船舶/汽车涂层、VC 等电解液添加剂、硅氧/硅碳负极材料。</li>
+<li>市场占有率：公司自述保持全球家纺行业领军地位，但本次未找到可按统一口径核验的全球毛巾市场份额，不能量化引用。</li>
+<li>行业景气度：</li>
+<ul>
+<li>家纺端偏中性偏弱。2025 年中国纺织品服装出口总额同比下降 2.5%，行业竞争和终端需求承压；2025H1 家用纺织品出口仍同比增长 1.6%，显示品类韧性但非高景气。<a href="https://price.mofcom.gov.cn/article/yjzx/hyzx/fz/202602/64291.html" target="_blank" rel="noopener">商务部行业信息</a>、<a href="https://zlzx.zjamr.zj.gov.cn/news/33010011/14569.html" target="_blank" rel="noopener">家纺出口数据</a>。</li>
+<li>锂电端需求较强但价格波动大。工信部披露 2025 年 1—4 月全国锂电池总产量超过 473GWh、同比增长 68%，动力与储能需求为添加剂提供总量支撑；VC 具体价格仍受阶段性供需影响。<a href="https://www.miit.gov.cn/gyhxxhb/jgsj/dzxxs/dzjc/art/2025/art_d39a290e42b542b7a9a688355c52c768.html" target="_blank" rel="noopener">工信部锂电行业数据</a>。</li>
+</ul>
+<li>核心竞争力：家纺完整产业链、出口客户与制造能力；VC 的 CEC—合成—精制一体化；博赛利斯的硅基材料技术和客户验证进度。</li>
+<li>主要依赖：外销占比约 59.6%；VC 利润依赖价格周期；博赛利斯当前存在美国单一客户及核心技术团队依赖。</li>
+</ul>
+<p>宏观层面，人民币汇率、美国贸易政策、棉花与能源成本直接影响家纺外销利润；新能源端则更受动力/储能装机、材料去库存和产品价格周期影响。公司同时暴露于“低增速出口制造”和“高波动新能源材料”两类周期，业务组合的分散效果仍需经完整周期验证。</p>
+</section>
+<section id="s5">
+<h2 class="sec"><span class="num">05</span>订单与需求验证</h2>
+<p>未发现可核验的重大合同金额或可量化 backlog。现有证据以运营数据和管理层交流为主，不能等同于已签署订单。</p>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">日期</th>
+<th scope="col">来源与链接</th>
+<th scope="col">项目/订单名称</th>
+<th scope="col">客户/采购方</th>
+<th scope="col">产品/服务</th>
+<th scope="col">金额</th>
+<th scope="col">状态</th>
+<th scope="col">履约周期</th>
+<th scope="col">是否公司正式公告</th>
+<th scope="col">对收入影响</th>
+<th scope="col">可信度</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">2026-04-15</th>
+<td>2026Q1 经营回顾</td>
+<td>VC 销售</td>
+<td class="muted">未披露</td>
+<td>VC</td>
+<td>收入 1.41 亿元</td>
+<td>已销售 1,074 吨</td>
+<td>2026Q1</td>
+<td>是</td>
+<td>占 Q1 收入约 10.0%，利润贡献更高</td>
+<td>高</td>
+</tr>
+<tr>
+<th scope="row">2026-04-15</th>
+<td>2026Q1 经营回顾</td>
+<td class="up">涂层材料在手订单增长</td>
+<td>船舶、海工、汽车客户未具名</td>
+<td>工业涂层</td>
+<td class="muted">未披露</td>
+<td>在手订单表述</td>
+<td class="muted">未披露</td>
+<td>是</td>
+<td class="down">Q1 收入 0.59 亿元，仍亏损</td>
+<td>中</td>
+</tr>
+<tr>
+<th scope="row">2026-07-02</th>
+<td><a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260702_2026H1_%E4%B8%9A%E7%BB%A9%E9%A2%84%E5%91%8A_1225403167.pdf">H1 业绩预告</a></td>
+<td>VC 需求与价格验证</td>
+<td class="muted">未披露</td>
+<td>VC</td>
+<td class="muted">未披露</td>
+<td>销售实现、价格上行</td>
+<td>2026H1</td>
+<td>是</td>
+<td class="up">直接推动 H1 利润增长</td>
+<td>高</td>
+</tr>
+<tr>
+<th scope="row">2026-07-22</th>
+<td><a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12457808&amp;stockid=002083" target="_blank" rel="noopener">投资者关系活动记录</a></td>
+<td>博赛利斯产能与客户验证</td>
+<td>客户未具名</td>
+<td>硅氧/硅碳负极</td>
+<td class="muted">未披露</td>
+<td>合肥工厂“满产满销”、硅碳代工扩产</td>
+<td class="muted">未披露</td>
+<td>是，交流纪要</td>
+<td>收购交割后才可能并表；无订单金额</td>
+<td>中</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>已披露订单/合同：无可量化重大合同。</li>
+<li>招投标与客户侧线索：涂层材料在手订单增长，但客户、金额和交付周期未披露。</li>
+<li>订单状态区分：VC 为已实现销售；涂层与硅碳仅为运营/管理层表述，不视作新增合同。</li>
+<li>订单金额与最近年度营收比例：无法计算。</li>
+<li>履约周期与收入确认节奏：无法确认。</li>
+<li>合同负债/存货/应收/现金流验证：2026Q1 合同负债 0.67 亿元、同比下降 11.70%；存货同比 +1.57%；应收账款同比 +6.85%；经营现金流同比 +130.65%。未出现订单大增对应合同负债上升，需求判断主要依赖已实现 VC 销售。</li>
+<li>订单趋势判断：改善。</li>
+<li>信息可信度：中。</li>
+</ul>
+</section>
+<section id="s6">
+<h2 class="sec"><span class="num">06</span>财务质量验证</h2>
+<ul>
+<li>利润与现金流匹配：2023—2025 年经营现金流/归母净利润均大于 1；2026Q1 为 1.54 倍，暂无利润缺乏现金支持的信号。</li>
+<li>应收账款与营收匹配：2025 年应收账款增长 10.63%，而营收下降 2.55%；2026Q1 应收增长 6.85%，亦快于收入。考虑应收票据下降后风险略有缓释，但新材料客户账期需持续核验。</li>
+<li>存货与营收匹配：2025 年存货增长 2.11%，2026Q1 增长 1.57%，未见明显异常囤货；仍需关注 VC 价格回落时的跌价风险。</li>
+<li>资本开支效率与自由现金流：资本开支由 2023 年 5.99 亿元降至 2025 年 2.28 亿元，自由现金流升至 6.05 亿元，在建工程由 3.50 亿元降至 0.61 亿元，前期投入开始释放现金。</li>
+<li>预付款/其他应收款/在建工程/商誉异常：2025 年预付款 1.05 亿元、同比 +14.81%，规模不大；其他应收款 0.14 亿元；商誉 1.44 亿元连续稳定。收购博赛利斯后预计会新增商誉或可辨认无形资产，是下一阶段关键风险。</li>
+<li>资产负债率与有息负债：资产负债率由 2023 年 52.17%降至 2025 年 35.48%，2026Q1 为 37.42%；2026Q1 货币资金及交易性金融资产合计约 11.99 亿元，有息债务约 18.40 亿元，净负债可控。</li>
+<li>综合判断：存量报表现金质量较好、杠杆下降；主要疑点不是历史利润真实性，而是应收增速、新材料周期、并购商誉和未来资本开支。</li>
+</ul>
+</section>
+<section id="s7">
+<h2 class="sec"><span class="num">07</span>股东与机构</h2>
+<ul>
+<li>十大股东持股占比：2026Q1 为 41.60%，持股结构较分散。</li>
+<li>实控人/大股东持股与质押：实际控制人为高密市国有资产运营中心；控股股东高密华荣实业持有 1.70 亿股，占 17.96%。截至 2026-06-16，其持股仍 100%被司法冻结、轮候冻结数量占其持股 169.17%，未见披露质押替代冻结的情况。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260131_%E6%9C%9F%E9%97%B4%E5%BE%85%E6%A0%B8%E9%AA%8C_%E6%AD%A3%E5%BC%8F%E6%8A%AB%E9%9C%B2_1224960514.pdf">冻结公告</a>、<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260616_%E6%9C%9F%E9%97%B4%E5%BE%85%E6%A0%B8%E9%AA%8C_%E6%AD%A3%E5%BC%8F%E6%8A%AB%E9%9C%B2_1225370350.pdf">部分解除冻结公告</a>。</li>
+<li>大股东减持或增持：高密安信投资管理股份有限公司持续增持，截至 2026-07-14 持股约 1.0413 亿股、占 11.00%；公司回购股份存在集中竞价减持计划，需与普通股东减持区分。</li>
+<li>入驻机构家数：2026Q1 机构统计口径显示 3 家法人/结算类持有人；2025 年末公开基金持仓约 14 只，但主要由红利 ETF 贡献，主动机构覆盖有限。</li>
+<li>机构类型：地方国资相关法人、香港中央结算、ETF及少量量化/主动基金；未见社保、保险或 QFII 进入前十大股东。</li>
+<li>治理风险判断：中高。公司经营与控股股东在公告中称保持独立，未披露资金占用和违规担保，但控股股东全部持股冻结会增加控制权、融资及外部治理不确定性。</li>
+</ul>
+</section>
+<section id="s8">
+<h2 class="sec"><span class="num">08</span>估值与同行对比</h2>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">公司</th>
+<th scope="col">最新 PE</th>
+<th scope="col">最新 PB</th>
+<th scope="col">2025 收入增速</th>
+<th scope="col">2025 毛利率</th>
+<th scope="col">2025 扣非净利率</th>
+<th scope="col">2025 ROE</th>
+<th scope="col">经营现金流/净利润</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">孚日股份</th>
+<td>22.65x TTM</td>
+<td>2.23x</td>
+<td class="down">-2.55%</td>
+<td>20.91%</td>
+<td>8.57%</td>
+<td>9.42%</td>
+<td>2.03x</td>
+</tr>
+<tr>
+<th scope="row">罗莱生活</th>
+<td>约 16.72x</td>
+<td>约 2.32x</td>
+<td class="up">+6.13%</td>
+<td>50.53%</td>
+<td>9.52%</td>
+<td>12.51%</td>
+<td>1.94x</td>
+</tr>
+<tr>
+<th scope="row">富安娜</th>
+<td>约 15.51x</td>
+<td>约 1.52x</td>
+<td class="down">-14.16%</td>
+<td>53.20%</td>
+<td>11.51%</td>
+<td>8.28%</td>
+<td>1.66x</td>
+</tr>
+<tr>
+<th scope="row">水星家纺</th>
+<td>约 11.45x</td>
+<td>约 1.54x</td>
+<td class="up">+7.99%</td>
+<td>44.95%</td>
+<td>7.83%</td>
+<td>13.31%</td>
+<td>1.31x</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>当前估值：按历史/TTM 利润明显高于传统家纺同业；按 2026H1 预告利润简单年化，隐含 PE 约 13.0—14.8 倍，但该算法默认 VC 高景气持续，不能作为基准盈利。</li>
+<li>同行业估值对比：传统同业的品牌溢价、直营零售和高毛利模式与孚日制造出口模式不同；孚日当前溢价实质来自 VC 与硅碳负极预期。</li>
+<li>同行业财务质量对比：孚日毛利率和 ROE低于罗莱、水星，现金流质量较好；扣非净利率处于中游。</li>
+<li>估值是否匹配成长与财务质量：在 2026H1 预告兑现、VC 价格不快速回落、博赛利斯顺利交割的前提下基本匹配；若按传统家纺和常态化 VC 盈利估值，则偏高。基线将其定为“合理但高敏感度”。</li>
+</ul>
+</section>
+<section id="s9">
+<h2 class="sec"><span class="num">09</span>负面信息与风险排查</h2>
+<ul>
+<li>是否亏损：否。最近三年持续盈利，2026H1 预告继续增长。</li>
+<li>是否 ST 或退市风险：未发现。</li>
+<li>审计意见：2025 年年度财务报告为标准无保留意见，内部控制审计未披露非标结论。</li>
+<li>监管问询/处罚：截至 2026-07-27，对巨潮资讯公告标题及公开监管新闻检索，未发现 2021 年以来公司层面的问询函、立案调查、行政处罚或纪律处分；信息边界是不排除未被搜索引擎完整索引的一般监管记录。</li>
+<li>诉讼仲裁：未发现足以改变持续经营判断的重大公司诉讼；控股股东因债务纠纷导致持股冻结属于明确治理风险。</li>
+<li>负面新闻：2026-07-23 至 07-24 股价涨幅偏离值累计 22.68%，公司核查称不存在应披露未披露事项，并提示 VC 收入约占 H1 营收 10%、对总收入贡献有限。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260725_%E6%9C%9F%E9%97%B4%E5%BE%85%E6%A0%B8%E9%AA%8C_%E6%AD%A3%E5%BC%8F%E6%8A%AB%E9%9C%B2_1225441301.pdf">异常波动公告</a>。</li>
+<li>关联交易/客户供应商真实性争议：未发现公开确认的真实性争议。博赛利斯客户高度集中且与美国客户深度绑定，是未来并表后的真实性和持续性核验重点。</li>
+</ul>
+</section>
+<section id="s10">
+<h2 class="sec"><span class="num">10</span>财务造假风险初筛</h2>
+<ul>
+<li>红旗数量：2 项主要红旗，1 项前瞻跟踪项。</li>
+<li>主要红旗：</li>
+<ul>
+<li>应收账款连续快于收入增长，2025 年营收下降但应收账款增长 10.63%。</li>
+<li>控股股东持股 100%被冻结，属于重大治理压力，虽未直接指向上市公司报表造假。</li>
+<li>前瞻跟踪：博赛利斯评估增值率 193.77%、美国客户集中，收购后商誉、收入确认与客户真实性需要专项核验。</li>
+</ul>
+<li>风险等级：中。</li>
+<li>解释：这是风险筛查，不是事实定性。反向证据包括经营现金流持续覆盖利润、扣非利润高于归母利润、存货增幅温和、资产负债率下降、2025 年标准无保留审计意见，以及未发现监管、审计或司法机关对财务造假的确认。只有监管、审计、司法或公司公告确认后才能定性。</li>
+</ul>
+</section>
+<section id="s11">
+<h2 class="sec"><span class="num">11</span>后续跟踪清单</h2>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">跟踪事项</th>
+<th scope="col">首次提出</th>
+<th scope="col">上次状态</th>
+<th scope="col">本次证据</th>
+<th scope="col">当前状态</th>
+<th scope="col">下次验证时间/触发条件</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">2026H1 预告兑现及现金流质量</th>
+<td>2026-07-27</td>
+<td>首次</td>
+<td>归母预告 3.6862—4.1839 亿元</td>
+<td>待验证</td>
+<td>2026H1 正式报告披露：实际利润、OCF/净利润、应收与存货</td>
+</tr>
+<tr>
+<th scope="row">VC 价格、销量及毛利率持续性</th>
+<td>2026-07-27</td>
+<td>首次</td>
+<td>Q1 销量 1,074 吨、毛利率 62.71%；H1 利润受价格上移驱动</td>
+<td>部分验证</td>
+<td>每季销量、均价、毛利率；若毛利率回落超过 15pct 触发深度复盘</td>
+</tr>
+<tr>
+<th scope="row">博赛利斯收购交割与并表</th>
+<td>2026-07-27</td>
+<td>首次</td>
+<td>已签协议，3.996 亿元收购 78.80%股权</td>
+<td>待验证</td>
+<td>工商交割、支付完成、购买日和并表公告</td>
+</tr>
+<tr>
+<th scope="row">收购商誉及业绩承压测试</th>
+<td>2026-07-27</td>
+<td>首次</td>
+<td class="down">评估增值率 193.77%，2028 年预测收入因美国客户业务退出下降</td>
+<td>待验证</td>
+<td class="down">购买价分摊、商誉金额；客户收入下降或减值迹象</td>
+</tr>
+<tr>
+<th scope="row">博赛利斯客户多元化和订单</th>
+<td>2026-07-27</td>
+<td>首次</td>
+<td>合肥工厂“满产满销”，但客户及订单金额未披露</td>
+<td>待验证</td>
+<td>新客户量产认证、前五客户占比、合同/出货量</td>
+</tr>
+<tr>
+<th scope="row">控股股东股份解冻</th>
+<td>2026-07-27</td>
+<td>首次</td>
+<td>截至 2026-06-16 仍 100%冻结</td>
+<td>待验证</td>
+<td>解除冻结公告；若司法处置或控制权变化立即复盘</td>
+</tr>
+<tr>
+<th scope="row">涂层材料扭亏与在手订单兑现</th>
+<td>2026-07-27</td>
+<td>首次</td>
+<td class="down">Q1 收入 0.59 亿元、净亏损 0.05 亿元；3 月单月扭亏</td>
+<td>部分验证</td>
+<td>H1/全年分部利润、订单金额和回款</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>新增订单金额与年初至今累计订单金额：未披露。</li>
+<li>订单金额/上年营收：无法计算。</li>
+<li>重点客户复购与新增客户：VC 与硅碳客户未具名，待年报或正式公告核验。</li>
+<li>中标候选人转正式中标/签约情况：不适用。</li>
+<li>合同负债、存货、应收账款和经营现金流变化：H1 和 Q3 持续跟踪。</li>
+<li>触发深度复盘条件：H1 正式报告、博赛利斯完成交割、控股股东股权被司法处置、VC 毛利率显著回落、审计/监管非标或重大问询。</li>
+</ul>
+</section>
+<section id="s12">
+<h2 class="sec"><span class="num">12</span>信息边界</h2>
+<ul>
+<li>分析范围：报告执行日 2026-07-27；行情日 2026-07-24；财务覆盖 2023A—2025A、2025Q1—2026Q1及 2026H1 未经审计业绩预告；首次基线，无历史版本。年度报告未追溯重述，分部口径在 2025 年将新能源单独列示，跨期比较受重分类影响。</li>
+<li>数据日期：财务数据截至 2026-03-31；预告截至 2026-06-30；股东冻结状态截至 2026-06-16；增持持股数据截至 2026-07-14；行情截至 2026-07-24。</li>
+<li>主要数据来源：公司在巨潮资讯披露的年报、季报、业绩预告、收购/审计/评估及股权冻结公告；东方财富 F10 用于结构化财务交叉核验；行情聚合平台用于时点估值；工信部、商务部及海关转引数据用于行业背景。</li>
+<li>本地原始资料：</li>
+<ul>
+<li><a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260408_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1225082676.pdf">2025 年年度报告</a></li>
+<li><a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260415_2026Q1_%E7%AC%AC%E4%B8%80%E5%AD%A3%E5%BA%A6%E6%8A%A5%E5%91%8A_1225100290.pdf">2026 年第一季度报告</a></li>
+<li><a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260702_2026H1_%E4%B8%9A%E7%BB%A9%E9%A2%84%E5%91%8A_1225403167.pdf">2026 年半年度业绩预告</a></li>
+<li><a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260721_%E6%9C%9F%E9%97%B4%E5%BE%85%E6%A0%B8%E9%AA%8C_%E6%AD%A3%E5%BC%8F%E6%8A%AB%E9%9C%B2_1225433705.pdf">收购博赛利斯股权公告</a></li>
+<li><a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260721_%E6%9C%9F%E9%97%B4%E5%BE%85%E6%A0%B8%E9%AA%8C_%E5%AE%A1%E8%AE%A1%E6%8A%A5%E5%91%8A_1225433706.pdf">博赛利斯审计报告</a></li>
+<li><a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260721_%E6%9C%9F%E9%97%B4%E5%BE%85%E6%A0%B8%E9%AA%8C_%E6%AD%A3%E5%BC%8F%E6%8A%AB%E9%9C%B2_1225433707.pdf">博赛利斯评估报告</a></li>
+<li><a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260131_%E6%9C%9F%E9%97%B4%E5%BE%85%E6%A0%B8%E9%AA%8C_%E6%AD%A3%E5%BC%8F%E6%8A%AB%E9%9C%B2_1224960514.pdf">控股股东股权冻结公告</a></li>
+<li><a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260616_%E6%9C%9F%E9%97%B4%E5%BE%85%E6%A0%B8%E9%AA%8C_%E6%AD%A3%E5%BC%8F%E6%8A%AB%E9%9C%B2_1225370350.pdf">控股股东部分股权解除冻结公告</a></li>
+<li><a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260408_2025_%E6%AD%A3%E5%BC%8F%E6%8A%AB%E9%9C%B2_1225082681.pdf">2025 年度非经营性资金占用及关联资金往来专项审核报告</a></li>
+<li><a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260408_2025_%E5%AE%A1%E8%AE%A1%E6%8A%A5%E5%91%8A_1225082692.pdf">2025 年度内部控制审计报告</a></li>
+<li><a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260725_%E6%9C%9F%E9%97%B4%E5%BE%85%E6%A0%B8%E9%AA%8C_%E6%AD%A3%E5%BC%8F%E6%8A%AB%E9%9C%B2_1225441301.pdf">股价异常波动公告</a></li>
+<li><a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/%E8%B5%84%E6%96%99%E7%B4%A2%E5%BC%95.md">资料索引</a></li>
+</ul>
+<li>尚未核验的信息：全球毛巾市场份额、VC 即时报价及订单金额、博赛利斯客户名单和前五客户占比、收购后商誉金额、2026H1 资产负债表与现金流。</li>
+<li>可能影响结论的新公告或市场事件：半年报正式数据、VC 行业新增产能与价格变化、博赛利斯交割及客户验证、控股股东司法冻结处置、贸易与汇率政策变化。</li>
+</ul>
+</section>
+
+      <section id="note-friendly">
+        <h2 class="sec"><span class="num">◎</span>基本面速记</h2>
+        <div class="note-copy">
+          <h2>可复制摘要</h2>
+          <pre><code>【基本面速记】
+公司：孚日股份（002083.SZ）
+结论：基本面中性，财务质量良好，估值合理但对 VC 价格与硅碳预期高度敏感。
+核心看点：
+1. 2025 年现金流覆盖利润，自由现金流 6.05 亿元，存量报表质量较好。
+2. 2026H1 归母净利润预计增长 50.02%—70.27%，VC 是核心增量。
+3. 家纺主业收入收缩但毛利改善；硅碳收购打开空间，也引入客户集中与商誉风险。
+主要风险：
+1. VC 价格周期反转、应收账款增速快于收入。
+2. 控股股东持股全部冻结，博赛利斯美国客户集中且 2028 年预测收入断层。
+最新财务预报：2026H1 归母净利润 3.6862—4.1839 亿元；隐含 Q2 同比约 +59.2%—+101.3%、环比约 +4.3%—+31.9%；信息可信度中高，盈利质量强但持续性中等。
+造假风险筛查：中。理由：现金流与扣非利润提供反向证据，但应收、控股股东冻结和并购高评估增值需跟踪。
+订单/需求验证：改善。依据：VC 已实现销量和收入增长，涂层/硅碳订单金额未披露。
+后续跟踪：H1 兑现、VC 价格与毛利、博赛利斯交割和商誉、客户多元化、控股股东解冻。</code></pre>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="disclaimer">
+      免责声明:本报告为基于公开财报、公告、行情与新闻资料的整理和财务质量初筛,不构成任何投资建议,不保证未来收益。投资有风险,决策需谨慎。所有数据以公司正式披露为准。
+    </div>
+    <div>报告主体:孚日股份(002083.SZ) | 数据口径:财务数据截至 2026-03-31；预告截至 2026-06-30；股东冻结状态截至 2026-06-16；增持持股数据截至 2026-07-14；行情截至 2026-07-24。</div>
+    <div>主要数据来源:公司在巨潮资讯披露的年报、季报、业绩预告、收购/审计/评估及股权冻结公告；东方财富 F10 用于结构化财务交叉核验；行情聚合平台用于时点估值；工信部、商务部及海关转引数据用于行业背景。</div>
+    <div>自包含离线 HTML · 内联 CSS / 极简内联 JS · 可直接在浏览器打开</div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var links = document.querySelectorAll('nav.toc a');
+  var map = {};
+  for (var i=0;i<links.length;i++){
+    var href = links[i].getAttribute('href') || '';
+    if (href.charAt(0) === '#') map[href.slice(1)] = links[i];
+  }
+  var sections = document.querySelectorAll('main section[id]');
+  function onScroll(){
+    var pos = (window.scrollY || document.documentElement.scrollTop) + 90;
+    var cur = null;
+    for (var j=0;j<sections.length;j++){
+      if (sections[j].offsetTop <= pos) cur = sections[j].id;
+    }
+    for (var k=0;k<links.length;k++) links[k].classList.remove('active');
+    if (cur && map[cur]) {
+      map[cur].classList.add('active');
+      var act = map[cur];
+      var sc = document.getElementById('toc-scroll');
+      if (sc && act.offsetLeft < sc.scrollLeft) sc.scrollLeft = act.offsetLeft - 8;
+      if (sc && act.offsetLeft + act.offsetWidth > sc.scrollLeft + sc.clientWidth) {
+        sc.scrollLeft = act.offsetLeft + act.offsetWidth - sc.clientWidth + 8;
+      }
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
+</body>
+</html>

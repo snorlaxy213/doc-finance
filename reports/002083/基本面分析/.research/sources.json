@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-27T17:15:10+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260408-627b18db",
+      "title": "2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260408",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-08/1225082676.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260408_2025A_年度报告_1225082676.pdf",
+      "sha256": "627b18db1d9cf7a07953f7de765eb6ddf3b5f1cde14191207bac7a9e9f9dd1f7",
+      "bytes": 48150997,
+      "pages": null,
+      "retrieved_at": "2026-07-27T17:11:06+08:00",
+      "used_by": [
+        "孚日股份首次基本面基线"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260415-9b46dba6",
+      "title": "2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260415",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-15/1225100290.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260415_2026Q1_第一季度报告_1225100290.pdf",
+      "sha256": "9b46dba646ac3718dd9ffd6808484e0c9cf19f886eef881fab16d5fa6dc436fc",
+      "bytes": 2533653,
+      "pages": null,
+      "retrieved_at": "2026-07-27T17:11:07+08:00",
+      "used_by": [
+        "孚日股份首次基本面基线"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260702-13b6ff2b",
+      "title": "2026年半年度业绩预告",
+      "document_type": "业绩预告",
+      "period": "2026H1",
+      "published_date": "20260702",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-07-02/1225403167.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260702_2026H1_业绩预告_1225403167.pdf",
+      "sha256": "13b6ff2b77352c43d2d970763eafb8cc967d2a4f237bde74ee27369bbeab3387",
+      "bytes": 75481,
+      "pages": null,
+      "retrieved_at": "2026-07-27T17:11:07+08:00",
+      "used_by": [
+        "孚日股份首次基本面基线"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260721-45dbf5d2",
+      "title": "收购博赛利斯股权公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260721",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-07-21/1225433705.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260721_期间待核验_正式披露_1225433705.pdf",
+      "sha256": "45dbf5d293e11e9f45fa2c2c3e4d6d161f12587e92042151a095276540251ac8",
+      "bytes": 259161,
+      "pages": null,
+      "retrieved_at": "2026-07-27T17:11:07+08:00",
+      "used_by": [
+        "孚日股份首次基本面基线"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260721-e66a24dd",
+      "title": "博赛利斯审计报告",
+      "document_type": "审计报告",
+      "period": "期间待核验",
+      "published_date": "20260721",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-07-21/1225433706.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260721_期间待核验_审计报告_1225433706.pdf",
+      "sha256": "e66a24ddc82d0b024b6a244d88b2945e85c8986e35a7a59a3255137259bbb328",
+      "bytes": 7020350,
+      "pages": null,
+      "retrieved_at": "2026-07-27T17:11:08+08:00",
+      "used_by": [
+        "孚日股份首次基本面基线"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260721-ce1bb1b2",
+      "title": "博赛利斯评估报告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260721",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-07-21/1225433707.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260721_期间待核验_正式披露_1225433707.pdf",
+      "sha256": "ce1bb1b250ae0bd65c68b97f3dcf21aa25a8a1c65b8816609d9656f6b3459c58",
+      "bytes": 10946931,
+      "pages": null,
+      "retrieved_at": "2026-07-27T17:11:10+08:00",
+      "used_by": [
+        "孚日股份首次基本面基线"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260131-005c0dd3",
+      "title": "控股股东股权冻结公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260131",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-01-31/1224960514.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260131_期间待核验_正式披露_1224960514.pdf",
+      "sha256": "005c0dd38af254cfedac3241ffb744061e989fa7d1c3c854f9d6933f5cc0974e",
+      "bytes": 135951,
+      "pages": null,
+      "retrieved_at": "2026-07-27T17:11:10+08:00",
+      "used_by": [
+        "孚日股份首次基本面基线"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260616-331c6efc",
+      "title": "控股股东部分股权解除司法冻结公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260616",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-06-16/1225370350.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260616_期间待核验_正式披露_1225370350.pdf",
+      "sha256": "331c6efc8d271bc635ce96b69ca545d4c59eabf580c60e2848f6739ce8999d03",
+      "bytes": 132027,
+      "pages": null,
+      "retrieved_at": "2026-07-27T17:11:10+08:00",
+      "used_by": [
+        "孚日股份首次基本面基线"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260725-af3edfed",
+      "title": "股价异常波动公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260725",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-07-25/1225441301.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260725_期间待核验_正式披露_1225441301.pdf",
+      "sha256": "af3edfed966811f89d148dc531e1911cfccdad73b8f7235975e203436be0ec1c",
+      "bytes": 166710,
+      "pages": null,
+      "retrieved_at": "2026-07-27T17:11:11+08:00",
+      "used_by": [
+        "孚日股份首次基本面基线"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260408-a089d6cf",
+      "title": "2025年度非经营性资金占用及关联资金往来专项审核报告",
+      "document_type": "正式披露",
+      "period": "2025",
+      "published_date": "20260408",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-08/1225082681.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260408_2025_正式披露_1225082681.pdf",
+      "sha256": "a089d6cfd4e12f74c0cee433a47a4d8eb2238d8a75b87099cd5b2ab148beb518",
+      "bytes": 1486746,
+      "pages": null,
+      "retrieved_at": "2026-07-27T17:15:10+08:00",
+      "used_by": [
+        "孚日股份首次基本面基线"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260408-01f24050",
+      "title": "2025年度内部控制审计报告",
+      "document_type": "审计报告",
+      "period": "2025",
+      "published_date": "20260408",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-08/1225082692.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260408_2025_审计报告_1225082692.pdf",
+      "sha256": "01f240502b84848a227ac64535a213698d6fe4028a8f17556463580fb1ff49ad",
+      "bytes": 1227573,
+      "pages": null,
+      "retrieved_at": "2026-07-27T17:15:10+08:00",
+      "used_by": [
+        "孚日股份首次基本面基线"
+      ],
+      "status": "已归档"
+    }
+  ]
+}
