@@ -1,0 +1,313 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-27T17:04:35+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260422-60a7cb69",
+      "title": "2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260422",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-22/1225142843.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260422_2025A_年度报告_1225142843.pdf",
+      "sha256": "60a7cb6959ded9a47544a7180af4b351cb773a03c56adbc3e05e78083f63b3c1",
+      "bytes": 1702302,
+      "pages": null,
+      "retrieved_at": "2026-07-27T16:52:49+08:00",
+      "used_by": [
+        "中电鑫龙_002298_基本面分析_20260727"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250425-5c1154fc",
+      "title": "2024年年度报告",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250425",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-04-25/1223286462.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250425_2024A_年度报告_1223286462.pdf",
+      "sha256": "5c1154fc9ac7f7b91b3be1c9092a7e220a5961264793a6b97b9a08bee23b56b1",
+      "bytes": 3714770,
+      "pages": null,
+      "retrieved_at": "2026-07-27T16:52:50+08:00",
+      "used_by": [
+        "中电鑫龙_002298_基本面分析_20260727"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20240426-b6008a64",
+      "title": "2023年年度报告",
+      "document_type": "年度报告",
+      "period": "2023A",
+      "published_date": "20240426",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2024-04-26/1219831448.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2024/20240426_2023A_年度报告_1219831448.pdf",
+      "sha256": "b6008a64289ae87bedb58aaf376863eed29a4e3bf870baf578b1e9bfb9287b63",
+      "bytes": 4477102,
+      "pages": null,
+      "retrieved_at": "2026-07-27T16:52:51+08:00",
+      "used_by": [
+        "中电鑫龙_002298_基本面分析_20260727"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260422-57521acc",
+      "title": "2026年一季度报告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260422",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-22/1225142852.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260422_2026_正式披露_1225142852.pdf",
+      "sha256": "57521acc08ff7d23760c9243b97c2ea110a1214698a82c7ba81c0caca5b3190e",
+      "bytes": 222430,
+      "pages": null,
+      "retrieved_at": "2026-07-27T16:52:51+08:00",
+      "used_by": [
+        "中电鑫龙_002298_基本面分析_20260727"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260715-a00d8890",
+      "title": "2026年半年度业绩预告",
+      "document_type": "业绩预告",
+      "period": "2026H1",
+      "published_date": "20260715",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-07-15/1225424307.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260715_2026H1_业绩预告_1225424307.pdf",
+      "sha256": "a00d889049d1a687b2b0e3f80b7313d82a09ffbec00b4421def4e1e56a8f1e24",
+      "bytes": 115882,
+      "pages": null,
+      "retrieved_at": "2026-07-27T16:52:51+08:00",
+      "used_by": [
+        "中电鑫龙_002298_基本面分析_20260727"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260422-5e829120",
+      "title": "2025年年度审计报告",
+      "document_type": "审计报告",
+      "period": "2025",
+      "published_date": "20260422",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-22/1225142845.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260422_2025_审计报告_1225142845.pdf",
+      "sha256": "5e829120076227ea9831e3c97f6d97d5f4ad07cbd92e7187fcc6125fde619f3f",
+      "bytes": 2922659,
+      "pages": null,
+      "retrieved_at": "2026-07-27T16:52:51+08:00",
+      "used_by": [
+        "中电鑫龙_002298_基本面分析_20260727"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260422-1f4b4f81",
+      "title": "2025年度内控审计报告",
+      "document_type": "审计报告",
+      "period": "2025",
+      "published_date": "20260422",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-22/1225142863.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260422_2025_审计报告_1225142863.pdf",
+      "sha256": "1f4b4f8128f7b539d897ef16f2e99f95639e47c35a3ec4b3fe09ea88c1622bdb",
+      "bytes": 231507,
+      "pages": null,
+      "retrieved_at": "2026-07-27T16:52:52+08:00",
+      "used_by": [
+        "中电鑫龙_002298_基本面分析_20260727"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260422-9a2502f7",
+      "title": "2025年度计提资产减值准备",
+      "document_type": "正式披露",
+      "period": "2025",
+      "published_date": "20260422",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-22/1225142859.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260422_2025_正式披露_1225142859.pdf",
+      "sha256": "9a2502f7ba95a641dbb8001a2fbdd99fde727e482727fea06b4a91cff99c480a",
+      "bytes": 89291,
+      "pages": null,
+      "retrieved_at": "2026-07-27T16:52:52+08:00",
+      "used_by": [
+        "中电鑫龙_002298_基本面分析_20260727"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260727-e8df8285",
+      "title": "2026年7月股价异常波动",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260727",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-07-27/1225440641.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260727_2026_正式披露_1225440641.pdf",
+      "sha256": "e8df828587913ad99204e4ff24370b6b519e51b566cec711dc207f2b6e7a44fe",
+      "bytes": 91988,
+      "pages": null,
+      "retrieved_at": "2026-07-27T16:52:52+08:00",
+      "used_by": [
+        "中电鑫龙_002298_基本面分析_20260727"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250411-8c1c6a3e",
+      "title": "2025年4月子公司签订合同",
+      "document_type": "合同订单",
+      "period": "2025",
+      "published_date": "20250411",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-04-11/1223056041.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250411_2025_合同订单_1223056041.pdf",
+      "sha256": "8c1c6a3e9bf0da5a67ccb1355d5601434cce446ad666787ad9b5b58ac3c84318",
+      "bytes": 217280,
+      "pages": null,
+      "retrieved_at": "2026-07-27T16:52:52+08:00",
+      "used_by": [
+        "中电鑫龙_002298_基本面分析_20260727"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250222-64905e2f",
+      "title": "2025年2月子公司合同取消",
+      "document_type": "合同订单",
+      "period": "2025",
+      "published_date": "20250222",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-02-22/1222606192.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250222_2025_合同订单_1222606192.pdf",
+      "sha256": "64905e2f02ed5d44f4170b4e9b5d185ac591b1f6241aa0d5df856cda79519593",
+      "bytes": 187287,
+      "pages": null,
+      "retrieved_at": "2026-07-27T16:52:52+08:00",
+      "used_by": [
+        "中电鑫龙_002298_基本面分析_20260727"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250123-4969accc",
+      "title": "2025年1月子公司中标并签约",
+      "document_type": "合同订单",
+      "period": "2025",
+      "published_date": "20250123",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-01-23/1222406354.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250123_2025_合同订单_1222406354.pdf",
+      "sha256": "4969accc9890196c3be0b933c9f8caa2dedcf6fe643e80a8b656253e0c8031f8",
+      "bytes": 230676,
+      "pages": null,
+      "retrieved_at": "2026-07-27T16:52:52+08:00",
+      "used_by": [
+        "中电鑫龙_002298_基本面分析_20260727"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20230518-667b0999",
+      "title": "2022年年报问询函回复",
+      "document_type": "年度报告",
+      "period": "2022A",
+      "published_date": "20230518",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2023-05-18/1216840963.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2023/20230518_2022A_年度报告_1216840963.pdf",
+      "sha256": "667b0999b52df5c0a70a836ce9ead081ce4761250297de25db04512011aa7577",
+      "bytes": 1275955,
+      "pages": null,
+      "retrieved_at": "2026-07-27T16:52:53+08:00",
+      "used_by": [
+        "中电鑫龙_002298_基本面分析_20260727"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20241010-2083dbd1",
+      "title": "2024年10月光伏EPC合同",
+      "document_type": "合同订单",
+      "period": "2024",
+      "published_date": "20241010",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2024-10-10/1221354760.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2024/20241010_2024_合同订单_1221354760.pdf",
+      "sha256": "2083dbd1e382d182c39f9de6dfdb0224aeb74ba8d05fe95d8fd1ad0683283489",
+      "bytes": 233291,
+      "pages": null,
+      "retrieved_at": "2026-07-27T16:57:28+08:00",
+      "used_by": [
+        "中电鑫龙_002298_基本面分析_20260727"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250814-a13ed62f",
+      "title": "2025年董事减持实施完毕",
+      "document_type": "正式披露",
+      "period": "2025",
+      "published_date": "20250814",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-08-14/1224474471.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250814_2025_正式披露_1224474471.pdf",
+      "sha256": "a13ed62f4e9b7f1d8d222baa2a5342de3d4886c3ca8d28404c4c08203d15b2ae",
+      "bytes": 166656,
+      "pages": null,
+      "retrieved_at": "2026-07-27T16:57:29+08:00",
+      "used_by": [
+        "中电鑫龙_002298_基本面分析_20260727"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250930-55450943",
+      "title": "2025年员工持股计划减持完毕",
+      "document_type": "正式披露",
+      "period": "2025",
+      "published_date": "20250930",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-09-30/1224689997.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250930_2025_正式披露_1224689997.pdf",
+      "sha256": "55450943bc19884a5c7ca1580c23f79ebf8f736cf1ee699db8a2336558183a88",
+      "bytes": 94177,
+      "pages": null,
+      "retrieved_at": "2026-07-27T16:57:29+08:00",
+      "used_by": [
+        "中电鑫龙_002298_基本面分析_20260727"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260226-6532ed31",
+      "title": "业绩快报",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260226",
+      "official_url": "https://epaper.stcn.com/pic/202602/26/0e53c03429f4c97c02373f6d2e0b4062.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260226_期间待核验_正式披露_0e53c03429f4c97c02373f6d2e0b4062.pdf",
+      "sha256": "6532ed31c027143c9b3bed4bb0cd582dd85ec60e847d33e56350f905d51ca7bd",
+      "bytes": 113121,
+      "pages": null,
+      "retrieved_at": "2026-07-27T17:04:20+08:00",
+      "used_by": [
+        "中电鑫龙_002298_基本面分析_20260727_170249.md"
+      ],
+      "status": "已归档",
+      "date_override": "20260226"
+    }
+  ]
+}
