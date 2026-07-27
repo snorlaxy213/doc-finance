@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-27T17:42:32+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260429-b56608f9",
+      "title": "2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260429",
+      "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0429/2026042903341.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260429_2025A_年度报告_2026042903341.pdf",
+      "sha256": "b56608f91c63543ba9fb641ae2ff89e68d339350418a31bda88d28e583369f3c",
+      "bytes": 2139378,
+      "pages": null,
+      "retrieved_at": "2026-07-27T17:40:55+08:00",
+      "used_by": [
+        "昭衍新药_603127_基本面分析_20260727_174036.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250429-9ebee3d3",
+      "title": "2024年年度报告",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250429",
+      "official_url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0429/2025042903523.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250429_2024A_年度报告_2025042903523.pdf",
+      "sha256": "9ebee3d3646a65bd866245eba6fb25eab97ae8022257d6467d8aa58d78223b71",
+      "bytes": 2071520,
+      "pages": null,
+      "retrieved_at": "2026-07-27T17:40:58+08:00",
+      "used_by": [
+        "昭衍新药_603127_基本面分析_20260727_174036.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260429-16f47af3",
+      "title": "2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260429",
+      "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0429/2026042902973.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260429_2026Q1_第一季度报告_2026042902973.pdf",
+      "sha256": "16f47af31fa99c3a46f2092978294e5c2ded4dff89cbae6e0e1fe2760b559d18",
+      "bytes": 151067,
+      "pages": null,
+      "retrieved_at": "2026-07-27T17:41:00+08:00",
+      "used_by": [
+        "昭衍新药_603127_基本面分析_20260727_174036.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260714-1687d7d0",
+      "title": "2026年半年度业绩预告",
+      "document_type": "业绩预告",
+      "period": "2026H1",
+      "published_date": "20260714",
+      "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0714/2026071401040.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260714_2026H1_业绩预告_2026071401040.pdf",
+      "sha256": "1687d7d0fa1e28c41ba2decdfc86ff06fc773f95566cf8e9cfe739dd206c6bde",
+      "bytes": 116091,
+      "pages": null,
+      "retrieved_at": "2026-07-27T17:41:01+08:00",
+      "used_by": [
+        "昭衍新药_603127_基本面分析_20260727_174036.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260123-17db5626",
+      "title": "2026年实际控制人减持公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260123",
+      "official_url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0123/2026012300699_c.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260123_2026_正式披露_2026012300699_c.pdf",
+      "sha256": "17db56263d6e2337524aea7a48981b4efd63e59fcf4e0db179c3260ccf55b3e0",
+      "bytes": 427022,
+      "pages": null,
+      "retrieved_at": "2026-07-27T17:41:04+08:00",
+      "used_by": [
+        "昭衍新药_603127_基本面分析_20260727_174036.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260622-fc31cde3",
+      "title": "2026年股东减持结果公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260622",
+      "official_url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0622/2026062200758_c.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260622_2026_正式披露_2026062200758_c.pdf",
+      "sha256": "fc31cde3340e885bed0eb96fb84a4672027547917186fc6ec41190894ee8dd29",
+      "bytes": 454661,
+      "pages": null,
+      "retrieved_at": "2026-07-27T17:41:06+08:00",
+      "used_by": [
+        "昭衍新药_603127_基本面分析_20260727_174036.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250428-ba40f07c",
+      "title": "2025年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2025Q1",
+      "published_date": "20250428",
+      "official_url": "https://www.hkexnews.hk/listedco/listconews/sehk/2025/0428/2025042803563_c.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250428_2025Q1_第一季度报告_2025042803563_c.pdf",
+      "sha256": "ba40f07cdcb80ea209807859c72ad7c84b6b1b14122f39e886fb749942bf3ca9",
+      "bytes": 980197,
+      "pages": null,
+      "retrieved_at": "2026-07-27T17:42:32+08:00",
+      "used_by": [
+        "昭衍新药_603127_基本面分析_20260727_174036.md"
+      ],
+      "status": "已归档"
+    }
+  ]
+}
