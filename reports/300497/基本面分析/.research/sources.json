@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-27T23:29:55+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260427-a0d8fce2",
+      "title": "2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260427",
+      "official_url": "https://pdf.dfcfw.com/pdf/H2_AN202604271821613363_1.pdf?1777309721000.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260427_2025A_年度报告_H2_AN202604271821613363_1.pdf",
+      "sha256": "a0d8fce2aa639551b1aa4185d56a64d0e1c576c9c20607af7dafb8353455e879",
+      "bytes": 5812679,
+      "pages": 206,
+      "retrieved_at": "2026-07-27T23:18:28+08:00",
+      "used_by": [
+        "富祥股份_300497_基本面分析_20260727"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250426-180a7ca8",
+      "title": "2024年年度报告",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250426",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-04-26/1223309125.PDF",
+      "alternate_urls": [
+        "https://pdf.dfcfw.com/pdf/H2_AN202504251662316249_1.pdf?1745612060000.pdf"
+      ],
+      "local_path": "原始资料/2025/20250426_2024A_年度报告_1223309125.pdf",
+      "sha256": "180a7ca81ebb56b6d9946c6b4ee7d408604b67e9e1ad1644d674d65a2151a5b5",
+      "bytes": 4904155,
+      "pages": 206,
+      "retrieved_at": "2026-07-27T23:19:15+08:00",
+      "used_by": [
+        "富祥股份_300497_基本面分析_20260727"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260427-c28eff3d",
+      "title": "2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260427",
+      "official_url": "https://pdf.dfcfw.com/pdf/H2_AN202604271821613345_1.pdf?1779657625000.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260427_2026Q1_第一季度报告_H2_AN202604271821613345_1.pdf",
+      "sha256": "c28eff3d98a7175cb8a4d7df9f3d8045d8850df02f34cbd6d379c19a0c339c86",
+      "bytes": 607917,
+      "pages": 15,
+      "retrieved_at": "2026-07-27T23:19:16+08:00",
+      "used_by": [
+        "富祥股份_300497_基本面分析_20260727"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260618-e44fd031",
+      "title": "2026年半年度业绩预告",
+      "document_type": "业绩预告",
+      "period": "2026H1",
+      "published_date": "20260618",
+      "official_url": "https://pdf.dfcfw.com/pdf/H2_AN202606181823665476_1.pdf?1781797724000.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260618_2026H1_业绩预告_H2_AN202606181823665476_1.pdf",
+      "sha256": "e44fd0315156f3f8a45106b112a7744a75371731a3cb683f161e804c121f295b",
+      "bytes": 134861,
+      "pages": 2,
+      "retrieved_at": "2026-07-27T23:19:16+08:00",
+      "used_by": [
+        "富祥股份_300497_基本面分析_20260727"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260702-1e48c071",
+      "title": "化学原料药上市申请批准公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260702",
+      "official_url": "https://pdf.dfcfw.com/pdf/H2_AN202607021826661358_1.pdf?1783011175000.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260702_期间待核验_正式披露_H2_AN202607021826661358_1.pdf",
+      "sha256": "1e48c071527910087f243854ebcecb55f8a940f23ab9c354c073cebb0116f413",
+      "bytes": 192706,
+      "pages": 2,
+      "retrieved_at": "2026-07-27T23:19:16+08:00",
+      "used_by": [
+        "富祥股份_300497_基本面分析_20260727"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260630-532a9884",
+      "title": "控股股东部分股份解除质押公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260630",
+      "official_url": "https://pdf.dfcfw.com/pdf/H2_AN202606301826586716_1.pdf?1782836906000.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260630_期间待核验_正式披露_H2_AN202606301826586716_1.pdf",
+      "sha256": "532a988480f1e172e190bf971b1c57a4c6d8bbb2d6e51563157f3b9ccb151a0c",
+      "bytes": 156493,
+      "pages": 2,
+      "retrieved_at": "2026-07-27T23:19:17+08:00",
+      "used_by": [
+        "富祥股份_300497_基本面分析_20260727"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260723-15332bfb",
+      "title": "2026年度中期分红提议公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260723",
+      "official_url": "https://pdf.dfcfw.com/pdf/H2_AN202607231827286699_1.pdf?1784821531000.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260723_2026_正式披露_H2_AN202607231827286699_1.pdf",
+      "sha256": "15332bfbcc6467821dbc7d8826fbd0d106f91410ae971c289f95318a6ac04a32",
+      "bytes": 116922,
+      "pages": 2,
+      "retrieved_at": "2026-07-27T23:19:17+08:00",
+      "used_by": [
+        "富祥股份_300497_基本面分析_20260727"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260623-16b86f2d",
+      "title": "2026年6月23日投资者关系活动记录",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260623",
+      "official_url": "https://pdf.dfcfw.com/pdf/H2_AN202606231823777224_1.pdf?1782241356000.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260623_2026_正式披露_H2_AN202606231823777224_1.pdf",
+      "sha256": "16b86f2d7808f5ffafa49cd77f680553a84c4ae6ce86f771ef7c8f519ad54c3c",
+      "bytes": 155478,
+      "pages": 4,
+      "retrieved_at": "2026-07-27T23:26:11+08:00",
+      "used_by": [
+        "富祥股份_300497_基本面分析_20260727"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20231204-23f9aec7",
+      "title": "最近五年监管措施及整改情况公告",
+      "document_type": "监管公告",
+      "period": "期间待核验",
+      "published_date": "20231204",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESZ_STOCK/2023/2023-12/2023-12-04/9680792.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2023/20231204_期间待核验_监管公告_9680792.pdf",
+      "sha256": "23f9aec7139f14e46c83dc0d752332086c3f4ba39ae8e3453a4a16dd4b04eca4",
+      "bytes": 198198,
+      "pages": 4,
+      "retrieved_at": "2026-07-27T23:26:53+08:00",
+      "used_by": [
+        "富祥股份_300497_基本面分析_20260727"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260604-53c2efbc",
+      "title": "特定股东减持计划实施完毕公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260604",
+      "official_url": "https://pdf.dfcfw.com/pdf/H2_AN202606041823257548_1.pdf?1780603836000.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260604_期间待核验_正式披露_H2_AN202606041823257548_1.pdf",
+      "sha256": "53c2efbcac29558c25249f1d992a28e061559dc104fc318cbec394d8f4802cf7",
+      "bytes": 119020,
+      "pages": 3,
+      "retrieved_at": "2026-07-27T23:29:55+08:00",
+      "used_by": [
+        "富祥股份_300497_基本面分析_20260727"
+      ],
+      "status": "已归档"
+    }
+  ]
+}
