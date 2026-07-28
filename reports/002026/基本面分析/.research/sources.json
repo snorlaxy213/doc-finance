@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-28T17:32:30+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20240423-70252ca8",
+      "title": "2023年年度报告",
+      "document_type": "年度报告",
+      "period": "2023A",
+      "published_date": "20240423",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2024-04-23/1219736888.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2024/20240423_2023A_年度报告_1219736888.pdf",
+      "sha256": "70252ca8e2d8ff84bb027647d3cd52390129e759ca055ec55da5f8c21da98662",
+      "bytes": 4901014,
+      "pages": null,
+      "retrieved_at": "2026-07-28T17:32:28+08:00",
+      "used_by": [
+        "山东威达_002026_基本面分析_20260728"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250422-b6223fe7",
+      "title": "2024年年度报告",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250422",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-04-22/1223185561.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250422_2024A_年度报告_1223185561.pdf",
+      "sha256": "b6223fe7655bf6e1d8095b221ee783408e816bab096eb56f31b375f7d5aea7d1",
+      "bytes": 4886547,
+      "pages": null,
+      "retrieved_at": "2026-07-28T17:32:29+08:00",
+      "used_by": [
+        "山东威达_002026_基本面分析_20260728"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260421-e5bdfe46",
+      "title": "2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260421",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-21/1225125599.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260421_2025A_年度报告_1225125599.pdf",
+      "sha256": "e5bdfe46203e11e476c2267a2fb71e37aa8191f521696e9041467f9c45d7dcc8",
+      "bytes": 1151493,
+      "pages": null,
+      "retrieved_at": "2026-07-28T17:32:29+08:00",
+      "used_by": [
+        "山东威达_002026_基本面分析_20260728"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260421-5f659cba",
+      "title": "2026年一季度报告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260421",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-21/1225125607.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260421_2026_正式披露_1225125607.pdf",
+      "sha256": "5f659cba17fad3cc9a23115101b0a251f0af1e939d11d5dd8407977968da2c79",
+      "bytes": 260448,
+      "pages": null,
+      "retrieved_at": "2026-07-28T17:32:29+08:00",
+      "used_by": [
+        "山东威达_002026_基本面分析_20260728"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260611-c311224d",
+      "title": "回购完成公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260611",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-06-11/1225362143.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260611_期间待核验_正式披露_1225362143.pdf",
+      "sha256": "c311224d4787a42024ae67f6e8c83c616bd647c363cf117d65963bff4dfab69d",
+      "bytes": 120273,
+      "pages": null,
+      "retrieved_at": "2026-07-28T17:32:30+08:00",
+      "used_by": [
+        "山东威达_002026_基本面分析_20260728"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260709-1370648b",
+      "title": "2025年度权益分派实施公告",
+      "document_type": "正式披露",
+      "period": "2025",
+      "published_date": "20260709",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-07-09/1225415623.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260709_2025_正式披露_1225415623.pdf",
+      "sha256": "1370648b1a4bdd05268ae4e38009a4b9d0894c739ec9b38b69111e5feebba6e5",
+      "bytes": 78992,
+      "pages": null,
+      "retrieved_at": "2026-07-28T17:32:30+08:00",
+      "used_by": [
+        "山东威达_002026_基本面分析_20260728"
+      ],
+      "status": "已归档"
+    }
+  ]
+}
