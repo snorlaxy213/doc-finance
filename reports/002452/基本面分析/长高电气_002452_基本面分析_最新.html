@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>长高电气(002452)基本面分析</title>
+<style>
+:root{
+  --ink:#1a2433;
+  --ink-soft:#46546a;
+  --line:#d8dee7;
+  --line-soft:#eef1f5;
+  --bg:#ffffff;
+  --brand:#1f3a5f;
+  --brand-2:#3b5b85;
+  --brand-light:#eaf0f8;
+  --accent:#8a6d3b;
+  --up:#b73333;
+  --down:#2f7a52;
+  --warn:#a06a1f;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Microsoft YaHei","Source Han Sans SC",system-ui,-apple-system,sans-serif;
+  color:var(--ink);
+  background:#fff;
+  line-height:1.7;
+  font-size:14.5px;
+  font-variant-numeric:tabular-nums;
+  -webkit-font-smoothing:antialiased;
+}
+.page{max-width:1600px;margin:0 auto;padding:0 32px;}
+.masthead{
+  display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px;
+  border-bottom:2px solid var(--brand);padding:24px 0 18px;
+}
+.masthead .m-left{min-width:280px;}
+.masthead .kode{font-size:12px;letter-spacing:.12em;color:var(--ink-soft);}
+.masthead h1{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC","Times New Roman",serif;
+  font-size:30px;font-weight:700;margin:6px 0 4px;color:var(--brand);letter-spacing:.5px;
+}
+.masthead .sub{font-size:13px;color:var(--ink-soft);}
+.masthead .meta{font-size:12.5px;color:var(--ink-soft);margin-top:12px;}
+.masthead .meta b{color:var(--ink);font-weight:600;}
+.masthead .m-stats{display:flex;gap:34px;flex-wrap:wrap;}
+.masthead .m-stats .ms-v{font-size:25px;font-weight:700;color:var(--brand);line-height:1;font-variant-numeric:tabular-nums;}
+.masthead .m-stats .ms-v span{font-size:13px;font-weight:500;color:var(--ink-soft);margin-left:2px;}
+.masthead .m-stats .ms-l{font-size:11.5px;color:var(--ink-soft);margin-top:5px;letter-spacing:.02em;}
+.verdict{
+  margin:16px 0 4px;border:1px solid var(--line);border-left:4px solid var(--brand);
+  background:#fbfcfe;border-radius:4px;padding:16px 20px;
+}
+.verdict-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-bottom:14px;}
+.verdict-head h2{margin:0;font-size:14px;letter-spacing:.1em;color:var(--brand);font-weight:700;}
+.verdict-headline{
+  margin:-2px 0 14px;padding:10px 12px;border:1px solid #dfe7f1;border-radius:4px;
+  background:#fff;color:var(--ink);font-size:15px;font-weight:600;line-height:1.7;
+}
+.verdict-headline .label{display:block;margin-bottom:2px;color:var(--brand);font-size:11px;font-weight:700;letter-spacing:.1em;}
+.badges{display:flex;flex-direction:row;flex-wrap:wrap;gap:8px;margin:0;}
+.badge{
+  display:inline-flex;align-items:center;gap:6px;font-size:12.5px;
+  padding:5px 11px;border-radius:999px;font-weight:600;line-height:1.4;
+}
+.badge .k{font-weight:500;opacity:.85;}
+.badge.fund{background:#fdecec;color:#9a2c2c;}
+.badge.qual{background:#eef3f8;color:#1f3a5f;}
+.badge.valu{background:#fdf3e3;color:#8a5a16;}
+.badge.fraud{background:#eef7f1;color:#2f6a48;}
+.verdict-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 40px;}
+.verdict-grid .v-title{font-size:12.5px;font-weight:700;letter-spacing:.04em;margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid var(--line);}
+.verdict-grid .v-title::before{content:"";display:inline-block;width:3px;height:12px;margin-right:7px;vertical-align:-1px;border-radius:2px;}
+.verdict-grid .v-up .v-title{color:var(--brand);}
+.verdict-grid .v-up .v-title::before{background:var(--brand);}
+.verdict-grid .v-risk .v-title{color:var(--warn);}
+.verdict-grid .v-risk .v-title::before{background:var(--warn);}
+.verdict-grid ul{margin:0;padding-left:18px;}
+.verdict-grid li{font-size:13.5px;margin:6px 0;line-height:1.65;}
+.note{
+  font-size:12px;color:var(--ink-soft);background:var(--line-soft);
+  padding:3px 8px;border-radius:3px;display:inline-block;
+}
+.verdict .note{display:block;margin-top:14px;}
+.kpis{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:1px;margin:16px 0 4px;
+  background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden;
+}
+.kpi{background:#fff;padding:13px 15px;min-width:0;}
+.kpi .kl{font-size:11.5px;color:var(--ink-soft);line-height:1.3;min-height:30px;}
+.kpi .kv{font-size:20px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;margin-top:5px;word-break:break-word;}
+.kpi .kv.up{color:var(--up);}
+.kpi .kv.down{color:var(--down);}
+.kpi .ks{font-size:11px;color:var(--ink-soft);margin-top:3px;font-variant-numeric:tabular-nums;}
+.forecast-panel{
+  margin:16px 0 6px;padding:18px 20px;border:1px solid #d8e2ef;border-left:4px solid var(--brand);
+  border-radius:4px;background:linear-gradient(135deg,#f7faff 0%,#fff 68%);
+}
+.forecast-panel.forecast-empty{padding:14px 18px;background:#fbfcfe;border-left-color:#a8b5c4;}
+.forecast-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;flex-wrap:wrap;}
+.forecast-kicker{display:block;font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--brand);margin-bottom:5px;}
+.forecast-head h2{margin:0;font-size:18px;line-height:1.35;color:var(--ink);}
+.forecast-tags{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end;}
+.forecast-tag{display:inline-flex;padding:4px 9px;border-radius:999px;background:#eaf1f8;color:#294d73;font-size:11px;font-weight:600;}
+.forecast-tag.warn{background:#fff0dc;color:#8a5615;}
+.forecast-tag.neutral{background:#edf0f3;color:#5e6873;}
+.forecast-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px;}
+.forecast-card{background:#fff;border:1px solid #e0e7ef;border-radius:4px;padding:12px 14px;min-width:0;}
+.forecast-label{font-size:11px;color:var(--ink-soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.forecast-value{font-size:20px;font-weight:700;color:var(--brand);line-height:1.3;margin-top:4px;font-variant-numeric:tabular-nums;}
+.forecast-change{font-size:11.5px;color:var(--ink-soft);margin-top:4px;}
+.forecast-note{margin:11px 0 0!important;font-size:11px!important;color:var(--ink-soft)!important;}
+.update-panel{
+  margin:16px 0 6px;padding:18px 20px;border:1px solid #ded7c9;border-left:4px solid var(--accent);
+  border-radius:4px;background:linear-gradient(135deg,#fffcf6 0%,#fff 72%);
+}
+.update-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:10px;}
+.update-head span{font-size:10.5px;font-weight:700;letter-spacing:.12em;color:var(--accent);}
+.update-head h2{font-size:18px;margin:0;color:var(--ink);}
+.update-body section{border:0;padding:0;}.update-body h3.sub{margin-top:8px;}
+.update-body .tbl-scroll{background:#fff;}
+.layout{
+  display:grid;grid-template-columns:208px minmax(0,1fr);gap:36px;align-items:start;
+  padding:14px 0 0;
+}
+.sidebar{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow-y:auto;padding:0 8px 0 0;}
+.sidebar::-webkit-scrollbar{width:6px;}
+.sidebar::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px;}
+.toc{position:static;background:transparent;border:none;margin:12px 0 16px;padding:0;}
+.toc .scroll{overflow:visible;white-space:normal;display:flex;flex-direction:column;gap:2px;}
+.toc a{
+  display:flex;align-items:center;gap:9px;
+  font-size:14px;line-height:1.25;color:var(--ink-soft);text-decoration:none;
+  padding:6px 8px;border-radius:5px;margin:0;border:1px solid transparent;
+}
+.toc a .toc-num{
+  flex:0 0 auto;font-family:"Times New Roman",serif;font-size:12px;font-weight:600;
+  color:var(--ink-soft);background:var(--line-soft);
+  width:22px;height:22px;border-radius:4px;font-variant-numeric:tabular-nums;
+  display:inline-flex;align-items:center;justify-content:center;
+}
+.toc a:hover{background:var(--brand-light);color:var(--brand);}
+.toc a:hover .toc-num{background:#fff;color:var(--brand);}
+.toc a.active{background:var(--brand);color:#fff;font-weight:600;}
+.toc a.active .toc-num{background:rgba(255,255,255,.22);color:#fff;}
+.main{min-width:0;}
+section{padding:16px 0 8px;border-top:1px solid var(--line-soft);scroll-margin-top:64px;}
+section:first-of-type{border-top:none;padding-top:6px;}
+h2.sec{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",serif;
+  font-size:19px;color:var(--brand);margin:6px 0 12px;font-weight:700;
+  display:flex;align-items:baseline;gap:10px;
+}
+h2.sec .num{
+  font-family:"Times New Roman",serif;font-size:14px;color:#fff;background:var(--brand);
+  padding:2px 9px;border-radius:3px;letter-spacing:.05em;font-weight:600;flex:0 0 auto;
+}
+h3.sub{font-size:14.5px;color:var(--ink);margin:16px 0 6px;font-weight:700;}
+p{margin:8px 0;}
+ul,ol{margin:8px 0;padding-left:22px;}
+li{margin:4px 0;}
+strong{color:var(--ink);}
+.tbl-scroll{overflow-x:auto;margin:10px 0;border:1px solid var(--line);border-radius:4px;}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums;}
+thead th{
+  background:#f3f6fa;color:var(--brand);font-weight:700;text-align:right;
+  padding:10px 12px;border-bottom:1.5px solid var(--brand);white-space:nowrap;
+  font-size:12.5px;letter-spacing:.02em;
+}
+thead th[scope=col]:first-child{text-align:left;}
+tbody td{padding:9px 12px;border-bottom:1px solid var(--line-soft);text-align:right;white-space:normal;word-break:break-word;}
+tbody th[scope=row]{
+  text-align:left;color:var(--ink);font-weight:600;
+  padding:9px 12px;border-bottom:1px solid var(--line-soft);white-space:nowrap;font-size:13px;background:#fafbfd;
+}
+tbody tr:nth-child(even) td{background:#fafbfd;}
+tbody tr:hover td{background:var(--brand-light);}
+.up{color:var(--up);}
+.down{color:var(--down);}
+.muted{color:var(--ink-soft);}
+a{color:var(--brand-2);text-decoration:underline;text-underline-offset:2px;word-break:break-all;}
+a:hover{color:var(--brand);}
+.note-copy{
+  margin:20px 0;border:1px solid var(--line);border-left:4px solid var(--accent);
+  background:#fbfcfe;border-radius:4px;padding:14px 16px;
+}
+.note-copy h2{margin:0 0 10px;font-size:13px;letter-spacing:.1em;color:var(--brand);font-weight:700;}
+pre{
+  margin:10px 0;padding:12px 14px;background:#f7f9fc;border:1px solid var(--line-soft);
+  border-radius:4px;overflow:auto;color:var(--ink);font-size:12.5px;line-height:1.6;
+}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;}
+footer{
+  margin-top:22px;border-top:2px solid var(--brand);padding:14px 0 30px;
+  font-size:11.5px;color:var(--ink-soft);line-height:1.7;font-variant-numeric:tabular-nums;
+}
+footer .disclaimer{background:var(--line-soft);padding:8px 12px;border-radius:3px;margin-bottom:8px;}
+@media (max-width:1100px){
+  .layout{grid-template-columns:1fr;gap:0;}
+  .sidebar{position:static;max-height:none;overflow:visible;padding:0;}
+  .toc{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);
+    border-bottom:1px solid var(--line);margin:0 -32px 16px;padding:10px 32px;}
+  .toc .scroll{overflow-x:auto;white-space:nowrap;flex-direction:row;}
+  .toc a{display:inline-flex;white-space:nowrap;border-left:none;border:1px solid transparent;padding:3px 9px;margin:2px;}
+  .toc a.active{border-left:none;background:var(--brand);color:#fff;}
+}
+@media (max-width:760px){
+  .verdict-grid{grid-template-columns:1fr;}
+  .kpis{grid-template-columns:repeat(3,1fr);}
+  .forecast-grid{grid-template-columns:1fr;}
+  .page{padding:0 18px;}
+  .masthead .m-stats{gap:22px;}
+}
+@media (max-width:460px){.kpis{grid-template-columns:repeat(2,1fr);}}
+@media print{
+  body{background:#fff;font-size:10.5px;}
+  .page{max-width:none;padding:0;}
+  .layout{grid-template-columns:1fr;}
+  .sidebar{position:static;max-height:none;overflow:visible;}
+  .toc{position:static;border:none;padding:0;margin:0 0 8px;}
+  .toc .scroll{overflow:visible;display:block;}
+  .toc a{font-size:10px;padding:1px 5px;display:inline-flex;}
+  .toc a.active{background:transparent;color:var(--ink);}
+  section{break-inside:avoid;padding-top:10px;}
+  table{font-size:9.5px;}
+  thead{display:table-header-group;}
+  tbody tr{break-inside:avoid;}
+  .badge{border:1px solid #ccc;}
+  .note-copy,.tbl-scroll,.kpis,.verdict,.forecast-panel{break-inside:avoid;}
+  .update-panel{break-inside:avoid;}
+  footer{break-inside:avoid;}
+  a{color:var(--ink);text-decoration:none;}
+  .kpi{border:1px solid #ccc;}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="masthead">
+    <div class="m-left">
+      <div class="kode">002452 · 交易所未识别 · 基本面分析</div>
+      <h1>长高电气 · 基本面分析</h1>
+      <div class="sub">基本面、财务质量、估值与风险初筛</div>
+      <div class="meta">数据口径 <b>公司公告核验至 2026-07-31；近 30 日业绩预告窗口为 2026-07-02 至 2026-07-31，已纳入 2026-07-09 半年度业绩预告。</b> · 生成时间 <b>2026-07-31 18:27</b></div>
+    </div>
+    <div class="m-stats">
+      <div><div class="ms-v">10.82 元</div><div class="ms-l">收盘价 · 2026-07-31，前复权日线</div></div>
+<div><div class="ms-v">67.12 亿元</div><div class="ms-l">总市值 · 总股本 6.2033 亿股</div></div>
+<div><div class="ms-v">未披露</div><div class="ms-l">PE</div></div>
+<div><div class="ms-v">2.47 倍</div><div class="ms-l">PB · 行情终端最新口径</div></div>
+    </div>
+  </header>
+
+  <section class="verdict" aria-label="结论速览">
+    <div class="verdict-head">
+      <h2>结论速览</h2>
+      <div class="badges">
+        <span class="badge fund"><span class="k">基本面</span> 中性</span>
+<span class="badge qual"><span class="k">财务质量</span> 良好</span>
+<span class="badge valu"><span class="k">估值</span> 合理</span>
+<span class="badge fraud"><span class="k">造假风险初筛</span> 低</span>
+      </div>
+    </div>
+    <div class="verdict-headline"><span class="label">核心判断</span>电网投资景气与国网订单支撑主业温和改善，现金流和资产负债表总体稳健，但 2025–2026H1 归母利润被富特科技一次性收益显著放大，当前估值合理而非显著低估。</div>
+    <div class="verdict-grid">
+      <div class="v-col v-up">
+        <div class="v-title">核心理由</div>
+        <ul>
+<li>2025 年新增订单 22.37 亿元、2026 年 5 月和 7 月披露国网中标合计 7.63 亿元，需求可见度较好。</li>
+<li>2023–2025 年经营现金流均覆盖净利润，自由现金流连续为正，2025 年应收及合同资产下降。</li>
+<li>2025 年扣非利润仅增长 0.44%，2026H1 归母预增约 4 倍主要来自约 4.20 亿元非经常损益，盈利外推必须采用扣非口径。</li>
+<li>2026Q1 存货较年初增 17.06%、研发费用同比少 0.261 亿元，交付质量和费用时点仍需 H1 正式财报验证。</li>
+</ul>
+      </div>
+      <div class="v-col v-risk">
+        <div class="v-title">主要风险 / 关注</div>
+        <ul>
+<li>富特科技公允价值及处置收益不可持续，归母利润波动大。</li>
+<li>存货增长、交付节奏和募投产能消化存在不确定性。</li>
+</ul>
+      </div>
+    </div>
+    <p class="note">口径:市场估值为时点数据,财务指标需区分年度、半年度、季度和单季口径;所有结论以公司正式披露和已核验来源为准。</p>
+  </section>
+
+  <div class="kpis" aria-label="关键指标速览">
+    <div class="kpi"><div class="kl">2026Q1归母净利</div><div class="kv">0.566 亿元</div><div class="ks">归母净利润</div></div>
+<div class="kpi"><div class="kl">2026Q1扣非净利</div><div class="kv">0.546 亿元</div><div class="ks">扣非归母净利润</div></div>
+<div class="kpi"><div class="kl">2026Q1毛利率</div><div class="kv">38.29%</div><div class="ks">毛利率</div></div>
+<div class="kpi"><div class="kl">2026Q1经营现金流</div><div class="kv">0.708 亿元</div><div class="ks">经营现金流净额</div></div>
+<div class="kpi"><div class="kl">2026Q1应收/合同资产</div><div class="kv">8.24 亿元</div><div class="ks">应收账款/合同资产</div></div>
+<div class="kpi"><div class="kl">2026Q1存货</div><div class="kv">5.32 亿元</div><div class="ks">存货</div></div>
+  </div>
+
+  <section class="forecast-panel" aria-label="最新财务预报"><div class="forecast-head"><div><span class="forecast-kicker">最新财务预报</span><h2>2026H1（未经审计，公告日 2026-07-09）</h2></div><div class="forecast-tags"><span class="forecast-tag warn">未经审计</span><span class="forecast-tag">信息可信度 中</span><span class="forecast-tag">盈利质量 中性</span></div></div><div class="forecast-grid"><div class="forecast-card"><div class="forecast-label">累计归母净利润</div><div class="forecast-value">5.50–5.80 亿元</div><div class="forecast-change">累计同比 +421.27%–449.70%</div></div>
+<div class="forecast-card"><div class="forecast-label">累计扣非净利润</div><div class="forecast-value">1.35–1.50 亿元</div><div class="forecast-change">累计同比 +35.43%–50.48%</div></div></div><p class="forecast-note">隐含单季数据根据累计预报和已披露财报推算，并非公司直接披露；正式结果以定期报告为准。</p></section>
+
+  <section class="update-panel" aria-label="本次更新"><div class="update-head"><span>RESEARCH CONTINUITY</span><h2>本次更新 · 与上次报告相比</h2></div><div class="update-body"><p>首次建立研究基线，无上次报告可比；基线日期为 2026-07-31。</p>
+<ul>
+<li>本次触发事件：2026H1 业绩预告、2026 年 7 月国网中标公告及最新行情。</li>
+<li>新增确认事实：上半年扣非利润预计增长 35.43%–50.48%；约 4.20 亿元非经常损益显著放大归母利润；7 月中标 4.16 亿元。</li>
+<li>被证伪或弱化的旧假设：不适用（首次基线）。</li>
+<li>仍然有效的旧观点：不适用（首次基线）。</li>
+<li>仍待验证事项：H1 收入/毛利率/现金流、两批中标合同签署及履约、存货转化、亏损工程业务退出、募投产能回报。</li>
+</ul></div></section>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="toc" aria-label="目录">
+        <div class="scroll" id="toc-scroll">
+          <a href="#s1"><span class="toc-num">01</span>核心财务指标</a>
+<a href="#s2"><span class="toc-num">02</span>近两年财报趋势与业务结构</a>
+<a href="#s3"><span class="toc-num">03</span>结论摘要</a>
+<a href="#s4"><span class="toc-num">04</span>公司与行业</a>
+<a href="#s5"><span class="toc-num">05</span>订单与需求验证</a>
+<a href="#s6"><span class="toc-num">06</span>财务质量验证</a>
+<a href="#s7"><span class="toc-num">07</span>股东与机构</a>
+<a href="#s8"><span class="toc-num">08</span>估值与同行对比</a>
+<a href="#s9"><span class="toc-num">09</span>负面信息与风险排查</a>
+<a href="#s10"><span class="toc-num">10</span>财务造假风险初筛</a>
+<a href="#s11"><span class="toc-num">11</span>后续跟踪清单</a>
+<a href="#s12"><span class="toc-num">12</span>信息边界</a>
+        </div>
+      </nav>
+    </aside>
+    <main class="main">
+      <section id="s1">
+<h2 class="sec"><span class="num">01</span>核心财务指标</h2>
+<h3 class="sub">1.1 当前估值快照</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">项目</th>
+<th scope="col">最新数据</th>
+<th scope="col">数据日期/口径</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">收盘价</th>
+<td>10.82 元</td>
+<td>2026-07-31，前复权日线</td>
+<td>当日上涨 1.69%</td>
+</tr>
+<tr>
+<th scope="row">总市值</th>
+<td>67.12 亿元</td>
+<td>总股本 6.2033 亿股</td>
+<td>小市值电网设备企业</td>
+</tr>
+<tr>
+<th scope="row">流通市值</th>
+<td>56.03 亿元</td>
+<td>流通股 5.1788 亿股</td>
+<td>流通盘约占总股本 83.48%</td>
+</tr>
+<tr>
+<th scope="row">PE（TTM）</th>
+<td>18.35 倍</td>
+<td>行情终端滚动口径</td>
+<td>低于平高电气、思源电气、中国西电；但未来利润需剔除富特科技一次性收益</td>
+</tr>
+<tr>
+<th scope="row">PB</th>
+<td>2.47 倍</td>
+<td>行情终端最新口径</td>
+<td>对应 2025A ROE 13.65%，估值与资本回报大致匹配</td>
+</tr>
+<tr>
+<th scope="row">PS（TTM，推算）</th>
+<td>约 4.14 倍</td>
+<td>市值/2025A+2026Q1-2025Q1 营收</td>
+<td>收入体量较小，订单兑现和利润率稳定性决定合理性</td>
+</tr>
+<tr>
+<th scope="row">股息率</th>
+<td>约 1.11%</td>
+<td>2025 年中期 0.03 元/股+年度 0.09 元/股，按 10.82 元计算</td>
+<td>2025 年累计分红率 21.73%，并非高股息标的</td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">1.2 最新财务预报与质量解读</h3>
+<h3 class="sub">1.2.1 累计业绩预报</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">本期预报区间</th>
+<th scope="col">上年同期</th>
+<th scope="col">同比变化</th>
+<th scope="col">预报中枢</th>
+<th scope="col">质量解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">预报期间</th>
+<td>2026H1（未经审计，公告日 2026-07-09）</td>
+<td class="muted">不适用</td>
+<td class="muted">不适用</td>
+<td class="muted">不适用</td>
+<td>属近 30 日正式业绩预告</td>
+</tr>
+<tr>
+<th scope="row">预报营业收入</th>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td>不以利润增速倒推收入</td>
+</tr>
+<tr>
+<th scope="row">预报归母净利润</th>
+<td>5.50–5.80 亿元</td>
+<td>1.0551 亿元</td>
+<td class="up">+421.27%–449.70%</td>
+<td>5.65 亿元</td>
+<td>约 4.20 亿元为非经常损益，表观增速不可外推</td>
+</tr>
+<tr>
+<th scope="row">预报扣非归母净利润</th>
+<td>1.35–1.50 亿元</td>
+<td>0.9968 亿元</td>
+<td class="up">+35.43%–50.48%</td>
+<td>1.425 亿元</td>
+<td class="up">主业确有改善，但幅度远低于归母口径</td>
+</tr>
+<tr>
+<th scope="row">预报 EPS</th>
+<td>0.89–0.93 元/股</td>
+<td>0.17 元/股</td>
+<td>约 +423.5%–447.1%</td>
+<td>0.91 元/股</td>
+<td>股本口径近似可比；仍受一次性收益主导</td>
+</tr>
+<tr>
+<th scope="row">预计非经常性损益</th>
+<td>约 4.20 亿元</td>
+<td>约 0.058 亿元</td>
+<td>显著增加</td>
+<td>约 4.20 亿元</td>
+<td class="down">出售富特科技部分股权、剩余股权改按公允价值计量及处置亏损子公司所得税影响</td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">1.2.2 隐含最新单季度同比与环比</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">隐含 2026Q2 区间</th>
+<th scope="col">去年同期季度</th>
+<th scope="col">单季同比</th>
+<th scope="col">上一季度</th>
+<th scope="col">单季环比</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">隐含单季营业收入</th>
+<td>无法计算</td>
+<td>未披露可比预报值</td>
+<td>无法计算</td>
+<td>2.96 亿元</td>
+<td>无法计算</td>
+<td>H1 预告未披露收入</td>
+</tr>
+<tr>
+<th scope="row">隐含单季归母净利润</th>
+<td>4.934–5.234 亿元</td>
+<td>0.721 亿元</td>
+<td class="up">+584.6%–626.2%</td>
+<td>0.566 亿元</td>
+<td class="up">+771.4%–824.4%</td>
+<td>主要由富特科技相关一次性收益贡献</td>
+</tr>
+<tr>
+<th scope="row">隐含单季扣非归母净利润</th>
+<td>0.804–0.954 亿元</td>
+<td>0.693 亿元</td>
+<td class="up">+16.0%–37.6%</td>
+<td>0.546 亿元</td>
+<td class="up">+47.4%–74.9%</td>
+<td class="up">更能反映交付修复和主营盈利改善</td>
+</tr>
+<tr>
+<th scope="row">隐含单季 EPS</th>
+<td>约 0.799–0.839 元/股</td>
+<td>约 0.116 元/股</td>
+<td>约 +587%–622%</td>
+<td>0.091 元/股</td>
+<td>约 +775%–819%</td>
+<td>推算值，非公司直接披露</td>
+</tr>
+</tbody></table></div>
+<p>以上单季度数据均根据累计预告和已披露财报推算，并非公司直接披露。归母预告区间宽度约 5.3%，扣非区间宽度约 10.5%，可见度中等。</p>
+<p><strong>财务预报质量判断：</strong>归母与扣非同向增长，但中枢差额约 4.225 亿元，非经常损益占归母中枢约 74.8%，归母利润质量偏弱；扣非利润显示主业温和至较快修复。营业收入、毛利率、经营现金流、应收账款、存货和资本开支尚待正式半年报核验。</p>
+<ul>
+<li>信息可信度：中（官方预告、区间较窄，但未经审计且缺少收入和现金流）</li>
+<li>盈利质量判断：中性（主业改善，归母利润由一次性收益主导）</li>
+</ul>
+<h3 class="sub">1.3 已披露当年期间财报</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">2025Q1</th>
+<th scope="col">2026Q1</th>
+<th scope="col">变化解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>3.39 亿元</td>
+<td>2.96 亿元</td>
+<td class="down">-12.76%，公司解释为客户交货节奏变化</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td>0.334 亿元</td>
+<td>0.566 亿元</td>
+<td class="down">+69.27%，明显快于收入</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td>0.303 亿元</td>
+<td>0.546 亿元</td>
+<td class="up">+79.83%，但研发费用同比少 0.261 亿元是重要原因</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td>1.130 亿元</td>
+<td>0.708 亿元</td>
+<td class="down">-37.35%，仍覆盖净利润</td>
+</tr>
+<tr>
+<th scope="row">经营现金流/净利润</th>
+<td>3.38 倍</td>
+<td>1.25 倍</td>
+<td class="down">现金含量仍好，但同比下降</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td>0.883 亿元</td>
+<td>0.497 亿元</td>
+<td>经营现金流减资本开支口径</td>
+</tr>
+<tr>
+<th scope="row">EPS</th>
+<td>0.0539 元</td>
+<td>0.0913 元</td>
+<td class="up">+69.39%</td>
+</tr>
+<tr>
+<th scope="row">ROE</th>
+<td>1.38%</td>
+<td>2.06%</td>
+<td class="up">+0.68 个百分点</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>36.72%</td>
+<td>38.29%</td>
+<td class="up">+1.57 个百分点</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td>8.95%</td>
+<td>18.44%</td>
+<td class="up">研发费用时点变化放大改善幅度</td>
+</tr>
+<tr>
+<th scope="row">资本开支</th>
+<td>0.247 亿元</td>
+<td>0.211 亿元</td>
+<td class="down">-14.76%，金洲三期在建工程开始增加</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>2025 年末 4.54 亿元</td>
+<td>5.32 亿元</td>
+<td>较年初 +17.06%，需用 H1 交付和减值验证</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td>2025 年末 9.19 亿元</td>
+<td>8.24 亿元</td>
+<td class="down">较年初下降约 10.3%，回款/结算改善</td>
+</tr>
+<tr>
+<th scope="row">总资产</th>
+<td>2025 年末 37.44 亿元</td>
+<td>45.39 亿元</td>
+<td class="up">+21.24%，主要受 7.586 亿元可转债融资影响</td>
+</tr>
+<tr>
+<th scope="row">归母净资产</th>
+<td>2025 年末 27.12 亿元</td>
+<td>28.06 亿元</td>
+<td class="up">+3.46%</td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">1.4 最近三年年度财报</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">2023A</th>
+<th scope="col">2024A</th>
+<th scope="col">2025A</th>
+<th scope="col">变化解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>14.93 亿元</td>
+<td>17.60 亿元</td>
+<td>16.65 亿元</td>
+<td>2024 +17.86%，2025 -5.41%，交付存在波动</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td>1.73 亿元</td>
+<td>2.52 亿元</td>
+<td>3.43 亿元</td>
+<td class="up">连续增长，但 2025 受富特科技处置收益显著影响</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td>1.56 亿元</td>
+<td>2.42 亿元</td>
+<td>2.43 亿元</td>
+<td>2024 +55.65%，2025 仅 +0.44%</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td>2.53 亿元</td>
+<td>3.41 亿元</td>
+<td>3.59 亿元</td>
+<td class="up">连续增长并覆盖归母净利润</td>
+</tr>
+<tr>
+<th scope="row">经营现金流/净利润</th>
+<td>1.46 倍</td>
+<td>1.35 倍</td>
+<td>1.05 倍</td>
+<td class="up">现金含量总体良好，但逐年回落</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td>1.86 亿元</td>
+<td>2.80 亿元</td>
+<td>2.97 亿元</td>
+<td>连续为正</td>
+</tr>
+<tr>
+<th scope="row">EPS</th>
+<td>0.2790 元</td>
+<td>0.4064 元</td>
+<td>0.5523 元</td>
+<td>与归母利润同步</td>
+</tr>
+<tr>
+<th scope="row">ROE</th>
+<td>7.95%</td>
+<td>10.67%</td>
+<td>13.65%</td>
+<td class="up">资本回报提升，2025 含一次性收益</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>约 34.44%</td>
+<td>约 38.32%</td>
+<td>38.82%</td>
+<td class="up">2024 年显著改善，2025 基本稳定；2024 比较口径采用 2025 年报列报数</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td>10.42%</td>
+<td>13.76%</td>
+<td>14.61%</td>
+<td class="up">主业盈利率改善，但 2025 增幅收窄</td>
+</tr>
+<tr>
+<th scope="row">资本开支</th>
+<td>0.67 亿元</td>
+<td>0.61 亿元</td>
+<td>0.62 亿元</td>
+<td>约占营收 3.7%–4.5%，扩产尚处早期</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>3.62 亿元</td>
+<td>3.63 亿元</td>
+<td>4.54 亿元</td>
+<td class="down">2025 +25.07%，快于收入，主要为订单备货</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td>9.00 亿元</td>
+<td>9.94 亿元</td>
+<td>9.19 亿元</td>
+<td>2025 回落，但仍占营收约 55%</td>
+</tr>
+<tr>
+<th scope="row">总资产</th>
+<td>32.41 亿元</td>
+<td>35.22 亿元</td>
+<td>37.44 亿元</td>
+<td>稳步扩张</td>
+</tr>
+<tr>
+<th scope="row">归母净资产</th>
+<td>22.59 亿元</td>
+<td>24.09 亿元</td>
+<td>27.12 亿元</td>
+<td class="up">盈利积累推动增长</td>
+</tr>
+</tbody></table></div>
+<p><strong>核心指标综合判断：</strong>2023–2025 年主业盈利率、现金流和 ROE 总体改善；2025 年营收和扣非利润近乎停滞，而归母利润增长主要来自富特科技股权处置，不能将 35.91% 增速视为主业增速。现金流质量较好、应收余额下降，但存货随订单备货明显上升。2026Q1 扣非改善同时受研发试验费减少影响，需用半年报确认是否只是费用时点错位。</p>
+</section>
+<section id="s2">
+<h2 class="sec"><span class="num">02</span>近两年财报趋势与业务结构</h2>
+<h3 class="sub">2.1 近两年财报趋势</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">项目</th>
+<th scope="col">2024A</th>
+<th scope="col">2025A</th>
+<th scope="col">变化</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>17.60 亿元</td>
+<td>16.65 亿元</td>
+<td class="down">-5.41%</td>
+<td>长高电气部分产品因客户工程进度延后交付</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td>2.52 亿元</td>
+<td>3.43 亿元</td>
+<td class="up">+35.91%</td>
+<td>非经常损益增加约 0.895 亿元</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td>2.42 亿元</td>
+<td>2.43 亿元</td>
+<td class="up">+0.44%</td>
+<td>主业利润总体平稳</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>约 38.32%</td>
+<td>38.82%</td>
+<td class="up">+0.50pct</td>
+<td>产品结构和成本控制保持稳定</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td>13.76%</td>
+<td>14.61%</td>
+<td class="up">+0.85pct</td>
+<td class="down">收入下降但核心利润率提升</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td>3.41 亿元</td>
+<td>3.59 亿元</td>
+<td class="up">+5.15%</td>
+<td>回款质量好于收入趋势</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td>2.80 亿元</td>
+<td>2.97 亿元</td>
+<td class="up">+6.04%</td>
+<td>扩产前仍有现金剩余</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>3.63 亿元</td>
+<td>4.54 亿元</td>
+<td class="up">+25.07%</td>
+<td class="down">合同订单备货，亦增加交付/减值风险</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td>9.94 亿元</td>
+<td>9.19 亿元</td>
+<td class="down">-7.51%</td>
+<td class="down">好于营收趋势，回款压力缓解</td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">2.2 分业务情况</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">业务</th>
+<th scope="col">2024A 收入</th>
+<th scope="col">2024A 毛利率</th>
+<th scope="col">2025A 收入</th>
+<th scope="col">2025A 毛利率</th>
+<th scope="col">变化</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">输变电设备</th>
+<td>16.58 亿元</td>
+<td>40.17%</td>
+<td>15.68 亿元</td>
+<td>40.99%</td>
+<td>收入 -5.39%，毛利率 +0.82pct，仍为绝对核心</td>
+</tr>
+<tr>
+<th scope="row">电力设计与服务</th>
+<td>0.59 亿元</td>
+<td>未单列</td>
+<td>0.30 亿元</td>
+<td>未单列</td>
+<td class="down">收入 -50.10%，公司持续收缩亏损工程业务</td>
+</tr>
+<tr>
+<th scope="row">新能源发电</th>
+<td>0.13 亿元</td>
+<td>未单列</td>
+<td>0.12 亿元</td>
+<td>未单列</td>
+<td>体量小，对估值贡献有限</td>
+</tr>
+<tr>
+<th scope="row">其他</th>
+<td>0.10 亿元</td>
+<td>未单列</td>
+<td>0.13 亿元</td>
+<td>未单列</td>
+<td>非核心</td>
+</tr>
+</tbody></table></div>
+<p><strong>业务结构判断：</strong>输变电设备收入占比 94.19%，隔离开关、组合电器、开关柜和变压器是增长基础。2025 年长高成套收入与净利润分别增长 53.98%和 108.18%，但长高电气因交付延后及研发费增加导致净利润下降 35.45%，长高森源亦受低毛利订单拖累。工程设计板块华网电力亏损 0.372 亿元，是待退出的主要拖累。新增高电压等级 GIS/GIL 产品和国网订单支持中期需求，但扩产回报尚未兑现。</p>
+</section>
+<section id="s3">
+<h2 class="sec"><span class="num">03</span>结论摘要</h2>
+<h3 class="sub">3.1 当前结论</h3>
+<ul>
+<li>基本面判断：中性</li>
+<li>财务质量：良好</li>
+<li>估值状态：合理</li>
+<li>财务造假风险初筛：低</li>
+<li>核心理由：</li>
+<ol>
+<li>2025 年新增订单 22.37 亿元、2026 年 5 月和 7 月披露国网中标合计 7.63 亿元，需求可见度较好。</li>
+<li>2023–2025 年经营现金流均覆盖净利润，自由现金流连续为正，2025 年应收及合同资产下降。</li>
+<li>2025 年扣非利润仅增长 0.44%，2026H1 归母预增约 4 倍主要来自约 4.20 亿元非经常损益，盈利外推必须采用扣非口径。</li>
+<li>2026Q1 存货较年初增 17.06%、研发费用同比少 0.261 亿元，交付质量和费用时点仍需 H1 正式财报验证。</li>
+</ol>
+</ul>
+<h3 class="sub">3.2 与上次报告相比</h3>
+<p>首次建立研究基线，无上次报告可比；基线日期为 2026-07-31。</p>
+<ul>
+<li>本次触发事件：2026H1 业绩预告、2026 年 7 月国网中标公告及最新行情。</li>
+<li>新增确认事实：上半年扣非利润预计增长 35.43%–50.48%；约 4.20 亿元非经常损益显著放大归母利润；7 月中标 4.16 亿元。</li>
+<li>被证伪或弱化的旧假设：不适用（首次基线）。</li>
+<li>仍然有效的旧观点：不适用（首次基线）。</li>
+<li>仍待验证事项：H1 收入/毛利率/现金流、两批中标合同签署及履约、存货转化、亏损工程业务退出、募投产能回报。</li>
+</ul>
+</section>
+<section id="s4">
+<h2 class="sec"><span class="num">04</span>公司与行业</h2>
+<ul>
+<li>主营业务：输变电设备制造，辅以电力勘察设计和工程总包；公司已于 2026 年 6 月更名为“长高电气集团股份公司”，证券简称“长高电气”。</li>
+<li>主要产品：10–1100kV 隔离/接地开关、35–550kV 已获客户验证的 GIS、800kV 已取得国网投标资质的 GIS、开关柜、变压器等。</li>
+<li>市场占有率：2025 年国网总部集中招标中隔离开关排名全国第三、组合电器综合排名第七；公司未披露可独立核验的全市场份额百分比。</li>
+<li>行业景气度：国家电网、南方电网资本开支和特高压/新型电力系统建设构成中期需求支撑；行业同时存在招标节奏、原材料和价格竞争波动。</li>
+<li>核心竞争力：隔离开关单项冠军产品、全电压等级产品谱系、国网长期供应记录，以及向高压 GIS/GIL 和配网设备扩品类。</li>
+<li>主要依赖：国网/南网客户和电网投资周期集中度较高；2025 年国网总部集采订单约占新增订单 75%。</li>
+</ul>
+<p>宏观层面，电网投资兼具能源转型和逆周期基础设施属性，利率和流动性对设备需求的直接影响弱于政策核准、特高压开工与电网招标节奏。长高电气体量较小，新增大额批次订单对收入弹性明显，但收入确认受客户工程进度约束。</p>
+</section>
+<section id="s5">
+<h2 class="sec"><span class="num">05</span>订单与需求验证</h2>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">日期</th>
+<th scope="col">来源与链接</th>
+<th scope="col">项目/订单名称</th>
+<th scope="col">客户/采购方</th>
+<th scope="col">产品/服务</th>
+<th scope="col">金额</th>
+<th scope="col">状态</th>
+<th scope="col">履约周期</th>
+<th scope="col">公司正式公告</th>
+<th scope="col">对收入影响</th>
+<th scope="col">可信度</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">2025 全年</th>
+<td><a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260427_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1225177027.pdf">2025 年报</a></td>
+<td>全年新增订单</td>
+<td>国网、南网及其他</td>
+<td>输变电设备</td>
+<td>22.37 亿元</td>
+<td>新增订单汇总</td>
+<td class="muted">未披露</td>
+<td>是</td>
+<td>相当于 2025 营收 134.4%，跨期履约</td>
+<td>高</td>
+</tr>
+<tr>
+<th scope="row">2026-05-07</th>
+<td><a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260508_2026_%E5%90%88%E5%90%8C%E8%AE%A2%E5%8D%95_12303204.pdf">5 月中标公告</a></td>
+<td>国网第二批变电设备等</td>
+<td>国家电网</td>
+<td>GIS、断路器、隔离开关、开关柜</td>
+<td>3.463 亿元</td>
+<td>中标，待签正式合同</td>
+<td>以合同为准</td>
+<td>是</td>
+<td>相当于 2025 营收 20.80%</td>
+<td>高</td>
+</tr>
+<tr>
+<th scope="row">2026-07-21</th>
+<td><a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260722_2026_%E5%90%88%E5%90%8C%E8%AE%A2%E5%8D%95_12457170.pdf">7 月中标公告</a></td>
+<td>国网第三批变电/特高压设备</td>
+<td>国家电网</td>
+<td>GIS、隔离开关、开关柜</td>
+<td>4.163 亿元</td>
+<td>中标，待签正式合同</td>
+<td>以合同为准</td>
+<td>是</td>
+<td>相当于 2025 营收 25.00%</td>
+<td>高</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>已披露订单/合同：2025 年新增订单 22.37 亿元；2026 年两次重大中标合计 7.626 亿元。</li>
+<li>招投标与客户侧线索：2026 年上半年评级报告披露国网前两批中标合计约 5.28 亿元，与公司 5 月单批公告口径不同，可能含第一批次；本报告不机械相加，避免重复计算。</li>
+<li>订单状态区分：5 月和 7 月公告均为正式中标结果，但合同执行期限尚未确定，不等同已确认收入或利润。</li>
+<li>订单金额与最近年度营收比例：两次公告合计约为 2025 年营收的 45.80%，财务上具有重要性。</li>
+<li>履约周期与收入确认节奏：预计影响 2026 年及以后年度，具体取决于客户项目进度、交货验收和合同条款。</li>
+<li>合同负债/存货/应收/现金流验证：2026Q1 合同负债较年初 +5.48%、存货 +17.06%、应收账款及合同资产下降约 10.3%、经营现金流仍为正，方向上支持备货与回款，但尚不足以证明两批中标已形成收入。</li>
+<li>订单趋势判断：改善</li>
+<li>信息可信度：高（公司正式公告）；收入和利润兑现可信度为中。</li>
+</ul>
+</section>
+<section id="s6">
+<h2 class="sec"><span class="num">06</span>财务质量验证</h2>
+<ul>
+<li>利润与现金流匹配：2023–2025 年经营现金流/归母净利润分别为 1.46、1.35、1.05 倍；2026Q1 为 1.25 倍，整体匹配。</li>
+<li>应收账款与营收匹配：2025 年应收账款及合同资产下降约 7.5%，好于营收下降 5.4%；但期末余额仍约占收入 55%，客户验收和账期属性决定其天然偏高。</li>
+<li>存货与营收匹配：2025 年存货增长 25.1%，2026Q1 较年初再增 17.1%，明显快于收入；公司解释为订单备货，需跟踪 H1/H2 交付和跌价准备。</li>
+<li>资本开支效率与自由现金流：2025 年资本开支 0.617 亿元，自由现金流约 2.97 亿元；2026Q1 在建工程升至 0.366 亿元。可转债募投三大基地的静态回收期约 8.83–11.10 年，回报周期较长。</li>
+<li>预付款/其他应收款/在建工程/商誉异常：2026Q1 预付款环比增 82.7%但绝对额仅 0.241 亿元；其他应收款稳定；在建工程因金洲三期投入增加；商誉 0.654 亿元未增加。</li>
+<li>资产负债率与有息负债：2025 年末资产负债率 27.47%、现金 12.15 亿元、短期及长期借款合计 0.625 亿元；2026Q1 发行 7.586 亿元可转债后负债率升至约 38.10%，但货币资金升至 20.06 亿元，短期偿债压力不大。</li>
+<li>综合判断：经营现金流、应收回落和低银行借款支持“良好”；存货上升、可转债扩产和非经常损益放大要求保留审慎。</li>
+</ul>
+</section>
+<section id="s7">
+<h2 class="sec"><span class="num">07</span>股东与机构</h2>
+<ul>
+<li>十大股东持股占比：2025 年末约 31.47%。</li>
+<li>实控人/大股东持股与质押：马孝武持股 13.59%，其子马晓持股 2.32%；年报列示二者相关股份质押为 0。</li>
+<li>大股东减持或增持：控股股东 2025 年持股数量未变；员工持股计划报告期减少 461.37 万股，属于首个归属期处置。</li>
+<li>入驻机构家数：前十名中可识别机构账户 4 个，包括员工持股计划、阿布达比投资局、私募基金和养老金产品；该口径不等同全部机构数量。</li>
+<li>机构类型：境外主权投资机构、私募、养老金和员工持股计划，公募基金持仓需以最新基金定期报告另行核验。</li>
+<li>治理风险判断：自然人控制、持股分散但无质押；未见资金占用或违规担保。需关注富特科技股权交易、公允价值波动和员工持股计划后续归属。</li>
+</ul>
+</section>
+<section id="s8">
+<h2 class="sec"><span class="num">08</span>估值与同行对比</h2>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">公司</th>
+<th scope="col">2026-07-31 收盘价</th>
+<th scope="col">总市值</th>
+<th scope="col">PE（TTM）</th>
+<th scope="col">PB</th>
+<th scope="col">2025A 营收增速</th>
+<th scope="col">2025A 归母增速</th>
+<th scope="col">2025A 毛利率</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">长高电气</th>
+<td>10.82 元</td>
+<td>67 亿元</td>
+<td>18.35 倍</td>
+<td>2.47 倍</td>
+<td class="down">-5.41%</td>
+<td class="up">+35.91%（扣非 +0.44%）</td>
+<td>38.82%</td>
+</tr>
+<tr>
+<th scope="row">平高电气</th>
+<td>19.72 元</td>
+<td>268 亿元</td>
+<td>22.75 倍</td>
+<td>2.33 倍</td>
+<td class="up">+0.93%</td>
+<td class="up">+9.45%</td>
+<td>23.92%</td>
+</tr>
+<tr>
+<th scope="row">思源电气</th>
+<td>156.51 元</td>
+<td>1,225 亿元</td>
+<td>36.62 倍</td>
+<td>7.43 倍</td>
+<td class="up">+39.34%</td>
+<td class="up">+53.74%</td>
+<td>30.77%</td>
+</tr>
+<tr>
+<th scope="row">中国西电</th>
+<td>13.34 元</td>
+<td>684 亿元</td>
+<td>51.75 倍</td>
+<td>2.96 倍</td>
+<td class="up">+6.88%</td>
+<td class="up">+20.45%</td>
+<td>22.75%</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>当前估值：长高电气 PE 低于三家可比公司，PB 接近平高电气；较低 PE 部分反映规模、客户集中、订单交付波动和非经常损益不可持续。</li>
+<li>同行业估值对比：思源电气因订单高增和全球化享受显著溢价；平高/中国西电体量、央企背景与业务结构不同，不能简单横比。</li>
+<li>同行业财务质量对比：长高毛利率高，主要与产品结构和业务规模有关；2025 扣非利润增速弱于同行。现金流覆盖较好，但存货增长和应收占收入比例偏高。</li>
+<li>估值是否匹配成长与财务质量：18.35 倍滚动 PE 表面不高，但若剔除 2026H1 富特科技一次性收益，估值并不便宜；以主业扣非增速与订单兑现为锚，判定“合理”。</li>
+</ul>
+</section>
+<section id="s9">
+<h2 class="sec"><span class="num">09</span>负面信息与风险排查</h2>
+<ul>
+<li>是否亏损：合并层面持续盈利；华网电力 2025 年亏损 0.372 亿元，公司正收缩工程板块。</li>
+<li>是否 ST 或退市风险：截至本次核验未见 ST，2025 年报明确不存在退市情形。</li>
+<li>审计意见：2025 年财务报表为标准无保留意见，内部控制审计意见与公司评价一致。</li>
+<li>监管问询/处罚：2025 年报未披露处罚整改、资金占用或违规担保；本次公开检索未发现会显著改变结论的新处罚。</li>
+<li>诉讼仲裁：2025 年延续及新增诉讼/仲裁 17 起，涉案约 1,954 万元；期末未结 6 起、金额 868 万元，公司判断不构成重大影响。</li>
+<li>负面新闻：主要争议不是已确认违规，而是归母利润受富特科技股价及会计核算变化影响，未来公允价值波动可能导致业绩波动。</li>
+<li>关联交易/客户供应商真实性争议：年报未披露重大关联交易或客户供应商真实性争议；国网客户集中度高属于经营集中风险。</li>
+</ul>
+</section>
+<section id="s10">
+<h2 class="sec"><span class="num">10</span>财务造假风险初筛</h2>
+<ul>
+<li>红旗数量：2 个温和红旗。</li>
+<li>主要红旗：存货连续较快增长；2025–2026H1 归母利润与扣非利润差异显著，且 2026Q1 利润增速受研发费用时点影响。</li>
+<li>缓释因素：经营现金流持续覆盖净利润、应收及合同资产回落、标准无保留审计、无处罚/资金占用/违规担保、实控人股份无质押。</li>
+<li>风险等级：低。</li>
+<li>解释：这是基于公开财务与治理信息的风险初筛，不是对财务真实性的事实定性；只有监管、审计、司法或公司正式公告确认后才能定性。收入确认属于 2025 年审计关键事项，但审计师已执行合同、验收、函证和截止性测试并出具标准意见。</li>
+</ul>
+</section>
+<section id="s11">
+<h2 class="sec"><span class="num">11</span>后续跟踪清单</h2>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">跟踪事项</th>
+<th scope="col">首次提出</th>
+<th scope="col">上次状态</th>
+<th scope="col">本次证据</th>
+<th scope="col">当前状态</th>
+<th scope="col">下次验证时间/触发条件</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">2026H1 主业利润兑现质量</th>
+<td>2026-07-31</td>
+<td>新增</td>
+<td>扣非预告 1.35–1.50 亿元，收入/现金流未披露</td>
+<td>待验证</td>
+<td>半年报披露时核验收入、毛利率、扣非、现金流及预告兑现</td>
+</tr>
+<tr>
+<th scope="row">5 月、7 月国网中标转合同及收入</th>
+<td>2026-07-31</td>
+<td>新增</td>
+<td>合计中标 7.626 亿元，执行期限以合同为准</td>
+<td>待验证</td>
+<td>正式合同公告或 2026H2/2027 财报确认收入时</td>
+</tr>
+<tr>
+<th scope="row">存货能否转化为交付</th>
+<td>2026-07-31</td>
+<td>新增</td>
+<td>2025 +25.1%，2026Q1 较年初 +17.1%</td>
+<td>待验证</td>
+<td>H1/H2 存货周转、收入及减值披露时</td>
+</tr>
+<tr>
+<th scope="row">工程亏损业务退出</th>
+<td>2026-07-31</td>
+<td>新增</td>
+<td class="down">华网电力 2025 年亏损 0.372 亿元并持续收缩</td>
+<td>部分验证</td>
+<td class="down">处置完成公告或分部亏损显著收窄时</td>
+</tr>
+<tr>
+<th scope="row">可转债募投产能回报</th>
+<td>2026-07-31</td>
+<td>新增</td>
+<td>募资 7.586 亿元，项目回收期约 8.83–11.10 年</td>
+<td>待验证</td>
+<td>募投进度、产能利用率、折旧和新增订单披露时</td>
+</tr>
+<tr>
+<th scope="row">富特科技剩余持股公允价值波动</th>
+<td>2026-07-31</td>
+<td>新增</td>
+<td>H1 预计形成约 4.20 亿元非经常损益</td>
+<td>待验证</td>
+<td>每季公允价值变动、减持或清仓公告时</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>新增订单金额与年初至今累计订单金额：已核验公司公告的 5 月、7 月中标合计 7.626 亿元；年初至今完整新增订单未披露。</li>
+<li>订单金额/上年营收：两次重大中标合计约 45.80%。</li>
+<li>重点客户复购与新增客户：国网持续复购；新增海外特高压订单需另行核验。</li>
+<li>中标候选人转正式中标/签约情况：本次均已正式中标，尚待合同签署和履约。</li>
+<li>合同负债、存货、应收账款和经营现金流变化：H1 正式财报为下一验证节点。</li>
+<li>触发深度复盘条件：H1 正式报告、重大订单累计超过上年营收 20%、存货/应收增速持续高于收入 20pct、审计或监管事件、募投进度显著偏离计划。</li>
+</ul>
+</section>
+<section id="s12">
+<h2 class="sec"><span class="num">12</span>信息边界</h2>
+<ul>
+<li>分析范围：报告执行日 2026-07-31；行情为 2026-07-31 收盘；财务覆盖 2023A–2025A、2026Q1 和未经审计的 2026H1 业绩预告；首次基线，无上次报告。2024 毛利率采用 2025 年报比较列报口径，与 2024 年报原始列报存在小幅口径差异。</li>
+<li>数据日期：公司公告核验至 2026-07-31；近 30 日业绩预告窗口为 2026-07-02 至 2026-07-31，已纳入 2026-07-09 半年度业绩预告。</li>
+<li>主要数据来源：巨潮资讯/深交所正式披露、公司年度/季度报告及业绩预告、公司中标公告、国家电网招标结果的公司转述、东方财富行情接口；同行财务以各公司 2025 年报/官方披露为主。</li>
+<li>本地原始资料：<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260427_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1225177027.pdf">2025 年报</a>、<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260430_2026Q1_%E7%AC%AC%E4%B8%80%E5%AD%A3%E5%BA%A6%E6%8A%A5%E5%91%8A_42ecc7b0-af33-4307-a010-a4526ab7b03b.pdf">2026Q1</a>、<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260709_2026H1_%E4%B8%9A%E7%BB%A9%E9%A2%84%E5%91%8A_1225415737.pdf">2026H1 业绩预告</a>、<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260508_2026_%E5%90%88%E5%90%8C%E8%AE%A2%E5%8D%95_12303204.pdf">5 月中标</a>、<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260722_2026_%E5%90%88%E5%90%8C%E8%AE%A2%E5%8D%95_12457170.pdf">7 月中标</a>。后两份为官方公告的新浪财经 PDF 镜像，原始公司披露正文一致。</li>
+<li>尚未核验的信息：完整年初至今新增订单、每笔中标合同金额归属与毛利、最新全部机构持仓、市场份额百分比、2026H1 资产负债表和现金流量表。</li>
+<li>可能影响结论的新公告或市场事件：H1 正式财报、国网后续批次中标、富特科技股价/减持、可转债募投进度、原材料价格与客户交货节奏。</li>
+</ul>
+</section>
+
+      <section id="note-friendly">
+        <h2 class="sec"><span class="num">◎</span>基本面速记</h2>
+        <div class="note-copy">
+          <h2>可复制摘要</h2>
+          <pre><code>【基本面速记】
+公司：长高电气（002452）
+结论：基本面（中性），财务质量（良好），估值（合理）。
+核心看点：
+1. 2025 年新增订单 22.37 亿元，2026 年两次重大国网中标合计 7.63 亿元。
+2. 经营现金流连续覆盖净利润，应收回落，资产负债表仍有缓冲。
+3. 2026H1 扣非预计增长 35.43%–50.48%，但归母高增主要来自约 4.20 亿元一次性收益。
+主要风险：
+1. 富特科技公允价值及处置收益不可持续，归母利润波动大。
+2. 存货增长、交付节奏和募投产能消化存在不确定性。
+最新财务预报：2026H1 归母 5.50–5.80 亿元（+421.27%–449.70%），扣非 1.35–1.50 亿元（+35.43%–50.48%）；隐含 Q2 扣非同比约 +16.0%–37.6%、环比约 +47.4%–74.9%；信息可信度中，盈利质量中性。
+财务造假风险初筛：低。理由：现金流匹配、应收下降、标准审计意见；需跟踪存货和非经常损益。
+订单/需求验证：改善。依据：2025 年订单创新高，2026 年两批国网中标具重要性，但合同及收入尚待履约。
+后续跟踪：H1 正式财报、两批中标签约交付、存货转化、工程业务退出、募投回报和富特科技公允价值波动。</code></pre>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="disclaimer">
+      免责声明:本报告为基于公开财报、公告、行情与新闻资料的整理和财务质量初筛,不构成任何投资建议,不保证未来收益。投资有风险,决策需谨慎。所有数据以公司正式披露为准。
+    </div>
+    <div>报告主体:长高电气(002452) | 数据口径:公司公告核验至 2026-07-31；近 30 日业绩预告窗口为 2026-07-02 至 2026-07-31，已纳入 2026-07-09 半年度业绩预告。</div>
+    <div>主要数据来源:巨潮资讯/深交所正式披露、公司年度/季度报告及业绩预告、公司中标公告、国家电网招标结果的公司转述、东方财富行情接口；同行财务以各公司 2025 年报/官方披露为主。</div>
+    <div>自包含离线 HTML · 内联 CSS / 极简内联 JS · 可直接在浏览器打开</div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var links = document.querySelectorAll('nav.toc a');
+  var map = {};
+  for (var i=0;i<links.length;i++){
+    var href = links[i].getAttribute('href') || '';
+    if (href.charAt(0) === '#') map[href.slice(1)] = links[i];
+  }
+  var sections = document.querySelectorAll('main section[id]');
+  function onScroll(){
+    var pos = (window.scrollY || document.documentElement.scrollTop) + 90;
+    var cur = null;
+    for (var j=0;j<sections.length;j++){
+      if (sections[j].offsetTop <= pos) cur = sections[j].id;
+    }
+    for (var k=0;k<links.length;k++) links[k].classList.remove('active');
+    if (cur && map[cur]) {
+      map[cur].classList.add('active');
+      var act = map[cur];
+      var sc = document.getElementById('toc-scroll');
+      if (sc && act.offsetLeft < sc.scrollLeft) sc.scrollLeft = act.offsetLeft - 8;
+      if (sc && act.offsetLeft + act.offsetWidth > sc.scrollLeft + sc.clientWidth) {
+        sc.scrollLeft = act.offsetLeft + act.offsetWidth - sc.clientWidth + 8;
+      }
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
+</body>
+</html>

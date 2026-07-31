@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-31T18:23:18+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260427-e73769f7",
+      "title": "2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260427",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-27/1225177027.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260427_2025A_年度报告_1225177027.pdf",
+      "sha256": "e73769f723baa7cded1474387a4fc943fc3ed61bf011d26948ff7173ef8d478f",
+      "bytes": 1740753,
+      "pages": null,
+      "retrieved_at": "2026-07-31T18:23:17+08:00",
+      "used_by": [
+        "长高电气_002452_基本面分析_20260731"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260430-376db50b",
+      "title": "2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260430",
+      "official_url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-04-30/42ecc7b0-af33-4307-a010-a4526ab7b03b.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260430_2026Q1_第一季度报告_42ecc7b0-af33-4307-a010-a4526ab7b03b.pdf",
+      "sha256": "376db50bf62e596b79468f7ca6ab54722d5d87a7e813fc04c21d3fb97d7ced7c",
+      "bytes": 209829,
+      "pages": null,
+      "retrieved_at": "2026-07-31T18:23:17+08:00",
+      "used_by": [
+        "长高电气_002452_基本面分析_20260731"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260709-e615a07c",
+      "title": "2026年半年度业绩预告",
+      "document_type": "业绩预告",
+      "period": "2026H1",
+      "published_date": "20260709",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-07-09/1225415737.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260709_2026H1_业绩预告_1225415737.pdf",
+      "sha256": "e615a07c12f2d6a73ee50be1f8d38e7b34ccab9549307f982b754c61357c23e8",
+      "bytes": 106508,
+      "pages": null,
+      "retrieved_at": "2026-07-31T18:23:17+08:00",
+      "used_by": [
+        "长高电气_002452_基本面分析_20260731"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260508-516960a1",
+      "title": "2026年5月国网中标公告",
+      "document_type": "合同订单",
+      "period": "2026",
+      "published_date": "20260508",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESZ_STOCK/2026/2026-5/2026-05-08/12303204.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260508_2026_合同订单_12303204.pdf",
+      "sha256": "516960a12b78eb38b76366b44a45be3f4ee0be5899e87cb6b2a39a3b875afcca",
+      "bytes": 76217,
+      "pages": null,
+      "retrieved_at": "2026-07-31T18:23:18+08:00",
+      "used_by": [
+        "长高电气_002452_基本面分析_20260731"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260722-159d3596",
+      "title": "2026年7月国网中标公告",
+      "document_type": "合同订单",
+      "period": "2026",
+      "published_date": "20260722",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESZ_STOCK/2026/2026-7/2026-07-22/12457170.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260722_2026_合同订单_12457170.pdf",
+      "sha256": "159d35965d8c8e2842e46d8a1fdf78e29b1e1f12332de98e0c56564401aaf9e8",
+      "bytes": 74669,
+      "pages": null,
+      "retrieved_at": "2026-07-31T18:23:18+08:00",
+      "used_by": [
+        "长高电气_002452_基本面分析_20260731"
+      ],
+      "status": "已归档"
+    }
+  ]
+}
