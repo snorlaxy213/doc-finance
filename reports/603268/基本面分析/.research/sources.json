@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-08-02T18:38:45+08:00",
+  "sources": [
+    {
+      "source_id": "FAILED-eb240f072abd",
+      "title": "2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260310",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-03-10/603268_20260310_TPZO.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-08-02T18:37:32+08:00",
+      "used_by": [
+        "松发股份_603268_基本面分析_20260802"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "FAILED-3aafcc54e874",
+      "title": "2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260428",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-28/603268_20260428_O29S.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-08-02T18:37:32+08:00",
+      "used_by": [
+        "松发股份_603268_基本面分析_20260802"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "FAILED-2f0135ec025b",
+      "title": "2026年半年度业绩预增公告",
+      "document_type": "正式披露",
+      "period": "2026H1",
+      "published_date": "20260708",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-07-08/603268_20260708_V106.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-08-02T18:37:33+08:00",
+      "used_by": [
+        "松发股份_603268_基本面分析_20260802"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "FAILED-6570f45f2cea",
+      "title": "2026年日常经营重大合同公告",
+      "document_type": "合同订单",
+      "period": "2026",
+      "published_date": "20260225",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-02-25/603268_20260225_9CAU.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-08-02T18:37:33+08:00",
+      "used_by": [
+        "松发股份_603268_基本面分析_20260802"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "FAILED-8143ef6a1a8c",
+      "title": "撤销退市风险警示公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260417",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-17/603268_20260417_BJTS.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-08-02T18:37:33+08:00",
+      "used_by": [
+        "松发股份_603268_基本面分析_20260802"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "SRC-20260518-7fe35026",
+      "title": "2026年向特定对象发行审核问询回复",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260518",
+      "official_url": "https://static.sse.com.cn/stock/disclosure/announcement/c/202605/603268_20260518_0MS3.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260518_2026_正式披露_603268_20260518_0MS3.pdf",
+      "sha256": "7fe3502682be09f822d400eb4a59416cac07ac429efa92a3dd6a79d3bcafbae7",
+      "bytes": 2310883,
+      "pages": 146,
+      "retrieved_at": "2026-08-02T18:37:38+08:00",
+      "used_by": [
+        "松发股份_603268_基本面分析_20260802"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260310-3a3584ba",
+      "title": "2025年年度报告（镜像）",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260310",
+      "official_url": "http://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESH_STOCK/2026/2026-3/2026-03-10/11987763.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260310_2025A_年度报告_11987763.pdf",
+      "sha256": "3a3584ba65a58320e918ffa6f8f604fa2ad070d31f6f325f556a989a8e6e8fee",
+      "bytes": 1632808,
+      "pages": 232,
+      "retrieved_at": "2026-08-02T18:38:43+08:00",
+      "used_by": [
+        "松发股份_603268_基本面分析_20260802"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260428-fbb006fd",
+      "title": "2026年第一季度报告（镜像）",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260428",
+      "official_url": "http://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESH_STOCK/2026/2026-4/2026-04-28/12210244.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260428_2026Q1_第一季度报告_12210244.pdf",
+      "sha256": "fbb006fd85caf79b77ebe24e29dfcd9cc9ad2df20c5d0dccfa45e95ee9345822",
+      "bytes": 195149,
+      "pages": 12,
+      "retrieved_at": "2026-08-02T18:38:43+08:00",
+      "used_by": [
+        "松发股份_603268_基本面分析_20260802"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260708-b11505b1",
+      "title": "2026年半年度业绩预增公告（镜像）",
+      "document_type": "正式披露",
+      "period": "2026H1",
+      "published_date": "20260708",
+      "official_url": "http://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESH_STOCK/2026/2026-7/2026-07-08/12434267.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260708_2026H1_正式披露_12434267.pdf",
+      "sha256": "b11505b14619b28c7476362764dd24de87fcd3a50419673f399013afd9b5f851",
+      "bytes": 91973,
+      "pages": 2,
+      "retrieved_at": "2026-08-02T18:38:43+08:00",
+      "used_by": [
+        "松发股份_603268_基本面分析_20260802"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260225-181720eb",
+      "title": "2026年日常经营重大合同公告（交易所繁体镜像）",
+      "document_type": "合同订单",
+      "period": "2026",
+      "published_date": "20260225",
+      "official_url": "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-02-25/603268_20260225_9CAU.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260225_2026_合同订单_603268_20260225_9CAU.pdf",
+      "sha256": "181720ebb1c0bfd501400eb42da08424039c376508d696ea37b4c9da4925f77c",
+      "bytes": 105528,
+      "pages": 2,
+      "retrieved_at": "2026-08-02T18:38:44+08:00",
+      "used_by": [
+        "松发股份_603268_基本面分析_20260802"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260417-72314929",
+      "title": "撤销退市风险警示公告（交易所繁体镜像）",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260417",
+      "official_url": "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-17/603268_20260417_BJTS.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260417_期间待核验_正式披露_603268_20260417_BJTS.pdf",
+      "sha256": "7231492985522300532aa36d3c86ec918318c316e95ff9d810af892084869460",
+      "bytes": 96701,
+      "pages": 3,
+      "retrieved_at": "2026-08-02T18:38:45+08:00",
+      "used_by": [
+        "松发股份_603268_基本面分析_20260802"
+      ],
+      "status": "已归档"
+    }
+  ]
+}
