@@ -28,7 +28,7 @@ By default, produce both a Markdown report and a standalone HTML report unless t
 Use this file layout when working inside the user's `doc-finance` workspace:
 
 ```text
-/Users/superman/Documents/doc-finance/reports/<股票代码>/基本面分析/
+/Users/superman/Mine/space/ai/doc-finance/reports/<股票代码>/基本面分析/
 ```
 
 Use these filename patterns:
@@ -53,7 +53,7 @@ Also maintain these stable artifacts for each company:
 Rules:
 
 - Use the current date and time as `YYYYMMDD_HHMMSS` for new snapshots. Existing date-only files remain valid historical snapshots and must not be renamed merely for consistency.
-- If the user provides a different report root, use that root. Otherwise, use `/Users/superman/Documents/doc-finance/reports` when available; in other workspaces, use `reports/`.
+- If the user provides a different report root, use that root. Otherwise, use `/Users/superman/Mine/space/ai/doc-finance/reports` when available; in other workspaces, use `reports/`.
 - Use baseline mode when no prior report exists. Use incremental-update mode when a prior report exists. Use full-rebuild mode for an annual report, accounting restatement, major business transformation, or an explicit user request; even a full rebuild must compare with the prior conclusion.
 - In incremental-update mode, carry forward still-valid confirmed facts, re-check time-sensitive facts, update affected sections, and retain unresolved tracking items. Do not rewrite unchanged analysis merely for stylistic variation.
 - Save the Markdown report first, using the fixed output structure below and valid GitHub-Flavored Markdown tables.
@@ -69,7 +69,7 @@ Rules:
 Example command after writing the Markdown file:
 
 ```bash
-python3 /Users/superman/Documents/doc-finance/.agents/skills/fundamental-stock-review/scripts/render_fundamental_html.py \
+python3 /Users/superman/Mine/space/ai/doc-finance/.agents/skills/fundamental-stock-review/scripts/render_fundamental_html.py \
   /absolute/path/to/<公司简称>_<股票代码>_基本面分析_<YYYYMMDD_HHMMSS>.md \
   --output-html /absolute/path/to/<公司简称>_<股票代码>_基本面分析_<YYYYMMDD_HHMMSS>.html
 ```
@@ -77,9 +77,9 @@ python3 /Users/superman/Documents/doc-finance/.agents/skills/fundamental-stock-r
 Preferred publication command for a completed report:
 
 ```bash
-python3 /Users/superman/Documents/doc-finance/.agents/skills/fundamental-stock-review/scripts/publish_fundamental_review.py \
+python3 /Users/superman/Mine/space/ai/doc-finance/.agents/skills/fundamental-stock-review/scripts/publish_fundamental_review.py \
   /absolute/path/to/completed-report.md \
-  --reports-root /Users/superman/Documents/doc-finance/reports
+  --reports-root /Users/superman/Mine/space/ai/doc-finance/reports
 ```
 
 The renderer's `--copy-md` flow remains available for legacy one-off rendering. For continuous reports, always use `publish_fundamental_review.py` so the latest pair, timeline, and state stay synchronized.
