@@ -1,0 +1,4 @@
+interface:
+  display_name: "选股分析"
+  short_description: "按固定模板核验业绩增长股票的真实性景气估值风险与持续性"
+  default_prompt: "Use $stock-selection-analysis to analyze whether this strong earnings-growth stock is worth tracking."

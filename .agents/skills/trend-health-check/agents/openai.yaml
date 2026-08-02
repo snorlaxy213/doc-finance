@@ -1,0 +1,4 @@
+interface:
+  display_name: "个股技术走势健康度"
+  short_description: "Check whether a breakout or uptrend is still healthy in price and volume."
+  default_prompt: "Use $trend-health-check to check whether this stock's breakout or uptrend is still healthy in terms of price and volume."
