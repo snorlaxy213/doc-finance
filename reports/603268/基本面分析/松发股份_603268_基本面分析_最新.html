@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>松发股份(603268)基本面分析</title>
+<style>
+:root{
+  --ink:#1a2433;
+  --ink-soft:#46546a;
+  --line:#d8dee7;
+  --line-soft:#eef1f5;
+  --bg:#ffffff;
+  --brand:#1f3a5f;
+  --brand-2:#3b5b85;
+  --brand-light:#eaf0f8;
+  --accent:#8a6d3b;
+  --up:#b73333;
+  --down:#2f7a52;
+  --warn:#a06a1f;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Microsoft YaHei","Source Han Sans SC",system-ui,-apple-system,sans-serif;
+  color:var(--ink);
+  background:#fff;
+  line-height:1.7;
+  font-size:14.5px;
+  font-variant-numeric:tabular-nums;
+  -webkit-font-smoothing:antialiased;
+}
+.page{max-width:1600px;margin:0 auto;padding:0 32px;}
+.masthead{
+  display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px;
+  border-bottom:2px solid var(--brand);padding:24px 0 18px;
+}
+.masthead .m-left{min-width:280px;}
+.masthead .kode{font-size:12px;letter-spacing:.12em;color:var(--ink-soft);}
+.masthead h1{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC","Times New Roman",serif;
+  font-size:30px;font-weight:700;margin:6px 0 4px;color:var(--brand);letter-spacing:.5px;
+}
+.masthead .sub{font-size:13px;color:var(--ink-soft);}
+.masthead .meta{font-size:12.5px;color:var(--ink-soft);margin-top:12px;}
+.masthead .meta b{color:var(--ink);font-weight:600;}
+.masthead .m-stats{display:flex;gap:34px;flex-wrap:wrap;}
+.masthead .m-stats .ms-v{font-size:25px;font-weight:700;color:var(--brand);line-height:1;font-variant-numeric:tabular-nums;}
+.masthead .m-stats .ms-v span{font-size:13px;font-weight:500;color:var(--ink-soft);margin-left:2px;}
+.masthead .m-stats .ms-l{font-size:11.5px;color:var(--ink-soft);margin-top:5px;letter-spacing:.02em;}
+.verdict{
+  margin:16px 0 4px;border:1px solid var(--line);border-left:4px solid var(--brand);
+  background:#fbfcfe;border-radius:4px;padding:16px 20px;
+}
+.verdict-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-bottom:14px;}
+.verdict-head h2{margin:0;font-size:14px;letter-spacing:.1em;color:var(--brand);font-weight:700;}
+.verdict-headline{
+  margin:-2px 0 14px;padding:10px 12px;border:1px solid #dfe7f1;border-radius:4px;
+  background:#fff;color:var(--ink);font-size:15px;font-weight:600;line-height:1.7;
+}
+.verdict-headline .label{display:block;margin-bottom:2px;color:var(--brand);font-size:11px;font-weight:700;letter-spacing:.1em;}
+.badges{display:flex;flex-direction:row;flex-wrap:wrap;gap:8px;margin:0;}
+.badge{
+  display:inline-flex;align-items:center;gap:6px;font-size:12.5px;
+  padding:5px 11px;border-radius:999px;font-weight:600;line-height:1.4;
+}
+.badge .k{font-weight:500;opacity:.85;}
+.badge.fund{background:#fdecec;color:#9a2c2c;}
+.badge.qual{background:#eef3f8;color:#1f3a5f;}
+.badge.valu{background:#fdf3e3;color:#8a5a16;}
+.badge.fraud{background:#eef7f1;color:#2f6a48;}
+.verdict-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 40px;}
+.verdict-grid .v-title{font-size:12.5px;font-weight:700;letter-spacing:.04em;margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid var(--line);}
+.verdict-grid .v-title::before{content:"";display:inline-block;width:3px;height:12px;margin-right:7px;vertical-align:-1px;border-radius:2px;}
+.verdict-grid .v-up .v-title{color:var(--brand);}
+.verdict-grid .v-up .v-title::before{background:var(--brand);}
+.verdict-grid .v-risk .v-title{color:var(--warn);}
+.verdict-grid .v-risk .v-title::before{background:var(--warn);}
+.verdict-grid ul{margin:0;padding-left:18px;}
+.verdict-grid li{font-size:13.5px;margin:6px 0;line-height:1.65;}
+.note{
+  font-size:12px;color:var(--ink-soft);background:var(--line-soft);
+  padding:3px 8px;border-radius:3px;display:inline-block;
+}
+.verdict .note{display:block;margin-top:14px;}
+.kpis{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:1px;margin:16px 0 4px;
+  background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden;
+}
+.kpi{background:#fff;padding:13px 15px;min-width:0;}
+.kpi .kl{font-size:11.5px;color:var(--ink-soft);line-height:1.3;min-height:30px;}
+.kpi .kv{font-size:20px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;margin-top:5px;word-break:break-word;}
+.kpi .kv.up{color:var(--up);}
+.kpi .kv.down{color:var(--down);}
+.kpi .ks{font-size:11px;color:var(--ink-soft);margin-top:3px;font-variant-numeric:tabular-nums;}
+.forecast-panel{
+  margin:16px 0 6px;padding:18px 20px;border:1px solid #d8e2ef;border-left:4px solid var(--brand);
+  border-radius:4px;background:linear-gradient(135deg,#f7faff 0%,#fff 68%);
+}
+.forecast-panel.forecast-empty{padding:14px 18px;background:#fbfcfe;border-left-color:#a8b5c4;}
+.forecast-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;flex-wrap:wrap;}
+.forecast-kicker{display:block;font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--brand);margin-bottom:5px;}
+.forecast-head h2{margin:0;font-size:18px;line-height:1.35;color:var(--ink);}
+.forecast-tags{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end;}
+.forecast-tag{display:inline-flex;padding:4px 9px;border-radius:999px;background:#eaf1f8;color:#294d73;font-size:11px;font-weight:600;}
+.forecast-tag.warn{background:#fff0dc;color:#8a5615;}
+.forecast-tag.neutral{background:#edf0f3;color:#5e6873;}
+.forecast-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px;}
+.forecast-card{background:#fff;border:1px solid #e0e7ef;border-radius:4px;padding:12px 14px;min-width:0;}
+.forecast-label{font-size:11px;color:var(--ink-soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.forecast-value{font-size:20px;font-weight:700;color:var(--brand);line-height:1.3;margin-top:4px;font-variant-numeric:tabular-nums;}
+.forecast-change{font-size:11.5px;color:var(--ink-soft);margin-top:4px;}
+.forecast-note{margin:11px 0 0!important;font-size:11px!important;color:var(--ink-soft)!important;}
+.update-panel{
+  margin:16px 0 6px;padding:18px 20px;border:1px solid #ded7c9;border-left:4px solid var(--accent);
+  border-radius:4px;background:linear-gradient(135deg,#fffcf6 0%,#fff 72%);
+}
+.update-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:10px;}
+.update-head span{font-size:10.5px;font-weight:700;letter-spacing:.12em;color:var(--accent);}
+.update-head h2{font-size:18px;margin:0;color:var(--ink);}
+.update-body section{border:0;padding:0;}.update-body h3.sub{margin-top:8px;}
+.update-body .tbl-scroll{background:#fff;}
+.layout{
+  display:grid;grid-template-columns:208px minmax(0,1fr);gap:36px;align-items:start;
+  padding:14px 0 0;
+}
+.sidebar{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow-y:auto;padding:0 8px 0 0;}
+.sidebar::-webkit-scrollbar{width:6px;}
+.sidebar::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px;}
+.toc{position:static;background:transparent;border:none;margin:12px 0 16px;padding:0;}
+.toc .scroll{overflow:visible;white-space:normal;display:flex;flex-direction:column;gap:2px;}
+.toc a{
+  display:flex;align-items:center;gap:9px;
+  font-size:14px;line-height:1.25;color:var(--ink-soft);text-decoration:none;
+  padding:6px 8px;border-radius:5px;margin:0;border:1px solid transparent;
+}
+.toc a .toc-num{
+  flex:0 0 auto;font-family:"Times New Roman",serif;font-size:12px;font-weight:600;
+  color:var(--ink-soft);background:var(--line-soft);
+  width:22px;height:22px;border-radius:4px;font-variant-numeric:tabular-nums;
+  display:inline-flex;align-items:center;justify-content:center;
+}
+.toc a:hover{background:var(--brand-light);color:var(--brand);}
+.toc a:hover .toc-num{background:#fff;color:var(--brand);}
+.toc a.active{background:var(--brand);color:#fff;font-weight:600;}
+.toc a.active .toc-num{background:rgba(255,255,255,.22);color:#fff;}
+.main{min-width:0;}
+section{padding:16px 0 8px;border-top:1px solid var(--line-soft);scroll-margin-top:64px;}
+section:first-of-type{border-top:none;padding-top:6px;}
+h2.sec{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",serif;
+  font-size:19px;color:var(--brand);margin:6px 0 12px;font-weight:700;
+  display:flex;align-items:baseline;gap:10px;
+}
+h2.sec .num{
+  font-family:"Times New Roman",serif;font-size:14px;color:#fff;background:var(--brand);
+  padding:2px 9px;border-radius:3px;letter-spacing:.05em;font-weight:600;flex:0 0 auto;
+}
+h3.sub{font-size:14.5px;color:var(--ink);margin:16px 0 6px;font-weight:700;}
+p{margin:8px 0;}
+ul,ol{margin:8px 0;padding-left:22px;}
+li{margin:4px 0;}
+strong{color:var(--ink);}
+.tbl-scroll{overflow-x:auto;margin:10px 0;border:1px solid var(--line);border-radius:4px;}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums;}
+thead th{
+  background:#f3f6fa;color:var(--brand);font-weight:700;text-align:right;
+  padding:10px 12px;border-bottom:1.5px solid var(--brand);white-space:nowrap;
+  font-size:12.5px;letter-spacing:.02em;
+}
+thead th[scope=col]:first-child{text-align:left;}
+tbody td{padding:9px 12px;border-bottom:1px solid var(--line-soft);text-align:right;white-space:normal;word-break:break-word;}
+tbody th[scope=row]{
+  text-align:left;color:var(--ink);font-weight:600;
+  padding:9px 12px;border-bottom:1px solid var(--line-soft);white-space:nowrap;font-size:13px;background:#fafbfd;
+}
+tbody tr:nth-child(even) td{background:#fafbfd;}
+tbody tr:hover td{background:var(--brand-light);}
+.up{color:var(--up);}
+.down{color:var(--down);}
+.muted{color:var(--ink-soft);}
+a{color:var(--brand-2);text-decoration:underline;text-underline-offset:2px;word-break:break-all;}
+a:hover{color:var(--brand);}
+.note-copy{
+  margin:20px 0;border:1px solid var(--line);border-left:4px solid var(--accent);
+  background:#fbfcfe;border-radius:4px;padding:14px 16px;
+}
+.note-copy h2{margin:0 0 10px;font-size:13px;letter-spacing:.1em;color:var(--brand);font-weight:700;}
+pre{
+  margin:10px 0;padding:12px 14px;background:#f7f9fc;border:1px solid var(--line-soft);
+  border-radius:4px;overflow:auto;color:var(--ink);font-size:12.5px;line-height:1.6;
+}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;}
+footer{
+  margin-top:22px;border-top:2px solid var(--brand);padding:14px 0 30px;
+  font-size:11.5px;color:var(--ink-soft);line-height:1.7;font-variant-numeric:tabular-nums;
+}
+footer .disclaimer{background:var(--line-soft);padding:8px 12px;border-radius:3px;margin-bottom:8px;}
+@media (max-width:1100px){
+  .layout{grid-template-columns:1fr;gap:0;}
+  .sidebar{position:static;max-height:none;overflow:visible;padding:0;}
+  .toc{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);
+    border-bottom:1px solid var(--line);margin:0 -32px 16px;padding:10px 32px;}
+  .toc .scroll{overflow-x:auto;white-space:nowrap;flex-direction:row;}
+  .toc a{display:inline-flex;white-space:nowrap;border-left:none;border:1px solid transparent;padding:3px 9px;margin:2px;}
+  .toc a.active{border-left:none;background:var(--brand);color:#fff;}
+}
+@media (max-width:760px){
+  .verdict-grid{grid-template-columns:1fr;}
+  .kpis{grid-template-columns:repeat(3,1fr);}
+  .forecast-grid{grid-template-columns:1fr;}
+  .page{padding:0 18px;}
+  .masthead .m-stats{gap:22px;}
+}
+@media (max-width:460px){.kpis{grid-template-columns:repeat(2,1fr);}}
+@media print{
+  body{background:#fff;font-size:10.5px;}
+  .page{max-width:none;padding:0;}
+  .layout{grid-template-columns:1fr;}
+  .sidebar{position:static;max-height:none;overflow:visible;}
+  .toc{position:static;border:none;padding:0;margin:0 0 8px;}
+  .toc .scroll{overflow:visible;display:block;}
+  .toc a{font-size:10px;padding:1px 5px;display:inline-flex;}
+  .toc a.active{background:transparent;color:var(--ink);}
+  section{break-inside:avoid;padding-top:10px;}
+  table{font-size:9.5px;}
+  thead{display:table-header-group;}
+  tbody tr{break-inside:avoid;}
+  .badge{border:1px solid #ccc;}
+  .note-copy,.tbl-scroll,.kpis,.verdict,.forecast-panel{break-inside:avoid;}
+  .update-panel{break-inside:avoid;}
+  footer{break-inside:avoid;}
+  a{color:var(--ink);text-decoration:none;}
+  .kpi{border:1px solid #ccc;}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="masthead">
+    <div class="m-left">
+      <div class="kode">603268 · 交易所未识别 · 基本面分析</div>
+      <h1>松发股份 · 基本面分析</h1>
+      <div class="sub">基本面、财务质量、估值与风险初筛</div>
+      <div class="meta">数据口径 <b>行情 2026-07-31；总股本/募资 2026-07-16；订单 2026-03-31；最近正式财报 2026Q1；最近业绩预告 2026H1（2026-07-08）。</b> · 生成时间 <b>2026-08-02 18:43</b></div>
+    </div>
+    <div class="m-stats">
+      <div><div class="ms-v">152.60 元</div><div class="ms-l">收盘价 · 2026-07-31，前复权收盘</div></div>
+<div><div class="ms-v">1,554.46 亿元</div><div class="ms-l">总市值 · 收盘价 × 2026-07-16 验资后总股本 10.1872 亿股</div></div>
+<div><div class="ms-v">约 44.5 倍</div><div class="ms-l">PE · 市值 / 2025A 与 2026Q1 滚动归母净利润 34.94 亿元</div></div>
+<div><div class="ms-v">约 8.9 倍</div><div class="ms-l">PB · 定增后备考：市值 /（2026Q1 归母净资产 105.45 亿元 + 募资 70 亿元）</div></div>
+    </div>
+  </header>
+
+  <section class="verdict" aria-label="结论速览">
+    <div class="verdict-head">
+      <h2>结论速览</h2>
+      <div class="badges">
+        <span class="badge fund"><span class="k">基本面</span> 强</span>
+<span class="badge qual"><span class="k">财务质量</span> 一般</span>
+<span class="badge valu"><span class="k">估值</span> 偏高</span>
+<span class="badge fraud"><span class="k">造假风险初筛</span> 中</span>
+      </div>
+    </div>
+    <div class="verdict-headline"><span class="label">核心判断</span>松发股份已完成从亏损陶瓷企业到高景气民营造船龙头的基本面跃迁，订单、利润率和 2026Q1 现金流均强劲，但千亿级市值已透支相当多成长预期，合同资产、资本开支和高杠杆使其更像“高增长、高估值、高执行要求”的周期成长股，而非低风险价值股。</div>
+    <div class="verdict-grid">
+      <div class="v-col v-up">
+        <div class="v-title">核心理由</div>
+        <ul>
+<li>2026H1 预告归母约 36 亿元、扣非约 35 亿元，隐含 Q2 利润环比加速，且非经常项目依赖低。</li>
+<li>截至 2026-03-31，在手订单 284 艘、275.13 亿美元，显著覆盖未来收入，但订单结构、单船毛利和交付年份披露仍不充分。</li>
+<li>船舶建造毛利率由 2024 年约 12.25% 升至 2025 年 18.87%，2026Q1 合并毛利率进一步约 21.48%。</li>
+<li>2026Q1 经营现金流转正 39.96 亿元，但 2025 年全年仍为 -14.58 亿元，合同资产 2026Q1 末达 121.11 亿元。</li>
+<li>2026-07-31 备考 PE 约 44.5 倍、PB 约 8.9 倍、PS 约 5.6 倍，估值需要高增速持续兑现。</li>
+</ul>
+      </div>
+      <div class="v-col v-risk">
+        <div class="v-title">主要风险 / 关注</div>
+        <ul>
+<li>备考PE约44.5倍、PB约8.9倍，估值透支较多增长预期。</li>
+<li>高负债、长履约周期、钢价汇率及交付执行风险。</li>
+</ul>
+      </div>
+    </div>
+    <p class="note">口径:市场估值为时点数据,财务指标需区分年度、半年度、季度和单季口径;所有结论以公司正式披露和已核验来源为准。</p>
+  </section>
+
+  <div class="kpis" aria-label="关键指标速览">
+    <div class="kpi"><div class="kl">2026Q1归母净利</div><div class="kv">10.93 亿元</div><div class="ks">归母净利润</div></div>
+<div class="kpi"><div class="kl">2026Q1扣非净利</div><div class="kv">10.92 亿元</div><div class="ks">扣非归母净利润</div></div>
+<div class="kpi"><div class="kl">2026Q1毛利率</div><div class="kv">21.48%</div><div class="ks">毛利率</div></div>
+<div class="kpi"><div class="kl">2026Q1经营现金流</div><div class="kv">39.96 亿元</div><div class="ks">经营现金流净额</div></div>
+<div class="kpi"><div class="kl">2026Q1应收/合同资产</div><div class="kv">1.33/121.11 亿元</div><div class="ks">应收账款/合同资产</div></div>
+<div class="kpi"><div class="kl">2026Q1存货</div><div class="kv">49.69 亿元</div><div class="ks">存货</div></div>
+  </div>
+
+  <section class="forecast-panel" aria-label="最新财务预报"><div class="forecast-head"><div><span class="forecast-kicker">最新财务预报</span><h2>2026H1</h2></div><div class="forecast-tags"><span class="forecast-tag warn">未经审计</span><span class="forecast-tag">信息可信度 中</span><span class="forecast-tag">盈利质量 强</span></div></div><div class="forecast-grid"><div class="forecast-card"><div class="forecast-label">累计归母净利润</div><div class="forecast-value">约 36.00 亿元</div><div class="forecast-change">累计同比 约 +456.33%</div></div>
+<div class="forecast-card"><div class="forecast-label">累计扣非净利润</div><div class="forecast-value">约 35.00 亿元</div><div class="forecast-change">累计同比 约 +2,922.83%</div></div>
+<div class="forecast-card"><div class="forecast-label">隐含最新单季归母净利润</div><div class="forecast-value">约 25.07 亿元</div><div class="forecast-change">同比 约 +537.8% · 环比 约 +129.3%</div></div></div><p class="forecast-note">隐含单季数据根据累计预报和已披露财报推算，并非公司直接披露；正式结果以定期报告为准。</p></section>
+
+  <section class="update-panel" aria-label="本次更新"><div class="update-head"><span>RESEARCH CONTINUITY</span><h2>本次更新 · 与上次报告相比</h2></div><div class="update-body"><p>首次建立研究基线，无上次报告可比；基线日期为 2026-08-02。</p>
+<p><strong>本次触发事件：</strong>2026H1 业绩预增、2026 年 7 月完成 70 亿元定增、重大资产重组后进入首个完整跟踪年度。 <strong>新增确认事实：</strong>H1 扣非利润约 35 亿元；Q1 现金流显著转正；2026Q1 末订单达 284 艘、275.13 亿美元；退市风险警示已于 2026-04-20 撤销。 <strong>被证伪或弱化的旧假设：</strong>不适用，首次基线。 <strong>仍然有效的旧观点：</strong>不适用，首次基线。 <strong>仍待验证事项：</strong>H1 正式现金流、合同资产与毛利率；全年交付与订单转化；定增项目回报；高估值消化路径。</p></div></section>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="toc" aria-label="目录">
+        <div class="scroll" id="toc-scroll">
+          <a href="#s1"><span class="toc-num">01</span>核心财务指标</a>
+<a href="#s2"><span class="toc-num">02</span>近两年财报趋势与业务结构</a>
+<a href="#s3"><span class="toc-num">03</span>结论摘要</a>
+<a href="#s4"><span class="toc-num">04</span>公司与行业</a>
+<a href="#s5"><span class="toc-num">05</span>订单与需求验证</a>
+<a href="#s6"><span class="toc-num">06</span>财务质量验证</a>
+<a href="#s7"><span class="toc-num">07</span>股东与机构</a>
+<a href="#s8"><span class="toc-num">08</span>估值与同行对比</a>
+<a href="#s9"><span class="toc-num">09</span>负面信息与风险排查</a>
+<a href="#s10"><span class="toc-num">10</span>财务造假风险初筛</a>
+<a href="#s11"><span class="toc-num">11</span>后续跟踪清单</a>
+<a href="#s12"><span class="toc-num">12</span>信息边界</a>
+        </div>
+      </nav>
+    </aside>
+    <main class="main">
+      <section id="s1">
+<h2 class="sec"><span class="num">01</span>核心财务指标</h2>
+<h3 class="sub">1.1 当前估值快照</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">项目</th>
+<th scope="col">最新数据</th>
+<th scope="col">数据日期/口径</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">收盘价</th>
+<td>152.60 元</td>
+<td>2026-07-31，前复权收盘</td>
+<td>当前估值计算基础；行情来自东方财富历史行情接口</td>
+</tr>
+<tr>
+<th scope="row">总市值</th>
+<td>1,554.46 亿元</td>
+<td>收盘价 × 2026-07-16 验资后总股本 10.1872 亿股</td>
+<td>已计入 2026 年 7 月定增新增 0.4794 亿股</td>
+</tr>
+<tr>
+<th scope="row">流通市值</th>
+<td>355.96 亿元</td>
+<td>约 2.3326 亿股可流通股 × 收盘价；新增定增股暂按限售处理</td>
+<td class="down">自由流通盘远小于总股本，价格弹性和波动风险较高</td>
+</tr>
+<tr>
+<th scope="row">PE</th>
+<td>约 44.5 倍</td>
+<td>市值 / 2025A 与 2026Q1 滚动归母净利润 34.94 亿元</td>
+<td class="up">静态估值已充分计入高增长预期；未把 H1 预告简单年化</td>
+</tr>
+<tr>
+<th scope="row">PB</th>
+<td>约 8.9 倍</td>
+<td>定增后备考：市值 /（2026Q1 归母净资产 105.45 亿元 + 募资 70 亿元）</td>
+<td>高于传统重资产船企常见区间，需要高 ROE 持续兑现</td>
+</tr>
+<tr>
+<th scope="row">PS</th>
+<td>约 5.6 倍</td>
+<td>市值 / 滚动营业收入约 275.55 亿元</td>
+<td>对造船重资产、长周期业务而言不低</td>
+</tr>
+<tr>
+<th scope="row">股息率</th>
+<td>0%</td>
+<td>2025A 未分红</td>
+<td class="up">当前回报主要依赖盈利增长与估值，而非现金分红</td>
+</tr>
+</tbody></table></div>
+<p>估值计算使用公司 2026 年 7 月发行后总股本 1,018,716,941 股及募集资金 69.999999 亿元；发行前后的口径变化较大，PE、PB 与每股指标均应以后续定期报告正式重述为准。<a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12456640&amp;stockid=603268" target="_blank" rel="noopener">发行情况报告书</a></p>
+<h3 class="sub">1.2 最新财务预报与质量解读</h3>
+<h3 class="sub">1.2.1 累计业绩预报</h3>
+<p>公司于 2026 年 7 月 8 日披露 2026 年半年度业绩预增公告，属于报告执行日前 30 日内正式预报，数据未经审计。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260708_2026H1_%E6%AD%A3%E5%BC%8F%E6%8A%AB%E9%9C%B2_12434267.pdf">本地归档 PDF</a></p>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">本期预报区间</th>
+<th scope="col">上年同期</th>
+<th scope="col">同比变化</th>
+<th scope="col">预报中枢</th>
+<th scope="col">质量解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">预报期间</th>
+<td>2026H1</td>
+<td class="muted">不适用</td>
+<td class="muted">不适用</td>
+<td class="muted">不适用</td>
+<td>公告日 2026-07-08，未经审计</td>
+</tr>
+<tr>
+<th scope="row">预报营业收入</th>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td>不以利润增速倒推收入</td>
+</tr>
+<tr>
+<th scope="row">预报归母净利润</th>
+<td>约 36.00 亿元</td>
+<td>6.47 亿元</td>
+<td>约 +456.33%</td>
+<td>约 36.00 亿元</td>
+<td class="up">大幅增长，且主要由产能释放、交付提升和船型升级驱动</td>
+</tr>
+<tr>
+<th scope="row">预报扣非归母净利润</th>
+<td>约 35.00 亿元</td>
+<td>1.16 亿元</td>
+<td>约 +2,922.83%</td>
+<td>约 35.00 亿元</td>
+<td>与归母净利润同向，非经常性损益约 1 亿元，不主导盈利</td>
+</tr>
+<tr>
+<th scope="row">预报 EPS</th>
+<td class="muted">未披露</td>
+<td>2.62 元/股</td>
+<td class="muted">不适用</td>
+<td class="muted">未披露</td>
+<td>股本在重组与两轮定增中剧烈变化，不做机械推算</td>
+</tr>
+<tr>
+<th scope="row">预计非经常性损益</th>
+<td>约 1.00 亿元（推算）</td>
+<td>约 5.31 亿元（推算）</td>
+<td class="down">明显下降</td>
+<td>约 1.00 亿元</td>
+<td>归母与扣非差额推算，非公司单独披露</td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">1.2.2 隐含最新单季度同比与环比</h3>
+<p>以下为根据累计预报和已披露财报推算，非公司直接披露。</p>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">隐含本季度区间</th>
+<th scope="col">去年同季度</th>
+<th scope="col">单季同比</th>
+<th scope="col">上一季度</th>
+<th scope="col">单季环比</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">隐含单季营业收入</th>
+<td class="muted">未披露</td>
+<td>37.08 亿元</td>
+<td>无法计算</td>
+<td>88.88 亿元</td>
+<td>无法计算</td>
+<td>H1 预报未给收入</td>
+</tr>
+<tr>
+<th scope="row">隐含单季归母净利润</th>
+<td>约 25.07 亿元</td>
+<td>约 3.93 亿元</td>
+<td>约 +537.8%</td>
+<td>10.93 亿元</td>
+<td>约 +129.3%</td>
+<td>Q2 盈利动能明显加速</td>
+</tr>
+<tr>
+<th scope="row">隐含单季扣非归母净利润</th>
+<td>约 24.08 亿元</td>
+<td>约 1.37 亿元</td>
+<td>约 +1,654%</td>
+<td>10.92 亿元</td>
+<td>约 +120.5%</td>
+<td class="down">主业利润加速，且非经常项目依赖下降</td>
+</tr>
+<tr>
+<th scope="row">隐含单季 EPS</th>
+<td class="muted">未披露</td>
+<td class="muted">不适用</td>
+<td class="muted">不适用</td>
+<td>1.13 元/股</td>
+<td class="muted">不适用</td>
+<td>股本口径不完全可比</td>
+</tr>
+</tbody></table></div>
+<p><strong>财务预报质量判断：</strong>归母与扣非利润方向一致，扣非占归母约 97%，盈利质量表面较强；隐含 Q2 环比也显著提速。公告使用“左右”而非明确上下限，预测可见度不如窄区间预告；收入、毛利率、现金流、合同资产、存货及资本开支均未披露，仍需中报核验。信息可信度：<strong>中</strong>。盈利质量判断：<strong>强，但待现金流和合同资产验证</strong>。</p>
+<h3 class="sub">1.3 已披露当年期间财报</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">2025Q1（追溯调整）</th>
+<th scope="col">2026Q1</th>
+<th scope="col">变化解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>29.72 亿元</td>
+<td>88.88 亿元</td>
+<td class="up">+199.07%，交付量、开工量与规模效应共同驱动</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td>2.54 亿元</td>
+<td>10.93 亿元</td>
+<td class="down">+330.29%，增速快于收入</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td class="down">-0.21 亿元</td>
+<td>10.92 亿元</td>
+<td>主业实现实质性盈利跃迁</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td class="down">-13.02 亿元</td>
+<td>39.96 亿元</td>
+<td class="up">明显转正，是本期最重要的质量改善</td>
+</tr>
+<tr>
+<th scope="row">经营现金流/净利润</th>
+<td class="down">-5.12 倍</td>
+<td>3.65 倍</td>
+<td class="up">进度款回收改善，但单季波动大，不宜直接外推全年</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td>未确认</td>
+<td>未确认</td>
+<td>Q1 未单独披露资本开支现金口径</td>
+</tr>
+<tr>
+<th scope="row">EPS</th>
+<td>2.05 元/股</td>
+<td>1.13 元/股</td>
+<td>股本扩张导致每股收益不可直接同比</td>
+</tr>
+<tr>
+<th scope="row">ROE</th>
+<td>7.46%</td>
+<td>10.94%</td>
+<td class="up">盈利效率提升，但季度数据未经审计</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>19.46%</td>
+<td>21.48%</td>
+<td class="up">按营业收入与成本推算，产品结构与规模效应改善</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td class="down">-0.72%</td>
+<td>12.29%</td>
+<td class="up">核心盈利能力显著改善</td>
+</tr>
+<tr>
+<th scope="row">资本开支</th>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td>在建工程较年初增加 10.76 亿元，仍处扩张期</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>2025 年末 51.75 亿元</td>
+<td>49.69 亿元</td>
+<td class="down">较年初小幅下降</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td>1.17/103.80 亿元</td>
+<td>1.33/121.11 亿元</td>
+<td>合同资产较年初增加 16.7%，仍是主要资金占用项</td>
+</tr>
+<tr>
+<th scope="row">总资产</th>
+<td>493.92 亿元</td>
+<td>569.78 亿元</td>
+<td class="up">+15.36%，扩张较快</td>
+</tr>
+<tr>
+<th scope="row">归母净资产</th>
+<td>94.52 亿元</td>
+<td>105.45 亿元</td>
+<td class="up">+11.57%，主要来自当季利润留存</td>
+</tr>
+</tbody></table></div>
+<p>上述数据来自公司 2026 年第一季度报告，比较期因同一控制下合并追溯调整，且 Q1 未经审计。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260428_2026Q1_%E7%AC%AC%E4%B8%80%E5%AD%A3%E5%BA%A6%E6%8A%A5%E5%91%8A_12210244.pdf">本地归档 PDF</a></p>
+<h3 class="sub">1.4 最近三年年度财报</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">2023A</th>
+<th scope="col">2024A（调整后）</th>
+<th scope="col">2025A</th>
+<th scope="col">变化解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>2.06 亿元</td>
+<td>57.71 亿元</td>
+<td>216.39 亿元</td>
+<td class="up">重组与恒力重工产能爬坡造成结构性跃迁，非传统同口径内生增长</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td class="down">-1.17 亿元</td>
+<td>2.24 亿元</td>
+<td>26.55 亿元</td>
+<td class="up">2025 年盈利跨越式增长</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td class="down">-1.19 亿元</td>
+<td class="down">-0.78 亿元</td>
+<td>20.33 亿元</td>
+<td>2025 年主业已扭亏，但归母含约 6.22 亿元非经常性损益</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td class="down">-0.15 亿元</td>
+<td class="down">-28.81 亿元</td>
+<td class="down">-14.58 亿元</td>
+<td class="down">仍为负，是年报阶段最明显的质量短板</td>
+</tr>
+<tr>
+<th scope="row">经营现金流/净利润</th>
+<td class="muted">不适用</td>
+<td class="down">-12.84 倍</td>
+<td class="down">-0.55 倍</td>
+<td class="up">2025 年改善但利润尚未转化为全年经营现金净流入</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td>未确认</td>
+<td>约 -77.29 亿元</td>
+<td>约 -110.88 亿元</td>
+<td>按经营现金流减购建长期资产现金支出粗算，扩产吞噬现金</td>
+</tr>
+<tr>
+<th scope="row">EPS</th>
+<td class="down">-0.94 元/股</td>
+<td>0.26 元/股</td>
+<td>2.96 元/股</td>
+<td>股本变化大，趋势参考意义弱于总利润</td>
+</tr>
+<tr>
+<th scope="row">ROE</th>
+<td class="down">-87.59%</td>
+<td>17.40%</td>
+<td>46.77%</td>
+<td>受低基数、同控合并与资本结构变化影响，不宜长期外推</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>未确认</td>
+<td>约 14.40%</td>
+<td>约 20.40%</td>
+<td class="up">按合并收入成本推算，规模效应和船型结构明显改善</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td class="down">-57.78%</td>
+<td class="down">-1.36%</td>
+<td>9.39%</td>
+<td>核心盈利跃迁</td>
+</tr>
+<tr>
+<th scope="row">资本开支</th>
+<td>未确认</td>
+<td>约 48.48 亿元</td>
+<td>约 96.30 亿元</td>
+<td>重资产扩张加速，未来折旧与回报效率需持续检验</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>未确认</td>
+<td>18.52 亿元</td>
+<td>51.75 亿元</td>
+<td class="up">+179.37%，与开工船舶增加一致，但需关注跌价和周转</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td>未确认</td>
+<td>2.04/22.91 亿元</td>
+<td>1.17/103.80 亿元</td>
+<td class="down">应收账款低，但合同资产增长 353%，是现金流压力核心</td>
+</tr>
+<tr>
+<th scope="row">总资产</th>
+<td>5.65 亿元</td>
+<td>194.43 亿元</td>
+<td>493.92 亿元</td>
+<td>重组与扩产带来数量级变化</td>
+</tr>
+<tr>
+<th scope="row">归母净资产</th>
+<td>0.75 亿元</td>
+<td>32.79 亿元</td>
+<td>94.52 亿元</td>
+<td class="up">注资、重组和利润留存共同提升</td>
+</tr>
+</tbody></table></div>
+<p><strong>核心指标综合判断：</strong>2025 年的增长不是原陶瓷业务改善，而是恒力重工置入、产能集中释放、交付加速及高附加值船型提升的共同结果。利润率已形成可观察的改善趋势，2026Q1 现金流也转正；但 2025 年全年经营现金流和自由现金流仍为负，合同资产、资本开支、有息负债同步扩张。利润真实性暂未出现直接证伪证据，但现金转化尚未经历完整周期验证。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260310_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_11987763.pdf">2025 年年度报告本地归档 PDF</a></p>
+</section>
+<section id="s2">
+<h2 class="sec"><span class="num">02</span>近两年财报趋势与业务结构</h2>
+<h3 class="sub">2.1 近两年财报趋势</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">项目</th>
+<th scope="col">2024A（调整后）</th>
+<th scope="col">2025A</th>
+<th scope="col">变化</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>57.71 亿元</td>
+<td>216.39 亿元</td>
+<td class="up">+274.95%</td>
+<td>恒力重工产能与交付快速释放</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td>2.24 亿元</td>
+<td>26.55 亿元</td>
+<td class="up">+1,083.05%</td>
+<td class="up">规模效应和毛利率提升放大利润弹性</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td class="down">-0.78 亿元</td>
+<td>20.33 亿元</td>
+<td>扭亏</td>
+<td>主业已跨过盈亏平衡点</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>约 14.40%</td>
+<td>约 20.40%</td>
+<td class="up">+6.0pct</td>
+<td class="up">与船舶主业毛利率改善方向一致</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td class="down">-1.36%</td>
+<td>9.39%</td>
+<td class="up">+10.75pct</td>
+<td class="up">费用摊薄与产品结构改善</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td class="down">-28.81 亿元</td>
+<td class="down">-14.58 亿元</td>
+<td class="up">改善 14.23 亿元</td>
+<td class="up">仍未转正</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td>约 -77.29 亿元</td>
+<td>约 -110.88 亿元</td>
+<td>进一步流出</td>
+<td>扩产处于高投入期</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>18.52 亿元</td>
+<td>51.75 亿元</td>
+<td class="up">+179.37%</td>
+<td>开工项目增加所致</td>
+</tr>
+<tr>
+<th scope="row">应收账款/合同资产</th>
+<td>2.04/22.91 亿元</td>
+<td>1.17/103.80 亿元</td>
+<td>合同资产 +352.97%</td>
+<td>进度确认与回款错配是最需跟踪的资产质量项目</td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">2.2 分业务情况</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">业务</th>
+<th scope="col">2024A 收入</th>
+<th scope="col">2024A 毛利率</th>
+<th scope="col">2025A 收入</th>
+<th scope="col">2025A 毛利率</th>
+<th scope="col">变化</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">船舶建造及相关产品</th>
+<td>49.65 亿元</td>
+<td>12.25%</td>
+<td>208.64 亿元</td>
+<td>18.87%</td>
+<td>收入 +320.19%，毛利率 +6.62pct，绝对主引擎</td>
+</tr>
+<tr>
+<th scope="row">其他业务</th>
+<td>4.82 亿元</td>
+<td>6.95%</td>
+<td>0.98 亿元</td>
+<td>6.10%</td>
+<td>重组后非核心业务显著收缩</td>
+</tr>
+<tr>
+<th scope="row">营业收入中的其他口径</th>
+<td>约 3.24 亿元</td>
+<td class="muted">未披露</td>
+<td>约 6.77 亿元</td>
+<td class="muted">未披露</td>
+<td class="up">与主营分部表口径差额，不作为独立增长业务判断</td>
+</tr>
+</tbody></table></div>
+<p><strong>业务结构判断：</strong>船舶制造已成为压倒性主业，增长由“集、散、油”多船型交付与发动机自供驱动。2026 年 3 月末正式生效在手订单 284 艘、275.13 亿美元，排产能见度强；但船舶是长周期履约业务，订单额并不等于当期收入或利润，最终质量取决于钢价、汇率、建造进度、进度款和交付验收。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260518_2026_%E6%AD%A3%E5%BC%8F%E6%8A%AB%E9%9C%B2_603268_20260518_0MS3.pdf">审核问询回复本地归档 PDF，第 95 页</a></p>
+</section>
+<section id="s3">
+<h2 class="sec"><span class="num">03</span>结论摘要</h2>
+<h3 class="sub">3.1 当前结论</h3>
+<ul>
+<li>基本面判断：强</li>
+<li>财务质量：一般</li>
+<li>估值状态：偏高</li>
+<li>财务造假风险初筛：中</li>
+<li>核心理由：</li>
+<ol>
+<li>2026H1 预告归母约 36 亿元、扣非约 35 亿元，隐含 Q2 利润环比加速，且非经常项目依赖低。</li>
+<li>截至 2026-03-31，在手订单 284 艘、275.13 亿美元，显著覆盖未来收入，但订单结构、单船毛利和交付年份披露仍不充分。</li>
+<li>船舶建造毛利率由 2024 年约 12.25% 升至 2025 年 18.87%，2026Q1 合并毛利率进一步约 21.48%。</li>
+<li>2026Q1 经营现金流转正 39.96 亿元，但 2025 年全年仍为 -14.58 亿元，合同资产 2026Q1 末达 121.11 亿元。</li>
+<li>2026-07-31 备考 PE 约 44.5 倍、PB 约 8.9 倍、PS 约 5.6 倍，估值需要高增速持续兑现。</li>
+</ol>
+</ul>
+<h3 class="sub">3.2 与上次报告相比</h3>
+<p>首次建立研究基线，无上次报告可比；基线日期为 2026-08-02。</p>
+<p><strong>本次触发事件：</strong>2026H1 业绩预增、2026 年 7 月完成 70 亿元定增、重大资产重组后进入首个完整跟踪年度。 <strong>新增确认事实：</strong>H1 扣非利润约 35 亿元；Q1 现金流显著转正；2026Q1 末订单达 284 艘、275.13 亿美元；退市风险警示已于 2026-04-20 撤销。 <strong>被证伪或弱化的旧假设：</strong>不适用，首次基线。 <strong>仍然有效的旧观点：</strong>不适用，首次基线。 <strong>仍待验证事项：</strong>H1 正式现金流、合同资产与毛利率；全年交付与订单转化；定增项目回报；高估值消化路径。</p>
+</section>
+<section id="s4">
+<h2 class="sec"><span class="num">04</span>公司与行业</h2>
+<ul>
+<li>主营业务：船舶及高端装备的研发、设计、生产和销售，重组后已退出原日用陶瓷业务。</li>
+<li>主要产品：散货船、油轮、集装箱船、气体运输船、船用发动机及高端装备。</li>
+<li>市场占有率：未找到按载重吨或修正总吨口径、经第三方验证的公司全球市占率；公司称其已进入全球造船第一梯队，不将该表述等同于可核验市占率。</li>
+<li>行业景气度：高位景气但订单增速会波动。2025 年中国新签订单、完工量、手持订单全球份额分别为 69.0%、56.1%、66.8%，船位排期普遍延至 2029—2030 年。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260310_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_11987763.pdf">2025 年年度报告本地归档 PDF</a></li>
+<li>核心竞争力：长兴岛大型船坞与龙门吊集群、发动机自供、大连与上海双研发基地、多船型批量化节拍生产、民营机制与恒力集团供应链协同。</li>
+<li>主要依赖：行业景气、海外船东美元订单、钢材与关键设备供应、实际控制人体系融资与关联交易支持；客户名单与单一客户集中度披露有限。</li>
+</ul>
+</section>
+<section id="s5">
+<h2 class="sec"><span class="num">05</span>订单与需求验证</h2>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">日期</th>
+<th scope="col">来源与链接</th>
+<th scope="col">项目/订单名称</th>
+<th scope="col">客户/采购方</th>
+<th scope="col">产品/服务</th>
+<th scope="col">金额</th>
+<th scope="col">状态</th>
+<th scope="col">履约周期</th>
+<th scope="col">是否公司正式公告</th>
+<th scope="col">对收入影响</th>
+<th scope="col">可信度</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">2026-02-25</th>
+<td><a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260225_2026_%E5%90%88%E5%90%8C%E8%AE%A2%E5%8D%95_603268_20260225_9CAU.pdf">本地公告</a></td>
+<td>欧洲知名船东造船合同</td>
+<td>具体名称豁免披露</td>
+<td>船舶建造，具体数量/船型豁免</td>
+<td>金额豁免</td>
+<td>已签合同</td>
+<td>签约至交付</td>
+<td>是</td>
+<td>对未来业绩积极，具体年度未披露</td>
+<td>高（合同存在）/中（财务量化）</td>
+</tr>
+<tr>
+<th scope="row">2026-03-31</th>
+<td><a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260518_2026_%E6%AD%A3%E5%BC%8F%E6%8A%AB%E9%9C%B2_603268_20260518_0MS3.pdf">审核问询回复</a></td>
+<td>在手订单汇总</td>
+<td>多家船东</td>
+<td>284 艘船舶</td>
+<td>275.13 亿美元</td>
+<td>已正式签约生效</td>
+<td>主流排期延至 2029—2030 年</td>
+<td>是</td>
+<td>订单额约为 2025 年收入的 9 倍（按 7.0 汇率粗算）</td>
+<td>高</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>已披露订单/合同：正式生效订单储备充足，订单覆盖期长；个别合同因商业保密未披露金额和客户。</li>
+<li>招投标与客户侧线索：造船业务主要依赖船东商业订单，不适用典型政府招投标口径；未将媒体传闻纳入订单汇总。</li>
+<li>订单状态区分：上述均为已签生效合同或公司正式汇总，不是意向协议；但未等同于已交付收入。</li>
+<li>订单金额与最近年度营收比例：按 1 美元约 7 元粗算，在手订单约 1,926 亿元，约为 2025 年收入的 8.9 倍；汇率假设仅用于量级比较。</li>
+<li>履约周期与收入确认节奏：船舶按履约进度确认收入，订单将跨多个年度转化；交付延期、成本超支会改变利润率。</li>
+<li>合同负债/存货/应收/现金流验证：2025 年合同负债 53.54 亿元、同比 +338%，与订单增长方向一致；2026Q1 经营现金流转正，但合同资产增至 121.11 亿元，回款仍需跟踪。</li>
+<li>订单趋势判断：改善</li>
+<li>信息可信度：高（订单总额）/中（利润转化）</li>
+</ul>
+</section>
+<section id="s6">
+<h2 class="sec"><span class="num">06</span>财务质量验证</h2>
+<ul>
+<li>利润与现金流匹配：2025 年归母 26.55 亿元而经营现金流 -14.58 亿元，全年不匹配；2026Q1 经营现金流 39.96 亿元、为净利润 3.65 倍，出现重要修复。需用 2026H1/全年确认是否可持续。</li>
+<li>应收账款与营收匹配：应收账款较低且 2025 年下降，但造船进度款更多沉淀在合同资产；不能只看应收账款得出回款优良结论。</li>
+<li>存货与营收匹配：2025 年存货增 179%，低于收入增 275%；2026Q1 存货环比下降 4%，暂未显示异常堆积。</li>
+<li>资本开支效率与自由现金流：2025 年购建长期资产现金支出约 96.30 亿元，自由现金流约 -110.88 亿元；扩产效果已在利润端显现，但资本回收周期仍长。</li>
+<li>预付款/其他应收款/在建工程/商誉异常：2026Q1 预付款 47.97 亿元、在建工程 25.95 亿元，均随开工及扩建上升；无商誉。其他应收款绝对额较小，但较年初增长较快。</li>
+<li>资产负债率与有息负债：2026Q1 资产负债率约 81.49%；短期借款 67.55 亿元、长期借款及一年内到期负债规模较大。7 月定增 70 亿元可降低备考杠杆，但募投继续消耗资金。</li>
+<li>综合判断：盈利能力强、Q1 现金修复明显，但全年现金转化、高合同资产和高杠杆决定财务质量仅评为“一般”。</li>
+</ul>
+</section>
+<section id="s7">
+<h2 class="sec"><span class="num">07</span>股东与机构</h2>
+<ul>
+<li>十大股东持股占比：2026Q1 前十大合计约 81.95%；其中实际控制人一致行动体系合计约 79.84%，控制权高度集中。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260428_2026Q1_%E7%AC%AC%E4%B8%80%E5%AD%A3%E5%BA%A6%E6%8A%A5%E5%91%8A_12210244.pdf">2026Q1 报告本地归档 PDF</a></li>
+<li>实控人/大股东持股与质押：陈建华、范红卫夫妇为实际控制人；2026Q1 前五名一致行动人所持股份均显示无质押/冻结。</li>
+<li>大股东减持或增持：截至本次核验，未发现 2026 年已正式披露的控制人减持计划；仍需持续跟踪限售期与业绩承诺解锁条件。</li>
+<li>入驻机构家数：无法以统一基金季报口径确认总家数；前十大出现 UBS、Morgan Stanley、中国中信金融资产等机构。</li>
+<li>机构类型：境外机构、国有金融资产管理公司及定增参与机构；2025 年末流通股东亦曾出现公募与社保组合。</li>
+<li>治理风险判断：控制权稳定但集中度极高；同一控制下重组、关联采购销售与资金往来需要持续检视定价公允性和独立性。</li>
+</ul>
+</section>
+<section id="s8">
+<h2 class="sec"><span class="num">08</span>估值与同行对比</h2>
+<ul>
+<li>当前估值：备考 PE 约 44.5 倍、PB 约 8.9 倍、PS 约 5.6 倍；即使 H1 利润高增，绝对估值仍偏高。</li>
+<li>同行业估值对比：未找到同一行情日、同一股本与同一会计口径的可靠全量同行数据，因此不列伪精确横表。中国船舶、中国重工等央企船厂业务结构、资产注入进度与军民品组合差异显著，直接比较 PE 容易误导。</li>
+<li>同行业收入增速/毛利率/扣非净利率/ROE/现金流质量对比：松发股份处于新产能爬坡期，增速与 ROE 显著高于成熟船企，但 2025 年经营现金流和自由现金流弱于利润表现；高成长来自低基数和产能释放，不能视作稳态水平。</li>
+<li>估值是否匹配成长与财务质量：市场已按“全球民营造船龙头 + 高增长兑现”定价。只有 2026—2027 年交付、毛利率、现金流同步兑现，当前估值才有消化空间；任一环节不及预期都可能触发估值压缩。</li>
+</ul>
+</section>
+<section id="s9">
+<h2 class="sec"><span class="num">09</span>负面信息与风险排查</h2>
+<ul>
+<li>是否亏损：2024 年扣非亏损；2025 年及 2026Q1 已盈利。</li>
+<li>是否 ST 或退市风险：2025-04-29 因原业务 2024 年亏损且扣除后营收低于 3 亿元被实施退市风险警示；2026-04-20 已撤销，当前不存在已确认的退市风险警示。<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260417_%E6%9C%9F%E9%97%B4%E5%BE%85%E6%A0%B8%E9%AA%8C_%E6%AD%A3%E5%BC%8F%E6%8A%AB%E9%9C%B2_603268_20260417_BJTS.pdf">撤销风险警示本地公告</a></li>
+<li>审计意见：中汇会计师事务所对 2025 年财务报告及内部控制出具标准无保留意见。</li>
+<li>监管问询/处罚：重大重组及 2026 年定增均收到交易所审核问询并已回复；未发现截至 2026-08-02 针对公司财务造假的监管处罚或立案。</li>
+<li>诉讼仲裁：未发现达到足以单独下调结论的重大未决诉讼证据；普通经营争议仍以最新定期报告为准。</li>
+<li>负面新闻：主要风险叙事集中在高估值、重资产扩张、高负债、关联交易及造船周期反转，而非已证实的财务造假事件。</li>
+<li>关联交易/客户供应商真实性争议：恒力体系关联交易规模需要持续审阅；目前未找到监管、审计或司法对主要客户/供应商虚构作出定性的证据。</li>
+</ul>
+</section>
+<section id="s10">
+<h2 class="sec"><span class="num">10</span>财务造假风险初筛</h2>
+<ul>
+<li>红旗数量：3 个主要观察项。</li>
+<li>主要红旗：① 2025 年利润高增但经营现金流仍负；② 合同资产一年增长 353%，2026Q1 又增加 16.7%；③ 同控重组后资产、利润与股本口径剧变，关联体系集中度高，历史可比性弱。</li>
+<li>风险等级：中</li>
+<li>解释：这是财务与治理风险初筛，不是造假事实定性。缓释因素包括 2026Q1 经营现金流显著转正、应收账款低、无商誉、2025 年标准无保留审计意见、H1 扣非利润占比高。只有监管、审计、司法或公司公告确认后才能对财务造假作事实定性。</li>
+</ul>
+</section>
+<section id="s11">
+<h2 class="sec"><span class="num">11</span>后续跟踪清单</h2>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">跟踪事项</th>
+<th scope="col">首次提出</th>
+<th scope="col">上次状态</th>
+<th scope="col">本次证据</th>
+<th scope="col">当前状态</th>
+<th scope="col">下次验证时间/触发条件</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">2026H1 预告兑现及利润质量</th>
+<td>2026-08-02</td>
+<td>首次</td>
+<td>归母约 36 亿、扣非约 35 亿</td>
+<td>待验证</td>
+<td>2026H1 正式报告披露</td>
+</tr>
+<tr>
+<th scope="row">经营现金流能否持续转正</th>
+<td>2026-08-02</td>
+<td>首次</td>
+<td>2025A -14.58 亿；2026Q1 +39.96 亿</td>
+<td>部分验证</td>
+<td>H1/2026A 经营现金流不低于净利润的 0.8 倍</td>
+</tr>
+<tr>
+<th scope="row">合同资产与回款匹配</th>
+<td>2026-08-02</td>
+<td>首次</td>
+<td>2026Q1 合同资产 121.11 亿，环比 +16.7%</td>
+<td>待验证</td>
+<td class="up">增速不长期高于收入，且减值率无异常上升</td>
+</tr>
+<tr>
+<th scope="row">在手订单向收入与毛利转化</th>
+<td>2026-08-02</td>
+<td>首次</td>
+<td>284 艘、275.13 亿美元</td>
+<td>部分验证</td>
+<td>每季交付、在手订单、新签订单和毛利率披露</td>
+</tr>
+<tr>
+<th scope="row">定增 70 亿元募投回报</th>
+<td>2026-08-02</td>
+<td>首次</td>
+<td>2026-07 完成发行</td>
+<td>待验证</td>
+<td>募投进度、产能利用率、资本开支与折旧</td>
+</tr>
+<tr>
+<th scope="row">高估值消化</th>
+<td>2026-08-02</td>
+<td>首次</td>
+<td>备考 PE 44.5x、PB 8.9x</td>
+<td>待验证</td>
+<td class="up">盈利预测下修或 PE 仍高于增长质量时触发复盘</td>
+</tr>
+<tr>
+<th scope="row">关联交易与资金独立性</th>
+<td>2026-08-02</td>
+<td>首次</td>
+<td>控制人体系持股约 79.84%</td>
+<td>待验证</td>
+<td>年报关联交易、资金拆借、担保和审计意见</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>新增订单金额与年初至今累计订单金额：公司未完整披露 2026 年初至今新签金额，需以后续经营数据补足。</li>
+<li>订单金额/上年营收：现有在手订单粗算约 8.9 倍 2025 年收入。</li>
+<li>重点客户复购与新增客户：欧洲知名船东合同已确认，但客户名称和金额豁免披露。</li>
+<li>中标候选人转正式中标/签约情况：不适用典型招标链路；只跟踪正式生效造船合同。</li>
+<li>合同负债、存货、应收账款和经营现金流变化：列为每季强制复核项。</li>
+<li>触发深度复盘条件：H1 正式利润偏离预告超过 5%；经营现金流再次大额转负；合同资产增速显著高于收入；订单取消/交付延误；毛利率单季下降超过 3pct；出现审计非标、监管立案或重大关联资金占用。</li>
+</ul>
+</section>
+<section id="s12">
+<h2 class="sec"><span class="num">12</span>信息边界</h2>
+<ul>
+<li>分析范围：报告执行日 2026-08-02；行情截至 2026-07-31；财务覆盖 2023A—2025A、2026Q1 及未经审计的 2026H1 预告；首次基线，无上次报告。2025 年重大资产重组构成同一控制下合并，2024 年及 2025Q1 数据经追溯调整，2023 年与重组后主体可比性尤其弱；2026 年 7 月定增尚未进入 Q1 报表，估值采用备考口径。</li>
+<li>数据日期：行情 2026-07-31；总股本/募资 2026-07-16；订单 2026-03-31；最近正式财报 2026Q1；最近业绩预告 2026H1（2026-07-08）。</li>
+<li>主要数据来源：上海证券交易所及公司正式公告、公司定期报告、发行文件；行情使用东方财富公开历史行情接口。报告中的派生数均标注计算口径。</li>
+<li>本地原始资料：<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260310_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_11987763.pdf">2025 年年度报告</a>、<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260428_2026Q1_%E7%AC%AC%E4%B8%80%E5%AD%A3%E5%BA%A6%E6%8A%A5%E5%91%8A_12210244.pdf">2026Q1 报告</a>、<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260708_2026H1_%E6%AD%A3%E5%BC%8F%E6%8A%AB%E9%9C%B2_12434267.pdf">2026H1 业绩预告</a>、<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260225_2026_%E5%90%88%E5%90%8C%E8%AE%A2%E5%8D%95_603268_20260225_9CAU.pdf">重大合同公告</a>、<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260417_%E6%9C%9F%E9%97%B4%E5%BE%85%E6%A0%B8%E9%AA%8C_%E6%AD%A3%E5%BC%8F%E6%8A%AB%E9%9C%B2_603268_20260417_BJTS.pdf">撤销退市风险警示公告</a>、<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260518_2026_%E6%AD%A3%E5%BC%8F%E6%8A%AB%E9%9C%B2_603268_20260518_0MS3.pdf">定增审核问询回复</a>。部分上交所静态链接返回压缩校验异常，索引保留失败记录；相同正式文件通过交易所繁体镜像或信披镜像完成归档。</li>
+<li>尚未核验的信息：2026H1 正式收入、毛利率、现金流与资产负债表；2026 年新签订单完整明细；按独立第三方口径计算的全球市占率；同一行情日可比公司一致估值。</li>
+<li>可能影响结论的新公告或市场事件：2026H1 正式报告、订单取消或新增大单、钢价与人民币汇率显著波动、定增募投进度、船舶环保政策与全球航运资本开支变化。</li>
+</ul>
+</section>
+
+      <section id="note-friendly">
+        <h2 class="sec"><span class="num">◎</span>基本面速记</h2>
+        <div class="note-copy">
+          <h2>可复制摘要</h2>
+          <pre><code>【基本面速记】
+公司：松发股份（603268）
+结论：基本面（强），财务质量（一般），估值（偏高）。
+核心看点：
+1. 2026H1 预告归母约36亿元、扣非约35亿元，隐含Q2盈利显著加速。
+2. 2026Q1末在手订单284艘、275.13亿美元，排产能见度高。
+3. 船舶毛利率和Q1经营现金流明显改善，但合同资产和资本开支仍高。
+主要风险：
+1. 备考PE约44.5倍、PB约8.9倍，估值透支较多增长预期。
+2. 高负债、长履约周期、钢价汇率及交付执行风险。
+最新财务预报：2026H1归母约36亿元，同比+456.33%；扣非约35亿元，同比+2,922.83%；隐含Q2归母同比约+537.8%、环比约+129.3%；信息可信度中；盈利质量判断强但待现金流验证。
+财务造假风险初筛：中。理由：全年现金流与利润错配、合同资产快速增长、同控重组与关联体系集中；但Q1现金流转正、无商誉且审计标准无保留。
+订单/需求验证：改善。依据：正式生效在手订单284艘、275.13亿美元。
+后续跟踪：H1正式现金流与合同资产、订单转化、定增回报、毛利率和关联交易。</code></pre>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="disclaimer">
+      免责声明:本报告为基于公开财报、公告、行情与新闻资料的整理和财务质量初筛,不构成任何投资建议,不保证未来收益。投资有风险,决策需谨慎。所有数据以公司正式披露为准。
+    </div>
+    <div>报告主体:松发股份(603268) | 数据口径:行情 2026-07-31；总股本/募资 2026-07-16；订单 2026-03-31；最近正式财报 2026Q1；最近业绩预告 2026H1（2026-07-08）。</div>
+    <div>主要数据来源:上海证券交易所及公司正式公告、公司定期报告、发行文件；行情使用东方财富公开历史行情接口。报告中的派生数均标注计算口径。</div>
+    <div>自包含离线 HTML · 内联 CSS / 极简内联 JS · 可直接在浏览器打开</div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var links = document.querySelectorAll('nav.toc a');
+  var map = {};
+  for (var i=0;i<links.length;i++){
+    var href = links[i].getAttribute('href') || '';
+    if (href.charAt(0) === '#') map[href.slice(1)] = links[i];
+  }
+  var sections = document.querySelectorAll('main section[id]');
+  function onScroll(){
+    var pos = (window.scrollY || document.documentElement.scrollTop) + 90;
+    var cur = null;
+    for (var j=0;j<sections.length;j++){
+      if (sections[j].offsetTop <= pos) cur = sections[j].id;
+    }
+    for (var k=0;k<links.length;k++) links[k].classList.remove('active');
+    if (cur && map[cur]) {
+      map[cur].classList.add('active');
+      var act = map[cur];
+      var sc = document.getElementById('toc-scroll');
+      if (sc && act.offsetLeft < sc.scrollLeft) sc.scrollLeft = act.offsetLeft - 8;
+      if (sc && act.offsetLeft + act.offsetWidth > sc.scrollLeft + sc.clientWidth) {
+        sc.scrollLeft = act.offsetLeft + act.offsetWidth - sc.clientWidth + 8;
+      }
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
+</body>
+</html>

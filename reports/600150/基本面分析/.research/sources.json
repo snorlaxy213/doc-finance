@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-08-02T20:43:16+08:00",
+  "sources": [
+    {
+      "source_id": "FAILED-3d9b8cd480c9",
+      "title": "中国船舶2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260430",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-30/600150_20260430_TC3V.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-08-02T20:37:40+08:00",
+      "used_by": [
+        "中国船舶_600150_基本面分析_20260802_203620.md"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "FAILED-14d0953ccddb",
+      "title": "中国船舶2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260430",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-30/600150_20260430_DRFR.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-08-02T20:37:40+08:00",
+      "used_by": [
+        "中国船舶_600150_基本面分析_20260802_203620.md"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "FAILED-ec065ce894f7",
+      "title": "中国船舶2026年半年度业绩预增公告",
+      "document_type": "正式披露",
+      "period": "2026H1",
+      "published_date": "20260714",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-07-14/600150_20260714_QX77.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-08-02T20:37:41+08:00",
+      "used_by": [
+        "中国船舶_600150_基本面分析_20260802_203620.md"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "FAILED-2e87d3f8cc1d",
+      "title": "中国船舶2025年度及2026年第一季度业绩说明会召开情况",
+      "document_type": "正式披露",
+      "period": "2025Q1",
+      "published_date": "20260603",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-06-03/600150_20260603_Z8GR.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-08-02T20:37:41+08:00",
+      "used_by": [
+        "中国船舶_600150_基本面分析_20260802_203620.md"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "FAILED-46ccc23d6a3e",
+      "title": "中国船舶吸收合并中国重工实施情况暨新增股份上市公告书",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20250912",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-09-12/600150_20250912_YD4T.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-08-02T20:37:41+08:00",
+      "used_by": [
+        "中国船舶_600150_基本面分析_20260802_203620.md"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "FAILED-d34031436bf7",
+      "title": "中国船舶2025年度内控审计报告",
+      "document_type": "审计报告",
+      "period": "2025",
+      "published_date": "20260430",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-30/600150_20260430_4IWK.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-08-02T20:37:41+08:00",
+      "used_by": [
+        "中国船舶_600150_基本面分析_20260802_203620.md"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "FAILED-afb2f64a4419",
+      "title": "中国船舶2025年年度权益分派实施公告",
+      "document_type": "正式披露",
+      "period": "2025",
+      "published_date": "20260711",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-07-11/600150_20260711_NRRU.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-08-02T20:37:42+08:00",
+      "used_by": [
+        "中国船舶_600150_基本面分析_20260802_203620.md"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "SRC-20260430-8ec06cdc",
+      "title": "中国船舶2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260430",
+      "official_url": "https://www.imarine.cn/wp-content/uploads/2026/04/20260430085244980.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260430_2025A_年度报告_20260430085244980.pdf",
+      "sha256": "8ec06cdc998f3b328f53025669196b9ca780a07e110f64199edeb6a9915020ff",
+      "bytes": 2150570,
+      "pages": 258,
+      "retrieved_at": "2026-08-02T20:40:07+08:00",
+      "used_by": [
+        "中国船舶_600150_基本面分析_20260802_203620.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260429-04d7f673",
+      "title": "中国船舶2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260429",
+      "official_url": "https://pdf.dfcfw.com/pdf/H2_AN202604291821761378_1.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260429_2026Q1_第一季度报告_H2_AN202604291821761378_1.pdf",
+      "sha256": "04d7f6734ba9fb54fccc43f43ca6ea4617b3eb3c2fd0dad339660b0413ecf7cc",
+      "bytes": 184454,
+      "pages": 11,
+      "retrieved_at": "2026-08-02T20:40:08+08:00",
+      "used_by": [
+        "中国船舶_600150_基本面分析_20260802_203620.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260714-fa5b4c12",
+      "title": "中国船舶2026年半年度业绩预增公告",
+      "document_type": "正式披露",
+      "period": "2026H1",
+      "published_date": "20260714",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESH_STOCK/2026/2026-7/2026-07-14/12442205.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260714_2026H1_正式披露_12442205.pdf",
+      "sha256": "fa5b4c12b4f6e50f8194fb05bcd5fa27a719de491b91c360b082ae3f6b4dab1f",
+      "bytes": 133299,
+      "pages": 3,
+      "retrieved_at": "2026-08-02T20:40:08+08:00",
+      "used_by": [
+        "中国船舶_600150_基本面分析_20260802_203620.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260331-1badd7dd",
+      "title": "中国船舶2026年3月重大合同公告",
+      "document_type": "合同订单",
+      "period": "2026",
+      "published_date": "20260331",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-03-31/1225052606.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260331_2026_合同订单_1225052606.pdf",
+      "sha256": "1badd7dd1bfbe8a4c2c0268216cc6dffa3a789db9f76786df0437141d898052e",
+      "bytes": 115820,
+      "pages": 2,
+      "retrieved_at": "2026-08-02T20:43:16+08:00",
+      "used_by": [
+        "中国船舶_600150_基本面分析_20260802_203620.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260423-2bd28f96",
+      "title": "中国船舶2026年4月重大合同公告",
+      "document_type": "合同订单",
+      "period": "2026",
+      "published_date": "20260423",
+      "official_url": "https://stockmc.xueqiu.com/202604/600150_20260423_VNE0.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260423_2026_合同订单_600150_20260423_VNE0.pdf",
+      "sha256": "2bd28f965bcfb045666d9a8a94d2a6afcfaf6ec7dc30f75d996cd7b8f96efdc6",
+      "bytes": 112653,
+      "pages": 2,
+      "retrieved_at": "2026-08-02T20:43:16+08:00",
+      "used_by": [
+        "中国船舶_600150_基本面分析_20260802_203620.md"
+      ],
+      "status": "已归档"
+    }
+  ]
+}

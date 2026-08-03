@@ -1,0 +1,4 @@
+interface:
+  display_name: "个股轻复盘"
+  short_description: "快速判断个股每日变化是否影响基本面与投资逻辑判断。"
+  default_prompt: "Use $individual-stock-light-review to review this stock and judge whether today's changes affect its fundamentals or investment thesis."
