@@ -21,6 +21,15 @@ description: Analyze and continuously update a listed company's fundamentals, pr
 - Archive every official PDF filing materially cited by the report, prefer company/exchange/statutory-disclosure originals, verify the file, deduplicate by SHA-256, and cite the verified local relative path. Keep the official URL in the source index.
 - Read [references/versioning-and-sources.md](references/versioning-and-sources.md) before updating an existing company, publishing report artifacts, migrating historical reports, or archiving source PDFs.
 
+## Review Gate
+
+After evidence collection and before rendering or publishing, invoke `$financial-analysis-reviewer` as a read-only child reviewer. Pass a compact evidence packet containing the company/ticker, analysis date, report periods, draft conclusion, key figures, source paths, unresolved items, and changes from the prior report.
+
+- Use `通过 / 需要修订 / 阻断` as the review result.
+- Do not publish when the result is `阻断`; correct the evidence or lower the conclusion strength, then review again.
+- Keep this Skill responsible for the final conclusion, immutable snapshots, HTML generation, PDF archiving, research timeline, and publication. The reviewer may flag issues but must not edit these artifacts.
+- Re-run the reviewer only when a revision changes the core conclusion, rating, risk level, or report period.
+
 ## Output Artifacts
 
 By default, produce both a Markdown report and a standalone HTML report unless the user explicitly asks for chat-only output.

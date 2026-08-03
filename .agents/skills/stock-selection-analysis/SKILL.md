@@ -17,6 +17,14 @@ Every output must keep the fixed template below. Do not omit sections. If eviden
 
 When analyzing a listed stock, include a trend-template check for whether the stock is in stage 2 uptrend. The trend check is a technical filter, not a buy signal, and it must not replace the fundamental, prosperity, valuation, and risk gates. Mark any unavailable market, moving-average, 52-week, or relative-strength field as `待核验`; do not infer it.
 
+## Review Gate
+
+Before assigning the final research tier, invoke `$financial-analysis-reviewer` as a read-only child reviewer. Pass the analysis date, data period, five-gate scores, key evidence and sources, major counterevidence, valuation assumptions, risk flags, and proposed research tier.
+
+- Do not promote a stock when the reviewer finds a critical data error, unsupported conclusion, or material unresolved counterevidence.
+- Treat `通过 / 需要修订 / 阻断` as a quality gate, not as a replacement for the fixed output template.
+- Keep the trend-template check within this Skill's existing scope; the reviewer must not turn it into a standalone buy signal.
+
 ## Analysis Logic
 
 Analyze a performance-growth company through five gates:
