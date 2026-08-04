@@ -121,7 +121,8 @@ def detect_trigger(markdown: str, first: bool) -> str:
     if first:
         return "首次建立研究基线"
     forecast = find_section(markdown, "核心财务指标")
-    if any(term in forecast for term in ("业绩预告", "财务预报", "盈喜", "盈警")) and "近30日未披露新的正式财务预报" not in forecast:
+    normalized_forecast = re.sub(r"\s+", "", forecast)
+    if any(term in forecast for term in ("业绩预告", "财务预报", "盈喜", "盈警")) and "近30日未披露新的正式财务预报" not in normalized_forecast:
         return "财务预报/业绩预告更新"
     if any(term in markdown for term in ("会计差错更正", "前期差错更正")):
         return "会计更正复盘"
