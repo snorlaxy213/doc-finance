@@ -1,6 +1,6 @@
 ---
 name: fundamental-stock-review
-description: Analyze and continuously update a listed company's fundamentals, preserve immutable Markdown/HTML snapshots and conclusion history, and archive cited official PDF filings. Covers business quality, industry position, orders/backlog, contract wins, growth, profitability, cash-flow quality, balance-sheet quality, valuation, ownership, institutional participation, market share, losses, negative news, and financial-fraud risk flags. Use when the user asks for 基本面分析, 财报分析, 财务质量分析, 股票深度复盘, 后续更新, 业绩预告跟踪, 订单跟踪, 中标分析, 重大合同, 订单消息整理, backlog, 合同负债, 客户采购, 招投标信息, 是否财务造假, or wants to evaluate a stock using indicators such as 流通市值, 市盈率, 净利润, 同比增长, 每股收益, ROE, 毛利率, 十大股东占比, 机构家数, 市场占有率, 亏损, or 负面新闻.
+description: Analyze and continuously update a listed company's fundamentals, produce a conditional current-position trade decision with position sizing and risk controls, preserve immutable Markdown/HTML snapshots and conclusion history, and archive cited official PDF filings. Covers business quality, financial quality, valuation, current price/volume position, buy/wait/hold/reduce/exit research actions, orders/backlog, ownership, negative news, and financial-fraud risk flags. Use when the user asks for 基本面分析, 财报分析, 财务质量分析, 股票深度复盘, 当前是否是买点, 现在能不能买, 买卖建议, 仓位建议, 止损点, 后续更新, 业绩预告跟踪, 订单跟踪, 订单消息整理, 中标分析, 重大合同, backlog, 合同负债, 客户采购, 招投标信息, 是否财务造假, or wants to evaluate a stock using valuation, growth, profitability, cash flow, ownership, institutional participation, market share, loss, or negative-news indicators.
 ---
 
 # Fundamental Stock Review
@@ -8,7 +8,10 @@ description: Analyze and continuously update a listed company's fundamentals, pr
 ## Core Rules
 
 - Answer in Simplified Chinese unless the user asks otherwise.
-- Use a professional investment-research tone. Do not provide personalized buy/sell instructions or guaranteed-return language.
+- Use a professional investment-research tone. Provide conditional research actions rather than guaranteed-return language or certainty disguised as a personalized instruction.
+- Always add the current-position trade-decision layer. Use the user's stated risk parameters; otherwise apply `项目级个股交易决策默认值` from the repository-root `AGENTS.md`. Read [references/trade-decision-framework.md](references/trade-decision-framework.md) before collecting price/volume data or drafting that decision.
+- Treat fundamentals as the answer to whether the company is investable and price/volume structure as the answer to whether the current position is actionable. Do not infer a buy point from low PE/PB alone.
+- If recent reliable OHLCV, a reference entry price, or valuation-upside evidence is unavailable, output `等待 / 无法判断当前买点` and identify the missing evidence; never fabricate an entry range, stop price, or target.
 - Verify current, time-sensitive facts before concluding: ticker/name mapping, latest filings, latest price/market-cap data, major announcements, regulatory actions, and recent negative news.
 - Check whether the company issued an official earnings forecast, profit alert, profit warning, forecast revision, 盈喜, or 盈警 during the 30 calendar days ending on the report execution date. Treat forecast figures as unaudited and keep them separate from reported financial statements.
 - Separate confirmed disclosure from market rumor or narrative. Label uncertain items as 信息边界.
@@ -23,7 +26,7 @@ description: Analyze and continuously update a listed company's fundamentals, pr
 
 ## Review Gate
 
-After evidence collection and before rendering or publishing, invoke `$financial-analysis-reviewer` as a read-only child reviewer. Pass a compact evidence packet containing the company/ticker, analysis date, report periods, draft conclusion, key figures, source paths, unresolved items, and changes from the prior report.
+After evidence collection and before rendering or publishing, invoke `$financial-analysis-reviewer` as a read-only child reviewer. Pass a compact evidence packet containing the company/ticker, analysis date, report periods, draft conclusion, key figures, source paths, unresolved items, changes from the prior report, trade action, market-data date, reference/entry price, target position, stop, upside basis, reward/risk, and fundamental invalidation conditions.
 
 - Use `通过 / 需要修订 / 阻断` as the review result.
 - Do not publish when the result is `阻断`; correct the evidence or lower the conclusion strength, then review again.
@@ -98,6 +101,7 @@ The renderer's `--copy-md` flow remains available for legacy one-off rendering. 
 Collect the latest available data from public filings, exchange announcements, financial data providers, and credible news sources:
 
 - Current valuation snapshot: latest price date, closing price, total market cap, free-float market cap, PE, PB, PS, dividend yield if relevant. Treat these as latest point-in-time market data, not historical financial-statement metrics.
+- Trade-decision inputs: sufficiently recent daily/weekly OHLCV, trend-health label, identifiable support/invalidation level, current price versus entry range, valuation-derived upside, existing-position status when disclosed, requested position cap, and requested stop. Keep market facts date-stamped.
 - Recent financial forecast: official announcement date, forecast period, forecast range or midpoint, prior-year comparable amount, cumulative YoY, forecast revision, revenue if disclosed, attributable net profit, deducted non-recurring net profit, EPS if disclosed, non-recurring contribution, stated drivers, and whether the same-period formal report has subsequently been released.
 - Growth: revenue, net profit, deducted non-recurring net profit, YoY growth, EPS, 3-year trend, and whether growth comes from core-business volume, price, market-share gains, acquisitions, or non-recurring items.
 - Profitability: gross margin, deducted net margin, net margin, ROE, ROIC if available, margin drivers, and peer comparison.
@@ -175,6 +179,7 @@ The Markdown must remain renderer-friendly:
 - Keep `一句话结论` exactly as a single-line item in section 3. The HTML renderer extracts it into the top `结论速览` and suppresses the duplicate line in the main body.
 - Put the report execution date, market-data date, covered financial periods, and historical-data caveats under section 12 `信息边界` as `分析范围`; do not repeat them before section 1.
 - Keep the final copyable block in a fenced `text` or `plain` code block so the HTML renderer can show it as `基本面速记`.
+- Put `交易决策摘要` inside the final copyable block, after the fundamental note. This makes the decision appear at the existing `基本面速记` HTML location without a renderer change.
 - Do not mix latest market valuation data with historical financial-statement tables; the HTML header and KPI cards rely on clean valuation and financial blocks.
 
 ### 1. 核心财务指标
@@ -366,6 +371,12 @@ When no prior report exists, write `首次建立研究基线，无上次报告�
 
 After the table, state `本次触发事件`, `新增确认事实`, `被证伪或弱化的旧假设`, `仍然有效的旧观点`, and `仍待验证事项`. A conclusion may remain unchanged; record that explicitly rather than inventing a change.
 
+#### 3.3 当前位置与交易决策
+
+Apply [references/trade-decision-framework.md](references/trade-decision-framework.md). State the market-data date and distinguish `未持仓` from `已持仓`; if position status is unknown, provide both conditional rows. Output exactly one primary research action from `可以分步买入 / 小仓试错 / 等待 / 持有观察 / 降仓 / 退出`, plus target position, entry/no-chase condition, stop, fundamental invalidation, valuation-upside basis, reward/risk, validity period, confidence, and the most important counterevidence.
+
+Do not output `可以分步买入` unless the fundamental, valuation, technical-position, and reward/risk gates all pass. A `中性` fundamental conclusion, `一般` financial quality, mixed trend, stale price data, or unquantifiable upside cannot support a full 25% target by itself.
+
 ### 4. 公司与行业
 
 - 主营业务：
@@ -478,4 +489,20 @@ Append a concise copyable block unless the user explicitly asks not to:
 财务造假风险初筛：低/中/高。理由：
 订单/需求验证：改善/稳定/走弱/无法判断。依据：
 后续跟踪：
+
+【交易决策摘要】
+行情日期：
+持仓状态：未持仓/已持仓/未知
+当前动作：可以分步买入/小仓试错/等待/持有观察/降仓/退出
+建议目标仓位：按项目级默认档位或用户当次参数
+参考价格与计划买入区间：
+不宜追高位置：
+价格止损：按项目级默认止损或用户当次参数计算
+基本面提前退出条件：
+合理价值/目标空间及依据：
+预期盈亏比：
+建议有效期：
+决策置信度：高/中/低
+核心理由：
+主要反证：
 ```

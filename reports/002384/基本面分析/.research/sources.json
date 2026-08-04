@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-08-04T23:35:32+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260422-fe246fac",
+      "title": "2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260422",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-22/1225139318.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260422_2025A_年度报告_1225139318.pdf",
+      "sha256": "fe246facade2909e87dafb8d3f027789491fb541714a57bffce0fb6b7fabc9e3",
+      "bytes": 3474062,
+      "pages": 167,
+      "retrieved_at": "2026-08-04T23:35:28+08:00",
+      "used_by": [
+        "东山精密002384基本面分析20260804"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260428-3a728e40",
+      "title": "2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260428",
+      "official_url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-04-28/acdacca2-ced0-4dc5-9e0b-a2e4a446866a.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260428_2026Q1_第一季度报告_acdacca2-ced0-4dc5-9e0b-a2e4a446866a.pdf",
+      "sha256": "3a728e4084197ae0b359ee08afdfef442f594f2fcf4279954871dd7ce6e46481",
+      "bytes": 215371,
+      "pages": 10,
+      "retrieved_at": "2026-08-04T23:35:28+08:00",
+      "used_by": [
+        "东山精密002384基本面分析20260804"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260715-db62b734",
+      "title": "2026年半年度业绩预告",
+      "document_type": "业绩预告",
+      "period": "2026H1",
+      "published_date": "20260715",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESZ_STOCK/2026/2026-7/2026-07-15/12444966.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260715_2026H1_业绩预告_12444966.pdf",
+      "sha256": "db62b7346d2eb1c886c474cd95db4bcf746333294149721c024302cde8908bb3",
+      "bytes": 89939,
+      "pages": 2,
+      "retrieved_at": "2026-08-04T23:35:29+08:00",
+      "used_by": [
+        "东山精密002384基本面分析20260804"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250425-bc53c18c",
+      "title": "2024年年度报告",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250425",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESZ_STOCK/2025/2025-4/2025-04-25/10970851.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250425_2024A_年度报告_10970851.pdf",
+      "sha256": "bc53c18cb5edccd39e9be40588eaf007f76d9afc53a635670e0c747d267292f5",
+      "bytes": 3596223,
+      "pages": 181,
+      "retrieved_at": "2026-08-04T23:35:32+08:00",
+      "used_by": [
+        "东山精密002384基本面分析20260804"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260721-8d9fe412",
+      "title": "2026年回购报告书",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260721",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESZ_STOCK/2026/2026-7/2026-07-21/12455248.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260721_2026_正式披露_12455248.pdf",
+      "sha256": "8d9fe412d4929985f891cdf57ed9a8ee5ef904ea0c3984bb3fe8c688251f6722",
+      "bytes": 136579,
+      "pages": 7,
+      "retrieved_at": "2026-08-04T23:35:32+08:00",
+      "used_by": [
+        "东山精密002384基本面分析20260804"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260530-66e8be79",
+      "title": "控股股东质押公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260530",
+      "official_url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-05-30/4457192f-eab2-41f8-b62a-84216c93d7d7.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260530_期间待核验_正式披露_4457192f-eab2-41f8-b62a-84216c93d7d7.pdf",
+      "sha256": "66e8be79b914f9242edabaa64383941b2f84cbc2d445bef8a4c27f0f157f4c90",
+      "bytes": 80732,
+      "pages": 2,
+      "retrieved_at": "2026-08-04T23:35:32+08:00",
+      "used_by": [
+        "东山精密002384基本面分析20260804"
+      ],
+      "status": "已归档"
+    }
+  ]
+}
