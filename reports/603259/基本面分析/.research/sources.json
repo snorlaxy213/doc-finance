@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-07-15T10:58:33+08:00",
+  "updated_at": "2026-08-04T10:15:53+08:00",
   "sources": [
     {
       "source_id": "SRC-20260324-7f1431d6",
@@ -127,6 +127,61 @@
         "药明康德_603259_基本面分析_20260715"
       ],
       "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260804-d0dba19e",
+      "title": "2026H1半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260804",
+      "official_url": "https://officialsite-static.wuxiapptec.com/upload/603259_20260804_FUQR_0bd7b4bb77.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260804_2026H1_半年度报告_603259_20260804_FUQR_0bd7b4bb77.pdf",
+      "sha256": "d0dba19ede6e35ae3e127a1da91a42f04262e90d14efeb847bdfbff9b6354a5f",
+      "bytes": 1216470,
+      "pages": null,
+      "retrieved_at": "2026-08-04T10:02:09+08:00",
+      "used_by": [
+        "药明康德_603259_基本面分析_20260804"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260804-1a136a16",
+      "title": "2026H1业绩演示",
+      "document_type": "业绩演示",
+      "period": "2026H1",
+      "published_date": "20260804",
+      "official_url": "https://officialsite-static.wuxiapptec.com/upload/2026_H1_a7ac5a8844.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260804_2026H1_业绩演示_2026_H1_a7ac5a8844.pdf",
+      "sha256": "1a136a16c0ded2f01dad018a41a267213db0043b32c2d9787a3455b89e832104",
+      "bytes": 1571147,
+      "pages": null,
+      "retrieved_at": "2026-08-04T10:02:09+08:00",
+      "used_by": [
+        "药明康德_603259_基本面分析_20260804"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250728-71582e66",
+      "title": "2025H1半年度报告",
+      "document_type": "半年度报告",
+      "period": "2025H1",
+      "published_date": "20250728",
+      "official_url": "https://officialsite-static.wuxiapptec.com/upload/2025_3a7de3a62e.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250728_2025H1_半年度报告_2025_3a7de3a62e.pdf",
+      "sha256": "71582e6607861d5e02baeb65a7c4a8b855d1a608cde3981214f86d7f4c4abcf1",
+      "bytes": 3102910,
+      "pages": null,
+      "retrieved_at": "2026-08-04T10:06:14+08:00",
+      "used_by": [
+        "药明康德_603259_基本面分析_20260804"
+      ],
+      "status": "已归档",
+      "date_override": "20250728"
     }
   ]
 }
