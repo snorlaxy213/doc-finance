@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-02T20:43:16+08:00",
+  "updated_at": "2026-08-05T14:30:59+08:00",
   "sources": [
     {
       "source_id": "FAILED-3d9b8cd480c9",
@@ -229,6 +229,61 @@
       "retrieved_at": "2026-08-02T20:43:16+08:00",
       "used_by": [
         "中国船舶_600150_基本面分析_20260802_203620.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260804-9f584eb6",
+      "title": "总会计师辞职公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260804",
+      "official_url": "https://pdf.dfcfw.com/pdf/H2_AN202608031827590068_1.pdf?1785779311000.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260804_期间待核验_正式披露_H2_AN202608031827590068_1.pdf",
+      "sha256": "9f584eb6151ec113c5497f2df10a4ce5a2788d203a46c50795e0075e71af7d04",
+      "bytes": 95931,
+      "pages": null,
+      "retrieved_at": "2026-08-05T14:23:35+08:00",
+      "used_by": [
+        "中国船舶_600150_基本面分析_20260805_143500.md"
+      ],
+      "status": "已归档",
+      "date_override": "20260804"
+    },
+    {
+      "source_id": "SRC-20260429-9e3ceed8",
+      "title": "中国动力2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260429",
+      "official_url": "https://pdf.dfcfw.com/pdf/H2_AN202604291821774274_1.pdf?1777495797000.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260429_2026Q1_第一季度报告_H2_AN202604291821774274_1.pdf",
+      "sha256": "9e3ceed8448124b1c33c5f4e8dc794be3e1d28aa73a3f13e0e8fffaf855b6990",
+      "bytes": 172130,
+      "pages": null,
+      "retrieved_at": "2026-08-05T14:30:58+08:00",
+      "used_by": [
+        "中国船舶_600150_基本面分析_20260805_143500.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260429-b8922acf",
+      "title": "中船防务2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260429",
+      "official_url": "https://pdf.dfcfw.com/pdf/H2_AN202604291821753864_1.pdf?1777485310000.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260429_2026Q1_第一季度报告_H2_AN202604291821753864_1.pdf",
+      "sha256": "b8922acf1c92178985249300363b11c1855f560a019ee4fe054863b856d2686a",
+      "bytes": 208964,
+      "pages": null,
+      "retrieved_at": "2026-08-05T14:30:59+08:00",
+      "used_by": [
+        "中国船舶_600150_基本面分析_20260805_143500.md"
       ],
       "status": "已归档"
     }
