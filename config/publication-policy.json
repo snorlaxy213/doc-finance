@@ -1,0 +1,52 @@
+{
+  "publication": {
+    "access_mode": "public",
+    "confirmed_on": "2026-08-07",
+    "included_root": "reports",
+    "included_variant": "latest-html-only",
+    "publication_method": "manual-github-pages-workflow"
+  },
+  "allowed_report_codes": [
+    "000429",
+    "000506",
+    "000938",
+    "002026",
+    "002083",
+    "002298",
+    "002384",
+    "002452",
+    "002709",
+    "002821",
+    "300037",
+    "300308",
+    "300347",
+    "300497",
+    "300502",
+    "300511",
+    "300573",
+    "300759",
+    "300821",
+    "301308",
+    "600026",
+    "600150",
+    "601717",
+    "601872",
+    "603032",
+    "603127",
+    "603259",
+    "603268",
+    "603296",
+    "603618"
+  ],
+  "required_filename_suffix": "_基本面分析_最新.html",
+  "excluded_path_segments": [
+    ".research",
+    "原始资料",
+    "_drafts"
+  ],
+  "excluded_filename_terms": [
+    "草稿",
+    "研究轨迹"
+  ],
+  "financial_disclaimer": "本站内容仅用于公开研究记录与信息交流，不构成任何证券、投资或交易建议，也不构成对任何金融产品的要约、招揽或保证。报告具有时效性，读者应自行核验信息并独立判断。"
+}

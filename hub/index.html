@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="公开财务研究报告目录，支持按名称、代码和报告内容检索。">
+  <title>财务研究报告中心</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#catalog">跳到报告目录</a>
+  <header class="site-header">
+    <div class="shell header-content">
+      <a class="brand" href="index.html" aria-label="财务研究报告中心首页">财务研究报告中心</a>
+      <nav aria-label="主导航">
+        <a href="#catalog">全部报告</a>
+        <a href="#disclaimer">免责声明</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="shell">
+        <p class="eyebrow">PUBLIC RESEARCH ARCHIVE</p>
+        <h1>快速找到已公开的研究报告</h1>
+        <p class="intro">收录已审核发布的个股基本面分析最新版本；草稿、历史版本、研究轨迹及原始资料均不会出现在本站。</p>
+        <p class="publication-status" id="publicationStatus">正在加载公开目录…</p>
+      </div>
+    </section>
+
+    <section class="shell catalog" id="catalog" aria-labelledby="catalogTitle">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">CATALOG</p>
+          <h2 id="catalogTitle">报告目录</h2>
+        </div>
+        <p id="resultSummary" class="result-summary" aria-live="polite"></p>
+      </div>
+
+      <form class="filters" id="searchForm" role="search">
+        <div class="field field-query">
+          <label for="query">搜索报告</label>
+          <input id="query" name="query" type="search" autocomplete="off" placeholder="公司名、股票代码、标题或正文关键词">
+        </div>
+        <div class="field">
+          <label for="rootFilter">报告分类</label>
+          <select id="rootFilter" name="root">
+            <option value="all">全部分类</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="sortOrder">排序方式</label>
+          <select id="sortOrder" name="sort">
+            <option value="newest">最近更新</option>
+            <option value="title">名称 A–Z</option>
+            <option value="code">股票代码</option>
+          </select>
+        </div>
+        <button class="reset-button" id="resetFilters" type="button">重置筛选</button>
+      </form>
+
+      <div id="catalogList" class="report-grid" aria-live="polite" aria-busy="true"></div>
+      <template id="emptyState">
+        <div class="empty-state">
+          <h3>没有匹配的报告</h3>
+          <p>请保留或调整搜索词和筛选条件后重试。</p>
+        </div>
+      </template>
+      <p id="loadError" class="load-error" hidden>目录加载失败。请刷新页面，或稍后再试。</p>
+    </section>
+
+    <section class="shell disclaimer" id="disclaimer" aria-labelledby="disclaimerTitle">
+      <p class="eyebrow">NOTICE</p>
+      <h2 id="disclaimerTitle">免责声明</h2>
+      <p id="disclaimerText">本站内容仅用于公开研究记录与信息交流。</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">公开报告中心 · 仅展示经发布策略批准的最新 HTML 报告</div>
+  </footer>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>

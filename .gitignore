@@ -9,3 +9,4 @@ outputs/electrolyte_weekly_prices_20260708/node_modules
 tmp/
 outputs/**/*.inspect.ndjson
 outputs/**/preview_*.png
+report-hub-build/

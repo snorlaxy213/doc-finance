@@ -1,0 +1,53 @@
+name: Deploy public report hub
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_publication:
+        description: '输入 yes，确认按 publication-policy.json 公开发布报告'
+        required: true
+        default: 'no'
+        type: choice
+        options:
+          - 'no'
+          - 'yes'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: inputs.confirm_publication == 'yes'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build approved public artifact
+        run: python scripts/build_report_hub.py --clean --output report-hub-build
+      - name: Verify publication isolation
+        run: python scripts/build_report_hub.py --verify-only --output report-hub-build
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: report-hub-build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
