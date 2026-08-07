@@ -8,9 +8,10 @@
 - 发布范围：`reports/<六位代码>/基本面分析/` 中白名单股票的 `*_基本面分析_最新.html`。
 - 明确排除：时间戳历史版本、草稿、研究轨迹、`reports/_drafts/`、`.research/`、`原始资料/` 及其他报告根目录。
 - 白名单和免责声明：`config/publication-policy.json`。
+- 基本面报告默认自动加入白名单：`publish_fundamental_review.py` 在 Markdown、HTML、`_最新` 文件和研究轨迹全部成功生成后，按 `publication.auto_include_fundamental_reports` 幂等写入股票代码；脚本拒绝 `reports/_drafts/` 路径和文件名含“草稿”的输入，审查器阻断时不得调用该脚本。
 - 源报告不会被修改。构建时仅复制获准 HTML 到 `report-hub-build/reports/<代码>/index.html`，并在**副本**末尾加入报告中心与免责声明链接。
 
-要新增公开标的，先审核报告是否适合公开，再将六位股票代码加入 `allowed_report_codes`；不要放宽文件名或目录规则。
+正常使用基本面报告发布脚本即可自动维护白名单；不希望本次报告公开时使用 `--no-publication`。其他报告类型或历史补录仍需先审核，再手工将六位股票代码加入 `allowed_report_codes`；不要放宽文件名或目录规则。
 
 ## 本地构建与预览
 

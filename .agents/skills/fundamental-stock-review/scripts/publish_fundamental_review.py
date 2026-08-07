@@ -160,6 +160,45 @@ def atomic_copy(source: Path, destination: Path) -> None:
             os.unlink(temp_name)
 
 
+def default_publication_policy_path(reports_root: Path) -> Path:
+    return reports_root.resolve().parent / "config" / "publication-policy.json"
+
+
+def update_publication_policy(code: str, policy_path: Path) -> bool:
+    if not re.fullmatch(r"\d{6}", code):
+        raise ValueError("公开白名单代码必须是六位股票代码")
+
+    path = policy_path.resolve()
+    try:
+        policy = json.loads(path.read_text(encoding="utf-8"))
+    except FileNotFoundError as error:
+        raise ValueError(f"找不到公开发布策略文件：{path}") from error
+    except json.JSONDecodeError as error:
+        raise ValueError(f"公开发布策略不是合法 JSON：{error}") from error
+
+    publication = policy.get("publication")
+    if not isinstance(publication, dict):
+        raise ValueError("公开发布策略缺少 publication 配置")
+    if publication.get("access_mode") != "public":
+        return False
+    if publication.get("auto_include_fundamental_reports") is not True:
+        return False
+
+    allowed = policy.get("allowed_report_codes")
+    if (
+        not isinstance(allowed, list)
+        or any(not isinstance(item, str) or not re.fullmatch(r"\d{6}", item) for item in allowed)
+        or len(allowed) != len(set(allowed))
+    ):
+        raise ValueError("公开发布策略的 allowed_report_codes 无效")
+    if code in allowed:
+        return False
+
+    policy["allowed_report_codes"] = sorted([*allowed, code])
+    atomic_write_text(path, json.dumps(policy, ensure_ascii=False, indent=2) + "\n")
+    return True
+
+
 def render_snapshot(markdown_path: Path, html_path: Path) -> None:
     markdown = markdown_path.read_text(encoding="utf-8")
     template = DEFAULT_TEMPLATE.read_text(encoding="utf-8")
@@ -331,8 +370,17 @@ def unique_snapshot_path(report_dir: Path, stem: str, suffix: str) -> Path:
     return report_dir / f"{stem}{extra}{suffix}"
 
 
-def publish(markdown_path: Path, reports_root: Path, date_text: str | None, allow_missing_delta: bool) -> tuple[Path, Path]:
+def publish(
+    markdown_path: Path,
+    reports_root: Path,
+    date_text: str | None,
+    allow_missing_delta: bool,
+    publication_policy: Path | None = None,
+    include_in_publication: bool = True,
+) -> tuple[Path, Path]:
     source = markdown_path.resolve()
+    if "_drafts" in source.parts or "草稿" in source.name:
+        raise ValueError("草稿文件不能直接发布，请完成审查后使用正式 Markdown")
     markdown = source.read_text(encoding="utf-8")
     company, ticker, code = extract_identity(markdown)
     report_dir = reports_root.resolve() / code / "基本面分析"
@@ -358,6 +406,14 @@ def publish(markdown_path: Path, reports_root: Path, date_text: str | None, allo
     atomic_copy(snapshot_md, report_dir / f"{base}.md")
     atomic_copy(snapshot_html, report_dir / f"{base}.html")
     rebuild_index(report_dir, refresh_latest=False)
+    if include_in_publication:
+        try:
+            update_publication_policy(
+                code,
+                publication_policy or default_publication_policy_path(reports_root),
+            )
+        except ValueError as error:
+            raise ValueError(f"报告产物已生成，但自动更新公开白名单失败：{error}") from error
     return snapshot_md, snapshot_html
 
 
@@ -365,6 +421,8 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Publish continuous fundamental-review snapshots and rebuild the research timeline.")
     parser.add_argument("markdown", nargs="?", type=Path, help="Completed Markdown report to publish.")
     parser.add_argument("--reports-root", type=Path, default=Path.cwd() / "reports")
+    parser.add_argument("--publication-policy", type=Path, help="Publication policy JSON; defaults to config/publication-policy.json beside reports/.")
+    parser.add_argument("--no-publication", action="store_true", help="Generate the report without adding its code to the public publication allowlist.")
     parser.add_argument("--date", help="Snapshot date or timestamp: YYYYMMDD[_HHMMSS].")
     parser.add_argument("--rebuild-existing", type=Path, help="Rebuild latest/timeline/state for an existing 基本面分析 directory.")
     parser.add_argument("--allow-missing-delta", action="store_true", help="Allow legacy Markdown without the update-comparison subsection.")
@@ -382,9 +440,18 @@ def main() -> int:
             return 0
         if not args.markdown:
             raise ValueError("请提供待发布 Markdown，或使用 --rebuild-existing")
-        snapshot_md, snapshot_html = publish(args.markdown, args.reports_root, args.date, args.allow_missing_delta)
+        snapshot_md, snapshot_html = publish(
+            args.markdown,
+            args.reports_root,
+            args.date,
+            args.allow_missing_delta,
+            publication_policy=args.publication_policy,
+            include_in_publication=not args.no_publication,
+        )
         print(f"快照MD: {snapshot_md}")
         print(f"快照HTML: {snapshot_html}")
+        if args.no_publication:
+            print("公开白名单：按 --no-publication 跳过")
         return 0
     except (OSError, ValueError) as exc:
         print(f"发布失败: {exc}")
