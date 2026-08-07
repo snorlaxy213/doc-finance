@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>粤高速(000429.SZ)基本面分析</title>
+<style>
+:root{
+  --ink:#1a2433;
+  --ink-soft:#46546a;
+  --line:#d8dee7;
+  --line-soft:#eef1f5;
+  --bg:#ffffff;
+  --brand:#1f3a5f;
+  --brand-2:#3b5b85;
+  --brand-light:#eaf0f8;
+  --accent:#8a6d3b;
+  --up:#b73333;
+  --down:#2f7a52;
+  --warn:#a06a1f;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Microsoft YaHei","Source Han Sans SC",system-ui,-apple-system,sans-serif;
+  color:var(--ink);
+  background:#fff;
+  line-height:1.7;
+  font-size:14.5px;
+  font-variant-numeric:tabular-nums;
+  -webkit-font-smoothing:antialiased;
+}
+.page{max-width:1600px;margin:0 auto;padding:0 32px;}
+.masthead{
+  display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px;
+  border-bottom:2px solid var(--brand);padding:24px 0 18px;
+}
+.masthead .m-left{min-width:280px;}
+.masthead .kode{font-size:12px;letter-spacing:.12em;color:var(--ink-soft);}
+.masthead h1{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC","Times New Roman",serif;
+  font-size:30px;font-weight:700;margin:6px 0 4px;color:var(--brand);letter-spacing:.5px;
+}
+.masthead .sub{font-size:13px;color:var(--ink-soft);}
+.masthead .meta{font-size:12.5px;color:var(--ink-soft);margin-top:12px;}
+.masthead .meta b{color:var(--ink);font-weight:600;}
+.masthead .m-stats{display:flex;gap:34px;flex-wrap:wrap;}
+.masthead .m-stats .ms-v{font-size:25px;font-weight:700;color:var(--brand);line-height:1;font-variant-numeric:tabular-nums;}
+.masthead .m-stats .ms-v span{font-size:13px;font-weight:500;color:var(--ink-soft);margin-left:2px;}
+.masthead .m-stats .ms-l{font-size:11.5px;color:var(--ink-soft);margin-top:5px;letter-spacing:.02em;}
+.verdict{
+  margin:16px 0 4px;border:1px solid var(--line);border-left:4px solid var(--brand);
+  background:#fbfcfe;border-radius:4px;padding:16px 20px;
+}
+.verdict-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-bottom:14px;}
+.verdict-head h2{margin:0;font-size:14px;letter-spacing:.1em;color:var(--brand);font-weight:700;}
+.verdict-headline{
+  margin:-2px 0 14px;padding:10px 12px;border:1px solid #dfe7f1;border-radius:4px;
+  background:#fff;color:var(--ink);font-size:15px;font-weight:600;line-height:1.7;
+}
+.verdict-headline .label{display:block;margin-bottom:2px;color:var(--brand);font-size:11px;font-weight:700;letter-spacing:.1em;}
+.badges{display:flex;flex-direction:row;flex-wrap:wrap;gap:8px;margin:0;}
+.badge{
+  display:inline-flex;align-items:center;gap:6px;font-size:12.5px;
+  padding:5px 11px;border-radius:999px;font-weight:600;line-height:1.4;
+}
+.badge .k{font-weight:500;opacity:.85;}
+.badge.fund{background:#fdecec;color:#9a2c2c;}
+.badge.qual{background:#eef3f8;color:#1f3a5f;}
+.badge.valu{background:#fdf3e3;color:#8a5a16;}
+.badge.fraud{background:#eef7f1;color:#2f6a48;}
+.verdict-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 40px;}
+.verdict-grid .v-title{font-size:12.5px;font-weight:700;letter-spacing:.04em;margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid var(--line);}
+.verdict-grid .v-title::before{content:"";display:inline-block;width:3px;height:12px;margin-right:7px;vertical-align:-1px;border-radius:2px;}
+.verdict-grid .v-up .v-title{color:var(--brand);}
+.verdict-grid .v-up .v-title::before{background:var(--brand);}
+.verdict-grid .v-risk .v-title{color:var(--warn);}
+.verdict-grid .v-risk .v-title::before{background:var(--warn);}
+.verdict-grid ul{margin:0;padding-left:18px;}
+.verdict-grid li{font-size:13.5px;margin:6px 0;line-height:1.65;}
+.note{
+  font-size:12px;color:var(--ink-soft);background:var(--line-soft);
+  padding:3px 8px;border-radius:3px;display:inline-block;
+}
+.verdict .note{display:block;margin-top:14px;}
+.kpis{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:1px;margin:16px 0 4px;
+  background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden;
+}
+.kpi{background:#fff;padding:13px 15px;min-width:0;}
+.kpi .kl{font-size:11.5px;color:var(--ink-soft);line-height:1.3;min-height:30px;}
+.kpi .kv{font-size:20px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;margin-top:5px;word-break:break-word;}
+.kpi .kv.up{color:var(--up);}
+.kpi .kv.down{color:var(--down);}
+.kpi .ks{font-size:11px;color:var(--ink-soft);margin-top:3px;font-variant-numeric:tabular-nums;}
+.forecast-panel{
+  margin:16px 0 6px;padding:18px 20px;border:1px solid #d8e2ef;border-left:4px solid var(--brand);
+  border-radius:4px;background:linear-gradient(135deg,#f7faff 0%,#fff 68%);
+}
+.forecast-panel.forecast-empty{padding:14px 18px;background:#fbfcfe;border-left-color:#a8b5c4;}
+.forecast-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;flex-wrap:wrap;}
+.forecast-kicker{display:block;font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--brand);margin-bottom:5px;}
+.forecast-head h2{margin:0;font-size:18px;line-height:1.35;color:var(--ink);}
+.forecast-tags{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end;}
+.forecast-tag{display:inline-flex;padding:4px 9px;border-radius:999px;background:#eaf1f8;color:#294d73;font-size:11px;font-weight:600;}
+.forecast-tag.warn{background:#fff0dc;color:#8a5615;}
+.forecast-tag.neutral{background:#edf0f3;color:#5e6873;}
+.forecast-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px;}
+.forecast-card{background:#fff;border:1px solid #e0e7ef;border-radius:4px;padding:12px 14px;min-width:0;}
+.forecast-label{font-size:11px;color:var(--ink-soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.forecast-value{font-size:20px;font-weight:700;color:var(--brand);line-height:1.3;margin-top:4px;font-variant-numeric:tabular-nums;}
+.forecast-change{font-size:11.5px;color:var(--ink-soft);margin-top:4px;}
+.forecast-note{margin:11px 0 0!important;font-size:11px!important;color:var(--ink-soft)!important;}
+.update-panel{
+  margin:16px 0 6px;padding:18px 20px;border:1px solid #ded7c9;border-left:4px solid var(--accent);
+  border-radius:4px;background:linear-gradient(135deg,#fffcf6 0%,#fff 72%);
+}
+.update-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:10px;}
+.update-head span{font-size:10.5px;font-weight:700;letter-spacing:.12em;color:var(--accent);}
+.update-head h2{font-size:18px;margin:0;color:var(--ink);}
+.update-body section{border:0;padding:0;}.update-body h3.sub{margin-top:8px;}
+.update-body .tbl-scroll{background:#fff;}
+.layout{
+  display:grid;grid-template-columns:208px minmax(0,1fr);gap:36px;align-items:start;
+  padding:14px 0 0;
+}
+.sidebar{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow-y:auto;padding:0 8px 0 0;}
+.sidebar::-webkit-scrollbar{width:6px;}
+.sidebar::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px;}
+.toc{position:static;background:transparent;border:none;margin:12px 0 16px;padding:0;}
+.toc .scroll{overflow:visible;white-space:normal;display:flex;flex-direction:column;gap:2px;}
+.toc a{
+  display:flex;align-items:center;gap:9px;
+  font-size:14px;line-height:1.25;color:var(--ink-soft);text-decoration:none;
+  padding:6px 8px;border-radius:5px;margin:0;border:1px solid transparent;
+}
+.toc a .toc-num{
+  flex:0 0 auto;font-family:"Times New Roman",serif;font-size:12px;font-weight:600;
+  color:var(--ink-soft);background:var(--line-soft);
+  width:22px;height:22px;border-radius:4px;font-variant-numeric:tabular-nums;
+  display:inline-flex;align-items:center;justify-content:center;
+}
+.toc a:hover{background:var(--brand-light);color:var(--brand);}
+.toc a:hover .toc-num{background:#fff;color:var(--brand);}
+.toc a.active{background:var(--brand);color:#fff;font-weight:600;}
+.toc a.active .toc-num{background:rgba(255,255,255,.22);color:#fff;}
+.main{min-width:0;}
+section{padding:16px 0 8px;border-top:1px solid var(--line-soft);scroll-margin-top:64px;}
+section:first-of-type{border-top:none;padding-top:6px;}
+h2.sec{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",serif;
+  font-size:19px;color:var(--brand);margin:6px 0 12px;font-weight:700;
+  display:flex;align-items:baseline;gap:10px;
+}
+h2.sec .num{
+  font-family:"Times New Roman",serif;font-size:14px;color:#fff;background:var(--brand);
+  padding:2px 9px;border-radius:3px;letter-spacing:.05em;font-weight:600;flex:0 0 auto;
+}
+h3.sub{font-size:14.5px;color:var(--ink);margin:16px 0 6px;font-weight:700;}
+p{margin:8px 0;}
+ul,ol{margin:8px 0;padding-left:22px;}
+li{margin:4px 0;}
+strong{color:var(--ink);}
+.tbl-scroll{overflow-x:auto;margin:10px 0;border:1px solid var(--line);border-radius:4px;}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums;}
+thead th{
+  background:#f3f6fa;color:var(--brand);font-weight:700;text-align:right;
+  padding:10px 12px;border-bottom:1.5px solid var(--brand);white-space:nowrap;
+  font-size:12.5px;letter-spacing:.02em;
+}
+thead th[scope=col]:first-child{text-align:left;}
+tbody td{padding:9px 12px;border-bottom:1px solid var(--line-soft);text-align:right;white-space:normal;word-break:break-word;}
+tbody th[scope=row]{
+  text-align:left;color:var(--ink);font-weight:600;
+  padding:9px 12px;border-bottom:1px solid var(--line-soft);white-space:nowrap;font-size:13px;background:#fafbfd;
+}
+tbody tr:nth-child(even) td{background:#fafbfd;}
+tbody tr:hover td{background:var(--brand-light);}
+.up{color:var(--up);}
+.down{color:var(--down);}
+.muted{color:var(--ink-soft);}
+a{color:var(--brand-2);text-decoration:underline;text-underline-offset:2px;word-break:break-all;}
+a:hover{color:var(--brand);}
+.note-copy{
+  margin:20px 0;border:1px solid var(--line);border-left:4px solid var(--accent);
+  background:#fbfcfe;border-radius:4px;padding:14px 16px;
+}
+.note-copy h2{margin:0 0 10px;font-size:13px;letter-spacing:.1em;color:var(--brand);font-weight:700;}
+pre{
+  margin:10px 0;padding:12px 14px;background:#f7f9fc;border:1px solid var(--line-soft);
+  border-radius:4px;overflow:auto;color:var(--ink);font-size:12.5px;line-height:1.6;
+}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;}
+footer{
+  margin-top:22px;border-top:2px solid var(--brand);padding:14px 0 30px;
+  font-size:11.5px;color:var(--ink-soft);line-height:1.7;font-variant-numeric:tabular-nums;
+}
+footer .disclaimer{background:var(--line-soft);padding:8px 12px;border-radius:3px;margin-bottom:8px;}
+@media (max-width:1100px){
+  .layout{grid-template-columns:1fr;gap:0;}
+  .sidebar{position:static;max-height:none;overflow:visible;padding:0;}
+  .toc{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);
+    border-bottom:1px solid var(--line);margin:0 -32px 16px;padding:10px 32px;}
+  .toc .scroll{overflow-x:auto;white-space:nowrap;flex-direction:row;}
+  .toc a{display:inline-flex;white-space:nowrap;border-left:none;border:1px solid transparent;padding:3px 9px;margin:2px;}
+  .toc a.active{border-left:none;background:var(--brand);color:#fff;}
+}
+@media (max-width:760px){
+  .verdict-grid{grid-template-columns:1fr;}
+  .kpis{grid-template-columns:repeat(3,1fr);}
+  .forecast-grid{grid-template-columns:1fr;}
+  .page{padding:0 18px;}
+  .masthead .m-stats{gap:22px;}
+}
+@media (max-width:460px){.kpis{grid-template-columns:repeat(2,1fr);}}
+@media print{
+  body{background:#fff;font-size:10.5px;}
+  .page{max-width:none;padding:0;}
+  .layout{grid-template-columns:1fr;}
+  .sidebar{position:static;max-height:none;overflow:visible;}
+  .toc{position:static;border:none;padding:0;margin:0 0 8px;}
+  .toc .scroll{overflow:visible;display:block;}
+  .toc a{font-size:10px;padding:1px 5px;display:inline-flex;}
+  .toc a.active{background:transparent;color:var(--ink);}
+  section{break-inside:avoid;padding-top:10px;}
+  table{font-size:9.5px;}
+  thead{display:table-header-group;}
+  tbody tr{break-inside:avoid;}
+  .badge{border:1px solid #ccc;}
+  .note-copy,.tbl-scroll,.kpis,.verdict,.forecast-panel{break-inside:avoid;}
+  .update-panel{break-inside:avoid;}
+  footer{break-inside:avoid;}
+  a{color:var(--ink);text-decoration:none;}
+  .kpi{border:1px solid #ccc;}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="masthead">
+    <div class="m-left">
+      <div class="kode">000429.SZ · 深圳证券交易所 · 基本面分析</div>
+      <h1>粤高速 · 基本面分析</h1>
+      <div class="sub">基本面、财务质量、估值与风险初筛</div>
+      <div class="meta">数据口径 <b>未提取</b> · 生成时间 <b>2026-08-07 15:07</b></div>
+    </div>
+    <div class="m-stats">
+      <div><div class="ms-v">14.19 元</div><div class="ms-l">收盘价 · 2026-08-06，延迟行情</div></div>
+<div><div class="ms-v">296.7 亿元</div><div class="ms-l">总市值 · 按 20.908 亿股×收盘价推算</div></div>
+<div><div class="ms-v">约 16.5 倍</div><div class="ms-l">PE · 按2025A归母净利与市值推算</div></div>
+<div><div class="ms-v">约 2.7 倍</div><div class="ms-l">PB · 按2025年末归母净资产推算</div></div>
+    </div>
+  </header>
+
+  <section class="verdict" aria-label="结论速览">
+    <div class="verdict-head">
+      <h2>结论速览</h2>
+      <div class="badges">
+        <span class="badge fund"><span class="k">基本面</span> 中性</span>
+<span class="badge qual"><span class="k">财务质量</span> 良好</span>
+<span class="badge valu"><span class="k">估值</span> 合理</span>
+<span class="badge fraud"><span class="k">造假风险初筛</span> 低</span>
+      </div>
+    </div>
+    <div class="verdict-headline"><span class="label">核心判断</span>粤高速具备高现金流和成熟收费资产的防御特征，但2025年扣非利润下滑、路网分流与广惠改扩建资金需求同时存在，当前股价已靠近近期区间中上部，宜等待新的业绩与价量确认。</div>
+    <div class="verdict-grid">
+      <div class="v-col v-up">
+        <div class="v-title">核心理由</div>
+        <ul>
+<li>2025年经营现金流35.59亿元，为归母利润约1.98倍，现金流质量强。</li>
+<li>2025年扣非归母净利同比-7.39%，归母利润增长不能简单外推。</li>
+<li>2026Q1扣非净利同比+12.53%，但净利同比-31.27%受上年坏账准备转回扰动，需半年报验证持续性。</li>
+<li>广惠高速收入增长并提升毛利率，但佛开、广珠段收入和/或毛利承压，业务分化显著。</li>
+<li>改扩建使资产负债率升至46.98%，并增加预付工程款，未来回报率与现金分配能力是关键变量。</li>
+</ul>
+      </div>
+      <div class="v-col v-risk">
+        <div class="v-title">主要风险 / 关注</div>
+        <ul>
+<li>是否亏损/ST或退市风险：否。</li>
+<li>审计意见：2025年年报审计报告为标准无保留意见。</li>
+<li>监管问询/处罚：2025年报披露报告期内不存在处罚及整改；年报曾提及对2025年半年度报告收入下降及应收风险的问询，需持续关注后续回复和整改。</li>
+<li>诉讼仲裁：年报披露无重大诉讼、仲裁。</li>
+</ul>
+      </div>
+    </div>
+    <p class="note">口径:市场估值为时点数据,财务指标需区分年度、半年度、季度和单季口径;所有结论以公司正式披露和已核验来源为准。</p>
+  </section>
+
+  <div class="kpis" aria-label="关键指标速览">
+    <div class="kpi"><div class="kl">总市值</div><div class="kv">296.7 亿元</div><div class="ks">按 20.908 亿股×收盘价推算</div></div>
+<div class="kpi"><div class="kl">PE</div><div class="kv">约 16.5 倍</div><div class="ks">按2025A归母净利与市值推算</div></div>
+<div class="kpi"><div class="kl">PB</div><div class="kv">约 2.7 倍</div><div class="ks">按2025年末归母净资产推算</div></div>
+<div class="kpi"><div class="kl">PS</div><div class="kv">约 6.6 倍</div><div class="ks">按2025A营收与市值推算</div></div>
+  </div>
+
+  <section class="forecast-panel forecast-empty" aria-label="最新财务预报"><div class="forecast-head"><div><span class="forecast-kicker">最新财务预报</span><h2>近30日未披露新的正式财务预报</h2></div><span class="forecast-tag neutral">无新增预报</span></div></section>
+
+  <section class="update-panel" aria-label="本次更新"><div class="update-head"><span>RESEARCH CONTINUITY</span><h2>本次更新 · 与上次报告相比</h2></div><div class="update-body"><p>首次建立研究基线，无上次报告可比。本次触发事件：基于2025年年报、2026Q1报告和截至2026-08-06的市场数据建立完整基线。</p></div></section>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="toc" aria-label="目录">
+        <div class="scroll" id="toc-scroll">
+          <a href="#s1"><span class="toc-num">01</span>核心财务指标</a>
+<a href="#s2"><span class="toc-num">02</span>近两年财报趋势与业务结构</a>
+<a href="#s3"><span class="toc-num">03</span>结论摘要</a>
+<a href="#s4"><span class="toc-num">04</span>公司与行业</a>
+<a href="#s5"><span class="toc-num">05</span>订单与需求验证</a>
+<a href="#s6"><span class="toc-num">06</span>财务质量验证</a>
+<a href="#s7"><span class="toc-num">07</span>股东与机构</a>
+<a href="#s8"><span class="toc-num">08</span>估值与同行对比</a>
+<a href="#s9"><span class="toc-num">09</span>负面信息与风险排查</a>
+<a href="#s10"><span class="toc-num">10</span>财务造假风险初筛</a>
+<a href="#s11"><span class="toc-num">11</span>后续跟踪清单</a>
+<a href="#s12"><span class="toc-num">12</span>信息边界</a>
+        </div>
+      </nav>
+    </aside>
+    <main class="main">
+      <section id="s1">
+<h2 class="sec"><span class="num">01</span>核心财务指标</h2>
+<h3 class="sub">1.1 当前估值快照</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">项目</th>
+<th scope="col">最新数据</th>
+<th scope="col">数据日期/口径</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">收盘价</th>
+<td>14.19 元</td>
+<td>2026-08-06，延迟行情</td>
+<td>近30日区间 13.36–15.30 元的中部偏上位置</td>
+</tr>
+<tr>
+<th scope="row">总市值</th>
+<td>296.7 亿元</td>
+<td>按 20.908 亿股×收盘价推算</td>
+<td>市场时点估算</td>
+</tr>
+<tr>
+<th scope="row">流通市值</th>
+<td>未单独核验</td>
+<td>—</td>
+<td>不作为结论依据</td>
+</tr>
+<tr>
+<th scope="row">PE</th>
+<td>约 16.5 倍</td>
+<td>按2025A归母净利与市值推算</td>
+<td>需剔除部分非经常收益后审视</td>
+</tr>
+<tr>
+<th scope="row">PB</th>
+<td>约 2.7 倍</td>
+<td>按2025年末归母净资产推算</td>
+<td>高于纯“低PB”叙事可覆盖的水平</td>
+</tr>
+<tr>
+<th scope="row">PS</th>
+<td>约 6.6 倍</td>
+<td>按2025A营收与市值推算</td>
+<td>特许经营资产型公司更应结合现金流、收费期与资本开支</td>
+</tr>
+<tr>
+<th scope="row">股息率</th>
+<td>约 4.26%（税前）</td>
+<td>以2025年度拟每10股派6.04元、8月6日收盘价测算</td>
+<td>以股东会通过及实际派发为前提，不代表未来股息</td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">1.2 最新财务预报与质量解读</h3>
+<p>近30日未披露新的正式财务预报。最近正式定期报告为2026年第一季度报告（2026-04-30，未经审计）。</p>
+<p>财务预报质量判断：不适用；当前不以未经审计的业绩预告作为交易依据。</p>
+<h3 class="sub">1.3 已披露的当年期间财报</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">2025Q1</th>
+<th scope="col">2026Q1</th>
+<th scope="col">变化解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入（亿元）</th>
+<td>10.50</td>
+<td>10.78</td>
+<td class="up">+2.68%，通行费主业保持小幅增长</td>
+</tr>
+<tr>
+<th scope="row">归母净利润（亿元）</th>
+<td>6.57</td>
+<td>4.52</td>
+<td class="down">-31.27%，主要因上年同期广佛公司冲回坏账准备3.43亿元，基数偏高</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润（亿元）</th>
+<td>4.00</td>
+<td>4.50</td>
+<td class="up">+12.53%，更能反映当期核心盈利改善</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额（亿元）</th>
+<td>14.05</td>
+<td>12.98</td>
+<td class="down">-7.63%，仍显著高于当期净利润</td>
+</tr>
+<tr>
+<th scope="row">经营现金流/归母净利</th>
+<td>2.14</td>
+<td>2.87</td>
+<td>现金转化较好；单季度季节性需后续验证</td>
+</tr>
+<tr>
+<th scope="row">EPS（元/股）</th>
+<td>0.31</td>
+<td>0.22</td>
+<td class="down">受非经常性基数影响下降</td>
+</tr>
+<tr>
+<th scope="row">加权ROE</th>
+<td>6.10%</td>
+<td>3.99%</td>
+<td class="down">受归母利润同比下降影响</td>
+</tr>
+<tr>
+<th scope="row">应收账款（亿元）</th>
+<td class="muted">未披露</td>
+<td>1.27</td>
+<td>较年初+31.13%，公司解释为待清算通行费收入增加，需跟踪清算与回款</td>
+</tr>
+<tr>
+<th scope="row">其他非流动资产（亿元）</th>
+<td class="muted">未披露</td>
+<td>16.01</td>
+<td>较年初+92.57%，主要为广惠改扩建预付工程款重分类</td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">1.4 最近三年年度财报</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">2023A</th>
+<th scope="col">2024A</th>
+<th scope="col">2025A</th>
+<th scope="col">变化解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入（亿元）</th>
+<td>48.79</td>
+<td>45.70</td>
+<td>44.70</td>
+<td class="down">连续下滑，2025年-2.19%</td>
+</tr>
+<tr>
+<th scope="row">归母净利润（亿元）</th>
+<td>16.34</td>
+<td>15.62</td>
+<td>18.01</td>
+<td class="up">2025年+15.31%，但扣非并未同步改善</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润（亿元）</th>
+<td>17.05</td>
+<td>16.45</td>
+<td>15.23</td>
+<td class="down">连续下滑，2025年-7.39%</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额（亿元）</th>
+<td>38.32</td>
+<td>32.56</td>
+<td>35.59</td>
+<td>始终显著覆盖归母利润，现金质量较好</td>
+</tr>
+<tr>
+<th scope="row">经营现金流/归母净利</th>
+<td>2.35</td>
+<td>2.08</td>
+<td>1.98</td>
+<td>仍高于1，利润现金含量充足</td>
+</tr>
+<tr>
+<th scope="row">EPS（元/股）</th>
+<td>0.78</td>
+<td>0.75</td>
+<td>0.86</td>
+<td>2025年回升</td>
+</tr>
+<tr>
+<th scope="row">加权ROE</th>
+<td>17.30%</td>
+<td>15.52%</td>
+<td>16.83%</td>
+<td>保持较高资本回报，但受投资收益与非经常项影响</td>
+</tr>
+<tr>
+<th scope="row">总资产（亿元）</th>
+<td>213.69</td>
+<td>224.42</td>
+<td>267.91</td>
+<td>2025年+19.38%，与改扩建投入有关</td>
+</tr>
+<tr>
+<th scope="row">归母净资产（亿元）</th>
+<td class="muted">未披露</td>
+<td class="muted">未披露</td>
+<td>111.16</td>
+<td>用于PB计算；跨期明细留待后续完整年报表核验</td>
+</tr>
+</tbody></table></div>
+<p>核心指标综合判断：2025年的归母利润改善并不等于主营盈利全面复苏，扣非利润反而下降；2026Q1在剔除上年坏账转回基数后，扣非利润增长12.53%，是一个积极但仍需半年报确认的信号。经营现金流持续强于利润，应收账款规模仍低于年收入、未见典型的收入现金化恶化；但广惠改扩建带来的预付工程款与资产扩张，将使未来自由现金流和负债率更值得关注。</p>
+</section>
+<section id="s2">
+<h2 class="sec"><span class="num">02</span>近两年财报趋势与业务结构</h2>
+<h3 class="sub">2.1 近两年财报趋势</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">项目</th>
+<th scope="col">2024A</th>
+<th scope="col">2025A</th>
+<th scope="col">变化</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入（亿元）</th>
+<td>45.70</td>
+<td>44.70</td>
+<td class="down">-2.19%</td>
+<td>路网分流及部分路段车流/收费承压</td>
+</tr>
+<tr>
+<th scope="row">归母净利润（亿元）</th>
+<td>15.62</td>
+<td>18.01</td>
+<td class="up">+15.31%</td>
+<td>包含非经常性收益影响，不能只看归母增速</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润（亿元）</th>
+<td>16.45</td>
+<td>15.23</td>
+<td class="down">-7.39%</td>
+<td>核心盈利仍承压</td>
+</tr>
+<tr>
+<th scope="row">公路运输毛利率</th>
+<td>64.42%</td>
+<td>64.61%</td>
+<td class="up">+0.19pct</td>
+<td>高毛利特许经营资产的防御属性仍在</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额（亿元）</th>
+<td>32.56</td>
+<td>35.59</td>
+<td class="up">+9.31%</td>
+<td class="up">回款稳定、现金创造能力较强</td>
+</tr>
+<tr>
+<th scope="row">应收账款（亿元）</th>
+<td>0.80</td>
+<td>0.97</td>
+<td class="up">+21%</td>
+<td class="up">基数小但2026Q1继续上升，待跟踪</td>
+</tr>
+<tr>
+<th scope="row">资产负债率</th>
+<td>41.20%</td>
+<td>46.98%</td>
+<td class="up">+5.78pct</td>
+<td>改扩建投资抬升杠杆，仍需观察融资成本与项目回报</td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">2.2 分业务情况</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">业务/路段</th>
+<th scope="col">2024年收入（亿元）</th>
+<th scope="col">2024毛利率</th>
+<th scope="col">2025年收入（亿元）</th>
+<th scope="col">2025毛利率</th>
+<th scope="col">变化</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">广惠高速</th>
+<td>19.25</td>
+<td>62.23%</td>
+<td>20.03</td>
+<td>68.51%</td>
+<td class="up">收入+4.08%，是最重要的增长引擎；改扩建也是资本开支核心</td>
+</tr>
+<tr>
+<th scope="row">佛开高速</th>
+<td>14.95</td>
+<td>65.82%</td>
+<td>14.24</td>
+<td>58.45%</td>
+<td class="down">收入-4.78%、毛利率下降7.37pct</td>
+</tr>
+<tr>
+<th scope="row">京珠高速广珠段</th>
+<td>10.80</td>
+<td>67.03%</td>
+<td>9.56</td>
+<td>65.31%</td>
+<td>收入-11.50%，受路网与车流因素影响</td>
+</tr>
+<tr>
+<th scope="row">公路运输合计</th>
+<td>45.00</td>
+<td>64.42%</td>
+<td>43.83</td>
+<td>64.61%</td>
+<td>占营收98.05%，业务高度集中于通行费</td>
+</tr>
+</tbody></table></div>
+<p>业务结构判断：公司本质是广东省内成熟高速公路特许经营资产组合，广惠高速收入占比44.82%，是业绩韧性的主要来源；其他核心路段收入走弱，意味着“高股息+稳定增长”不能只依据全公司利润增长成立。广惠改扩建若按计划提升长期通行能力，可能形成中长期支撑，但建设期资本开支、融资与分流扰动是短期约束。</p>
+</section>
+<section id="s3">
+<h2 class="sec"><span class="num">03</span>结论摘要</h2>
+<h3 class="sub">3.1 当前结论</h3>
+<ul>
+<li>基本面判断：中性</li>
+<li>财务质量：良好</li>
+<li>估值状态：合理</li>
+<li>财务造假风险初筛：低</li>
+<li>核心理由：</li>
+<ol>
+<li>2025年经营现金流35.59亿元，为归母利润约1.98倍，现金流质量强。</li>
+<li>2025年扣非归母净利同比-7.39%，归母利润增长不能简单外推。</li>
+<li>2026Q1扣非净利同比+12.53%，但净利同比-31.27%受上年坏账准备转回扰动，需半年报验证持续性。</li>
+<li>广惠高速收入增长并提升毛利率，但佛开、广珠段收入和/或毛利承压，业务分化显著。</li>
+<li>改扩建使资产负债率升至46.98%，并增加预付工程款，未来回报率与现金分配能力是关键变量。</li>
+</ol>
+</ul>
+<h3 class="sub">3.2 与上次报告相比</h3>
+<p>首次建立研究基线，无上次报告可比。本次触发事件：基于2025年年报、2026Q1报告和截至2026-08-06的市场数据建立完整基线。</p>
+<h3 class="sub">3.3 当前位置与交易决策</h3>
+<ul>
+<li>行情日期：2026-08-06；参考收盘价14.19元。</li>
+<li>持仓状态：未知。</li>
+<li>当前动作：等待。</li>
+<li>建议目标仓位：0%。</li>
+<li>依据：近30个交易日区间为13.36–15.30元，当前价格处于中部偏上；缺少截至报告日的完整、可复核的近期日/周线量价结构及估值上行空间证据，四道决策门未全部通过。</li>
+<li>参考买入区间与不宜追高位置：当前不设定买入区间；在未出现新的、可验证的业绩改善与健康价量结构前，不在14.19元附近追高。</li>
+<li>价格止损：不适用（等待、未建立新仓）。若未来建立仓位，价格止损按实际均价下方10%计算，并应同时满足结构失效位不宽于该上限。</li>
+<li>基本面提前退出条件：扣非利润持续下滑；广惠改扩建投入导致经营现金流/自由现金流明显恶化或杠杆快速上升；核心收费路段的车流、通行费收入持续低于预期；出现重大审计、监管或治理风险。</li>
+<li>合理价值/目标空间及依据：暂不设定精确目标价。按2025A EPS 0.86元，当前对应约16.5倍PE；在扣非盈利尚未恢复、项目回报未验证时，无法量化满足至少2:1的上行/止损比。</li>
+<li>预期盈亏比：无法可靠判断，不满足新开仓要求。</li>
+<li>有效期：至2026年半年度报告披露、下一项重大资本开支/融资公告或价格显著突破30日区间三者中较早者。</li>
+<li>决策置信度：中。</li>
+<li>主要反证：若2026H1扣非利润继续增长、广惠改扩建资金安排和回报率得到充分披露，同时股价在放量后有效站稳近期高点，则“等待”结论需要重新评估。</li>
+</ul>
+</section>
+<section id="s4">
+<h2 class="sec"><span class="num">04</span>公司与行业</h2>
+<ul>
+<li>主营业务：广佛、佛开、广惠、京珠广珠段等高速公路收费、养护及相关投资。</li>
+<li>行业景气度：成熟特许经营行业，需求与区域经济、车流、路网分流及收费政策紧密相关，增长通常不是线性的。</li>
+<li>核心竞争力：广东省内区位资产、通行费现金流和国资控股背景。</li>
+<li>主要依赖：通行费收入占比98.05%，对收费政策、车流、竞争性路网和特许经营期限高度敏感。</li>
+</ul>
+</section>
+<section id="s5">
+<h2 class="sec"><span class="num">05</span>订单与需求验证</h2>
+<p>未发现可直接量化且与通行费主业匹配的新增销售订单数据。高速公路经营并非典型订单驱动模式；应以车流、通行费收入、改扩建进度、资本开支及回款替代验证需求。</p>
+</section>
+<section id="s6">
+<h2 class="sec"><span class="num">06</span>财务质量验证</h2>
+<ul>
+<li>利润与现金流匹配：2025年经营现金流为归母净利1.98倍，匹配良好；2026Q1亦为2.87倍。</li>
+<li>应收账款与营收匹配：2025年末应收账款0.97亿元，占年营收比例较低；2026Q1增至1.27亿元，需跟踪待清算通行费的回款。</li>
+<li>存货：收费公路运营企业存货重要性低，未将其作为核心风险指标。</li>
+<li>资本开支效率与自由现金流：广惠改扩建相关预付款明显上升，现阶段未取得可比的项目全周期投资回报数据，无法评估自由现金流拐点。</li>
+<li>资产负债率与有息负债：2025年末资产负债率46.98%；2026Q1短期借款2.59亿元，需结合长期融资继续监测。</li>
+<li>综合判断：良好，但由“成熟资产收现”进入“改扩建资本投入”的转换期，财务质量评价不宜机械外推。</li>
+</ul>
+</section>
+<section id="s7">
+<h2 class="sec"><span class="num">07</span>股东与机构</h2>
+<ul>
+<li>控股股东：广东省交通集团有限公司，2025年末持股24.56%；广东省公路建设有限公司持股22.30%，均为国有法人。</li>
+<li>前两大股东合计持股：46.86%，控制权稳定。</li>
+<li>质押/减持：在本次核验的2025年报披露范围内，未见上述前两大股东股权质押；尚未对报告日后所有减持公告作穷尽检索。</li>
+<li>机构参与：年报前十大股东含保险资金与红利低波ETF，反映高股息属性受到机构配置；不以此作为估值结论。</li>
+<li>治理风险判断：低至中等。2025年更换审计机构属于前任连续服务达到原招标最高续聘次数后的常规轮换，年报披露无重大诉讼、处罚或破产重整事项；仍应关注改扩建关联交易和资本配置。</li>
+</ul>
+</section>
+<section id="s8">
+<h2 class="sec"><span class="num">08</span>估值与同行对比</h2>
+<ul>
+<li>当前估值：按2025A归母利润计算约16.5倍PE、约2.7倍PB、税前股息率约4.26%。</li>
+<li>同行业对比：本次未取得同一行情日、同一口径的宁沪高速、深高速、皖通高速等完整可比估值及财务数据，因此不以非同步数据作精确横比。</li>
+<li>估值匹配度：合理而非显著低估。成熟高现金流和股息提供估值支撑，但扣非利润下行、核心路段分化与改扩建资本投入限制估值扩张。</li>
+</ul>
+</section>
+<section id="s9">
+<h2 class="sec"><span class="num">09</span>负面信息与风险排查</h2>
+<ul>
+<li>是否亏损/ST或退市风险：否。</li>
+<li>审计意见：2025年年报审计报告为标准无保留意见。</li>
+<li>监管问询/处罚：2025年报披露报告期内不存在处罚及整改；年报曾提及对2025年半年度报告收入下降及应收风险的问询，需持续关注后续回复和整改。</li>
+<li>诉讼仲裁：年报披露无重大诉讼、仲裁。</li>
+<li>主要风险：收费政策/收费期、路网分流、车流波动、改扩建超预算或回报偏低、杠杆上升及高股息可持续性。</li>
+</ul>
+</section>
+<section id="s10">
+<h2 class="sec"><span class="num">10</span>财务造假风险初筛</h2>
+<ul>
+<li>红旗数量：1项轻度跟踪项。</li>
+<li>主要红旗：2026Q1应收账款较年初上升31.13%，但公司给出待清算通行费收入解释；改扩建预付工程款重分类使其他非流动资产大幅增长。</li>
+<li>风险等级：低。</li>
+<li>解释：经营现金流长期强于利润、应收绝对规模较小，且已披露原因；未发现审计非标、监管处罚或重大治理红旗。该判断只是风险初筛，不构成对财务真实性的事实认定。</li>
+</ul>
+</section>
+<section id="s11">
+<h2 class="sec"><span class="num">11</span>后续跟踪清单</h2>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">跟踪事项</th>
+<th scope="col">首次提出</th>
+<th scope="col">上次状态</th>
+<th scope="col">本次证据</th>
+<th scope="col">当前状态</th>
+<th scope="col">下次验证时间/触发条件</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">2026H1扣非利润持续性</th>
+<td>2026-08-07</td>
+<td>待验证</td>
+<td>2026Q1扣非净利+12.53%</td>
+<td>待验证</td>
+<td>2026H1报告披露</td>
+</tr>
+<tr>
+<th scope="row">广惠改扩建资本开支与回报</th>
+<td>2026-08-07</td>
+<td>待验证</td>
+<td class="up">预付工程款重分类、资产负债率上升</td>
+<td>待验证</td>
+<td>重大投资/融资公告或半年报</td>
+</tr>
+<tr>
+<th scope="row">待清算通行费回款</th>
+<td>2026-08-07</td>
+<td>待验证</td>
+<td>2026Q1应收账款较年初+31.13%</td>
+<td>待验证</td>
+<td>2026H1应收与经营现金流数据</td>
+</tr>
+<tr>
+<th scope="row">核心路段车流与通行费分化</th>
+<td>2026-08-07</td>
+<td>待验证</td>
+<td class="down">佛开、广珠段2025收入下滑</td>
+<td>待验证</td>
+<td>2026H1经营数据/年中交流记录</td>
+</tr>
+</tbody></table></div>
+</section>
+<section id="s12">
+<h2 class="sec"><span class="num">12</span>信息边界</h2>
+<ul>
+<li>分析范围：执行日2026-08-07；行情日2026-08-06；已披露正式财务报告截至2026Q1，2025A经审计、2026Q1未经审计。14.19元及近30日价格区间来自第三方延迟行情网页，未归档且未独立核验，只用于支持审慎等待判断，不用于精确买点或估值结论。</li>
+<li>主要数据来源：<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260314_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_c2239bda-780c-479f-8c93-1a43f4a787cb.pdf">2025年年度报告全文（本地归档）</a>、<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260430_2026Q1_%E7%AC%AC%E4%B8%80%E5%AD%A3%E5%BA%A6%E6%8A%A5%E5%91%8A_1225256662.pdf">2026年第一季度报告（本地归档）</a>、<a href="https://cn.investing.com/equities/gd-express-dev-a-historical-data" target="_blank" rel="noopener">近30日行情数据</a>。官方PDF原始URL、校验哈希与归档状态见<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/%E8%B5%84%E6%96%99%E7%B4%A2%E5%BC%95.md">资料索引</a>。</li>
+<li>本地原始资料：上述两份正式披露PDF已校验归档；行情网页不作为原始PDF归档。</li>
+<li>尚未核验信息：截至报告日的完整实时估值字段、统一口径同行估值、广惠改扩建全周期投资回报和2026H1正式财报。</li>
+<li>可能影响结论的新事项：半年度报告、重大融资/投资或收费政策变化、路网重大调整。</li>
+</ul>
+</section>
+
+      <section id="note-friendly">
+        <h2 class="sec"><span class="num">◎</span>基本面速记</h2>
+        <div class="note-copy">
+          <h2>可复制摘要</h2>
+          <pre><code>【基本面速记】
+公司：粤高速（000429.SZ）
+结论：基本面中性，财务质量良好，估值合理。
+核心看点：
+1. 现金流强，2025年经营现金流/归母净利约1.98倍。
+2. 2026Q1扣非利润同比增长12.53%，但需H1确认。
+3. 广惠高速增长，佛开与广珠段承压；改扩建带来资本开支与杠杆压力。
+主要风险：收费政策/车流分流；改扩建回报与融资压力；扣非盈利继续下滑。
+最新财务预报：近30日未披露新的正式财务预报。
+财务造假风险初筛：低。现金流与利润总体匹配，应收绝对规模低；跟踪待清算通行费回款和工程预付款。
+订单/需求验证：无法按订单验证；以车流、通行费、改扩建进度和现金流替代跟踪。
+后续跟踪：2026H1扣非利润、广惠改扩建回报、应收回款、各核心路段通行费。
+
+【交易决策摘要】
+行情日期：2026-08-06
+持仓状态：未知
+当前动作：等待
+建议目标仓位：0%
+参考价格与计划买入区间：当前不设定；缺少健康价量与可验证上行空间证据。
+不宜追高位置：14.19元附近，位于近30日区间中部偏上。
+价格止损：不适用；未来建仓按实际均价下方10%计算。
+基本面提前退出条件：扣非持续下滑、改扩建显著侵蚀现金流、核心路段收入恶化或重大治理风险。
+合理价值/目标空间及依据：暂不设精确目标价；当前约16.5倍2025A PE，尚不能证明至少2:1盈亏比。
+预期盈亏比：无法可靠判断。
+建议有效期：至2026H1报告、重大资本开支/融资公告或明显价量结构变化三者中较早者。
+决策置信度：中
+核心理由：基本面有防御性但扣非未全面复苏，位置门和风险收益门未通过。
+主要反证：H1扣非延续增长且资金回报披露改善、价格放量突破并站稳近期高位后重评。</code></pre>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="disclaimer">
+      免责声明:本报告为基于公开财报、公告、行情与新闻资料的整理和财务质量初筛,不构成任何投资建议,不保证未来收益。投资有风险,决策需谨慎。所有数据以公司正式披露为准。
+    </div>
+    <div>报告主体:粤高速(000429.SZ) | 数据口径:未提取</div>
+    <div>主要数据来源:2025年年度报告全文（本地归档）、2026年第一季度报告（本地归档）、近30日行情数据。官方PDF原始URL、校验哈希与归档状态见资料索引。</div>
+    <div>自包含离线 HTML · 内联 CSS / 极简内联 JS · 可直接在浏览器打开</div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var links = document.querySelectorAll('nav.toc a');
+  var map = {};
+  for (var i=0;i<links.length;i++){
+    var href = links[i].getAttribute('href') || '';
+    if (href.charAt(0) === '#') map[href.slice(1)] = links[i];
+  }
+  var sections = document.querySelectorAll('main section[id]');
+  function onScroll(){
+    var pos = (window.scrollY || document.documentElement.scrollTop) + 90;
+    var cur = null;
+    for (var j=0;j<sections.length;j++){
+      if (sections[j].offsetTop <= pos) cur = sections[j].id;
+    }
+    for (var k=0;k<links.length;k++) links[k].classList.remove('active');
+    if (cur && map[cur]) {
+      map[cur].classList.add('active');
+      var act = map[cur];
+      var sc = document.getElementById('toc-scroll');
+      if (sc && act.offsetLeft < sc.scrollLeft) sc.scrollLeft = act.offsetLeft - 8;
+      if (sc && act.offsetLeft + act.offsetWidth > sc.scrollLeft + sc.clientWidth) {
+        sc.scrollLeft = act.offsetLeft + act.offsetWidth - sc.clientWidth + 8;
+      }
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
+</body>
+</html>

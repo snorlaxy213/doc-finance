@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-08-07T15:07:58+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260314-36937060",
+      "title": "2025年年度报告全文（深交所）",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260314",
+      "official_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-03-14/c2239bda-780c-479f-8c93-1a43f4a787cb.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260314_2025A_年度报告_c2239bda-780c-479f-8c93-1a43f4a787cb.pdf",
+      "sha256": "369370607f3205de735f2f7b1d70311ac8a098fad4395c000f35cbaa62c6c7c1",
+      "bytes": 1168900,
+      "pages": null,
+      "retrieved_at": "2026-08-07T15:05:55+08:00",
+      "used_by": [
+        "粤高速_000429_基本面分析_草稿.md",
+        "粤高速_000429_基本面分析_20260807_151000.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260430-2d740f0e",
+      "title": "2026年第一季度报告（巨潮资讯）",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260430",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-30/1225256662.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260430_2026Q1_第一季度报告_1225256662.pdf",
+      "sha256": "2d740f0e23c03b46e4d1e5b99974f4244c8940a4e9e4ed3f89a78714b69e6759",
+      "bytes": 193100,
+      "pages": null,
+      "retrieved_at": "2026-08-07T15:05:55+08:00",
+      "used_by": [
+        "粤高速_000429_基本面分析_草稿.md",
+        "粤高速_000429_基本面分析_20260807_151000.md"
+      ],
+      "status": "已归档"
+    }
+  ]
+}
