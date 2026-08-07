@@ -1,56 +1,56 @@
 ---
 name: fundamental-stock-review
-description: Analyze and continuously update a listed company's fundamentals, produce a conditional current-position trade decision with position sizing and risk controls, preserve immutable Markdown/HTML snapshots and conclusion history, and archive cited official PDF filings. Covers business quality, financial quality, valuation, current price/volume position, buy/wait/hold/reduce/exit research actions, orders/backlog, ownership, negative news, and financial-fraud risk flags. Use when the user asks for 基本面分析, 财报分析, 财务质量分析, 股票深度复盘, 当前是否是买点, 现在能不能买, 买卖建议, 仓位建议, 止损点, 后续更新, 业绩预告跟踪, 订单跟踪, 订单消息整理, 中标分析, 重大合同, backlog, 合同负债, 客户采购, 招投标信息, 是否财务造假, or wants to evaluate a stock using valuation, growth, profitability, cash flow, ownership, institutional participation, market share, loss, or negative-news indicators.
+description: 分析并持续更新上市公司基本面，输出带条件的当前位置交易决策、仓位建议和风险控制，保留不可变的 Markdown/HTML 快照与结论历史，并归档报告引用的官方 PDF 文件。覆盖业务质量、财务质量、估值、当前价量位置、买入/等待/持有/降仓/退出等研究动作、订单/在手订单、股权结构、负面信息和财务造假风险初筛。适用于用户提出基本面分析、财报分析、财务质量分析、股票深度复盘、当前是否是买点、现在能不能买、买卖建议、仓位建议、止损点、后续更新、业绩预告跟踪、订单跟踪、订单消息整理、中标分析、重大合同、backlog、合同负债、客户采购、招投标信息、是否财务造假，或希望根据估值、增长、盈利能力、现金流、股权结构、机构参与度、市场份额、亏损和负面新闻指标评估股票时使用。
 ---
 
-# Fundamental Stock Review
+# 个股基本面复盘
 
-## Core Rules
+## 核心规则
 
-- Answer in Simplified Chinese unless the user asks otherwise.
-- Use a professional investment-research tone. Provide conditional research actions rather than guaranteed-return language or certainty disguised as a personalized instruction.
-- Always add the current-position trade-decision layer. Use the user's stated risk parameters; otherwise apply `项目级个股交易决策默认值` from the repository-root `AGENTS.md`. Read [references/trade-decision-framework.md](references/trade-decision-framework.md) before collecting price/volume data or drafting that decision.
-- Treat fundamentals as the answer to whether the company is investable and price/volume structure as the answer to whether the current position is actionable. Do not infer a buy point from low PE/PB alone.
-- If recent reliable OHLCV, a reference entry price, or valuation-upside evidence is unavailable, output `等待 / 无法判断当前买点` and identify the missing evidence; never fabricate an entry range, stop price, or target.
-- Verify current, time-sensitive facts before concluding: ticker/name mapping, latest filings, latest price/market-cap data, major announcements, regulatory actions, and recent negative news.
-- Check whether the company issued an official earnings forecast, profit alert, profit warning, forecast revision, 盈喜, or 盈警 during the 30 calendar days ending on the report execution date. Treat forecast figures as unaudited and keep them separate from reported financial statements.
-- Separate confirmed disclosure from market rumor or narrative. Label uncertain items as 信息边界.
-- For orders, contracts, and bidding information, distinguish 招标, 中标候选人, 中标公告, 合同签署, 框架协议, delivered revenue, and unverified market rumor.
-- Treat negative governance, audit, regulatory, or cash-flow issues as possible conclusion downgrades even when growth and valuation look attractive.
-- Do not infer financial fraud from a single indicator. Present it as fraud-risk screening unless there is confirmed regulatory, audit, or legal evidence.
-- Treat a company review as a continuous research record, not an isolated rewrite. Before updating an existing company, read the stable latest report, the research timeline, and unresolved tracking items.
-- Preserve every dated Markdown/HTML pair as an immutable snapshot. Never overwrite, edit, or delete a dated historical report during a later update.
-- When a previous report exists, explicitly distinguish newly confirmed facts, invalidated assumptions, unchanged views, and conclusion changes. Do not silently change conclusion wording or reset the tracking list.
-- Archive every official PDF filing materially cited by the report, prefer company/exchange/statutory-disclosure originals, verify the file, deduplicate by SHA-256, and cite the verified local relative path. Keep the official URL in the source index.
-- Read [references/versioning-and-sources.md](references/versioning-and-sources.md) before updating an existing company, publishing report artifacts, migrating historical reports, or archiving source PDFs.
+- 除非用户另有要求，否则使用简体中文回答。
+- 使用专业的投资研究语气。提供条件化的研究动作，不使用保证收益式语言，也不把确定性伪装成个性化指令。
+- 始终加入当前位置交易决策层。优先使用用户说明的风险参数；否则从仓库根目录的 `AGENTS.md` 读取 `项目级个股交易决策默认值`。在收集价量数据或起草该决策前，先阅读 [references/trade-decision-framework.md](references/trade-decision-framework.md)。
+- 将基本面作为回答“公司是否值得投资”的依据，将价量结构作为回答“当前位置是否可操作”的依据。不得仅凭低 PE/PB 推断买点。
+- 如果缺少近期可靠的 OHLCV、参考买入价或估值上行空间依据，输出 `等待 / 无法判断当前买点` 并指出缺失证据；不得捏造入场区间、止损价或目标价。
+- 在下结论前核验当前且有时效性的事实：股票代码/名称映射、最新财报、最新价格/市值数据、重大公告、监管行动和近期负面新闻。
+- 检查公司在报告执行日前 30 个自然日（含首尾）内是否发布正式业绩预告、盈喜、盈警或预告修订。预告数据视为未经审计，必须与已披露财务报表分开。
+- 将已确认披露与市场传闻或叙事分开。对不确定项目标记为 信息边界。
+- 对订单、合同与招投标信息，区分招标、中标候选人、中标公告、合同签署、框架协议、已确认收入和未经核实的市场传闻。
+- 即使增长和估值看起来有吸引力，也要将治理、审计、监管或现金流问题视为可能导致结论下调的因素。
+- 不得根据单一指标推断财务造假。除非已有监管、审计或司法确认，否则应将其表述为财务造假风险初筛。
+- 将公司复盘视为连续研究记录，而非一次性改写。更新已有公司前，读取稳定版最新报告、研究轨迹和未解决跟踪事项。
+- 每个带日期的 Markdown/HTML 对都作为不可变快照保存。后续更新时不得覆盖、编辑或删除带日期的历史报告。
+- 如果存在历史报告，明确区分新确认事实、已失效假设、未改变观点和结论变化。不得静默改变结论表述或重置跟踪清单。
+- 归档报告实质引用的每份官方 PDF 文件，优先公司、交易所或法定披露原件，校验文件，按 SHA-256 去重，并引用已验证的本地相对路径。来源索引中保留官方 URL。
+- 在更新已有公司、发布报告产物、迁移历史报告或归档源 PDF 前，先阅读 [references/versioning-and-sources.md](references/versioning-and-sources.md)。
 
-## Review Gate
+## 审核门
 
-After evidence collection and before rendering or publishing, invoke `$financial-analysis-reviewer` as a read-only child reviewer. Pass a compact evidence packet containing the company/ticker, analysis date, report periods, draft conclusion, key figures, source paths, unresolved items, changes from the prior report, trade action, market-data date, reference/entry price, target position, stop, upside basis, reward/risk, and fundamental invalidation conditions.
+完成证据收集后、渲染或发布前，调用 `$financial-analysis-reviewer` 作为只读子审查器。传入精简证据包，包含公司/股票代码、分析日期、报告期间、草拟结论、关键数据、来源路径、未解决事项、相对上一版的变化、交易动作、行情日期、参考/买入价、目标仓位、止损、上行空间依据、预期盈亏比和基本面失效条件。
 
-- Use `通过 / 需要修订 / 阻断` as the review result.
-- Do not publish when the result is `阻断`; correct the evidence or lower the conclusion strength, then review again.
-- Keep this Skill responsible for the final conclusion, immutable snapshots, HTML generation, PDF archiving, research timeline, and publication. The reviewer may flag issues but must not edit these artifacts.
-- Re-run the reviewer only when a revision changes the core conclusion, rating, risk level, or report period.
+- 审查结果只使用 `通过 / 需要修订 / 阻断`。
+- 结果为 `阻断` 时不得发布；修正证据或降低结论强度后再次审查。
+- 本 Skill 负责最终结论、不可变快照、HTML 生成、PDF 归档、研究轨迹和发布。审查器可以指出问题，但不得修改这些产物。
+- 仅当修订改变核心结论、评级、风险级别或报告期时，才重新运行审查器。
 
-## Output Artifacts
+## 输出产物
 
-By default, produce both a Markdown report and a standalone HTML report unless the user explicitly asks for chat-only output.
+默认同时生成 Markdown 报告和独立 HTML 报告，除非用户明确要求仅在聊天中输出。
 
-Use this file layout when working inside the user's `doc-finance` workspace:
+在用户的 `doc-finance` 工作区内工作时，使用以下文件布局：
 
 ```text
 /Users/superman/Mine/space/ai/doc-finance/reports/<股票代码>/基本面分析/
 ```
 
-Use these filename patterns:
+使用以下文件名格式：
 
 ```text
 <公司简称>_<股票代码>_基本面分析_<YYYYMMDD_HHMMSS>.md
 <公司简称>_<股票代码>_基本面分析_<YYYYMMDD_HHMMSS>.html
 ```
 
-Also maintain these stable artifacts for each company:
+同时为每家公司维护以下稳定产物：
 
 ```text
 <公司简称>_<股票代码>_基本面分析_最新.md
@@ -62,23 +62,23 @@ Also maintain these stable artifacts for each company:
 .research/state.yaml
 ```
 
-Rules:
+规则：
 
-- Use the current date and time as `YYYYMMDD_HHMMSS` for new snapshots. Existing date-only files remain valid historical snapshots and must not be renamed merely for consistency.
-- If the user provides a different report root, use that root. Otherwise, use `/Users/superman/Mine/space/ai/doc-finance/reports` when available; in other workspaces, use `reports/`.
-- Use baseline mode when no prior report exists. Use incremental-update mode when a prior report exists. Use full-rebuild mode for an annual report, accounting restatement, major business transformation, or an explicit user request; even a full rebuild must compare with the prior conclusion.
-- In incremental-update mode, carry forward still-valid confirmed facts, re-check time-sensitive facts, update affected sections, and retain unresolved tracking items. Do not rewrite unchanged analysis merely for stylistic variation.
-- Save the Markdown report first, using the fixed output structure below and valid GitHub-Flavored Markdown tables.
-- Generate the HTML from the same Markdown using `scripts/render_fundamental_html.py`; do not hand-maintain a separate HTML narrative that can drift from the Markdown.
-- Archive official PDF evidence with `scripts/archive_disclosures.py` before final publication, then use local links such as `原始资料/2026/<file>.pdf` in the Markdown. Do not rewrite old reports solely to replace their remote links.
-- Publish new reports with `scripts/publish_fundamental_review.py`; it creates the immutable timestamped snapshot, atomically refreshes the stable latest pair, and rebuilds the research timeline and state index.
-- Start the Markdown body with `### 1. 核心财务指标` immediately after the H1 title. Do not place a free-standing conclusion, executive summary, background, or time-range paragraph between the title and section 1.
-- Keep the HTML self-contained: inline CSS/JS, no external assets, no network font or CDN dependency.
-- Do not fabricate visualizations. If chart data is not explicitly present in the report tables, let the HTML render tables and summary cards only.
-- After rendering, verify that the exact `一句话结论` appears once in the HTML: in the top `结论速览`, not again in the main body.
-- Final response must include the absolute paths of both the Markdown and HTML files.
+- 新快照使用当前日期和时间，格式为 `YYYYMMDD_HHMMSS`。已有的仅含日期的文件仍是有效历史快照，不得仅为格式统一而重命名。
+- 如果用户提供了不同的报告根目录，则使用该目录。否则，在目录存在时使用 `/Users/superman/Mine/space/ai/doc-finance/reports`；其他工作区使用 `reports/`。
+- 不存在历史报告时使用基线模式；存在历史报告时使用增量更新模式；年报、会计更正、重大业务转型或用户明确要求时使用全量重建模式。即使全量重建，也必须与上一版结论比较。
+- 在增量更新模式下，沿用仍然有效且已确认的事实，重新核验有时效性的事实，更新受影响的章节，并保留未解决的跟踪事项。不得仅为改变文风而重写未变化的分析。
+- 先保存 Markdown 报告，使用下方固定输出结构和有效的 GitHub Flavored Markdown 表格。
+- 使用 `scripts/render_fundamental_html.py` 从同一份 Markdown 生成 HTML；不得手工维护可能与 Markdown 产生偏差的独立 HTML 叙述。
+- 最终发布前使用 `scripts/archive_disclosures.py` 归档官方 PDF 证据，然后在 Markdown 中使用 `原始资料/2026/<file>.pdf` 等本地链接。不得仅为替换远程链接而重写旧报告。
+- 使用 `scripts/publish_fundamental_review.py` 发布新报告；该脚本会创建不可变时间戳快照，原子刷新稳定版最新文件，并重建研究轨迹和状态索引。
+- Markdown 正文必须在 H1 标题后立即以 `### 1. 核心财务指标` 开始。不得在标题和第 1 节之间插入独立结论、执行摘要、背景或时间范围段落。
+- HTML 必须保持自包含：使用内联 CSS/JS，不依赖外部资源、网络字体或 CDN。
+- 不得捏造可视化。如果报告表格中没有明确的图表数据，则让 HTML 仅渲染表格和摘要卡片。
+- 渲染后核验 `一句话结论` 在 HTML 中恰好出现一次：位于顶部的 `结论速览` 中，正文不得再次出现。
+- 最终回复必须包含 Markdown 和 HTML 文件的绝对路径。
 
-Example command after writing the Markdown file:
+写完 Markdown 文件后的示例命令：
 
 ```bash
 python3 /Users/superman/Mine/space/ai/doc-finance/.agents/skills/fundamental-stock-review/scripts/render_fundamental_html.py \
@@ -86,7 +86,7 @@ python3 /Users/superman/Mine/space/ai/doc-finance/.agents/skills/fundamental-sto
   --output-html /absolute/path/to/<公司简称>_<股票代码>_基本面分析_<YYYYMMDD_HHMMSS>.html
 ```
 
-Preferred publication command for a completed report:
+已完成报告的推荐发布命令：
 
 ```bash
 python3 /Users/superman/Mine/space/ai/doc-finance/.agents/skills/fundamental-stock-review/scripts/publish_fundamental_review.py \
@@ -94,101 +94,101 @@ python3 /Users/superman/Mine/space/ai/doc-finance/.agents/skills/fundamental-sto
   --reports-root /Users/superman/Mine/space/ai/doc-finance/reports
 ```
 
-The renderer's `--copy-md` flow remains available for legacy one-off rendering. For continuous reports, always use `publish_fundamental_review.py` so the latest pair, timeline, and state stay synchronized.
+渲染器的 `--copy-md` 流程仍可用于旧式的一次性渲染。对于连续研究报告，始终使用 `publish_fundamental_review.py`，以保持最新文件对、研究轨迹和状态同步。
 
-## Data Collection Checklist
+## 数据收集清单
 
-Collect the latest available data from public filings, exchange announcements, financial data providers, and credible news sources:
+从公开披露、交易所公告、财务数据提供商和可信新闻源收集最新可用数据：
 
-- Current valuation snapshot: latest price date, closing price, total market cap, free-float market cap, PE, PB, PS, dividend yield if relevant. Treat these as latest point-in-time market data, not historical financial-statement metrics.
-- Trade-decision inputs: sufficiently recent daily/weekly OHLCV, trend-health label, identifiable support/invalidation level, current price versus entry range, valuation-derived upside, existing-position status when disclosed, requested position cap, and requested stop. Keep market facts date-stamped.
-- Recent financial forecast: official announcement date, forecast period, forecast range or midpoint, prior-year comparable amount, cumulative YoY, forecast revision, revenue if disclosed, attributable net profit, deducted non-recurring net profit, EPS if disclosed, non-recurring contribution, stated drivers, and whether the same-period formal report has subsequently been released.
-- Growth: revenue, net profit, deducted non-recurring net profit, YoY growth, EPS, 3-year trend, and whether growth comes from core-business volume, price, market-share gains, acquisitions, or non-recurring items.
-- Profitability: gross margin, deducted net margin, net margin, ROE, ROIC if available, margin drivers, and peer comparison.
-- Cash-flow quality: operating cash flow, operating cash flow / net profit, cash received from sales / revenue, free cash flow, and whether cash flow keeps up with profit.
-- Capital allocation and asset efficiency: capital expenditure, capex / revenue, capex efficiency, construction in progress, depreciation pressure, and free-cash-flow status.
-- Balance-sheet quality: accounts receivable, inventory, contract assets, prepayments, other receivables, goodwill, construction in progress, interest-bearing debt, cash, asset-liability ratio, inventory turnover and impairment if relevant.
-- Ownership and governance: top-ten shareholder concentration, controller stake, pledge ratio, reduction plans, related-party transactions, guarantees, fund occupation.
-- Institutional participation: number and type of institutions, public funds, social security funds, QFII, insurance funds, northbound capital where applicable.
-- Business position: main products, segment revenue and gross margin for the past two years, market share, customer structure, supplier structure, competitive advantages, industry cycle.
-- Research and communication information: investor-relations records, earnings-call notes, exchange interactive Q&A, management discussion, disclosed order/backlog information, capacity expansion progress, and customer or product updates.
-- Order and demand evidence: exchange announcements for major contracts and daily operating contracts; public procurement, public-resource trading, industry tender platforms, and customer-side procurement announcements; company IR news, investor records, earnings calls, and interactive Q&A; financial-statement signals such as contract liabilities, inventory, accounts receivable, operating cash flow, capacity utilization, and remaining performance obligations; customs, bill-of-lading, or supply-chain data for export-oriented companies when available.
-- Risk events: losses, ST/delisting risk, audit opinion, audit firm change, annual-report inquiry letters, regulatory penalties, litigation, negative news, customer/supplier authenticity disputes.
+- 当前估值快照：最新价格日期、收盘价、总市值、流通市值、PE、PB、PS，必要时包括股息率。将这些视为最新时点的市场数据，而非历史财务报表指标。
+- 交易决策输入：足够新的日线/周线 OHLCV、趋势健康度标签、可识别的支撑/失效位、当前价格相对入场区间的位置、估值推导的上行空间、已披露的持仓状态、要求的仓位上限和止损。市场事实必须标注日期。
+- 近期财务预告：正式公告日期、预告期间、预告区间或中枢、上年同期可比金额、累计同比、预告修订、已披露收入、归母净利润、扣非归母净利润、已披露 EPS、非经常性损益贡献、公司说明的驱动因素，以及同期间正式报告是否已随后发布。
+- 增长：收入、净利润、扣非净利润、同比增长、EPS、三年趋势，以及增长是否来自主业放量、提价、市占率提升、并购或非经常性项目。
+- 盈利能力：毛利率、扣非净利率、净利率、ROE、可获得时的 ROIC、利润率驱动因素和同行对比。
+- 现金流质量：经营现金流、经营现金流/净利润、销售收现/收入、自由现金流，以及现金流是否跟得上利润。
+- 资本配置与资产效率：资本开支、资本开支/收入、资本开支效率、在建工程、折旧压力和自由现金流状态。
+- 资产负债表质量：应收账款、存货、合同资产、预付款、其他应收款、商誉、在建工程、有息负债、现金、资产负债率、存货周转率及相关减值。
+- 股权结构与公司治理：前十大股东集中度、实控人持股、质押比例、减持计划、关联交易、担保和资金占用。
+- 机构参与：机构数量和类型、公募基金、社保基金、QFII、保险资金，以及适用时的北向资金。
+- 业务地位：主要产品、过去两年的分部收入和毛利率、市场份额、客户结构、供应商结构、竞争优势和行业周期。
+- 调研与沟通信息：投资者关系记录、业绩会纪要、交易所互动问答、管理层讨论、已披露的订单/在手订单信息、产能扩张进度以及客户或产品更新。
+- 订单与需求证据：重大合同和日常经营合同的交易所公告；公共采购、公共资源交易、行业招标平台和客户侧采购公告；公司 IR 新闻、调研记录、业绩会和互动问答；合同负债、存货、应收账款、经营现金流、产能利用率和剩余履约义务等财务报表信号；有条件时收集出口企业的海关、提单或供应链数据。
+- 风险事件：亏损、ST/退市风险、审计意见、会计师事务所变更、年报问询函、监管处罚、诉讼、负面新闻以及客户/供应商真实性争议。
 
-## Analysis Logic
+## 分析逻辑
 
-Use this priority order:
+使用以下优先顺序：
 
-1. Put key data first: start with the latest valuation snapshot; then show an official financial forecast issued within the latest 30 calendar days, including cumulative YoY and implied latest-quarter YoY/QoQ when calculable; then separate reported current-year interim metrics from recent annual metrics. Never mix forecast figures with reported results.
-2. Business first: decide whether the company has a durable business, industry tailwind, and defensible product position.
-3. Profit second: judge whether revenue, net profit, deducted net profit, EPS, margin, ROE, and segment profitability form a coherent trend.
-4. Cash flow third: verify whether profit converts into cash. Strong profit with weak operating cash flow is a major warning.
-5. Balance sheet fourth: identify whether profit is being stored in receivables, inventory, prepayments, other receivables, goodwill, or construction in progress.
-6. Cross-check trend quality with peers and company communications: compare multiple periods, peer metrics, management discussion, investor communication, orders, capacity, and customer progress.
-7. Treat orders as demand evidence, not profit evidence by default: verify order status, amount attribution, fulfillment period, revenue recognition timing, margin profile, customer credit quality, and payment terms before upgrading the conclusion.
-8. Valuation fifth: compare valuation with growth quality, industry cycle, and peers. Low PE is not automatically cheap; high PE needs durable growth and certainty.
-9. Governance and negative news last: apply risk downgrades for audit, regulatory, pledge, reduction, related-party, litigation, or authenticity issues.
+1. 先列出关键数据：从最新估值快照开始；然后展示最近 30 个自然日内发布的正式财务预告，包括累计同比及可计算的最新单季度同比/环比；再将已披露的当年期间指标与最近年度指标分开。不得将预告数字与已披露结果混合。
+2. 业务优先：判断公司是否具备可持续的业务、行业顺风和有防守力的产品地位。
+3. 盈利其次：判断收入、净利润、扣非净利润、EPS、利润率、ROE 和分部盈利能力是否形成一致的趋势。
+4. 现金流第三：核验利润能否转化为现金。利润强而经营现金流弱，是重大警示信号。
+5. 资产负债表第四：识别利润是否沉淀在应收账款、存货、预付款、其他应收款、商誉或在建工程中。
+6. 与同行和公司沟通信息交叉核验趋势质量：比较多个期间、同行指标、管理层讨论、投资者沟通、订单、产能和客户进展。
+7. 默认将订单视为需求证据，不视为盈利证据：在上调结论前核验订单状态、金额归属、履约期、收入确认时点、利润率、客户信用质量和付款条款。
+8. 估值第五：将估值与增长质量、行业周期和同行比较。低 PE 不自动等于便宜；高 PE 需要可持续增长和较高确定性。
+9. 治理与负面信息最后：对审计、监管、质押、减持、关联方、诉讼或真实性问题进行风险下调。
 
-## Order and Demand Verification
+## 订单与需求核验
 
-When order, contract, bidding, backlog, or demand-tracking information is relevant, structure evidence before interpretation:
+当订单、合同、招投标、在手订单或需求跟踪信息与分析相关时，先组织证据，再进行解读：
 
 | 日期 | 来源与链接 | 项目/订单名称 | 客户/采购方 | 产品/服务 | 金额 | 状态 | 履约周期 | 是否公司正式公告 | 对收入影响 | 可信度 |
 |---|---|---|---|---|---:|---|---|---|---|---|
 
-Use these rules:
+使用以下规则：
 
-- Do not treat a tender opportunity or 中标候选人公示 as a confirmed signed order.
-- Treat framework agreements, strategic cooperation, letters of intent, and memoranda as low-certainty unless concrete purchase quantities, prices, or binding purchase obligations are disclosed.
-- For consortium wins, identify the company's attributable scope and amount; if not disclosed, label it as 未披露 instead of using the full project amount.
-- Compare order amount with latest annual revenue and segment revenue; state whether it is financially material.
-- Map fulfillment period to likely revenue recognition windows instead of assuming one-time revenue.
-- Cross-check order growth with contract liabilities, inventory, capacity utilization, accounts receivable, and operating cash flow.
-- Downgrade confidence when order growth is accompanied by faster receivable/contract-asset growth, weak cash collection, abnormal inventory buildup, or vague customer disclosure.
+- 不得将投标机会或中标候选人公示视为已确认签署订单。
+- 除非披露具体采购数量、价格或具有约束力的采购义务，否则将框架协议、战略合作、意向书和备忘录视为低可信度证据。
+- 对联合体中标，识别公司的可归属范围和金额；未披露时标记为未披露，不使用项目总金额。
+- 将订单金额与最近年度收入和分部收入比较，说明其是否具有财务重要性。
+- 将履约周期映射到可能的收入确认窗口，不得假设一次性确认收入。
+- 用合同负债、存货、产能利用率、应收账款和经营现金流交叉验证订单增长。
+- 当订单增长伴随应收账款/合同资产增速更快、回款较弱、存货异常积压或客户披露模糊时，下调可信度。
 
-## Fraud-Risk Red Flags
+## 财务造假风险红旗
 
-Flag fraud/accounting-quality risk when multiple items appear together:
+当多项因素同时出现时，标记财务造假/会计质量风险：
 
-- Net profit grows while operating cash flow stays weak or negative for multiple periods.
-- Accounts receivable grows much faster than revenue.
-- Inventory grows much faster than revenue, or inventory impairment is insufficient.
-- Gross margin is far above peers without clear product, technology, or customer explanation.
-- Deducted non-recurring net profit is materially weaker than reported net profit.
-- Prepayments, other receivables, construction in progress, or goodwill expands abnormally.
-- Audit firm changes frequently, audit opinion is non-standard, or key audit matters are severe.
-- Controller has high pledge ratio, frequent reductions, fund occupation, or abnormal guarantees.
-- Top customers or suppliers are highly concentrated, vaguely disclosed, or publicly disputed.
-- Exchange inquiries, regulatory penalties, litigation, media investigations, or short-seller-style allegations cluster around financial authenticity.
+- 多个期间净利润增长，但经营现金流持续偏弱或为负。
+- 应收账款增速远高于收入增速。
+- 存货增速远高于收入增速，或存货跌价准备不足。
+- 毛利率显著高于同行，却没有清晰的产品、技术或客户解释。
+- 扣非净利润明显弱于归母净利润。
+- 预付款、其他应收款、在建工程或商誉异常扩张。
+- 会计师事务所频繁变更、审计意见非标准，或关键审计事项严重。
+- 实控人质押比例高、频繁减持、存在资金占用或异常担保。
+- 主要客户或供应商高度集中、披露模糊，或受到公开质疑。
+- 交易所问询、监管处罚、诉讼、媒体调查或类似做空机构的指控集中指向财务真实性。
 
-Classify fraud-risk screening as:
+将财务造假风险初筛分为：
 
-- Low: no material red flags; profit, cash flow, balance sheet, and peer metrics broadly match.
-- Medium: 1-2 major red flags or several mild inconsistencies requiring follow-up.
-- High: multiple major red flags, especially cash-flow mismatch plus receivable/inventory expansion plus audit/regulatory/governance issues.
+- 低：没有重大红旗；利润、现金流、资产负债表和同行指标总体匹配。
+- 中：存在 1-2 个重大红旗，或存在多个需要跟进的轻微不一致。
+- 高：存在多个重大红旗，尤其是现金流不匹配，同时伴随应收账款/存货扩张以及审计、监管或治理问题。
 
-## Fixed Output Structure
+## 固定输出结构
 
-Always use the following structure. Put the data tables before the narrative conclusion so the reader can first see the financial evidence.
+始终使用以下结构。先放数据表，再给叙述性结论，让读者先看到财务证据。
 
-The Markdown must remain renderer-friendly:
+Markdown 必须保持适配渲染器：
 
-- Use `###` for main numbered sections and `####` for subsections.
-- Keep tables as normal Markdown pipe tables.
-- Keep conclusion labels exactly as `基本面判断`, `财务质量`, `估值状态`, and `财务造假风险初筛` so the HTML renderer can extract summary badges.
-- Keep `一句话结论` exactly as a single-line item in section 3. The HTML renderer extracts it into the top `结论速览` and suppresses the duplicate line in the main body.
-- Put the report execution date, market-data date, covered financial periods, and historical-data caveats under section 12 `信息边界` as `分析范围`; do not repeat them before section 1.
-- Keep the final copyable block in a fenced `text` or `plain` code block so the HTML renderer can show it as `基本面速记`.
-- Put `交易决策摘要` inside the final copyable block, after the fundamental note. This makes the decision appear at the existing `基本面速记` HTML location without a renderer change.
-- Do not mix latest market valuation data with historical financial-statement tables; the HTML header and KPI cards rely on clean valuation and financial blocks.
+- 主编号章节使用 `###`，子章节使用 `####`。
+- 表格保持为普通 Markdown 管道表格。
+- 结论标签必须严格使用 `基本面判断`、`财务质量`、`估值状态` 和 `财务造假风险初筛`，以便 HTML 渲染器提取摘要徽章。
+- `一句话结论` 必须在第 3 节中作为单独一行保留。HTML 渲染器会将其提取到顶部的 `结论速览`，并抑制正文中的重复行。
+- 将报告执行日期、行情日期、覆盖的财务期间和历史数据限制放在第 12 节 `信息边界` 的 `分析范围` 下；不要在第 1 节之前重复这些内容。
+- 最终可复制区块必须放在带围栏的 `text` 或 `plain` 代码块中，以便 HTML 渲染器将其显示为 `基本面速记`。
+- 将 `交易决策摘要` 放在最终可复制区块中，紧跟基本面备注之后。这样交易决策会出现在现有 `基本面速记` HTML 位置，无需修改渲染器。
+- 不要将最新市场估值数据与历史财务报表表格混合；HTML 页眉和 KPI 卡片依赖清晰分开的估值与财务数据块。
 
 ### 1. 核心财务指标
 
-Do not mix forecast, interim-report, and annual-report figures in one table. Use four blocks in this order: latest valuation snapshot, latest financial forecast, disclosed current-year interim reports, and recent three-year annual reports. Use `亿元` for money amounts, `元/股` for EPS, and `%` for ratios unless otherwise stated. Use `未披露` or `不适用` when data cannot be confirmed.
+不要在一张表中混合预告、期间财报和年度财报数据。按以下顺序使用四个数据块：最新估值快照、最新财务预告、已披露的当年期间财报和最近三年年度财报。金额使用 `亿元`，EPS 使用 `元/股`，比例除非另有说明均使用 `%`。数据无法确认时使用 `未披露` 或 `不适用`。
 
 #### 1.1 当前估值快照
 
-Show only the latest available market and valuation data above the financial-statement tables. Do not put latest market cap, free-float market cap, PE, PB, or PS inside the multi-period financial tables, because these are latest point-in-time market data and historical same-date values are often unavailable.
+仅在财务报表表格上方展示最新可用的市场和估值数据。不要将最新市值、流通市值、PE、PB 或 PS 放入多期间财务表格，因为这些是最新时点的市场数据，历史同期数据通常无法取得。
 
 | 项目 | 最新数据 | 数据日期/口径 | 解读 |
 |---|---:|---|---|
@@ -202,17 +202,17 @@ Show only the latest available market and valuation data above the financial-sta
 
 #### 1.2 最新财务预报与质量解读
 
-Always reserve this subsection so the output structure remains stable.
+始终保留本小节，以保持输出结构稳定。
 
-Trigger and source rules:
+触发与来源规则：
 
-- Use the report execution date as the endpoint and look back 30 calendar days, inclusive.
-- Include only company or exchange filings: earnings forecasts, profit alerts/warnings, forecast revisions, 盈喜, or 盈警. Do not use broker estimates, media estimates, or market rumor as the core forecast.
-- When multiple forecasts or revisions exist for the same period, use the latest revision and explain whether it raised, lowered, narrowed, or widened the previous range.
-- When the formal report for the same period has already been released, present a brief `预报兑现检查` comparing forecast and actual instead of presenting the forecast as current guidance.
-- When no qualifying official forecast exists, write `近30日未披露新的正式财务预报` and do not create empty forecast tables.
-- Mark every forecast as `未经审计`. Do not infer undisclosed revenue, gross margin, operating cash flow, ROE, balance-sheet data, or free cash flow.
-- Keep the financial-forecast subsection and the HTML forecast panel limited to forecast facts, derived-quarter calculations, information confidence, and earnings-quality assessment. Do not put the overall valuation, governance, fraud-risk, or comprehensive fundamental conclusion in this panel.
+- 以报告执行日为截止日期，向前查看 30 个自然日（含首尾）。
+- 仅纳入公司或交易所正式披露：业绩预告、盈喜/盈警和预告修订。不得将券商预测、媒体估计或市场传闻作为核心预告依据。
+- 如果同一期间存在多份预告或修订，使用最新修订，并说明前一区间是上调、下调、收窄还是扩大。
+- 如果同期间正式报告已经发布，则用简短的 `预报兑现检查` 对比预告和实际结果，不要再把预告作为当前指引。
+- 如果不存在符合条件的正式预告，写明 `近30日未披露新的正式财务预报`，不要创建空的预告表格。
+- 每项预告都标记为 `未经审计`。不得推断未披露的收入、毛利率、经营现金流、ROE、资产负债表数据或自由现金流。
+- 财务预告小节和 HTML 预告面板仅放预告事实、单季度推算、信息可信度和盈利质量判断。不要在该面板中放入整体估值、治理、财务造假风险或综合基本面结论。
 
 ##### 1.2.1 累计业绩预报
 
@@ -225,7 +225,7 @@ Trigger and source rules:
 | 预报 EPS |  |  |  |  | 仅在正式公告披露或股本口径可可靠确认时使用 |
 | 预计非经常性损益 |  |  |  |  | 资产处置、补贴、投资收益、减值转回等影响 |
 
-Use the company's disclosed YoY where available and cross-check it against the stated prior-year base. Calculate the midpoint only when both lower and upper bounds are disclosed. If the comparison base is zero, negative, or too small for a meaningful percentage, use `扭亏 / 减亏 / 转亏 / 增亏` instead of a mechanical percentage.
+有条件时使用公司披露的同比，并与其给出的上年同期基数交叉核对。仅在同时披露上下限时计算预告中枢。若比较基数为零、负数或过小而不适合计算有意义的百分比，则使用 `扭亏 / 减亏 / 转亏 / 增亏`，不要机械计算百分比。
 
 ##### 1.2.2 隐含最新单季度同比与环比
 
@@ -236,38 +236,38 @@ Use the company's disclosed YoY where available and cross-check it against the s
 | 隐含单季扣非归母净利润 |  |  |  |  |  | 判断主业盈利趋势是否延续 |
 | 隐含单季 EPS |  |  |  |  |  | 仅在股本口径可比时计算 |
 
-Calculation rules:
+计算规则：
 
-- H1 forecast: implied Q2 = H1 forecast range minus reported Q1; prior-year Q2 = prior-year H1 minus prior-year Q1.
-- Q3 cumulative forecast: implied Q3 = Q1-Q3 forecast range minus reported H1; prior-year Q3 = prior-year Q1-Q3 minus prior-year H1.
-- Annual forecast: implied Q4 = annual forecast range minus reported Q1-Q3; prior-year Q4 = prior-year annual minus prior-year Q1-Q3.
-- Q1 forecast: use the Q1 range directly; compare QoQ with the prior-year Q4 derived from the latest annual and Q3 figures when those figures are comparable.
-- For a range forecast `[L, U]` and preceding cumulative actual `A`, calculate the implied quarter as `[L-A, U-A]`. Calculate YoY and QoQ as ranges using both endpoints when the comparison base is positive and meaningful.
-- If a comparison base is zero or negative, describe `扭亏 / 减亏 / 转亏 / 增亏` instead of showing a misleading percentage.
-- Label all derived quarterly figures as `根据累计预报和已披露财报推算，非公司直接披露`.
-- Do not calculate revenue YoY/QoQ when forecast revenue is undisclosed.
+- H1 预告：隐含 Q2 = H1 预告区间减已披露 Q1；上年 Q2 = 上年 H1 减上年 Q1。
+- Q3 累计预告：隐含 Q3 = Q1-Q3 预告区间减已披露 H1；上年 Q3 = 上年 Q1-Q3 减上年 H1。
+- 年度预告：隐含 Q4 = 年度预告区间减已披露 Q1-Q3；上年 Q4 = 上年年度数据减上年 Q1-Q3。
+- Q1 预告：直接使用 Q1 区间；当相关数据口径可比时，将其与根据最新年度数据和 Q3 数据推导的上年 Q4 做环比比较。
+- 对于区间预告 `[L, U]` 和前序累计实际值 `A`，隐含季度计算为 `[L-A, U-A]`。当比较基数为正且有意义时，使用两个端点计算同比和环比区间。
+- 如果比较基数为零或负数，使用 `扭亏 / 减亏 / 转亏 / 增亏` 描述，不要展示误导性百分比。
+- 所有推导的单季度数据都标记为 `根据累计预报和已披露财报推算，非公司直接披露`。
+- 预告未披露收入时，不计算收入同比/环比。
 
-After the tables, add `财务预报质量判断` covering:
+在表格后增加 `财务预报质量判断`，内容包括：
 
-- Whether attributable and deducted net profit move in the same direction and whether non-recurring items dominate the forecast.
-- Whether cumulative YoY and implied latest-quarter YoY/QoQ indicate accelerating, stable, or weakening earnings momentum.
-- Whether the forecast range is narrow enough to indicate useful visibility; optionally calculate range width as `(upper bound - lower bound) / midpoint`.
-- Whether stated drivers are supported by price, volume, market share, orders, capacity utilization, industry data, or already reported segment results.
-- Which important quality indicators remain unavailable, especially revenue, cash flow, receivables, inventory, gross margin, and capital expenditure.
-- `信息可信度：高 / 中 / 低`, based on source authority, revision status, range width, and disclosure completeness.
-- `盈利质量判断：强 / 中性 / 偏弱 / 无法判断`, based on core-business contribution, deducted-profit consistency, latest-quarter momentum, and non-recurring dependence.
+- 归母净利润和扣非净利润是否同向，非经常性项目是否主导预告。
+- 累计同比和隐含最新单季度同比/环比显示盈利动能是在加速、稳定还是减弱。
+- 预告区间是否足够窄，能够提供有用的业绩可见度；可选地按 `(上限 - 下限) / 中枢` 计算区间宽度。
+- 公司说明的驱动因素是否得到价格、销量、市场份额、订单、产能利用率、行业数据或已披露分部结果的支持。
+- 哪些重要质量指标仍不可得，尤其是收入、现金流、应收账款、存货、毛利率和资本开支。
+- `信息可信度：高 / 中 / 低`，依据来源权威性、修订状态、区间宽度和披露完整度判断。
+- `盈利质量判断：强 / 中性 / 偏弱 / 无法判断`，依据主业贡献、扣非利润一致性、最新单季度动能和非经常性依赖判断。
 
 #### 1.3 已披露当年期间财报
 
-Use this block for the current year's already disclosed interim reports only, plus the latest interim report's same period last year. This block is for comparable interim-period analysis, not annual-trend analysis.
+本区块只放当前年度已披露的期间财报，以及最新期间财报对应的上年同期。本区块用于可比期间分析，不用于年度趋势分析。
 
-Column rules:
+列规则：
 
-- If the latest disclosed report is Q1, use `去年Q1 / 当年Q1`.
-- If the latest disclosed report is H1, use `去年H1 / 当年Q1 / 当年H1`.
-- If the latest disclosed report is Q3, use `去年Q3 / 当年Q1 / 当年H1 / 当年Q3`.
-- If one current-year interim period has not been disclosed or cannot be confirmed, mark it `未披露` or omit that column.
-- Do not combine annual periods such as `2024A / 2025A` with interim periods such as `2026Q1` in this table.
+- 如果最新披露报告是 Q1，使用 `去年Q1 / 当年Q1`。
+- 如果最新披露报告是 H1，使用 `去年H1 / 当年Q1 / 当年H1`。
+- 如果最新披露报告是 Q3，使用 `去年Q3 / 当年Q1 / 当年H1 / 当年Q3`。
+- 如果某个当年期间尚未披露或无法确认，标记为 `未披露` 或省略该列。
+- 不要在本表中将 `2024A / 2025A` 等年度期间与 `2026Q1` 等期间数据混合。
 
 | 指标 | 去年同期 | 当年Q1 | 当年H1 | 当年Q3 | 变化解读 |
 |---|---:|---:|---:|---:|---|
@@ -289,7 +289,7 @@ Column rules:
 
 #### 1.4 最近三年年度财报
 
-Use this block for the latest three annual reports, for example `2023A / 2024A / 2025A`. This block should focus on annual trend quality and avoid mixing in quarterly or half-year data.
+本区块用于最近三份年度财报，例如 `2023A / 2024A / 2025A`。本区块应聚焦年度趋势质量，避免混入季度或半年度数据。
 
 | 指标 | 前两年 | 前一年 | 最新年度 | 变化解读 |
 |---|---:|---:|---:|---|
@@ -309,7 +309,7 @@ Use this block for the latest three annual reports, for example `2023A / 2024A /
 | 总资产 |  |  |  | 资产扩张是否有效支撑盈利 |
 | 归母净资产 |  |  |  | 净资产增长与 ROE 的匹配情况 |
 
-After the table, add a short paragraph named `核心指标综合判断` covering:
+表格后增加名为 `核心指标综合判断` 的简短段落，内容包括：
 
 - 收入增长是否来自主业放量、份额提升或可持续订单，而不是并表、价格扰动或低质量扩张。
 - 毛利率、扣非净利率的变化方向和原因，必要时结合产品结构、原材料、费用率和竞争格局。
@@ -319,7 +319,7 @@ After the table, add a short paragraph named `核心指标综合判断` covering
 
 ### 2. 近两年财报趋势与业务结构
 
-First summarize the latest two years of financial trend, then show segment/business changes. Use annual data when possible; for companies that disclose only half-year or quarterly segment data, clearly label the period and avoid mixing incomparable periods without explanation.
+先总结最近两年的财务趋势，再展示分部/业务变化。尽可能使用年度数据；对于只披露半年度或季度分部数据的公司，明确标注期间，并在混合不可比期间时说明原因。
 
 #### 2.1 近两年财报趋势
 
@@ -343,7 +343,7 @@ First summarize the latest two years of financial trend, then show segment/busin
 | 业务 2 |  |  |  |  |  |
 | 其他业务 |  |  |  |  |  |
 
-After the table, add `业务结构判断` covering which segments are the real growth engine, which segments drag margins or cash flow, whether new businesses are large enough to matter, and whether disclosed orders/capacity/customer progress supports sustainability.
+表格后增加 `业务结构判断`，说明哪些分部是真正的增长引擎，哪些分部拖累利润率或现金流，新业务规模是否已经足以产生影响，以及已披露的订单、产能和客户进展是否支持持续性。
 
 ### 3. 结论摘要
 
@@ -356,11 +356,11 @@ After the table, add `业务结构判断` covering which segments are the real g
 - 财务造假风险初筛：低 / 中 / 高
 - 核心理由：用 3-5 条说明，不超过一屏
 
-Keep these labels exactly once in this subsection so the renderer can extract them.
+在本小节中确保这些标签各出现一次，以便渲染器提取。
 
 #### 3.2 与上次报告相比
 
-When no prior report exists, write `首次建立研究基线，无上次报告可比` and identify the baseline date. Otherwise include:
+如果不存在历史报告，写明 `首次建立研究基线，无上次报告可比`，并标注基线日期。否则包括：
 
 | 判断维度 | 上次结论 | 本次结论 | 变化级别 | 变化原因与证据 |
 |---|---|---|---|---|
@@ -369,13 +369,13 @@ When no prior report exists, write `首次建立研究基线，无上次报告�
 | 估值 |  |  | 不变/微调/上调/下调 |  |
 | 财务造假风险初筛 |  |  | 不变/微调/上调/下调 |  |
 
-After the table, state `本次触发事件`, `新增确认事实`, `被证伪或弱化的旧假设`, `仍然有效的旧观点`, and `仍待验证事项`. A conclusion may remain unchanged; record that explicitly rather than inventing a change.
+表格后说明 `本次触发事件`、`新增确认事实`、`被证伪或弱化的旧假设`、`仍然有效的旧观点` 和 `仍待验证事项`。结论可以保持不变；应明确记录这一点，不要虚构变化。
 
 #### 3.3 当前位置与交易决策
 
-Apply [references/trade-decision-framework.md](references/trade-decision-framework.md). State the market-data date and distinguish `未持仓` from `已持仓`; if position status is unknown, provide both conditional rows. Output exactly one primary research action from `可以分步买入 / 小仓试错 / 等待 / 持有观察 / 降仓 / 退出`, plus target position, entry/no-chase condition, stop, fundamental invalidation, valuation-upside basis, reward/risk, validity period, confidence, and the most important counterevidence.
+使用 [references/trade-decision-framework.md](references/trade-decision-framework.md)。标注行情日期，并区分 `未持仓` 与 `已持仓`；如果持仓状态未知，同时提供两种条件行。必须且仅输出一个主要研究动作：`可以分步买入 / 小仓试错 / 等待 / 持有观察 / 降仓 / 退出`，并给出目标仓位、入场/不追高条件、止损、基本面失效条件、估值上行空间依据、预期盈亏比、有效期、置信度和最重要的反证。
 
-Do not output `可以分步买入` unless the fundamental, valuation, technical-position, and reward/risk gates all pass. A `中性` fundamental conclusion, `一般` financial quality, mixed trend, stale price data, or unquantifiable upside cannot support a full 25% target by itself.
+除非基本面、估值、技术位置和预期盈亏比四道门全部通过，否则不得输出 `可以分步买入`。仅凭 `中性` 的基本面结论、`一般` 的财务质量、混合趋势、过时的价格数据或无法量化的上行空间，不足以支持 25% 的满额目标仓位。
 
 ### 4. 公司与行业
 
@@ -388,7 +388,7 @@ Do not output `可以分步买入` unless the fundamental, valuation, technical-
 
 ### 5. 订单与需求验证
 
-Use this section when the company discloses orders/backlog, the user asks about order tracking, or the business model depends heavily on project awards, government procurement, customer capex cycles, export shipments, or enterprise contracts. If no reliable order data is available, state `未发现可核验订单数据` and explain the information boundary.
+在公司披露订单/在手订单、用户要求跟踪订单，或公司业务模式高度依赖项目中标、政府采购、客户资本开支周期、出口发货或企业合同的情况下使用本节。如果没有可靠订单数据，写明 `未发现可核验订单数据`，并解释信息边界。
 
 | 日期 | 来源与链接 | 项目/订单名称 | 客户/采购方 | 产品/服务 | 金额 | 状态 | 履约周期 | 是否公司正式公告 | 对收入影响 | 可信度 |
 |---|---|---|---|---|---:|---|---|---|---|---|
@@ -448,7 +448,7 @@ Use this section when the company discloses orders/backlog, the user asks about 
 
 ### 11. 后续跟踪清单
 
-Carry forward every unresolved item from the prior report. An item can disappear only after it is explicitly marked `已验证`, `已证伪`, or `已关闭`.
+从上次报告延续每一项未解决事项。只有在明确标记为 `已验证`、`已证伪` 或 `已关闭` 后，事项才可以从清单中移除。
 
 | 跟踪事项 | 首次提出 | 上次状态 | 本次证据 | 当前状态 | 下次验证时间/触发条件 |
 |---|---|---|---|---|---|
@@ -470,9 +470,9 @@ Carry forward every unresolved item from the prior report. An item can disappear
 - 尚未核验的信息：
 - 可能影响结论的新公告或市场事件：
 
-## Note-Friendly Block
+## 便于记录的摘要区块
 
-Append a concise copyable block unless the user explicitly asks not to:
+除非用户明确要求不要，否则追加一个简洁的可复制区块：
 
 ```text
 【基本面速记】
