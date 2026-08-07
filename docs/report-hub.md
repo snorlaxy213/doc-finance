@@ -1,6 +1,6 @@
 # 公开财务报告中心
 
-本仓库通过 GitHub Pages 提供公开的静态报告目录。源研究仓库仍可包含原始资料和工作文件；**公开站点只部署构建脚本生成的 `report-hub-build/` 产物**，该目录已被 Git 忽略且不应手工提交。
+本仓库通过 GitHub Pages 提供公开的静态报告目录。**Pages 站点只部署构建脚本生成的 `report-hub-build/` 产物**，该目录已被 Git 忽略且不应手工提交。请注意：若整个 GitHub 仓库已设为公开，仓库中的其他已提交文件和 Git 历史仍可被访问；Pages 的构建隔离不能替代仓库访问控制。
 
 ## 已确认的发布策略
 
@@ -33,10 +33,20 @@ python scripts/build_report_hub.py --verify-only --output report-hub-build
 
 1. 将本实现提交并推送到当前仓库的默认分支。
 2. 打开 GitHub 仓库 **Settings → Pages**，在 **Build and deployment / Source** 中选择 **GitHub Actions**。
-3. 打开 **Actions → Deploy public report hub → Run workflow**，将 `confirm_publication` 选为 `yes` 后运行。
+3. 首次发布可打开 **Actions → Deploy public report hub → Run workflow**，将 `confirm_publication` 选为 `yes` 后运行。
 4. 成功后，部署步骤会显示 GitHub Pages URL；通常为 `https://snorlaxy213.github.io/doc-finance/`。
 
-此工作流没有 `push` 触发器。每次更新公开目录都必须手动确认并触发，部署前会重新生成并校验隔离产物。若工作流失败，GitHub Pages 会保留上一份成功部署的网站。
+## 自动更新规则
+
+推送到 `main` 时，以下变更会自动重新构建并发布 Pages：
+
+- 白名单股票目录中的 `reports/**/基本面分析/*_基本面分析_最新.html`；
+- `config/publication-policy.json`；
+- 报告中心模板 `hub/`、构建脚本或本工作流文件。
+
+草稿、时间戳历史版本、研究轨迹、原始资料、`.research/` 及其他目录的变更不会触发发布。每次自动触发仍会执行发布策略校验，因此只有白名单内的最新 HTML 会被复制到公开产物。
+
+仍可在 **Actions → Deploy public report hub → Run workflow** 中手动运行工作流；手动运行时必须将 `confirm_publication` 选为 `yes`。若构建或部署失败，GitHub Pages 会保留上一份成功部署的网站。
 
 ## 公开前检查
 

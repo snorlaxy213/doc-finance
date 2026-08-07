@@ -1,6 +1,15 @@
 name: Deploy public report hub
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'reports/**/基本面分析/*_基本面分析_最新.html'
+      - 'config/publication-policy.json'
+      - 'hub/**'
+      - 'scripts/build_report_hub.py'
+      - '.github/workflows/deploy-report-hub.yml'
   workflow_dispatch:
     inputs:
       confirm_publication:
@@ -23,7 +32,7 @@ concurrency:
 
 jobs:
   build:
-    if: inputs.confirm_publication == 'yes'
+    if: github.event_name == 'push' || inputs.confirm_publication == 'yes'
     runs-on: ubuntu-latest
     steps:
       - name: Check out source repository
