@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-07-15T01:15:30+08:00",
+  "updated_at": "2026-08-07T14:57:10+08:00",
   "sources": [
     {
       "source_id": "SRC-20260429-65f0d086",
@@ -16,7 +16,8 @@
       "pages": 12,
       "retrieved_at": "2026-07-15T01:06:56+08:00",
       "used_by": [
-        "康龙化成_300759_基本面分析_20260711.md"
+        "康龙化成_300759_基本面分析_20260711.md",
+        "康龙化成_300759_基本面分析_20260714.md"
       ],
       "status": "已归档"
     },
@@ -34,7 +35,8 @@
       "pages": 13,
       "retrieved_at": "2026-07-15T01:06:56+08:00",
       "used_by": [
-        "康龙化成_300759_基本面分析_20260711.md"
+        "康龙化成_300759_基本面分析_20260711.md",
+        "康龙化成_300759_基本面分析_20260714.md"
       ],
       "status": "已归档"
     },
@@ -125,6 +127,138 @@
       "retrieved_at": "2026-07-15T01:07:22+08:00",
       "used_by": [
         "康龙化成_300759_基本面分析_20260711.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "FAILED-6b0444309ea2",
+      "title": "2025 年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260714",
+      "official_url": "https://www.pharmaron.cn/contentfiles/files/2025%E5%B9%B4%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-08-07T14:56:46+08:00",
+      "used_by": [
+        "康龙化成_300759_基本面分析_20260714.md"
+      ],
+      "status": "归档失败",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "source_id": "FAILED-b705ebd3c2b3",
+      "title": "2024 年年度报告",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20260714",
+      "official_url": "https://www.pharmaron.cn/contentfiles/files/2024%E5%B9%B4%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A.PDF",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-08-07T14:56:55+08:00",
+      "used_by": [
+        "康龙化成_300759_基本面分析_20260714.md"
+      ],
+      "status": "归档失败",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "source_id": "FAILED-aa96dd2ca7bb",
+      "title": "2023 年年度报告",
+      "document_type": "年度报告",
+      "period": "2023A",
+      "published_date": "20260714",
+      "official_url": "https://www.pharmaron.cn/contentfiles/files/2023%E5%B9%B4%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A.PDF",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-08-07T14:57:07+08:00",
+      "used_by": [
+        "康龙化成_300759_基本面分析_20260714.md"
+      ],
+      "status": "归档失败",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "source_id": "SRC-20260430-c9c64b74",
+      "title": "2026Q1 投资者关系记录",
+      "document_type": "正式披露",
+      "period": "2026Q1",
+      "published_date": "20260430",
+      "official_url": "https://file.finance.sina.com.cn/cn/diaoyan/jgdy/2026/2026-04/2026-04-30/10178703_1.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260430_2026Q1_正式披露_10178703_1.pdf",
+      "sha256": "c9c64b74d0b28c9e865d20f0f4567fcc0797defd0778c01a12b7d9ef2ca9861b",
+      "bytes": 145134,
+      "pages": null,
+      "retrieved_at": "2026-08-07T14:57:07+08:00",
+      "used_by": [
+        "康龙化成_300759_基本面分析_20260714.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260122-3f9b167e",
+      "title": "H 股配售结果",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260122",
+      "official_url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0122/2026012200517_c.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260122_期间待核验_正式披露_2026012200517_c.pdf",
+      "sha256": "3f9b167e030143d004c3dbf2fb59a2b865c39f9915bcb8717ba930f5d034f221",
+      "bytes": 238279,
+      "pages": null,
+      "retrieved_at": "2026-08-07T14:57:09+08:00",
+      "used_by": [
+        "康龙化成_300759_基本面分析_20260714.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260713-5ef845e3",
+      "title": "2026H1业绩预告",
+      "document_type": "业绩预告",
+      "period": "2026H1",
+      "published_date": "20260713",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESZ_STOCK/2026/2026-7/2026-07-13/12443508.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260713_2026H1_业绩预告_12443508.pdf",
+      "sha256": "5ef845e3aeb129f18ac828160c59fdc3f5bb4d796e1f4bbaa25fdde71d6a99df",
+      "bytes": 139174,
+      "pages": null,
+      "retrieved_at": "2026-08-07T14:57:10+08:00",
+      "used_by": [
+        "康龙化成_300759_基本面分析_20260807_150000.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260725-ae794262",
+      "title": "第四届董事会第二次会议决议公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260725",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESZ_STOCK/2026/2026-7/2026-07-25/12461452.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260725_期间待核验_正式披露_12461452.pdf",
+      "sha256": "ae794262bdfb988ade463d50940f6c041b128087e1f82952daf214ccf83b26e2",
+      "bytes": 178371,
+      "pages": null,
+      "retrieved_at": "2026-08-07T14:57:10+08:00",
+      "used_by": [
+        "康龙化成_300759_基本面分析_20260807_150000.md"
       ],
       "status": "已归档"
     }
