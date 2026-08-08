@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>藏格矿业(000408.SZ)基本面分析</title>
+<style>
+:root{
+  --ink:#1a2433;
+  --ink-soft:#46546a;
+  --line:#d8dee7;
+  --line-soft:#eef1f5;
+  --bg:#ffffff;
+  --brand:#1f3a5f;
+  --brand-2:#3b5b85;
+  --brand-light:#eaf0f8;
+  --accent:#8a6d3b;
+  --up:#b73333;
+  --down:#2f7a52;
+  --warn:#a06a1f;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Microsoft YaHei","Source Han Sans SC",system-ui,-apple-system,sans-serif;
+  color:var(--ink);
+  background:#fff;
+  line-height:1.7;
+  font-size:14.5px;
+  font-variant-numeric:tabular-nums;
+  -webkit-font-smoothing:antialiased;
+}
+.page{max-width:1600px;margin:0 auto;padding:0 32px;}
+.masthead{
+  display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px;
+  border-bottom:2px solid var(--brand);padding:24px 0 18px;
+}
+.masthead .m-left{min-width:280px;}
+.masthead .kode{font-size:12px;letter-spacing:.12em;color:var(--ink-soft);}
+.masthead h1{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC","Times New Roman",serif;
+  font-size:30px;font-weight:700;margin:6px 0 4px;color:var(--brand);letter-spacing:.5px;
+}
+.masthead .sub{font-size:13px;color:var(--ink-soft);}
+.masthead .meta{font-size:12.5px;color:var(--ink-soft);margin-top:12px;}
+.masthead .meta b{color:var(--ink);font-weight:600;}
+.masthead .m-stats{display:flex;gap:34px;flex-wrap:wrap;}
+.masthead .m-stats .ms-v{font-size:25px;font-weight:700;color:var(--brand);line-height:1;font-variant-numeric:tabular-nums;}
+.masthead .m-stats .ms-v span{font-size:13px;font-weight:500;color:var(--ink-soft);margin-left:2px;}
+.masthead .m-stats .ms-l{font-size:11.5px;color:var(--ink-soft);margin-top:5px;letter-spacing:.02em;}
+.verdict{
+  margin:16px 0 4px;border:1px solid var(--line);border-left:4px solid var(--brand);
+  background:#fbfcfe;border-radius:4px;padding:16px 20px;
+}
+.verdict-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-bottom:14px;}
+.verdict-head h2{margin:0;font-size:14px;letter-spacing:.1em;color:var(--brand);font-weight:700;}
+.verdict-headline{
+  margin:-2px 0 14px;padding:10px 12px;border:1px solid #dfe7f1;border-radius:4px;
+  background:#fff;color:var(--ink);font-size:15px;font-weight:600;line-height:1.7;
+}
+.verdict-headline .label{display:block;margin-bottom:2px;color:var(--brand);font-size:11px;font-weight:700;letter-spacing:.1em;}
+.badges{display:flex;flex-direction:row;flex-wrap:wrap;gap:8px;margin:0;}
+.badge{
+  display:inline-flex;align-items:center;gap:6px;font-size:12.5px;
+  padding:5px 11px;border-radius:999px;font-weight:600;line-height:1.4;
+}
+.badge .k{font-weight:500;opacity:.85;}
+.badge.fund{background:#fdecec;color:#9a2c2c;}
+.badge.qual{background:#eef3f8;color:#1f3a5f;}
+.badge.valu{background:#fdf3e3;color:#8a5a16;}
+.badge.fraud{background:#eef7f1;color:#2f6a48;}
+.verdict-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 40px;}
+.verdict-grid .v-title{font-size:12.5px;font-weight:700;letter-spacing:.04em;margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid var(--line);}
+.verdict-grid .v-title::before{content:"";display:inline-block;width:3px;height:12px;margin-right:7px;vertical-align:-1px;border-radius:2px;}
+.verdict-grid .v-up .v-title{color:var(--brand);}
+.verdict-grid .v-up .v-title::before{background:var(--brand);}
+.verdict-grid .v-risk .v-title{color:var(--warn);}
+.verdict-grid .v-risk .v-title::before{background:var(--warn);}
+.verdict-grid ul{margin:0;padding-left:18px;}
+.verdict-grid li{font-size:13.5px;margin:6px 0;line-height:1.65;}
+.note{
+  font-size:12px;color:var(--ink-soft);background:var(--line-soft);
+  padding:3px 8px;border-radius:3px;display:inline-block;
+}
+.verdict .note{display:block;margin-top:14px;}
+.kpis{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:1px;margin:16px 0 4px;
+  background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden;
+}
+.kpi{background:#fff;padding:13px 15px;min-width:0;}
+.kpi .kl{font-size:11.5px;color:var(--ink-soft);line-height:1.3;min-height:30px;}
+.kpi .kv{font-size:20px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;margin-top:5px;word-break:break-word;}
+.kpi .kv.up{color:var(--up);}
+.kpi .kv.down{color:var(--down);}
+.kpi .ks{font-size:11px;color:var(--ink-soft);margin-top:3px;font-variant-numeric:tabular-nums;}
+.forecast-panel{
+  margin:16px 0 6px;padding:18px 20px;border:1px solid #d8e2ef;border-left:4px solid var(--brand);
+  border-radius:4px;background:linear-gradient(135deg,#f7faff 0%,#fff 68%);
+}
+.forecast-panel.forecast-empty{padding:14px 18px;background:#fbfcfe;border-left-color:#a8b5c4;}
+.forecast-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;flex-wrap:wrap;}
+.forecast-kicker{display:block;font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--brand);margin-bottom:5px;}
+.forecast-head h2{margin:0;font-size:18px;line-height:1.35;color:var(--ink);}
+.forecast-tags{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end;}
+.forecast-tag{display:inline-flex;padding:4px 9px;border-radius:999px;background:#eaf1f8;color:#294d73;font-size:11px;font-weight:600;}
+.forecast-tag.warn{background:#fff0dc;color:#8a5615;}
+.forecast-tag.neutral{background:#edf0f3;color:#5e6873;}
+.forecast-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px;}
+.forecast-card{background:#fff;border:1px solid #e0e7ef;border-radius:4px;padding:12px 14px;min-width:0;}
+.forecast-label{font-size:11px;color:var(--ink-soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.forecast-value{font-size:20px;font-weight:700;color:var(--brand);line-height:1.3;margin-top:4px;font-variant-numeric:tabular-nums;}
+.forecast-change{font-size:11.5px;color:var(--ink-soft);margin-top:4px;}
+.forecast-note{margin:11px 0 0!important;font-size:11px!important;color:var(--ink-soft)!important;}
+.update-panel{
+  margin:16px 0 6px;padding:18px 20px;border:1px solid #ded7c9;border-left:4px solid var(--accent);
+  border-radius:4px;background:linear-gradient(135deg,#fffcf6 0%,#fff 72%);
+}
+.update-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:10px;}
+.update-head span{font-size:10.5px;font-weight:700;letter-spacing:.12em;color:var(--accent);}
+.update-head h2{font-size:18px;margin:0;color:var(--ink);}
+.update-body section{border:0;padding:0;}.update-body h3.sub{margin-top:8px;}
+.update-body .tbl-scroll{background:#fff;}
+.layout{
+  display:grid;grid-template-columns:208px minmax(0,1fr);gap:36px;align-items:start;
+  padding:14px 0 0;
+}
+.sidebar{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow-y:auto;padding:0 8px 0 0;}
+.sidebar::-webkit-scrollbar{width:6px;}
+.sidebar::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px;}
+.toc{position:static;background:transparent;border:none;margin:12px 0 16px;padding:0;}
+.toc .scroll{overflow:visible;white-space:normal;display:flex;flex-direction:column;gap:2px;}
+.toc a{
+  display:flex;align-items:center;gap:9px;
+  font-size:14px;line-height:1.25;color:var(--ink-soft);text-decoration:none;
+  padding:6px 8px;border-radius:5px;margin:0;border:1px solid transparent;
+}
+.toc a .toc-num{
+  flex:0 0 auto;font-family:"Times New Roman",serif;font-size:12px;font-weight:600;
+  color:var(--ink-soft);background:var(--line-soft);
+  width:22px;height:22px;border-radius:4px;font-variant-numeric:tabular-nums;
+  display:inline-flex;align-items:center;justify-content:center;
+}
+.toc a:hover{background:var(--brand-light);color:var(--brand);}
+.toc a:hover .toc-num{background:#fff;color:var(--brand);}
+.toc a.active{background:var(--brand);color:#fff;font-weight:600;}
+.toc a.active .toc-num{background:rgba(255,255,255,.22);color:#fff;}
+.main{min-width:0;}
+section{padding:16px 0 8px;border-top:1px solid var(--line-soft);scroll-margin-top:64px;}
+section:first-of-type{border-top:none;padding-top:6px;}
+h2.sec{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",serif;
+  font-size:19px;color:var(--brand);margin:6px 0 12px;font-weight:700;
+  display:flex;align-items:baseline;gap:10px;
+}
+h2.sec .num{
+  font-family:"Times New Roman",serif;font-size:14px;color:#fff;background:var(--brand);
+  padding:2px 9px;border-radius:3px;letter-spacing:.05em;font-weight:600;flex:0 0 auto;
+}
+h3.sub{font-size:14.5px;color:var(--ink);margin:16px 0 6px;font-weight:700;}
+p{margin:8px 0;}
+ul,ol{margin:8px 0;padding-left:22px;}
+li{margin:4px 0;}
+strong{color:var(--ink);}
+.tbl-scroll{overflow-x:auto;margin:10px 0;border:1px solid var(--line);border-radius:4px;}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums;}
+thead th{
+  background:#f3f6fa;color:var(--brand);font-weight:700;text-align:right;
+  padding:10px 12px;border-bottom:1.5px solid var(--brand);white-space:nowrap;
+  font-size:12.5px;letter-spacing:.02em;
+}
+thead th[scope=col]:first-child{text-align:left;}
+tbody td{padding:9px 12px;border-bottom:1px solid var(--line-soft);text-align:right;white-space:normal;word-break:break-word;}
+tbody th[scope=row]{
+  text-align:left;color:var(--ink);font-weight:600;
+  padding:9px 12px;border-bottom:1px solid var(--line-soft);white-space:nowrap;font-size:13px;background:#fafbfd;
+}
+tbody tr:nth-child(even) td{background:#fafbfd;}
+tbody tr:hover td{background:var(--brand-light);}
+.up{color:var(--up);}
+.down{color:var(--down);}
+.muted{color:var(--ink-soft);}
+a{color:var(--brand-2);text-decoration:underline;text-underline-offset:2px;word-break:break-all;}
+a:hover{color:var(--brand);}
+.note-copy{
+  margin:20px 0;border:1px solid var(--line);border-left:4px solid var(--accent);
+  background:#fbfcfe;border-radius:4px;padding:14px 16px;
+}
+.note-copy h2{margin:0 0 10px;font-size:13px;letter-spacing:.1em;color:var(--brand);font-weight:700;}
+pre{
+  margin:10px 0;padding:12px 14px;background:#f7f9fc;border:1px solid var(--line-soft);
+  border-radius:4px;overflow:auto;color:var(--ink);font-size:12.5px;line-height:1.6;
+}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;}
+footer{
+  margin-top:22px;border-top:2px solid var(--brand);padding:14px 0 30px;
+  font-size:11.5px;color:var(--ink-soft);line-height:1.7;font-variant-numeric:tabular-nums;
+}
+footer .disclaimer{background:var(--line-soft);padding:8px 12px;border-radius:3px;margin-bottom:8px;}
+@media (max-width:1100px){
+  .layout{grid-template-columns:1fr;gap:0;}
+  .sidebar{position:static;max-height:none;overflow:visible;padding:0;}
+  .toc{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);
+    border-bottom:1px solid var(--line);margin:0 -32px 16px;padding:10px 32px;}
+  .toc .scroll{overflow-x:auto;white-space:nowrap;flex-direction:row;}
+  .toc a{display:inline-flex;white-space:nowrap;border-left:none;border:1px solid transparent;padding:3px 9px;margin:2px;}
+  .toc a.active{border-left:none;background:var(--brand);color:#fff;}
+}
+@media (max-width:760px){
+  .verdict-grid{grid-template-columns:1fr;}
+  .kpis{grid-template-columns:repeat(3,1fr);}
+  .forecast-grid{grid-template-columns:1fr;}
+  .page{padding:0 18px;}
+  .masthead .m-stats{gap:22px;}
+}
+@media (max-width:460px){.kpis{grid-template-columns:repeat(2,1fr);}}
+@media print{
+  body{background:#fff;font-size:10.5px;}
+  .page{max-width:none;padding:0;}
+  .layout{grid-template-columns:1fr;}
+  .sidebar{position:static;max-height:none;overflow:visible;}
+  .toc{position:static;border:none;padding:0;margin:0 0 8px;}
+  .toc .scroll{overflow:visible;display:block;}
+  .toc a{font-size:10px;padding:1px 5px;display:inline-flex;}
+  .toc a.active{background:transparent;color:var(--ink);}
+  section{break-inside:avoid;padding-top:10px;}
+  table{font-size:9.5px;}
+  thead{display:table-header-group;}
+  tbody tr{break-inside:avoid;}
+  .badge{border:1px solid #ccc;}
+  .note-copy,.tbl-scroll,.kpis,.verdict,.forecast-panel{break-inside:avoid;}
+  .update-panel{break-inside:avoid;}
+  footer{break-inside:avoid;}
+  a{color:var(--ink);text-decoration:none;}
+  .kpi{border:1px solid #ccc;}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="masthead">
+    <div class="m-left">
+      <div class="kode">000408.SZ · 深圳证券交易所 · 基本面分析</div>
+      <h1>藏格矿业 · 基本面分析</h1>
+      <div class="sub">基本面、财务质量、估值与风险初筛</div>
+      <div class="meta">数据口径 <b>未提取</b> · 生成时间 <b>2026-08-08 15:12</b></div>
+    </div>
+    <div class="m-stats">
+      <div><div class="ms-v">未披露</div><div class="ms-l">收盘价</div></div>
+<div><div class="ms-v">未披露</div><div class="ms-l">总市值</div></div>
+<div><div class="ms-v">未披露</div><div class="ms-l">PE</div></div>
+<div><div class="ms-v">未披露</div><div class="ms-l">PB</div></div>
+    </div>
+  </header>
+
+  <section class="verdict" aria-label="结论速览">
+    <div class="verdict-head">
+      <h2>结论速览</h2>
+      <div class="badges">
+        <span class="badge fund"><span class="k">基本面</span> 强</span>
+<span class="badge qual"><span class="k">财务质量</span> 良好</span>
+<span class="badge valu"><span class="k">估值</span> 合理偏高</span>
+<span class="badge fraud"><span class="k">造假风险初筛</span> 中</span>
+      </div>
+    </div>
+    <div class="verdict-headline"><span class="label">核心判断</span>藏格矿业2026H1业绩高增具有已披露的量价和投资收益支撑，但市场价格已较7月低点大幅上行且利润高度依赖巨龙铜业，等待中报兑现及价格结构回踩确认。</div>
+    <div class="verdict-grid">
+      <div class="v-col v-up">
+        <div class="v-title">核心理由</div>
+        <ul>
+<li>钾肥量价成本同步改善，锂盐价格驱动利润弹性。</li>
+<li>巨龙铜业预计贡献约28亿元H1投资收益，是高增的核心而非附属项。</li>
+<li>Q1经营现金流为负，须观察中报营运资本和现金分红能否改善现金转换。</li>
+<li>7月以来股价由约67元升至90元，短期乖离和成交放大，位置门不足。</li>
+</ul>
+      </div>
+      <div class="v-col v-risk">
+        <div class="v-title">主要风险 / 关注</div>
+        <ul>
+<li>主要风险详见负面信息与风险排查、财务质量验证章节。</li>
+</ul>
+      </div>
+    </div>
+    <p class="note">口径:市场估值为时点数据,财务指标需区分年度、半年度、季度和单季口径;所有结论以公司正式披露和已核验来源为准。</p>
+  </section>
+
+  <div class="kpis" aria-label="关键指标速览">
+    <div class="kpi"><div class="kl">变化归母净利</div><div class="kv up">+110.60%</div><div class="ks">归母净利润</div></div>
+<div class="kpi"><div class="kl">变化扣非净利</div><div class="kv up">+110.14%</div><div class="ks">扣非归母净利润</div></div>
+<div class="kpi"><div class="kl">变化经营现金流</div><div class="kv down">-176.45%</div><div class="ks">经营现金流净额</div></div>
+  </div>
+
+  
+
+  <section class="update-panel" aria-label="本次更新"><div class="update-head"><span>RESEARCH CONTINUITY</span><h2>本次更新 · 与上次报告相比</h2></div><div class="update-body"><div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">判断维度</th>
+<th scope="col">上次</th>
+<th scope="col">本次</th>
+<th scope="col">变化级别</th>
+<th scope="col">证据</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">基本面判断</th>
+<td>中性</td>
+<td class="up">强</td>
+<td>上调</td>
+<td>官方Q1及H1预告补齐主业和投资收益来源</td>
+</tr>
+<tr>
+<th scope="row">财务质量</th>
+<td class="muted">无法判断</td>
+<td class="up">良好</td>
+<td>上调</td>
+<td>2025经营现金流21亿元、Q1完整三表已取得</td>
+</tr>
+<tr>
+<th scope="row">估值状态</th>
+<td class="muted">无法判断</td>
+<td class="down">合理偏高</td>
+<td>微调</td>
+<td class="up">90元对应约1,412亿元市值，需消化高增长预期</td>
+</tr>
+<tr>
+<th scope="row">造假风险初筛</th>
+<td class="muted">无法判断</td>
+<td>中</td>
+<td>微调</td>
+<td class="down">未见审计非标证据，但利润集中于权益法投资、Q1经营现金流转负</td>
+</tr>
+</tbody></table></div></div></section>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="toc" aria-label="目录">
+        <div class="scroll" id="toc-scroll">
+          <a href="#s1"><span class="toc-num">01</span>核心财务指标</a>
+<a href="#s2"><span class="toc-num">02</span>近两年财报趋势与业务结构</a>
+<a href="#s3"><span class="toc-num">03</span>结论摘要</a>
+<a href="#s4"><span class="toc-num">04</span>公司与行业</a>
+<a href="#s5"><span class="toc-num">05</span>订单与需求验证</a>
+<a href="#s6"><span class="toc-num">06</span>财务质量验证</a>
+<a href="#s7"><span class="toc-num">07</span>股东与机构</a>
+<a href="#s8"><span class="toc-num">08</span>估值与同行对比</a>
+<a href="#s9"><span class="toc-num">09</span>负面信息与风险排查</a>
+<a href="#s10"><span class="toc-num">10</span>财务造假风险初筛</a>
+<a href="#s11"><span class="toc-num">11</span>后续跟踪清单</a>
+<a href="#s12"><span class="toc-num">12</span>信息边界</a>
+        </div>
+      </nav>
+    </aside>
+    <main class="main">
+      <section id="s1">
+<h2 class="sec"><span class="num">01</span>核心财务指标</h2>
+<h3 class="sub">1.1 当前估值快照</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">项目</th>
+<th scope="col">数据</th>
+<th scope="col">日期/口径</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">收盘价</th>
+<td>90.00元</td>
+<td>2026-08-07，腾讯行情</td>
+</tr>
+<tr>
+<th scope="row">总市值</th>
+<td>约1,412亿元</td>
+<td>2026-08-07，腾讯行情</td>
+</tr>
+<tr>
+<th scope="row">PE(TTM)</th>
+<td>30.18倍</td>
+<td>第三方行情口径；须随中报重算</td>
+</tr>
+<tr>
+<th scope="row">PB</th>
+<td>约8.00倍</td>
+<td>以Q1归母权益176.44亿元粗算；不作为单独买点</td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">1.2 最新财务预报与质量解读</h3>
+<p>2026年7月7日，公司预告2026H1归母净利润35.50–37.50亿元、扣非归母净利润36.13–38.13亿元，同比分别增长97.20%–108.31%及99.79%–110.85%，未经审计。中枢为36.50亿元。公司明确预计确认巨龙铜业权益法投资收益约28亿元，因此预告利润中约四分之三来自参股铜矿，不能等同于钾肥、锂盐主业利润。<a href="https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESZ_STOCK/2026/2026-7/2026-07-07/12433544.PDF" target="_blank" rel="noopener">业绩预告</a></p>
+<p>财务预报质量判断：中等。区间较窄、已与会计师预沟通，但尚未经审计且未披露收入、现金流、营运资本及完整利润表。信息可信度：中高。盈利质量判断：中性偏强——钾肥和锂盐均改善，但投资收益占比很高。</p>
+<h3 class="sub">1.3 已披露当年期间财报</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">2025Q1</th>
+<th scope="col">2026Q1</th>
+<th scope="col">变化</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>5.52亿元</td>
+<td>7.16亿元</td>
+<td class="up">+29.61%</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td>7.47亿元</td>
+<td>15.74亿元</td>
+<td class="up">+110.60%</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td>7.50亿元</td>
+<td>15.76亿元</td>
+<td class="up">+110.14%</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td>1.04亿元</td>
+<td class="down">-0.80亿元</td>
+<td class="down">-176.45%</td>
+</tr>
+<tr>
+<th scope="row">ROE</th>
+<td>5.27%</td>
+<td>9.24%</td>
+<td class="up">+3.97pct</td>
+</tr>
+<tr>
+<th scope="row">归母权益</th>
+<td>162.44亿元</td>
+<td>176.44亿元</td>
+<td class="up">+8.62%</td>
+</tr>
+</tbody></table></div>
+<p>Q1投资收益13.01亿元，是利润增长主因；经营现金流转负主要因银行承兑票据回款增加及税费、职工现金支出增加，需由中报验证是否改善。<a href="https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESZ_STOCK/2026/2026-4/2026-04-18/12112348.PDF" target="_blank" rel="noopener">2026Q1报告</a></p>
+<h3 class="sub">1.4 最近三年年度财报</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">2023A</th>
+<th scope="col">2024A</th>
+<th scope="col">2025A</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>待后续年报横向核验</td>
+<td>待后续年报横向核验</td>
+<td>35.77亿元</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td>待后续年报横向核验</td>
+<td>25.80亿元（按2025增速反算）</td>
+<td>38.52亿元</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td>待后续年报横向核验</td>
+<td>9.19亿元（按2025增速反算）</td>
+<td>21.00亿元</td>
+</tr>
+</tbody></table></div>
+<p>2025年氯化钾产量/销量103.32/108.43万吨，碳酸锂产量/销量8,808/8,957吨；收入同比+10.03%、归母净利同比+49.32%、经营现金流同比+128.49%。<a href="https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-03-14/9f5f832c-fce5-4c80-8b12-f3e186ad8031.PDF" target="_blank" rel="noopener">2025年度董事会工作报告</a></p>
+</section>
+<section id="s2">
+<h2 class="sec"><span class="num">02</span>近两年财报趋势与业务结构</h2>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">业务</th>
+<th scope="col">2026Q1经营数据</th>
+<th scope="col">关键判断</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">氯化钾</th>
+<td>产/销16.68/19.12万吨；售价3,082元/吨；毛利率65.10%</td>
+<td class="up">售价同比+13.93%、成本同比-5.63%，盈利改善可信但有周期性</td>
+</tr>
+<tr>
+<th scope="row">碳酸锂</th>
+<td>产/销1,765/1,290吨；售价14.94万元/吨；毛利率62.64%</td>
+<td class="down">售价同比+102.70%，高弹性亦意味着高价格风险</td>
+</tr>
+<tr>
+<th scope="row">巨龙铜业</th>
+<td>投资收益13.14亿元，收到现金分红15.39亿元</td>
+<td>是当前利润核心来源；受铜价与二期达产影响</td>
+</tr>
+</tbody></table></div>
+<p>业务结构判断：钾肥提供现金流底盘，锂盐提供价格弹性，巨龙铜业显著提高利润，但也使估值更依赖铜价及参股公司业绩。麻米错和老挝项目为中长期期权，尚不计入当前盈利。</p>
+</section>
+<section id="s3">
+<h2 class="sec"><span class="num">03</span>结论摘要</h2>
+<h3 class="sub">3.1 当前结论</h3>
+<ul>
+<li>基本面判断：强</li>
+<li>财务质量：良好</li>
+<li>估值状态：合理偏高</li>
+<li>财务造假风险初筛：中</li>
+<li>核心理由：</li>
+<ol>
+<li>钾肥量价成本同步改善，锂盐价格驱动利润弹性。</li>
+<li>巨龙铜业预计贡献约28亿元H1投资收益，是高增的核心而非附属项。</li>
+<li>Q1经营现金流为负，须观察中报营运资本和现金分红能否改善现金转换。</li>
+<li>7月以来股价由约67元升至90元，短期乖离和成交放大，位置门不足。</li>
+</ol>
+</ul>
+<h3 class="sub">3.2 与上次报告相比</h3>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">判断维度</th>
+<th scope="col">上次</th>
+<th scope="col">本次</th>
+<th scope="col">变化级别</th>
+<th scope="col">证据</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">基本面判断</th>
+<td>中性</td>
+<td class="up">强</td>
+<td>上调</td>
+<td>官方Q1及H1预告补齐主业和投资收益来源</td>
+</tr>
+<tr>
+<th scope="row">财务质量</th>
+<td class="muted">无法判断</td>
+<td class="up">良好</td>
+<td>上调</td>
+<td>2025经营现金流21亿元、Q1完整三表已取得</td>
+</tr>
+<tr>
+<th scope="row">估值状态</th>
+<td class="muted">无法判断</td>
+<td class="down">合理偏高</td>
+<td>微调</td>
+<td class="up">90元对应约1,412亿元市值，需消化高增长预期</td>
+</tr>
+<tr>
+<th scope="row">造假风险初筛</th>
+<td class="muted">无法判断</td>
+<td>中</td>
+<td>微调</td>
+<td class="down">未见审计非标证据，但利润集中于权益法投资、Q1经营现金流转负</td>
+</tr>
+</tbody></table></div>
+<h3 class="sub">3.3 当前位置与交易决策</h3>
+<ul>
+<li>行情日期：2026-08-07，收盘90.00元；近30交易日区间66.50–91.00元，8月5日至7日连续放量上行。</li>
+<li>持仓状态：未持仓（2026-08-06账户快照未列示000408）。</li>
+<li>当前动作：等待。</li>
+<li>建议目标仓位：0%。</li>
+<li>不宜追高位置：90元附近，已接近30日高点91元；未经历回踩确认。</li>
+<li>价格止损：当前不适用。未来若满足建仓条件，按实际买入均价下方10%，且不放宽至结构失效位之外。</li>
+<li>基本面提前退出条件：中报显示投资收益、钾肥/锂盐毛利或经营现金流显著低于预告隐含水平；巨龙铜业利润/分红走弱；重大审计、监管或质押风险恶化。</li>
+<li>合理价值/目标空间及依据：暂不设目标价。以H1预告中枢年化并不可靠，且铜锂钾均属周期品；缺少经审计中报后的分部盈利情景。</li>
+<li>预期盈亏比：无法可靠判断，不通过风险收益门。</li>
+<li>有效期：至2026-08-11中报披露或显著价格结构变化，以较早者为准。</li>
+<li>决策置信度：中。</li>
+<li>主要反证：若中报兑现且经营现金流显著改善，股价回踩后缩量企稳并重新突破91元，须重审小仓试错条件。</li>
+</ul>
+</section>
+<section id="s4">
+<h2 class="sec"><span class="num">04</span>公司与行业</h2>
+<ul>
+<li>主营业务：盐湖资源开发，氯化钾、碳酸锂及参股巨龙铜业投资收益。</li>
+<li>核心竞争力：察尔汗盐湖资源、钾肥成本控制、盐湖提锂技术及巨龙铜矿权益。</li>
+<li>主要依赖：钾肥、锂、铜价格和参股项目产能释放；资源品周期波动大。</li>
+</ul>
+</section>
+<section id="s5">
+<h2 class="sec"><span class="num">05</span>订单与需求验证</h2>
+<p>资源品非典型订单模式。已披露的需求证据为H1氯化钾产/销量51.03/52.53万吨、碳酸锂产/销量约5,400/4,000吨；销售价格上升驱动盈利。订单趋势判断：改善；信息可信度：中高（公司预告，未经审计）。</p>
+</section>
+<section id="s6">
+<h2 class="sec"><span class="num">06</span>财务质量验证</h2>
+<ul>
+<li>利润与现金流：2025经营现金流21亿元支持年度利润；但2026Q1经营现金流-0.80亿元，不应忽略季节性及票据回款影响。</li>
+<li>应收与库存：Q1应收账款0.17亿元、存货4.49亿元，需在中报与收入、销量共同验证。</li>
+<li>资产负债：Q1总资产189.47亿元、归母权益176.44亿元，低杠杆；但股东质押事项需持续跟踪。</li>
+<li>综合判断：良好，但中报现金流是核心验证点。</li>
+</ul>
+</section>
+<section id="s7">
+<h2 class="sec"><span class="num">07</span>股东与机构</h2>
+<p>Q1前十大股东中，紫金国际控股持股25.99%；西藏藏格创投10.58%、肖永明6.41%，后两者及永鸿实业为一致行动人。西藏藏格创投、肖永明、永鸿实业存在部分质押；2026-08-08新增1700万股质押公告，需跟踪累计比例。<a href="https://money.finance.sina.com.cn/corp/go.php/vCB_AllBulletin/stockid/000408.phtml" target="_blank" rel="noopener">公告列表</a></p>
+</section>
+<section id="s8">
+<h2 class="sec"><span class="num">08</span>估值与同行对比</h2>
+<p>90元对应约1,412亿元市值。PE(TTM)30.18倍并非显著便宜，且H1高利润约28亿元投资收益将使静态PE失真。与同业可比应分别对钾肥/锂盐主营和铜矿权益价值拆分；当前不以单一PE下结论。</p>
+</section>
+<section id="s9">
+<h2 class="sec"><span class="num">09</span>负面信息与风险排查</h2>
+<p>未发现已核验的ST、审计非标或监管处罚证据。重点风险为锂、铜、钾肥价格回撤，巨龙铜业投资收益波动，麻米错/老挝项目建设和审批不确定性，以及部分重要股东股份质押。</p>
+</section>
+<section id="s10">
+<h2 class="sec"><span class="num">10</span>财务造假风险初筛</h2>
+<ul>
+<li>红旗数量：2项待验证。</li>
+<li>主要红旗：利润高度集中于权益法投资收益；Q1经营现金流为负。</li>
+<li>风险等级：中。</li>
+<li>解释：这是风险初筛，不是对财务造假的事实认定。年报未提示非标审计；中报现金流和权益法投资收益核验后可下调或上调风险等级。</li>
+</ul>
+</section>
+<section id="s11">
+<h2 class="sec"><span class="num">11</span>后续跟踪清单</h2>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">跟踪事项</th>
+<th scope="col">首次提出</th>
+<th scope="col">上次状态</th>
+<th scope="col">本次证据</th>
+<th scope="col">当前状态</th>
+<th scope="col">下次触发</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">2026H1正式报告</th>
+<td>2026-08-07</td>
+<td>待验证</td>
+<td>预告已披露</td>
+<td>待验证</td>
+<td>2026-08-11</td>
+</tr>
+<tr>
+<th scope="row">经营现金流改善</th>
+<td>2026-08-07</td>
+<td>待验证</td>
+<td>Q1为-0.80亿元</td>
+<td>待验证</td>
+<td>中报现金流量表</td>
+</tr>
+<tr>
+<th scope="row">巨龙铜业收益兑现</th>
+<td>2026-08-08</td>
+<td>待验证</td>
+<td>H1预计约28亿元</td>
+<td>待验证</td>
+<td>中报投资收益及分红</td>
+</tr>
+<tr>
+<th scope="row">90元附近价量结构</th>
+<td>2026-08-08</td>
+<td>新增</td>
+<td>临近30日高点</td>
+<td>待验证</td>
+<td>回踩/突破后的成交量</td>
+</tr>
+<tr>
+<th scope="row">股东质押变化</th>
+<td>2026-08-08</td>
+<td>新增</td>
+<td>新增1700万股质押</td>
+<td>待验证</td>
+<td>后续质押公告</td>
+</tr>
+</tbody></table></div>
+</section>
+<section id="s12">
+<h2 class="sec"><span class="num">12</span>信息边界</h2>
+<ul>
+<li>分析范围：执行日2026-08-08；行情截至2026-08-07收盘；财务截至2026Q1及2026H1未经审计预告。</li>
+<li>本地原始资料：发布前由归档脚本保存官方/可核验PDF并生成资料索引。</li>
+<li>尚未核验：2026H1正式三表、审计报告全文的所有附注、同行同口径估值及8月8日质押公告原件。</li>
+</ul>
+</section>
+
+      <section id="note-friendly">
+        <h2 class="sec"><span class="num">◎</span>基本面速记</h2>
+        <div class="note-copy">
+          <h2>可复制摘要</h2>
+          <pre><code>【基本面速记】
+公司：藏格矿业（000408.SZ）
+结论：基本面强，财务质量良好，估值合理偏高。
+核心看点：钾肥量价成本改善；锂价上行；巨龙铜业H1预计贡献约28亿元投资收益。
+主要风险：资源品价格回撤、投资收益波动、Q1经营现金流转负、股东质押。
+最新财务预报：2026H1归母净利35.5–37.5亿元，未经审计。
+财务造假风险初筛：中；为风险提示而非事实定性。
+
+【交易决策摘要】
+行情日期：2026-08-07
+持仓状态：未持仓
+当前动作：等待
+建议目标仓位：0%
+不宜追高位置：90元附近（接近30日高点）
+价格止损：当前不适用；未来按实际买入均价下方10%
+预期盈亏比：无法可靠判断
+建议有效期：至2026-08-11中报披露或价格结构变化
+决策置信度：中</code></pre>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="disclaimer">
+      免责声明:本报告为基于公开财报、公告、行情与新闻资料的整理和财务质量初筛,不构成任何投资建议,不保证未来收益。投资有风险,决策需谨慎。所有数据以公司正式披露为准。
+    </div>
+    <div>报告主体:藏格矿业(000408.SZ) | 数据口径:未提取</div>
+    <div>主要数据来源:详见信息边界章节</div>
+    <div>自包含离线 HTML · 内联 CSS / 极简内联 JS · 可直接在浏览器打开</div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var links = document.querySelectorAll('nav.toc a');
+  var map = {};
+  for (var i=0;i<links.length;i++){
+    var href = links[i].getAttribute('href') || '';
+    if (href.charAt(0) === '#') map[href.slice(1)] = links[i];
+  }
+  var sections = document.querySelectorAll('main section[id]');
+  function onScroll(){
+    var pos = (window.scrollY || document.documentElement.scrollTop) + 90;
+    var cur = null;
+    for (var j=0;j<sections.length;j++){
+      if (sections[j].offsetTop <= pos) cur = sections[j].id;
+    }
+    for (var k=0;k<links.length;k++) links[k].classList.remove('active');
+    if (cur && map[cur]) {
+      map[cur].classList.add('active');
+      var act = map[cur];
+      var sc = document.getElementById('toc-scroll');
+      if (sc && act.offsetLeft < sc.scrollLeft) sc.scrollLeft = act.offsetLeft - 8;
+      if (sc && act.offsetLeft + act.offsetWidth > sc.scrollLeft + sc.clientWidth) {
+        sc.scrollLeft = act.offsetLeft + act.offsetWidth - sc.clientWidth + 8;
+      }
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
+</body>
+</html>

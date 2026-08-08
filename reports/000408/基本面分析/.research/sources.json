@@ -1,5 +1,60 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-07T18:38:06+08:00",
-  "sources": []
+  "updated_at": "2026-08-08T15:12:02+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260707-8cab962c",
+      "title": "2026H1业绩预告",
+      "document_type": "业绩预告",
+      "period": "2026H1",
+      "published_date": "20260707",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESZ_STOCK/2026/2026-7/2026-07-07/12433544.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260707_2026H1_业绩预告_12433544.pdf",
+      "sha256": "8cab962c322079859975b6435d4c70d2ac59ac74c23b635528bcfbb381f3916c",
+      "bytes": 137420,
+      "pages": null,
+      "retrieved_at": "2026-08-08T15:11:57+08:00",
+      "used_by": [
+        "2026-08-08增量复盘"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260418-4adff644",
+      "title": "2026Q1报告",
+      "document_type": "正式披露",
+      "period": "2026Q1",
+      "published_date": "20260418",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESZ_STOCK/2026/2026-4/2026-04-18/12112348.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260418_2026Q1_正式披露_12112348.pdf",
+      "sha256": "4adff6443dbc84a8085761980c716781e2aed33584f3cf55966f60cad5b7ed19",
+      "bytes": 402362,
+      "pages": null,
+      "retrieved_at": "2026-08-08T15:11:58+08:00",
+      "used_by": [
+        "2026-08-08增量复盘"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260314-10350f65",
+      "title": "2025年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260314",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESZ_STOCK/2026/2026-3/2026-03-14/11995908.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260314_2025A_年度报告_11995908.pdf",
+      "sha256": "10350f651693d09a3ed6f203996751624b41bcc330159df69eb29297cdd2d956",
+      "bytes": 29310731,
+      "pages": null,
+      "retrieved_at": "2026-08-08T15:12:02+08:00",
+      "used_by": [
+        "2026-08-08增量复盘"
+      ],
+      "status": "已归档"
+    }
+  ]
 }
