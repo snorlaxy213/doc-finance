@@ -84,7 +84,7 @@ def extract_title(raw_html: str, fallback: str) -> str:
 
 def inject_reader_chrome(raw_html: str, disclaimer: str) -> str:
     """Add public-site navigation to the staged copy only; source reports stay untouched."""
-    reader_bar = f'''\n<aside aria-label="报告中心导航" style="margin:32px auto 20px;max-width:1600px;padding:12px 18px;border:1px solid #d8dee7;border-radius:6px;background:#f7f9fc;color:#46546a;font:14px/1.6 system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;">\n  <strong style="color:#1f3a5f;">公开报告中心</strong>\n  <span style="margin:0 8px;">·</span><a href="../../index.html" style="color:#1f3a5f;">返回报告目录</a>\n  <span style="margin:0 8px;">·</span><a href="../../index.html#disclaimer" style="color:#1f3a5f;">免责声明</a>\n  <div style="margin-top:5px;font-size:12px;">{html.escape(disclaimer)}</div>\n</aside>\n'''
+    reader_bar = f'''\n<aside aria-label="报告中心导航" style="margin:32px auto 20px;max-width:1600px;padding:12px 18px;border:1px solid #d8dee7;border-radius:6px;background:#f7f9fc;color:#46546a;font:14px/1.6 system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;">\n  <strong style="color:#1f3a5f;">公开报告中心</strong>\n  <span style="margin:0 8px;">·</span><a href="../../index.html" style="color:#1f3a5f;">返回报告目录</a>\n  <span style="margin:0 8px;">·</span><a href="../../portfolio/index.html" style="color:#1f3a5f;">持仓复盘</a>\n  <span style="margin:0 8px;">·</span><a href="../../index.html#disclaimer" style="color:#1f3a5f;">免责声明</a>\n  <div style="margin-top:5px;font-size:12px;">{html.escape(disclaimer)}</div>\n</aside>\n'''
     body_end = re.search(r'</body\s*>', raw_html, flags=re.IGNORECASE)
     if body_end:
         return f'{raw_html[:body_end.start()]}{reader_bar}{raw_html[body_end.start():]}'
@@ -181,8 +181,18 @@ def write_json(path: Path, value: dict[str, Any]) -> None:
 
 def verify_output(output: Path) -> dict[str, Any]:
     catalog_path = output / 'data' / 'catalog.json'
+    portfolio_root = output / 'portfolio'
+    portfolio_files = [portfolio_root / 'index.html', portfolio_root / 'portfolio.js', portfolio_root / 'portfolio.css', portfolio_root / 'portfolio-config.js']
     if not (output / 'index.html').is_file() or not catalog_path.is_file():
         raise BuildError('构建产物缺少首页或目录索引。')
+    if any(not path.is_file() for path in portfolio_files):
+        raise BuildError('构建产物缺少持仓入口所需的静态文件。')
+    private_artifacts = [portfolio_root / 'portfolio-seed.local.json', portfolio_root / '.env.portfolio', output / 'portfolio-backups']
+    if any(path.exists() for path in private_artifacts):
+        raise BuildError('检测到不应发布的私有持仓种子、凭据或备份文件。')
+    public_config = (portfolio_root / 'portfolio-config.js').read_text(encoding='utf-8')
+    if 'PORTFOLIO_SUPABASE_SERVICE_ROLE_KEY' in public_config or 'your-service-role-key' in public_config:
+        raise BuildError('持仓公开配置中包含 service-role key 标记。')
     catalog = json.loads(catalog_path.read_text(encoding='utf-8'))
     prohibited = ('草稿', '研究轨迹', '.research', '原始资料', '_drafts')
     for item in catalog.get('items', []):

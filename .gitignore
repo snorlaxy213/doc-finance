@@ -10,3 +10,11 @@ tmp/
 outputs/**/*.inspect.ndjson
 outputs/**/preview_*.png
 report-hub-build/
+
+# Private portfolio runtime data and Supabase credentials
+.env.portfolio
+.env.portfolio.*
+!.env.portfolio.example
+config/portfolio-seed.local.json
+portfolio-backups/
+portfolio-local-build/

@@ -1,11 +1,12 @@
 # 公开财务报告中心
 
-本仓库通过 GitHub Pages 提供公开的静态报告目录。**Pages 站点只部署构建脚本生成的 `report-hub-build/` 产物**，该目录已被 Git 忽略且不应手工提交。请注意：若整个 GitHub 仓库已设为公开，仓库中的其他已提交文件和 Git 历史仍可被访问；Pages 的构建隔离不能替代仓库访问控制。
+本仓库通过 GitHub Pages 提供公开的静态报告目录和一个可见但受密码验证保护的持仓入口。**Pages 站点只部署构建脚本生成的 `report-hub-build/` 产物**，该目录已被 Git 忽略且不应手工提交。请注意：若整个 GitHub 仓库已设为公开，仓库中的其他已提交文件和 Git 历史仍可被访问；Pages 的构建隔离不能替代仓库访问控制。
 
 ## 已确认的发布策略
 
 - 访问方式：公开网页。
-- 发布范围：`reports/<六位代码>/基本面分析/` 中白名单股票的 `*_基本面分析_最新.html`。
+- 发布范围：`reports/<六位代码>/基本面分析/` 中白名单股票的 `*_基本面分析_最新.html`，以及 `hub/portfolio/` 下的**无数据页面壳**。
+- 持仓入口：`/portfolio/` 可公开访问锁屏页；验证邮箱密码后才通过 Supabase RLS 请求私有数据。该目录只允许页面代码、Supabase URL 与 publishable key，禁止账户数据、种子、备份、`.env` 与 service-role key。详细配置见 [`portfolio.md`](portfolio.md)。
 - 明确排除：时间戳历史版本、草稿、研究轨迹、`reports/_drafts/`、`.research/`、`原始资料/` 及其他报告根目录。
 - 白名单和免责声明：`config/publication-policy.json`。
 - 源报告不会被修改。构建时仅复制获准 HTML 到 `report-hub-build/reports/<代码>/index.html`，并在**副本**末尾加入报告中心与免责声明链接。

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="个人持仓与账户复盘入口。数据仅在密码验证后从 Supabase 私有账户读取。">
+  <title>持仓复盘 · 财务研究报告中心</title>
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+  <a class="skip-link" href="#portfolioApp">跳到持仓内容</a>
+  <header class="site-header">
+    <div class="shell header-content">
+      <a class="brand" href="../index.html">财务研究报告中心</a>
+      <nav aria-label="持仓导航">
+        <a href="../index.html">报告目录</a>
+        <a href="../index.html#disclaimer">免责声明</a>
+        <button id="lockPageButton" class="nav-button" type="button" hidden>锁定持仓页</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="portfolio-main">
+    <section id="configNotice" class="shell notice-panel" hidden aria-live="polite">
+      <h1>持仓入口尚未配置</h1>
+      <p>请在 <code>hub/portfolio/portfolio-config.js</code> 中填写 Supabase 项目 URL 和 publishable key。该文件不得包含 service_role key。</p>
+    </section>
+
+    <section id="authGate" class="shell auth-panel" aria-labelledby="authTitle">
+      <p class="eyebrow">PRIVATE PORTFOLIO</p>
+      <h1 id="authTitle">验证后查看持仓</h1>
+      <p id="authHint">持仓数据不会包含在公开页面中。首次使用请验证 Supabase 邮箱与密码。</p>
+      <form id="authForm" class="auth-form">
+        <div id="emailField" class="field">
+          <label for="authEmail">Supabase 邮箱</label>
+          <input id="authEmail" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+        </div>
+        <div class="field">
+          <label for="authPassword">密码</label>
+          <input id="authPassword" name="password" type="password" autocomplete="current-password" required>
+        </div>
+        <button id="authSubmit" class="primary-button" type="submit">验证并打开持仓</button>
+        <button id="changeEmailButton" class="text-button" type="button" hidden>切换邮箱</button>
+      </form>
+      <p id="authError" class="form-error" hidden role="alert"></p>
+      <p class="subtle">每次打开、刷新或重新进入本页都需验证密码；浏览器仅保存邮箱，不保存密码。</p>
+    </section>
+
+    <section id="portfolioApp" class="shell portfolio-app" hidden aria-live="polite">
+      <div class="portfolio-heading">
+        <div>
+          <p class="eyebrow">MANUAL PORTFOLIO LEDGER</p>
+          <h1>持仓与账户复盘</h1>
+          <p id="dataAsOf" class="subtle">正在加载账户数据…</p>
+        </div>
+        <div class="account-control">
+          <label for="accountSelect">账户</label>
+          <select id="accountSelect" aria-label="选择账户"></select>
+          <button id="addAccountButton" class="secondary-button" type="button">新增账户</button>
+        </div>
+      </div>
+
+      <section id="metricGrid" class="metric-grid" aria-label="账户指标"></section>
+
+      <section class="workspace-toolbar" aria-label="持仓操作">
+        <div class="toolbar-group">
+          <button id="addPositionButton" class="primary-button" type="button">新增持仓</button>
+          <button id="updatePricesButton" class="secondary-button" type="button">批量更新现价</button>
+          <button id="recordSnapshotButton" class="secondary-button" type="button">记录账户快照</button>
+        </div>
+        <div class="toolbar-group">
+          <button id="exportBackupButton" class="secondary-button" type="button">导出完整备份</button>
+          <button id="importBackupButton" class="secondary-button" type="button">导入恢复</button>
+          <input id="backupFileInput" type="file" accept="application/json" hidden>
+        </div>
+      </section>
+
+      <div class="risk-strip" id="riskStrip" aria-live="polite"></div>
+
+      <div class="tab-list" role="tablist" aria-label="持仓模块">
+        <button class="tab-button is-active" type="button" role="tab" aria-selected="true" data-tab="positions">当前持仓</button>
+        <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab="closed">清仓分析</button>
+        <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab="account">账户记录</button>
+        <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab="watchlist">观察清单</button>
+        <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab="audit">操作日志</button>
+      </div>
+
+      <section id="positionsPanel" class="tab-panel" role="tabpanel" data-panel="positions">
+        <div class="panel-heading">
+          <div><h2>当前持仓</h2><p>现价、现金和资产快照均需手工更新。部分卖出累计已实现盈亏；完全清仓后进入清仓分析。</p></div>
+          <span id="positionSummary" class="summary-chip"></span>
+        </div>
+        <div class="table-wrap"><table class="data-table" id="positionsTable"><thead><tr><th>证券</th><th>持仓/可用</th><th>成本/现价</th><th>市值</th><th>浮盈亏</th><th>仓位</th><th>目标/止损</th><th>操作</th></tr></thead><tbody></tbody></table></div>
+      </section>
+
+      <section id="closedPanel" class="tab-panel" role="tabpanel" data-panel="closed" hidden>
+        <div class="panel-heading"><div><h2>清仓盈利分析</h2><p>统计仅覆盖系统启用后生成的清仓记录；可更正或恢复为当前持仓。</p></div><span id="closedSummary" class="summary-chip"></span></div>
+        <div class="table-wrap"><table class="data-table" id="closedTable"><thead><tr><th>证券</th><th>清仓日期</th><th>数量</th><th>成本/终价</th><th>累计卖出额</th><th>总盈亏</th><th>收益率</th><th>操作</th></tr></thead><tbody></tbody></table></div>
+      </section>
+
+      <section id="accountPanel" class="tab-panel" role="tabpanel" data-panel="account" hidden>
+        <div class="two-column">
+          <article class="content-card"><div class="panel-heading"><div><h2>资金事件</h2><p>只记录系统启用后的入金与出金，用于调整账户收益。</p></div><button id="addCashflowButton" class="secondary-button" type="button">记录资金变动</button></div><div class="table-wrap compact"><table class="data-table" id="cashflowTable"><thead><tr><th>日期</th><th>类型</th><th>金额</th><th>备注</th></tr></thead><tbody></tbody></table></div></article>
+          <article class="content-card"><div class="panel-heading"><div><h2>资产快照</h2><p>记录总资产、可用资金与可取资金，作为账户收益计算基准。</p></div><button id="quickSnapshotButton" class="secondary-button" type="button">新增快照</button></div><div class="table-wrap compact"><table class="data-table" id="snapshotTable"><thead><tr><th>时间</th><th>总资产</th><th>证券市值</th><th>可用/可取</th><th>来源</th></tr></thead><tbody></tbody></table></div></article>
+        </div>
+      </section>
+
+      <section id="watchlistPanel" class="tab-panel" role="tabpanel" data-panel="watchlist" hidden>
+        <div class="panel-heading"><div><h2>观察清单与研究计划</h2><p>轻量记录关注理由、买入区间、失效条件和复盘日期；研究正文继续保存在本地报告目录。</p></div><button id="addWatchlistButton" class="primary-button" type="button">新增观察股</button></div>
+        <div class="table-wrap"><table class="data-table" id="watchlistTable"><thead><tr><th>证券</th><th>状态</th><th>计划买入区间</th><th>失效条件</th><th>下次复盘</th><th>报告</th><th>操作</th></tr></thead><tbody></tbody></table></div>
+      </section>
+
+      <section id="auditPanel" class="tab-panel" role="tabpanel" data-panel="audit" hidden>
+        <div class="panel-heading"><div><h2>操作日志</h2><p>记录新增、修改、卖出、清仓、更正、恢复和备份恢复；日志仅供追溯，不构成完整交易流水。</p></div></div>
+        <div class="table-wrap"><table class="data-table" id="auditTable"><thead><tr><th>时间</th><th>动作</th><th>对象</th><th>原因/备注</th></tr></thead><tbody></tbody></table></div>
+      </section>
+    </section>
+  </main>
+
+  <dialog id="editorDialog" class="editor-dialog" aria-labelledby="editorTitle">
+    <form id="editorForm" method="dialog" novalidate>
+      <div class="dialog-heading"><h2 id="editorTitle">编辑</h2><button id="closeEditorButton" class="icon-button" type="button" aria-label="关闭">×</button></div>
+      <p id="editorDescription" class="subtle"></p>
+      <div id="editorFields" class="editor-fields"></div>
+      <p id="editorError" class="form-error" hidden role="alert"></p>
+      <div class="dialog-actions"><button id="cancelEditorButton" class="secondary-button" type="button">取消</button><button id="saveEditorButton" class="primary-button" type="submit">保存</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="confirmDialog" class="editor-dialog confirm-dialog" aria-labelledby="confirmTitle">
+    <div><div class="dialog-heading"><h2 id="confirmTitle">确认操作</h2><button id="closeConfirmButton" class="icon-button" type="button" aria-label="关闭">×</button></div><p id="confirmDescription"></p><div id="confirmFields" class="editor-fields"></div><p id="confirmError" class="form-error" hidden role="alert"></p><div class="dialog-actions"><button id="cancelConfirmButton" class="secondary-button" type="button">取消</button><button id="confirmActionButton" class="danger-button" type="button">确认</button></div></div>
+  </dialog>
+
+  <script src="portfolio-config.js"></script>
+  <script type="module" src="portfolio.js"></script>
+</body>
+</html>
