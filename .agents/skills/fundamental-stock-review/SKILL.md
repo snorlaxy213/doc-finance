@@ -71,7 +71,7 @@ description: 分析并持续更新上市公司基本面，输出带条件的当�
 - 先保存 Markdown 报告，使用下方固定输出结构和有效的 GitHub Flavored Markdown 表格。
 - 使用 `scripts/render_fundamental_html.py` 从同一份 Markdown 生成 HTML；不得手工维护可能与 Markdown 产生偏差的独立 HTML 叙述。
 - 最终发布前使用 `scripts/archive_disclosures.py` 归档官方 PDF 证据，然后在 Markdown 中使用 `原始资料/2026/<file>.pdf` 等本地链接。不得仅为替换远程链接而重写旧报告。
-- 使用 `scripts/publish_fundamental_review.py` 发布新报告；该脚本会创建不可变时间戳快照，原子刷新稳定版最新文件，并重建研究轨迹和状态索引。
+- 使用 `scripts/publish_fundamental_review.py` 发布新报告；该脚本会创建不可变时间戳快照，原子刷新稳定版最新文件，并重建研究轨迹和状态索引。若 `config/publication-policy.json` 中 `publication.auto_include_fundamental_reports` 为 `true`，上述产物全部成功后会将股票代码幂等加入公开发布白名单。脚本拒绝 `reports/_drafts/` 路径和文件名含“草稿”的输入；审查器阻断时按本 Skill 流程不得调用发布脚本；若本次报告不应公开，使用 `--no-publication`。
 - Markdown 正文必须在 H1 标题后立即以 `### 1. 核心财务指标` 开始。不得在标题和第 1 节之间插入独立结论、执行摘要、背景或时间范围段落。
 - HTML 必须保持自包含：使用内联 CSS/JS，不依赖外部资源、网络字体或 CDN。
 - 不得捏造可视化。如果报告表格中没有明确的图表数据，则让 HTML 仅渲染表格和摘要卡片。

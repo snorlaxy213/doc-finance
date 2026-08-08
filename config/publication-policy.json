@@ -4,9 +4,11 @@
     "confirmed_on": "2026-08-07",
     "included_root": "reports",
     "included_variant": "latest-html-only",
-    "publication_method": "manual-github-pages-workflow"
+    "publication_method": "manual-github-pages-workflow",
+    "auto_include_fundamental_reports": true
   },
   "allowed_report_codes": [
+    "000408",
     "000429",
     "000506",
     "000938",
