@@ -87,7 +87,13 @@ def is_table_start(lines: list[str], i: int) -> bool:
     return bool(re.match(r"^\s*\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?\s*$", lines[i + 1]))
 
 
-def table_to_html(headers: list[str], rows: list[list[str]]) -> str:
+def table_to_html(
+    headers: list[str],
+    rows: list[list[str]],
+    *,
+    collapsible: bool = False,
+    summary: str = "查看原始财务明细（含口径与同比）",
+) -> str:
     out: list[str] = ['<div class="tbl-scroll">', "<table>"]
     out.append("<thead><tr>")
     for head in headers:
@@ -106,7 +112,15 @@ def table_to_html(headers: list[str], rows: list[list[str]]) -> str:
                 out.append(f"<td{attr}>{inline_md(cell)}</td>")
         out.append("</tr>")
     out.append("</tbody></table></div>")
-    return "\n".join(out)
+    table_html = "\n".join(out)
+    if not collapsible:
+        return table_html
+    return (
+        '<details class="detail-table">'
+        f'<summary>{html.escape(summary)}</summary>'
+        f'{table_html}'
+        '</details>'
+    )
 
 
 def value_class(cell: str) -> str:
@@ -132,6 +146,7 @@ def render_markdown(markdown: str) -> RenderedContent:
     toc: list[tuple[str, str, str]] = []
     section_open = False
     section_index = 0
+    active_section_title = ""
     list_stack: list[tuple[int, str]] = []
 
     def close_lists() -> None:
@@ -189,7 +204,8 @@ def render_markdown(markdown: str) -> RenderedContent:
             while i < len(lines) and lines[i].lstrip().startswith("|"):
                 rows.append(split_table_row(lines[i]))
                 i += 1
-            out.append(table_to_html(headers, rows))
+            collapse_table = active_section_title in {"核心财务指标", "近两年财报趋势与业务结构"}
+            out.append(table_to_html(headers, rows, collapsible=collapse_table))
             continue
 
         heading = re.match(r"^(#{1,6})\s+(.+?)\s*$", stripped)
@@ -206,6 +222,7 @@ def render_markdown(markdown: str) -> RenderedContent:
                 sid = heading_id(section_index)
                 num = extract_section_num(text, section_index)
                 title = remove_section_num(text)
+                active_section_title = title
                 toc.append((sid, f"{num:02d}" if isinstance(num, int) else str(num), title))
                 out.append(f'<section id="{sid}">')
                 out.append(
@@ -685,6 +702,175 @@ def build_kpis(tables: list[TableBlock], valuation: dict[str, tuple[str, str]]) 
     return "\n".join(cards)
 
 
+MISSING_CHART_VALUES = {"", "未披露", "不适用", "无法判断", "无", "--", "-"}
+CHART_COLORS = ("#1f5d8f", "#b65c3b", "#427a62", "#8060a8")
+
+
+def numeric_value(value: str) -> float | None:
+    clean = normalize_space(value).replace(",", "")
+    if clean in MISSING_CHART_VALUES:
+        return None
+    match = re.search(r"[-+]?\d+(?:\.\d+)?", clean)
+    return float(match.group(0)) if match else None
+
+
+def comparable_columns(table: TableBlock) -> list[tuple[int, str]]:
+    ignored = ("解读", "变化", "同比", "环比", "质量", "备注", "来源")
+    return [(i, normalize_space(header)) for i, header in enumerate(table.headers[1:]) if normalize_space(header) and not any(term in normalize_space(header) for term in ignored)]
+
+
+def first_table_matching(tables: list[TableBlock], term: str) -> TableBlock | None:
+    return next((table for table in tables if term in normalize_space(table.heading)), None)
+
+
+def table_metric_series(table: TableBlock | None, metrics: list[tuple[str, str]]) -> list[tuple[str, list[tuple[str, float]]]]:
+    if table is None:
+        return []
+    rows = row_map(table)
+    columns = comparable_columns(table)
+    result: list[tuple[str, list[tuple[str, float]]]] = []
+    for row_name, label in metrics:
+        values = rows.get(row_name)
+        if not values:
+            continue
+        points = [(period, number) for index, period in columns if index < len(values) and (number := numeric_value(values[index])) is not None]
+        if len(points) >= 2:
+            result.append((label, points))
+    return result
+
+
+def chart_value_label(value: float) -> str:
+    return f"{value:.2f}".rstrip("0").rstrip(".")
+
+
+def chart_periods(series: list[tuple[str, list[tuple[str, float]]]]) -> list[str]:
+    return list(dict.fromkeys(period for _, points in series for period, _ in points))
+
+
+def grouped_bar_svg(series: list[tuple[str, list[tuple[str, float]]]]) -> str:
+    periods = chart_periods(series)
+    if not series or len(periods) < 2:
+        return ""
+    width, height, left, right, top, bottom = 720, 290, 44, 18, 50, 48
+    values = [value for _, points in series for _, value in points]
+    low, high = min(0.0, min(values)), max(0.0, max(values))
+    if low == high:
+        high += 1.0
+    plot_width, plot_height = width - left - right, height - top - bottom
+    baseline = top + (high / (high - low)) * plot_height
+    group_width = plot_width / len(periods)
+    bar_width = min(28.0, max(7.0, (group_width - 14.0) / len(series)))
+    bits = [f'<svg class="chart-svg" viewBox="0 0 {width} {height}" role="img" aria-label="经营规模与利润趋势柱状图">', f'<line x1="{left}" x2="{width-right}" y1="{baseline:.1f}" y2="{baseline:.1f}" class="chart-axis"/>', f'<text x="{left}" y="22" class="chart-unit">单位：亿元</text>']
+    for index, (label, _) in enumerate(series):
+        x = left + index * 138
+        color = CHART_COLORS[index % len(CHART_COLORS)]
+        bits.extend((f'<rect x="{x}" y="29" width="10" height="10" rx="2" fill="{color}"/>', f'<text x="{x+15}" y="38" class="chart-legend">{html.escape(label)}</text>'))
+    for period_index, period in enumerate(periods):
+        centre = left + period_index * group_width + group_width / 2
+        start = centre - ((len(series) - 1) * bar_width) / 2
+        bits.append(f'<text x="{centre:.1f}" y="{height-16}" text-anchor="middle" class="chart-label">{html.escape(period)}</text>')
+        for series_index, (_, points) in enumerate(series):
+            value = dict(points).get(period)
+            if value is None:
+                continue
+            y = top + (high - value) / (high - low) * plot_height
+            bar_y, bar_height = min(y, baseline), max(1.0, abs(baseline - y))
+            x = start + series_index * bar_width
+            color = CHART_COLORS[series_index % len(CHART_COLORS)]
+            bits.extend((f'<rect x="{x:.1f}" y="{bar_y:.1f}" width="{bar_width-2:.1f}" height="{bar_height:.1f}" rx="2" fill="{color}"/>', f'<text x="{x+(bar_width-2)/2:.1f}" y="{bar_y-5 if value >= 0 else bar_y+bar_height+12:.1f}" text-anchor="middle" class="chart-value">{chart_value_label(value)}</text>'))
+    return "".join(bits) + "</svg>"
+
+
+def quality_svg(series: list[tuple[str, list[tuple[str, float]]]]) -> str:
+    if not series:
+        return ""
+    width, row_height, top, bottom, left, right = 720, 64, 16, 30, 126, 18
+    height, plot_width = top + bottom + row_height * len(series), width - left - right
+    bits = [f'<svg class="chart-svg quality-svg" viewBox="0 0 {width} {height}" role="img" aria-label="盈利与现金质量趋势图">']
+    for series_index, (label, points) in enumerate(series):
+        values = [value for _, value in points]
+        low, high = min(values), max(values)
+        if low == high:
+            low, high = low - 1, high + 1
+        y_top, y_bottom = top + series_index * row_height + 9, top + (series_index + 1) * row_height - 18
+        coords = []
+        for index, (period, value) in enumerate(points):
+            x = left + index * plot_width / max(1, len(points) - 1)
+            y = y_bottom - (value - low) / (high - low) * (y_bottom - y_top)
+            coords.append((x, y, period, value))
+        color = CHART_COLORS[series_index % len(CHART_COLORS)]
+        bits.extend((f'<text x="8" y="{y_top+11:.1f}" class="chart-series-label">{html.escape(label)}</text>', f'<line x1="{left}" x2="{width-right}" y1="{y_bottom:.1f}" y2="{y_bottom:.1f}" class="chart-grid"/>', f'<polyline fill="none" stroke="{color}" stroke-width="3" points="{" ".join(f"{x:.1f},{y:.1f}" for x,y,_,_ in coords)}"/>'))
+        for x, y, period, value in coords:
+            bits.extend((f'<circle cx="{x:.1f}" cy="{y:.1f}" r="4" fill="{color}"/>', f'<text x="{x:.1f}" y="{y-8:.1f}" text-anchor="middle" class="chart-value">{chart_value_label(value)}</text>'))
+            if series_index == len(series) - 1:
+                bits.append(f'<text x="{x:.1f}" y="{height-8}" text-anchor="middle" class="chart-label">{html.escape(period)}</text>')
+    return "".join(bits) + "</svg>"
+
+
+def business_bar_svg(table: TableBlock | None) -> str:
+    if table is None:
+        return ""
+    headers = [normalize_space(header) for header in table.headers[1:]]
+    latest_index = next((i for i, header in enumerate(headers) if "最新" in header and "收入" in header), None)
+    if latest_index is None:
+        return ""
+    entries = [(normalize_space(row[0]), value) for row in table.rows if len(row) > latest_index + 1 and (value := numeric_value(row[latest_index + 1])) is not None]
+    if len(entries) < 2:
+        return ""
+    width, row_height, top, bottom, left, right = 720, 40, 18, 26, 174, 70
+    height, plot_width, max_value = top + bottom + row_height * len(entries), width - left - right, max(value for _, value in entries)
+    bits = [f'<svg class="chart-svg business-svg" viewBox="0 0 {width} {height}" role="img" aria-label="业务收入结构条形图">']
+    for index, (name, value) in enumerate(entries):
+        y, bar_width, color = top + index * row_height, value / max_value * plot_width, CHART_COLORS[index % len(CHART_COLORS)]
+        bits.extend((f'<text x="{left-10}" y="{y+23}" text-anchor="end" class="chart-label">{html.escape(name)}</text>', f'<rect x="{left}" y="{y+7}" width="{plot_width}" height="21" rx="3" class="chart-track"/>', f'<rect x="{left}" y="{y+7}" width="{bar_width:.1f}" height="21" rx="3" fill="{color}"/>', f'<text x="{left+bar_width+7:.1f}" y="{y+23}" class="chart-value">{chart_value_label(value)} 亿元</text>'))
+    return "".join(bits) + "</svg>"
+
+
+def chart_card(title: str, note: str, svg: str, unavailable: str) -> str:
+    body = f'<div class="chart-body">{svg}</div>' if svg else f'<div class="chart-empty">{html.escape(unavailable)}</div>'
+    return f'<article class="chart-card"><h3>{html.escape(title)}</h3>{body}<p class="chart-meta">{note}</p></article>'
+
+
+def build_financial_visuals(markdown: str, tables: list[TableBlock], data_date: str, sources: str) -> str:
+    financial = first_table_matching(tables, "最近三年年度财报") or first_table_matching(tables, "近两年财报趋势")
+    periods = " / ".join(period for _, period in comparable_columns(financial)) if financial else data_date
+    source_html = inline_md(sources)
+    financial_note = f'<b>数据期间：</b>{html.escape(periods)} <b>口径：</b>以核心财务指标表的合并报表数据为准。<br><b>来源：</b>{source_html}'
+    scale = grouped_bar_svg(table_metric_series(financial, [("营业收入", "营业收入"), ("归母净利润", "归母净利润"), ("扣非归母净利润", "扣非净利润")]))
+    quality = quality_svg(table_metric_series(financial, [("毛利率", "毛利率"), ("扣非净利率", "扣非净利率"), ("ROE", "ROE"), ("经营现金流/净利润", "经营现金流/净利润")]))
+    business = first_table_matching(tables, "分业务情况")
+    business_section = find_subsection(markdown, "分业务情况")
+    business_note = f'<b>数据期间：</b>{html.escape(" / ".join(period for _, period in comparable_columns(business)) if business else data_date)} <b>口径：</b>公司分部收入；仅在口径可比时展示。<br><b>来源：</b>{source_html}'
+    business = "" if "业务结构图数据：不可比" in business_section else business_bar_svg(business)
+    business_reason = find_key_value(business_section, "业务结构图数据") if "业务结构图数据：不可比" in business_section else "公司未披露可比的分业务收入数据。"
+    return '<section class="financial-visuals" aria-label="财务图表速览"><div class="visuals-head"><div><span>FINANCIAL VISUALS</span><h2>财务趋势与业务结构</h2></div><p>图表优先展示趋势；原始表格保留在对应章节，可展开核对。</p></div><div class="chart-grid">' + chart_card("经营规模与利润趋势", financial_note, scale, "核心财务表未提供连续两期的收入和利润数据。") + chart_card("盈利与现金质量趋势", financial_note, quality, "核心财务表未提供连续两期的利润率、ROE 或现金质量数据。") + chart_card("业务收入结构", business_note, business, business_reason or "披露口径不可比，未生成结构图。") + '</div></section>'
+
+
+def build_decision_card(markdown: str) -> str:
+    decision = find_subsection(markdown, "当前位置与交易决策")
+    source_record = extract_note_block(markdown)
+    if not decision and not source_record:
+        return ""
+
+    def field_value(*keys: str) -> str:
+        for key in keys:
+            value = find_key_value(decision, key) or find_key_value(source_record, key)
+            if value:
+                return value
+        return ""
+
+    invalidation = "；".join(filter(None, [field_value("价格止损"), field_value("基本面提前退出条件")])) or "详见正文"
+    fields = [
+        ("当前动作", field_value("当前动作") or "详见正文"),
+        ("建议仓位", field_value("建议目标仓位") or "详见正文"),
+        ("执行 / 观察条件", field_value("参考价格与计划买入区间", "入场条件") or "详见正文"),
+        ("失效条件", invalidation),
+        ("有效期", field_value("建议有效期") or "详见正文"),
+    ]
+    items = "".join('<div class="decision-item"><span>' + html.escape(label) + '</span><strong>' + inline_md(value) + '</strong></div>' for label, value in fields)
+    return '<section class="decision-card" aria-label="交易决策摘要"><h3>当前位置与交易决策</h3><div class="decision-grid">' + items + '</div></section>'
+
+
 def build_toc(toc: list[tuple[str, str, str]]) -> str:
     return "\n".join(
         f'<a href="#{html.escape(sid)}"><span class="toc-num">{html.escape(num)}</span>{inline_md(title)}</a>'
@@ -745,14 +931,15 @@ def render_report(markdown: str, template: str, args: argparse.Namespace) -> tup
         "stat_cards": build_stat_cards(valuation),
         "verdict_badges": build_badges(summary),
         "verdict_headline": inline_md(str(summary["headline"])),
+        "decision_card": build_decision_card(markdown),
         "verdict_points": list_html(summary["reasons"], "结论理由详见正文。"),
         "risk_points": list_html(summary["risks"], "主要风险详见负面信息与风险排查、财务质量验证章节。"),
         "kpi_cards": build_kpis(tables, valuation),
+        "financial_visuals": build_financial_visuals(markdown, tables, data_date, sources),
         "forecast_panel": build_forecast_panel(markdown, tables),
         "update_panel": build_update_panel(markdown),
         "toc": build_toc(rendered.toc),
         "content_html": rendered.html,
-        "note_block": html.escape(str(summary.get("note_block") or "未提取到基本面速记块。")),
         "sources": inline_md(sources),
         "footer_meta": f"报告主体:{company}({ticker}) | 数据口径:{data_date}",
     }

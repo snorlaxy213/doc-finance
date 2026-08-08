@@ -234,6 +234,13 @@ footer .disclaimer{background:var(--line-soft);padding:8px 12px;border-radius:3p
   a{color:var(--ink);text-decoration:none;}
   .kpi{border:1px solid #ccc;}
 }
+
+/* New-report layout: compact decision card, source-backed SVG charts, and auditable detail tables. */
+.decision-card{margin:12px 0 2px;padding:12px 14px;border:1px solid #dfe7f1;border-radius:4px;background:#fff;}.decision-card h3{margin:0 0 9px;font-size:12px;letter-spacing:.08em;color:var(--brand);}.decision-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;}.decision-item{min-width:0;padding:8px 10px;border-left:2px solid #d8e2ef;background:#f8fafd;}.decision-item span{display:block;color:var(--ink-soft);font-size:10.5px;line-height:1.35;}.decision-item strong{display:block;margin-top:3px;font-size:12px;line-height:1.5;word-break:break-word;}
+.financial-visuals{margin:18px 0 4px;padding:18px 20px;border:1px solid #d8e2ef;border-left:4px solid var(--brand);border-radius:4px;background:linear-gradient(135deg,#f7faff 0%,#fff 72%);}.visuals-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:14px;}.visuals-head span{display:block;color:var(--brand);font-size:10.5px;font-weight:700;letter-spacing:.12em;}.visuals-head h2{margin:3px 0 0;font-size:19px;color:var(--ink);}.visuals-head p{max-width:460px;margin:0;color:var(--ink-soft);font-size:12px;}.chart-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}.chart-card{min-width:0;padding:13px 14px;border:1px solid #dfe7ef;border-radius:4px;background:#fff;}.chart-card:last-child{grid-column:1 / -1;}.chart-card h3{margin:0 0 8px;font-size:13px;color:var(--ink);}.chart-body{overflow-x:auto;}.chart-svg{display:block;width:100%;min-width:500px;height:auto;}.chart-svg .chart-axis{stroke:#aebdcd;stroke-width:1;}.chart-svg .chart-grid{stroke:#e4eaf1;stroke-width:1;}.chart-svg .chart-unit,.chart-svg .chart-legend,.chart-svg .chart-label,.chart-svg .chart-series-label{fill:#566579;font-size:12px;}.chart-svg .chart-value{fill:#1a2433;font-size:11px;font-weight:600;}.chart-svg .chart-track{fill:#edf2f7;}.chart-empty{min-height:130px;display:flex;align-items:center;justify-content:center;padding:18px;border:1px dashed #bdc9d6;border-radius:3px;background:#fbfcfe;color:var(--ink-soft);text-align:center;font-size:12px;}.chart-meta{margin:8px 0 0!important;color:var(--ink-soft);font-size:11px!important;line-height:1.65;}
+details.detail-table{margin:10px 0;border:1px solid var(--line);border-radius:4px;background:#fff;}details.detail-table>summary{cursor:pointer;padding:10px 12px;color:var(--brand);font-size:12.5px;font-weight:700;list-style:none;}details.detail-table>summary::-webkit-details-marker{display:none;}details.detail-table>summary::before{content:"+";display:inline-flex;width:18px;height:18px;margin-right:7px;align-items:center;justify-content:center;border-radius:50%;background:var(--brand-light);vertical-align:-3px;}details.detail-table[open]>summary::before{content:"−";}details.detail-table .tbl-scroll{margin:0;border:0;border-top:1px solid var(--line);border-radius:0;}
+@media (max-width:920px){.decision-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.chart-grid{grid-template-columns:1fr;}.chart-card:last-child{grid-column:auto;}}@media (max-width:560px){.decision-grid{grid-template-columns:1fr;}.financial-visuals{padding:15px 14px;}.chart-card{padding:11px;}}@media print{.financial-visuals,.decision-card,details.detail-table{break-inside:avoid;}details.detail-table>summary{display:none;}details.detail-table .tbl-scroll{display:block;}}
+
 </style>
 </head>
 <body>
@@ -258,6 +265,7 @@ footer .disclaimer{background:var(--line-soft);padding:8px 12px;border-radius:3p
       </div>
     </div>
     <div class="verdict-headline"><span class="label">核心判断</span>{{verdict_headline}}</div>
+    {{decision_card}}
     <div class="verdict-grid">
       <div class="v-col v-up">
         <div class="v-title">核心理由</div>
@@ -275,6 +283,8 @@ footer .disclaimer{background:var(--line-soft);padding:8px 12px;border-radius:3p
     {{kpi_cards}}
   </div>
 
+  {{financial_visuals}}
+
   {{forecast_panel}}
 
   {{update_panel}}
@@ -290,13 +300,6 @@ footer .disclaimer{background:var(--line-soft);padding:8px 12px;border-radius:3p
     <main class="main">
       {{content_html}}
 
-      <section id="note-friendly">
-        <h2 class="sec"><span class="num">◎</span>基本面速记</h2>
-        <div class="note-copy">
-          <h2>可复制摘要</h2>
-          <pre><code>{{note_block}}</code></pre>
-        </div>
-      </section>
     </main>
   </div>
 
