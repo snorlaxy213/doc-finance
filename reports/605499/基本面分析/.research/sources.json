@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-12T00:34:16+08:00",
+  "sources": [
+    {
+      "source_id": "FAILED-a5b28502a6a4",
+      "title": "2026H1中报",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260731",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-07-31/605499_20260731_J7SO.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-09-12T00:30:39+08:00",
+      "used_by": [
+        "20260912基本面分析"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "SRC-20260331-cd3a4191",
+      "title": "2025年报",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260331",
+      "official_url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0331/2026033100171_c.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260331_2025A_年度报告_2026033100171_c.pdf",
+      "sha256": "cd3a41917afdec6bbcae051cfe586da55158cf69c55e11d465a5e4387285b581",
+      "bytes": 12283921,
+      "pages": 109,
+      "retrieved_at": "2026-09-12T00:30:44+08:00",
+      "used_by": [
+        "20260912基本面分析"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260731-280d0d1f",
+      "title": "2026H1中报",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260731",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESH_STOCK/2026/2026-7/2026-07-31/12470595.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260731_2026H1_半年度报告_12470595_280d0d1f.pdf",
+      "sha256": "280d0d1f7c5880911a2d1b5cbcee39473ce1f3c0613c631ef543c5751f00e192",
+      "bytes": 1285532,
+      "pages": 191,
+      "retrieved_at": "2026-09-12T00:32:32+08:00",
+      "used_by": [
+        "20260912基本面分析"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260430-ee11b85d",
+      "title": "2026Q1一季报",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260430",
+      "official_url": "https://dataclouds.cninfo.com.cn/shgonggao/hsomarket/2026/20260429/71bb63af08fd4f27a0ccd8b30bea8ecd.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260430_2026Q1_第一季度报告_71bb63af08fd4f27a0ccd8b30bea8ecd_ee11b85d.pdf",
+      "sha256": "ee11b85d3846b34655bdde4109a2dc636aba6f8aa98929cd9aed967fa67b6faf",
+      "bytes": 213533,
+      "pages": 13,
+      "retrieved_at": "2026-09-12T00:32:32+08:00",
+      "used_by": [
+        "20260912基本面分析"
+      ],
+      "status": "已归档",
+      "date_override": "20260430"
+    },
+    {
+      "source_id": "SRC-20260331-ac54cab1",
+      "title": "2025年报",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260331",
+      "official_url": "https://stockmc.xueqiu.com/202603/605499_20260331_JIEN.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260331_2025A_年度报告_605499_20260331_JIEN.pdf",
+      "sha256": "ac54cab1e25634bdc5654c202f6f98ccea12585348c52bea567010024725812d",
+      "bytes": 1694393,
+      "pages": 243,
+      "retrieved_at": "2026-09-12T00:32:33+08:00",
+      "used_by": [
+        "20260912基本面分析"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260902-60dba907",
+      "title": "2026年8月回购进展",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260902",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESH_STOCK/2026/2026-9/2026-09-02/12578959.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260902_2026_正式披露_12578959_60dba907.pdf",
+      "sha256": "60dba90796bd67262053b719dc8bc56b49c20c2da8e6676752a255cbe01d541f",
+      "bytes": 113157,
+      "pages": 2,
+      "retrieved_at": "2026-09-12T00:34:16+08:00",
+      "used_by": [
+        "20260912基本面分析"
+      ],
+      "status": "已归档"
+    }
+  ]
+}
