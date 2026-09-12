@@ -1,7 +1,125 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-04T00:12:21+08:00",
+  "updated_at": "2026-09-06T23:23:29+08:00",
   "sources": [
+    {
+      "source_id": "FAILED-97fe663dc1af",
+      "title": "2026年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260831",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-08-31/601717_20260831_UTDU.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-09-06T23:10:52+08:00",
+      "used_by": [
+        "20260906基本面分析"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "FAILED-ca27cc1ee715",
+      "title": "2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260331",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-03-31/601717_20260331_KW9E.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-09-06T23:10:53+08:00",
+      "used_by": [
+        "20260906基本面分析"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "SRC-20260429-82506508",
+      "title": "2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260429",
+      "official_url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0429/2026042906143_c.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260429_2026Q1_第一季度报告_2026042906143_c.pdf",
+      "sha256": "82506508ee4df75807851ff9208d269b8dba83e97ca58240dda1cac86cf773b9",
+      "bytes": 498318,
+      "pages": 18,
+      "retrieved_at": "2026-09-06T23:10:55+08:00",
+      "used_by": [
+        "20260906基本面分析",
+        "中创智领_601717_基本面分析_20260906_232221.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "FAILED-529e7e3a43e5",
+      "title": "可转债方案调整",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260801",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-08-01/601717_20260801_QCPI.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-09-06T23:10:56+08:00",
+      "used_by": [
+        "20260906基本面分析"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "FAILED-3da61f8cd4f8",
+      "title": "回购贷款承诺",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260831",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-08-31/601717_20260831_ZCQV.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-09-06T23:10:56+08:00",
+      "used_by": [
+        "20260906基本面分析"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "SRC-20260830-0d860dcd",
+      "title": "2026年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260830",
+      "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0830/2026083000363_c.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260830_2026H1_半年度报告_2026083000363_c.pdf",
+      "sha256": "0d860dcdc771d5e5c641348db0faa1a079af1e20ff3bd459a1631a6826e35c8d",
+      "bytes": 3095643,
+      "pages": 187,
+      "retrieved_at": "2026-09-06T23:11:45+08:00",
+      "used_by": [
+        "20260906基本面分析",
+        "中创智领_601717_基本面分析_20260906_232221.md"
+      ],
+      "status": "已归档"
+    },
     {
       "source_id": "SRC-20260330-90b3a66c",
       "title": "2025年年度报告",
@@ -14,33 +132,73 @@
       "sha256": "90b3a66cfb5fce6e0f15bde03ef4558a2c235bf86dc894dcf4814dd9780ce164",
       "bytes": 2378225,
       "pages": 227,
-      "retrieved_at": "2026-08-03T23:55:14+08:00",
+      "retrieved_at": "2026-09-06T23:11:47+08:00",
       "used_by": [
-        "中创智领601717基本面分析20260803"
+        "20260906基本面分析",
+        "中创智领_601717_基本面分析_20260906_232221.md"
       ],
       "status": "已归档"
     },
     {
-      "source_id": "SRC-20260429-82506508",
-      "title": "2026年第一季度报告",
-      "document_type": "第一季度报告",
-      "period": "2026Q1",
-      "published_date": "20260429",
-      "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0429/2026042906143_c.pdf",
+      "source_id": "SRC-20260731-b54aca03",
+      "title": "可转债预案修订稿",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260731",
+      "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0731/2026073101857_c.pdf",
       "alternate_urls": [],
-      "local_path": "原始资料/2026/20260429_2026Q1_第一季度报告_2026042906143_c.pdf",
-      "sha256": "82506508ee4df75807851ff9208d269b8dba83e97ca58240dda1cac86cf773b9",
-      "bytes": 498318,
-      "pages": 18,
-      "retrieved_at": "2026-08-03T23:55:16+08:00",
+      "local_path": "原始资料/2026/20260731_期间待核验_正式披露_2026073101857_c.pdf",
+      "sha256": "b54aca03ffddf2e59e2674243cdfbd649b4f701e12eaa940e28d5b407d731c96",
+      "bytes": 1001073,
+      "pages": null,
+      "retrieved_at": "2026-09-06T23:11:49+08:00",
       "used_by": [
-        "中创智领601717基本面分析20260803"
+        "20260906基本面分析",
+        "中创智领_601717_基本面分析_20260906_232221.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260830-b48c9800",
+      "title": "回购贷款承诺",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260830",
+      "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0830/2026083000365_c.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260830_期间待核验_正式披露_2026083000365_c.pdf",
+      "sha256": "b48c980090900a1d24ac671cd50c20d61d77c16a4c4b87b1fcccdbca72d382dc",
+      "bytes": 285663,
+      "pages": null,
+      "retrieved_at": "2026-09-06T23:11:52+08:00",
+      "used_by": [
+        "20260906基本面分析",
+        "中创智领_601717_基本面分析_20260906_232221.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260902-5c9e2a55",
+      "title": "回购进展",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260902",
+      "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0902/2026090202193_c.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260902_期间待核验_正式披露_2026090202193_c.pdf",
+      "sha256": "5c9e2a55d6f6ef25c9296ec12ada89b1c6945bb9c412699bffe996a826e40752",
+      "bytes": 268494,
+      "pages": null,
+      "retrieved_at": "2026-09-06T23:11:53+08:00",
+      "used_by": [
+        "20260906基本面分析",
+        "中创智领_601717_基本面分析_20260906_232221.md"
       ],
       "status": "已归档"
     },
     {
       "source_id": "SRC-20260116-e1e8b248",
-      "title": "最近五年监管措施情况公告",
+      "title": "近五年监管措施及整改",
       "document_type": "监管公告",
       "period": "期间待核验",
       "published_date": "20260116",
@@ -50,81 +208,29 @@
       "sha256": "e1e8b2483228facda08f54e94282c4f2b763445d00df82b8a4c14774f4a3c044",
       "bytes": 97099,
       "pages": 2,
-      "retrieved_at": "2026-08-03T23:55:16+08:00",
+      "retrieved_at": "2026-09-06T23:12:37+08:00",
       "used_by": [
-        "中创智领601717基本面分析20260803"
+        "20260906基本面分析",
+        "中创智领_601717_基本面分析_20260906_232221.md"
       ],
       "status": "已归档"
     },
     {
-      "source_id": "SRC-20260731-d922d2d0",
-      "title": "A股回购方案公告",
+      "source_id": "SRC-20260902-1ba39943",
+      "title": "2026半年业绩说明会",
       "document_type": "正式披露",
-      "period": "期间待核验",
-      "published_date": "20260731",
-      "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0731/2026073101465.pdf",
+      "period": "2026",
+      "published_date": "20260902",
+      "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0902/2026090202187_c.pdf",
       "alternate_urls": [],
-      "local_path": "原始资料/2026/20260731_期间待核验_正式披露_2026073101465.pdf",
-      "sha256": "d922d2d01d0d8d7906cdd841bb7e8b1a0cb63e4cedaa48511e25a896f34c9b23",
-      "bytes": 47742,
-      "pages": 7,
-      "retrieved_at": "2026-08-03T23:55:17+08:00",
+      "local_path": "原始资料/2026/20260902_2026_正式披露_2026090202187_c.pdf",
+      "sha256": "1ba3994386a11a92780e5a7793699b85f54bd4bac442360c3261a612f0c3dd35",
+      "bytes": 292611,
+      "pages": null,
+      "retrieved_at": "2026-09-06T23:14:15+08:00",
       "used_by": [
-        "中创智领601717基本面分析20260803"
-      ],
-      "status": "已归档"
-    },
-    {
-      "source_id": "SRC-20260618-34edc30b",
-      "title": "可转债募集说明书申报稿",
-      "document_type": "正式披露",
-      "period": "期间待核验",
-      "published_date": "20260618",
-      "official_url": "https://static.sse.com.cn/stock/disclosure/announcement/c/202606/601717_20260618_QZHA.pdf",
-      "alternate_urls": [],
-      "local_path": "原始资料/2026/20260618_期间待核验_正式披露_601717_20260618_QZHA.pdf",
-      "sha256": "34edc30b825a235172a41386ce05291b775c67267c89aeba26c305594559cc7c",
-      "bytes": 13980180,
-      "pages": 492,
-      "retrieved_at": "2026-08-03T23:55:25+08:00",
-      "used_by": [
-        "中创智领601717基本面分析20260803"
-      ],
-      "status": "已归档"
-    },
-    {
-      "source_id": "SRC-20250428-c3776ae8",
-      "title": "2025年第一季度报告",
-      "document_type": "第一季度报告",
-      "period": "2025Q1",
-      "published_date": "20250428",
-      "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0428/2025042804415.pdf",
-      "alternate_urls": [],
-      "local_path": "原始资料/2025/20250428_2025Q1_第一季度报告_2025042804415.pdf",
-      "sha256": "c3776ae83e1554088f66fbfd865e09a7c2369557b342938bc4a4db6f33942494",
-      "bytes": 883507,
-      "pages": 21,
-      "retrieved_at": "2026-08-04T00:02:13+08:00",
-      "used_by": [
-        "中创智领601717基本面分析20260803"
-      ],
-      "status": "已归档"
-    },
-    {
-      "source_id": "SRC-20260715-6c2c01e3",
-      "title": "董事高管增持计划公告",
-      "document_type": "正式披露",
-      "period": "期间待核验",
-      "published_date": "20260715",
-      "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0715/2026071501141_c.pdf",
-      "alternate_urls": [],
-      "local_path": "原始资料/2026/20260715_期间待核验_正式披露_2026071501141_c.pdf",
-      "sha256": "6c2c01e32bc395d1279fdeb85d9d652e7b580ec9e38c19703de052d01ed88256",
-      "bytes": 322022,
-      "pages": 10,
-      "retrieved_at": "2026-08-04T00:09:48+08:00",
-      "used_by": [
-        "中创智领601717基本面分析20260803"
+        "20260906基本面分析",
+        "中创智领_601717_基本面分析_20260906_232221.md"
       ],
       "status": "已归档"
     }
