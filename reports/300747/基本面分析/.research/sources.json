@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-12T16:12:11+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260423-b9c550b2",
+      "title": "2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260423",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-23/1225154627.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260423_2025A_年度报告_1225154627.pdf",
+      "sha256": "b9c550b2a9d82302fe143315b68f3188d64e6aa9fdde30dffb30ed848bfe52d2",
+      "bytes": 1419238,
+      "pages": 231,
+      "retrieved_at": "2026-09-12T16:11:31+08:00",
+      "used_by": [
+        "20260912基本面分析"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250418-215755c0",
+      "title": "2024年年度报告",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250418",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-04-18/1223129045.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250418_2024A_年度报告_1223129045.pdf",
+      "sha256": "215755c0e04117ce49bed5a4a429fab06c8cc466b062748b1a7a2f4b6de29cc6",
+      "bytes": 3957461,
+      "pages": 243,
+      "retrieved_at": "2026-09-12T16:11:32+08:00",
+      "used_by": [
+        "20260912基本面分析"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260827-2b0a0fcc",
+      "title": "2026年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260827",
+      "official_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-27/a01ab0ee-5c5c-417e-9bc0-e6bab893d3e3.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260827_2026H1_半年度报告_a01ab0ee-5c5c-417e-9bc0-e6bab893d3e3.pdf",
+      "sha256": "2b0a0fccb38b2328a2b33dabd0567c0c6749000a093ffb40f81a6095b182103f",
+      "bytes": 1192126,
+      "pages": 177,
+      "retrieved_at": "2026-09-12T16:11:32+08:00",
+      "used_by": [
+        "20260912基本面分析"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260423-1f41f386",
+      "title": "2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260423",
+      "official_url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-04-23/8b947386-d2ab-4372-9d07-0793b5e233dc.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260423_2026Q1_第一季度报告_8b947386-d2ab-4372-9d07-0793b5e233dc.pdf",
+      "sha256": "1f41f3862cc89a0c1e71dbbd1d4920dadffe3ea7982d132af49238de81eb2817",
+      "bytes": 157769,
+      "pages": 10,
+      "retrieved_at": "2026-09-12T16:11:32+08:00",
+      "used_by": [
+        "20260912基本面分析"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260720-37bd47c0",
+      "title": "2026年半年度业绩快报",
+      "document_type": "正式披露",
+      "period": "2026H1",
+      "published_date": "20260720",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-07-20/1225432903.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260720_2026H1_正式披露_1225432903.pdf",
+      "sha256": "37bd47c0cc818c04184b5a060cc5db477e02921804a073eb2ccc1eeb1af1941c",
+      "bytes": 94808,
+      "pages": 3,
+      "retrieved_at": "2026-09-12T16:11:32+08:00",
+      "used_by": [
+        "20260912基本面分析"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260901-d9a78dac",
+      "title": "2026年投资者关系记录",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260901",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESZ_STOCK/2026/2026-9/2026-09-01/12579526.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260901_2026_正式披露_12579526.pdf",
+      "sha256": "d9a78dac313e60e6d2e2c2f6edc10a5f1f38bdf87e63a62becdf12106cce216d",
+      "bytes": 160405,
+      "pages": 4,
+      "retrieved_at": "2026-09-12T16:11:33+08:00",
+      "used_by": [
+        "20260912基本面分析"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260901-20a75da5",
+      "title": "2026年总经理及财务负责人调整公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260901",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESZ_STOCK/2026/2026-9/2026-09-01/12579159.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260901_2026_正式披露_12579159.pdf",
+      "sha256": "20a75da5048e0e23e093190cf7db9213126c15dbec21803b8f4879775c2ec022",
+      "bytes": 67647,
+      "pages": 2,
+      "retrieved_at": "2026-09-12T16:11:33+08:00",
+      "used_by": [
+        "20260912基本面分析"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260826-bbad2cbd",
+      "title": "杰普特2026年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260826",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESH_STOCK/2026/2026-8/2026-08-26/12537269.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260826_2026H1_半年度报告_12537269.pdf",
+      "sha256": "bbad2cbd51200c8c039d838fd67d18736ce3d47d2ee95a297d1da24cacfd5de6",
+      "bytes": 1227646,
+      "pages": 212,
+      "retrieved_at": "2026-09-12T16:11:33+08:00",
+      "used_by": [
+        "20260912基本面分析"
+      ],
+      "status": "已归档"
+    }
+  ]
+}
