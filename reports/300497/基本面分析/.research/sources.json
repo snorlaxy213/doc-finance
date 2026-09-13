@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-07-27T23:29:55+08:00",
+  "updated_at": "2026-09-13T16:36:01+08:00",
   "sources": [
     {
       "source_id": "SRC-20260427-a0d8fce2",
@@ -16,7 +16,9 @@
       "pages": 206,
       "retrieved_at": "2026-07-27T23:18:28+08:00",
       "used_by": [
-        "富祥股份_300497_基本面分析_20260727"
+        "富祥股份_300497_基本面分析_20260727",
+        "富祥股份_300497_基本面分析_20260913_112709.md",
+        "富祥股份_300497_基本面分析_20260913_163547.md"
       ],
       "status": "已归档"
     },
@@ -36,7 +38,9 @@
       "pages": 206,
       "retrieved_at": "2026-07-27T23:19:15+08:00",
       "used_by": [
-        "富祥股份_300497_基本面分析_20260727"
+        "富祥股份_300497_基本面分析_20260727",
+        "富祥股份_300497_基本面分析_20260913_112709.md",
+        "富祥股份_300497_基本面分析_20260913_163547.md"
       ],
       "status": "已归档"
     },
@@ -54,7 +58,9 @@
       "pages": 15,
       "retrieved_at": "2026-07-27T23:19:16+08:00",
       "used_by": [
-        "富祥股份_300497_基本面分析_20260727"
+        "富祥股份_300497_基本面分析_20260727",
+        "富祥股份_300497_基本面分析_20260913_112709.md",
+        "富祥股份_300497_基本面分析_20260913_163547.md"
       ],
       "status": "已归档"
     },
@@ -72,7 +78,9 @@
       "pages": 2,
       "retrieved_at": "2026-07-27T23:19:16+08:00",
       "used_by": [
-        "富祥股份_300497_基本面分析_20260727"
+        "富祥股份_300497_基本面分析_20260727",
+        "富祥股份_300497_基本面分析_20260913_112709.md",
+        "富祥股份_300497_基本面分析_20260913_163547.md"
       ],
       "status": "已归档"
     },
@@ -181,6 +189,206 @@
       "retrieved_at": "2026-07-27T23:29:55+08:00",
       "used_by": [
         "富祥股份_300497_基本面分析_20260727"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260812-c2387aed",
+      "title": "2026年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260812",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-12/1225468779.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260812_2026H1_半年度报告_1225468779.pdf",
+      "sha256": "c2387aedb22d6e88b76c190d8fe82b04060060630a5cca4417c183816546162a",
+      "bytes": 3973229,
+      "pages": 171,
+      "retrieved_at": "2026-09-13T11:14:34+08:00",
+      "used_by": [
+        "20260913更新",
+        "富祥股份_300497_基本面分析_20260913_112709.md",
+        "富祥股份_300497_基本面分析_20260913_163547.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260907-1316e971",
+      "title": "20260907 投资者关系记录",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260907",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-09-07/1225552652.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260907_2026_正式披露_1225552652.pdf",
+      "sha256": "1316e971d3d4e74d7981f9d491ec32c90e5469bb3995529004f2074529177133",
+      "bytes": 153922,
+      "pages": 4,
+      "retrieved_at": "2026-09-13T11:14:34+08:00",
+      "used_by": [
+        "20260913更新",
+        "富祥股份_300497_基本面分析_20260913_112709.md",
+        "富祥股份_300497_基本面分析_20260913_163547.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260911-7c6fe875",
+      "title": "日本发明专利",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260911",
+      "official_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-09-11/9f48b1b1-05f3-4b58-9f77-1d76a7f9ba07.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260911_期间待核验_正式披露_9f48b1b1-05f3-4b58-9f77-1d76a7f9ba07.pdf",
+      "sha256": "7c6fe875aa430c8556da6bc9f193c337ce07e7cc8dfe76ae78a2f652fe329356",
+      "bytes": 145137,
+      "pages": 2,
+      "retrieved_at": "2026-09-13T11:14:35+08:00",
+      "used_by": [
+        "20260913更新",
+        "富祥股份_300497_基本面分析_20260913_112709.md",
+        "富祥股份_300497_基本面分析_20260913_163547.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260818-b0ec0cc2",
+      "title": "控股股东质押",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260818",
+      "official_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-18/a9151dd2-9d77-4898-a43d-4ecd71d71dd5.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260818_期间待核验_正式披露_a9151dd2-9d77-4898-a43d-4ecd71d71dd5.pdf",
+      "sha256": "b0ec0cc2d07f4b1d4334bd4419bae0c5c13f2c4da4f1853d94635269d73d99d1",
+      "bytes": 116159,
+      "pages": 2,
+      "retrieved_at": "2026-09-13T11:14:35+08:00",
+      "used_by": [
+        "20260913更新",
+        "富祥股份_300497_基本面分析_20260913_112709.md",
+        "富祥股份_300497_基本面分析_20260913_163547.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260817-75c9e3fa",
+      "title": "2026H1 权益分派实施",
+      "document_type": "正式披露",
+      "period": "2026H1",
+      "published_date": "20260817",
+      "official_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-17/51b8a595-684a-44bb-b9ea-f42eb0334956.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260817_2026H1_正式披露_51b8a595-684a-44bb-b9ea-f42eb0334956.pdf",
+      "sha256": "75c9e3facd91b007aa2dd781d1b4d22efae0bdf5c73cd9aa7606a7d2bbc8be52",
+      "bytes": 139383,
+      "pages": 4,
+      "retrieved_at": "2026-09-13T11:14:35+08:00",
+      "used_by": [
+        "20260913更新",
+        "富祥股份_300497_基本面分析_20260913_112709.md",
+        "富祥股份_300497_基本面分析_20260913_163547.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260801-506e759d",
+      "title": "最近五年监管措施及整改",
+      "document_type": "监管公告",
+      "period": "期间待核验",
+      "published_date": "20260801",
+      "official_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-01/6c4e8346-cdb0-4536-b472-0ffc32886315.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260801_期间待核验_监管公告_6c4e8346-cdb0-4536-b472-0ffc32886315.pdf",
+      "sha256": "506e759df6add18ed621b3ea6eea66a1aa8adfaf76a0306cb2b4eab445c55dbe",
+      "bytes": 140857,
+      "pages": 3,
+      "retrieved_at": "2026-09-13T11:14:35+08:00",
+      "used_by": [
+        "20260913更新",
+        "富祥股份_300497_基本面分析_20260913_112709.md",
+        "富祥股份_300497_基本面分析_20260913_163547.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260801-3a2a2ef6",
+      "title": "2026年募集资金使用可行性分析",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260801",
+      "official_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-01/595b4eb3-921a-4559-aafa-4cd4f0442312.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260801_2026_正式披露_595b4eb3-921a-4559-aafa-4cd4f0442312.pdf",
+      "sha256": "3a2a2ef660483c7b90b7644461fb9dd8e13f92ddd255e2ea5a88cdfc3fd97a49",
+      "bytes": 260549,
+      "pages": 13,
+      "retrieved_at": "2026-09-13T11:14:35+08:00",
+      "used_by": [
+        "20260913更新",
+        "富祥股份_300497_基本面分析_20260913_112709.md",
+        "富祥股份_300497_基本面分析_20260913_163547.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260821-9619da67",
+      "title": "新宙邦2026H1中报",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260821",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-21/1225487079.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260821_2026H1_半年度报告_1225487079.pdf",
+      "sha256": "9619da670d27a1d9ea392469529fc303ef79fe17ea180f3d0e18e34eda5d673a",
+      "bytes": 4695564,
+      "pages": 178,
+      "retrieved_at": "2026-09-13T11:16:18+08:00",
+      "used_by": [
+        "20260913更新",
+        "富祥股份_300497_基本面分析_20260913_112709.md",
+        "富祥股份_300497_基本面分析_20260913_163547.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260821-468d3cf9",
+      "title": "天赐材料2026H1中报",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260821",
+      "official_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-21/4e3cbd9d-951f-4764-9ae7-74c641d4b04a.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260821_2026H1_半年度报告_4e3cbd9d-951f-4764-9ae7-74c641d4b04a.pdf",
+      "sha256": "468d3cf99dd9f9ff1e4383690dc2909ad7074cb7815dd189193afba312fb023b",
+      "bytes": 1708601,
+      "pages": 157,
+      "retrieved_at": "2026-09-13T11:16:19+08:00",
+      "used_by": [
+        "20260913更新",
+        "富祥股份_300497_基本面分析_20260913_112709.md",
+        "富祥股份_300497_基本面分析_20260913_163547.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250827-de2143d5",
+      "title": "2025H1中报",
+      "document_type": "半年度报告",
+      "period": "2025H1",
+      "published_date": "20250827",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-08-27/1224577101.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250827_2025H1_半年度报告_1224577101.pdf",
+      "sha256": "de2143d55d76349eecb8e0d489a394a41ebc52072ac701b1be8bee8fbcbb510e",
+      "bytes": 4088641,
+      "pages": 157,
+      "retrieved_at": "2026-09-13T11:26:15+08:00",
+      "used_by": [
+        "20260913更新",
+        "富祥股份_300497_基本面分析_20260913_112709.md",
+        "富祥股份_300497_基本面分析_20260913_163547.md"
       ],
       "status": "已归档"
     }

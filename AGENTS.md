@@ -25,4 +25,11 @@ python scripts/portfolio_cli.py snapshot
 - 数据由持仓页手工更新，输出中的 `dataStatus` 和 `asOf` 是判断数据时效性的必要字段。用户提供更近的券商信息时，以用户当次信息为准，并提示其同步更新持仓页。
 - 账户全量备份使用 `python scripts/portfolio_cli.py backup`；数据库初始导入使用 `python scripts/portfolio_cli.py seed`。
 
+## 基本面报告公开发布
+
+- 每次完成一份正式的个股基本面报告后，默认将其六位股票代码加入 `config/publication-policy.json` 的 `allowed_report_codes`，使 `reports/<代码>/基本面分析/*_基本面分析_最新.html` 能进入 GitHub Pages 公开目录。
+- 报告应通过 `publish_fundamental_review.py` 发布，并显式指定本仓库的 `reports` 目录及 `config/publication-policy.json`；除非用户明确要求本次不公开，否则不得使用 `--no-publication`。
+- 提交前检查白名单已包含该代码、最新 HTML 文件已生成，并确认 Git 提交同时包含报告文件和白名单配置变更。
+- 草稿、`reports/_drafts/`、研究轨迹、历史版本和原始资料不得加入公开目录。
+
 </INSTRUCTIONS>
