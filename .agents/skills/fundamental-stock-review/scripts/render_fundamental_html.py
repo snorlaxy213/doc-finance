@@ -838,12 +838,7 @@ def build_financial_visuals(markdown: str, tables: list[TableBlock], data_date: 
     financial_note = f'<b>数据期间：</b>{html.escape(periods)} <b>口径：</b>以核心财务指标表的合并报表数据为准。<br><b>来源：</b>{source_html}'
     scale = grouped_bar_svg(table_metric_series(financial, [("营业收入", "营业收入"), ("归母净利润", "归母净利润"), ("扣非归母净利润", "扣非净利润")]))
     quality = quality_svg(table_metric_series(financial, [("毛利率", "毛利率"), ("扣非净利率", "扣非净利率"), ("ROE", "ROE"), ("经营现金流/净利润", "经营现金流/净利润")]))
-    business = first_table_matching(tables, "分业务情况")
-    business_section = find_subsection(markdown, "分业务情况")
-    business_note = f'<b>数据期间：</b>{html.escape(" / ".join(period for _, period in comparable_columns(business)) if business else data_date)} <b>口径：</b>公司分部收入；仅在口径可比时展示。<br><b>来源：</b>{source_html}'
-    business = "" if "业务结构图数据：不可比" in business_section else business_bar_svg(business)
-    business_reason = find_key_value(business_section, "业务结构图数据") if "业务结构图数据：不可比" in business_section else "公司未披露可比的分业务收入数据。"
-    return '<section class="financial-visuals" aria-label="财务图表速览"><div class="visuals-head"><div><span>FINANCIAL VISUALS</span><h2>财务趋势与业务结构</h2></div><p>图表优先展示趋势；原始表格保留在对应章节，可展开核对。</p></div><div class="chart-grid">' + chart_card("经营规模与利润趋势", financial_note, scale, "核心财务表未提供连续两期的收入和利润数据。") + chart_card("盈利与现金质量趋势", financial_note, quality, "核心财务表未提供连续两期的利润率、ROE 或现金质量数据。") + chart_card("业务收入结构", business_note, business, business_reason or "披露口径不可比，未生成结构图。") + '</div></section>'
+    return '<section class="financial-visuals" aria-label="财务图表速览"><div class="visuals-head"><div><span>FINANCIAL VISUALS</span><h2>财务趋势</h2></div><p>图表优先展示趋势；原始表格保留在对应章节，可展开核对。</p></div><div class="chart-grid">' + chart_card("经营规模与利润趋势", financial_note, scale, "核心财务表未提供连续两期的收入和利润数据。") + chart_card("盈利与现金质量趋势", financial_note, quality, "核心财务表未提供连续两期的利润率、ROE 或现金质量数据。") + '</div></section>'
 
 
 def build_decision_card(markdown: str) -> str:
@@ -859,16 +854,30 @@ def build_decision_card(markdown: str) -> str:
                 return value
         return ""
 
-    invalidation = "；".join(filter(None, [field_value("价格止损"), field_value("基本面提前退出条件")])) or "详见正文"
-    fields = [
-        ("当前动作", field_value("当前动作") or "详见正文"),
-        ("建议仓位", field_value("建议目标仓位") or "详见正文"),
-        ("执行 / 观察条件", field_value("参考价格与计划买入区间", "入场条件") or "详见正文"),
-        ("失效条件", invalidation),
-        ("有效期", field_value("建议有效期") or "详见正文"),
-    ]
-    items = "".join('<div class="decision-item"><span>' + html.escape(label) + '</span><strong>' + inline_md(value) + '</strong></div>' for label, value in fields)
-    return '<section class="decision-card" aria-label="交易决策摘要"><h3>当前位置与交易决策</h3><div class="decision-grid">' + items + '</div></section>'
+    action = field_value("当前动作") or "详见正文"
+    position = field_value("仓位速览", "建议目标仓位") or "详见正文"
+    execution = field_value("观察条件速览", "参考价格与计划买入区间", "入场条件") or "详见正文"
+    stop = field_value("止损速览", "价格止损") or "详见正文"
+    risk = field_value("基本面提前退出条件") or "详见正文"
+    hide_details = normalize_space(field_value("持仓状态")) == "未持仓" and normalize_space(action) == "等待"
+
+    def condition_list(value: str) -> str:
+        return '<ul>' + ''.join('<li>' + inline_md(item.strip()) + '</li>' for item in value.split('；') if item.strip()) + '</ul>'
+
+    details = ''.join('<div><dt>' + label + '</dt><dd>' + inline_md(field_value(key) or "详见正文") + '</dd></div>' for label, key in [
+        ("建议仓位", "建议目标仓位"),
+        ("执行 / 观察条件", "参考价格与计划买入区间"),
+        ("价格止损", "价格止损"),
+        ("基本面提前退出条件", "基本面提前退出条件"),
+    ])
+    details_panel = '' if hide_details else '<details class="decision-details"><summary>查看仓位与止损完整说明</summary><dl>' + details + '</dl></details>'
+    return (
+        '<section class="decision-card" aria-label="交易决策摘要"><h3>当前位置与交易决策</h3>'
+        '<div class="decision-summary"><strong class="decision-action">' + inline_md(action) + '</strong><span>' + inline_md(position) + '</span></div>'
+        '<div class="decision-columns"><div class="decision-condition"><h4>执行 / 观察条件</h4>' + condition_list(execution) + '</div>'
+        '<div class="decision-condition"><h4>失效 / 重审条件</h4><p><strong>价格止损：</strong>' + inline_md(stop) + '</p>' + condition_list(risk) + '</div></div>'
+        + details_panel + '</section>'
+    )
 
 
 def build_toc(toc: list[tuple[str, str, str]]) -> str:

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-02T18:38:45+08:00",
+  "updated_at": "2026-09-13T20:05:17+08:00",
   "sources": [
     {
       "source_id": "FAILED-eb240f072abd",
@@ -207,6 +207,116 @@
       "retrieved_at": "2026-08-02T18:38:45+08:00",
       "used_by": [
         "松发股份_603268_基本面分析_20260802"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "FAILED-9e58e2322a19",
+      "title": "2026年中报全文",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260825",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-08-25/603268_20260825_OX86.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-09-13T20:03:39+08:00",
+      "used_by": [
+        "松发股份_603268_基本面分析_20260913"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "SRC-20260825-58e7e2f7",
+      "title": "2026年中报全文镜像",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260825",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESH_STOCK/2026/2026-8/2026-08-25/12525552.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260825_2026H1_半年度报告_12525552.pdf",
+      "sha256": "58e7e2f795e23879448722852406d7db53e24058c4c28bd3c4785ce5e59ae36e",
+      "bytes": 1097813,
+      "pages": 182,
+      "retrieved_at": "2026-09-13T20:03:39+08:00",
+      "used_by": [
+        "松发股份_603268_基本面分析_20260913"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260910-6241342c",
+      "title": "2026年债务融资工具注册获准",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260910",
+      "official_url": "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-09-10/603268_20260910_DR0M.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260910_2026_正式披露_603268_20260910_DR0M.pdf",
+      "sha256": "6241342c98846b5a5ba664bd9627cb2c8be89b08d137dff505347ef85f1409da",
+      "bytes": 81565,
+      "pages": 1,
+      "retrieved_at": "2026-09-13T20:04:37+08:00",
+      "used_by": [
+        "松发股份_603268_基本面分析_20260913"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260825-f353b342",
+      "title": "2026年增加日常关联交易额度",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260825",
+      "official_url": "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-08-25/603268_20260825_YX6F.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260825_2026_正式披露_603268_20260825_YX6F.pdf",
+      "sha256": "f353b3422cc75d4b67a92c34ebf41db4ea88e015587ec85dff04e1584f43c71c",
+      "bytes": 115310,
+      "pages": null,
+      "retrieved_at": "2026-09-13T20:04:37+08:00",
+      "used_by": [
+        "松发股份_603268_基本面分析_20260913"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260417-356e29f4",
+      "title": "2025年年报问询回复会计师专项说明",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260417",
+      "official_url": "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-17/603268_20260417_52S6.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260417_2025A_年度报告_603268_20260417_52S6.pdf",
+      "sha256": "356e29f42def66542e3dd5861b739312435f53e22224db098fa69c40166e4d15",
+      "bytes": 5342800,
+      "pages": null,
+      "retrieved_at": "2026-09-13T20:04:39+08:00",
+      "used_by": [
+        "松发股份_603268_基本面分析_20260913"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260831-27c722b7",
+      "title": "中国船舶2026年中报同行对照",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260831",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESH_STOCK/2026/2026-8/2026-08-31/12574423.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260831_2026H1_半年度报告_12574423.pdf",
+      "sha256": "27c722b759e0b9b58f7a1fd1b9eae0255ec6163b653d9f89fa07aa5066c31cfe",
+      "bytes": 1427558,
+      "pages": null,
+      "retrieved_at": "2026-09-13T20:05:17+08:00",
+      "used_by": [
+        "松发股份_603268_基本面分析_20260913"
       ],
       "status": "已归档"
     }
