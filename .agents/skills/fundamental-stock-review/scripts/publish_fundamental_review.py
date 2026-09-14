@@ -397,6 +397,11 @@ def publish(
     atomic_write_text(snapshot_md, markdown)
     try:
         render_snapshot(snapshot_md, snapshot_html)
+        generated_html = snapshot_html.read_text(encoding="utf-8")
+        generated_html = generated_html.replace(
+            "</head>", f'<meta name="report-generated-at" content="{now_iso()}">\n</head>', 1
+        )
+        atomic_write_text(snapshot_html, generated_html)
     except Exception:
         snapshot_md.unlink(missing_ok=True)
         snapshot_html.unlink(missing_ok=True)

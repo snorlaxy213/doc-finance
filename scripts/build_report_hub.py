@@ -9,7 +9,8 @@ import json
 import re
 import shutil
 import sys
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
+from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
 
@@ -27,6 +28,42 @@ SCRIPT_STYLE_PATTERN = re.compile(r'<(script|style)\b[^>]*>.*?</\1\s*>', re.IGNO
 
 class BuildError(Exception):
     """Raised when a policy or output configuration is unsafe or invalid."""
+
+
+class ReportMetadata(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__()
+        self.generated_at = ''
+
+    def handle_starttag(self, tag: str, attrs: list) -> None:
+        values = dict(attrs)
+        if tag == 'meta' and values.get('name') == 'report-generated-at':
+            self.generated_at = values.get('content', '')
+
+
+def report_timestamp(source: Path, raw_html: str) -> tuple[str, str]:
+    """Use immutable publication metadata, or a matching legacy snapshot, never mtime."""
+    china_tz = timezone(timedelta(hours=8))
+    metadata = ReportMetadata()
+    metadata.feed(raw_html)
+    if metadata.generated_at:
+        value = datetime.fromisoformat(metadata.generated_at)
+        if value.tzinfo is None:
+            raise BuildError('报告生成时间缺少时区')
+        return value.astimezone(china_tz).isoformat(timespec='seconds'), 'minute'
+    latest_md = source.with_suffix('.md')
+    latest_text = latest_md.read_text(encoding='utf-8') if latest_md.exists() else None
+    matches = []
+    for snapshot in source.parent.glob('*_基本面分析_*.html'):
+        match = re.search(r'_基本面分析_(20\d{6})(?:_(\d{6}))?(?:_(\d{6}))?\.html$', snapshot.name)
+        if not match:
+            continue
+        snapshot_md = snapshot.with_suffix('.md')
+        same_markdown = latest_text is not None and snapshot_md.exists() and snapshot_md.read_text(encoding='utf-8') == latest_text
+        if same_markdown or snapshot.read_text(encoding='utf-8') == raw_html:
+            stamp = datetime.strptime(match[1] + (match[2] or '000000'), '%Y%m%d%H%M%S').replace(tzinfo=china_tz)
+            matches.append((stamp.isoformat(timespec='seconds'), 'minute' if match[2] else 'day'))
+    return max(matches) if matches else ('', 'unknown')
 
 
 def load_policy() -> dict[str, Any]:
@@ -132,17 +169,22 @@ def build_catalog(policy: dict[str, Any], output: Path) -> dict[str, Any]:
             if not body_text:
                 raise BuildError('HTML 中未提取到可检索文本')
 
+            modified_at, time_precision = report_timestamp(source, raw_html)
+            previous = next((item for item in items if item['code'] == code), None)
+            if previous and previous['modifiedAt'] >= modified_at:
+                continue
+            if previous:
+                items.remove(previous)
             target = output / 'reports' / code / 'index.html'
             target.parent.mkdir(parents=True, exist_ok=True)
             target.write_text(inject_reader_chrome(raw_html, disclaimer), encoding='utf-8')
-            stat = source.stat()
             source_path = source.relative_to(REPO_ROOT).as_posix()
-            modified_at = datetime.fromtimestamp(stat.st_mtime).astimezone().isoformat(timespec='seconds')
-            summary = body_text[:260].rstrip('，。；、 ') + ('…' if len(body_text) > 260 else '')
+            company = source.name.split(f'_{code}_')[0]
             items.append(
                 {
                     'id': code,
                     'title': title,
+                    'company': company,
                     'code': code,
                     'root': 'reports',
                     'rootLabel': '个股基本面分析',
@@ -152,11 +194,11 @@ def build_catalog(policy: dict[str, Any], output: Path) -> dict[str, Any]:
                     'href': f'reports/{code}/index.html',
                     'modifiedAt': modified_at,
                     'modifiedDate': modified_at[:10],
-                    'summary': summary,
+                    'timePrecision': time_precision,
                     'searchText': f'{title} {code} {source_path} {body_text}'.lower(),
                 }
             )
-        except (OSError, UnicodeError, BuildError) as error:
+        except (OSError, UnicodeError, ValueError, BuildError) as error:
             skipped.append({'code': code, 'sourcePath': str(source), 'reason': str(error)})
             print(f'[跳过] {source}: {error}')
 

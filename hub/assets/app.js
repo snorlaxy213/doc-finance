@@ -9,15 +9,16 @@
   const catalogList = document.querySelector('#catalogList');
   const resultSummary = document.querySelector('#resultSummary');
   const loadError = document.querySelector('#loadError');
-  const publicationStatus = document.querySelector('#publicationStatus');
-  const disclaimerText = document.querySelector('#disclaimerText');
 
   const normalize = (value) => String(value || '').trim().toLocaleLowerCase('zh-CN');
 
-  function dateLabel(isoDate) {
-    if (!isoDate) return '日期未提供';
+  function dateLabel(isoDate, precision = 'minute') {
+    if (!isoDate) return '时间待核实';
     const date = new Date(isoDate);
-    return Number.isNaN(date.getTime()) ? isoDate.slice(0, 10) : date.toLocaleDateString('zh-CN');
+    if (Number.isNaN(date.getTime())) return '时间待核实';
+    const options = { timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit' };
+    if (precision !== 'day') Object.assign(options, { hour: '2-digit', minute: '2-digit', hour12: false });
+    return new Intl.DateTimeFormat('zh-CN', options).format(date);
   }
 
   function selectedItems() {
@@ -33,45 +34,34 @@
     return items.sort((left, right) => {
       if (sort === 'title') return left.title.localeCompare(right.title, 'zh-CN');
       if (sort === 'code') return left.code.localeCompare(right.code, 'zh-CN');
-      return String(right.modifiedAt).localeCompare(String(left.modifiedAt));
+      return (Date.parse(right.modifiedAt) || 0) - (Date.parse(left.modifiedAt) || 0) || right.code.localeCompare(left.code);
     });
   }
 
   function createReportCard(item) {
     const article = document.createElement('article');
-    article.className = 'report-card';
-
-    const meta = document.createElement('div');
-    meta.className = 'report-meta';
-    [item.rootLabel, item.code, item.version].forEach((label, index) => {
-      const badge = document.createElement('span');
-      badge.className = `badge${index === 2 ? ' latest' : ''}`;
-      badge.textContent = label;
-      meta.append(badge);
-    });
-
+    article.className = 'report-row';
+    const content = document.createElement('div');
+    content.className = 'report-content';
     const heading = document.createElement('h3');
-    const titleLink = document.createElement('a');
-    titleLink.href = item.href;
-    titleLink.textContent = item.title;
-    titleLink.setAttribute('aria-label', `打开报告：${item.title}`);
-    heading.append(titleLink);
-
-    const date = document.createElement('p');
+    const link = document.createElement('a');
+    link.href = item.href;
+    link.textContent = item.company || item.title;
+    link.setAttribute('aria-label', `阅读报告：${item.title}`);
+    const code = document.createElement('span');
+    code.className = 'report-code';
+    code.textContent = item.code;
+    heading.append(link, code);
+    const title = document.createElement('p');
+    title.className = 'report-title';
+    title.textContent = item.title;
+    content.append(heading, title);
+    const date = document.createElement('time');
     date.className = 'report-date';
-    date.textContent = `源文件更新：${dateLabel(item.modifiedAt)}`;
-
-    const summary = document.createElement('p');
-    summary.className = 'summary';
-    summary.textContent = item.summary;
-
-    const openLink = document.createElement('a');
-    openLink.className = 'open-report';
-    openLink.href = item.href;
-    openLink.textContent = '阅读报告 →';
-    openLink.setAttribute('aria-label', `阅读报告：${item.title}`);
-
-    article.append(meta, heading, date, summary, openLink);
+    if (item.modifiedAt) date.dateTime = item.modifiedAt;
+    date.textContent = dateLabel(item.modifiedAt, item.timePrecision);
+    date.title = '报告生成时间（北京时间）';
+    article.append(content, date);
     return article;
   }
 
@@ -116,14 +106,12 @@
       state.catalog = catalog;
       state.items = catalog.items;
       populateRoots(state.items);
-      disclaimerText.textContent = catalog.disclaimer || disclaimerText.textContent;
-      publicationStatus.textContent = `目录更新于 ${dateLabel(catalog.generatedAt)} · 已公开 ${state.items.length} 份最新报告`;
+      rootFilter.closest('.field').hidden = new Set(state.items.map(item => item.root)).size <= 1;
       render();
     } catch (error) {
       console.error(error);
       catalogList.setAttribute('aria-busy', 'false');
       loadError.hidden = false;
-      publicationStatus.textContent = '公开目录暂时无法加载。';
     }
   }
 
