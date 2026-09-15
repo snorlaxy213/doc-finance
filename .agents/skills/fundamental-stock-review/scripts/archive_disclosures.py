@@ -43,8 +43,8 @@ def classify_document(label: str) -> str:
     rules = (
         (("业绩预告修正", "预告修正", "盈警修正", "盈喜修正"), "业绩预告修正"),
         (("业绩预告", "盈利预告", "盈喜", "盈警"), "业绩预告"),
-        (("年度报告", "年报"), "年度报告"),
         (("半年度报告", "半年报", "中期报告", "中报"), "半年度报告"),
+        (("年度报告", "年报"), "年度报告"),
         (("第一季度报告", "一季报"), "第一季度报告"),
         (("第三季度报告", "三季报"), "第三季度报告"),
         (("审计报告",), "审计报告"),
@@ -63,10 +63,10 @@ def infer_period(label: str) -> str:
     text = label.replace(" ", "")
     year_match = re.search(r"(20\d{2})年?", text)
     year = year_match.group(1) if year_match else "期间待核验"
-    if any(term in text for term in ("年度报告", "年报")):
-        return f"{year}A" if year_match else year
     if any(term in text for term in ("半年度", "半年报", "中期报告", "中报", "H1")):
         return f"{year}H1" if year_match else year
+    if any(term in text for term in ("年度报告", "年报")):
+        return f"{year}A" if year_match else year
     if any(term in text for term in ("第一季度", "一季报", "Q1")):
         return f"{year}Q1" if year_match else year
     if any(term in text for term in ("前三季度", "第三季度", "三季报", "Q3")):
@@ -183,7 +183,13 @@ def pdf_pages(path: Path) -> int | None:
         return None
     try:
         result = subprocess.run(
-            [executable, str(path)], check=False, capture_output=True, text=True, timeout=30
+            [executable, str(path)],
+            check=False,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            timeout=30,
         )
     except (OSError, subprocess.SubprocessError):
         return None
