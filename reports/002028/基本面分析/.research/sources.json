@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-15T12:25:48+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260418-ba7058e7",
+      "title": "2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260418",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-18/1225117829.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260418_2025A_年度报告_1225117829.pdf",
+      "sha256": "ba7058e704759a6e59b21f5d4340dd8082eeec24839354bfece02c2ed4558ecd",
+      "bytes": 12340393,
+      "pages": 192,
+      "retrieved_at": "2026-09-15T12:14:06+08:00",
+      "used_by": [
+        "思源电气_002028_基本面分析_20260915"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260815-05b6efe4",
+      "title": "2026年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260815",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-15/1225473691.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260815_2026H1_半年度报告_1225473691.pdf",
+      "sha256": "05b6efe4a7983439e9b35a085916b186685177ce96cfe67e497fbd5400b5e6d2",
+      "bytes": 1289761,
+      "pages": 189,
+      "retrieved_at": "2026-09-15T12:14:07+08:00",
+      "used_by": [
+        "思源电气_002028_基本面分析_20260915"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250419-e51f7180",
+      "title": "2024年年度报告",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250419",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-04-19/1223145398.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250419_2024A_年度报告_1223145398.pdf",
+      "sha256": "e51f7180c02d601ec677b9232c07eb9732159c503c6d54a13264826bed8ae8fe",
+      "bytes": 6618121,
+      "pages": 205,
+      "retrieved_at": "2026-09-15T12:16:43+08:00",
+      "used_by": [
+        "思源电气_002028_基本面分析_20260915"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260901-54b3b15c",
+      "title": "生产及办公综合大楼投资公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260901",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225535751.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260901_期间待核验_正式披露_1225535751.pdf",
+      "sha256": "54b3b15cf8b8a143788cb6faffd5a4a2251d663e476ec153424f1f428881b462",
+      "bytes": 125760,
+      "pages": 3,
+      "retrieved_at": "2026-09-15T12:16:44+08:00",
+      "used_by": [
+        "思源电气_002028_基本面分析_20260915"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260901-4b66a94e",
+      "title": "划转思源清能股权公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260901",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225535748.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260901_期间待核验_正式披露_1225535748.pdf",
+      "sha256": "4b66a94ef10f9a08b5033d627c035e13e34a15edff83b8ac9204bd0ea8a2575c",
+      "bytes": 137476,
+      "pages": 4,
+      "retrieved_at": "2026-09-15T12:17:45+08:00",
+      "used_by": [
+        "思源电气_002028_基本面分析_20260915"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260905-8900d391",
+      "title": "高级管理人员减持实施结果公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260905",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-09-05/1225548098.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260905_期间待核验_正式披露_1225548098.pdf",
+      "sha256": "8900d3910f4007e1fb0b43e4bc63188541399c0253dfa7a2de6d597d81d035fd",
+      "bytes": 125705,
+      "pages": 3,
+      "retrieved_at": "2026-09-15T12:17:46+08:00",
+      "used_by": [
+        "思源电气_002028_基本面分析_20260915"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260425-6c961b63",
+      "title": "2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260425",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-25/1225177123.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260425_2026Q1_第一季度报告_1225177123.pdf",
+      "sha256": "6c961b63ec2128fb627db5b8dbd24a064075f5c12cb3f1e4895bba86252e548f",
+      "bytes": 184312,
+      "pages": 9,
+      "retrieved_at": "2026-09-15T12:19:32+08:00",
+      "used_by": [
+        "思源电气_002028_基本面分析_20260915"
+      ],
+      "status": "已归档"
+    }
+  ]
+}
