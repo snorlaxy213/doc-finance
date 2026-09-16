@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-16T18:00:46+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260822-e8220e0e",
+      "title": "2026年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260822",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-22/1225490354.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260822_2026H1_半年度报告_1225490354.pdf",
+      "sha256": "e8220e0ee408eb9b7e87bee24a950019cb4d822456893e665c9c20b2379fd917",
+      "bytes": 895155,
+      "pages": 128,
+      "retrieved_at": "2026-09-16T17:59:10+08:00",
+      "used_by": [
+        "会稽山_601579_基本面分析_20260916"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260428-adbca804",
+      "title": "2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260428",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-28/1225203792.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260428_2026Q1_第一季度报告_1225203792.pdf",
+      "sha256": "adbca804f680d584c6870eb77704bf40dcb1306176e9bf8ff4394cc0938546ea",
+      "bytes": 156467,
+      "pages": 12,
+      "retrieved_at": "2026-09-16T17:59:10+08:00",
+      "used_by": [
+        "会稽山_601579_基本面分析_20260916"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260401-9ac10184",
+      "title": "2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260401",
+      "official_url": "https://dataclouds.cninfo.com.cn/shgonggao/hsomarket/2026/20260331/ceb04898e6714161898af16c6f1fc5fd.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260401_2025A_年度报告_ceb04898e6714161898af16c6f1fc5fd.pdf",
+      "sha256": "9ac101845763b2eb63146997f1c46b7fa8fca8bbd2e3acd070f657cfb9182c0b",
+      "bytes": 1234128,
+      "pages": 179,
+      "retrieved_at": "2026-09-16T17:59:10+08:00",
+      "used_by": [
+        "会稽山_601579_基本面分析_20260916"
+      ],
+      "status": "已归档",
+      "date_override": "20260401"
+    },
+    {
+      "source_id": "FAILED-895cd26a3101",
+      "title": "2026年控股股东股权质押公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260912",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-09-12/601579_20260912_K92T.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-09-16T18:00:38+08:00",
+      "used_by": [
+        "会稽山_601579_基本面分析_20260916"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "FAILED-85d038ac990a",
+      "title": "2026年控股股东股权质押公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260912",
+      "official_url": "http://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-09-12/601579_20260912_K92T.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-09-16T18:00:46+08:00",
+      "used_by": [
+        "会稽山_601579_基本面分析_20260916"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    }
+  ]
+}
