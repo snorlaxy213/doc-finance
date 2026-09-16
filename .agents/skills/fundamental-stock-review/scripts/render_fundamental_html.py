@@ -30,8 +30,19 @@ class RenderedContent:
     toc: list[tuple[str, str, str]]
 
 
+@dataclass
+class ScopeNote:
+    key: str
+    text: str
+
+
+FOOTNOTE_NUMBERS: dict[str, int] = {}
+FOOTNOTE_BACKREFS: dict[str, list[str]] = {}
+
+
 def strip_md(text: str) -> str:
     text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text)
+    text = re.sub(r"\[\^[A-Za-z0-9_-]+\]", "", text)
     text = re.sub(r"[*_`]+", "", text)
     text = re.sub(r"<[^>]+>", "", text)
     return text.strip()
@@ -43,6 +54,24 @@ def normalize_space(text: str) -> str:
 
 def inline_md(text: str) -> str:
     placeholders: list[tuple[str, str]] = []
+
+    def replace_footnote(match: re.Match[str]) -> str:
+        key = match.group(1)
+        number = FOOTNOTE_NUMBERS.get(key)
+        if number is None:
+            return match.group(0)
+        refs = FOOTNOTE_BACKREFS.setdefault(key, [])
+        ref_id = f"ref-{key}-{len(refs) + 1}"
+        refs.append(ref_id)
+        token = f"@@CODEXFOOTNOTE{len(placeholders)}@@"
+        placeholders.append(
+            (
+                token,
+                f'<sup class="scope-ref" id="{html.escape(ref_id, quote=True)}">'
+                f'<a href="#scope-{html.escape(key, quote=True)}" aria-label="查看数据口径注释 {number}">[{number}]</a></sup>',
+            )
+        )
+        return token
 
     def replace_link(match: re.Match[str]) -> str:
         label = match.group(1)
@@ -60,7 +89,8 @@ def inline_md(text: str) -> str:
         )
         return token
 
-    protected = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", replace_link, text.strip())
+    protected = re.sub(r"\[\^([A-Za-z0-9_-]+)\]", replace_footnote, text.strip())
+    protected = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", replace_link, protected)
     escaped = html.escape(protected)
     escaped = re.sub(r"`([^`]+)`", r"<code>\1</code>", escaped)
     escaped = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", escaped)
@@ -92,7 +122,7 @@ def table_to_html(
     rows: list[list[str]],
     *,
     collapsible: bool = False,
-    summary: str = "查看原始财务明细（含口径与同比）",
+    summary: str = "查看原始财务明细",
 ) -> str:
     out: list[str] = ['<div class="tbl-scroll">', "<table>"]
     out.append("<thead><tr>")
@@ -123,6 +153,76 @@ def table_to_html(
     )
 
 
+def risk_status_class(status: str) -> str:
+    normalized = normalize_space(status)
+    if any(term in normalized for term in ("警戒", "高风险", "中高", "异常")):
+        return "alert"
+    if normalized == "中" or normalized.startswith(("中 ", "中低")) or any(term in normalized for term in ("关注", "中风险", "限制")):
+        return "attention"
+    if any(term in normalized for term in ("未核验", "无法判断", "待核验")):
+        return "unverified"
+    return "normal"
+
+
+def risk_overview_to_html(headers: list[str], rows: list[list[str]]) -> str:
+    columns = {normalize_space(header): index for index, header in enumerate(headers)}
+    item_index = columns.get("项目", 0)
+    value_index = columns.get("结论", 1)
+    note_index = columns.get("说明", 2)
+    cards: list[str] = []
+    for row in rows:
+        cells = row + [""] * max(0, len(headers) - len(row))
+        label = cells[item_index] if item_index < len(cells) else ""
+        value = cells[value_index] if value_index < len(cells) else ""
+        note = cells[note_index] if note_index < len(cells) else ""
+        cards.append(
+            f'<div class="risk-card {risk_status_class(value + " " + note)}">'
+            f'<div class="risk-label">{inline_md(label)}</div>'
+            f'<div class="risk-value">{inline_md(value)}</div>'
+            f'<div class="risk-note">{inline_md(note)}</div></div>'
+        )
+    return '<div class="risk-overview" aria-label="风险结论速览">' + "".join(cards) + "</div>"
+
+
+def risk_matrix_to_html(headers: list[str], rows: list[list[str]]) -> str:
+    out = ['<div class="tbl-scroll risk-matrix"><table><thead><tr>']
+    out.extend(f'<th scope="col">{inline_md(header)}</th>' for header in headers)
+    out.append("</tr></thead><tbody>")
+    for row in rows:
+        cells = row + [""] * (len(headers) - len(row))
+        out.append("<tr>")
+        for index, cell in enumerate(cells[: len(headers)]):
+            if index == 0:
+                out.append(f'<th scope="row">{inline_md(cell)}</th>')
+            elif normalize_space(headers[index]) == "状态":
+                out.append(f'<td><span class="risk-chip {risk_status_class(cell)}">{inline_md(cell)}</span></td>')
+            else:
+                out.append(f"<td>{inline_md(cell)}</td>")
+        out.append("</tr>")
+    out.append("</tbody></table></div>")
+    return "".join(out)
+
+
+def risk_conclusion_to_html(headers: list[str], rows: list[list[str]]) -> str:
+    values = {normalize_space(row[0]): row[1] for row in rows if len(row) >= 2}
+    grade = values.get("风险等级", "未判断")
+    counts = [
+        ("重大红旗", values.get("重大红旗", "未统计")),
+        ("一般关注", values.get("一般关注", "未统计")),
+        ("监管 / 审计 / 司法定性", values.get("监管 / 审计 / 司法定性", values.get("监管/审计/司法定性", "未核验"))),
+    ]
+    count_html = "".join(f"<span>{html.escape(label)}：{inline_md(value)}</span>" for label, value in counts)
+    evidence = values.get("主要红旗与反向证据", values.get("主要依据", "详见风险核验矩阵。"))
+    boundary = values.get("判断边界", "这是风险初筛，不是事实定性。")
+    return (
+        '<div class="risk-conclusion"><div class="risk-conclusion-head">'
+        f'<h3>会计质量与财务造假风险初筛</h3><div class="risk-grade">{inline_md(grade)}</div></div>'
+        f'<div class="risk-counts">{count_html}</div>'
+        f'<p><strong>主要依据：</strong>{inline_md(evidence)}</p>'
+        f'<p><strong>判断边界：</strong>{inline_md(boundary)}</p></div>'
+    )
+
+
 def value_class(cell: str) -> str:
     raw = normalize_space(cell)
     if raw in {"未披露", "不适用", "无法判断", "无"}:
@@ -147,6 +247,7 @@ def render_markdown(markdown: str) -> RenderedContent:
     section_open = False
     section_index = 0
     active_section_title = ""
+    active_subsection_title = ""
     list_stack: list[tuple[int, str]] = []
 
     def close_lists() -> None:
@@ -204,8 +305,15 @@ def render_markdown(markdown: str) -> RenderedContent:
             while i < len(lines) and lines[i].lstrip().startswith("|"):
                 rows.append(split_table_row(lines[i]))
                 i += 1
-            collapse_table = active_section_title in {"核心财务指标", "近两年财报趋势与业务结构"}
-            out.append(table_to_html(headers, rows, collapsible=collapse_table))
+            if "风险结论速览" in active_subsection_title:
+                out.append(risk_overview_to_html(headers, rows))
+            elif "风险核验矩阵" in active_subsection_title:
+                out.append(risk_matrix_to_html(headers, rows))
+            elif "会计质量与财务造假风险初筛" in active_subsection_title:
+                out.append(risk_conclusion_to_html(headers, rows))
+            else:
+                collapse_table = active_section_title in {"核心财务指标", "近两年财报趋势与业务结构"}
+                out.append(table_to_html(headers, rows, collapsible=collapse_table))
             continue
 
         heading = re.match(r"^(#{1,6})\s+(.+?)\s*$", stripped)
@@ -223,6 +331,7 @@ def render_markdown(markdown: str) -> RenderedContent:
                 num = extract_section_num(text, section_index)
                 title = remove_section_num(text)
                 active_section_title = title
+                active_subsection_title = ""
                 toc.append((sid, f"{num:02d}" if isinstance(num, int) else str(num), title))
                 out.append(f'<section id="{sid}">')
                 out.append(
@@ -230,7 +339,8 @@ def render_markdown(markdown: str) -> RenderedContent:
                 )
                 section_open = True
             else:
-                out.append(f'<h3 class="sub">{inline_md(text)}</h3>')
+                active_subsection_title = text
+                out.append(f'<h3 class="sub">{inline_md(heading.group(2))}</h3>')
             i += 1
             continue
 
@@ -367,6 +477,108 @@ def find_subsection(markdown: str, subsection_keyword: str) -> str:
     return markdown[start:end]
 
 
+def section_bounds(markdown: str, heading_pattern: str) -> tuple[int, int] | None:
+    match = re.search(heading_pattern, markdown, flags=re.M)
+    if not match:
+        return None
+    start = match.start()
+    tail = markdown[match.end():]
+    next_heading = re.search(r"^#{1,3}\s+", tail, flags=re.M)
+    next_fence = re.search(r"^```(?:text|plain)?\s*$", tail, flags=re.M)
+    candidates = [found.start() for found in (next_heading, next_fence) if found]
+    end = match.end() + min(candidates) if candidates else len(markdown)
+    return start, end
+
+
+def extract_scope_material(markdown: str) -> tuple[str, list[ScopeNote], list[str]]:
+    bounds = section_bounds(markdown, r"^###\s+(?:附录[：:]?\s*)?数据口径、来源与限制\s*$")
+    notes: list[ScopeNote] = []
+    limitations: list[str] = []
+    cleaned = markdown
+    if bounds:
+        start, end = bounds
+        block = markdown[start:end]
+        notes = [ScopeNote(match.group(1), match.group(2).strip()) for match in re.finditer(
+            r"^\[\^([A-Za-z0-9_-]+)\]:\s*(.+)$", block, flags=re.M
+        )]
+        limitation_match = re.search(r"^####\s+研究限制\s*$", block, flags=re.M)
+        if limitation_match:
+            limitations = extract_bullets(block[limitation_match.end():])
+        cleaned = markdown[:start].rstrip() + "\n\n" + markdown[end:].lstrip()
+        return cleaned, notes, limitations
+
+    legacy_bounds = section_bounds(markdown, r"^###\s+\d+[.、\s]*信息边界\s*$")
+    if not legacy_bounds:
+        return cleaned, notes, limitations
+    start, end = legacy_bounds
+    block = markdown[start:end]
+    data_date = find_key_value(block, "数据日期")
+    sources = find_key_value(block, "主要数据来源")
+    if data_date:
+        notes.append(ScopeNote("data", f"**数据日期。**{data_date}"))
+    if sources:
+        notes.append(ScopeNote("sources", f"**主要数据来源。**{sources}"))
+    for key in ("分析范围", "本地原始资料", "尚未核验的信息"):
+        value = find_key_value(block, key)
+        if value:
+            limitations.append(f"{key}：{value}")
+    cleaned = markdown[:start].rstrip() + "\n\n" + markdown[end:].lstrip()
+    return cleaned, notes, limitations
+
+
+def configure_footnotes(markdown: str, notes: list[ScopeNote]) -> None:
+    FOOTNOTE_NUMBERS.clear()
+    FOOTNOTE_BACKREFS.clear()
+    for number, note in enumerate(notes, start=1):
+        if note.key in FOOTNOTE_NUMBERS:
+            raise ValueError(f"Duplicate data-scope footnote definition: {note.key}")
+        FOOTNOTE_NUMBERS[note.key] = number
+    referenced = set(re.findall(r"\[\^([A-Za-z0-9_-]+)\]", markdown))
+    undefined = sorted(referenced - set(FOOTNOTE_NUMBERS))
+    if undefined:
+        raise ValueError("Undefined data-scope footnote(s): " + ", ".join(undefined))
+
+
+def footnote_ref_html(key: str) -> str:
+    if key not in FOOTNOTE_NUMBERS:
+        return ""
+    return inline_md(f"[^{key}]")
+
+
+def build_scope_notes(notes: list[ScopeNote], limitations: list[str]) -> str:
+    if not notes and not limitations:
+        return ""
+    note_items: list[str] = []
+    for note in notes:
+        number = FOOTNOTE_NUMBERS[note.key]
+        backrefs = FOOTNOTE_BACKREFS.get(note.key, [])
+        back_html = " ".join(
+            f'<a class="scope-back" href="#{html.escape(ref, quote=True)}" aria-label="返回正文引用 {index}">↩{index if len(backrefs) > 1 else ""}</a>'
+            for index, ref in enumerate(backrefs, start=1)
+        )
+        note_items.append(
+            f'<li id="scope-{html.escape(note.key, quote=True)}" value="{number}">{inline_md(note.text)}{back_html}</li>'
+        )
+    limitation_html = ""
+    if limitations:
+        limitation_html = (
+            '<div class="scope-limit"><h3>研究限制</h3><ul>'
+            + "".join(f"<li>{inline_md(item)}</li>" for item in limitations)
+            + "</ul></div>"
+        )
+    return (
+        '<details id="scope-notes" class="scope-notes" aria-label="数据口径、来源与限制">'
+        '<summary>数据口径、来源与限制</summary><div class="scope-notes-body">'
+        '<p>正文仅保留会直接影响判断的限定词；完整的日期、统计定义、来源和适用边界统一列于此处。</p>'
+        f'<ol class="scope-note-list">{"".join(note_items)}</ol>{limitation_html}</div></details>'
+    )
+
+
+def extract_report_date(markdown: str) -> str:
+    match = re.search(r"报告(?:执行)?日[：:]?\s*([0-9]{4}-[0-9]{2}-[0-9]{2})", markdown)
+    return match.group(1) if match else dt.datetime.now().strftime("%Y-%m-%d")
+
+
 def strip_summary_headline_from_body(markdown: str) -> str:
     """Keep the headline in Markdown source but render it only in the top verdict."""
     lines = markdown.splitlines()
@@ -399,7 +611,7 @@ def extract_summary(markdown: str) -> dict[str, object]:
         "note_block": note,
     }
     if not result["risks"]:
-        risk_section = find_section(markdown, "负面信息与风险排查")
+        risk_section = find_section(markdown, "风险、治理与会计质量") or find_section(markdown, "负面信息与风险排查")
         result["risks"] = extract_bullets(risk_section)[:4]
     return result
 
@@ -477,10 +689,13 @@ def extract_valuation_snapshot(tables: list[TableBlock]) -> dict[str, tuple[str,
         headers = [normalize_space(h) for h in table.headers]
         if "项目" in headers and "最新数据" in headers:
             rows = row_map(table)
+            value_index = headers.index("最新数据") - 1
+            date_index = next((index - 1 for index, header in enumerate(headers) if "数据日期" in header or "日期/口径" in header), None)
             for item in ("收盘价", "总市值", "流通市值", "PE", "PB", "PS", "股息率"):
                 vals = rows.get(item)
-                if vals:
-                    result[item] = (normalize_space(vals[0]), normalize_space(vals[1]) if len(vals) > 1 else "")
+                if vals and value_index < len(vals):
+                    date = normalize_space(vals[date_index]) if date_index is not None and date_index < len(vals) else ""
+                    result[item] = (normalize_space(vals[value_index]), date)
         if "指标" in headers and any("当前" in h or "Q1" in h for h in headers):
             rows = row_map(table)
             period_idx = max(0, len(headers) - 3)
@@ -518,13 +733,6 @@ def extract_text_valuation(markdown: str) -> dict[str, tuple[str, str]]:
             if key in result:
                 result[key] = (result[key][0], date_text)
     return result
-
-
-def extract_data_meta(markdown: str) -> tuple[str, str]:
-    boundary = find_section(markdown, "信息边界")
-    data_date = find_key_value(boundary, "数据日期") or "未提取"
-    sources = find_key_value(boundary, "主要数据来源") or "详见信息边界章节"
-    return data_date, sources
 
 
 def build_stat_cards(valuation: dict[str, tuple[str, str]]) -> str:
@@ -831,14 +1039,14 @@ def chart_card(title: str, note: str, svg: str, unavailable: str) -> str:
     return f'<article class="chart-card"><h3>{html.escape(title)}</h3>{body}<p class="chart-meta">{note}</p></article>'
 
 
-def build_financial_visuals(markdown: str, tables: list[TableBlock], data_date: str, sources: str) -> str:
+def build_financial_visuals(tables: list[TableBlock]) -> str:
     financial = first_table_matching(tables, "最近三年年度财报") or first_table_matching(tables, "近两年财报趋势")
-    periods = " / ".join(period for _, period in comparable_columns(financial)) if financial else data_date
-    source_html = inline_md(sources)
-    financial_note = f'<b>数据期间：</b>{html.escape(periods)} <b>口径：</b>以核心财务指标表的合并报表数据为准。<br><b>来源：</b>{source_html}'
+    periods = " / ".join(period for _, period in comparable_columns(financial)) if financial else "详见正文"
+    def financial_note() -> str:
+        return f'<b>数据期间：</b>{html.escape(periods)} {footnote_ref_html("financial")}'
     scale = grouped_bar_svg(table_metric_series(financial, [("营业收入", "营业收入"), ("归母净利润", "归母净利润"), ("扣非归母净利润", "扣非净利润")]))
     quality = quality_svg(table_metric_series(financial, [("毛利率", "毛利率"), ("扣非净利率", "扣非净利率"), ("ROE", "ROE"), ("经营现金流/净利润", "经营现金流/净利润")]))
-    return '<section class="financial-visuals" aria-label="财务图表速览"><div class="visuals-head"><div><span>FINANCIAL VISUALS</span><h2>财务趋势</h2></div><p>图表优先展示趋势；原始表格保留在对应章节，可展开核对。</p></div><div class="chart-grid">' + chart_card("经营规模与利润趋势", financial_note, scale, "核心财务表未提供连续两期的收入和利润数据。") + chart_card("盈利与现金质量趋势", financial_note, quality, "核心财务表未提供连续两期的利润率、ROE 或现金质量数据。") + '</div></section>'
+    return '<section class="financial-visuals" aria-label="财务图表速览"><div class="visuals-head"><div><span>FINANCIAL VISUALS</span><h2>财务趋势</h2></div><p>图表优先展示趋势；原始表格保留在对应章节，可展开核对。</p></div><div class="chart-grid">' + chart_card("经营规模与利润趋势", financial_note(), scale, "核心财务表未提供连续两期的收入和利润数据。") + chart_card("盈利与现金质量趋势", financial_note(), quality, "核心财务表未提供连续两期的利润率、ROE 或现金质量数据。") + '</div></section>'
 
 
 def build_decision_card(markdown: str) -> str:
@@ -917,17 +1125,29 @@ def render_report(markdown: str, template: str, args: argparse.Namespace) -> tup
     title = extract_title(markdown)
     company, ticker = extract_company_and_ticker(title, markdown, args.company, args.ticker)
     exchange = args.exchange or exchange_from_ticker(ticker)
-    tables = collect_tables(markdown)
+    body_markdown, scope_notes, limitations = extract_scope_material(markdown)
+    configure_footnotes(body_markdown, scope_notes)
+    tables = collect_tables(body_markdown)
     valuation = extract_valuation_snapshot(tables)
     text_valuation = extract_text_valuation(markdown)
     for key, value in text_valuation.items():
         if key not in valuation or valuation[key][0] in {"", "未披露", "不适用"}:
             valuation[key] = value
-    summary = extract_summary(markdown)
-    rendered = render_markdown(strip_summary_headline_from_body(markdown))
-    data_date, sources = extract_data_meta(markdown)
+    market_note = next((note.text for note in scope_notes if note.key == "market"), "")
+    market_date_match = re.search(r"([0-9]{4}-[0-9]{2}-[0-9]{2})", market_note)
+    if market_date_match:
+        market_date = market_date_match.group(1)
+        valuation = {
+            key: (value, date or market_date)
+            for key, (value, date) in valuation.items()
+        }
+    summary = extract_summary(body_markdown)
+    financial_visuals = build_financial_visuals(tables)
+    rendered = render_markdown(strip_summary_headline_from_body(body_markdown))
+    scope_notes_html = build_scope_notes(scope_notes, limitations)
 
     subtitle = args.subtitle or "基本面、财务质量、估值与风险初筛"
+    report_date = extract_report_date(markdown)
     generated_at = dt.datetime.now().strftime("%Y-%m-%d %H:%M")
     replacements = {
         "title": f"{company}({ticker})基本面分析",
@@ -935,22 +1155,22 @@ def render_report(markdown: str, template: str, args: argparse.Namespace) -> tup
         "ticker": ticker,
         "exchange": exchange,
         "subtitle": subtitle,
-        "data_meta": data_date,
+        "report_date": report_date,
         "generated_at": generated_at,
         "stat_cards": build_stat_cards(valuation),
         "verdict_badges": build_badges(summary),
         "verdict_headline": inline_md(str(summary["headline"])),
         "decision_card": build_decision_card(markdown),
         "verdict_points": list_html(summary["reasons"], "结论理由详见正文。"),
-        "risk_points": list_html(summary["risks"], "主要风险详见负面信息与风险排查、财务质量验证章节。"),
+        "risk_points": list_html(summary["risks"], "主要风险详见风险、治理与会计质量以及财务质量验证章节。"),
         "kpi_cards": build_kpis(tables, valuation),
-        "financial_visuals": build_financial_visuals(markdown, tables, data_date, sources),
-        "forecast_panel": build_forecast_panel(markdown, tables),
-        "update_panel": build_update_panel(markdown),
+        "financial_visuals": financial_visuals,
+        "forecast_panel": build_forecast_panel(body_markdown, tables),
+        "update_panel": build_update_panel(body_markdown),
         "toc": build_toc(rendered.toc),
         "content_html": rendered.html,
-        "sources": inline_md(sources),
-        "footer_meta": f"报告主体:{company}({ticker}) | 数据口径:{data_date}",
+        "scope_notes": scope_notes_html,
+        "footer_meta": f"报告主体:{company}({ticker}) · 报告日期:{report_date}",
     }
     html_out = template
     for key, value in replacements.items():
