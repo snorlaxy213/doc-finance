@@ -10,6 +10,7 @@ tmp/
 outputs/**/*.inspect.ndjson
 outputs/**/preview_*.png
 report-hub-build/
+hub/data/
 
 # Private portfolio runtime data and Supabase credentials
 .env.portfolio
