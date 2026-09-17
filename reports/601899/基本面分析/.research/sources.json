@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-17T00:35:09+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260906-e82dc480",
+      "title": "2025年年度报告（20260906文字更正版）",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260906",
+      "official_url": "https://www.zjky.cn/upload/file/2026/09/06/c45ea1749c274a85b7436552c2057ded.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260906_2025A_年度报告_c45ea1749c274a85b7436552c2057ded.pdf",
+      "sha256": "e82dc480493a5f42f0fc3ca8190807389af8356e8f79ce1e13fbcf21829c9dad",
+      "bytes": 96937029,
+      "pages": 352,
+      "retrieved_at": "2026-09-17T00:26:42+08:00",
+      "used_by": [
+        "紫金矿业_601899_基本面分析_20260917"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260906-6ffa796a",
+      "title": "2024年年度报告（20260906文字更正版）",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20260906",
+      "official_url": "https://www.zjky.cn/upload/file/2026/09/06/4b28da63de8d4a78b7063be888f5881a.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260906_2024A_年度报告_4b28da63de8d4a78b7063be888f5881a.pdf",
+      "sha256": "6ffa796aa46f60a32688d78ddf90d2155965c8d3bae48e430274921f06fcb683",
+      "bytes": 35206596,
+      "pages": 379,
+      "retrieved_at": "2026-09-17T00:26:42+08:00",
+      "used_by": [
+        "紫金矿业_601899_基本面分析_20260917"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260906-b934ec8d",
+      "title": "2026年半年度报告（20260906文字更正版）",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260906",
+      "official_url": "https://www.zjky.cn/upload/file/2026/09/06/d0239c734bd54df7962831108c1b11cd.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260906_2026H1_半年度报告_d0239c734bd54df7962831108c1b11cd.pdf",
+      "sha256": "b934ec8dde5757b3fbd757e6c8c6ae5bd13a09c65e5a7acbfa58430b538d75ad",
+      "bytes": 5926053,
+      "pages": 265,
+      "retrieved_at": "2026-09-17T00:26:42+08:00",
+      "used_by": [
+        "紫金矿业_601899_基本面分析_20260917"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260421-34356359",
+      "title": "2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260421",
+      "official_url": "https://www.zjky.cn/upload/file/2026/04/21/172e00fbd24644dc89d5c080b30d26de.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260421_2026Q1_第一季度报告_172e00fbd24644dc89d5c080b30d26de.pdf",
+      "sha256": "34356359df3eab06fec3bf7b058633f257f5451140d62cda67d4fb209958b7e2",
+      "bytes": 717908,
+      "pages": 21,
+      "retrieved_at": "2026-09-17T00:26:42+08:00",
+      "used_by": [
+        "紫金矿业_601899_基本面分析_20260917"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260905-89a67ac3",
+      "title": "2026年财报文字更正公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260905",
+      "official_url": "https://www.zjky.cn/upload/file/2026/09/06/977a52d909814ffc9457db705c742081.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260905_2026_正式披露_977a52d909814ffc9457db705c742081.pdf",
+      "sha256": "89a67ac3a5df292d27eef391d10a1bd3b33fc216eec438ef22dc46c01900e459",
+      "bytes": 90980,
+      "pages": 1,
+      "retrieved_at": "2026-09-17T00:26:42+08:00",
+      "used_by": [
+        "紫金矿业_601899_基本面分析_20260917"
+      ],
+      "status": "已归档",
+      "date_override": "20260905"
+    },
+    {
+      "source_id": "SRC-20260917-339739ae",
+      "title": "2026年向参股公司提供财务资助",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260917",
+      "official_url": "https://www.zjky.cn/upload/file/2026/09/16/304397e64c19406986f820ce3fa1e6c6.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260917_2026_正式披露_304397e64c19406986f820ce3fa1e6c6.pdf",
+      "sha256": "339739ae35ebf3b6a63d57cd89e8ad496434a79085d33829f74595c6da5c95f7",
+      "bytes": 105611,
+      "pages": null,
+      "retrieved_at": "2026-09-17T00:26:42+08:00",
+      "used_by": [
+        "紫金矿业_601899_基本面分析_20260917"
+      ],
+      "status": "已归档",
+      "date_override": "20260917"
+    },
+    {
+      "source_id": "SRC-20260917-a661656c",
+      "title": "2026年为参股公司提供担保",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260917",
+      "official_url": "https://www.zjky.cn/upload/file/2026/09/16/05d244cd07e44decafbf1160281086c3.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260917_2026_正式披露_05d244cd07e44decafbf1160281086c3.pdf",
+      "sha256": "a661656cfd642a22e57bb084f2be2328e4f57698c1bb837f46ec843faf327864",
+      "bytes": 117524,
+      "pages": null,
+      "retrieved_at": "2026-09-17T00:26:42+08:00",
+      "used_by": [
+        "紫金矿业_601899_基本面分析_20260917"
+      ],
+      "status": "已归档",
+      "date_override": "20260917"
+    },
+    {
+      "source_id": "SRC-20260917-d1fd4fc9",
+      "title": "2026年与关联人共同投资",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260917",
+      "official_url": "https://www.zjky.cn/upload/file/2026/09/16/187fe99dd4d24791b80f7a7843f6277b.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260917_2026_正式披露_187fe99dd4d24791b80f7a7843f6277b.pdf",
+      "sha256": "d1fd4fc9f64e5d8f2b6bb4a22385c1b84ffc94108d4a2eadefe81f8d5e1c9f27",
+      "bytes": 173730,
+      "pages": null,
+      "retrieved_at": "2026-09-17T00:26:42+08:00",
+      "used_by": [
+        "紫金矿业_601899_基本面分析_20260917"
+      ],
+      "status": "已归档",
+      "date_override": "20260917"
+    },
+    {
+      "source_id": "SRC-20260820-97dd79bb",
+      "title": "洛阳钼业2026年半年度报告摘要",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260820",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-20/1225482739.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260820_2026H1_半年度报告_1225482739.pdf",
+      "sha256": "97dd79bbad07f1d643bfca33702a7260a1566ff3c2e79e8f352c7e6e4a77b714",
+      "bytes": 358297,
+      "pages": null,
+      "retrieved_at": "2026-09-17T00:26:42+08:00",
+      "used_by": [
+        "紫金矿业_601899_基本面分析_20260917"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260729-e5f192e0",
+      "title": "Ivanhoe2026年第二季度经营更新",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260729",
+      "official_url": "https://www.ivanhoemines.com/wp-content/uploads/20260729-IVN-Q2-Financial-Results-ABF.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260729_2026_正式披露_20260729-IVN-Q2-Financial-Results-ABF.pdf",
+      "sha256": "e5f192e0275d6daa36024138b4c4a22d590d5020f47532a80ca78319d09a566b",
+      "bytes": 2493973,
+      "pages": null,
+      "retrieved_at": "2026-09-17T00:26:46+08:00",
+      "used_by": [
+        "紫金矿业_601899_基本面分析_20260917"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260710-8efa16be",
+      "title": "2026年半年度业绩预告",
+      "document_type": "业绩预告",
+      "period": "2026H1",
+      "published_date": "20260710",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-07-10/1225417751.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260710_2026H1_业绩预告_1225417751.pdf",
+      "sha256": "8efa16be20228653ab2c4c9bacaa72c90b31532dfe4b042be442bdbd5df3f2a3",
+      "bytes": 109003,
+      "pages": null,
+      "retrieved_at": "2026-09-17T00:26:46+08:00",
+      "used_by": [
+        "紫金矿业_601899_基本面分析_20260917"
+      ],
+      "status": "已归档"
+    }
+  ]
+}
