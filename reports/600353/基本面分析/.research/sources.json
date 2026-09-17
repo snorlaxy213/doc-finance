@@ -1,0 +1,295 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-18T00:43:34+08:00",
+  "sources": [
+    {
+      "source_id": "FAILED-c433de95f5d3",
+      "title": "2026年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260827",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-08-27/600353_20260827_Y1WO.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-09-18T00:30:15+08:00",
+      "used_by": [
+        "20260918基本面研究"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "SRC-20260320-add4dabb",
+      "title": "2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260320",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-03-20/1225019284.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260320_2025A_年度报告_1225019284.pdf",
+      "sha256": "add4dabb2bdb7b66507c4e1385f2b90ee12b4031a315f1b3ff30f706d376727e",
+      "bytes": 1383417,
+      "pages": 203,
+      "retrieved_at": "2026-09-18T00:30:15+08:00",
+      "used_by": [
+        "20260918基本面研究",
+        "旭光电子_600353_基本面分析_20260918_004241.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "FAILED-2b5c1f1bd125",
+      "title": "2025年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2025H1",
+      "published_date": "20250828",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-08-28/600353_20250828_BHD6.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-09-18T00:30:15+08:00",
+      "used_by": [
+        "20260918基本面研究"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "SRC-20260827-8c2e9f9f",
+      "title": "2026年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260827",
+      "official_url": "https://stockmc.xueqiu.com/202608/600353_20260827_Y1WO.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260827_2026H1_半年度报告_600353_20260827_Y1WO.pdf",
+      "sha256": "8c2e9f9f3c627a50aa8dc4229bd44d96730121c03406f3b1e391870176697467",
+      "bytes": 1115431,
+      "pages": 165,
+      "retrieved_at": "2026-09-18T00:30:30+08:00",
+      "used_by": [
+        "20260918基本面研究",
+        "旭光电子_600353_基本面分析_20260918_004241.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250315-6e797c28",
+      "title": "2024年年度报告",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250315",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-03-15/1222807612.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250315_2024A_年度报告_1222807612.pdf",
+      "sha256": "6e797c282eab8e1fb251a6c077238789c3f845dd838bf5badc1f4dff542b0a0c",
+      "bytes": 4109950,
+      "pages": 217,
+      "retrieved_at": "2026-09-18T00:30:31+08:00",
+      "used_by": [
+        "20260918基本面研究",
+        "旭光电子_600353_基本面分析_20260918_004241.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260430-7b708411",
+      "title": "2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260430",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-30/1225258977.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260430_2026Q1_第一季度报告_1225258977.pdf",
+      "sha256": "7b708411d34339f3dff29b9e14a8399056f96d077ef86fe4703d8969dc2568db",
+      "bytes": 148653,
+      "pages": 12,
+      "retrieved_at": "2026-09-18T00:30:31+08:00",
+      "used_by": [
+        "20260918基本面研究",
+        "旭光电子_600353_基本面分析_20260918_004241.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250828-183ae571",
+      "title": "2025年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2025H1",
+      "published_date": "20250828",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-08-28/1224598776.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250828_2025H1_半年度报告_1224598776.pdf",
+      "sha256": "183ae5713d1fc65ac14849db6476291a05312fc54067d94b291f12ed6ef7f36e",
+      "bytes": 1164339,
+      "pages": 164,
+      "retrieved_at": "2026-09-18T00:32:09+08:00",
+      "used_by": [
+        "20260918基本面研究",
+        "旭光电子_600353_基本面分析_20260918_004241.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260204-06cf1cdc",
+      "title": "近五年监管措施自查公告",
+      "document_type": "监管公告",
+      "period": "期间待核验",
+      "published_date": "20260204",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-02-04/1224965031.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260204_期间待核验_监管公告_1224965031.pdf",
+      "sha256": "06cf1cdc47607d8ca3b1296e9e91f75c9a99c5c3208d26b546c6a7dce36127ff",
+      "bytes": 132279,
+      "pages": 3,
+      "retrieved_at": "2026-09-18T00:32:09+08:00",
+      "used_by": [
+        "20260918基本面研究",
+        "旭光电子_600353_基本面分析_20260918_004241.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260204-ea82cdee",
+      "title": "2026年发行预案",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260204",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-02-04/1224965017.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260204_2026_正式披露_1224965017.pdf",
+      "sha256": "ea82cdeeb543dc376dc7f5bc2cba2c0eef7816f793555e992f39415f4b78dba1",
+      "bytes": 518295,
+      "pages": 48,
+      "retrieved_at": "2026-09-18T00:32:09+08:00",
+      "used_by": [
+        "20260918基本面研究",
+        "旭光电子_600353_基本面分析_20260918_004241.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "FAILED-4d50291df4b7",
+      "title": "发行注册批复公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260911",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-09-11/600353_20260911_G981.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-09-18T00:33:45+08:00",
+      "used_by": [
+        "20260918基本面研究"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "FAILED-23841e50b3db",
+      "title": "控股股东质押公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260710",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-07-10/600353_20260710_48JU.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-09-18T00:33:45+08:00",
+      "used_by": [
+        "20260918基本面研究"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "SRC-20260911-dccbb291",
+      "title": "发行注册批复公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260911",
+      "official_url": "https://stockmc.xueqiu.com/202609/600353_20260911_G981.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260911_期间待核验_正式披露_600353_20260911_G981.pdf",
+      "sha256": "dccbb2918cb06d41b5780f76fd790c0ddbef3ab4ef86885ba29da6f1ad3a642e",
+      "bytes": 62172,
+      "pages": 1,
+      "retrieved_at": "2026-09-18T00:34:00+08:00",
+      "used_by": [
+        "20260918基本面研究",
+        "旭光电子_600353_基本面分析_20260918_004241.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260710-b0be9f12",
+      "title": "控股股东质押公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260710",
+      "official_url": "https://stockmc.xueqiu.com/202607/600353_20260710_48JU.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260710_期间待核验_正式披露_600353_20260710_48JU.pdf",
+      "sha256": "b0be9f12369e2efc87099e70525609f2bf6c751433e1c2359644635a5f1003b9",
+      "bytes": 111252,
+      "pages": 4,
+      "retrieved_at": "2026-09-18T00:34:00+08:00",
+      "used_by": [
+        "20260918基本面研究",
+        "旭光电子_600353_基本面分析_20260918_004241.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260820-606b715c",
+      "title": "宝光股份2026年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260820",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESH_STOCK/2026/2026-8/2026-08-20/12506871.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260820_2026H1_半年度报告_12506871.pdf",
+      "sha256": "606b715c09104fc62c98f3c645383d8aedf83c79313a3b0d9a699602a1943008",
+      "bytes": 1180279,
+      "pages": 140,
+      "retrieved_at": "2026-09-18T00:34:36+08:00",
+      "used_by": [
+        "20260918同行比较",
+        "旭光电子_600353_基本面分析_20260918_004241.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260820-10b915aa",
+      "title": "宝光股份2026年半年度报告摘要",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260820",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-20/1225483562.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260820_2026H1_半年度报告_1225483562.pdf",
+      "sha256": "10b915aaf4a51b8d45c3ebfd57b654ce5abb9e6c273e7627624b840dd7504607",
+      "bytes": 149359,
+      "pages": 4,
+      "retrieved_at": "2026-09-18T00:41:15+08:00",
+      "used_by": [
+        "20260918同行比较",
+        "旭光电子_600353_基本面分析_20260918_004241.md"
+      ],
+      "status": "已归档"
+    }
+  ]
+}
