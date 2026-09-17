@@ -305,7 +305,13 @@ def render_markdown(markdown: str) -> RenderedContent:
             while i < len(lines) and lines[i].lstrip().startswith("|"):
                 rows.append(split_table_row(lines[i]))
                 i += 1
-            if "风险结论速览" in active_subsection_title:
+            if active_section_title == "结论摘要" and "当前结论" in active_subsection_title and headers == ["维度", "结论", "关键证据", "判断"]:
+                out.append(summary_evidence_to_html(rows))
+            elif active_section_title == "结论摘要" and "当前投资价值与介入条件" in active_subsection_title and headers == ["项目", "内容"]:
+                out.append(investment_table_to_html(rows))
+            elif active_section_title == "结论摘要" and "与上次报告相比" in active_subsection_title:
+                out.append('<div class="summary-change-matrix">' + table_to_html(headers, rows) + '</div>')
+            elif "风险结论速览" in active_subsection_title:
                 out.append(risk_overview_to_html(headers, rows))
             elif "风险核验矩阵" in active_subsection_title:
                 out.append(risk_matrix_to_html(headers, rows))
@@ -591,7 +597,7 @@ def strip_summary_headline_from_body(markdown: str) -> str:
             continue
         if in_summary and re.match(r"^###\s+\d+[.、\s]+", line):
             in_summary = False
-        if in_summary and re.search(r"一句话结论[：:]", strip_md(line)):
+        if in_summary and re.match(r"^\s*(?:[-*+]\s*)?(?:一句话结论|基本面判断|财务质量|估值状态|财务造假风险初筛)[：:]", strip_md(line)):
             continue
         output.append(line)
     return "\n".join(output)
@@ -852,19 +858,6 @@ def build_forecast_panel(markdown: str, tables: list[TableBlock]) -> str:
     )
 
 
-def build_update_panel(markdown: str) -> str:
-    update = find_subsection(markdown, "与上次报告相比")
-    if not update.strip():
-        return ""
-    rendered = render_markdown(update).html
-    return (
-        '<section class="update-panel" aria-label="本次更新">'
-        '<div class="update-head"><span>RESEARCH CONTINUITY</span><h2>本次更新 · 与上次报告相比</h2></div>'
-        f'<div class="update-body">{rendered}</div>'
-        '</section>'
-    )
-
-
 def list_html(items: list[str], fallback: str) -> str:
     if not items:
         items = [fallback]
@@ -1049,42 +1042,37 @@ def build_financial_visuals(tables: list[TableBlock]) -> str:
     return '<section class="financial-visuals" aria-label="财务图表速览"><div class="visuals-head"><div><span>FINANCIAL VISUALS</span><h2>财务趋势</h2></div><p>图表优先展示趋势；原始表格保留在对应章节，可展开核对。</p></div><div class="chart-grid">' + chart_card("经营规模与利润趋势", financial_note(), scale, "核心财务表未提供连续两期的收入和利润数据。") + chart_card("盈利与现金质量趋势", financial_note(), quality, "核心财务表未提供连续两期的利润率、ROE 或现金质量数据。") + '</div></section>'
 
 
-def build_decision_card(markdown: str) -> str:
-    decision = find_subsection(markdown, "当前位置与交易决策")
-    source_record = extract_note_block(markdown)
-    if not decision and not source_record:
-        return ""
+def summary_evidence_to_html(rows: list[list[str]]) -> str:
+    cards = []
+    for row in rows:
+        if len(row) < 4:
+            continue
+        label, judgment, evidence, interpretation = row[:4]
+        cards.append(
+            '<article class="summary-evidence-card"><div class="risk-label">' + inline_md(label) + '</div>'
+            '<h4>' + inline_md(judgment) + '</h4><div class="summary-evidence">' + inline_md(evidence) + '</div>'
+            '<p>' + inline_md(interpretation) + '</p></article>'
+        )
+    return '<div class="summary-evidence-grid">' + ''.join(cards) + '</div>'
 
-    def field_value(*keys: str) -> str:
-        for key in keys:
-            value = find_key_value(decision, key) or find_key_value(source_record, key)
-            if value:
-                return value
-        return ""
 
-    action = field_value("当前动作") or "详见正文"
-    position = field_value("仓位速览", "建议目标仓位") or "详见正文"
-    execution = field_value("观察条件速览", "参考价格与计划买入区间", "入场条件") or "详见正文"
-    stop = field_value("止损速览", "价格止损") or "详见正文"
-    risk = field_value("基本面提前退出条件") or "详见正文"
-    hide_details = normalize_space(field_value("持仓状态")) == "未持仓" and normalize_space(action) == "等待"
+def investment_table_to_html(rows: list[list[str]]) -> str:
+    values = {normalize_space(row[0]): row[1] for row in rows if len(row) >= 2}
+    judgment = values.get("当前判断", "暂无法判断")
+    status = {"有吸引力": "normal", "合理但优势有限": "attention", "已透支": "alert"}.get(normalize_space(judgment), "unverified")
+    metadata = ' · '.join(inline_md(values[key]) for key in ("参考价格与日期", "投资观察期") if values.get(key))
+    columns = ""
+    for key in ("介入条件", "推翻条件"):
+        items = re.split(r"<br\s*/?>", values.get(key, "尚未提供"), flags=re.I)
+        conditions = ''.join('<li>' + inline_md(item.strip()) + '</li>' for item in items if item.strip())
+        columns += '<div><h4>' + key + '</h4><ul>' + conditions + '</ul></div>'
 
-    def condition_list(value: str) -> str:
-        return '<ul>' + ''.join('<li>' + inline_md(item.strip()) + '</li>' for item in value.split('；') if item.strip()) + '</ul>'
-
-    details = ''.join('<div><dt>' + label + '</dt><dd>' + inline_md(field_value(key) or "详见正文") + '</dd></div>' for label, key in [
-        ("建议仓位", "建议目标仓位"),
-        ("执行 / 观察条件", "参考价格与计划买入区间"),
-        ("价格止损", "价格止损"),
-        ("基本面提前退出条件", "基本面提前退出条件"),
-    ])
-    details_panel = '' if hide_details else '<details class="decision-details"><summary>查看仓位与止损完整说明</summary><dl>' + details + '</dl></details>'
     return (
-        '<section class="decision-card" aria-label="交易决策摘要"><h3>当前位置与交易决策</h3>'
-        '<div class="decision-summary"><strong class="decision-action">' + inline_md(action) + '</strong><span>' + inline_md(position) + '</span></div>'
-        '<div class="decision-columns"><div class="decision-condition"><h4>执行 / 观察条件</h4>' + condition_list(execution) + '</div>'
-        '<div class="decision-condition"><h4>失效 / 重审条件</h4><p><strong>价格止损：</strong>' + inline_md(stop) + '</p>' + condition_list(risk) + '</div></div>'
-        + details_panel + '</section>'
+        '<div class="investment-conclusion ' + status + '"><div class="risk-conclusion-head">'
+        '<strong>当前投资价值</strong><span class="risk-chip ' + status + '">' + inline_md(judgment) + '</span></div>'
+        '<div class="investment-meta">' + metadata + '</div>'
+        '<p class="investment-basis"><strong>核心依据：</strong>' + inline_md(values.get("判断依据", "尚未提供")) + '</p>'
+        '<div class="investment-conditions">' + columns + '</div></div>'
     )
 
 
@@ -1160,13 +1148,11 @@ def render_report(markdown: str, template: str, args: argparse.Namespace) -> tup
         "stat_cards": build_stat_cards(valuation),
         "verdict_badges": build_badges(summary),
         "verdict_headline": inline_md(str(summary["headline"])),
-        "decision_card": build_decision_card(markdown),
         "verdict_points": list_html(summary["reasons"], "结论理由详见正文。"),
         "risk_points": list_html(summary["risks"], "主要风险详见风险、治理与会计质量以及财务质量验证章节。"),
         "kpi_cards": build_kpis(tables, valuation),
         "financial_visuals": financial_visuals,
         "forecast_panel": build_forecast_panel(body_markdown, tables),
-        "update_panel": build_update_panel(body_markdown),
         "toc": build_toc(rendered.toc),
         "content_html": rendered.html,
         "scope_notes": scope_notes_html,

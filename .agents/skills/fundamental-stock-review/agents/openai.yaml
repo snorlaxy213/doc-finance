@@ -1,4 +1,4 @@
 interface:
   display_name: "基本面分析"
-  short_description: "分析基本面与当前位置，给出条件化动作、仓位和风控。"
-  default_prompt: "使用 $fundamental-stock-review 分析这只股票的基本面、估值和当前价量位置，按项目级个股交易决策默认值给出条件化研究动作；如有历史报告，承接上版结论与待验证事项，并保存证据、不可变快照、最新 Markdown/HTML 和研究轨迹。"
+  short_description: "分析基本面、财务质量与估值，判断当前投资价值及介入和推翻条件。"
+  default_prompt: "使用 $fundamental-stock-review 分析这只股票的基本面和估值，判断未来 12—24 个月的当前投资价值与介入条件；如有历史报告，承接实质变化与待验证事项，并保存证据、不可变快照、最新 Markdown/HTML 和研究轨迹。"
