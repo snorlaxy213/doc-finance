@@ -146,7 +146,7 @@ def table_to_html(
     if not collapsible:
         return table_html
     return (
-        '<details class="detail-table">'
+        '<details class="detail-table" open>'
         f'<summary>{html.escape(summary)}</summary>'
         f'{table_html}'
         '</details>'
@@ -221,6 +221,54 @@ def risk_conclusion_to_html(headers: list[str], rows: list[list[str]]) -> str:
         f'<p><strong>主要依据：</strong>{inline_md(evidence)}</p>'
         f'<p><strong>判断边界：</strong>{inline_md(boundary)}</p></div>'
     )
+
+
+def biz_overview_to_html(headers: list[str], rows: list[list[str]]) -> str:
+    columns = {normalize_space(header): index for index, header in enumerate(headers)}
+    label_index = columns.get("维度", 0)
+    value_index = columns.get("核心内容", 1)
+    note_index = columns.get("说明", 2)
+    cards: list[str] = []
+    for row in rows:
+        cells = row + [""] * max(0, len(headers) - len(row))
+        label = cells[label_index] if label_index < len(cells) else ""
+        value = cells[value_index] if value_index < len(cells) else ""
+        note = cells[note_index] if note_index < len(cells) else ""
+        warn = " biz-warn" if ("风险" in label or "风险" in value) else ""
+        cards.append(
+            f'<div class="biz-card{warn}">'
+            f'<div class="biz-label">{inline_md(label)}</div>'
+            f'<div class="biz-value">{inline_md(value)}</div>'
+            f'<div class="biz-note">{inline_md(note)}</div></div>'
+        )
+    return '<div class="biz-overview" aria-label="业务布局速览">' + "".join(cards) + "</div>"
+
+
+FQ_STATUS_CLASS = {"正常": "fq-normal", "关注": "fq-attention", "警示": "fq-alert"}
+
+
+def fin_quality_to_html(headers: list[str], rows: list[list[str]]) -> str:
+    columns = {normalize_space(header): index for index, header in enumerate(headers)}
+    label_index = columns.get("指标", 0)
+    value_index = columns.get("数值", 1)
+    status_index = columns.get("状态", 2)
+    note_index = columns.get("说明", 3)
+    cards: list[str] = []
+    for row in rows:
+        cells = row + [""] * max(0, len(headers) - len(row))
+        label = cells[label_index] if label_index < len(cells) else ""
+        value = cells[value_index] if value_index < len(cells) else ""
+        status = normalize_space(cells[status_index]) if status_index < len(cells) else ""
+        note = cells[note_index] if note_index < len(cells) else ""
+        cls = FQ_STATUS_CLASS.get(status, "")
+        cls_attr = f" {cls}" if cls else ""
+        cards.append(
+            f'<div class="fq-card{cls_attr}">'
+            f'<div class="fq-label">{inline_md(label)}</div>'
+            f'<div class="fq-value">{inline_md(value)}</div>'
+            f'<div class="fq-note">{inline_md(note)}</div></div>'
+        )
+    return '<div class="fin-quality" aria-label="财务质量速览">' + "".join(cards) + "</div>"
 
 
 def value_class(cell: str) -> str:
@@ -317,6 +365,10 @@ def render_markdown(markdown: str) -> RenderedContent:
                 out.append(risk_matrix_to_html(headers, rows))
             elif "会计质量与财务造假风险初筛" in active_subsection_title:
                 out.append(risk_conclusion_to_html(headers, rows))
+            elif "业务布局速览" in active_subsection_title:
+                out.append(biz_overview_to_html(headers, rows))
+            elif "财务质量速览" in active_subsection_title:
+                out.append(fin_quality_to_html(headers, rows))
             else:
                 collapse_table = active_section_title in {"核心财务指标", "近两年财报趋势与业务结构"}
                 out.append(table_to_html(headers, rows, collapsible=collapse_table))
@@ -904,6 +956,16 @@ def build_kpis(tables: list[TableBlock], valuation: dict[str, tuple[str, str]]) 
 
 
 MISSING_CHART_VALUES = {"", "未披露", "不适用", "无法判断", "无", "--", "-"}
+
+
+def build_kpi_overview_label(tables: list[TableBlock]) -> str:
+    actual_tables = [table for table in tables if not is_forecast_table(table)]
+    _, period = extract_metric_from_tables(actual_tables, "归母净利润")
+    if not period:
+        _, period = extract_metric_from_tables(actual_tables, "营业收入")
+    return f"关键指标 · {period}" if period else "关键指标"
+
+
 CHART_COLORS = ("#1f5d8f", "#b65c3b", "#427a62", "#8060a8")
 
 
@@ -1039,7 +1101,7 @@ def build_financial_visuals(tables: list[TableBlock]) -> str:
         return f'<b>数据期间：</b>{html.escape(periods)} {footnote_ref_html("financial")}'
     scale = grouped_bar_svg(table_metric_series(financial, [("营业收入", "营业收入"), ("归母净利润", "归母净利润"), ("扣非归母净利润", "扣非净利润")]))
     quality = quality_svg(table_metric_series(financial, [("毛利率", "毛利率"), ("扣非净利率", "扣非净利率"), ("ROE", "ROE"), ("经营现金流/净利润", "经营现金流/净利润")]))
-    return '<section class="financial-visuals" aria-label="财务图表速览"><div class="visuals-head"><div><span>FINANCIAL VISUALS</span><h2>财务趋势</h2></div><p>图表优先展示趋势；原始表格保留在对应章节，可展开核对。</p></div><div class="chart-grid">' + chart_card("经营规模与利润趋势", financial_note(), scale, "核心财务表未提供连续两期的收入和利润数据。") + chart_card("盈利与现金质量趋势", financial_note(), quality, "核心财务表未提供连续两期的利润率、ROE 或现金质量数据。") + '</div></section>'
+    return '<div class="chart-grid">' + chart_card("经营规模与利润趋势", financial_note(), scale, "核心财务表未提供连续两期的收入和利润数据。") + chart_card("盈利与现金质量趋势", financial_note(), quality, "核心财务表未提供连续两期的利润率、ROE 或现金质量数据。") + '</div>'
 
 
 def summary_evidence_to_html(rows: list[list[str]]) -> str:
@@ -1151,6 +1213,7 @@ def render_report(markdown: str, template: str, args: argparse.Namespace) -> tup
         "verdict_points": list_html(summary["reasons"], "结论理由详见正文。"),
         "risk_points": list_html(summary["risks"], "主要风险详见风险、治理与会计质量以及财务质量验证章节。"),
         "kpi_cards": build_kpis(tables, valuation),
+        "kpi_overview_label": build_kpi_overview_label(tables),
         "financial_visuals": financial_visuals,
         "forecast_panel": build_forecast_panel(body_markdown, tables),
         "toc": build_toc(rendered.toc),
