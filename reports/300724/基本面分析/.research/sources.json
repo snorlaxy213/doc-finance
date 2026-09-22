@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-22T10:00:16+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260828-ce79af19",
+      "title": "2026年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260828",
+      "official_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-28/d2b3d236-80c5-4812-b5ad-eeef69f66bc9.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260828_2026H1_半年度报告_d2b3d236-80c5-4812-b5ad-eeef69f66bc9.pdf",
+      "sha256": "ce79af193e53174bbf26886829d5446528869da0c036026b8c3784c6b103514d",
+      "bytes": 1213169,
+      "pages": 210,
+      "retrieved_at": "2026-09-22T09:39:15+08:00",
+      "used_by": [
+        "捷佳伟创_300724_基本面分析_20260922"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260427-d3a48589",
+      "title": "2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260427",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-27/1225192952.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260427_2025A_年度报告_1225192952.pdf",
+      "sha256": "d3a4858939cd3a5deaf5dba9364fcd86af222fd3a391439fbfd36df366b73d2c",
+      "bytes": 1434881,
+      "pages": 253,
+      "retrieved_at": "2026-09-22T09:39:16+08:00",
+      "used_by": [
+        "捷佳伟创_300724_基本面分析_20260922"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260427-4aac7bac",
+      "title": "2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260427",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-27/1225192961.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260427_2026Q1_第一季度报告_1225192961.pdf",
+      "sha256": "4aac7bac094123270b9ce83adfbfa30e3d7ffea5414a78fcffb39aedfc2c9dee",
+      "bytes": 199021,
+      "pages": 10,
+      "retrieved_at": "2026-09-22T09:39:16+08:00",
+      "used_by": [
+        "捷佳伟创_300724_基本面分析_20260922"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250423-66852a8c",
+      "title": "2024年年度报告",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250423",
+      "official_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2025-04-23/601469b1-2919-4fb0-95e2-44400237e5c7.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250423_2024A_年度报告_601469b1-2919-4fb0-95e2-44400237e5c7.pdf",
+      "sha256": "66852a8c2af85ff5e48fe22a394ab07d8f10c4f705d1043a6740ff60966bd3d1",
+      "bytes": 5694736,
+      "pages": 249,
+      "retrieved_at": "2026-09-22T09:41:53+08:00",
+      "used_by": [
+        "捷佳伟创_300724_基本面分析_20260922"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260331-9c0377c8",
+      "title": "询价转让定价公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260331",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-03-31/1225067173.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260331_期间待核验_正式披露_1225067173.pdf",
+      "sha256": "9c0377c8769f098b2830e7c4d58766dec93015e22c4a30a3a1793b42683a1ae1",
+      "bytes": 88306,
+      "pages": 2,
+      "retrieved_at": "2026-09-22T10:00:16+08:00",
+      "used_by": [
+        "捷佳伟创_300724_基本面分析_20260922_094926.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260825-f9ce3ce6",
+      "title": "迈为股份2026H1摘要",
+      "document_type": "正式披露",
+      "period": "2026H1",
+      "published_date": "20260825",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-25/1225495440.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260825_2026H1_正式披露_1225495440.pdf",
+      "sha256": "f9ce3ce6c7d958629f1915992fbd3218dfe252a206f5e42a2402d0156ed0e772",
+      "bytes": 97380,
+      "pages": 4,
+      "retrieved_at": "2026-09-22T10:00:16+08:00",
+      "used_by": [
+        "捷佳伟创_300724_基本面分析_20260922_094926.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260825-1be86058",
+      "title": "拉普拉斯2026H1摘要",
+      "document_type": "正式披露",
+      "period": "2026H1",
+      "published_date": "20260825",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-25/1225499290.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260825_2026H1_正式披露_1225499290.pdf",
+      "sha256": "1be860584d737b6014ad914568afb47f55f0a697a3aa1b6a42113e57ab933c6b",
+      "bytes": 151959,
+      "pages": 5,
+      "retrieved_at": "2026-09-22T10:00:16+08:00",
+      "used_by": [
+        "捷佳伟创_300724_基本面分析_20260922_094926.md"
+      ],
+      "status": "已归档"
+    }
+  ]
+}
