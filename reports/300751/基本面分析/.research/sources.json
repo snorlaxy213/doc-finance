@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-22T18:20:00+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20240510-cf9174e4",
+      "title": "迈为股份2023年年度报告全文",
+      "document_type": "年度报告",
+      "period": "2023A",
+      "published_date": "20240510",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2024-05-10/1220034617.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2024/20240510_2023A_年度报告_1220034617.pdf",
+      "sha256": "cf9174e47b8cd66ff0b49bfafe93b5b3f1d5c604ceca72979c5fc53d65bbe6b4",
+      "bytes": 4091238,
+      "pages": 256,
+      "retrieved_at": "2026-09-22T18:11:28+08:00",
+      "used_by": [
+        "迈为股份_300751_基本面分析_20260922"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250429-f3c8742d",
+      "title": "迈为股份2024年年度报告全文",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250429",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-04-29/1223370046.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250429_2024A_年度报告_1223370046.pdf",
+      "sha256": "f3c8742d8289ecb2dbe2bdb758f7bdf728d86bf227ac44592df87087083753fe",
+      "bytes": 3800646,
+      "pages": 247,
+      "retrieved_at": "2026-09-22T18:11:29+08:00",
+      "used_by": [
+        "迈为股份_300751_基本面分析_20260922"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260428-89da0765",
+      "title": "迈为股份2025年年度报告全文",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260428",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-28/1225211530.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260428_2025A_年度报告_1225211530.pdf",
+      "sha256": "89da076566a494d66db5e7d18c84976440a51fded61fb760ddbc97bb280f816d",
+      "bytes": 1601666,
+      "pages": 240,
+      "retrieved_at": "2026-09-22T18:11:29+08:00",
+      "used_by": [
+        "迈为股份_300751_基本面分析_20260922"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260825-17721621",
+      "title": "迈为股份2026年半年度报告全文",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260825",
+      "official_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-25/697885bd-023f-4a37-a903-b69d4d267438.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260825_2026H1_半年度报告_697885bd-023f-4a37-a903-b69d4d267438.pdf",
+      "sha256": "1772162101a9ed927fb6c6d71dec0b32dac30cc46b8ca9ab501dfd03fbef68e8",
+      "bytes": 1106084,
+      "pages": 176,
+      "retrieved_at": "2026-09-22T18:11:30+08:00",
+      "used_by": [
+        "迈为股份_300751_基本面分析_20260922"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260825-f7809bf2",
+      "title": "迈为股份2026年半年度计提资产减值准备公告",
+      "document_type": "正式披露",
+      "period": "2026H1",
+      "published_date": "20260825",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-25/1225495447.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260825_2026H1_正式披露_1225495447.pdf",
+      "sha256": "f7809bf2efd9ab88d6fa3f37fc0fdc2b35e3bce9a86a6aa2d0d2b6b369146689",
+      "bytes": 85325,
+      "pages": 4,
+      "retrieved_at": "2026-09-22T18:11:30+08:00",
+      "used_by": [
+        "迈为股份_300751_基本面分析_20260922"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260428-b60c5357",
+      "title": "迈为股份2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260428",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-28/1225211539.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260428_2026Q1_第一季度报告_1225211539.pdf",
+      "sha256": "b60c53576f76be64d0baa5175f6d1c4849a180593ee009f520779876d41fb42e",
+      "bytes": 154045,
+      "pages": 10,
+      "retrieved_at": "2026-09-22T18:15:29+08:00",
+      "used_by": [
+        "迈为股份_300751_基本面分析_20260922"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260213-61dee656",
+      "title": "迈为股份控股股东减持股份实施结果公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260213",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-02-13/1224978844.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260213_期间待核验_正式披露_1224978844.pdf",
+      "sha256": "61dee6565c5b1ac95e0d3754631529f14114b48476606909499e4b7b9e35981d",
+      "bytes": 87703,
+      "pages": 3,
+      "retrieved_at": "2026-09-22T18:19:59+08:00",
+      "used_by": [
+        "迈为股份_300751_基本面分析_20260922"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260126-bf0d0d02",
+      "title": "迈为股份股票交易异常波动公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260126",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-01-26/1224951345.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260126_期间待核验_正式披露_1224951345.pdf",
+      "sha256": "bf0d0d0234b7c7f049d5b251bedf8801540de03c4f7a098fa8f668bddf881e29",
+      "bytes": 82714,
+      "pages": 2,
+      "retrieved_at": "2026-09-22T18:20:00+08:00",
+      "used_by": [
+        "迈为股份_300751_基本面分析_20260922"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260825-3f7a8f83",
+      "title": "迈为股份2026年8月25日投资者活动记录表",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260825",
+      "official_url": "http://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESZ_STOCK/2026/2026-8/2026-08-25/12540520.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260825_2026_正式披露_12540520.pdf",
+      "sha256": "3f7a8f83e2bdbf700de65f77345f3b99ec400dab854ef41297910a8e9fa54cd2",
+      "bytes": 311632,
+      "pages": 6,
+      "retrieved_at": "2026-09-22T18:20:00+08:00",
+      "used_by": [
+        "迈为股份_300751_基本面分析_20260922"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260828-792d757d",
+      "title": "迈为股份半导体装备研发制造基地项目投资进展公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260828",
+      "official_url": "http://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESZ_STOCK/2026/2026-8/2026-08-28/12565587.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260828_期间待核验_正式披露_12565587.pdf",
+      "sha256": "792d757d3f08d112c7144024858c3d4973b6aaea4054fa09f8c3cad399f0e5f9",
+      "bytes": 86057,
+      "pages": 3,
+      "retrieved_at": "2026-09-22T18:20:00+08:00",
+      "used_by": [
+        "迈为股份_300751_基本面分析_20260922"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260901-6e8c583f",
+      "title": "迈为股份5%以上股东减持计划期限届满公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260901",
+      "official_url": "http://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESZ_STOCK/2026/2026-9/2026-09-01/12579468.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260901_期间待核验_正式披露_12579468.pdf",
+      "sha256": "6e8c583f3c1d0ee3a388840671b236875d76d095c5c5042b1562390946d56be3",
+      "bytes": 129385,
+      "pages": 3,
+      "retrieved_at": "2026-09-22T18:20:00+08:00",
+      "used_by": [
+        "迈为股份_300751_基本面分析_20260922"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260915-690f395c",
+      "title": "迈为股份2026年半年度权益分派实施公告",
+      "document_type": "正式披露",
+      "period": "2026H1",
+      "published_date": "20260915",
+      "official_url": "http://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESZ_STOCK/2026/2026-9/2026-09-15/12601276.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260915_2026H1_正式披露_12601276.pdf",
+      "sha256": "690f395c0833b5e3c8fe56ab2b1e9423bb38907490fa229e3755388dcd5ea05c",
+      "bytes": 78767,
+      "pages": 4,
+      "retrieved_at": "2026-09-22T18:20:00+08:00",
+      "used_by": [
+        "迈为股份_300751_基本面分析_20260922"
+      ],
+      "status": "已归档"
+    }
+  ]
+}
