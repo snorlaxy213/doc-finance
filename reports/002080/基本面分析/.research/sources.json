@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-24T22:33:24+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260818-7e245774",
+      "title": "2026 年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260818",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-18/1225476377.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260818_2026H1_半年度报告_1225476377.pdf",
+      "sha256": "7e2457745ffb073f36a2904bad9ab1de9a00d8851d6481ca297e9195d022e6f6",
+      "bytes": 1090300,
+      "pages": 158,
+      "retrieved_at": "2026-09-24T22:30:54+08:00",
+      "used_by": [
+        "中材科技_002080_基本面分析_20260924_223126.md",
+        "中材科技_002080_基本面分析_20260924_223159.md",
+        "中材科技_002080_基本面分析_20260924_223302.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260320-7a0f512e",
+      "title": "2025 年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260320",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-03-20/1225018612.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260320_2025A_年度报告_1225018612.pdf",
+      "sha256": "7a0f512e77fff866d82318258de04d54407a1fafe588cea664b8aea3c5c87d00",
+      "bytes": 1551466,
+      "pages": 200,
+      "retrieved_at": "2026-09-24T22:30:55+08:00",
+      "used_by": [
+        "中材科技_002080_基本面分析_20260924_223126.md",
+        "中材科技_002080_基本面分析_20260924_223159.md",
+        "中材科技_002080_基本面分析_20260924_223302.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250320-5a41e6b0",
+      "title": "2024 年年度报告",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250320",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-03-20/1222847712.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250320_2024A_年度报告_1222847712.pdf",
+      "sha256": "5a41e6b094095268cd2645b399361dc4a5d1c38c883c99b52197ec042c0a88c8",
+      "bytes": 4639188,
+      "pages": 210,
+      "retrieved_at": "2026-09-24T22:30:58+08:00",
+      "used_by": [
+        "中材科技_002080_基本面分析_20260924_223126.md",
+        "中材科技_002080_基本面分析_20260924_223159.md",
+        "中材科技_002080_基本面分析_20260924_223302.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20240322-39d2324c",
+      "title": "2023 年年度报告",
+      "document_type": "年度报告",
+      "period": "2023A",
+      "published_date": "20240322",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2024-03-22/1219375828.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2024/20240322_2023A_年度报告_1219375828.pdf",
+      "sha256": "39d2324c840fb4da5d2e5ee63a8e3211e0a95fee51e3fc7412b858a59c75bc1a",
+      "bytes": 4007702,
+      "pages": 218,
+      "retrieved_at": "2026-09-24T22:30:59+08:00",
+      "used_by": [
+        "中材科技_002080_基本面分析_20260924_223126.md",
+        "中材科技_002080_基本面分析_20260924_223159.md",
+        "中材科技_002080_基本面分析_20260924_223302.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260922-c05ec8ee",
+      "title": "2026-09-22 特种玻纤布项目变更公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260922",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-09-22/1225575089.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260922_2026_正式披露_1225575089.pdf",
+      "sha256": "c05ec8ee518275d254100de5e31feb4b31502da492b42d9648ae540c3d1798f4",
+      "bytes": 93002,
+      "pages": 3,
+      "retrieved_at": "2026-09-24T22:31:00+08:00",
+      "used_by": [
+        "中材科技_002080_基本面分析_20260924_223126.md",
+        "中材科技_002080_基本面分析_20260924_223159.md",
+        "中材科技_002080_基本面分析_20260924_223302.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260808-a8cb9197",
+      "title": "2026-08-08 定增注册批复公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260808",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-08/1225462939.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260808_2026_正式披露_1225462939.pdf",
+      "sha256": "a8cb91972e1e727e5d3c6978468498b176e8cfa800b524cd13fdade82017f726",
+      "bytes": 94670,
+      "pages": 2,
+      "retrieved_at": "2026-09-24T22:31:00+08:00",
+      "used_by": [
+        "中材科技_002080_基本面分析_20260924_223126.md",
+        "中材科技_002080_基本面分析_20260924_223159.md",
+        "中材科技_002080_基本面分析_20260924_223302.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260918-63c23cdc",
+      "title": "2026-09-18 募集说明书",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260918",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-09-18/1225569348.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260918_2026_正式披露_1225569348.pdf",
+      "sha256": "63c23cdc1d424b19f1f66c857d8b22fbe20d380fa94f171e1b751162b5df4615",
+      "bytes": 4035184,
+      "pages": 114,
+      "retrieved_at": "2026-09-24T22:31:01+08:00",
+      "used_by": [
+        "中材科技_002080_基本面分析_20260924_223126.md",
+        "中材科技_002080_基本面分析_20260924_223159.md",
+        "中材科技_002080_基本面分析_20260924_223302.md"
+      ],
+      "status": "已归档"
+    }
+  ]
+}
