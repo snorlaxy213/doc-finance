@@ -1,0 +1,258 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-24T22:06:56+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260818-56a4de0d",
+      "title": "多氟多2026年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260818",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-18/1225478600.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260818_2026H1_半年度报告_1225478600.pdf",
+      "sha256": "56a4de0d07ddeb64b369852042285f89e5f61e50f47f9f95b71c33018593b63c",
+      "bytes": 5182255,
+      "pages": 199,
+      "retrieved_at": "2026-09-24T21:52:39+08:00",
+      "used_by": [
+        "多氟多2026-09-24基本面分析"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260416-c5fde446",
+      "title": "多氟多2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260416",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-16/1225107815.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260416_2025A_年度报告_1225107815.pdf",
+      "sha256": "c5fde446155139da966a5f78092c710585d8db4325900db8e226083a846e92fc",
+      "bytes": 6424693,
+      "pages": 265,
+      "retrieved_at": "2026-09-24T21:52:40+08:00",
+      "used_by": [
+        "多氟多2026-09-24基本面分析"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250424-78ed517e",
+      "title": "多氟多2024年年度报告",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250424",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-04-24/1223233779.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250424_2024A_年度报告_1223233779.pdf",
+      "sha256": "78ed517e6505069014ee802ee8be3ed85def56b7d041d08077892da828d0e3c4",
+      "bytes": 6980750,
+      "pages": 269,
+      "retrieved_at": "2026-09-24T21:54:51+08:00",
+      "used_by": [
+        "多氟多2026-09-24基本面分析"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20240329-aeedb3fe",
+      "title": "多氟多2023年年度报告",
+      "document_type": "年度报告",
+      "period": "2023A",
+      "published_date": "20240329",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2024-03-29/1219437815.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2024/20240329_2023A_年度报告_1219437815.pdf",
+      "sha256": "aeedb3fed95ef0fe66b2dac12df20f38c135c8504c21acd253a52fb484930e22",
+      "bytes": 6925972,
+      "pages": 316,
+      "retrieved_at": "2026-09-24T21:54:52+08:00",
+      "used_by": [
+        "多氟多2026-09-24基本面分析"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260924-cbf4d75a",
+      "title": "多氟多2026年9月24日股东质押公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260924",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-09-24/1225578312.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260924_2026_正式披露_1225578312.pdf",
+      "sha256": "cbf4d75a0762f1b187c80c259e790004e54c90eb58ab93d9da62d4b40c3147e9",
+      "bytes": 58433,
+      "pages": 2,
+      "retrieved_at": "2026-09-24T21:54:52+08:00",
+      "used_by": [
+        "多氟多2026-09-24基本面分析"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260922-a3b00708",
+      "title": "多氟多2026年9月22日股东解质押公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260922",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-09-22/1225573782.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260922_2026_正式披露_1225573782.pdf",
+      "sha256": "a3b007080680d115ffccf4b3d742d09cc9416e69fe4f7a4097ae10e83835e924",
+      "bytes": 57787,
+      "pages": 2,
+      "retrieved_at": "2026-09-24T21:54:53+08:00",
+      "used_by": [
+        "多氟多2026-09-24基本面分析"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260919-b95ba0ca",
+      "title": "多氟多2026年9月19日借款增资公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260919",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-09-19/1225572883.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260919_2026_正式披露_1225572883.pdf",
+      "sha256": "b95ba0ca4cdb06c74a1e84aa73a98fca9e7fc4fe37532fc9b097fbc85c2f15af",
+      "bytes": 116005,
+      "pages": null,
+      "retrieved_at": "2026-09-24T21:54:53+08:00",
+      "used_by": [
+        "多氟多2026-09-24基本面分析"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260911-02c15c48",
+      "title": "多氟多2026年9月11日子公司股权交易公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260911",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-09-11/1225558574.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260911_2026_正式披露_1225558574.pdf",
+      "sha256": "02c15c4845ebb535610c02351f9277a3632cf070570e4579198a23dbada566a7",
+      "bytes": 104072,
+      "pages": null,
+      "retrieved_at": "2026-09-24T21:54:53+08:00",
+      "used_by": [
+        "多氟多2026-09-24基本面分析"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260821-468d3cf9",
+      "title": "天赐材料2026年半年度报告同行对比",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260821",
+      "official_url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-08-21/4e3cbd9d-951f-4764-9ae7-74c641d4b04a.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260821_2026H1_半年度报告_4e3cbd9d-951f-4764-9ae7-74c641d4b04a.pdf",
+      "sha256": "468d3cf99dd9f9ff1e4383690dc2909ad7074cb7815dd189193afba312fb023b",
+      "bytes": 1708601,
+      "pages": 157,
+      "retrieved_at": "2026-09-24T21:57:12+08:00",
+      "used_by": [
+        "多氟多2026-09-24基本面分析"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260821-9619da67",
+      "title": "新宙邦2026年半年度报告同行对比",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260821",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-21/1225487079.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260821_2026H1_半年度报告_1225487079.pdf",
+      "sha256": "9619da670d27a1d9ea392469529fc303ef79fe17ea180f3d0e18e34eda5d673a",
+      "bytes": 4695564,
+      "pages": 178,
+      "retrieved_at": "2026-09-24T21:57:12+08:00",
+      "used_by": [
+        "多氟多2026-09-24基本面分析"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260424-b5dd81cb",
+      "title": "多氟多2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260424",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-24/1225159579.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260424_2026Q1_第一季度报告_1225159579.pdf",
+      "sha256": "b5dd81cbc42fdd9529d61ac22b07ccb40b3d57e6a5e9ad78823f1a5bb1b35179",
+      "bytes": 502642,
+      "pages": null,
+      "retrieved_at": "2026-09-24T21:58:31+08:00",
+      "used_by": [
+        "多氟多2026-09-24基本面分析"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260804-662fd57a",
+      "title": "深圳证券交易所2026年8月4日多氟多监管函交易所原文镜像",
+      "document_type": "监管公告",
+      "period": "2026",
+      "published_date": "20260804",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESZ_STOCK/2026/2026-8/2026-08-04/12477574.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260804_2026_监管公告_12477574.pdf",
+      "sha256": "662fd57ace92b2f0c81fde349a6a89b2897e692ff658d10551a1763cb63acda3",
+      "bytes": 100113,
+      "pages": null,
+      "retrieved_at": "2026-09-24T22:00:35+08:00",
+      "used_by": [
+        "多氟多2026-09-24基本面分析"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260310-81877607",
+      "title": "天赐材料2025年年度报告同行估值",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260310",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-03-10/1225002090.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260310_2025A_年度报告_1225002090.pdf",
+      "sha256": "81877607987489f2454c2128180e0427ad871e44f8cbc9fe3d3e931776b8e4a3",
+      "bytes": 5156718,
+      "pages": 199,
+      "retrieved_at": "2026-09-24T22:06:55+08:00",
+      "used_by": [
+        "多氟多2026-09-24基本面分析"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260324-869370f7",
+      "title": "新宙邦2025年年度报告同行估值",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260324",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-03-24/1225026296.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260324_2025A_年度报告_1225026296.pdf",
+      "sha256": "869370f748df99731c01040af0d0bebfc85e1dd82d2b42377f70888fe529b3ae",
+      "bytes": 5370502,
+      "pages": 219,
+      "retrieved_at": "2026-09-24T22:06:56+08:00",
+      "used_by": [
+        "多氟多2026-09-24基本面分析"
+      ],
+      "status": "已归档"
+    }
+  ]
+}
