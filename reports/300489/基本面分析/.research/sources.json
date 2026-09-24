@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-24T23:13:45+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260829-9df50ebf",
+      "title": "光智科技2026年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260829",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225524375.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260829_2026H1_半年度报告_1225524375.pdf",
+      "sha256": "9df50ebf9b12db2fb234c03673a0d512be8d7fee20a6c36e323f0968a387d15f",
+      "bytes": 1172178,
+      "pages": 167,
+      "retrieved_at": "2026-09-24T22:57:08+08:00",
+      "used_by": [
+        "光智科技300489首次基本面分析"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260324-447f9ee3",
+      "title": "光智科技2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260324",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-03-24/1225025231.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260324_2025A_年度报告_1225025231.pdf",
+      "sha256": "447f9ee3ffb8e334a3b415d45f9e5c3bd81caac297a23d283eefa550201368fe",
+      "bytes": 1409259,
+      "pages": 210,
+      "retrieved_at": "2026-09-24T22:57:08+08:00",
+      "used_by": [
+        "光智科技300489首次基本面分析"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250315-f5642db4",
+      "title": "光智科技2024年年度报告",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250315",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-03-15/1222806638.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250315_2024A_年度报告_1222806638.pdf",
+      "sha256": "f5642db4ef2738508ccbe755ea0e67f64466438cc339bc83141ef324910f2e41",
+      "bytes": 3735302,
+      "pages": 218,
+      "retrieved_at": "2026-09-24T22:59:57+08:00",
+      "used_by": [
+        "光智科技300489首次基本面分析"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260825-56a7ac36",
+      "title": "光智科技收购先锐科技进展公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260825",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-25/1225503163.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260825_期间待核验_正式披露_1225503163.pdf",
+      "sha256": "56a7ac36208595759ca284c97b88df0bfb67ff5c9e757a4963a73474275f7ea5",
+      "bytes": 84811,
+      "pages": 3,
+      "retrieved_at": "2026-09-24T22:59:57+08:00",
+      "used_by": [
+        "光智科技300489首次基本面分析"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260921-bed8b103",
+      "title": "光智科技调剂担保额度公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260921",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-09-21/1225575205.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260921_期间待核验_正式披露_1225575205.pdf",
+      "sha256": "bed8b1036bde8c2a07c791baf7b77540bf3d4b3018b51750e5d6195dd63a3f45",
+      "bytes": 117170,
+      "pages": 5,
+      "retrieved_at": "2026-09-24T22:59:58+08:00",
+      "used_by": [
+        "光智科技300489首次基本面分析"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260923-dc801dd6",
+      "title": "光智科技担保进展公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260923",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-09-23/1225578283.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260923_期间待核验_正式披露_1225578283.pdf",
+      "sha256": "dc801dd6b77d08ec9364bf56a994f7f6d999c5a2d76531e3172b8dc1a8469001",
+      "bytes": 115448,
+      "pages": 4,
+      "retrieved_at": "2026-09-24T22:59:58+08:00",
+      "used_by": [
+        "光智科技300489首次基本面分析"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260826-7dfefa79",
+      "title": "同行高德红外2026年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260826",
+      "official_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-26/965bf190-be63-4a98-b646-77c8db4bfea6.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260826_2026H1_半年度报告_965bf190-be63-4a98-b646-77c8db4bfea6.pdf",
+      "sha256": "7dfefa7978893d8ac67c4adb50d9841677eef8e1b72e3e72dfa1ab58c2c8bee2",
+      "bytes": 2396623,
+      "pages": 171,
+      "retrieved_at": "2026-09-24T23:02:43+08:00",
+      "used_by": [
+        "光智科技300489首次基本面分析同行对比"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "FAILED-08b2b652b854",
+      "title": "同行睿创微纳2026年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260818",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-08-18/688002_20260818_ACUH.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-09-24T23:02:43+08:00",
+      "used_by": [
+        "光智科技300489首次基本面分析同行对比"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "SRC-20260916-24c0d3cd",
+      "title": "光智科技2026年9月16日投资者关系记录新浪镜像",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260916",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESZ_STOCK/2026/2026-9/2026-09-16/12607185.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260916_2026_正式披露_12607185.pdf",
+      "sha256": "24c0d3cdd0a1306c287ee85fc97613ddfd5c087d525999b3ab9f56d39793d1df",
+      "bytes": 150084,
+      "pages": 5,
+      "retrieved_at": "2026-09-24T23:04:10+08:00",
+      "used_by": [
+        "光智科技300489首次基本面分析；原始交易所PDF未定位，新浪公告镜像"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260924-7fc9fd96",
+      "title": "光智科技2026年9月24日投资者关系记录新浪镜像",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260924",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESZ_STOCK/2026/2026-9/2026-09-24/12621635.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260924_2026_正式披露_12621635.pdf",
+      "sha256": "7fc9fd966d42b277302580d50ff62bb0ad12b1d23bebe2bd42c72aa2db046bda",
+      "bytes": 128029,
+      "pages": 4,
+      "retrieved_at": "2026-09-24T23:04:10+08:00",
+      "used_by": [
+        "光智科技300489首次基本面分析；原始交易所PDF未定位，新浪公告镜像"
+      ],
+      "status": "已归档"
+    }
+  ]
+}
