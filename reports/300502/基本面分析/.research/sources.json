@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-07-19T23:03:15+08:00",
+  "updated_at": "2026-09-26T02:25:49+08:00",
   "sources": [
     {
       "source_id": "SRC-20240423-ce36d96e",
@@ -88,7 +88,8 @@
       "pages": 2,
       "retrieved_at": "2026-07-19T22:59:15+08:00",
       "used_by": [
-        "新易盛_300502_基本面分析_20260719"
+        "新易盛_300502_基本面分析_20260719",
+        "新易盛_300502_基本面分析_20260719_230608.md"
       ],
       "status": "已归档"
     },
@@ -162,6 +163,114 @@
       "retrieved_at": "2026-07-19T23:03:15+08:00",
       "used_by": [
         "新易盛_300502_基本面分析_20260719"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260417-5e372206",
+      "title": "中际旭创2026Q1报告",
+      "document_type": "正式披露",
+      "period": "2026Q1",
+      "published_date": "20260417",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-17/1225111941.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260417_2026Q1_正式披露_1225111941.pdf",
+      "sha256": "5e37220662c1fea7c9286a9410dbcef20ce83f70329ba3b44f2bf733459aa1af",
+      "bytes": 793963,
+      "pages": 13,
+      "retrieved_at": "2026-09-26T02:16:00+08:00",
+      "used_by": [
+        "新易盛_300502_基本面分析_20260719_230608.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260825-bc164fb2",
+      "title": "2026年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260825",
+      "official_url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-08-25/7208175f-a232-40d5-84a3-8a187e783752.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260825_2026H1_半年度报告_7208175f-a232-40d5-84a3-8a187e783752.pdf",
+      "sha256": "bc164fb2026947ef377e0f242cb80566b30afcb06d202e47b20222fd45c93d3e",
+      "bytes": 934935,
+      "pages": 134,
+      "retrieved_at": "2026-09-26T02:16:00+08:00",
+      "used_by": [
+        "2026-09-26正式报告"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260912-979a6320",
+      "title": "2026年9月投资者关系活动记录",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260912",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESZ_STOCK/2026/2026-9/2026-09-12/12599475.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260912_2026_正式披露_12599475.pdf",
+      "sha256": "979a632023f66123d22dba6a3bd04fdb156ff31637a20baac5e74a414af0a6fe",
+      "bytes": 193891,
+      "pages": 4,
+      "retrieved_at": "2026-09-26T02:18:01+08:00",
+      "used_by": [
+        "2026-09-26正式报告"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260821-a6d0221a",
+      "title": "2026年限制性股票激励计划草案摘要",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260821",
+      "official_url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-08-21/54fa3c62-3e75-455f-825e-f56e5f36fb80.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260821_2026_正式披露_54fa3c62-3e75-455f-825e-f56e5f36fb80.pdf",
+      "sha256": "a6d0221aafc85df50082ad7c37dcb8527395e1a966d017cc54d4c076b5156985",
+      "bytes": 227782,
+      "pages": 26,
+      "retrieved_at": "2026-09-26T02:18:30+08:00",
+      "used_by": [
+        "2026-09-26正式报告"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260822-e0ecd7c3",
+      "title": "中际旭创2026年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260822",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-22/1225491753.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260822_2026H1_半年度报告_1225491753.pdf",
+      "sha256": "e0ecd7c365c65e90b1fa4b4616ba3f4649449d64451e0ba0b1b78ba9ce3170bf",
+      "bytes": 2984970,
+      "pages": 184,
+      "retrieved_at": "2026-09-26T02:18:36+08:00",
+      "used_by": [
+        "2026-09-26正式报告"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260819-6f508be2",
+      "title": "天孚通信2026年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260819",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-19/1225480328.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260819_2026H1_半年度报告_1225480328.pdf",
+      "sha256": "6f508be2da82fb7b1728e2e638b5ce721baa3cf98a64234db636358019d913f5",
+      "bytes": 1360789,
+      "pages": 185,
+      "retrieved_at": "2026-09-26T02:24:34+08:00",
+      "used_by": [
+        "2026-09-26正式报告"
       ],
       "status": "已归档"
     }
