@@ -1,0 +1,282 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-24T23:42:01+08:00",
+  "sources": [
+    {
+      "source_id": "FAILED-774a4c84dead",
+      "title": "烽火通信2026H1半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260827",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-08-27/600498_20260827_GB5K.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-09-24T23:25:08+08:00",
+      "used_by": [
+        "烽火通信_600498_基本面分析_20260924"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "SRC-20260430-fc15d9a5",
+      "title": "烽火通信2026Q1第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260430",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-30/1225254556.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260430_2026Q1_第一季度报告_1225254556.pdf",
+      "sha256": "fc15d9a52ef7c9cc135c5a717cd40dc242510fa19778083f0fe69b3b0f1fefa8",
+      "bytes": 194079,
+      "pages": 16,
+      "retrieved_at": "2026-09-24T23:25:08+08:00",
+      "used_by": [
+        "烽火通信_600498_基本面分析_20260924"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260424-b2db3ba8",
+      "title": "烽火通信2025A年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260424",
+      "official_url": "https://pdf.dfcfw.com/pdf/H2_AN202604241821544865_1.pdf",
+      "alternate_urls": [
+        "https://static.cninfo.com.cn/finalpage/2026-04-25/1225178004.PDF"
+      ],
+      "local_path": "原始资料/2026/20260424_2025A_年度报告_H2_AN202604241821544865_1.pdf",
+      "sha256": "b2db3ba847b9a8fd8aa27afb8754add75949e41e0f302e9babe6dfb528917545",
+      "bytes": 1471901,
+      "pages": 201,
+      "retrieved_at": "2026-09-24T23:25:08+08:00",
+      "used_by": [
+        "烽火通信_600498_基本面分析_20260924"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "FAILED-391e9da6939e",
+      "title": "烽火通信2026年向特定对象发行批复",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260916",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-09-16/600498_20260916_LZUJ.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-09-24T23:25:08+08:00",
+      "used_by": [
+        "烽火通信_600498_基本面分析_20260924"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "SRC-20260827-8caa052e",
+      "title": "烽火通信2026H1半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260827",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESH_STOCK/2026/2026-8/2026-08-27/12546277.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260827_2026H1_半年度报告_12546277.pdf",
+      "sha256": "8caa052e21ac93e80ec2aef4038e8e438e0faead6ebb3d4d9def3800813a016f",
+      "bytes": 1235893,
+      "pages": null,
+      "retrieved_at": "2026-09-24T23:25:39+08:00",
+      "used_by": [
+        "烽火通信_600498_基本面分析_20260924"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250426-631b72c6",
+      "title": "烽火通信2024A年度报告",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250426",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-04-26/1223328073.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250426_2024A_年度报告_1223328073.pdf",
+      "sha256": "631b72c68cc80a19214bc5bd24b6765c3b69bc9b9cccddcc4371b60df08232fb",
+      "bytes": 1454275,
+      "pages": 210,
+      "retrieved_at": "2026-09-24T23:27:15+08:00",
+      "used_by": [
+        "烽火通信_600498_基本面分析_20260924"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250823-adc4502c",
+      "title": "烽火通信2025H1半年度报告",
+      "document_type": "半年度报告",
+      "period": "2025H1",
+      "published_date": "20250823",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-08-23/1224557218.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250823_2025H1_半年度报告_1224557218.pdf",
+      "sha256": "adc4502c2512efc38b0200c0aa9e865241a69dbe735cb2933b8d874d3e8d475a",
+      "bytes": 1161260,
+      "pages": null,
+      "retrieved_at": "2026-09-24T23:27:15+08:00",
+      "used_by": [
+        "烽火通信_600498_基本面分析_20260924"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260827-3752453a",
+      "title": "烽火通信2026年飞思灵关联交易公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260827",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESH_STOCK/2026/2026-8/2026-08-27/12546276.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260827_2026_正式披露_12546276.pdf",
+      "sha256": "3752453a13c33f7bb675b92bf9622d594cbde0d1568b42f27b2336c2a9cf6a7d",
+      "bytes": 295250,
+      "pages": 11,
+      "retrieved_at": "2026-09-24T23:29:10+08:00",
+      "used_by": [
+        "烽火通信_600498_基本面分析_20260924"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260917-4f2ddcff",
+      "title": "烽火通信2026年第一次临时股东会决议公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260917",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESH_STOCK/2026/2026-9/2026-09-17/12606417.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260917_2026_正式披露_12606417.pdf",
+      "sha256": "4f2ddcff790d17b163b5eb14a311655605bd396171722b965453b595fdd3cd97",
+      "bytes": 112263,
+      "pages": 3,
+      "retrieved_at": "2026-09-24T23:29:10+08:00",
+      "used_by": [
+        "烽火通信_600498_基本面分析_20260924"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260916-f1a1e190",
+      "title": "烽火通信2026年向特定对象发行集团批复公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260916",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESH_STOCK/2026/2026-9/2026-09-16/12603506.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260916_2026_正式披露_12603506.pdf",
+      "sha256": "f1a1e190cb5ac317515929990642659cab99fdf7d337864743e303a15c414637",
+      "bytes": 116628,
+      "pages": null,
+      "retrieved_at": "2026-09-24T23:29:11+08:00",
+      "used_by": [
+        "烽火通信_600498_基本面分析_20260924"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260711-72bd6ff2",
+      "title": "烽火通信2026年向特定对象发行方案论证报告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260711",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-07-11/1225420146.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260711_2026_正式披露_1225420146.pdf",
+      "sha256": "72bd6ff223beb7ef3f88c246357329e43916d8cd75411c04cfbf073fbe3366a9",
+      "bytes": 262241,
+      "pages": null,
+      "retrieved_at": "2026-09-24T23:29:11+08:00",
+      "used_by": [
+        "烽火通信_600498_基本面分析_20260924"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260831-647c1401",
+      "title": "富国创新科技混合2026H1中期报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260831",
+      "official_url": "https://www.fullgoal.com.cn/wbs-file/fund_report/20260831/CN_50100000_002692_FB020010_20260015.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260831_2026H1_半年度报告_CN_50100000_002692_FB020010_20260015.pdf",
+      "sha256": "647c1401e70ee7388d7098caccb564e33d1e8cf42bb6154d6a694b92a62ad004",
+      "bytes": 1289234,
+      "pages": 60,
+      "retrieved_at": "2026-09-24T23:30:36+08:00",
+      "used_by": [
+        "烽火通信_600498_基本面分析_20260924"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260331-c557f476",
+      "title": "富国创新科技混合2025A年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260331",
+      "official_url": "https://www.fullgoal.com.cn/wbs-file/fund_report/20260331/CN_50100000_002692_FB010010_20260002.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260331_2025A_年度报告_CN_50100000_002692_FB010010_20260002.pdf",
+      "sha256": "c557f4761486c21f4e9aff0bf43294bb538e819f70f17f9a6a9557b7794da2fe",
+      "bytes": 1619995,
+      "pages": null,
+      "retrieved_at": "2026-09-24T23:30:37+08:00",
+      "used_by": [
+        "烽火通信_600498_基本面分析_20260924"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260822-cfa28ee2",
+      "title": "长飞光纤2026H1同行半年报",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260822",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-22/1225493215.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260822_2026H1_半年度报告_1225493215.pdf",
+      "sha256": "cfa28ee24c024ee433774e78b7e301f1928246fcefca3cc04812414226ef30f1",
+      "bytes": 1223968,
+      "pages": 187,
+      "retrieved_at": "2026-09-24T23:31:47+08:00",
+      "used_by": [
+        "烽火通信_600498_基本面分析_20260924"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260822-33b6cbe9",
+      "title": "中兴通讯2026H1同行半年报",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260822",
+      "official_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-22/95c1a24d-f875-40f7-b92d-a384d5333a66.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260822_2026H1_半年度报告_95c1a24d-f875-40f7-b92d-a384d5333a66.pdf",
+      "sha256": "33b6cbe914f7839fd6d92b2fc2a480e2d09fdc7f5af8d3f75073f2f80aa1339a",
+      "bytes": 6208549,
+      "pages": 206,
+      "retrieved_at": "2026-09-24T23:31:49+08:00",
+      "used_by": [
+        "烽火通信_600498_基本面分析_20260924"
+      ],
+      "status": "已归档"
+    }
+  ]
+}
