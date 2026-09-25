@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-04T23:35:32+08:00",
+  "updated_at": "2026-09-26T02:08:23+08:00",
   "sources": [
     {
       "source_id": "SRC-20260422-fe246fac",
@@ -107,6 +107,158 @@
       "retrieved_at": "2026-08-04T23:35:32+08:00",
       "used_by": [
         "东山精密002384基本面分析20260804"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260822-08d0b0a3",
+      "title": "东山精密2026年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260822",
+      "official_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-22/9290e257-66b5-4681-a8ce-824cd1e6d853.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260822_2026H1_半年度报告_9290e257-66b5-4681-a8ce-824cd1e6d853.pdf",
+      "sha256": "08d0b0a3e8e5568962c7f825fc4f0c1f837cef3babb6f0d314827d114671f7b8",
+      "bytes": 1288163,
+      "pages": 132,
+      "retrieved_at": "2026-09-26T02:01:22+08:00",
+      "used_by": [
+        "东山精密_002384_基本面分析_最新.md",
+        "东山精密_002384_基本面分析_20260926_020728.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260824-2c87b290",
+      "title": "东山精密2026年8月24日投资者关系记录",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260824",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-24/1225497036.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260824_2026_正式披露_1225497036.pdf",
+      "sha256": "2c87b2903aece42dd1fc3af9da7df5e48e9e56748e4ccf443fbaf5bb101f550b",
+      "bytes": 134839,
+      "pages": null,
+      "retrieved_at": "2026-09-26T02:01:23+08:00",
+      "used_by": [
+        "东山精密_002384_基本面分析_最新.md",
+        "东山精密_002384_基本面分析_20260926_020728.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260822-5d0959e4",
+      "title": "东山精密2026年增加对外投资额度公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260822",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-22/1225492197.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260822_2026_正式披露_1225492197.pdf",
+      "sha256": "5d0959e407cf343f170156ed6e1c6e6759c8188c71378408c27682b907a61323",
+      "bytes": 85301,
+      "pages": 3,
+      "retrieved_at": "2026-09-26T02:01:23+08:00",
+      "used_by": [
+        "东山精密_002384_基本面分析_最新.md",
+        "东山精密_002384_基本面分析_20260926_020728.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260822-1b3d7c9e",
+      "title": "东山精密2026年对Multek增资公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260822",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-22/1225492198.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260822_2026_正式披露_1225492198.pdf",
+      "sha256": "1b3d7c9e6d2d2ebd9101a68903351c39bd6e9fba6bd19b83ce19f6c037797ba9",
+      "bytes": 69131,
+      "pages": 2,
+      "retrieved_at": "2026-09-26T02:01:23+08:00",
+      "used_by": [
+        "东山精密_002384_基本面分析_最新.md",
+        "东山精密_002384_基本面分析_20260926_020728.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260902-62357f04",
+      "title": "东山精密2026年9月回购进展公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260902",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-09-02/1225541745.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260902_2026_正式披露_1225541745.pdf",
+      "sha256": "62357f04a611ee778ee9e7ecaea8357b88bd95dcc1672976120e8061e2542827",
+      "bytes": 82792,
+      "pages": null,
+      "retrieved_at": "2026-09-26T02:01:23+08:00",
+      "used_by": [
+        "东山精密_002384_基本面分析_最新.md",
+        "东山精密_002384_基本面分析_20260926_020728.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260826-2ce08d3c",
+      "title": "沪电股份2026年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260826",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-26/1225502252.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260826_2026H1_半年度报告_1225502252.pdf",
+      "sha256": "2ce08d3cf4621f4370eb9940d98892eae2f775572f5a4c9fd0ac8748c9b55920",
+      "bytes": 7082286,
+      "pages": 157,
+      "retrieved_at": "2026-09-26T02:03:20+08:00",
+      "used_by": [
+        "东山精密_002384_基本面分析_最新.md",
+        "东山精密_002384_基本面分析_20260926_020728.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260827-2ac44e79",
+      "title": "深南电路2026年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260827",
+      "official_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-08-27/99646b65-8037-44b1-9cd8-61351de243a2.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260827_2026H1_半年度报告_99646b65-8037-44b1-9cd8-61351de243a2.pdf",
+      "sha256": "2ac44e797a7c7f4e8f1a306a48a5760e078fc7b9086c182fa77d2c502f21c753",
+      "bytes": 3542386,
+      "pages": 157,
+      "retrieved_at": "2026-09-26T02:03:20+08:00",
+      "used_by": [
+        "东山精密_002384_基本面分析_最新.md",
+        "东山精密_002384_基本面分析_20260926_020728.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260825-bc164fb2",
+      "title": "新易盛2026年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260825",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-25/1225499406.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260825_2026H1_半年度报告_1225499406.pdf",
+      "sha256": "bc164fb2026947ef377e0f242cb80566b30afcb06d202e47b20222fd45c93d3e",
+      "bytes": 934935,
+      "pages": 134,
+      "retrieved_at": "2026-09-26T02:03:20+08:00",
+      "used_by": [
+        "东山精密_002384_基本面分析_最新.md",
+        "东山精密_002384_基本面分析_20260926_020728.md"
       ],
       "status": "已归档"
     }
