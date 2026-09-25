@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-25T15:16:44+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260725-d96b5d49",
+      "title": "宁德时代2026年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260725",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-07-25/1225441586.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260725_2026H1_半年度报告_1225441586.pdf",
+      "sha256": "d96b5d49ae75bec5913d032de781873565f5405bf99fd8b011eab152549862b9",
+      "bytes": 1648690,
+      "pages": 182,
+      "retrieved_at": "2026-09-25T15:01:16+08:00",
+      "used_by": [
+        "宁德时代_300750_基本面分析_20260925_151513.md",
+        "宁德时代_300750_基本面分析_20260925_151617.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260310-c1527297",
+      "title": "宁德时代2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260310",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-03-10/1225002214.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260310_2025A_年度报告_1225002214.pdf",
+      "sha256": "c15272977147dee7e6935a38ea0e4fd6855370aabb106f54cfe20f7cf6048ec9",
+      "bytes": 2043710,
+      "pages": 232,
+      "retrieved_at": "2026-09-25T15:01:16+08:00",
+      "used_by": [
+        "宁德时代_300750_基本面分析_20260925_151513.md",
+        "宁德时代_300750_基本面分析_20260925_151617.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260416-32e4936e",
+      "title": "宁德时代2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260416",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-16/1225107946.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260416_2026Q1_第一季度报告_1225107946.pdf",
+      "sha256": "32e4936e6dd68a89741a8167b4c4ae3f8b4bc7ef61d70f35b294e1cb0e46fbe8",
+      "bytes": 537170,
+      "pages": 12,
+      "retrieved_at": "2026-09-25T15:01:16+08:00",
+      "used_by": [
+        "宁德时代_300750_基本面分析_20260925_151513.md",
+        "宁德时代_300750_基本面分析_20260925_151617.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250315-b4f1713d",
+      "title": "宁德时代2024年年度报告",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250315",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-03-15/1222806982.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250315_2024A_年度报告_1222806982.pdf",
+      "sha256": "b4f1713d7b821eb076c102711d177fe942ccc2bc8dd171ae5d7a95799a65b0ad",
+      "bytes": 2070073,
+      "pages": 229,
+      "retrieved_at": "2026-09-25T15:03:20+08:00",
+      "used_by": [
+        "宁德时代_300750_基本面分析_20260925_151513.md",
+        "宁德时代_300750_基本面分析_20260925_151617.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260915-a44f650b",
+      "title": "宁德时代2026年关联共同投资公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260915",
+      "official_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-09-15/4919bc75-0c85-43b7-ba97-efa6a58e62a3.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260915_2026_正式披露_4919bc75-0c85-43b7-ba97-efa6a58e62a3.pdf",
+      "sha256": "a44f650b7b8fad2888cf47bbeb9f490b0b322557faa99751e6e43d8f788c7c6a",
+      "bytes": 169834,
+      "pages": 6,
+      "retrieved_at": "2026-09-25T15:03:21+08:00",
+      "used_by": [
+        "宁德时代_300750_基本面分析_20260925_151513.md",
+        "宁德时代_300750_基本面分析_20260925_151617.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260820-dd0753b0",
+      "title": "亿纬锂能2026年半年度报告摘要",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260820",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-20/1225483570.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260820_2026H1_半年度报告_1225483570.pdf",
+      "sha256": "dd0753b0d8730f4bb52be1e944dc3b79d5749d7bc10179935003cdf34d510cda",
+      "bytes": 175251,
+      "pages": 4,
+      "retrieved_at": "2026-09-25T15:03:21+08:00",
+      "used_by": [
+        "宁德时代_300750_基本面分析_20260925_151513.md",
+        "宁德时代_300750_基本面分析_20260925_151617.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260915-7cdb1935",
+      "title": "宁德时代2026年深远基金投资公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260915",
+      "official_url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-09-15/1606d1d2-d721-408a-baaf-d29d1c1f4ca4.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260915_2026_正式披露_1606d1d2-d721-408a-baaf-d29d1c1f4ca4.pdf",
+      "sha256": "7cdb19353bbd89384872ddc70fdec5213a6ba97a7abed5dcfa4b994769563653",
+      "bytes": 171155,
+      "pages": 6,
+      "retrieved_at": "2026-09-25T15:05:19+08:00",
+      "used_by": [
+        "宁德时代_300750_基本面分析_20260925_151513.md",
+        "宁德时代_300750_基本面分析_20260925_151617.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260924-0d6f91f9",
+      "title": "宁德时代2026年9月24日翌日披露报表",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260924",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESZ_STOCK/2026/2026-9/2026-09-24/12622111.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260924_2026_正式披露_12622111.pdf",
+      "sha256": "0d6f91f9b01df7a1e17bbee2cd6f083b0e87efe10d6d18c3f4669f8dc3543b63",
+      "bytes": 143107,
+      "pages": 7,
+      "retrieved_at": "2026-09-25T15:05:19+08:00",
+      "used_by": [
+        "宁德时代_300750_基本面分析_20260925_151513.md",
+        "宁德时代_300750_基本面分析_20260925_151617.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "FAILED-2dcd4c89e089",
+      "title": "景顺长城新兴成长2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260422",
+      "official_url": "https://www.igwfmc.com/upload/dqgg/20260422/2026-04-22景顺长城新兴成长混合型证券投资基金2026年第1季度报告.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-09-25T15:05:19+08:00",
+      "used_by": [
+        "宁德时代_300750_基本面分析_20260925_151513.md",
+        "宁德时代_300750_基本面分析_20260925_151617.md"
+      ],
+      "status": "归档失败",
+      "error": "'ascii' codec can't encode characters in position 36-52: ordinal not in range(128)"
+    },
+    {
+      "source_id": "SRC-20260422-30901b00",
+      "title": "景顺长城新兴成长2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260422",
+      "official_url": "https://www.igwfmc.com/upload/dqgg/20260422/2026-04-22%E6%99%AF%E9%A1%BA%E9%95%BF%E5%9F%8E%E6%96%B0%E5%85%B4%E6%88%90%E9%95%BF%E6%B7%B7%E5%90%88%E5%9E%8B%E8%AF%81%E5%88%B8%E6%8A%95%E8%B5%84%E5%9F%BA%E9%87%912026%E5%B9%B4%E7%AC%AC1%E5%AD%A3%E5%BA%A6%E6%8A%A5%E5%91%8A.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260422_2026Q1_第一季度报告_95_BF_E5_9F_8E_E6_96_B0_E5_85_B4_E6_88_90_E9_95_.pdf",
+      "sha256": "30901b00e4389431c9a4957512e6b4e3663d072ace75e872c8c9c693625aac4d",
+      "bytes": 432904,
+      "pages": 12,
+      "retrieved_at": "2026-09-25T15:05:47+08:00",
+      "used_by": [
+        "宁德时代_300750_基本面分析_20260925_151513.md",
+        "宁德时代_300750_基本面分析_20260925_151617.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260828-799618cd",
+      "title": "景顺长城新兴成长2026年中期报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260828",
+      "official_url": "https://www.igwfmc.com/upload/dqgg/20260827/2026-08-28%E6%99%AF%E9%A1%BA%E9%95%BF%E5%9F%8E%E6%96%B0%E5%85%B4%E6%88%90%E9%95%BF%E6%B7%B7%E5%90%88%E5%9E%8B%E8%AF%81%E5%88%B8%E6%8A%95%E8%B5%84%E5%9F%BA%E9%87%912026%E5%B9%B4%E4%B8%AD%E6%9C%9F%E6%8A%A5%E5%91%8A.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260828_2026H1_半年度报告_95_BF_E5_9F_8E_E6_96_B0_E5_85_B4_E6_88_90_E9_95_.pdf",
+      "sha256": "799618cd5ec6ada1f21da6fdb165dc17ebba8a5e48d015d07814cf189f6b5461",
+      "bytes": 1552017,
+      "pages": 52,
+      "retrieved_at": "2026-09-25T15:05:47+08:00",
+      "used_by": [
+        "宁德时代_300750_基本面分析_20260925_151513.md",
+        "宁德时代_300750_基本面分析_20260925_151617.md"
+      ],
+      "status": "已归档"
+    }
+  ]
+}
