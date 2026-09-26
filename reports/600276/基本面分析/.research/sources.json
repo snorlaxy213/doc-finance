@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-26T12:18:38+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260820-ff691066",
+      "title": "恒瑞医药2026年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260820",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-20/1225483600.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260820_2026H1_半年度报告_1225483600.pdf",
+      "sha256": "ff6910663a9726acb889aa061a8bab1433f58890d81ebea013b8c637a097a7aa",
+      "bytes": 4594202,
+      "pages": 182,
+      "retrieved_at": "2026-09-26T12:05:49+08:00",
+      "used_by": [
+        "恒瑞医药_600276_基本面分析_20260926_121811.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260326-fae80e2d",
+      "title": "恒瑞医药2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260326",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-03-26/1225032585.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260326_2025A_年度报告_1225032585.pdf",
+      "sha256": "fae80e2d132f5b6f2bfbb8bcdfd40e1267edb91d689389d63c8e291b0856ace6",
+      "bytes": 3457175,
+      "pages": 236,
+      "retrieved_at": "2026-09-26T12:05:49+08:00",
+      "used_by": [
+        "恒瑞医药_600276_基本面分析_20260926_121811.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250331-7fad40fe",
+      "title": "恒瑞医药2024年年度报告",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250331",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-03-31/1222961962.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250331_2024A_年度报告_1222961962.pdf",
+      "sha256": "7fad40fef23755f81ce5322f45483ea257ef026ebf1f7f5655c8d5998d7049fc",
+      "bytes": 7710195,
+      "pages": 249,
+      "retrieved_at": "2026-09-26T12:07:18+08:00",
+      "used_by": [
+        "恒瑞医药_600276_基本面分析_20260926_121811.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260512-69540375",
+      "title": "恒瑞医药BMS战略合作及许可协议公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260512",
+      "official_url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0512/2026051200300_c.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260512_期间待核验_正式披露_2026051200300_c.pdf",
+      "sha256": "695403756298242d1a8ed82c8d9c64093bed6afb9bf46cce60e8877773be5ddb",
+      "bytes": 263872,
+      "pages": 5,
+      "retrieved_at": "2026-09-26T12:12:03+08:00",
+      "used_by": [
+        "恒瑞医药_600276_基本面分析_20260926_121811.md"
+      ],
+      "status": "已归档"
+    }
+  ]
+}
