@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-08T17:51:52+08:00",
+  "updated_at": "2026-09-26T11:55:43+08:00",
   "sources": [
     {
       "source_id": "SRC-20240508-fed03798",
@@ -145,6 +145,60 @@
         "胜宏科技_300476_基本面分析_20260808"
       ],
       "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260828-1f1a47ec",
+      "title": "2026年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260828",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-28/1225522515.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260828_2026H1_半年度报告_1225522515.pdf",
+      "sha256": "1f1a47ec94dd2d6b18db72e59e2920511cf15213ff5dde41ff302bfcd1c723d7",
+      "bytes": 1534968,
+      "pages": 183,
+      "retrieved_at": "2026-09-26T11:45:37+08:00",
+      "used_by": [
+        "2026-09-26 基本面报告"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260919-bf96de91",
+      "title": "2026年9月投资者关系活动记录表",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260919",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-09-19/1225573508.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260919_2026_正式披露_1225573508.pdf",
+      "sha256": "bf96de91855acdda465b8d0200c00ecc28851e960ff0f2d09ba4d82691f063e3",
+      "bytes": 142168,
+      "pages": 3,
+      "retrieved_at": "2026-09-26T11:47:00+08:00",
+      "used_by": [
+        "2026-09-26 基本面报告"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "FAILED-c12b4a34ba15",
+      "title": "睿远成长价值混合2026年中期报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260827",
+      "official_url": "https://www.foresightfund.com/upload/pdf/1787792089080-ruiyuanchengzhangjiazhihunhexingzhengquantouzijijin2026nianzhongqibaogao.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-09-26T11:53:25+08:00",
+      "used_by": [],
+      "status": "归档失败",
+      "error": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"
     }
   ]
 }
