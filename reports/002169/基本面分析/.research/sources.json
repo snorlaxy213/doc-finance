@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-26T12:41:30+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20240429-d4e2039f",
+      "title": "2023年年度报告",
+      "document_type": "年度报告",
+      "period": "2023A",
+      "published_date": "20240429",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2024-04-29/1219871415.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2024/20240429_2023A_年度报告_1219871415.pdf",
+      "sha256": "d4e2039f7367607d0276835724ce826c5f27b3bc03a1fdcbfe3485188659906e",
+      "bytes": 4644232,
+      "pages": 306,
+      "retrieved_at": "2026-09-26T12:29:38+08:00",
+      "used_by": [
+        "智光电气_002169_基本面分析_20260926_124021.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250424-bc9f9481",
+      "title": "2024年年度报告",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250424",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-04-24/1223239029.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250424_2024A_年度报告_1223239029.pdf",
+      "sha256": "bc9f948179fdbd51b318da14db074d38629caee95d543b79958fbc82f5f1d41a",
+      "bytes": 2006207,
+      "pages": 269,
+      "retrieved_at": "2026-09-26T12:29:37+08:00",
+      "used_by": [
+        "智光电气_002169_基本面分析_20260926_124021.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250823-80bce838",
+      "title": "2025年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2025H1",
+      "published_date": "20250823",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-08-23/1224555387.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250823_2025H1_半年度报告_1224555387.pdf",
+      "sha256": "80bce838d6f5604b0f0a612016b93facfb5239e343c5e9b0f120ef41eeb88e9d",
+      "bytes": 2010823,
+      "pages": 223,
+      "retrieved_at": "2026-09-26T12:29:39+08:00",
+      "used_by": [
+        "智光电气_002169_基本面分析_20260926_124021.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260415-a43e07c0",
+      "title": "2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260415",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-15/1225103142.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260415_2025A_年度报告_1225103142.pdf",
+      "sha256": "a43e07c015994883009a635d1aefb9ce1ce383500c6f671d22e87446da45762e",
+      "bytes": 2034775,
+      "pages": 256,
+      "retrieved_at": "2026-09-26T12:29:37+08:00",
+      "used_by": [
+        "智光电气_002169_基本面分析_20260926_124021.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260602-99936eb8",
+      "title": "2025年度权益分派实施公告",
+      "document_type": "正式披露",
+      "period": "2025",
+      "published_date": "20260602",
+      "official_url": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-06-02/ec7e25c0-e105-4e7e-984a-82c0270c554f.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260602_2025_正式披露_ec7e25c0-e105-4e7e-984a-82c0270c554f.pdf",
+      "sha256": "99936eb80b8d53cc9d69b73bfdeeff5441d6bf6148a6d13a0bbc2b63d7a3a1fc",
+      "bytes": 205664,
+      "pages": 3,
+      "retrieved_at": "2026-09-26T12:33:06+08:00",
+      "used_by": [
+        "智光电气_002169_基本面分析_20260926_124021.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260801-d4bfec67",
+      "title": "2026年8月控股股东股份质押公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260801",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-01/1225450102.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260801_2026_正式披露_1225450102.pdf",
+      "sha256": "d4bfec67d45f99fbe0ec9c6e454c57bdd271a322c7a87c1ae90cbacd38c1287f",
+      "bytes": 181240,
+      "pages": 2,
+      "retrieved_at": "2026-09-26T12:29:40+08:00",
+      "used_by": [
+        "智光电气_002169_基本面分析_20260926_124021.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260805-1be762fe",
+      "title": "2026年8月客户订单公告",
+      "document_type": "合同订单",
+      "period": "2026",
+      "published_date": "20260805",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-05/1225458456.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260805_2026_合同订单_1225458456.pdf",
+      "sha256": "1be762fe80981ba2539074ac7a1bbf8bc3990557405fcf39d2c91eb80570f6a3",
+      "bytes": 188301,
+      "pages": 3,
+      "retrieved_at": "2026-09-26T12:29:39+08:00",
+      "used_by": [
+        "智光电气_002169_基本面分析_20260926_124021.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260824-8b2f9845",
+      "title": "2026年8月终止重大资产重组公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260824",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-24/1225490290.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260824_2026_正式披露_1225490290.pdf",
+      "sha256": "8b2f98459610531313b82caa5c2fc691931c640d679ec01873bbe1a6fe168492",
+      "bytes": 216220,
+      "pages": 4,
+      "retrieved_at": "2026-09-26T12:29:40+08:00",
+      "used_by": [
+        "智光电气_002169_基本面分析_20260926_124021.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260824-88caad1d",
+      "title": "2026年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260824",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-24/1225490292.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260824_2026H1_半年度报告_1225490292.pdf",
+      "sha256": "88caad1db037cb158f71b63a584ded622e7c8860c720d1fe7baa826b2a28d2d5",
+      "bytes": 1433981,
+      "pages": 204,
+      "retrieved_at": "2026-09-26T12:29:36+08:00",
+      "used_by": [
+        "智光电气_002169_基本面分析_20260926_124021.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260824-c0cf736f",
+      "title": "2026年半年度资产减值公告",
+      "document_type": "正式披露",
+      "period": "2026H1",
+      "published_date": "20260824",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-24/1225490296.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260824_2026H1_正式披露_1225490296.pdf",
+      "sha256": "c0cf736fb60824edbcae889c79ce25451fee0b5d7f57ac647ff96cecb306bcde",
+      "bytes": 189127,
+      "pages": 3,
+      "retrieved_at": "2026-09-26T12:29:40+08:00",
+      "used_by": [
+        "智光电气_002169_基本面分析_20260926_124021.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260901-a68308c5",
+      "title": "2026年9月客户订单公告",
+      "document_type": "合同订单",
+      "period": "2026",
+      "published_date": "20260901",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225537197.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260901_2026_合同订单_1225537197.pdf",
+      "sha256": "a68308c589c63e08bd056f3d99f1a24f0cdbee5b258f440012aae7fc40e3e7dc",
+      "bytes": 188146,
+      "pages": 3,
+      "retrieved_at": "2026-09-26T12:29:39+08:00",
+      "used_by": [
+        "智光电气_002169_基本面分析_20260926_124021.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260905-34359ecf",
+      "title": "2026年9月担保进展公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260905",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-09-05/1225548114.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260905_2026_正式披露_1225548114.pdf",
+      "sha256": "34359ecf3f5865669c587fd3c2dda001e7e6381a2de28f1f4e13d724ee9c1dfc",
+      "bytes": 190682,
+      "pages": 2,
+      "retrieved_at": "2026-09-26T12:29:40+08:00",
+      "used_by": [
+        "智光电气_002169_基本面分析_20260926_124021.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260916-6f41c0e9",
+      "title": "终止重组内幕信息知情人股票交易自查公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260916",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-09-16/1225565346.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260916_期间待核验_正式披露_1225565346.pdf",
+      "sha256": "6f41c0e90327d44297358d2e51c67bfe4d11d13d88168cad18e401d6204be7fc",
+      "bytes": 247820,
+      "pages": 7,
+      "retrieved_at": "2026-09-26T12:37:06+08:00",
+      "used_by": [
+        "智光电气_002169_基本面分析_20260926_124021.md"
+      ],
+      "status": "已归档"
+    }
+  ]
+}
