@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-26T12:14:31+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260425-249217ed",
+      "title": "亨通光电2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260425",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-25/1225195764.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260425_2025A_年度报告_1225195764.pdf",
+      "sha256": "249217ed39e5cb1485322562fe9ae9cc0a5b609cbe3d867ef873095a3d717e7b",
+      "bytes": 4316002,
+      "pages": 329,
+      "retrieved_at": "2026-09-26T12:02:35+08:00",
+      "used_by": [
+        "亨通光电_600487_基本面分析_最新.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260827-5aedeab8",
+      "title": "亨通光电2026年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260827",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-27/1225513678.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260827_2026H1_半年度报告_1225513678.pdf",
+      "sha256": "5aedeab8557a889f69b4b6c04695ef5955db8e60aaf26153c470eee0409c245f",
+      "bytes": 5725844,
+      "pages": 308,
+      "retrieved_at": "2026-09-26T12:02:36+08:00",
+      "used_by": [
+        "亨通光电_600487_基本面分析_最新.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "FAILED-2c99649a49a8",
+      "title": "亨通光电2026年向特定对象发行A股股票预案",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260925",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-09-25/600487_20260925_UCIO.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-09-26T12:02:36+08:00",
+      "used_by": [
+        "亨通光电_600487_基本面分析_最新.md"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "FAILED-ce36ee4fd7a6",
+      "title": "亨通光电近五年监管措施公告",
+      "document_type": "监管公告",
+      "period": "期间待核验",
+      "published_date": "20260925",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-09-25/600487_20260925_SGC7.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-09-26T12:02:36+08:00",
+      "used_by": [
+        "亨通光电_600487_基本面分析_最新.md"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "FAILED-2e511b861aa9",
+      "title": "亨通光电2026年海洋能源项目中标公告",
+      "document_type": "合同订单",
+      "period": "2026",
+      "published_date": "20260827",
+      "official_url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-08-27/600487_20260827_NWR2.pdf",
+      "alternate_urls": [],
+      "local_path": "",
+      "sha256": "",
+      "bytes": 0,
+      "pages": null,
+      "retrieved_at": "",
+      "last_attempt_at": "2026-09-26T12:02:36+08:00",
+      "used_by": [
+        "亨通光电_600487_基本面分析_最新.md"
+      ],
+      "status": "归档失败",
+      "error": "下载内容不是有效 PDF 文件头"
+    },
+    {
+      "source_id": "SRC-20250425-3048860f",
+      "title": "亨通光电2024年年度报告",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250425",
+      "official_url": "https://www.htgd.com.cn/web/bocupload/2025/05/13/17471109699878v8taz.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250425_2024A_年度报告_17471109699878v8taz.pdf",
+      "sha256": "3048860fec66c5564cc22e8eeab7b7e7bb85a39e65c1d05fa279643cd3d95e43",
+      "bytes": 3558534,
+      "pages": 332,
+      "retrieved_at": "2026-09-26T12:04:47+08:00",
+      "used_by": [
+        "亨通光电_600487_基本面分析_最新.md"
+      ],
+      "status": "已归档",
+      "date_override": "20250425"
+    },
+    {
+      "source_id": "SRC-20260925-6f27b991",
+      "title": "亨通光电2026年向特定对象发行A股股票预案",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260925",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESH_STOCK/2026/2026-9/2026-09-25/12621704.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260925_2026_正式披露_12621704.pdf",
+      "sha256": "6f27b991819b67385b71c08d7700b869f922533237bd7c63e11c4904ed3eb648",
+      "bytes": 537840,
+      "pages": 62,
+      "retrieved_at": "2026-09-26T12:06:07+08:00",
+      "used_by": [
+        "亨通光电_600487_基本面分析_最新.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260925-385dc0cb",
+      "title": "亨通光电近五年监管措施公告",
+      "document_type": "监管公告",
+      "period": "期间待核验",
+      "published_date": "20260925",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESH_STOCK/2026/2026-9/2026-09-25/12621709.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260925_期间待核验_监管公告_12621709.pdf",
+      "sha256": "385dc0cb0223715cb382a3b54974e0b0bf8125b6adeabac357170f6cee7deb1e",
+      "bytes": 109447,
+      "pages": 3,
+      "retrieved_at": "2026-09-26T12:06:08+08:00",
+      "used_by": [
+        "亨通光电_600487_基本面分析_最新.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260827-bc4aeb99",
+      "title": "亨通光电2026年海洋能源项目中标公告",
+      "document_type": "合同订单",
+      "period": "2026",
+      "published_date": "20260827",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESH_STOCK/2026/2026-8/2026-08-27/12552466.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260827_2026_合同订单_12552466.pdf",
+      "sha256": "bc4aeb9980d652e101edb0ed3989f90eb33df05abf5486f0cfaa57f71d4e37ca",
+      "bytes": 126975,
+      "pages": 2,
+      "retrieved_at": "2026-09-26T12:06:08+08:00",
+      "used_by": [
+        "亨通光电_600487_基本面分析_最新.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250826-ad3c1860",
+      "title": "亨通光电2025年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2025H1",
+      "published_date": "20250826",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-08-26/1224567735.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250826_2025H1_半年度报告_1224567735.pdf",
+      "sha256": "ad3c18600e40b305d2144c8086dba2c4654cb42512fd7fd0788f74139de95d7f",
+      "bytes": 4091466,
+      "pages": 262,
+      "retrieved_at": "2026-09-26T12:06:16+08:00",
+      "used_by": [
+        "亨通光电_600487_基本面分析_最新.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260828-720f4b9f",
+      "title": "中天科技2026年半年度报告同行比较",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260828",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-28/1225518230.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260828_2026H1_半年度报告_1225518230.pdf",
+      "sha256": "720f4b9f9ee422e6371dbc5236a75be2293b4525dab54b42645aa2e5d16a1ede",
+      "bytes": 2099886,
+      "pages": 208,
+      "retrieved_at": "2026-09-26T12:07:22+08:00",
+      "used_by": [
+        "亨通光电_600487_基本面分析_最新.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260925-3ac5af2d",
+      "title": "亨通光电2026年员工持股计划草案",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260925",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESH_STOCK/2026/2026-9/2026-09-25/12621695.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260925_2026_正式披露_12621695.pdf",
+      "sha256": "3ac5af2d6d98b4db37f8350b1cd77dde645565444c56526c24ddd5a08839651c",
+      "bytes": 309723,
+      "pages": null,
+      "retrieved_at": "2026-09-26T12:14:31+08:00",
+      "used_by": [
+        "亨通光电_600487_基本面分析_最新.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260925-5bbe9125",
+      "title": "亨通光电暂不提请股东会审议定增事项公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260925",
+      "official_url": "https://file.finance.sina.com.cn/211.154.219.97%3A9494/MRGG/CNSESH_STOCK/2026/2026-9/2026-09-25/12621711.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260925_期间待核验_正式披露_12621711.pdf",
+      "sha256": "5bbe9125b1ad9bb9a151245e345643b132de838bf085bb95c6479fc0937a2240",
+      "bytes": 88858,
+      "pages": null,
+      "retrieved_at": "2026-09-26T12:14:31+08:00",
+      "used_by": [
+        "亨通光电_600487_基本面分析_最新.md"
+      ],
+      "status": "已归档"
+    }
+  ]
+}
