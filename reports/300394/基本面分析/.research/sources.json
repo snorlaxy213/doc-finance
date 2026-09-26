@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-26T11:56:40+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260819-6f508be2",
+      "title": "天孚通信2026年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260819",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-19/1225480328.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260819_2026H1_半年度报告_1225480328.pdf",
+      "sha256": "6f508be2da82fb7b1728e2e638b5ce721baa3cf98a64234db636358019d913f5",
+      "bytes": 1360789,
+      "pages": 185,
+      "retrieved_at": "2026-09-26T11:45:50+08:00",
+      "used_by": [
+        "天孚通信_300394_基本面分析_20260926.md",
+        "天孚通信_300394_基本面分析_20260926_115634.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260408-969e5142",
+      "title": "天孚通信2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260408",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-08/1225082705.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260408_2025A_年度报告_1225082705.pdf",
+      "sha256": "969e5142ee753b68e1f01c26e25215310d643dda43e4a25ae72bcc01f1265268",
+      "bytes": 2317596,
+      "pages": 265,
+      "retrieved_at": "2026-09-26T11:45:50+08:00",
+      "used_by": [
+        "天孚通信_300394_基本面分析_20260926.md",
+        "天孚通信_300394_基本面分析_20260926_115634.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260718-b6d739d3",
+      "title": "天孚通信2026年半年度业绩预告",
+      "document_type": "业绩预告",
+      "period": "2026H1",
+      "published_date": "20260718",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-07-18/1225431394.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260718_2026H1_业绩预告_1225431394.pdf",
+      "sha256": "b6d739d367e57dd3e0c75af55762b4b508f87397bf2713175ec2a9110cb16703",
+      "bytes": 128159,
+      "pages": null,
+      "retrieved_at": "2026-09-26T11:45:50+08:00",
+      "used_by": [
+        "天孚通信_300394_基本面分析_20260926.md",
+        "天孚通信_300394_基本面分析_20260926_115634.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250421-b411f1cf",
+      "title": "天孚通信2024年年度报告",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250421",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-04-21/1223152632.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250421_2024A_年度报告_1223152632.pdf",
+      "sha256": "b411f1cfbc224f0d12c20a6df89cb0896ffd36b9b2b9f64377a897c2161a2e6c",
+      "bytes": 3688060,
+      "pages": 251,
+      "retrieved_at": "2026-09-26T11:47:19+08:00",
+      "used_by": [
+        "天孚通信_300394_基本面分析_20260926.md",
+        "天孚通信_300394_基本面分析_20260926_115634.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260901-c25d9349",
+      "title": "天孚通信2026年9月1日投资者关系活动记录表",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260901",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225542763.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260901_2026_正式披露_1225542763.pdf",
+      "sha256": "c25d93498197d4b5f800ef2e92f427127149f5af64728426df88537181ece273",
+      "bytes": 103063,
+      "pages": 3,
+      "retrieved_at": "2026-09-26T11:47:44+08:00",
+      "used_by": [
+        "天孚通信_300394_基本面分析_20260926.md",
+        "天孚通信_300394_基本面分析_20260926_115634.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260813-f71f8496",
+      "title": "天孚通信2026年限制性股票激励计划摘要",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260813",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-13/1225470829.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260813_2026_正式披露_1225470829.pdf",
+      "sha256": "f71f8496fce40b721a0cbf880138fa7748f95346ced07b461bcebadb062854aa",
+      "bytes": 336110,
+      "pages": null,
+      "retrieved_at": "2026-09-26T11:47:44+08:00",
+      "used_by": [
+        "天孚通信_300394_基本面分析_20260926.md",
+        "天孚通信_300394_基本面分析_20260926_115634.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260421-aa54ebf3",
+      "title": "天孚通信2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260421",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-21/1225128020.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260421_2026Q1_第一季度报告_1225128020.pdf",
+      "sha256": "aa54ebf3c8e86f64eb7782d7d049819b769a4d2f7daf4e0496cc7afe4c97c73e",
+      "bytes": 216368,
+      "pages": null,
+      "retrieved_at": "2026-09-26T11:54:17+08:00",
+      "used_by": [
+        "天孚通信_300394_基本面分析_20260926.md",
+        "天孚通信_300394_基本面分析_20260926_115634.md"
+      ],
+      "status": "已归档"
+    }
+  ]
+}
