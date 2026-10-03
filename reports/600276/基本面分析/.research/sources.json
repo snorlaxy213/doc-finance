@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-26T12:18:38+08:00",
+  "updated_at": "2026-10-03T16:46:04+08:00",
   "sources": [
     {
       "source_id": "SRC-20260820-ff691066",
@@ -71,6 +71,96 @@
       "retrieved_at": "2026-09-26T12:12:03+08:00",
       "used_by": [
         "恒瑞医药_600276_基本面分析_20260926_121811.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260929-6ed19d5b",
+      "title": "恒瑞医药：关于与Novo Nordisk A/S签署HRS-1596项目授权许可协议的公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260929",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-09-29/1225586490.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260929_期间待核验_正式披露_1225586490.pdf",
+      "sha256": "6ed19d5b7ef620a6dd38041a02fdf437c28d3fb73590f61215299970e356cc49",
+      "bytes": 256851,
+      "pages": null,
+      "retrieved_at": "2026-10-03T16:24:46+08:00",
+      "used_by": [
+        "恒瑞医药_600276_基本面分析_20261003_162829_932230.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260917-198ccaf5",
+      "title": "恒瑞医药：海外监管公告 - 关于首次回购公司A股股份的公告",
+      "document_type": "监管公告",
+      "period": "期间待核验",
+      "published_date": "20260917",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-09-17/1225570690.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260917_期间待核验_监管公告_1225570690.pdf",
+      "sha256": "198ccaf5b45b3ba23926df33964ef85d7c4934f1188d3cf1da0b2ba65e8d60bc",
+      "bytes": 214188,
+      "pages": null,
+      "retrieved_at": "2026-10-03T16:24:47+08:00",
+      "used_by": [
+        "恒瑞医药_600276_基本面分析_20261003_162829_932230.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260924-a8c5274a",
+      "title": "恒瑞医药：2026年第一次临时股东会决议公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260924",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-09-24/1225583147.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260924_2026_正式披露_1225583147.pdf",
+      "sha256": "a8c5274af0af31705518caa615d6e4268a99152f1c151411bd10ecac874858a3",
+      "bytes": 338808,
+      "pages": null,
+      "retrieved_at": "2026-10-03T16:28:29+08:00",
+      "used_by": [
+        "恒瑞医药_600276_基本面分析_20261003_162829_932230.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260819-cd961d55",
+      "title": "恒瑞医药：2026年A股员工持股计划（草案）",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260819",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-19/1225484005.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260819_2026_正式披露_1225484005.pdf",
+      "sha256": "cd961d558189ebfedc0d30cbfcb3d9802d0b05ec0f529a1d2306b43979b5b984",
+      "bytes": 517827,
+      "pages": null,
+      "retrieved_at": "2026-10-03T16:41:27+08:00",
+      "used_by": [
+        "恒瑞医药_600276_基本面分析_20261003_162829_932230.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260908-b857d197",
+      "title": "恒瑞医药：2026年第一次临时股东会通函",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260908",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-09-08/1225554546.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260908_2026_正式披露_1225554546.pdf",
+      "sha256": "b857d19778da5ce92c53b40953843ff7387edd87d0d767e590166f76d03b1092",
+      "bytes": 597067,
+      "pages": null,
+      "retrieved_at": "2026-10-03T16:41:29+08:00",
+      "used_by": [
+        "恒瑞医药_600276_基本面分析_20261003_162829_932230.md"
       ],
       "status": "已归档"
     }
