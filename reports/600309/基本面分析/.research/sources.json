@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-03T22:46:55+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260825-9842bc42",
+      "title": "万华化学2026年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260825",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-25/1225497561.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260825_2026H1_半年度报告_1225497561.pdf",
+      "sha256": "9842bc427ea4e99a0b4ae32bf537cff60c9c5c8f73d68352ecbd11ca0ba1a984",
+      "bytes": 1214322,
+      "pages": null,
+      "retrieved_at": "2026-10-03T22:46:48+08:00",
+      "used_by": [
+        "万华化学_600309_基本面分析_20261003_224700.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260421-766717cc",
+      "title": "万华化学2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260421",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-21/1225130793.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260421_2025A_年度报告_1225130793.pdf",
+      "sha256": "766717cc1a3b74221d4a20892b28152b3180ef5c63d683623e8a903eebddac95",
+      "bytes": 1664944,
+      "pages": null,
+      "retrieved_at": "2026-10-03T22:46:50+08:00",
+      "used_by": [
+        "万华化学_600309_基本面分析_20261003_224700.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250415-0c37e70c",
+      "title": "万华化学2024年年度报告",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250415",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-04-15/1223097325.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250415_2024A_年度报告_1223097325.pdf",
+      "sha256": "0c37e70c554609f4a22990fd97f3da4ee92bb717e44d641ac7800083789d4df7",
+      "bytes": 4804744,
+      "pages": null,
+      "retrieved_at": "2026-10-03T22:46:53+08:00",
+      "used_by": [
+        "万华化学_600309_基本面分析_20261003_224700.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260421-a52349c2",
+      "title": "万华化学2026年一季度报告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260421",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-21/1225130687.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260421_2026_正式披露_1225130687.pdf",
+      "sha256": "a52349c248a9b519cf0bc4bf82345194b0a12052af4a49030c14b10ce07b7e73",
+      "bytes": 182755,
+      "pages": null,
+      "retrieved_at": "2026-10-03T22:46:53+08:00",
+      "used_by": [
+        "万华化学_600309_基本面分析_20261003_224700.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260707-fe448a54",
+      "title": "万华化学2026年半年度业绩预增公告（业绩预告）",
+      "document_type": "业绩预告",
+      "period": "2026H1",
+      "published_date": "20260707",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-07-07/1225411166.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260707_2026H1_业绩预告_1225411166.pdf",
+      "sha256": "fe448a54ef77b7ac23480a5012584a62bd1b77e26bee17038123f0d69ce123ac",
+      "bytes": 103460,
+      "pages": null,
+      "retrieved_at": "2026-10-03T22:46:53+08:00",
+      "used_by": [
+        "万华化学_600309_基本面分析_20261003_224700.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260825-6d00e9a6",
+      "title": "万华化学2026年半年度主要经营数据公告",
+      "document_type": "正式披露",
+      "period": "2026H1",
+      "published_date": "20260825",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-25/1225497206.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260825_2026H1_正式披露_1225497206.pdf",
+      "sha256": "6d00e9a6c9d7c18d8f3fba60c93e55b867000863ddaf978fbfac534382223952",
+      "bytes": 104958,
+      "pages": null,
+      "retrieved_at": "2026-10-03T22:46:54+08:00",
+      "used_by": [
+        "万华化学_600309_基本面分析_20261003_224700.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260907-cd6f813f",
+      "title": "万华化学2026年半年度权益分派实施公告",
+      "document_type": "正式披露",
+      "period": "2026H1",
+      "published_date": "20260907",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-09-07/1225550253.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260907_2026H1_正式披露_1225550253.pdf",
+      "sha256": "cd6f813f65937c857b154ea2c81a04567e63662cc0555c2bb750e4dd4e448940",
+      "bytes": 147394,
+      "pages": null,
+      "retrieved_at": "2026-10-03T22:46:54+08:00",
+      "used_by": [
+        "万华化学_600309_基本面分析_20261003_224700.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260922-102d619c",
+      "title": "万华化学关于持股5%以上股东部分股份解除质押公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260922",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-09-22/1225574156.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260922_期间待核验_正式披露_1225574156.pdf",
+      "sha256": "102d619c1c517348814b642d72a658398df4ba9d81fe9c149dfdb05de368671e",
+      "bytes": 71909,
+      "pages": null,
+      "retrieved_at": "2026-10-03T22:46:55+08:00",
+      "used_by": [
+        "万华化学_600309_基本面分析_20261003_224700.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260930-b17a54a4",
+      "title": "万华化学烟台产业园MDI装置复产公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260930",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-09-30/1225586697.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260930_期间待核验_正式披露_1225586697.pdf",
+      "sha256": "b17a54a4eb1c9017c668f6d9626e915a081e4e06e2dbf81ad8f5694b7a405f3e",
+      "bytes": 63878,
+      "pages": null,
+      "retrieved_at": "2026-10-03T22:46:55+08:00",
+      "used_by": [
+        "万华化学_600309_基本面分析_20261003_224700.md"
+      ],
+      "status": "已归档"
+    }
+  ]
+}

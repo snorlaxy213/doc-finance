@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>万华化学(600309.SH)基本面分析</title>
+<style>
+:root{
+  --ink:#1a2433;
+  --ink-soft:#46546a;
+  --line:#d8dee7;
+  --line-soft:#eef1f5;
+  --bg:#ffffff;
+  --brand:#1f3a5f;
+  --brand-2:#3b5b85;
+  --brand-light:#eaf0f8;
+  --accent:#8a6d3b;
+  --up:#b73333;
+  --down:#2f7a52;
+  --warn:#a06a1f;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Microsoft YaHei","Source Han Sans SC",system-ui,-apple-system,sans-serif;
+  color:var(--ink);
+  background:#fff;
+  line-height:1.7;
+  font-size:14.5px;
+  font-variant-numeric:tabular-nums;
+  -webkit-font-smoothing:antialiased;
+}
+.page{max-width:1600px;margin:0 auto;padding:0 32px;}
+.masthead{
+  display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px;
+  border-bottom:2px solid var(--brand);padding:24px 0 18px;
+}
+.masthead .m-left{min-width:280px;}
+.masthead .kode{font-size:12px;letter-spacing:.12em;color:var(--ink-soft);}
+.masthead h1{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC","Times New Roman",serif;
+  font-size:30px;font-weight:700;margin:6px 0 4px;color:var(--brand);letter-spacing:.5px;
+}
+.masthead .sub{font-size:13px;color:var(--ink-soft);}
+.masthead .meta{font-size:12.5px;color:var(--ink-soft);margin-top:12px;}
+.masthead .meta b{color:var(--ink);font-weight:600;}
+.masthead .m-stats{display:flex;gap:34px;flex-wrap:wrap;}
+.masthead .m-stats .ms-v{font-size:25px;font-weight:700;color:var(--brand);line-height:1;font-variant-numeric:tabular-nums;}
+.masthead .m-stats .ms-v span{font-size:13px;font-weight:500;color:var(--ink-soft);margin-left:2px;}
+.masthead .m-stats .ms-l{font-size:11.5px;color:var(--ink-soft);margin-top:5px;letter-spacing:.02em;}
+.verdict{
+  margin:16px 0 4px;border:1px solid #d8e2ef;border-left:4px solid var(--brand);
+  background:linear-gradient(135deg,#f7faff 0%,#fff 68%);border-radius:4px;padding:16px 20px;
+}
+.verdict-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-bottom:14px;}
+.verdict-head h2{margin:0;font-size:14px;letter-spacing:.1em;color:var(--brand);font-weight:700;}
+.verdict-headline{
+  margin:-2px 0 0;padding:10px 12px;border:1px solid #dfe7f1;border-radius:4px;
+  background:#fff;color:var(--ink);font-size:15px;font-weight:600;line-height:1.7;
+}
+.verdict-headline .label{display:block;margin-bottom:2px;color:var(--brand);font-size:11px;font-weight:700;letter-spacing:.1em;}
+.badges{display:flex;flex-direction:row;flex-wrap:wrap;gap:8px;margin:0;}
+.badge{
+  display:inline-flex;align-items:center;gap:6px;font-size:12.5px;
+  padding:5px 11px;border-radius:999px;font-weight:600;line-height:1.4;
+}
+.badge .k{font-weight:500;opacity:.85;}
+.badge.fund{background:#fdecec;color:#9a2c2c;}
+.badge.qual{background:#eef3f8;color:#1f3a5f;}
+.badge.valu{background:#fdf3e3;color:#8a5a16;}
+.badge.fraud{background:#eef7f1;color:#2f6a48;}
+.verdict-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 40px;}
+.verdict-grid .v-title{font-size:12.5px;font-weight:700;letter-spacing:.04em;margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid var(--line);}
+.verdict-grid .v-title::before{content:"";display:inline-block;width:3px;height:12px;margin-right:7px;vertical-align:-1px;border-radius:2px;}
+.verdict-grid .v-up .v-title{color:var(--brand);}
+.verdict-grid .v-up .v-title::before{background:var(--brand);}
+.verdict-grid .v-risk .v-title{color:var(--warn);}
+.verdict-grid .v-risk .v-title::before{background:var(--warn);}
+.verdict-grid ul{margin:0;padding-left:18px;}
+.verdict-grid li{font-size:13.5px;margin:6px 0;line-height:1.65;}
+.note{
+  font-size:12px;color:var(--ink-soft);background:var(--line-soft);
+  padding:3px 8px;border-radius:3px;display:inline-block;
+}
+.verdict .note{display:block;margin-top:14px;}
+.kpis{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:1px;margin:14px 0 0;
+  background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden;
+}
+.kpi{background:#fff;padding:13px 15px;min-width:0;}
+.kpi .kl{font-size:11.5px;color:var(--ink-soft);line-height:1.3;min-height:30px;}
+.kpi .kv{font-size:20px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;margin-top:5px;word-break:break-word;}
+.kpi .kv.up{color:var(--up);}
+.kpi .kv.down{color:var(--down);}
+.kpi .ks{font-size:11px;color:var(--ink-soft);margin-top:3px;font-variant-numeric:tabular-nums;}
+.forecast-panel{
+  margin:16px 0 6px;padding:18px 20px;border:1px solid #d8e2ef;border-left:4px solid var(--brand);
+  border-radius:4px;background:linear-gradient(135deg,#f7faff 0%,#fff 68%);
+}
+.forecast-panel.forecast-empty{padding:14px 18px;background:#fbfcfe;border-left-color:#a8b5c4;}
+.forecast-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;flex-wrap:wrap;}
+.forecast-kicker{display:block;font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--brand);margin-bottom:5px;}
+.forecast-head h2{margin:0;font-size:18px;line-height:1.35;color:var(--ink);}
+.forecast-tags{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end;}
+.forecast-tag{display:inline-flex;padding:4px 9px;border-radius:999px;background:#eaf1f8;color:#294d73;font-size:11px;font-weight:600;}
+.forecast-tag.warn{background:#fff0dc;color:#8a5615;}
+.forecast-tag.neutral{background:#edf0f3;color:#5e6873;}
+.forecast-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px;}
+.forecast-card{background:#fff;border:1px solid #e0e7ef;border-radius:4px;padding:12px 14px;min-width:0;}
+.forecast-label{font-size:11px;color:var(--ink-soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.forecast-value{font-size:20px;font-weight:700;color:var(--brand);line-height:1.3;margin-top:4px;font-variant-numeric:tabular-nums;}
+.forecast-change{font-size:11.5px;color:var(--ink-soft);margin-top:4px;}
+.forecast-note{margin:11px 0 0!important;font-size:11px!important;color:var(--ink-soft)!important;}
+.layout{
+  display:grid;grid-template-columns:208px minmax(0,1fr);gap:36px;align-items:start;
+  padding:14px 0 0;
+}
+.sidebar{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow-y:auto;padding:0 8px 0 0;}
+.sidebar::-webkit-scrollbar{width:6px;}
+.sidebar::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px;}
+.toc{position:static;background:transparent;border:none;margin:12px 0 16px;padding:0;}
+.toc .scroll{overflow:visible;white-space:normal;display:flex;flex-direction:column;gap:2px;}
+.toc a{
+  display:flex;align-items:center;gap:9px;
+  font-size:14px;line-height:1.25;color:var(--ink-soft);text-decoration:none;
+  padding:6px 8px;border-radius:5px;margin:0;border:1px solid transparent;
+}
+.toc a .toc-num{
+  flex:0 0 auto;font-family:"Times New Roman",serif;font-size:12px;font-weight:600;
+  color:var(--ink-soft);background:var(--line-soft);
+  width:22px;height:22px;border-radius:4px;font-variant-numeric:tabular-nums;
+  display:inline-flex;align-items:center;justify-content:center;
+}
+.toc a:hover{background:var(--brand-light);color:var(--brand);}
+.toc a:hover .toc-num{background:#fff;color:var(--brand);}
+.toc a.active{background:var(--brand);color:#fff;font-weight:600;}
+.toc a.active .toc-num{background:rgba(255,255,255,.22);color:#fff;}
+.main{min-width:0;}
+section{padding:16px 0 8px;border-top:1px solid var(--line-soft);scroll-margin-top:64px;}
+section:first-of-type{border-top:none;padding-top:6px;}
+h2.sec{
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",serif;
+  font-size:19px;color:var(--brand);margin:6px 0 12px;font-weight:700;
+  display:flex;align-items:baseline;gap:10px;
+}
+h2.sec .num{
+  font-family:"Times New Roman",serif;font-size:14px;color:#fff;background:var(--brand);
+  padding:2px 9px;border-radius:3px;letter-spacing:.05em;font-weight:600;flex:0 0 auto;
+}
+h3.sub{font-size:14.5px;color:var(--ink);margin:16px 0 6px;font-weight:700;}
+p{margin:8px 0;}
+ul,ol{margin:8px 0;padding-left:22px;}
+li{margin:4px 0;}
+strong{color:var(--ink);}
+.tbl-scroll{overflow-x:auto;margin:10px 0;border:1px solid var(--line);border-radius:4px;}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums;}
+thead th{
+  background:#f3f6fa;color:var(--brand);font-weight:700;text-align:right;
+  padding:10px 12px;border-bottom:1.5px solid var(--brand);white-space:nowrap;
+  font-size:12.5px;letter-spacing:.02em;
+}
+thead th[scope=col]:first-child{text-align:left;}
+tbody td{padding:9px 12px;border-bottom:1px solid var(--line-soft);text-align:right;white-space:normal;word-break:break-word;}
+tbody th[scope=row]{
+  text-align:left;color:var(--ink);font-weight:600;
+  padding:9px 12px;border-bottom:1px solid var(--line-soft);white-space:nowrap;font-size:13px;background:#fafbfd;
+}
+tbody tr:nth-child(even) td{background:#fafbfd;}
+tbody tr:hover td{background:var(--brand-light);}
+.up{color:var(--up);}
+.down{color:var(--down);}
+.muted{color:var(--ink-soft);}
+a{color:var(--brand-2);text-decoration:underline;text-underline-offset:2px;word-break:break-all;}
+a:hover{color:var(--brand);}
+.note-copy{
+  margin:20px 0;border:1px solid var(--line);border-left:4px solid var(--accent);
+  background:#fbfcfe;border-radius:4px;padding:14px 16px;
+}
+.note-copy h2{margin:0 0 10px;font-size:13px;letter-spacing:.1em;color:var(--brand);font-weight:700;}
+pre{
+  margin:10px 0;padding:12px 14px;background:#f7f9fc;border:1px solid var(--line-soft);
+  border-radius:4px;overflow:auto;color:var(--ink);font-size:12.5px;line-height:1.6;
+}
+code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;}
+footer{
+  margin-top:22px;border-top:2px solid var(--brand);padding:14px 0 30px;
+  font-size:11.5px;color:var(--ink-soft);line-height:1.7;font-variant-numeric:tabular-nums;
+}
+footer .disclaimer{background:var(--line-soft);padding:8px 12px;border-radius:3px;margin-bottom:8px;}
+@media (max-width:1100px){
+  .layout{grid-template-columns:minmax(0,1fr);gap:0;}
+  .sidebar{position:static;max-height:none;overflow:visible;padding:0;}
+  .toc{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);
+    border-bottom:1px solid var(--line);margin:0 -32px 16px;padding:10px 32px;}
+  .toc .scroll{overflow-x:auto;white-space:nowrap;flex-direction:row;}
+  .toc a{display:inline-flex;white-space:nowrap;border-left:none;border:1px solid transparent;padding:3px 9px;margin:2px;}
+  .toc a.active{border-left:none;background:var(--brand);color:#fff;}
+}
+@media (max-width:760px){
+  .verdict-grid{grid-template-columns:1fr;}
+  .kpis{grid-template-columns:repeat(3,1fr);}
+  .forecast-grid{grid-template-columns:1fr;}
+  .page{padding:0 18px;}
+  .toc{margin-left:-18px;margin-right:-18px;padding-left:18px;padding-right:18px;}
+  .masthead .m-stats{gap:22px;}
+}
+@media (max-width:460px){.kpis{grid-template-columns:repeat(2,1fr);}}
+@media print{
+  body{background:#fff;font-size:10.5px;}
+  .page{max-width:none;padding:0;}
+  .layout{grid-template-columns:1fr;}
+  .sidebar{position:static;max-height:none;overflow:visible;}
+  .toc{position:static;border:none;padding:0;margin:0 0 8px;}
+  .toc .scroll{overflow:visible;display:block;}
+  .toc a{font-size:10px;padding:1px 5px;display:inline-flex;}
+  .toc a.active{background:transparent;color:var(--ink);}
+  section{break-inside:avoid;padding-top:10px;}
+  table{font-size:9.5px;}
+  thead{display:table-header-group;}
+  tbody tr{break-inside:avoid;}
+  .badge{border:1px solid #ccc;}
+  .note-copy,.tbl-scroll,.kpis,.verdict,.forecast-panel{break-inside:avoid;}
+  footer{break-inside:avoid;}
+  a{color:var(--ink);text-decoration:none;}
+  .kpi{border:1px solid #ccc;}
+}
+
+/* New-report layout: compact decision card, source-backed SVG charts, and auditable detail tables. */
+
+
+.financial-visuals{margin:14px 0 0;padding:0;border:none;border-left:none;border-radius:0;background:none;}.visuals-head{display:none;}.chart-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}.chart-card{min-width:0;padding:13px 14px;border:1px solid #dfe7ef;border-radius:4px;background:#fff;}.chart-card h3{margin:0 0 8px;font-size:13px;color:var(--ink);}.chart-body{overflow-x:auto;}.chart-svg{display:block;width:100%;min-width:500px;height:auto;}.chart-svg .chart-axis{stroke:#aebdcd;stroke-width:1;}.chart-svg .chart-grid{stroke:#e4eaf1;stroke-width:1;}.chart-svg .chart-unit,.chart-svg .chart-legend,.chart-svg .chart-label,.chart-svg .chart-series-label{fill:#566579;font-size:12px;}.chart-svg .chart-value{fill:#1a2433;font-size:11px;font-weight:600;}.chart-svg .chart-track{fill:#edf2f7;}.chart-empty{min-height:130px;display:flex;align-items:center;justify-content:center;padding:18px;border:1px dashed #bdc9d6;border-radius:3px;background:#fbfcfe;color:var(--ink-soft);text-align:center;font-size:12px;}.chart-meta{margin:8px 0 0!important;color:var(--ink-soft);font-size:11px!important;line-height:1.65;}
+details.detail-table{margin:10px 0;border:1px solid var(--line);border-radius:4px;background:#fff;}details.detail-table>summary{cursor:pointer;padding:10px 12px;color:var(--brand);font-size:12.5px;font-weight:700;list-style:none;}details.detail-table>summary::-webkit-details-marker{display:none;}details.detail-table>summary::before{content:"+";display:inline-flex;width:18px;height:18px;margin-right:7px;align-items:center;justify-content:center;border-radius:50%;background:var(--brand-light);vertical-align:-3px;}details.detail-table[open]>summary::before{content:"−";}details.detail-table .tbl-scroll{margin:0;border:0;border-top:1px solid var(--line);border-radius:0;}
+.scope-ref{font-size:.68em;font-weight:700;line-height:1;vertical-align:super}.scope-ref a{color:var(--brand);text-decoration:none;word-break:normal}.scope-link{color:var(--brand);font-weight:700;text-decoration:none;word-break:normal}.scope-notes{margin-top:28px;border-top:2px solid var(--brand);background:#fbfcfe}.scope-notes>summary{cursor:pointer;padding:16px 4px;color:var(--ink);font-size:18px;font-weight:700;list-style:none}.scope-notes>summary::-webkit-details-marker{display:none}.scope-notes>summary::before{content:"+";display:inline-flex;width:22px;height:22px;margin-right:9px;align-items:center;justify-content:center;border-radius:50%;background:var(--brand-light);color:var(--brand);font-size:14px;vertical-align:1px}.scope-notes[open]>summary::before{content:"−"}.scope-notes-body{padding:0 4px 16px}.scope-note-list{margin:12px 0 0;padding:0;list-style:none;counter-reset:scope-note}.scope-note-list>li{position:relative;margin:0;padding:14px 14px 14px 48px;border-top:1px solid var(--line);counter-increment:scope-note;color:var(--ink-soft);font-size:13px;line-height:1.8}.scope-note-list>li:first-child{border-top:0}.scope-note-list>li::before{content:"[" counter(scope-note) "]";position:absolute;left:8px;top:14px;color:var(--brand);font-weight:700}.scope-note-list strong{color:var(--ink)}.scope-back{margin-left:5px;color:var(--brand);font-size:11px;text-decoration:none;word-break:normal}.scope-limit{margin:16px 8px 0;padding:14px 16px;border-left:3px solid #aebdcd;background:#f5f7fa}.scope-limit h3{margin:0 0 8px;font-size:13px}.scope-limit ul{margin:0;padding-left:18px}.scope-limit li{color:var(--ink-soft);font-size:12px;line-height:1.75}
+.risk-overview{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:14px 0 16px}.risk-card{padding:14px;border:1px solid var(--line);border-top:3px solid #4e8b6d;border-radius:4px;background:#fff}.risk-card.attention{border-top-color:#c18a2e;background:#fffaf0}.risk-card.alert{border-top-color:#b73333;background:#fff5f5}.risk-card.unverified{border-top-color:#aebdcd;background:#f7f8fa}.risk-card .risk-label{color:var(--ink-soft);font-size:11px}.risk-card .risk-value{margin-top:5px;color:var(--ink);font-size:18px;font-weight:700}.risk-card .risk-note{margin-top:4px;color:var(--ink-soft);font-size:11px;line-height:1.55}.risk-chip{display:inline-flex;align-items:center;gap:6px;padding:3px 9px;border-radius:999px;font-size:11px;font-weight:700;white-space:nowrap}.risk-chip::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}.risk-chip.normal{background:#eaf5ef;color:#2f7654}.risk-chip.attention{background:#fff2d8;color:#94620c}.risk-chip.alert{background:#fdecec;color:#a22f2f}.risk-chip.unverified{background:#eef1f5;color:#687789}.risk-matrix thead th,.risk-matrix tbody td{text-align:left}.risk-matrix td:last-child{font-weight:600}.risk-conclusion{margin:16px 0 0;padding:17px 18px;border:1px solid #ead8b6;border-left:4px solid #c18a2e;border-radius:4px;background:#fffaf0}.risk-conclusion-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.risk-conclusion h3{margin:0;font-size:15px}.risk-conclusion .risk-grade{color:#94620c;font-size:20px;font-weight:800}.risk-counts{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.risk-counts span{padding:5px 9px;border:1px solid #ead8b6;border-radius:3px;background:#fff;font-size:11px}.risk-conclusion p{margin:8px 0 0!important;font-size:13px!important;line-height:1.8!important}@media(max-width:860px){.risk-overview{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:520px){.risk-overview{grid-template-columns:1fr}}
+@media (max-width:920px){.decision-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.chart-grid{grid-template-columns:1fr;}}@media (max-width:560px){.decision-grid{grid-template-columns:1fr;}.financial-visuals{padding:15px 14px;}.chart-card{padding:11px;}}@media print{.financial-visuals,.decision-card,details.detail-table{break-inside:avoid;}details.detail-table>summary{display:none;}details.detail-table .tbl-scroll{display:block;}}
+/* detail-table 默认展开：隐藏折叠手柄，保留块级容器样式 */
+details.detail-table>summary{display:none;}
+details.detail-table{margin-top:0;}
+details.detail-table .tbl-scroll{border-top:0;}
+
+
+.summary-evidence-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:14px 0 22px}.summary-evidence-card{min-width:0;padding:16px;border:1px solid var(--line);border-top:3px solid var(--brand);border-radius:4px;background:#f8fafc}.summary-evidence-card h4{margin:6px 0 10px;font-size:17px;color:var(--ink)}.summary-evidence{font-size:13px;line-height:1.7}.summary-evidence-card p{font-size:12px!important;line-height:1.7!important;color:var(--ink-soft);margin:8px 0 0!important}.summary-change-matrix th,.summary-change-matrix td{text-align:left!important}.investment-conclusion{margin:14px 0;padding:18px;border:1px solid var(--line);border-left:4px solid #aebdcd;border-radius:4px;background:#f7f8fa}.investment-conclusion.normal{border-left-color:#4e8b6d;background:#f4faf6}.investment-conclusion.attention{border-left-color:#c18a2e;background:#fffaf0}.investment-conclusion.alert{border-left-color:#b73333;background:#fff5f5}.investment-meta{margin-top:8px;font-size:11px;color:var(--ink-soft)}.investment-basis{font-size:13px!important;line-height:1.8!important;margin:12px 0!important}.investment-conditions{display:grid;grid-template-columns:1fr 1fr;gap:24px;border-top:1px solid var(--line);padding-top:12px}.investment-conditions h4{font-size:13px;margin:0 0 8px;color:var(--brand)}.investment-conditions ul{padding-left:18px;margin:0}.investment-conditions li{font-size:13px;line-height:1.8;margin:0 0 7px}.investment-conditions p{font-size:13px!important;line-height:1.8!important;margin:0!important}.summary-evidence-card,.investment-conclusion{overflow-wrap:anywhere}@media(max-width:760px){.summary-evidence-grid,.investment-conditions{grid-template-columns:1fr}.investment-conditions{gap:16px}}@media print{.summary-evidence-card,.investment-conclusion{break-inside:avoid}}
+
+/* 头部速览面板：结论、关键指标与财务趋势合并为统一整体 */
+.overview-panel{
+  margin:16px 0 4px;border:1px solid #d8e2ef;border-left:4px solid var(--brand);
+  background:linear-gradient(135deg,#f7faff 0%,#fff 68%);border-radius:4px;padding:18px 20px;
+}
+.overview-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 18px;}
+.overview-head h2{margin:0;font-size:14px;letter-spacing:.1em;color:var(--brand);font-weight:700;}
+.overview-head .badges{justify-content:flex-end;}
+.overview-headline{
+  margin:12px 0 0;padding:10px 12px;border:1px solid #dfe7f1;border-radius:4px;
+  background:#fff;color:var(--ink);font-size:15px;font-weight:600;line-height:1.7;
+}
+.overview-headline .label{display:block;margin-bottom:2px;color:var(--brand);font-size:11px;font-weight:700;letter-spacing:.1em;}
+.overview-divider{margin:16px 0 0;padding-top:14px;border-top:1px solid var(--line-soft);}
+.overview-label{margin:0 0 10px;font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--brand);}
+.overview-hint{float:right;font-size:11px;font-weight:400;letter-spacing:0;color:var(--ink-soft);}
+@media (max-width:760px){.overview-hint{float:none;display:block;margin-top:2px;}}
+@media print{.overview-panel{break-inside:avoid;}}
+
+/* 第4节 公司与行业：业务布局速览卡片 */
+.biz-overview{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:14px 0 16px;}
+.biz-card{padding:14px;border:1px solid var(--line);border-top:3px solid var(--brand);border-radius:4px;background:#fff;}
+.biz-card.biz-warn{border-top-color:#c18a2e;background:#fffaf0;}
+.biz-card .biz-label{color:var(--ink-soft);font-size:11px;}
+.biz-card .biz-value{margin-top:5px;color:var(--ink);font-size:16px;font-weight:700;line-height:1.4;}
+.biz-card .biz-note{margin-top:4px;color:var(--ink-soft);font-size:11px;line-height:1.55;}
+@media(max-width:860px){.biz-overview{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:520px){.biz-overview{grid-template-columns:1fr;}}
+@media print{.biz-card{break-inside:avoid;}}
+
+/* 第6节 财务质量验证：指标速览卡片 */
+.fin-quality{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:14px 0 16px;}
+.fq-card{padding:14px;border:1px solid var(--line);border-top:3px solid #aebdcd;border-radius:4px;background:#fff;}
+.fq-card.fq-normal{border-top-color:#4e8b6d;background:#f4faf6;}
+.fq-card.fq-attention{border-top-color:#c18a2e;background:#fffaf0;}
+.fq-card.fq-alert{border-top-color:#b73333;background:#fff5f5;}
+.fq-card .fq-label{color:var(--ink-soft);font-size:11px;}
+.fq-card .fq-value{margin-top:5px;color:var(--ink);font-size:18px;font-weight:700;}
+.fq-card .fq-note{margin-top:4px;color:var(--ink-soft);font-size:11px;line-height:1.55;}
+@media(max-width:1100px){.fin-quality{grid-template-columns:repeat(3,minmax(0,1fr));}}
+@media(max-width:860px){.fin-quality{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:520px){.fin-quality{grid-template-columns:1fr;}}
+@media print{.fq-card{break-inside:avoid;}}
+</style>
+<meta name="report-generated-at" content="2026-10-03T23:13:30+08:00">
+</head>
+<body>
+<div class="page">
+  <header class="masthead">
+    <div class="m-left">
+      <div class="kode">600309.SH · 上海证券交易所 · 基本面分析</div>
+      <h1>万华化学 · 基本面分析</h1>
+      <div class="sub">基本面、财务质量、估值与风险初筛</div>
+      <div class="meta">报告日期 <b>2026-10-03</b> · 生成时间 <b>2026-10-03 23:13</b> · <a class="scope-link" href="#scope-notes">数据口径、来源与限制</a></div>
+    </div>
+    <div class="m-stats">
+      <div><div class="ms-v">68.90 元/股</div><div class="ms-l">收盘价 · 2026-09-30</div></div>
+<div><div class="ms-v">2,156.89 亿元</div><div class="ms-l">总市值 · 2026-09-30</div></div>
+<div><div class="ms-v">约 13.10 倍</div><div class="ms-l">PE · 2026-09-30</div></div>
+<div><div class="ms-v">约 1.90 倍</div><div class="ms-l">PB · 2026-09-30</div></div>
+    </div>
+  </header>
+
+  <section class="overview-panel" aria-label="结论速览">
+    <div class="overview-head">
+      <h2>结论速览</h2>
+      <div class="badges">
+        <span class="badge fund"><span class="k">基本面</span> 强</span>
+<span class="badge qual"><span class="k">财务质量</span> 良好</span>
+<span class="badge valu"><span class="k">估值</span> 合理</span>
+<span class="badge fraud"><span class="k">造假风险初筛</span> 低</span>
+      </div>
+    </div>
+    <div class="overview-headline"><span class="label">一句话结论</span>景气修复驱动上半年归母净利 +64% 且现金覆盖利润，约 13 倍 PE 已计入基准修复，地缘溢价回落与 Q3 检修限制安全边际。</div>
+
+    <div class="overview-divider">
+      <p class="overview-label">关键指标 · 2026H1</p>
+      <div class="kpis" aria-label="关键指标速览">
+        <div class="kpi"><div class="kl">2026H1归母净利</div><div class="kv">100.63</div><div class="ks">归母净利润</div></div>
+<div class="kpi"><div class="kl">2026H1扣非净利</div><div class="kv">96.76</div><div class="ks">扣非归母净利润</div></div>
+<div class="kpi"><div class="kl">2026H1毛利率</div><div class="kv">17.08%</div><div class="ks">毛利率</div></div>
+<div class="kpi"><div class="kl">2026H1经营现金流</div><div class="kv">117.84</div><div class="ks">经营现金流净额</div></div>
+<div class="kpi"><div class="kl">2025A存货</div><div class="kv">260.14</div><div class="ks">存货</div></div>
+      </div>
+    </div>
+
+    <div class="overview-divider">
+      <p class="overview-label">财务趋势<span class="overview-hint">图表展示趋势；原始明细表格保留在对应章节，直接展开呈现。</span></p>
+<div class="chart-grid"><article class="chart-card"><h3>经营规模与利润趋势</h3><div class="chart-body"><svg class="chart-svg" viewBox="0 0 720 290" role="img" aria-label="经营规模与利润趋势柱状图"><line x1="44" x2="702" y1="242.0" y2="242.0" class="chart-axis"/><text x="44" y="22" class="chart-unit">单位：亿元</text><rect x="44" y="29" width="10" height="10" rx="2" fill="#1f5d8f"/><text x="59" y="38" class="chart-legend">营业收入</text><rect x="182" y="29" width="10" height="10" rx="2" fill="#b65c3b"/><text x="197" y="38" class="chart-legend">归母净利润</text><rect x="320" y="29" width="10" height="10" rx="2" fill="#427a62"/><text x="335" y="38" class="chart-legend">扣非净利润</text><text x="153.7" y="274" text-anchor="middle" class="chart-label">2023A</text><rect x="125.7" y="76.3" width="26.0" height="165.7" rx="2" fill="#1f5d8f"/><text x="138.7" y="71.3" text-anchor="middle" class="chart-value">1753.61</text><rect x="153.7" y="226.1" width="26.0" height="15.9" rx="2" fill="#b65c3b"/><text x="166.7" y="221.1" text-anchor="middle" class="chart-value">168.16</text><rect x="181.7" y="226.5" width="26.0" height="15.5" rx="2" fill="#427a62"/><text x="194.7" y="221.5" text-anchor="middle" class="chart-value">164.39</text><text x="373.0" y="274" text-anchor="middle" class="chart-label">2024A</text><rect x="345.0" y="70.0" width="26.0" height="172.0" rx="2" fill="#1f5d8f"/><text x="358.0" y="65.0" text-anchor="middle" class="chart-value">1820.69</text><rect x="373.0" y="229.7" width="26.0" height="12.3" rx="2" fill="#b65c3b"/><text x="386.0" y="224.7" text-anchor="middle" class="chart-value">130.33</text><rect x="401.0" y="229.4" width="26.0" height="12.6" rx="2" fill="#427a62"/><text x="414.0" y="224.4" text-anchor="middle" class="chart-value">133.59</text><text x="592.3" y="274" text-anchor="middle" class="chart-label">2025A</text><rect x="564.3" y="50.0" width="26.0" height="192.0" rx="2" fill="#1f5d8f"/><text x="577.3" y="45.0" text-anchor="middle" class="chart-value">2032.35</text><rect x="592.3" y="230.2" width="26.0" height="11.8" rx="2" fill="#b65c3b"/><text x="605.3" y="225.2" text-anchor="middle" class="chart-value">125.27</text><rect x="620.3" y="230.5" width="26.0" height="11.5" rx="2" fill="#427a62"/><text x="633.3" y="225.5" text-anchor="middle" class="chart-value">121.44</text></svg></div><p class="chart-meta"><b>数据期间：</b>2023A / 2024A / 2025A <sup class="scope-ref" id="ref-financial-1"><a href="#scope-financial" aria-label="查看数据口径注释 2">[2]</a></sup></p></article><article class="chart-card"><h3>盈利与现金质量趋势</h3><div class="chart-body"><svg class="chart-svg quality-svg" viewBox="0 0 720 174" role="img" aria-label="盈利与现金质量趋势图"><text x="8" y="36.0" class="chart-series-label">毛利率</text><line x1="126" x2="702" y1="62.0" y2="62.0" class="chart-grid"/><polyline fill="none" stroke="#1f5d8f" stroke-width="3" points="126.0,25.0 414.0,32.3 702.0,62.0"/><circle cx="126.0" cy="25.0" r="4" fill="#1f5d8f"/><text x="126.0" y="17.0" text-anchor="middle" class="chart-value">16.79</text><circle cx="414.0" cy="32.3" r="4" fill="#1f5d8f"/><text x="414.0" y="24.3" text-anchor="middle" class="chart-value">16.16</text><circle cx="702.0" cy="62.0" r="4" fill="#1f5d8f"/><text x="702.0" y="54.0" text-anchor="middle" class="chart-value">13.61</text><text x="8" y="100.0" class="chart-series-label">扣非净利率</text><line x1="126" x2="702" y1="126.0" y2="126.0" class="chart-grid"/><polyline fill="none" stroke="#b65c3b" stroke-width="3" points="126.0,89.0 414.0,111.2 702.0,126.0"/><circle cx="126.0" cy="89.0" r="4" fill="#b65c3b"/><text x="126.0" y="81.0" text-anchor="middle" class="chart-value">9.38</text><text x="126.0" y="166" text-anchor="middle" class="chart-label">2023A</text><circle cx="414.0" cy="111.2" r="4" fill="#b65c3b"/><text x="414.0" y="103.2" text-anchor="middle" class="chart-value">7.34</text><text x="414.0" y="166" text-anchor="middle" class="chart-label">2024A</text><circle cx="702.0" cy="126.0" r="4" fill="#b65c3b"/><text x="702.0" y="118.0" text-anchor="middle" class="chart-value">5.98</text><text x="702.0" y="166" text-anchor="middle" class="chart-label">2025A</text></svg></div><p class="chart-meta"><b>数据期间：</b>2023A / 2024A / 2025A <sup class="scope-ref" id="ref-financial-2"><a href="#scope-financial" aria-label="查看数据口径注释 2">[2]</a></sup></p></article></div>
+    </div>
+  </section>
+
+<section class="forecast-panel forecast-empty" aria-label="最新财务预报"><div class="forecast-head"><div><span class="forecast-kicker">最新财务预报</span><h2>近30日未披露新的正式财务预报</h2></div><span class="forecast-tag neutral">无新增预报</span></div></section>
+
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="toc" aria-label="目录">
+        <div class="scroll" id="toc-scroll">
+          <a href="#s1"><span class="toc-num">01</span>核心财务指标</a>
+<a href="#s2"><span class="toc-num">02</span>近两年财报趋势与业务结构</a>
+<a href="#s3"><span class="toc-num">03</span>结论摘要</a>
+<a href="#s4"><span class="toc-num">04</span>公司与行业</a>
+<a href="#s5"><span class="toc-num">05</span>订单与需求验证</a>
+<a href="#s6"><span class="toc-num">06</span>财务质量验证</a>
+<a href="#s7"><span class="toc-num">07</span>股东与机构</a>
+<a href="#s8"><span class="toc-num">08</span>估值与同行对比</a>
+<a href="#s9"><span class="toc-num">09</span>风险、治理与会计质量</a>
+<a href="#s10"><span class="toc-num">10</span>后续跟踪清单</a>
+        </div>
+      </nav>
+    </aside>
+    <main class="main">
+      <section id="s1">
+<h2 class="sec"><span class="num">01</span>核心财务指标</h2>
+<h3 class="sub">1.1 当前估值快照<sup class="scope-ref" id="ref-market-1"><a href="#scope-market" aria-label="查看数据口径注释 1">[1]</a></sup></h3>
+<details class="detail-table" open><summary>查看原始财务明细</summary><div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">项目</th>
+<th scope="col">最新数据</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">收盘价</th>
+<td>68.90 元/股</td>
+<td>2026-09-30 A 股未复权收盘价；国庆假期休市前最后交易日</td>
+</tr>
+<tr>
+<th scope="row">总市值</th>
+<td>2,156.89 亿元</td>
+<td>以当日行情口径计，对应总股本 31.30 亿股</td>
+</tr>
+<tr>
+<th scope="row">流通市值</th>
+<td>2,156.89 亿元</td>
+<td>全流通口径</td>
+</tr>
+<tr>
+<th scope="row">PE</th>
+<td>约 13.10 倍</td>
+<td>PE-TTM，按本报告口径复算（TTM 归母净利润约 164.67 亿元）；2025A 静态约 17.22 倍</td>
+</tr>
+<tr>
+<th scope="row">PB</th>
+<td>约 1.90 倍</td>
+<td>市值除以 2026-06-30 归母净资产复算；行情平台自报约 1.94 倍</td>
+</tr>
+<tr>
+<th scope="row">PS</th>
+<td>约 0.93 倍</td>
+<td>PS-TTM，市值除以滚动 12 个月收入约 2,316.49 亿元</td>
+</tr>
+<tr>
+<th scope="row">股息率</th>
+<td>约 2.99%</td>
+<td>按近 12 个月每股分红 2.06 元（2025 年度末期 1.25 元 + 2026 年中期 0.81 元）与最新市值推算</td>
+</tr>
+</tbody></table></div></details>
+<h3 class="sub">1.2 最新财务预报与质量解读<sup class="scope-ref" id="ref-forecast-1"><a href="#scope-forecast" aria-label="查看数据口径注释 3">[3]</a></sup></h3>
+<p>以报告执行日 2026-10-03 为截止向前 30 个自然日（2026-09-03 至 2026-10-03）检索公司公告，近30日未披露新的正式财务预报。2026 年第三季度报告尚未披露；窗口内公告以经营与治理事项为主（烟台 MDI 装置复产、股东部分股份解除质押、半年度权益分派实施等），无预告修订。</p>
+<p><strong>预报兑现检查：</strong> 公司 2026-07-07 披露 2026 年半年度业绩预增公告（未经审计），预计归母净利润 <strong>98 亿—104 亿元</strong>（同比 +60.05%—+69.85%）、扣非归母净利润 <strong>96 亿—102 亿元</strong>（同比 +53.75%—+63.36%）。2026-08-25 半年报正式披露归母净利润 100.63 亿元、扣非归母 96.76 亿元，均落在预告区间内，预告兑现。预告区间宽度约 5.9%（(104-98)/101），公司披露的驱动因素为：地缘冲突导致全球化工原料价格大幅上涨、海外部分装置产能受限，叠加公司 2026 年 1 月完成乙烯一期装置原料多元化改造、石化成本竞争优势提升，与半年报经营讨论及经营数据公告的价格、成本信号一致。信息可信度：高（已由正式披露的半年报兑现，半年报未经审计）。</p>
+<h3 class="sub">1.3 已披露的当年期间财报<sup class="scope-ref" id="ref-financial-3"><a href="#scope-financial" aria-label="查看数据口径注释 2">[2]</a></sup></h3>
+<details class="detail-table" open><summary>查看原始财务明细</summary><div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">2025H1</th>
+<th scope="col">2026Q1</th>
+<th scope="col">2026H1</th>
+<th scope="col">变化解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>909.01</td>
+<td>540.52</td>
+<td>1,193.16</td>
+<td class="up">2026H1 同比 +31.26%；产品价格增长及销量增加</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td>61.23</td>
+<td>37.18</td>
+<td>100.63</td>
+<td class="up">2026H1 同比 +64.35%；景气修复叠加成本优势</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td>62.44</td>
+<td>35.94</td>
+<td>96.76</td>
+<td>2026H1 同比 +54.96%；非经常性损益贡献 3.87 亿元</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td>105.28</td>
+<td>68.57</td>
+<td>117.84</td>
+<td>2026H1 同比 +11.93%，慢于利润增速</td>
+</tr>
+<tr>
+<th scope="row">经营现金流/归母净利润</th>
+<td>1.72 倍</td>
+<td>1.84 倍</td>
+<td>1.17 倍</td>
+<td class="down">利润仍被现金覆盖，但覆盖度较上年同期下降</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td class="down">-65.02</td>
+<td>18.27</td>
+<td>10.44</td>
+<td class="up">资本开支同比 -36.9%，FCF 由负转正</td>
+</tr>
+<tr>
+<th scope="row">EPS（元/股）</th>
+<td>1.95</td>
+<td>1.19</td>
+<td>3.21</td>
+<td>2026H1 同比 +64.62%</td>
+</tr>
+<tr>
+<th scope="row">加权 ROE</th>
+<td>6.24%</td>
+<td>3.38%</td>
+<td>8.96%</td>
+<td>半年口径，同比 +2.72 个百分点</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>13.84%</td>
+<td>14.73%</td>
+<td>17.08%</td>
+<td class="up">产品涨价快于成本上行，逐季改善</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td>6.87%</td>
+<td>6.65%</td>
+<td>8.11%</td>
+<td class="up">主业盈利能力修复</td>
+</tr>
+<tr>
+<th scope="row">资本开支</th>
+<td>170.30</td>
+<td>50.30</td>
+<td>107.40</td>
+<td>高投入期高峰已过，开支明显回落</td>
+</tr>
+<tr>
+<th scope="row">存货（期末）</th>
+<td>260.14*</td>
+<td>287.24</td>
+<td>329.36</td>
+<td>*比较基数为 2025 年末；较年末 +26.6%，接近收入增速</td>
+</tr>
+<tr>
+<th scope="row">应收账款（期末）</th>
+<td>158.73*</td>
+<td>150.43</td>
+<td>196.05</td>
+<td>*比较基数为 2025 年末；较年末 +23.5%，慢于收入增速</td>
+</tr>
+<tr>
+<th scope="row">总资产（期末）</th>
+<td>3,230.09*</td>
+<td>3,476.72</td>
+<td>3,541.52</td>
+<td>较 2025 年末 +9.64%</td>
+</tr>
+<tr>
+<th scope="row">归母净资产（期末）</th>
+<td>1,083.05*</td>
+<td>1,113.99</td>
+<td>1,135.96</td>
+<td>较 2025 年末 +4.89%，含中期分红前利润留存</td>
+</tr>
+</tbody></table></div></details>
+<p>2026H1 非经常性损益合计 <strong>3.87 亿元</strong>，主要为政府补助 1.74 亿元与金融资产公允价值变动及处置损益 3.50 亿元（税前口径），方向一致、规模有限；半年报未经审计。据此推算 2026Q2 单季（根据半年报与一季报差额推算，非公司直接披露）：营业收入约 <strong>652.64 亿元</strong>（同比 +36.4%）、归母净利润约 <strong>63.45 亿元</strong>（同比约 +108.7%）、扣非归母约 <strong>60.82 亿元</strong>（同比约 +89.9%）、经营现金流约 49.27 亿元（同比约 -50.5%）。二季度盈利动能显著加速，但现金回流弱于上年同期高基数。</p>
+<h3 class="sub">1.4 最近三年年度财报<sup class="scope-ref" id="ref-financial-4"><a href="#scope-financial" aria-label="查看数据口径注释 2">[2]</a></sup></h3>
+<details class="detail-table" open><summary>查看原始财务明细</summary><div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">指标</th>
+<th scope="col">2023A</th>
+<th scope="col">2024A</th>
+<th scope="col">2025A</th>
+<th scope="col">变化解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>1,753.61</td>
+<td>1,820.69</td>
+<td>2,032.35</td>
+<td>2025 年同比 +11.62%，乙烯二期、蓬莱新装置投产贡献</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td>168.16</td>
+<td>130.33</td>
+<td>125.27</td>
+<td>2025 年同比 -3.88%，石化板块毛利率跌至 0.58% 拖累</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td>164.39</td>
+<td>133.59</td>
+<td>121.44</td>
+<td>2025 年同比 -9.10%，主业承压更明显</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td>267.97</td>
+<td>300.53</td>
+<td>331.05</td>
+<td class="up">2025 年同比 +10.15%，利润下行年仍保持强劲现金</td>
+</tr>
+<tr>
+<th scope="row">经营现金流/归母净利润</th>
+<td>1.59 倍</td>
+<td>2.31 倍</td>
+<td>2.64 倍</td>
+<td>利润收缩而现金不收缩，现金转化质量高</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td class="down">-163.01</td>
+<td class="down">-57.77</td>
+<td>23.94</td>
+<td class="up">资本开支 430.98→307.11 亿元逐年回落，2025 年转正</td>
+</tr>
+<tr>
+<th scope="row">EPS（元/股）</th>
+<td>5.36</td>
+<td>4.15</td>
+<td>3.99</td>
+<td class="down">2024 年注销回购股份后股本小幅下降</td>
+</tr>
+<tr>
+<th scope="row">加权 ROE</th>
+<td>20.42%</td>
+<td>14.29%</td>
+<td>12.44%</td>
+<td>周期下行拖累，仍保持两位数</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>16.79%</td>
+<td>16.16%</td>
+<td>13.61%</td>
+<td class="down">2025 年石化、精细板块毛利率下滑</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td>9.38%</td>
+<td>7.34%</td>
+<td>5.98%</td>
+<td>随周期回落，2026H1 已回升至 8.11%</td>
+</tr>
+<tr>
+<th scope="row">资本开支</th>
+<td>430.98</td>
+<td>358.30</td>
+<td>307.11</td>
+<td>连续两年收缩，2025 年乙烯二期等投产转固</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>206.50</td>
+<td>241.07</td>
+<td>260.14</td>
+<td>2025 年同比 +7.9%，低于收入增速</td>
+</tr>
+<tr>
+<th scope="row">应收账款</th>
+<td>91.44</td>
+<td>123.19</td>
+<td>158.73</td>
+<td class="down">2024、2025 年增速（+34.7%、+28.9%）快于收入，需关注</td>
+</tr>
+<tr>
+<th scope="row">总资产</th>
+<td>2,530.40</td>
+<td>2,933.33</td>
+<td>3,230.09</td>
+<td>资产规模扩张与新产能投放同步</td>
+</tr>
+<tr>
+<th scope="row">归母净资产</th>
+<td>886.56</td>
+<td>946.26</td>
+<td>1,083.05</td>
+<td>2025 年同比 +14.46%，分红后仍靠留存增厚</td>
+</tr>
+</tbody></table></div></details>
+<p><strong>核心指标综合判断：</strong> 2023—2025 年收入持续增长但利润逐年回落，2025 年是典型的周期底部年份（单季归母净利润在 30—34 亿元区间徘徊，毛利率降至 13.61%）；同期经营现金流不降反升、资本开支收缩推动自由现金流于 2025 年转正，利润下行年未出现现金与资产质量恶化。2026 年进入上行兑现期：H1 收入 +31.26%、归母 +64.35%、毛利率回升至 17.08%，三大板块量价齐升（聚氨酯销量 326 万吨、石化 339 万吨、精细化学品及新材料 148 万吨），Q2 单季利润同比翻倍。应收账款 2024—2025 年增速持续快于收入，为本表中最值得持续跟踪的质量项；经营现金流对利润的覆盖、逐年下降的资本开支与标准无保留审计意见构成反向支撑。</p>
+</section>
+<section id="s2">
+<h2 class="sec"><span class="num">02</span>近两年财报趋势与业务结构</h2>
+<h3 class="sub">2.1 近两年财报趋势<sup class="scope-ref" id="ref-financial-5"><a href="#scope-financial" aria-label="查看数据口径注释 2">[2]</a></sup></h3>
+<details class="detail-table" open><summary>查看原始财务明细</summary><div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">项目</th>
+<th scope="col">2024A</th>
+<th scope="col">2025A</th>
+<th scope="col">变化</th>
+<th scope="col">解读</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">营业收入</th>
+<td>1,820.69</td>
+<td>2,032.35</td>
+<td class="up">+11.62%</td>
+<td>石化系列放量 +16.11%、精细系列 +17.39%，聚氨酯持平</td>
+</tr>
+<tr>
+<th scope="row">归母净利润</th>
+<td>130.33</td>
+<td>125.27</td>
+<td class="down">-3.88%</td>
+<td class="up">石化毛利率 0.58% 拖累，聚氨酯毛利率逆势提升</td>
+</tr>
+<tr>
+<th scope="row">扣非归母净利润</th>
+<td>133.59</td>
+<td>121.44</td>
+<td class="down">-9.10%</td>
+<td>主业承压幅度大于归母口径</td>
+</tr>
+<tr>
+<th scope="row">毛利率</th>
+<td>16.16%</td>
+<td>13.61%</td>
+<td class="down">-2.55 个百分点</td>
+<td>石化 -2.94、精细 -2.25 个百分点</td>
+</tr>
+<tr>
+<th scope="row">扣非净利率</th>
+<td>7.34%</td>
+<td>5.98%</td>
+<td class="down">-1.36 个百分点</td>
+<td>周期底部主业盈利收窄</td>
+</tr>
+<tr>
+<th scope="row">经营现金流净额</th>
+<td>300.53</td>
+<td>331.05</td>
+<td class="up">+10.15%</td>
+<td class="up">利润下行年现金反而增长</td>
+</tr>
+<tr>
+<th scope="row">自由现金流</th>
+<td class="down">-57.77</td>
+<td>23.94</td>
+<td class="up">+81.71</td>
+<td class="up">资本开支回落推动转正</td>
+</tr>
+<tr>
+<th scope="row">存货</th>
+<td>241.07</td>
+<td>260.14</td>
+<td class="up">+7.91%</td>
+<td>慢于收入增速</td>
+</tr>
+<tr>
+<th scope="row">应收账款</th>
+<td>123.19</td>
+<td>158.73</td>
+<td class="up">+28.85%</td>
+<td class="down">快于收入增速，2026H1 增速已回落至收入下方</td>
+</tr>
+</tbody></table></div></details>
+<h3 class="sub">2.2 分业务情况<sup class="scope-ref" id="ref-financial-6"><a href="#scope-financial" aria-label="查看数据口径注释 2">[2]</a></sup></h3>
+<h3 class="sub">年度口径（主营业务分产品，抵销前）</h3>
+<details class="detail-table" open><summary>查看原始财务明细</summary><div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">业务</th>
+<th scope="col">2024A 收入</th>
+<th scope="col">2024A 毛利率</th>
+<th scope="col">2025A 收入</th>
+<th scope="col">2025A 毛利率</th>
+<th scope="col">变化</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">聚氨酯系列</th>
+<td>758.44</td>
+<td>26.15%</td>
+<td>750.58</td>
+<td>26.88%</td>
+<td>收入 -1.04%，毛利率 +0.73 个百分点，最大利润来源</td>
+</tr>
+<tr>
+<th scope="row">石化系列</th>
+<td>725.18</td>
+<td>3.52%</td>
+<td>842.04</td>
+<td>0.58%</td>
+<td>收入 +16.11%，毛利率逼近盈亏线</td>
+</tr>
+<tr>
+<th scope="row">精细化学品及新材料系列</th>
+<td>282.73</td>
+<td>12.78%</td>
+<td>331.89</td>
+<td>10.53%</td>
+<td class="down">收入 +17.39%，毛利率下滑</td>
+</tr>
+<tr>
+<th scope="row">其他</th>
+<td>211.34</td>
+<td>15.77%</td>
+<td>262.18</td>
+<td>12.51%</td>
+<td>收入 +24.05%</td>
+</tr>
+</tbody></table></div></details>
+<h3 class="sub">半年度口径（2026H1 vs 2025H1，主营业务分产品，抵销前）</h3>
+<details class="detail-table" open><summary>查看原始财务明细</summary><div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">业务</th>
+<th scope="col">2025H1 收入</th>
+<th scope="col">2025H1 毛利率</th>
+<th scope="col">2026H1 收入</th>
+<th scope="col">2026H1 毛利率</th>
+<th scope="col">变化</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">聚氨酯系列</th>
+<td>368.88</td>
+<td>25.67%</td>
+<td>449.57</td>
+<td>27.05%</td>
+<td>收入 +21.9%，海外供给受限下量价齐升</td>
+</tr>
+<tr>
+<th scope="row">石化系列</th>
+<td>349.34</td>
+<td class="down">-0.37%</td>
+<td>477.38</td>
+<td>6.81%</td>
+<td class="up">收入 +36.7%，毛利率由负转正</td>
+</tr>
+<tr>
+<th scope="row">精细化学品及新材料系列</th>
+<td>156.28</td>
+<td>9.58%</td>
+<td>225.48</td>
+<td>16.27%</td>
+<td>收入 +44.3%，电池材料放量</td>
+</tr>
+</tbody></table></div></details>
+<p><strong>业务结构判断：</strong> 聚氨酯（MDI/TDI/聚醚）是利润基本盘，2025 年石化整体承压时其毛利率仍提升 0.73 个百分点，2026H1 在海外装置受限背景下进一步提升至 27.05%，攻守兼备；石化系列收入体量最大但盈利弹性完全取决于油价与原料价差，2026 年乙烷价格下跌（H1 均价同比 -12.79%）叠加乙烯一期乙烷进料改造完成，毛利率由负转正至 6.81%，是本轮利润修复的第二引擎；精细化学品及新材料系列（TPU、PC、ADI、电池材料等）收入增长最快，储能需求带动电池材料放量，但 2024—2025 年毛利率曾在 10%—13% 区间波动，规模效应与产品结构仍在爬坡。境外主营收入 2026H1 为 570.00 亿元、占比 47.8%，全球多基地布局（烟台、宁波、福建、蓬莱、匈牙利 BC）是消化单一市场波动的关键。烟台产业园 110 万吨/年 MDI 装置于 8 月 10 日起停产检修、9 月底经复产公告确认恢复生产，历时约 50 天（2026-08-05 为停产检修公告披露日），将部分影响三季度销量。</p>
+</section>
+<section id="s3">
+<h2 class="sec"><span class="num">03</span>结论摘要</h2>
+<h3 class="sub">3.1 当前结论</h3>
+<div class="summary-evidence-grid"><article class="summary-evidence-card"><div class="risk-label">核心看点</div><h4>龙头景气兑现</h4><div class="summary-evidence">2026H1 归母净利润 <strong>100.63 亿元、+64.35%</strong>，三大板块量价齐升</div><p>周期上行叠加乙烷成本优势，见第 2、4 节。</p></article><article class="summary-evidence-card"><div class="risk-label">盈利兑现</div><h4>现金覆盖利润</h4><div class="summary-evidence">2026H1 经营现金流 <strong>117.84 亿元</strong>，现金流/归母 <strong>1.17 倍</strong></div><p>利润有现金支撑；应收存货扩张与负债上升需跟踪，见第 6 节。</p></article><article class="summary-evidence-card"><div class="risk-label">估值约束</div><h4>已计入基准修复</h4><div class="summary-evidence">PE-TTM <strong>约 13.1 倍</strong>，2026A 基准情景约 12 倍</div><p>盈利含地缘冲突推升的价格溢价，见第 8 节。</p></article></div>
+<h3 class="sub">3.2 与上次报告相比</h3>
+<p>首次建立研究基线，无上次报告可比（基线日期 2026-10-03）。</p>
+<h3 class="sub">3.3 当前投资价值与介入条件</h3>
+<div class="investment-conclusion attention"><div class="risk-conclusion-head"><strong>当前投资价值</strong><span class="risk-chip attention">合理但优势有限</span></div><div class="investment-meta">68.90 元/股，2026-09-30 A 股未复权收盘（国庆假期休市前最后交易日） · 未来 12—24 个月</div><p class="investment-basis"><strong>核心依据：</strong>市值 2,156.89 亿元对应 TTM 归母约 164.67 亿元的 13.1 倍、2026A 基准情景（全年约 180 亿元）约 12 倍，处于正常化盈利 125—168 亿元对应 13—17 倍区间的中低段；PB 1.90 倍对应正常化 ROE 12%—14.5% 不算贵，但 2026H1 盈利含地缘冲突推升的价格溢价，见第 8 节。</p><div class="investment-conditions"><div><h4>介入条件</h4><ul><li>① 2026Q3/2026A 正式财报证实盈利中枢维持在 160 亿元以上、石化板块毛利率不再恶化且应收/存货增速回落至收入增速下方；② 或市值回落至对正常化盈利 125—168 亿元约 11 倍 PE 以下（约 1,375—1,848 亿元，折合约 44—59 元/股，为周期假设下的推算情景而非目标价）且经营逻辑未恶化。</li></ul></div><div><h4>推翻条件</h4><ul><li>① 地缘冲突缓解叠加海外复产导致化工品价格大幅回落，2026H2 归母净利润明显低于 2025H2（64.04 亿元）水平；② 石化板块持续亏损扩大或新产能爬坡严重不及预期引发大额减值；③ 有息负债与财务费用继续攀升侵蚀利润，或出现重大安全环保事故、监管与治理风险。</li></ul></div></div></div>
+</section>
+<section id="s4">
+<h2 class="sec"><span class="num">04</span>公司与行业</h2>
+<ul>
+<li>主营业务：聚氨酯、石化、精细化学品及新材料产品的研发、生产和销售，全球化运营（2026H1 境外主营收入占比 47.8%）；A 股代码 600309.SH。</li>
+<li>主要产品：聚氨酯系列的 MDI（纯 MDI 上半年市场均价约 21,600 元/吨、聚合 MDI 约 16,500 元/吨）、TDI（约 16,300 元/吨）与聚醚多元醇；石化系列的烯烃及衍生物（丙烯酸及酯、NPG、MTBE、苯乙烯、LLDPE、PVC 等）；精细化学品及新材料系列的 ADI、TPU、PC、香料以及磷酸铁锂、NMP、碳酸酯、PAA 等电池材料。</li>
+<li>市场占有率：公司为全球 MDI 产能规模领先的供应商（行业通行认知与公司定期报告表述），但具体全球份额数字本报告未独立核验，<strong>未核验</strong>，不纳入估值计算。</li>
+<li>行业景气度：2026 年上半年地缘冲突导致全球化工原料价格大幅上涨，海外多地装置因原料紧缺、物流阻滞产能受限，国内一体化装置凭借原料多元化与供应链韧性受益，行业供需格局阶段性改善；油价中枢回落后化工品价格自高位逐步回归。新能源与储能装机高增长带动电池材料需求，地产、家居等传统需求偏弱。</li>
+<li>核心竞争力：MDI 等聚氨酯技术壁垒与全球规模成本优势；五大生产基地一体化协同（烟台、宁波、福建、蓬莱、匈牙利 BC）；乙烯一期乙烷进料改造后石化成本优势提升；2026H1 研发费用 23.05 亿元，申请发明专利 358 件、获得授权 508 件；供应链采购与全球营销网络在原料紧张期保障供应。</li>
+<li>主要依赖：无明显单一客户或单一产品依赖，但盈利对原油/丙烷/乙烷/纯苯等原料价差、化工品周期价格及地缘政治局势高度敏感；石化板块毛利率波动大，是利润弹性的主要来源。</li>
+</ul>
+</section>
+<section id="s5">
+<h2 class="sec"><span class="num">05</span>订单与需求验证</h2>
+<p>公司产品为标准化化工品，采用直销与分销结合的连续销售模式，不披露订单/在手订单口径，<strong>未发现可核验订单数据</strong>。需求侧以下列官方披露的量价与装置运行动态为证据：</p>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">日期</th>
+<th scope="col">来源与链接</th>
+<th scope="col">证据类型</th>
+<th scope="col">内容</th>
+<th scope="col">是否公司正式公告</th>
+<th scope="col">对收入影响</th>
+<th scope="col">可信度</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">2026-08-25</th>
+<td><a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260825_2026H1_%E6%AD%A3%E5%BC%8F%E6%8A%AB%E9%9C%B2_1225497206.pdf">2026年半年度主要经营数据公告</a></td>
+<td>量价数据</td>
+<td class="up">聚氨酯产/销 340/326 万吨，石化 370/339 万吨，精细化学品及新材料 163/148 万吨；石化产品价格同比明显改善</td>
+<td>是</td>
+<td>已反映在 2026H1 收入</td>
+<td>高</td>
+</tr>
+<tr>
+<th scope="row">2026-08-25</th>
+<td><a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260825_2026H1_%E6%AD%A3%E5%BC%8F%E6%8A%AB%E9%9C%B2_1225497206.pdf">同上公告</a></td>
+<td>原料价格</td>
+<td>纯苯 +21.99%、石脑油 +30.71%、动力煤 +14.50%、丙烷 +5.56%、乙烷 -12.79%</td>
+<td>是</td>
+<td>成本端影响后续毛利</td>
+<td>高</td>
+</tr>
+<tr>
+<th scope="row">2026-09-30</th>
+<td><a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260930_%E6%9C%9F%E9%97%B4%E5%BE%85%E6%A0%B8%E9%AA%8C_%E6%AD%A3%E5%BC%8F%E6%8A%AB%E9%9C%B2_1225586697.pdf">烟台产业园MDI装置复产公告</a></td>
+<td>供给动态</td>
+<td>烟台 110 万吨/年 MDI 装置 8 月 10 日起停产检修，现已结束恢复生产</td>
+<td>是</td>
+<td>影响 2026Q3 销量</td>
+<td>高</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>已披露订单/合同：无订单口径披露；存货、合同负债等报表科目为最接近的需求信号，2026H1 存货较年初 +26.6% 与销量增长匹配。</li>
+<li>招投标与客户侧线索：未跟踪到可量化的客户侧采购公告；聚氨酯下游新能源、冷链需求形成支撑，地产家居偏弱（半年报口径）。</li>
+<li>订单状态区分：不适用（无订单披露）；量价数据为已实现销售，不等同未来需求指引。</li>
+<li>订单金额与最近年度营收比例：不适用。</li>
+<li>履约周期与收入确认节奏：化工品即时销售确认，无跨期履约问题。</li>
+<li>合同负债/存货/应收/现金流验证：存货增长与销量增长匹配、应收增速低于收入增速、经营现金流覆盖利润，未见压货或渠道囤积信号。</li>
+<li>订单趋势判断：无法判断（无订单口径）；以量价判断，需求趋势为<strong>改善</strong>（三大板块销量与价格齐升），可持续性取决于地缘冲突演化与海外装置复产节奏。</li>
+<li>信息可信度：高（均为公司正式披露的已实现数据）；对下半年需求的指示性有限。</li>
+</ul>
+</section>
+<section id="s6">
+<h2 class="sec"><span class="num">06</span>财务质量验证</h2>
+<h3 class="sub">财务质量速览</h3>
+<div class="fin-quality" aria-label="财务质量速览"><div class="fq-card fq-normal"><div class="fq-label">现金转化</div><div class="fq-value">2026H1 经营现金流/归母净利润 1.17 倍</div><div class="fq-note">2023—2025 年度为 1.59—2.64 倍，利润持续被现金覆盖</div></div><div class="fq-card fq-normal"><div class="fq-label">销售收现</div><div class="fq-value">2026H1 销售收现 1,190.46 亿元，收现比 99.8%</div><div class="fq-note">与上年同期 99.4% 基本持平</div></div><div class="fq-card fq-attention"><div class="fq-label">存货</div><div class="fq-value">329.36 亿元，较 2025 年末 +26.6%</div><div class="fq-note">计提存货跌价 4.86 亿元，需跟踪 Q3 价格回落后的减值</div></div><div class="fq-card fq-attention"><div class="fq-label">应收账款</div><div class="fq-value">196.05 亿元，较 2025 年末 +23.5%</div><div class="fq-note">慢于收入增速，但 2024—2025 年增速持续偏快；计提坏账 3.56 亿元</div></div><div class="fq-card fq-normal"><div class="fq-label">资本开支与 FCF</div><div class="fq-value">2026H1 资本开支 107.40 亿元；FCF 10.44 亿元</div><div class="fq-note">资本开支高峰回落，年度 FCF 已于 2025 年转正</div></div><div class="fq-card fq-attention"><div class="fq-label">负债与现金</div><div class="fq-value">资产负债率 64.27%；货币资金 444.06 亿元；有息负债约 1,136.45 亿元</div><div class="fq-note">短期借款较年初 +117.67%，财务费用 +138.30%</div></div></div>
+<ul>
+<li>利润与现金流匹配：2023—2025 年经营现金流对归母净利润覆盖 1.59—2.64 倍，2026H1 为 1.17 倍；现金流始终强于利润，利润真实性有充分现金支撑。</li>
+<li>应收账款与营收匹配：2026H1 应收 +23.5% 低于收入 +31.26%；但 2024、2025 年应收增速（+34.7%、+28.9%）明显快于收入（+3.8%、+11.6%），H1 计提信用减值 3.56 亿元（公司解释为应收增加致坏账计提增加），列为一般关注项而非造假红旗——同期现金流并未恶化。</li>
+<li>存货与营收匹配：2026H1 存货较年初 +26.6% 与收入增速接近；计提资产减值 4.86 亿元存货跌价，若下半年化工品价格回落，减值压力可能上升。</li>
+<li>资本开支效率与自由现金流：资本开支从 2023 年 430.98 亿元逐年降至 2025 年 307.11 亿元、2026H1 同比 -36.9%，乙烯二期（120 万吨/年，2025 年 4 月投产）、蓬莱 73 万吨/年聚醚（2025 年 1 月）、福建 36 万吨/年 TDI 二期（2025 年 8 月）陆续转固，进入投产后兑现期；2026H1 另有以债务购建长期资产 125.41 亿元未计入现金口径资本开支。</li>
+<li>预付款/其他应收款/在建工程/商誉异常：商誉仅 22.29 亿元（占总资产 0.6%）；在建工程 334.60 亿元、占总资产 9.4%，与明确的在建产能对应，2026H1 转固 86.48 亿元；未发现商誉或其他应收款异常扩张迹象（本次未逐项核对其他应收款明细）。</li>
+<li>资产负债率与有息负债：2026H1 资产负债率 64.27%（年初 62.81%）；有息负债合计约 1,136.45 亿元（短期借款 604.87 + 长期借款 432.08 + 应付债券 99.50），较年初 811.18 亿元上升；货币资金 444.06 亿元（+60.5%，公司解释为增加资金储备）；财务费用 14.25 亿元（+138.30%，主要为汇兑收益减少）。</li>
+<li>综合判断：现金转化、收现比、资本开支纪律与审计质量（2025A 安永华明标准无保留意见、内控标准无保留）构成正面证据；应收/存货扩张、有息负债与财务费用上升为需持续跟踪的关注项，财务质量评为<strong>良好</strong>。</li>
+</ul>
+</section>
+<section id="s7">
+<h2 class="sec"><span class="num">07</span>股东与机构</h2>
+<h3 class="sub">7.1 机构持仓与最新披露变动<sup class="scope-ref" id="ref-shareholder-1"><a href="#scope-shareholder" aria-label="查看数据口径注释 5">[5]</a></sup></h3>
+<p>持仓截至报告期 2026-06-30（2026 年半年报前十大股东口径），2026-08-25 披露；上期可比数据为 2025 年年报（2025-12-31），不反映三季度实时持仓。</p>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">机构名称</th>
+<th scope="col">类别</th>
+<th scope="col">资金属性</th>
+<th scope="col">最新期持股/占比</th>
+<th scope="col">上期持股/占比</th>
+<th scope="col">变动状态</th>
+<th scope="col">披露依据</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">香港中央结算有限公司</th>
+<td>沪股通名义持有人</td>
+<td>通道资金</td>
+<td>17,977.51 万股 / 5.74%</td>
+<td>13,422.74 万股 / 4.29%</td>
+<td>增持</td>
+<td>2026H1 与 2025A 前十大股东，2026-08-25 披露</td>
+</tr>
+<tr>
+<th scope="row">全国社保基金一零三组合</th>
+<td>社保</td>
+<td>主动</td>
+<td>3,250.00 万股 / 1.04%</td>
+<td>2,540.00 万股 / 0.81%</td>
+<td>增持</td>
+<td>同上</td>
+</tr>
+<tr>
+<th scope="row">全国社保基金一一四组合</th>
+<td>社保</td>
+<td>主动</td>
+<td>2,200.00 万股 / 0.70%</td>
+<td>未进入上期可见前十</td>
+<td>新进</td>
+<td>同上</td>
+</tr>
+<tr>
+<th scope="row">阿布达比投资局－自有资金</th>
+<td>QFII</td>
+<td>主动</td>
+<td>2,494.48 万股 / 0.80%</td>
+<td>未进入上期可见前十</td>
+<td>新进</td>
+<td>同上</td>
+</tr>
+<tr>
+<th scope="row">上海高毅资产－高毅晓峰 2 号致信基金</th>
+<td>其他（私募）</td>
+<td>主动</td>
+<td>2,495.95 万股 / 0.80%</td>
+<td>未进入上期可见前十</td>
+<td>新进</td>
+<td>同上</td>
+</tr>
+<tr>
+<th scope="row">Prime Partner International Limited</th>
+<td>境外法人</td>
+<td>主动</td>
+<td>9,662.23 万股 / 3.09%</td>
+<td>14,009.34 万股 / 4.48%</td>
+<td>减持</td>
+<td>同上</td>
+</tr>
+<tr>
+<th scope="row">鹏华中证细分化工产业主题 ETF</th>
+<td>ETF</td>
+<td>被动或指数</td>
+<td>1,925.76 万股 / 0.62%</td>
+<td>2,247.45 万股 / 0.72%</td>
+<td>减持</td>
+<td>同上</td>
+</tr>
+</tbody></table></div>
+<p>被动 ETF 减持不作为主动机构看空证据；HKSCC 为名义持有人，不代表可识别的单一境外机构。上期（2025A）前十中的中国证券金融（2.34%）、工行上证 50ETF、华泰柏瑞沪深 300ETF 本期退出可见前十，<code>退出可见前十</code> 不等于清仓。</p>
+<h3 class="sub">7.2 股东与治理判断</h3>
+<ul>
+<li>十大股东持股占比：控股股东烟台国丰投资控股集团持股 21.65%，与一致行动人烟台中诚投资（10.55%）、宁波中凯信（9.64%）合计约 41.84%；公司最终控制方为烟台市国资委。</li>
+<li>实控人/大股东持股与质押：中诚投资期末质押 3,600 万股（占其持股 10.9%、占总股本 1.15%）；中凯信期末质押 4,400 万股，2026-09-21 又解除质押 880 万股，剩余质押 3,520 万股（占其持股 11.66%、占总股本 1.12%），质押比例持续下降；Prime Partner 期末质押 5,845 万股、占其持股 60.5%，比例偏高。</li>
+<li>大股东减持或增持：Prime Partner 2025 年减持 3,289.99 万股、2026H1 再减持 4,347.10 万股，为可见的持续减持方；公司无回购专户进入前十。</li>
+<li>治理风险判断：国资控股结构稳定，回报政策明确（2024—2026 年股东回报规划承诺每年现金分红不低于当年可分配利润的 30%；2023—2025 年累计现金分红 129.40 亿元加回购注销 5.00 亿元，占三年年均净利润的 95.15%）；2026 年中期每股派 0.81 元、共 25.36 亿元已于 9 月 11 日发放。治理风险总体低；需跟踪 Prime Partner 后续减持与回报规划 2026 年底到期后的新一期规划。</li>
+</ul>
+</section>
+<section id="s8">
+<h2 class="sec"><span class="num">08</span>估值与同行对比</h2>
+<ul>
+<li>当前估值：2026-09-30 市值 2,156.89 亿元；PE-TTM 约 13.10 倍（TTM 归母净利润约 164.67 亿元 = 2025A 125.27 - 2025H1 61.23 + 2026H1 100.63）、2025A 静态 PE 约 17.22 倍、PB 约 1.90 倍（2026H1 归母净资产 1,135.96 亿元）、PS-TTM 约 0.93 倍、TTM ROE 约 14.5%（推算值）。</li>
+<li>同行业估值对比：选取业务模式各有侧重的大宗化工可比公司（2026-09-30 收盘，腾讯行情口径）：</li>
+</ul>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">公司</th>
+<th scope="col">收盘价（元）</th>
+<th scope="col">总市值（亿元）</th>
+<th scope="col">PE-TTM</th>
+<th scope="col">PB</th>
+<th scope="col">ROE-TTM（推算）</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">万华化学</th>
+<td>68.90</td>
+<td>2,156.89</td>
+<td>13.10</td>
+<td>约 1.90（本报告复算）</td>
+<td>约 14.5%</td>
+</tr>
+<tr>
+<th scope="row">华鲁恒升</th>
+<td>19.43</td>
+<td>534.31</td>
+<td>13.03</td>
+<td>1.53</td>
+<td>约 11.7%</td>
+</tr>
+<tr>
+<th scope="row">恒力石化</th>
+<td>16.07</td>
+<td>1,131.18</td>
+<td>10.07</td>
+<td>1.57</td>
+<td>约 15.6%</td>
+</tr>
+<tr>
+<th scope="row">荣盛石化</th>
+<td>13.33</td>
+<td>1,331.59</td>
+<td>24.86</td>
+<td>2.79</td>
+<td>约 11.2%</td>
+</tr>
+<tr>
+<th scope="row">宝丰能源</th>
+<td>22.46</td>
+<td>1,647.07</td>
+<td>10.72</td>
+<td>3.16</td>
+<td>约 29.5%</td>
+</tr>
+<tr>
+<th scope="row">卫星化学</th>
+<td>26.51</td>
+<td>893.03</td>
+<td>10.16</td>
+<td>2.35</td>
+<td>约 23.1%</td>
+</tr>
+</tbody></table></div>
+<p>同行 PE/PB/PB×PE 推算的 ROE 均为行情平台口径或简单推算值，各公司业务结构（煤化工、炼化、轻烃、MDI）与周期位置不同，比较仅作参考，不据此机械定价。万华 PE-TTM 高于多数可比公司、仅低于荣盛石化，PB 则低于多数可比公司，与其周期龙头属性及 12%—14.5% 的正常化 ROE 大体相称。</p>
+<ul>
+<li>同行业收入增速/毛利率/扣非净利率/ROE/现金流质量对比：<strong>未核验可比公司同口径全套财务数据</strong>，不据此调整评级。公司自身 2026H1 收入 +31.26%、毛利率 17.08%、扣非净利率 8.11%、加权 ROE 8.96%（半年）、经营现金流/归母净利润 1.17 倍；2025A 对应 +11.62%、13.61%、5.98%、12.44%、2.64 倍。</li>
+<li>估值与情景推算（完整推导，非预测承诺）：</li>
+<ul>
+<li>TTM 口径：市值 2,156.89 亿元对应归母净利润 164.67 亿元约 <strong>13.1 倍</strong>；该 TTM 值已包含 2026H1 的周期性高价环境。</li>
+<li>2026A 情景：上半年归母 100.63 亿元。下半年若处于 2025H2（64.04 亿元）至 2026H1（100.63 亿元）之间，即 60—100 亿元，则全年归母净利润约 160.6—200.6 亿元，当前市值对应 <strong>10.7—13.4 倍</strong>；取中枢（下半年约 80 亿元）约 <strong>12.0 倍</strong>。区间上界隐含下半年景气延续，未充分扣减烟台 MDI 装置约 50 天检修的量损与地缘溢价回落风险。</li>
+<li>正常化视角：2023—2025 年归母净利润为 168.16 / 130.33 / 125.27 亿元，若将 125—168 亿元视为跨周期正常化盈利区间（化工业下行年为下界、景气年上界），当前市值对应 <strong>12.8—17.3 倍</strong>，处于该周期估值区间中低段；PB 1.90 倍相对正常化 ROE 12%—14.5% 不隐含过度乐观，但也未提供显著折价。</li>
+<li>股息支撑：股东回报规划承诺现金分红不低于当年可分配利润的 30%；2025 年度分红加回购占归母净利润 35.23%。若 2026A 归母净利润 170—200 亿元、维持 30%—35% 分红，全年每股股利约 1.63—2.24 元（推算值），现价对应股息率约 2.4%—3.3%，为估值提供一定下限支撑。</li>
+</ul>
+<li>估值是否匹配成长与财务质量：当前价格大体等于基准情景下 12 倍 2026A 盈利，处于周期估值区间中低段，估值状态评为<strong>合理</strong>；但由于 2026H1 盈利部分来自地缘冲突造成的一次性价格环境、Q3 存在检修扰动、有息负债上升，当前价格未提供足够安全边际，投资吸引力评为<strong>合理但优势有限</strong>，不因 PE 低于历史中枢而直接上调。</li>
+</ul>
+</section>
+<section id="s9">
+<h2 class="sec"><span class="num">09</span>风险、治理与会计质量</h2>
+<h3 class="sub">9.1 风险结论速览</h3>
+<div class="risk-overview" aria-label="风险结论速览"><div class="risk-card attention"><div class="risk-label">综合风险</div><div class="risk-value">中</div><div class="risk-note">化工周期与地缘政治高度敏感，盈利含价格溢价成分；负债规模上升与 Q3 检修构成阶段性压力</div></div><div class="risk-card attention"><div class="risk-label">会计质量风险</div><div class="risk-value">低</div><div class="risk-note">现金流覆盖利润、收现比约 99.8%、审计标准无保留；应收/存货增速与减值列为关注项</div></div><div class="risk-card normal"><div class="risk-label">新增重大事件</div><div class="risk-value">未发现</div><div class="risk-note">检索窗口内无处罚、非标审计、重大诉讼或退市风险；装置检修为计划内事项</div></div><div class="risk-card normal"><div class="risk-label">对基本面结论的影响</div><div class="risk-value">不下调</div><div class="risk-note">维持基本面强、财务质量良好；地缘溢价回落风险主要约束估值乐观度</div></div></div>
+<h3 class="sub">9.2 风险核验矩阵</h3>
+<div class="tbl-scroll risk-matrix"><table><thead><tr><th scope="col">风险维度</th><th scope="col">状态</th><th scope="col">核验结果</th><th scope="col">核心证据</th><th scope="col">结论影响</th></tr></thead><tbody><tr><th scope="row">盈利与持续经营</th><td><span class="risk-chip normal">正常</span></td><td>低风险</td><td>全球 MDI 龙头、2026H1 利润 +64.35%、五年盈利均为正；周期属性决定波动大</td><td>支持基本面强</td></tr><tr><th scope="row">审计与内控</th><td><span class="risk-chip normal">正常</span></td><td>低风险</td><td>2025A 安永华明标准无保留意见，内控审计标准无保留</td><td>暂不下调</td></tr><tr><th scope="row">现金流质量</th><td><span class="risk-chip normal">正常</span></td><td>低风险</td><td>2023—2025 年现金流/归母 1.59—2.64 倍，2026H1 为 1.17 倍</td><td>支持利润真实性</td></tr><tr><th scope="row">应收、合同资产与存货</th><td><span class="risk-chip attention">关注</span></td><td>中风险</td><td>应收 2024—2025 年增速快于收入；2026H1 存货 +26.6%、合计减值 8.42 亿元</td><td>需连续跟踪</td></tr><tr><th scope="row">监管与上市状态</th><td><span class="risk-chip normal">正常</span></td><td>低风险</td><td>未发现 ST、退市风险警示、问询或处罚公告；检索不保证穷尽</td><td>暂不下调</td></tr><tr><th scope="row">诉讼与合规</th><td><span class="risk-chip normal">正常</span></td><td>低风险</td><td>定期报告未披露重大诉讼仲裁；检索窗口内未发现处罚、问询等重大合规负面公告</td><td>暂不下调</td></tr><tr><th scope="row">股东、关联方与资金占用</th><td><span class="risk-chip attention">关注</span></td><td>中风险</td><td>Prime Partner 持续减持且其持股 60.5% 已质押；两大国资股东质押比例低且下降</td><td>限制治理加分</td></tr><tr><th scope="row">负面信息与外部风险</th><td><span class="risk-chip attention">关注</span></td><td>中风险</td><td>地缘冲突为双刃剑：推升本期价格，也可能因冲突缓解、海外复产而回落；油价与原料波动影响石化板块</td><td>限制估值乐观度</td></tr></tbody></table></div>
+<h3 class="sub">9.3 会计质量与财务造假风险初筛</h3>
+<div class="risk-conclusion"><div class="risk-conclusion-head"><h3>会计质量与财务造假风险初筛</h3><div class="risk-grade">低</div></div><div class="risk-counts"><span>重大红旗：未发现。利润增长伴随现金流增长（2026H1 现金流 117.84 亿元高于归母利润），收现比 99.8%，未见现金流与利润背离</span><span>一般关注：① 应收账款 2024—2025 年增速快于收入；② 2026H1 存货较年初 +26.6% 并计提跌价 4.86 亿元；③ 短期借款 +117.67%、财务费用 +138.30%；④ 盈利含周期性价格溢价</span><span>监管 / 审计 / 司法定性：未发现财务造假定性；2025A 标准无保留审计意见、内控标准无保留</span></div><p><strong>主要依据：</strong>正面证据：经营现金流持续高于利润、销售收现与收入匹配、商誉极低、资本开支逐年收缩、审计连续标准无保留；关注项均无现金流恶化的伴随信号</p><p><strong>判断边界：</strong>这是风险初筛，不是事实定性；仅监管、审计、司法或公司正式公告确认后方可定性</p></div>
+</section>
+<section id="s10">
+<h2 class="sec"><span class="num">10</span>后续跟踪清单</h2>
+<div class="tbl-scroll">
+<table>
+<thead><tr>
+<th scope="col">跟踪事项</th>
+<th scope="col">首次提出</th>
+<th scope="col">上次状态</th>
+<th scope="col">本次证据</th>
+<th scope="col">当前状态</th>
+<th scope="col">下次验证时间/触发条件</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">烟台 MDI 检修与地缘溢价回落对 2026Q3 盈利的净影响</th>
+<td>2026-10-03</td>
+<td class="muted">不适用</td>
+<td>110 万吨/年装置 8/10—9/30 检修；化工品价格自高位回归</td>
+<td>待验证</td>
+<td>2026Q3 报告（预计 10 月底披露）</td>
+</tr>
+<tr>
+<th scope="row">2026H2 归母净利润是否维持 160 亿元以上全年中枢</th>
+<td>2026-10-03</td>
+<td class="muted">不适用</td>
+<td>2026H1 为 100.63 亿元；2025H2 为 64.04 亿元</td>
+<td>待验证</td>
+<td>2026Q3、2026A 财报</td>
+</tr>
+<tr>
+<th scope="row">石化板块毛利率与乙烷成本优势持续性</th>
+<td>2026-10-03</td>
+<td class="muted">不适用</td>
+<td>2026H1 石化毛利率 6.81%（上年同期 -0.37%）；乙烷均价 -12.79%</td>
+<td>待验证</td>
+<td>2026Q3/2026A 分部数据及原料价格</td>
+</tr>
+<tr>
+<th scope="row">应收账款与存货增速、减值计提</th>
+<td>2026-10-03</td>
+<td class="muted">不适用</td>
+<td>应收较年初 +23.5%、存货 +26.6%；H1 减值合计 8.42 亿元</td>
+<td>待验证</td>
+<td>2026Q3/2026A 报表附注</td>
+</tr>
+<tr>
+<th scope="row">有息负债、财务费用与汇兑影响</th>
+<td>2026-10-03</td>
+<td class="muted">不适用</td>
+<td>有息负债约 1,136.45 亿元；财务费用 14.25 亿元（+138.30%）</td>
+<td>待验证</td>
+<td>2026Q3/2026A 报表</td>
+</tr>
+<tr>
+<th scope="row">新产能爬坡（乙烯二期、蓬莱、福建 TDI 二期、电池材料）</th>
+<td>2026-10-03</td>
+<td class="muted">不适用</td>
+<td>2025 年投产转固，2026H1 精细板块收入 +44.3%</td>
+<td>待验证</td>
+<td>2026A 分部数据与经营数据公告</td>
+</tr>
+<tr>
+<th scope="row">Prime Partner 减持与大股东质押变化</th>
+<td>2026-10-03</td>
+<td class="muted">不适用</td>
+<td>2026H1 减持 4,347.10 万股；中凯信 9-21 解押 880 万股</td>
+<td>待验证</td>
+<td>股东减持/质押公告及定期报告</td>
+</tr>
+<tr>
+<th scope="row">新一期股东回报规划（2024—2026 规划年底到期）</th>
+<td>2026-10-03</td>
+<td class="muted">不适用</td>
+<td>2026 中期分红 0.81 元/股已实施</td>
+<td>待验证</td>
+<td>2026A 利润分配预案或新规划公告</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>新增订单金额与年初至今累计订单金额：不适用，公司无订单披露口径。</li>
+<li>订单金额/上年营收：不适用。</li>
+<li>重点客户复购与新增客户：化工品客户结构未公开到可核验程度；以量价与销量结构替代跟踪。</li>
+<li>中标候选人转正式中标/签约情况：不适用。</li>
+<li>合同负债、存货、应收账款和经营现金流变化：按 2026Q3 及 2026A 财报对照本报告第 6 节基线。</li>
+<li>触发深度复盘条件：2026H2 归母净利润显著低于 64 亿元；石化板块毛利率转负；单季经营现金流/归母净利润持续低于 0.8 倍；计提大额减值；重大安全环保事故、监管处罚或审计变化。</li>
+</ul>
+</section>
+
+      <details id="scope-notes" class="scope-notes" aria-label="数据口径、来源与限制"><summary>数据口径、来源与限制</summary><div class="scope-notes-body"><p>正文仅保留会直接影响判断的限定词；完整的日期、统计定义、来源和适用边界统一列于此处。</p><ol class="scope-note-list"><li id="scope-market" value="1"><strong>行情与估值。</strong> 以 2026-09-30 A 股收盘数据为时点，价格、市值经腾讯行情接口（qt.gtimg.cn）与东方财富行情接口（push2.eastmoney.com）交叉核验一致：收盘价均为 68.90 元、总市值均为 2,156.89 亿元；行情时间戳为 2026-09-30 16:14（收盘后）。2026-10-01 起国庆假期休市，报告执行日 2026-10-03 无更新行情。PE-TTM 按市值除以 TTM 归母净利润 164.67 亿元复算（约 13.10 倍，与两行情平台自报值一致），PB 按市值除以 2026-06-30 归母净资产 1,135.96 亿元复算（约 1.90 倍，平台自报 1.94 倍口径略有差异，以本报告复算值为准），PS-TTM 按滚动收入 2,316.49 亿元复算；TTM 口径 = 2025A + 2026H1 - 2025H1。股息率为近 12 个月已实施每股分红（1.25 + 0.81 元）推算。同行行情为腾讯接口 2026-09-30 收盘快照，同行 ROE-TTM 由 PB/PE-TTM 推算。<a class="scope-back" href="#ref-market-1" aria-label="返回正文引用 1">↩</a></li><li id="scope-financial" value="2"><strong>财务数据。</strong> 合并报表、人民币，金额除注明外为亿元。来源为 <a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260825_2026H1_%E5%8D%8A%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1225497561.pdf">2026 年半年报</a>（主要数据第 5—6 页、经营讨论第 8—11 页、分部信息第 180 页）、<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260421_2025A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1225130793.pdf">2025 年年报</a>（近三年主要数据第 7—8 页、分产品情况、前十大股东第 65—66 页）、<a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2025/20250415_2024A_%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A_1223097325.pdf">2024 年年报</a>（分产品情况、2023 年末存货与应收比较数据）及 <a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260421_2026_%E6%AD%A3%E5%BC%8F%E6%8A%AB%E9%9C%B2_1225130687.pdf">2026 年一季度报告</a>。2026Q1、2026H1 未经审计；2023A—2025A 已审计（2025A 为安永华明标准无保留意见）。毛利率=(收入-成本)/收入；扣非净利率=扣非归母净利润/营业收入；自由现金流=经营现金流净额-购建固定资产、无形资产和其他长期资产支付的现金，并非企业全部可分配现金；有息负债=短期借款+长期借款+应付债券；1.3 表中标注 * 的期末值比较基数为 2025 年末而非 2025H1 末。2026Q2 单季数据为半年报与一季报差额推算，非公司直接披露。<a class="scope-back" href="#ref-financial-1" aria-label="返回正文引用 1">↩1</a> <a class="scope-back" href="#ref-financial-2" aria-label="返回正文引用 2">↩2</a> <a class="scope-back" href="#ref-financial-3" aria-label="返回正文引用 3">↩3</a> <a class="scope-back" href="#ref-financial-4" aria-label="返回正文引用 4">↩4</a> <a class="scope-back" href="#ref-financial-5" aria-label="返回正文引用 5">↩5</a> <a class="scope-back" href="#ref-financial-6" aria-label="返回正文引用 6">↩6</a></li><li id="scope-forecast" value="3"><strong>财务预报。</strong> 检索窗口为 2026-09-03 至 2026-10-03（含首尾），覆盖巨潮资讯网公司公告列表；窗口内未发现业绩预告、盈喜/盈警或预告修订。2026-07-07 半年度业绩预增公告（未经审计）所涉期间已由 2026-08-25 半年报正式披露兑现，故仅作兑现检查、不作为当前指引。2026Q3 报告尚未披露，公司无义务发布三季度业绩预告。<a class="scope-back" href="#ref-forecast-1" aria-label="返回正文引用 1">↩</a></li><li id="scope-orders" value="4"><strong>订单与需求。</strong> 公司为连续型化工品制造商，无订单/在手订单披露口径；本节以公司正式披露的量价数据、原料价格与装置检修动态为需求侧证据，全部为已实现销售，不构成未来需求承诺。销量含产品系列间内部使用量，销售收入含贸易收入及内部使用产生的收入（经营数据公告口径）。</li><li id="scope-shareholder" value="5"><strong>股东与机构。</strong> 前十大股东数据截止日为 2026-06-30，披露日 2026-08-25（2026 年半年报），上期可比数据为 2025 年年报（2025-12-31）；口径为前十大股东（不含转融通出借股份）。可见前十存在披露滞后和范围限制；<code>退出可见前十/新进</code> 分别指相对上期前十名单的进出，不等于清仓或首次买入。被动 ETF 持仓变化不构成主动机构观点证据。质押数据含 2026-09-22 <a href="%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/2026/20260922_%E6%9C%9F%E9%97%B4%E5%BE%85%E6%A0%B8%E9%AA%8C_%E6%AD%A3%E5%BC%8F%E6%8A%AB%E9%9C%B2_1225574156.pdf">解除质押公告</a> 更新后的中凯信最新质押余额。<a class="scope-back" href="#ref-shareholder-1" aria-label="返回正文引用 1">↩</a></li></ol><div class="scope-limit"><h3>研究限制</h3><ul><li>分析日期为 2026-10-03，为万华化学首份基本面报告（基线版本）；最新正式财务期为 2026H1（2026-08-25 披露，未经审计），2026Q3 报告尚未披露。</li><li>本次实质引用并归档的官方 PDF 共 9 份（2024/2025 年年报、2026 一季报、2026 半年报、半年度业绩预增公告、主要经营数据公告、权益分派实施公告、解除质押公告、MDI 装置复产公告），SHA-256、原始 URL 与状态见资料索引。</li><li>行情与估值为 2026-09-30 收盘口径；国庆假期后首个交易日行情可能与该收盘价出现跳变，估值结论以报告日可得数据为限。</li><li>未核验信息：公司全球 MDI 市场份额具体数字；2026Q3 任何财务数据；地缘政治局势及海外装置复产对四季度价格的影响；Prime Partner 减持的后续安排。同行财务与估值为行情平台口径或推算值，未逐家核对定期报告。</li><li>万华 2026H1 盈利环境（地缘冲突推升价格、海外供给受限）具有一次性成分，第 8 节情景推算不构成盈利预测或目标价。</li></ul></div></div></details>
+
+    </main>
+  </div>
+
+  <footer>
+    <div class="disclaimer">
+      免责声明:本报告为基于公开财报、公告、行情与新闻资料的整理和财务质量初筛,不构成任何投资建议,不保证未来收益。投资有风险,决策需谨慎。所有数据以公司正式披露为准。
+    </div>
+    <div>报告主体:万华化学(600309.SH) · 报告日期:2026-10-03</div>
+    <div>自包含离线 HTML · 内联 CSS / 极简内联 JS · 可直接在浏览器打开</div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var links = document.querySelectorAll('nav.toc a');
+  var scopeNotes = document.getElementById('scope-notes');
+  function revealScopeNote(){
+    var hash = window.location.hash || '';
+    if (scopeNotes && (hash === '#scope-notes' || hash.indexOf('#scope-') === 0)) scopeNotes.open = true;
+  }
+  window.addEventListener('hashchange', revealScopeNote);
+  revealScopeNote();
+  var map = {};
+  for (var i=0;i<links.length;i++){
+    var href = links[i].getAttribute('href') || '';
+    if (href.charAt(0) === '#') map[href.slice(1)] = links[i];
+  }
+  var sections = document.querySelectorAll('main section[id]');
+  function onScroll(){
+    var pos = (window.scrollY || document.documentElement.scrollTop) + 90;
+    var cur = null;
+    for (var j=0;j<sections.length;j++){
+      if (sections[j].offsetTop <= pos) cur = sections[j].id;
+    }
+    for (var k=0;k<links.length;k++) links[k].classList.remove('active');
+    if (cur && map[cur]) {
+      map[cur].classList.add('active');
+      var act = map[cur];
+      var sc = document.getElementById('toc-scroll');
+      if (sc && act.offsetLeft < sc.scrollLeft) sc.scrollLeft = act.offsetLeft - 8;
+      if (sc && act.offsetLeft + act.offsetWidth > sc.scrollLeft + sc.clientWidth) {
+        sc.scrollLeft = act.offsetLeft + act.offsetWidth - sc.clientWidth + 8;
+      }
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
+</body>
+</html>
