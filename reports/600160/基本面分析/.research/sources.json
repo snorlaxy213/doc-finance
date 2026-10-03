@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-04T02:44:53+08:00",
+  "sources": [
+    {
+      "source_id": "SRC-20260826-7706d998",
+      "title": "巨化股份2026年半年度报告",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260826",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-26/1225505980.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260826_2026H1_半年度报告_1225505980.pdf",
+      "sha256": "7706d9983b7b0f8108efad1c32bbf626719ad461b9db7f4022517667473e3c6f",
+      "bytes": 2455786,
+      "pages": null,
+      "retrieved_at": "2026-10-04T02:42:00+08:00",
+      "used_by": [
+        "巨化股份_600160_基本面分析_20261004_024350.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260423-eddf3991",
+      "title": "巨化股份2025年年度报告",
+      "document_type": "年度报告",
+      "period": "2025A",
+      "published_date": "20260423",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-23/1225147997.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260423_2025A_年度报告_1225147997.pdf",
+      "sha256": "eddf3991cf087586614279d0d93988ea053af42d8e5524d3b68e82d35065035d",
+      "bytes": 3217366,
+      "pages": null,
+      "retrieved_at": "2026-10-04T02:42:49+08:00",
+      "used_by": [
+        "巨化股份_600160_基本面分析_20261004_024350.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260429-1da1c5af",
+      "title": "巨化股份2026年第一季度报告",
+      "document_type": "第一季度报告",
+      "period": "2026Q1",
+      "published_date": "20260429",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-04-29/1225223629.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260429_2026Q1_第一季度报告_1225223629.pdf",
+      "sha256": "1da1c5af8026d7957769741acb3b2ca1b0bc034a7b7be5833836a3956142b6c7",
+      "bytes": 155118,
+      "pages": null,
+      "retrieved_at": "2026-10-04T02:42:49+08:00",
+      "used_by": [
+        "巨化股份_600160_基本面分析_20261004_024350.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20250425-7fa66827",
+      "title": "巨化股份2024年年度报告",
+      "document_type": "年度报告",
+      "period": "2024A",
+      "published_date": "20250425",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-04-25/1223274514.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20250425_2024A_年度报告_1223274514.pdf",
+      "sha256": "7fa66827c81418204a01ae7725a5f2aa79c40aefbda0de12dfcbff9ea840c039",
+      "bytes": 3322959,
+      "pages": null,
+      "retrieved_at": "2026-10-04T02:42:51+08:00",
+      "used_by": [
+        "巨化股份_600160_基本面分析_20261004_024350.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260122-35352012",
+      "title": "巨化股份2025年度业绩预增公告",
+      "document_type": "正式披露",
+      "period": "2025",
+      "published_date": "20260122",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-01-22/1224943851.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260122_2025_正式披露_1224943851.pdf",
+      "sha256": "353520126e007dc2815354e4cf559091e4ef7de52c6cebab3fdefd18d368ef8d",
+      "bytes": 120625,
+      "pages": null,
+      "retrieved_at": "2026-10-04T02:42:51+08:00",
+      "used_by": [
+        "巨化股份_600160_基本面分析_20261004_024350.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260711-9e0e3134",
+      "title": "巨化股份2026年上半年度主要经营数据公告",
+      "document_type": "正式披露",
+      "period": "2026H1",
+      "published_date": "20260711",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-07-11/1225418588.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260711_2026H1_正式披露_1225418588.pdf",
+      "sha256": "9e0e3134d483cbf82ac1e2d25930c3255b85ce54ccb215357d9ceb99b96cdfa9",
+      "bytes": 126589,
+      "pages": null,
+      "retrieved_at": "2026-10-04T02:42:51+08:00",
+      "used_by": [
+        "巨化股份_600160_基本面分析_20261004_024350.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260122-d9c878b9",
+      "title": "巨化股份2025年1-12月主要经营数据公告",
+      "document_type": "正式披露",
+      "period": "2025",
+      "published_date": "20260122",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-01-22/1224943860.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260122_2025_正式披露_1224943860.pdf",
+      "sha256": "d9c878b9a5af47d9b794d142bf27ac6a242b3e5c319c7ce0b67702cf2853f7f8",
+      "bytes": 138459,
+      "pages": null,
+      "retrieved_at": "2026-10-04T02:42:52+08:00",
+      "used_by": [
+        "巨化股份_600160_基本面分析_20261004_024350.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260917-cd846405",
+      "title": "巨化股份2026年半年度权益分派实施公告",
+      "document_type": "正式披露",
+      "period": "2026H1",
+      "published_date": "20260917",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-09-17/1225568217.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260917_2026H1_正式披露_1225568217.pdf",
+      "sha256": "cd846405629c92b603729356c805975bec725beca1b210135a484894e243cb55",
+      "bytes": 141880,
+      "pages": null,
+      "retrieved_at": "2026-10-04T02:42:52+08:00",
+      "used_by": [
+        "巨化股份_600160_基本面分析_20261004_024350.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260822-69601451",
+      "title": "巨化股份关于公司总经理、副总经理离任的公告",
+      "document_type": "正式披露",
+      "period": "期间待核验",
+      "published_date": "20260822",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-22/1225488839.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260822_期间待核验_正式披露_1225488839.pdf",
+      "sha256": "696014518d8b5dffce1e13cba15166a987e139d2b89583de3101fe7f6d02ece0",
+      "bytes": 98608,
+      "pages": null,
+      "retrieved_at": "2026-10-04T02:42:53+08:00",
+      "used_by": [
+        "巨化股份_600160_基本面分析_20261004_024350.md"
+      ],
+      "status": "已归档"
+    }
+  ]
+}
