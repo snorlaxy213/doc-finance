@@ -19,3 +19,6 @@ hub/data/
 config/portfolio-seed.local.json
 portfolio-backups/
 portfolio-local-build/
+
+# Local Kiro CLI settings
+.kiro/settings/
