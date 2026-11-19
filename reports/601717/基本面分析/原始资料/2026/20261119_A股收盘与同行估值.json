@@ -1,0 +1,61 @@
+{
+  "trade_date": "2026-11-19",
+  "share_price_adjustment": "未复权",
+  "sources": {
+    "tencent": "https://qt.gtimg.cn/q=sh600741,sh600582,sh601717",
+    "tencent_market_status": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh601717,day,2026-11-18,2026-11-20,5,",
+    "eastmoney": "https://push2.eastmoney.com/api/qt/stock/get?secid=1.601717&fields=f43,f44,f45,f46,f47,f57,f58,f60,f116,f117,f124,f170",
+    "sina": "https://hq.sinajs.cn/list=sh601717"
+  },
+  "tencent_market_status": [
+    "2026-11-19 15:40:49",
+    "HK_open_交易中",
+    "SH_close_已收盘",
+    "SZ_close_已收盘"
+  ],
+  "tencent": {
+    "600741": {
+      "name": "华域汽车",
+      "close_cny": "16.73",
+      "quote_time_cst": "20261119154106",
+      "float_market_cap_cny_100m": "527.45",
+      "market_cap_cny_100m": "527.45",
+      "vendor_pe_ttm": "7.71",
+      "vendor_pb": "0.77",
+      "listed_a_shares": "3152723984",
+      "total_shares": "3152723984"
+    },
+    "600582": {
+      "name": "天地科技",
+      "close_cny": "5.42",
+      "quote_time_cst": "20261119154122",
+      "float_market_cap_cny_100m": "224.31",
+      "market_cap_cny_100m": "224.31",
+      "vendor_pe_ttm": "21.67",
+      "vendor_pb": "0.89",
+      "listed_a_shares": "4138588892",
+      "total_shares": "4138588892"
+    },
+    "601717": {
+      "name": "中创智领",
+      "close_cny": "16.21",
+      "quote_time_cst": "20261119154115",
+      "float_market_cap_cny_100m": "249.99",
+      "market_cap_cny_100m": "289.41",
+      "vendor_pe_ttm": "9.30",
+      "vendor_pb": "1.12",
+      "listed_a_shares": "1542165730",
+      "total_shares": "1785399930"
+    }
+  },
+  "eastmoney": {
+    "close_cny": 16.21,
+    "market_cap_cny": 28941332865.3,
+    "float_market_cap_cny": 24998506483.3
+  },
+  "sina": {
+    "close_cny": "16.210",
+    "trade_date": "2026-11-19",
+    "quote_time_cst": "15:34:58"
+  }
+}

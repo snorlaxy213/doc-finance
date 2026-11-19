@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-06T23:23:29+08:00",
+  "updated_at": "2026-11-19T15:46:41+08:00",
   "sources": [
     {
       "source_id": "FAILED-97fe663dc1af",
@@ -49,7 +49,9 @@
       "period": "2026Q1",
       "published_date": "20260429",
       "official_url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0429/2026042906143_c.pdf",
-      "alternate_urls": [],
+      "alternate_urls": [
+        "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0429/2026042906143_c.pdf"
+      ],
       "local_path": "原始资料/2026/20260429_2026Q1_第一季度报告_2026042906143_c.pdf",
       "sha256": "82506508ee4df75807851ff9208d269b8dba83e97ca58240dda1cac86cf773b9",
       "bytes": 498318,
@@ -57,7 +59,8 @@
       "retrieved_at": "2026-09-06T23:10:55+08:00",
       "used_by": [
         "20260906基本面分析",
-        "中创智领_601717_基本面分析_20260906_232221.md"
+        "中创智领_601717_基本面分析_20260906_232221.md",
+        "中创智领_601717_基本面分析_20261119_154311.md"
       ],
       "status": "已归档"
     },
@@ -116,7 +119,8 @@
       "retrieved_at": "2026-09-06T23:11:45+08:00",
       "used_by": [
         "20260906基本面分析",
-        "中创智领_601717_基本面分析_20260906_232221.md"
+        "中创智领_601717_基本面分析_20260906_232221.md",
+        "中创智领_601717_基本面分析_20261119_154311.md"
       ],
       "status": "已归档"
     },
@@ -135,7 +139,8 @@
       "retrieved_at": "2026-09-06T23:11:47+08:00",
       "used_by": [
         "20260906基本面分析",
-        "中创智领_601717_基本面分析_20260906_232221.md"
+        "中创智领_601717_基本面分析_20260906_232221.md",
+        "中创智领_601717_基本面分析_20261119_154311.md"
       ],
       "status": "已归档"
     },
@@ -150,11 +155,12 @@
       "local_path": "原始资料/2026/20260731_期间待核验_正式披露_2026073101857_c.pdf",
       "sha256": "b54aca03ffddf2e59e2674243cdfbd649b4f701e12eaa940e28d5b407d731c96",
       "bytes": 1001073,
-      "pages": null,
+      "pages": 35,
       "retrieved_at": "2026-09-06T23:11:49+08:00",
       "used_by": [
         "20260906基本面分析",
-        "中创智领_601717_基本面分析_20260906_232221.md"
+        "中创智领_601717_基本面分析_20260906_232221.md",
+        "中创智领_601717_基本面分析_20261119_154311.md"
       ],
       "status": "已归档"
     },
@@ -211,7 +217,8 @@
       "retrieved_at": "2026-09-06T23:12:37+08:00",
       "used_by": [
         "20260906基本面分析",
-        "中创智领_601717_基本面分析_20260906_232221.md"
+        "中创智领_601717_基本面分析_20260906_232221.md",
+        "中创智领_601717_基本面分析_20261119_154311.md"
       ],
       "status": "已归档"
     },
@@ -231,6 +238,277 @@
       "used_by": [
         "20260906基本面分析",
         "中创智领_601717_基本面分析_20260906_232221.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20261029-1b5ff851",
+      "title": "2026年第三季度报告",
+      "document_type": "第三季度报告",
+      "period": "2026Q3",
+      "published_date": "20261029",
+      "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1029/2026102901415_c.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20261029_2026Q3_第三季度报告_2026102901415_c.pdf",
+      "sha256": "1b5ff8515390fb59e365dcfcc3d4e3530a945702453948c865851750af82899f",
+      "bytes": 930417,
+      "pages": 19,
+      "retrieved_at": "2026-11-19T15:43:13+08:00",
+      "used_by": [
+        "中创智领_601717_基本面分析_20261119_154311.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20251028-de6cc1af",
+      "title": "2025年第三季度报告",
+      "document_type": "第三季度报告",
+      "period": "2025Q3",
+      "published_date": "20251028",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2025-10-28/1224743584.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2025/20251028_2025Q3_第三季度报告_1224743584.pdf",
+      "sha256": "de6cc1af8e9cad42c5d35861548369857d0d9abf64a2b135e6f1c96a927fae15",
+      "bytes": 232874,
+      "pages": 17,
+      "retrieved_at": "2026-11-19T15:43:13+08:00",
+      "used_by": [
+        "中创智领_601717_基本面分析_20261119_154311.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20261029-7ef06710",
+      "title": "2026年第三季度报告（天地科技）",
+      "document_type": "第三季度报告",
+      "period": "2026Q3",
+      "published_date": "20261029",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-10-29/1225636070.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20261029_2026Q3_第三季度报告_1225636070.pdf",
+      "sha256": "7ef067103b18e56b0fc2d42d23777e90ebdbd80e90579f91b942f62bc002f642",
+      "bytes": 190983,
+      "pages": 12,
+      "retrieved_at": "2026-11-19T15:43:13+08:00",
+      "used_by": [
+        "中创智领_601717_基本面分析_20261119_154311.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20261029-54ffe67d",
+      "title": "2026年第三季度报告（华域汽车）",
+      "document_type": "第三季度报告",
+      "period": "2026Q3",
+      "published_date": "20261029",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-10-29/1225635684.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20261029_2026Q3_第三季度报告_1225635684.pdf",
+      "sha256": "54ffe67d9e050b4c3cf8f86fdfd116787e6f12ebdd44ec85e54fb04a98b7fd2f",
+      "bytes": 190126,
+      "pages": 10,
+      "retrieved_at": "2026-11-19T15:43:13+08:00",
+      "used_by": [
+        "中创智领_601717_基本面分析_20261119_154311.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260831-10d2497d",
+      "title": "2026年半年度报告（富国天惠）",
+      "document_type": "半年度报告",
+      "period": "2026H1",
+      "published_date": "20260831",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225532395.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260831_2026H1_半年度报告_1225532395.pdf",
+      "sha256": "10d2497d90698c835b97d57742edb1a300939b697d622706392c1d8c6750acf7",
+      "bytes": 626793,
+      "pages": 64,
+      "retrieved_at": "2026-11-19T15:43:13+08:00",
+      "used_by": [
+        "中创智领_601717_基本面分析_20261119_154311.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20261027-224be291",
+      "title": "2026年第三季度报告（富国天惠）",
+      "document_type": "第三季度报告",
+      "period": "2026Q3",
+      "published_date": "20261027",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-10-27/1225626313.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20261027_2026Q3_第三季度报告_1225626313.pdf",
+      "sha256": "224be291b65868bb5d25c44ddf7e064226b431735c760a5c3a8b8fccb32f0284",
+      "bytes": 356242,
+      "pages": 19,
+      "retrieved_at": "2026-11-19T15:43:14+08:00",
+      "used_by": [
+        "中创智领_601717_基本面分析_20261119_154311.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260916-6cdea6c7",
+      "title": "2026可转债修订公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260916",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-09-16/1225565686.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260916_2026_正式披露_1225565686.pdf",
+      "sha256": "6cdea6c7d0c12cc043d0b384c6879984fcfc68ab9c4afc8b832aee625eaa905b",
+      "bytes": 107770,
+      "pages": 3,
+      "retrieved_at": "2026-11-19T15:43:14+08:00",
+      "used_by": [
+        "中创智领_601717_基本面分析_20261119_154311.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20260918-2b6dd48a",
+      "title": "2026可转债审核问询回复",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20260918",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-09-18/1225569365.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260918_2026_正式披露_1225569365.pdf",
+      "sha256": "2b6dd48a34284bbb87bd40af56a1cac430d924c0e83b68e5c3cf08be604896d6",
+      "bytes": 4141160,
+      "pages": 205,
+      "retrieved_at": "2026-11-19T15:43:15+08:00",
+      "used_by": [
+        "中创智领_601717_基本面分析_20261119_154311.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20261106-b70116f3",
+      "title": "2026可转债上交所审核通过公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20261106",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-11-06/1225659710.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20261106_2026_正式披露_1225659710.pdf",
+      "sha256": "b70116f378a62e6e6333e3503d45fa7bcb19ba3604613c15eabb1a0da8fca97e",
+      "bytes": 88338,
+      "pages": 1,
+      "retrieved_at": "2026-11-19T15:43:15+08:00",
+      "used_by": [
+        "中创智领_601717_基本面分析_20261119_154311.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20261103-2beae870",
+      "title": "2026回购进展公告",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20261103",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-11-03/1225652218.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20261103_2026_正式披露_1225652218.pdf",
+      "sha256": "2beae870d4054fd1c3a22770f3be3b7464ae30bed0977e458acf3d272edfa80f",
+      "bytes": 108236,
+      "pages": 2,
+      "retrieved_at": "2026-11-19T15:43:15+08:00",
+      "used_by": [
+        "中创智领_601717_基本面分析_20261119_154311.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20261118-e77813c3",
+      "title": "2026-11-18股份回购翌日披露",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20261118",
+      "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1118/2026111800636.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20261118_2026_正式披露_2026111800636.pdf",
+      "sha256": "e77813c3435c9ce44181371d3c1aaee18197baceef30d5b3f5ea5c9ffc5be3d0",
+      "bytes": 91101,
+      "pages": 7,
+      "retrieved_at": "2026-11-19T15:43:15+08:00",
+      "used_by": [
+        "中创智领_601717_基本面分析_20261119_154311.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20261113-a2b3f2dd",
+      "title": "2026高管增持实施结果",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20261113",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-11-13/1225668284.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20261113_2026_正式披露_1225668284.pdf",
+      "sha256": "a2b3f2ddfacbf1aa9de7b9d163b4e1d327504b58940c5e2b8d690184bc4f9c06",
+      "bytes": 91186,
+      "pages": 2,
+      "retrieved_at": "2026-11-19T15:43:16+08:00",
+      "used_by": [
+        "中创智领_601717_基本面分析_20261119_154311.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20261103-e72ae29c",
+      "title": "2026年第三季度业绩说明会公告",
+      "document_type": "正式披露",
+      "period": "2026Q3",
+      "published_date": "20261103",
+      "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1103/2026110301704_c.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20261103_2026Q3_正式披露_2026110301704_c.pdf",
+      "sha256": "e72ae29ceb9791b6656659723f97f2b617df3597045f52b5c4939d8689841225",
+      "bytes": 297311,
+      "pages": 3,
+      "retrieved_at": "2026-11-19T15:43:16+08:00",
+      "used_by": [
+        "中创智领_601717_基本面分析_20261119_154311.md"
+      ],
+      "status": "已归档"
+    },
+    {
+      "source_id": "SRC-20261112-5579cd0b",
+      "title": "2026-11-12深交所上市委超聚变首发审议结果",
+      "document_type": "正式披露",
+      "period": "2026",
+      "published_date": "20261112",
+      "official_url": "https://reportdocs.static.szse.cn/UpFiles/rasinfodisc1/202611/RAS_202611_122340AE1ACCA472F6443F88D57CE22E9EA400.pdf",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20261112_2026_正式披露_AS_202611_122340AE1ACCA472F6443F88D57CE22E9EA400.pdf",
+      "sha256": "5579cd0ba634d77b6e6601fb2489b43d11b95c8484185cbe836bddd0ad2e61b7",
+      "bytes": 96985,
+      "pages": 1,
+      "retrieved_at": "2026-11-19T15:43:16+08:00",
+      "used_by": [
+        "中创智领_601717_基本面分析_20261119_154311.md"
+      ],
+      "status": "已归档",
+      "date_override": "20261112"
+    },
+    {
+      "source_id": "SRC-20260611-93d026cc",
+      "title": "2025年度A股权益分派实施公告",
+      "document_type": "正式披露",
+      "period": "2025",
+      "published_date": "20260611",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-06-11/1225362877.PDF",
+      "alternate_urls": [],
+      "local_path": "原始资料/2026/20260611_2025_正式披露_1225362877.pdf",
+      "sha256": "93d026ccb2a277d7f9466fd5873ed7d77d32124a11feed9666131f771a4cd04d",
+      "bytes": 128666,
+      "pages": 3,
+      "retrieved_at": "2026-11-19T15:45:19+08:00",
+      "used_by": [
+        "中创智领_601717_基本面分析_20261119_154311.md"
       ],
       "status": "已归档"
     }
